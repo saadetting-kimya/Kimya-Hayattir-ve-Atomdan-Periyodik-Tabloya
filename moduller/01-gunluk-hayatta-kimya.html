@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Günlük Hayatta Kimya — AtomLab 9</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2246%22 fill=%22%236d5bff%22/></svg>">
+<link rel="stylesheet" href="../assets/css/style.css?v=1" />
+</head>
+<body>
+<div id="nav-root"></div>
+
+<header class="hero">
+  <div class="container">
+    <span class="eyebrow">Modül 1 · KİM.9.1.1</span>
+    <h1 style="max-width:760px">Günlük Hayatta Kimya</h1>
+    <p class="lead" style="max-width:680px">Sabah yüzünü yıkamandan akşam telefonunu şarj etmene kadar geçen her an, aslında bir kimya laboratuvarındasın. Kimyanın bu görünmez izini birlikte sürelim.</p>
+  </div>
+</header>
+
+<section class="section tight">
+  <div class="container">
+    <div class="callout concept" style="max-width:820px">
+      <h5>🤔 Merak Et</h5>
+      <p>Elindeki telefonun ekranı neden ışıldıyor, dişlerini fırçaladığın macun neden köpürüyor, çayına attığın şeker neden kayboluyor? Bunların hepsinin ortak bir açıklaması var: kimya. Aşağıdaki etkinlikte, günlük hayatta kullandığın maddeleri hangi ihtiyaç alanına hizmet ettiğine göre sınıflandırarak kimyanın nerelerde "gizlendiğini" keşfedeceksin.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">🔍 Keşfet</span>
+      <h2>Etkinlik — Kimyasal Maddeleri Kullanım Alanına Göre Grupla</h2>
+      <p>Önce bir maddeye (chip) tıkla, sonra ait olduğunu düşündüğün kutuya tıkla. Her doğru eşleştirme yeşile döner.</p>
+    </div>
+    <div class="card">
+      <div class="dnd-cols">
+        <div>
+          <div class="small" style="margin-bottom:8px;">Maddeler (tıklayarak seç)</div>
+          <div class="dnd-pool" id="sort-pool"></div>
+        </div>
+        <div class="dnd-bins" id="sort-bins"></div>
+      </div>
+      <div class="btnbar" style="margin-top:16px">
+        <span class="badge-live" id="sort-status" style="display:none">Tüm maddeler doğru gruplandı!</span>
+        <button class="btn" id="sort-reset">↺ Etkinliği Sıfırla</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="discover">
+      <h3><span class="ico">🔍</span> Keşfet: Bir Gününü Kimya Gözlüğüyle Anlat</h3>
+      <div class="mission">
+        <div class="m-title">Görev — Kendi Gününden Örnekler</div>
+        <ol>
+          <li>Bu sabah kalktığından beri dokunduğun 5 farklı kimyasal maddeyi (ürünü) listele.</li>
+          <li>Bu maddelerden en az ikisinin hangi ihtiyaç alanına (temizlik, ilaç/sağlık, gıda, enerji, tarım) hizmet ettiğini belirt.</li>
+          <li>Bu maddelerden biri günlük hayatından bir anda çıksaydı, hayatın nasıl değişirdi? Kısaca yaz.</li>
+        </ol>
+      </div>
+      <div class="journal">
+        <label>📓 Keşif Günlüğü — gözlemlerin (otomatik kaydedilir)</label>
+        <textarea id="journal1" placeholder="Örn: Sabah kalkınca kullandığım diş macunu köpürtücü ve tatlandırıcı kimyasallar içeriyor..."></textarea>
+        <div class="save-state"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="container prose">
+    <div class="section-head">
+      <span class="eyebrow">💡 Açıkla</span>
+      <h2>Kimya, Hayatın Her Anında</h2>
+    </div>
+    <p>Kimya, insan hayatıyla derin bir etkileşim içinde olan ve insanların hem ruhsal hem de bedensel ihtiyaçlarına yönelik çözümler sunan temel bir bilim dalıdır. Bir insanın sabah yüzünü yıkayıp akşam uykuya dalıncaya kadar devam eden günlük etkinliklerinin tümünde kimyanın doğrudan veya dolaylı katkısı bulunur. El ve yüz temizlemede kullanılan su ve sabun, hastalıklarla mücadelede kullanılan ilaçlar, bilgisayardaki silisyum çipi ve günümüzde önemli bir konu hâline gelen plastik atık sorununun giderilmesi gibi örneklerin tamamı kimyasal maddeleri ve olayları içerir.</p>
+    <p>Bilgisayarların işlemesi, telefonların şarj olması ve televizyon ekranlarının ışıldaması gibi olaylar atomun yapısındaki elektronların hareketine dayanır — bu temanın ikinci yarısında (Modül 5-8) tam olarak bu atom yapısını inceleyeceğiz. Kimya bilimi; temizlik, ilaç, gıda, enerji, tarım gibi pek çok sektörü etkiler ve insanların çeşitli maddeleri nasıl etkileşime geçirebileceğini, tepkimeye sokabileceğini ve bu süreçlerin günlük hayatta nasıl uygulanabileceğini anlamalarına yardımcı olur.</p>
+    <div class="callout real">
+      <h5>Günlük Hayattan</h5>
+      <p>Doğada kamp yaparken bile kimya işin içindedir: kolonya, aseton, yağ gibi malzemeler yanıcı özellikleri sayesinde ateş yakmakta kullanılabilir; çakıl, kum ve odun kömürü katmanlarından geçirilen su, fiziksel süzme ile temizlenir. Kimya bilgisi, doğada hayatta kalma becerilerini bile güçlendirir.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">✅ Değerlendir</span>
+      <h2>Bağlam Temelli Sorular</h2>
+    </div>
+    <div id="quiz-host"></div>
+  </div>
+</section>
+
+<div id="footer-root"></div>
+
+<script type="module">
+  import { mountNav, mountFooter } from "../assets/js/nav.js?v=1";
+  import { renderQuiz, markVisited, bindJournal } from "../assets/js/quiz-engine.js?v=1";
+  import { QUIZ } from "../assets/js/quiz-data.js?v=1";
+
+  mountNav("gunluk");
+  mountFooter();
+  markVisited("gunluk");
+  bindJournal(document.getElementById("journal1"), "gunluk-1");
+  renderQuiz(document.getElementById("quiz-host"), QUIZ.gunluk, "gunluk");
+
+  /* ---- Sınıflandırma etkinliği ---- */
+  const BINS = [
+    { key: "temizlik", label: "Temizlik" },
+    { key: "ilac", label: "İlaç / Sağlık" },
+    { key: "gida", label: "Gıda" },
+    { key: "enerji", label: "Enerji" },
+    { key: "tarim", label: "Tarım" },
+  ];
+  const ITEMS = [
+    { label: "Sıvı sabun", bin: "temizlik" },
+    { label: "Çamaşır suyu", bin: "temizlik" },
+    { label: "Diş macunu", bin: "temizlik" },
+    { label: "Ağrı kesici tablet", bin: "ilac" },
+    { label: "Antiasit mide tableti", bin: "ilac" },
+    { label: "Yara bandı dezenfektanı", bin: "ilac" },
+    { label: "Ekmek mayası", bin: "gida" },
+    { label: "Sirke", bin: "gida" },
+    { label: "Kabartma tozu", bin: "gida" },
+    { label: "Lityum-iyon pil", bin: "enerji" },
+    { label: "Benzin", bin: "enerji" },
+    { label: "Güneş paneli (silisyum)", bin: "enerji" },
+    { label: "Azotlu gübre", bin: "tarim" },
+    { label: "Böcek ilacı (pestisit)", bin: "tarim" },
+    { label: "Toprak pH düzenleyici", bin: "tarim" },
+  ];
+
+  let selected = null;
+  let placedCount = 0;
+  const pool = document.getElementById("sort-pool");
+  const binsHost = document.getElementById("sort-bins");
+
+  binsHost.innerHTML = BINS.map(b => `
+    <div class="dnd-bin" data-bin="${b.key}">
+      <span class="bin-label">${b.label}</span>
+    </div>
+  `).join("");
+
+  function shuffled(arr) { return [...arr].sort(() => Math.random() - 0.5); }
+
+  function renderPool() {
+    pool.innerHTML = "";
+    shuffled(ITEMS).forEach((item, i) => {
+      const chip = document.createElement("span");
+      chip.className = "dnd-chip";
+      chip.textContent = item.label;
+      chip.dataset.idx = ITEMS.indexOf(item);
+      chip.addEventListener("click", () => {
+        if (chip.classList.contains("placed")) return;
+        [...pool.children].forEach(c => c.style.outline = "");
+        selected = chip;
+        chip.style.outline = "2px solid var(--gas)";
+      });
+      pool.appendChild(chip);
+    });
+  }
+  renderPool();
+
+  binsHost.querySelectorAll(".dnd-bin").forEach(bin => {
+    bin.addEventListener("click", () => {
+      if (!selected) return;
+      const idx = +selected.dataset.idx;
+      const item = ITEMS[idx];
+      const correct = item.bin === bin.dataset.bin;
+      const chip = document.createElement("span");
+      chip.className = "dnd-chip " + (correct ? "correct" : "wrong");
+      chip.textContent = item.label + (correct ? " ✓" : " ✕");
+      bin.appendChild(chip);
+      if (correct) {
+        selected.remove();
+        placedCount++;
+        if (placedCount === ITEMS.length) {
+          document.getElementById("sort-status").style.display = "inline-flex";
+        }
+      } else {
+        selected.style.outline = "";
+        setTimeout(() => chip.remove(), 900);
+      }
+      selected = null;
+    });
+  });
+
+  document.getElementById("sort-reset").addEventListener("click", () => {
+    placedCount = 0;
+    selected = null;
+    document.getElementById("sort-status").style.display = "none";
+    binsHost.querySelectorAll(".dnd-bin").forEach(b => {
+      b.innerHTML = `<span class="bin-label">${BINS.find(x=>x.key===b.dataset.bin).label}</span>`;
+    });
+    renderPool();
+  });
+</script>
+</body>
+</html>

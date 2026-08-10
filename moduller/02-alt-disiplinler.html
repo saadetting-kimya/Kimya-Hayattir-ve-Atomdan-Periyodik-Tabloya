@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kimyanın Alt Disiplinleri — AtomLab 9</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2246%22 fill=%22%236d5bff%22/></svg>">
+<link rel="stylesheet" href="../assets/css/style.css?v=1" />
+</head>
+<body>
+<div id="nav-root"></div>
+
+<header class="hero">
+  <div class="container">
+    <span class="eyebrow">Modül 2 · KİM.9.1.2</span>
+    <h1 style="max-width:760px">Kimyanın Alt Disiplinleri</h1>
+    <p class="lead" style="max-width:680px">"Kimyacı" tek bir meslek değildir — plastiği inceleyen de, kanındaki şekeri ölçen de, ilacı tasarlayan da bir kimyacıdır. Altı alt disiplini kartları çevirerek keşfet.</p>
+  </div>
+</header>
+
+<section class="section tight">
+  <div class="container">
+    <div class="callout concept" style="max-width:820px">
+      <h5>🤔 Merak Et</h5>
+      <p>Bir hastanede kan tahlili yapan uzman ile bir kozmetik fabrikasında krem formülü geliştiren mühendis, ikisi de "kimyacı" olabilir — peki aynı şeyi mi yapıyorlar? Kimya bilimi, incelediği soruya göre kendi içinde alt dallara ayrılır. Aşağıdaki kartları çevirerek her disiplinin neyle ilgilendiğini keşfet, sonra gerçek hayattan örnekleri doğru disipline eşleştir.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">🔍 Keşfet</span>
+      <h2>Altı Alt Disiplin — Kartlara Tıkla</h2>
+    </div>
+    <div class="grid grid-3" id="discipline-cards"></div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">🔍 Keşfet</span>
+      <h2>Etkinlik — Örneği Doğru Disipline Eşleştir</h2>
+      <p>Önce bir örneğe tıkla, sonra ait olduğunu düşündüğün disipline tıkla.</p>
+    </div>
+    <div class="card">
+      <div class="dnd-cols">
+        <div>
+          <div class="small" style="margin-bottom:8px;">Gerçek hayattan örnekler</div>
+          <div class="dnd-pool" id="sort-pool"></div>
+        </div>
+        <div class="dnd-bins" id="sort-bins"></div>
+      </div>
+      <div class="btnbar" style="margin-top:16px">
+        <span class="badge-live" id="sort-status" style="display:none">Tüm örnekler doğru eşleştirildi!</span>
+        <button class="btn" id="sort-reset">↺ Etkinliği Sıfırla</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="discover">
+      <h3><span class="ico">🔍</span> Keşfet: Sen Olsan Hangi Disiplini Seçerdin?</h3>
+      <div class="mission">
+        <div class="m-title">Görev</div>
+        <ol>
+          <li>Yukarıdaki altı disiplinden ilgini en çok çeken ikisini seç.</li>
+          <li>Bu disiplinlerin hangi günlük hayat sorununu çözmene yardımcı olabileceğini bir örnekle açıkla.</li>
+        </ol>
+      </div>
+      <div class="journal">
+        <label>📓 Keşif Günlüğü — gözlemlerin (otomatik kaydedilir)</label>
+        <textarea id="journal2" placeholder="Örn: Biyokimya ilgimi çekti çünkü..."></textarea>
+        <div class="save-state"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="container prose">
+    <div class="section-head">
+      <span class="eyebrow">💡 Açıkla</span>
+      <h2>Tek Bilim, Çok Yüz</h2>
+    </div>
+    <p>Kimya, gündelik yaşamın her alanında etkilidir. Besin maddelerinden tarımda kullanılan gübrelere, çamaşır deterjanlarından şampuanlara kadar birçok ürün ve bu ürünlerle ilgili süreçler kimyanın etkisi altındadır. Bu geniş kapsamlı bilim dalı, incelediği soruya göre altı ana alt disipline ayrılır: maddenin bileşenlerini ölçen <strong>analitik kimya</strong>, canlı organizmalardaki tepkimeleri inceleyen <strong>biyokimya</strong>, karbon bileşiklerini inceleyen <strong>organik kimya</strong>, karbon içermeyen bileşikleri inceleyen <strong>anorganik kimya</strong>, enerji dönüşümlerini inceleyen <strong>fizikokimya</strong> ve büyük moleküllerin (makromoleküllerin) kimyasını inceleyen <strong>polimer kimyası</strong>.</p>
+    <p>Bu disiplinler birbirinden kopuk değildir; gerçek bir problem çoğu zaman birden fazla disiplinin bir arada çalışmasını gerektirir. Örneğin yeni bir ilaç geliştirmek hem organik kimya (molekülün sentezi), hem biyokimya (vücuttaki etkisi), hem de analitik kimya (saflık ve doz kontrolü) bilgisini aynı anda kullanır.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">✅ Değerlendir</span>
+      <h2>Bağlam Temelli Sorular</h2>
+    </div>
+    <div id="quiz-host"></div>
+  </div>
+</section>
+
+<div id="footer-root"></div>
+
+<script type="module">
+  import { mountNav, mountFooter } from "../assets/js/nav.js?v=1";
+  import { renderQuiz, markVisited, bindJournal } from "../assets/js/quiz-engine.js?v=1";
+  import { QUIZ } from "../assets/js/quiz-data.js?v=1";
+
+  mountNav("disiplin");
+  mountFooter();
+  markVisited("disiplin");
+  bindJournal(document.getElementById("journal2"), "disiplin-1");
+  renderQuiz(document.getElementById("quiz-host"), QUIZ.disiplin, "disiplin");
+
+  const DISCIPLINES = [
+    { key:"analitik", name:"Analitik Kimya", desc:"Maddelerin hangi bileşenlerden oluştuğunu (nitel) ve bu bileşenlerin miktarlarını (nicel) belirler.", ex:"Kan/idrar tahlili, pH ölçümü, besin içerik analizi" },
+    { key:"biyokimya", name:"Biyokimya", desc:"Canlı organizmalardaki kimyasal bileşikleri ve yaşam sürecindeki tepkimeleri inceler (Yunanca bios = canlı).", ex:"Protein, DNA, hormon ve vitamin araştırmaları" },
+    { key:"organik", name:"Organik Kimya", desc:"Karbon içeren bileşikleri inceler; bileşik çeşitliliği nedeniyle kimyanın en geniş alanıdır.", ex:"İlaçlar, plastikler, boyalar, kozmetikler" },
+    { key:"anorganik", name:"Anorganik Kimya", desc:"Karbon içermeyen bileşikleri (asit, baz, tuz, metal, mineral) inceler.", ex:"Yarı iletken teknolojisi, inşaat malzemeleri, nanoteknoloji" },
+    { key:"fizikokimya", name:"Fizikokimya", desc:"Kimyasal sistemlerin sıcaklık, basınç, hacim gibi fiziksel faktörlere bağlı davranışını ve enerji dönüşümlerini inceler.", ex:"Motorlarda yakıt yanması, tuzun suda çözünmesi" },
+    { key:"polimer", name:"Polimer Kimyası", desc:"Makromoleküllerin (büyük moleküllerin) sentezini, yapısını ve özelliklerini inceler.", ex:"Plastikler, kauçuklar, yapıştırıcılar, biyopolimerler" },
+  ];
+
+  document.getElementById("discipline-cards").innerHTML = DISCIPLINES.map(d => `
+    <div class="card" style="cursor:pointer; min-height:150px;" data-flip>
+      <span class="eyebrow">${d.name}</span>
+      <p class="flip-desc" style="display:none; margin-top:10px; margin-bottom:0;">${d.desc}</p>
+      <p class="flip-hint" style="margin-top:10px; margin-bottom:0; color:var(--ink-faint); font-size:12.5px;">Açıklamayı görmek için tıkla →</p>
+    </div>
+  `).join("");
+  document.querySelectorAll("[data-flip]").forEach(card => {
+    card.addEventListener("click", () => {
+      card.querySelector(".flip-desc").style.display = "block";
+      card.querySelector(".flip-hint").style.display = "none";
+    });
+  });
+
+  /* ---- Eşleştirme etkinliği ---- */
+  const ITEMS = [
+    { label: "Şeker pancarındaki şeker miktarının belirlenmesi", bin: "analitik" },
+    { label: "Suların sertlik derecesinin tayini", bin: "analitik" },
+    { label: "DNA ve protein yapısının incelenmesi", bin: "biyokimya" },
+    { label: "Vitamin ve hormonların vücuttaki etkisi", bin: "biyokimya" },
+    { label: "Yeni bir ilaç molekülünün sentezlenmesi", bin: "organik" },
+    { label: "Plastik ve boya üretimi", bin: "organik" },
+    { label: "Metal ve minerallerin özelliklerinin incelenmesi", bin: "anorganik" },
+    { label: "Yarı iletken (çip) malzeme geliştirme", bin: "anorganik" },
+    { label: "Araç motorunda yakıtın yanma verimi", bin: "fizikokimya" },
+    { label: "Bir parça buzun erime sürecindeki enerji değişimi", bin: "fizikokimya" },
+    { label: "Yapıştırıcı ve kauçuk üretimi", bin: "polimer" },
+    { label: "Biyobozunur ambalaj malzemesi geliştirme", bin: "polimer" },
+  ];
+  const BINS = DISCIPLINES.map(d => ({ key: d.key, label: d.name }));
+
+  let selected = null, placedCount = 0;
+  const pool = document.getElementById("sort-pool");
+  const binsHost = document.getElementById("sort-bins");
+  binsHost.innerHTML = BINS.map(b => `<div class="dnd-bin" data-bin="${b.key}"><span class="bin-label">${b.label}</span></div>`).join("");
+
+  function shuffled(arr) { return [...arr].sort(() => Math.random() - 0.5); }
+  function renderPool() {
+    pool.innerHTML = "";
+    shuffled(ITEMS).forEach(item => {
+      const chip = document.createElement("span");
+      chip.className = "dnd-chip";
+      chip.textContent = item.label;
+      chip.dataset.idx = ITEMS.indexOf(item);
+      chip.addEventListener("click", () => {
+        if (chip.classList.contains("placed")) return;
+        [...pool.children].forEach(c => c.style.outline = "");
+        selected = chip;
+        chip.style.outline = "2px solid var(--gas)";
+      });
+      pool.appendChild(chip);
+    });
+  }
+  renderPool();
+  binsHost.querySelectorAll(".dnd-bin").forEach(bin => {
+    bin.addEventListener("click", () => {
+      if (!selected) return;
+      const idx = +selected.dataset.idx;
+      const item = ITEMS[idx];
+      const correct = item.bin === bin.dataset.bin;
+      const chip = document.createElement("span");
+      chip.className = "dnd-chip " + (correct ? "correct" : "wrong");
+      chip.textContent = item.label + (correct ? " ✓" : " ✕");
+      bin.appendChild(chip);
+      if (correct) {
+        selected.remove();
+        placedCount++;
+        if (placedCount === ITEMS.length) document.getElementById("sort-status").style.display = "inline-flex";
+      } else {
+        selected.style.outline = "";
+        setTimeout(() => chip.remove(), 900);
+      }
+      selected = null;
+    });
+  });
+  document.getElementById("sort-reset").addEventListener("click", () => {
+    placedCount = 0; selected = null;
+    document.getElementById("sort-status").style.display = "none";
+    binsHost.querySelectorAll(".dnd-bin").forEach(b => {
+      b.innerHTML = `<span class="bin-label">${BINS.find(x=>x.key===b.dataset.bin).label}</span>`;
+    });
+    renderPool();
+  });
+</script>
+</body>
+</html>

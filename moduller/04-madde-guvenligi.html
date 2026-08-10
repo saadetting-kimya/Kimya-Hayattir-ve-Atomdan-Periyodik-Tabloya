@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kimyasal Maddelerin Kullanımı ve Güvenlik — AtomLab 9</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2246%22 fill=%22%236d5bff%22/></svg>">
+<link rel="stylesheet" href="../assets/css/style.css?v=1" />
+</head>
+<body>
+<div id="nav-root"></div>
+
+<header class="hero">
+  <div class="container">
+    <span class="eyebrow">Modül 4 · KİM.9.1.4</span>
+    <h1 style="max-width:760px">Kimyasal Maddelerin Kullanımı ve Güvenlik</h1>
+    <p class="lead" style="max-width:680px">Çamaşır suyu ile tuz ruhunu aynı kovada birleştirmek "daha iyi temizlik" değil, zehirli gaz demektir. Etiketleri okumayı ve piktogramları tanımayı öğren.</p>
+  </div>
+</header>
+
+<section class="section tight">
+  <div class="container">
+    <div class="callout concept" style="max-width:820px">
+      <h5>🤔 Merak Et</h5>
+      <p>Bir aile üyesi banyo temizliğinde önce tuz ruhu (HCl) kullanıyor, sonra "daha iyi temizlesin" diye üzerine çamaşır suyu (NaClO) döküyor. Birkaç saniye sonra boğucu, keskin kokulu bir gaz odayı dolduruyor. Ne oldu? Aşağıdaki simülatörle hangi kimyasal kombinasyonların tehlikeli olduğunu keşfet, sonra tehlike piktogramlarını tanı.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">🔍 Keşfet</span>
+      <h2>Güvenlik Senaryosu Simülatörü — İki Maddeyi Karıştır</h2>
+      <p>Ev/laboratuvar ortamında sık karşılaşılan iki kimyasalı seç, "Karıştır" butonuna bas ve sonucu gözlemle.</p>
+    </div>
+    <div class="card">
+      <div class="controls" style="grid-template-columns:1fr; max-width:640px">
+        <div class="control-row" style="grid-template-columns:110px 1fr">
+          <label for="mixA">1. Madde</label>
+          <select id="mixA" style="padding:8px; border-radius:8px; border:1px solid var(--line)"></select>
+        </div>
+        <div class="control-row" style="grid-template-columns:110px 1fr">
+          <label for="mixB">2. Madde</label>
+          <select id="mixB" style="padding:8px; border-radius:8px; border:1px solid var(--line)"></select>
+        </div>
+      </div>
+      <div class="btnbar"><button class="btn primary" id="mixGo">⚗ Karıştır</button></div>
+      <div id="mixResult" style="margin-top:14px"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">🔍 Keşfet</span>
+      <h2>Etkinlik — Tehlike Piktogramlarını Eşleştir</h2>
+      <p>Önce bir tanımı seç, sonra ait olduğunu düşündüğün piktogram kartına tıkla.</p>
+    </div>
+    <div class="card">
+      <div class="dnd-cols">
+        <div>
+          <div class="small" style="margin-bottom:8px;">Tanımlar</div>
+          <div class="dnd-pool" id="ghs-pool"></div>
+        </div>
+        <div>
+          <div class="small" style="margin-bottom:8px;">Piktogramlar (tıkla)</div>
+          <div class="ghs-grid" id="ghs-grid"></div>
+        </div>
+      </div>
+      <div class="btnbar" style="margin-top:16px">
+        <span class="badge-live" id="ghs-status" style="display:none">Tüm piktogramlar doğru eşleştirildi!</span>
+        <button class="btn" id="ghs-reset">↺ Etkinliği Sıfırla</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="discover">
+      <h3><span class="ico">🔍</span> Keşfet: Laboratuvarda Nasıl Davranmalıyım?</h3>
+      <div class="mission">
+        <div class="m-title">Temel Kurallar (birkaçı)</div>
+        <ul>
+          <li>Kimyasal maddeler yakından koklanmaz, tadına bakılmaz.</li>
+          <li>Sıvılar pipetle aktarılırken kesinlikle puar kullanılır, asla ağızla çekilmez.</li>
+          <li>Asit çözeltisi hazırlarken asit, baget yardımıyla yavaşça suyun içine dökülür (tam tersi değil).</li>
+          <li>Kimyasal madde cilde/göze temas ederse bölge en az 15 dakika bol suyla yıkanır.</li>
+        </ul>
+      </div>
+      <div class="journal">
+        <label>📓 Keşif Günlüğü — kendi gözlemin</label>
+        <textarea id="journal4" placeholder="Örn: Evde kimyasalları hatalı kullandığım bir durum..."></textarea>
+        <div class="save-state"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="container prose">
+    <div class="section-head">
+      <span class="eyebrow">💡 Açıkla</span>
+      <h2>Etiketi Oku, Riski Tanı</h2>
+    </div>
+    <p>Kimyasal maddeler; tarım, ilaç, temizlik gibi birçok sektörde yaygın olarak kullanılır ancak bu kullanım güvenlik risklerini de beraberinde getirir. Kimyasal maddelerin etiketlerinde bulunan sağlık ve güvenlik amaçlı işaretlere <strong>risk piktogramları</strong> denir; herhangi bir kimyasal kullanmadan önce etiket dikkatle okunmalı ve gerekli tedbirler alınmalıdır.</p>
+    <p>Kimyasal maddelerin güvenli depolanması da en az kullanım kadar önemlidir. <strong>Kimyasal depolama matrisi</strong>, hangi maddelerin birlikte depolanabileceğini, hangilerinin asla bir arada tutulamayacağını belirleyen bir plan sistemidir — örneğin su ile temas ettiğinde alevlenen veya gaz çıkaran maddeler, nemli/sulu ortamlardan uzak tutulmalıdır. Az önce simülatörde gördüğün gibi, çamaşır suyu (NaClO, baz özellikli) ile tuz ruhu (HCl) karıştırıldığında zehirli klor gazı (Cl₂) açığa çıkar — bu yüzden temizlik ürünleri asla gelişigüzel karıştırılmamalıdır.</p>
+    <div class="callout real">
+      <h5>Gerçek Hayattan</h5>
+      <p>Sodyum (Na) metali su ile şiddetli tepkimeye girer ve patlama riski yaratır; bu yüzden laboratuvarda gerektiğinden fazla sodyum alınıp doğrudan su dolu bir behere atılmamalıdır. Cıva (Hg) ise oda sıcaklığında sıvı hâlde bulunan toksik bir metaldir; sucul ortamlara karışıp besin zinciri yoluyla insanlara ulaştığında Minamata hastalığına neden olabilir.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">✅ Değerlendir</span>
+      <h2>Bağlam Temelli Sorular</h2>
+    </div>
+    <div id="quiz-host"></div>
+  </div>
+</section>
+
+<div id="footer-root"></div>
+
+<script type="module">
+  import { mountNav, mountFooter } from "../assets/js/nav.js?v=1";
+  import { renderQuiz, markVisited, bindJournal } from "../assets/js/quiz-engine.js?v=1";
+  import { QUIZ } from "../assets/js/quiz-data.js?v=1";
+
+  mountNav("guvenlik");
+  mountFooter();
+  markVisited("guvenlik");
+  bindJournal(document.getElementById("journal4"), "guvenlik-1");
+  renderQuiz(document.getElementById("quiz-host"), QUIZ.guvenlik, "guvenlik");
+
+  /* ---- Karıştırma simülatörü ---- */
+  const SUBS = [
+    { key:"camasir", name:"Çamaşır Suyu (NaClO)" },
+    { key:"tuzruhu", name:"Tuz Ruhu (HCl)" },
+    { key:"kirecc", name:"Kireç Çözücü (HNO₃)" },
+    { key:"yagc", name:"Yağ Çözücü (NaOH)" },
+    { key:"sodyum", name:"Sodyum Metali (Na)" },
+    { key:"su", name:"Su (H₂O)" },
+    { key:"sirke", name:"Sirke (seyreltik asetik asit)" },
+  ];
+  const DANGER = {
+    "camasir+tuzruhu": "☠ TEHLİKE — Zehirli Klor Gazı! Çamaşır suyu (baz, NaClO) ile tuz ruhu (asit, HCl) karıştığında boğucu ve zehirli klor gazı (Cl₂) açığa çıkar. Bu iki ürün ASLA birlikte kullanılmamalıdır; kapalı alanda solunduğunda öksürük, göğüs ağrısı, bulantıya yol açar.",
+    "sodyum+su": "☠ TEHLİKE — Şiddetli Tepkime ve Patlama Riski! Alkali metal olan sodyum, su ile çok hızlı ve ekzotermik tepkimeye girer; açığa çıkan hidrojen gazı tutuşabilir. Sodyum asla doğrudan su dolu bir kaba atılmamalıdır.",
+    "kirecc+camasir": "⚠ DİKKAT — Farklı asit-baz aile ürünlerini karıştırmak öngörülemeyen tepkimelere ve tahriş edici gaz çıkışına yol açabilir. Temizlik ürünleri farklı kimyasal aileler arasında karıştırılmamalıdır.",
+  };
+  function normKey(a, b) { return [a, b].sort().join("+"); }
+  const mixA = document.getElementById("mixA"), mixB = document.getElementById("mixB");
+  mixA.innerHTML = SUBS.map((s,i)=>`<option value="${s.key}" ${i===0?"selected":""}>${s.name}</option>`).join("");
+  mixB.innerHTML = SUBS.map((s,i)=>`<option value="${s.key}" ${i===1?"selected":""}>${s.name}</option>`).join("");
+  document.getElementById("mixGo").addEventListener("click", () => {
+    const key = normKey(mixA.value, mixB.value);
+    const resultEl = document.getElementById("mixResult");
+    if (mixA.value === mixB.value) {
+      resultEl.innerHTML = `<div class="callout concept"><h5>Sonuç</h5><p>Aynı maddeyi kendisiyle karıştırdın — gözlemlenebilir bir tepkime yok.</p></div>`;
+      return;
+    }
+    if (DANGER[key]) {
+      resultEl.innerHTML = `<div class="callout real" style="border-color:var(--bad); background:rgba(229,72,77,.08)"><h5 style="color:var(--bad)">Sonuç</h5><p>${DANGER[key]}</p></div>`;
+    } else {
+      resultEl.innerHTML = `<div class="callout model"><h5>Sonuç</h5><p>Bu kombinasyon ders kitabında bilinen bir "acil tehlike" örneği olarak geçmiyor — ama bu, kimyasalların güvenle karıştırılabileceği anlamına gelmez. Etiket talimatı olmadan hiçbir kimyasal madde gelişigüzel karıştırılmamalıdır.</p></div>`;
+    }
+  });
+
+  /* ---- GHS piktogram eşleştirme ---- */
+  const ICONS = {
+    patlayici: `<svg viewBox="0 0 64 64"><polygon points="32,4 40,24 60,24 44,36 50,58 32,45 14,58 20,36 4,24 24,24" fill="#ffb020"/></svg>`,
+    oksitleyici: `<svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="14" fill="#ffb020"/><path d="M32 4 L36 18 L28 18 Z M32 60 L36 46 L28 46 Z M4 32 L18 28 L18 36 Z M60 32 L46 28 L46 36 Z" fill="#ff5b9d"/></svg>`,
+    yanici: `<svg viewBox="0 0 64 64"><path d="M32 4 C20 20 16 30 16 40 A16 16 0 0 0 48 40 C48 30 44 20 32 4 Z" fill="#ff8a3d"/></svg>`,
+    zehirli: `<svg viewBox="0 0 64 64"><circle cx="32" cy="26" r="16" fill="#e9e9f5"/><circle cx="25" cy="24" r="4" fill="#14152b"/><circle cx="39" cy="24" r="4" fill="#14152b"/><path d="M20 50 L44 50 L40 60 L24 60 Z" fill="#e9e9f5"/></svg>`,
+    korozif: `<svg viewBox="0 0 64 64"><path d="M14 8 L50 8 L44 30 L34 30 L30 60 L24 30 L20 30 Z" fill="#3fb6ff"/></svg>`,
+    cevre: `<svg viewBox="0 0 64 64"><circle cx="32" cy="40" r="16" fill="#3fb6ff"/><path d="M32 26 C24 10 40 4 40 4 C40 4 40 20 32 26 Z" fill="#2fbf6e"/></svg>`,
+    tahris: `<svg viewBox="0 0 64 64"><rect x="28" y="10" width="8" height="30" fill="#ffb020"/><rect x="28" y="46" width="8" height="8" fill="#ffb020"/></svg>`,
+    saglik: `<svg viewBox="0 0 64 64"><circle cx="32" cy="20" r="10" fill="#ff5b9d"/><path d="M18 60 C18 42 46 42 46 60 Z" fill="#ff5b9d"/><path d="M32 30 L32 46 M24 38 L40 38" stroke="#14152b" stroke-width="3"/></svg>`,
+    radyoaktif: `<svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="6" fill="#ffb020"/><g fill="#ffb020"><path d="M32 32 L20 12 A22 22 0 0 1 44 12 Z"/></g></svg>`,
+    gaz: `<svg viewBox="0 0 64 64"><rect x="24" y="10" width="16" height="44" rx="6" fill="#3fb6ff"/><rect x="28" y="4" width="8" height="10" fill="#9c92c4"/></svg>`,
+  };
+  const PICTOGRAMS = [
+    { key:"patlayici", name:"Patlayıcı" },
+    { key:"oksitleyici", name:"Oksitleyici" },
+    { key:"yanici", name:"Yanıcı, Parlayıcı" },
+    { key:"zehirli", name:"Zehirli" },
+    { key:"korozif", name:"Korozif" },
+    { key:"cevre", name:"Çevreye Zararlı" },
+    { key:"tahris", name:"Tahriş Edici" },
+    { key:"saglik", name:"Sağlık Etkisi" },
+    { key:"radyoaktif", name:"Radyoaktif" },
+    { key:"gaz", name:"Basınçlı Gaz" },
+  ];
+  const DEFS = [
+    { label:"Kıvılcım, ısınma, alev, vurma veya sürtünmeye maruz kaldığında patlayabilir.", bin:"patlayici" },
+    { label:"Havasız ortamda bile alev alabilir; yanıcı maddelerle karıştığında patlayabilir.", bin:"oksitleyici" },
+    { label:"Alevlenme noktası çok düşüktür; ateş, kıvılcım ve ısıdan uzak tutulmalıdır.", bin:"yanici" },
+    { label:"Ağız, deri veya solunum yoluyla vücuda girdiğinde zehirlenmeye, hatta kansere yol açabilir.", bin:"zehirli" },
+    { label:"Canlı dokuyu tahrip eder ya da metali aşındırır/paslandırır.", bin:"korozif" },
+    { label:"Suya ve doğadaki canlılara zarar verir; doğaya dökülmemelidir.", bin:"cevre" },
+    { label:"Deriye ve göze zarar verebilir; buharı solunmamalıdır.", bin:"tahris" },
+    { label:"İnsan sağlığına kısa veya uzun dönemli hasar verebilir, kanser riski taşır.", bin:"saglik" },
+    { label:"Çevresine radyasyon yayar; canlı dokularda kalıcı hasara neden olabilir.", bin:"radyoaktif" },
+    { label:"Basınç altında gaz içerir; ısıtıldığında patlayabilir.", bin:"gaz" },
+  ];
+
+  const ghsGrid = document.getElementById("ghs-grid");
+  ghsGrid.innerHTML = PICTOGRAMS.map(p => `
+    <div class="ghs-card" data-bin="${p.key}">
+      <div class="ghs-icon">${ICONS[p.key]}</div>
+      <div class="ghs-label">${p.name}</div>
+    </div>
+  `).join("");
+
+  let ghsSelected = null, ghsPlaced = 0;
+  const ghsPool = document.getElementById("ghs-pool");
+  function shuffled(arr) { return [...arr].sort(() => Math.random() - 0.5); }
+  function renderGhsPool() {
+    ghsPool.innerHTML = "";
+    shuffled(DEFS).forEach(def => {
+      const chip = document.createElement("span");
+      chip.className = "dnd-chip";
+      chip.style.maxWidth = "280px";
+      chip.textContent = def.label;
+      chip.dataset.idx = DEFS.indexOf(def);
+      chip.addEventListener("click", () => {
+        if (chip.classList.contains("placed")) return;
+        [...ghsPool.children].forEach(c => c.style.outline = "");
+        ghsSelected = chip;
+        chip.style.outline = "2px solid var(--gas)";
+      });
+      ghsPool.appendChild(chip);
+    });
+  }
+  renderGhsPool();
+  ghsGrid.querySelectorAll(".ghs-card").forEach(card => {
+    card.addEventListener("click", () => {
+      if (!ghsSelected) return;
+      const idx = +ghsSelected.dataset.idx;
+      const def = DEFS[idx];
+      const correct = def.bin === card.dataset.bin;
+      card.classList.add(correct ? "correct" : "wrong");
+      if (correct) {
+        ghsSelected.remove();
+        ghsPlaced++;
+        if (ghsPlaced === DEFS.length) document.getElementById("ghs-status").style.display = "inline-flex";
+      } else {
+        setTimeout(() => card.classList.remove("wrong"), 700);
+      }
+      ghsSelected = null;
+    });
+  });
+  document.getElementById("ghs-reset").addEventListener("click", () => {
+    ghsPlaced = 0; ghsSelected = null;
+    document.getElementById("ghs-status").style.display = "none";
+    ghsGrid.querySelectorAll(".ghs-card").forEach(c => c.classList.remove("correct","wrong"));
+    renderGhsPool();
+  });
+</script>
+</body>
+</html>
