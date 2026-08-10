@@ -1,0 +1,1018 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kimya 9 · Kimya Hayattır ve Atomdan Periyodik Tabloya — Ders Defteri</title>
+<style>
+  :root{
+    --ink:#14152b; --ink-soft:#3c3f5c; --line:#c7cbdd; --paper:#ffffff; --bg:#eef0f7;
+    --accent:#4a3fd1; --accent-2:#d9930a; --good:#177a44;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family: Georgia, "Times New Roman", serif; line-height:1.5; font-size:12.5px;
+  }
+  .page{
+    width:210mm; min-height:297mm; margin:14px auto; background:var(--paper);
+    padding:16mm 15mm; position:relative; box-shadow:0 2px 10px rgba(0,0,0,.12);
+  }
+  @media print{
+    body{ background:#fff; }
+    .page{ margin:0; box-shadow:none; width:auto; min-height:auto; page-break-after:always; }
+    .noprint{ display:none !important; }
+  }
+  h1,h2,h3,h4{ font-family: Arial, Helvetica, sans-serif; font-weight:800; color:var(--ink); margin:0 0 .4em; }
+  p{ margin:0 0 .8em; }
+  .footer-tag{ position:absolute; bottom:10mm; left:15mm; right:15mm; display:flex; justify-content:space-between; font-family:Arial,sans-serif; font-size:9.5px; color:#8a8ea8; border-top:1px solid var(--line); padding-top:6px; }
+
+  /* ---- Kapak ---- */
+  .cover{ background:linear-gradient(160deg,#14122c,#211f47 60%,#0c0a1f); color:#fff; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; }
+  .cover .eyebrow{ font-family:Arial,sans-serif; letter-spacing:.12em; text-transform:uppercase; font-size:12px; color:#bcaeff; margin-bottom:18px; }
+  .cover .emoji{ font-size:54px; margin-bottom:14px; }
+  .cover h1{ font-family:Arial,sans-serif; color:#fff; font-size:34px; max-width:520px; margin-bottom:10px; }
+  .cover .sub{ color:#c7bfe6; max-width:460px; font-family:Arial,sans-serif; font-size:13.5px; margin-bottom:26px; }
+  .cover .badges{ display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-bottom:30px; }
+  .cover .badge{ font-family:Arial,sans-serif; font-size:11px; font-weight:700; border:1px solid #4a3fd1; color:#c7bfe6; padding:6px 14px; border-radius:999px; background:rgba(109,91,255,.12); }
+  .cover .frame{ border:1px solid rgba(255,255,255,.25); border-radius:18px; padding:34px 40px; max-width:480px; }
+  .cover .site{ margin-top:26px; font-family:Arial,sans-serif; font-size:12px; color:#bcaeff; }
+  .cover .author{ margin-top:40px; font-family:Arial,sans-serif; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:#8a80b3; }
+
+  /* ---- İçindekiler / Nasıl Kullanılır ---- */
+  .toc-bolum{ font-family:Arial,sans-serif; font-weight:800; font-size:12.5px; letter-spacing:.05em; text-transform:uppercase; color:var(--accent); margin:20px 0 8px; }
+  .toc-item{ display:flex; justify-content:space-between; padding:7px 0; border-bottom:1px dotted var(--line); font-family:Arial,sans-serif; font-size:13px; }
+  .toc-item b{ margin-right:8px; }
+  .toc-item .kod{ color:#8a8ea8; font-size:11px; }
+
+  table.usage{ width:100%; border-collapse:collapse; margin:14px 0; font-family:Arial,sans-serif; font-size:12px; }
+  table.usage th, table.usage td{ border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top; }
+  table.usage th{ background:#f0f1fa; }
+
+  .soru-turleri{ display:flex; gap:10px; flex-wrap:wrap; margin:10px 0; }
+  .st-chip{ font-family:Arial,sans-serif; font-size:10.5px; font-weight:800; border:1.5px solid var(--ink); padding:4px 10px; border-radius:999px; }
+
+  /* ---- Ünite başlığı ---- */
+  .unit-kicker{ font-family:Arial,sans-serif; font-weight:800; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); margin-bottom:6px; }
+  .unit-title{ font-family:Arial,sans-serif; font-size:23px; margin-bottom:14px; }
+  .lo-box{ border:2px solid var(--ink); border-radius:6px; padding:12px 16px; margin-bottom:16px; font-family:Arial,sans-serif; font-size:12px; }
+  .lo-box b{ display:block; font-size:11px; text-transform:uppercase; letter-spacing:.04em; margin-bottom:3px; }
+  .lo-box ul{ margin:6px 0 0; padding-left:18px; }
+  .lo-box li{ margin-bottom:3px; }
+
+  h3.konu-h{ font-size:16px; border-bottom:2px solid var(--ink); padding-bottom:4px; margin-top:22px; }
+  h4.alt-h{ font-family:Arial,sans-serif; font-size:13px; margin-top:16px; color:var(--accent); }
+
+  .box{ border-radius:6px; padding:12px 14px; margin:14px 0; font-family:Arial,sans-serif; font-size:11.8px; }
+  .box .lbl{ font-weight:800; font-size:10px; text-transform:uppercase; letter-spacing:.05em; margin-bottom:5px; display:flex; align-items:center; gap:5px; }
+  .kavram{ border:2px solid var(--accent); background:#f5f4fd; }
+  .kavram .lbl{ color:var(--accent); }
+  .ornek{ border:2px dashed var(--good); background:#f2f9f4; }
+  .ornek .lbl{ color:var(--good); }
+  .gercek{ border:2px double var(--accent-2); background:#fdf6ea; }
+  .gercek .lbl{ color:var(--accent-2); }
+  .uygulama{ border:2px solid var(--ink); background:#f0f1fa; }
+  .uygulama .lbl{ color:var(--ink); }
+  .notlarim{ border:1.5px dashed #8a8ea8; min-height:56px; background:repeating-linear-gradient(#fff,#fff 20px,#e7e9f3 21px); }
+  .notlarim .lbl{ color:#5a5e78; }
+
+  .kavramlar-list{ border:1px solid var(--line); border-radius:6px; padding:10px 14px; margin:14px 0; font-family:Arial,sans-serif; font-size:11.5px; background:#fafafe; }
+  .kavramlar-list .lbl{ font-weight:800; font-size:10px; text-transform:uppercase; color:#5a5e78; margin-bottom:6px; }
+  .kavramlar-list dt{ font-weight:800; margin-top:6px; }
+  .kavramlar-list dd{ margin:0 0 2px; color:var(--ink-soft); }
+
+  .sorular-h{ font-family:Arial,sans-serif; font-size:15px; margin-top:24px; border-top:3px solid var(--ink); padding-top:10px; }
+  .soru{ margin:12px 0; font-family:Georgia,serif; font-size:12.3px; }
+  .soru .no{ font-weight:800; }
+  .soru .tip{ font-family:Arial,sans-serif; font-size:8.5px; font-weight:800; border:1px solid var(--ink); border-radius:999px; padding:2px 7px; margin-right:6px; text-transform:uppercase; }
+  .cevap-satir{ border-bottom:1px dotted #8a8ea8; height:16px; margin:4px 0; }
+  .secenekler{ margin:6px 0 0 22px; }
+  .secenekler div{ margin-bottom:3px; }
+  .baglam{ border-left:3px solid var(--accent-2); background:#fdf8ee; padding:10px 12px; margin:14px 0; font-size:12px; }
+  .baglam .baglam-lbl{ font-family:Arial,sans-serif; font-weight:800; font-size:10px; text-transform:uppercase; color:var(--accent-2); margin-bottom:4px; }
+
+  .ca-unit{ margin-bottom:18px; }
+  .ca-unit h4{ font-family:Arial,sans-serif; font-size:13px; border-bottom:1px solid var(--line); padding-bottom:4px; }
+  .ca-item{ font-size:11.5px; margin-bottom:5px; }
+  .ca-item b{ font-family:Arial,sans-serif; }
+
+  .print-bar{ position:fixed; top:14px; right:14px; z-index:10; font-family:Arial,sans-serif; }
+  .print-bar button{ font-weight:800; padding:10px 18px; border-radius:999px; border:none; background:#14152b; color:#fff; cursor:pointer; box-shadow:0 4px 14px rgba(0,0,0,.25); }
+</style>
+</head>
+<body>
+
+<div class="print-bar noprint"><button onclick="window.print()">🖨 Yazdır / PDF Kaydet</button></div>
+
+<!-- ============ KAPAK ============ -->
+<div class="page cover">
+  <div class="frame">
+    <div class="eyebrow">Türkiye Yüzyılı Maarif Modeli · 9. Sınıf Kimya</div>
+    <div class="emoji">⚛️</div>
+    <h1>Kimya Hayattır ve Atomdan Periyodik Tabloya</h1>
+    <div class="sub">Ders Defteri — Konu Anlatımı, Uygulama Rehberi ve Bağlam Temelli Sorular</div>
+    <div class="badges">
+      <span class="badge">KİM.9.1.1 – KİM.9.1.8</span>
+      <span class="badge">8 Konu</span>
+      <span class="badge">80 Soru</span>
+      <span class="badge">Cevap Anahtarlı</span>
+    </div>
+    <div class="sub" style="font-style:italic; margin-bottom:0;">Bu defter, "AtomLab 9" adlı dijital uygulamanın basılı eşlikçisidir. Sınıfta veya evde, uygulamayla birlikte ya da tek başına kullanılabilir.</div>
+  </div>
+  <div class="site">atomlab9 · Kimya Hayattır ve Atomdan Periyodik Tabloya</div>
+  <div class="author">SAADETTİN GÖKSÜN</div>
+</div>
+
+<!-- ============ İÇİNDEKİLER ============ -->
+<div class="page">
+  <h2 style="font-family:Arial,sans-serif; font-size:22px;">İçindekiler</h2>
+
+  <div class="toc-bolum">Bölüm I · Kimya Hayattır</div>
+  <div class="toc-item"><span><b>Ünite 1</b> — Günlük Hayatta Kimya <span class="kod">(KİM.9.1.1)</span></span></div>
+  <div class="toc-item"><span><b>Ünite 2</b> — Kimyanın Alt Disiplinleri <span class="kod">(KİM.9.1.2)</span></span></div>
+  <div class="toc-item"><span><b>Ünite 3</b> — Kimya Alanında Kariyer Olanakları <span class="kod">(KİM.9.1.3)</span></span></div>
+  <div class="toc-item"><span><b>Ünite 4</b> — Kimyasal Maddelerin Kullanımı ve Güvenlik <span class="kod">(KİM.9.1.4)</span></span></div>
+
+  <div class="toc-bolum">Bölüm II · Atomdan Periyodik Tabloya</div>
+  <div class="toc-item"><span><b>Ünite 5</b> — Atom Teorileri ve Atomun Yapısı <span class="kod">(KİM.9.1.5)</span></span></div>
+  <div class="toc-item"><span><b>Ünite 6</b> — Atom Orbitalleri ve Elektron Dizilimi <span class="kod">(KİM.9.1.6)</span></span></div>
+  <div class="toc-item"><span><b>Ünite 7</b> — Periyodik Tabloda Yer Bulma <span class="kod">(KİM.9.1.7)</span></span></div>
+  <div class="toc-item"><span><b>Ünite 8</b> — Periyodik Özellikler <span class="kod">(KİM.9.1.8)</span></span></div>
+
+  <div class="toc-bolum">Ek</div>
+  <div class="toc-item"><span><b>Cevap Anahtarı</b></span></div>
+
+  <h2 style="font-family:Arial,sans-serif; font-size:20px; margin-top:34px;">Bu Defter Nasıl Kullanılır?</h2>
+  <p style="font-family:Arial,sans-serif; font-size:12px;">Bu ders defteri, AtomLab 9 dijital uygulamasıyla birlikte, sınıfta ya da evde kullanılmak üzere tasarlanmıştır. Her ünite aynı dört aşamayı izler — tıpkı uygulamadaki gibi:</p>
+  <table class="usage">
+    <tr><th>Aşama</th><th>Bu defterde karşılığı</th></tr>
+    <tr><td>🔍 Merak Et</td><td>Konu anlatımının giriş paragrafı, günlük hayattan bir soruyla başlar.</td></tr>
+    <tr><td>🧪 Keşfet</td><td>"Uygulamada Dene" kutusu — uygulamadaki etkinliği yaparken doldurulur.</td></tr>
+    <tr><td>📘 Açıklayalım</td><td>Konu Anlatımı, Kavram/Örnek Çözüm kutuları ve Bu Ünitenin Kavramları.</td></tr>
+    <tr><td>🎯 Değerlendir</td><td>Sürekli numaralanmış Açık Uçlu, Çoktan Seçmeli ve Bağlam Temelli Sorular.</td></tr>
+  </table>
+
+  <p style="font-family:Arial,sans-serif; font-size:12px; font-weight:800; margin-top:16px;">SORU TÜRLERİ HAKKINDA</p>
+  <div class="soru-turleri">
+    <span class="st-chip">AÇIK UÇLU</span><span class="st-chip">ÇOKTAN SEÇMELİ</span><span class="st-chip">BAĞLAM TEMELLİ</span>
+  </div>
+  <p style="font-family:Arial,sans-serif; font-size:12px;">AÇIK UÇLU sorularda kendi cümlelerinle, gerekçeli bir açıklama yazman istenir; cevap satırlarına yaz. ÇOKTAN SEÇMELİ sorularda 5 seçenek (A–E) bulunur. BAĞLAM TEMELLİ sorular bir okuma parçasıyla (bağlamla) başlar ve o bağlamla ilgili birkaç alt soru içerir; doğru cevaba ulaşmak için parçayı dikkatle okuyup derste öğrendiğin kavramı o duruma uygulaman gerekir — cevap parçanın içinde doğrudan yazmaz.</p>
+  <p style="font-family:Arial,sans-serif; font-size:12px;">Her ünitenin sonunda çözdüğün soruları, kitabın en sonundaki Cevap Anahtarı ile kontrol edebilirsin.</p>
+  <p style="font-family:Arial,sans-serif; font-size:11.5px; color:#5a5e78;"><strong>Öğretmene not:</strong> Defter, siyah-beyaz fotokopi/baskıda da okunaklı olacak şekilde tasarlanmıştır. Sayfa içindeki kutular (kavram, uygulama, notlarım, örnek çözüm, bağlam) çerçeve stiliyle ve etiket simgesiyle birbirinden ayrılır, yalnızca renge dayanmaz.</p>
+
+  <p style="font-family:Arial,sans-serif; font-size:12.5px; margin-top:30px;">Ad Soyad: _________________________________________ &nbsp;&nbsp;&nbsp; Sınıf / No: _______________</p>
+</div>
+
+<!-- ============ ÜNİTE 1 ============ -->
+<div class="page">
+  <div class="unit-kicker">Bölüm I · Kimya Hayattır · Ünite 1 · KİM.9.1.1</div>
+  <h2 class="unit-title">1. Günlük Hayatta Kimya</h2>
+  <div class="lo-box">
+    <b>Öğrenme Çıktısı</b> Kimya biliminin günlük hayata katkısına ilişkin çıkarım yapabilme
+    <b style="margin-top:8px">Beceri</b> Çıkarım Yapma
+    <ul>
+      <li>a) Kimyanın günlük hayattaki kullanım alanlarını (temizlik, ilaç/sağlık, gıda, enerji, tarım vb.) tanımlar.</li>
+      <li>b) Bu kullanım alanlarına ilişkin gözlem ve örnekler toplar.</li>
+      <li>c) Topladığı örneklerden kimya biliminin günlük hayata katkısına ilişkin çıkarımlar yapar.</li>
+    </ul>
+  </div>
+
+  <h3 class="konu-h">Konu Anlatımı</h3>
+  <p>Sabah yüzünü yıkamandan akşam telefonunu şarj etmene kadar geçen her an, aslında görünmez bir kimya laboratuvarındasın. El ve yüz temizlemede kullanılan su ve sabun, hastalıklarla mücadelede kullanılan ilaçlar, bilgisayardaki silisyum çipi, günümüzde önemli bir sorun hâline gelen plastik atıkların giderilmesi — bu örneklerin tamamı kimyasal maddeleri ve olayları içerir. Kimya bilimi; temizlik, ilaç, gıda, enerji ve tarım gibi pek çok sektörü etkiler ve insanların maddeleri nasıl etkileşime geçirebileceğini, bu süreçlerin günlük hayatta nasıl uygulanabileceğini anlamalarına yardımcı olur.</p>
+  <p>Bilgisayarların işlemesi, telefonların şarj olması ve televizyon ekranlarının ışıldaması gibi olaylar, atomun yapısındaki elektronların hareketine dayanır — bu defterin ikinci bölümünde (Ünite 5-8) tam olarak bu atom yapısını inceleyeceksin. Kimya bilgisi, doğada hayatta kalma becerilerini bile güçlendirir: kolonya, aseton veya yağ gibi maddeler yanıcı özellikleri sayesinde ateş yakmakta kullanılabilir; çakıl-kum-kömür katmanlarından geçirilen su, fiziksel bir süzme işlemiyle temizlenebilir.</p>
+
+  <div class="box kavram">
+    <div class="lbl">💡 Kavram · Kimya Bilimi</div>
+    Maddenin yapısını, özelliklerini ve maddeler arasındaki etkileşimleri inceleyen; bu bilgiyi günlük hayat sorunlarının çözümüne uygulayan temel bilim dalı.
+  </div>
+
+  <div class="box ornek">
+    <div class="lbl">✔ Örnek Çözüm</div>
+    <b>Soru:</b> Bir öğrenci, evde kullandığı diş macununun köpürtücü madde, tatlandırıcı ve flor bileşiği içerdiğini fark ediyor. Bu gözlem, kimyanın günlük hayata katkısı açısından nasıl yorumlanabilir?<br/><br/>
+    <b>Çözüm:</b> Diş macunu gibi günlük bir üründeki her bileşen (köpürtücü, tatlandırıcı, flor bileşiği) belirli bir kimyasal işlevi yerine getirmek üzere tasarlanmıştır. Bu, kimya biliminin soyut bir laboratuvar konusu değil, günlük kullandığımız ürünlerin işlevselliğinin doğrudan temelini oluşturduğunu gösterir. <b>Sonuç:</b> Kimya bilgisi, ürün tasarımından sağlığa kadar günlük hayatın içindedir.
+  </div>
+
+  <div class="box notlarim">
+    <div class="lbl">✎ Notlarım</div>
+    <div class="cevap-satir"></div><div class="cevap-satir"></div><div class="cevap-satir"></div>
+  </div>
+
+  <div class="box uygulama">
+    <div class="lbl">📱 Uygulamada Dene — Modül 1</div>
+    AtomLab 9 uygulamasının 1. modülünde "Kimyasal Maddeleri Kullanım Alanına Göre Grupla" etkinliğini tamamla. En az 15 maddeyi doğru kategoriye (temizlik, ilaç/sağlık, gıda, enerji, tarım) yerleştirdikten sonra, aşağıya kendi hayatından iki örnek daha ekle.
+    <div class="cevap-satir" style="margin-top:8px"></div><div class="cevap-satir"></div>
+  </div>
+
+  <div class="kavramlar-list">
+    <div class="lbl">📚 Bu Ünitenin Kavramları</div>
+    <dt>Kimyasal Madde</dt><dd>Belirli bir bileşime ve karakteristik özelliklere sahip, doğal ya da üretilmiş her türlü madde.</dd>
+    <dt>Çıkarım</dt><dd>Gözlemlenen örneklerden yola çıkarak genel bir sonuca ulaşma süreci.</dd>
+  </div>
+
+  <div class="sorular-h">SORULAR</div>
+  <div class="soru"><span class="no">1.</span> <span class="tip">Açık Uçlu</span> Kimyanın günlük hayata katkısını, en az iki farklı sektörden (temizlik, ilaç, gıda, enerji, tarım) örnek vererek açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">2.</span> <span class="tip">Açık Uçlu</span> Bir ürünün (örneğin bir temizlik malzemesinin) etiketindeki içerik bilgisi, o ürünü güvenle kullanmana nasıl yardımcı olur?
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">3.</span> <span class="tip">Açık Uçlu</span> "Plastik atık sorunu, kimya biliminin ilgi alanına girmez." ifadesine katılıyor musun? Gerekçelendir.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">4.</span> <span class="tip">Açık Uçlu</span> Doğada hayatta kalma becerileriyle kimya bilgisi arasında nasıl bir ilişki kurulabilir? Bir örnekle açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">5.</span> <span class="tip">Çoktan Seçmeli</span> Aşağıdakilerden hangisi kimya biliminin doğrudan etkilediği bir sektör DEĞİLDİR?
+    <div class="secenekler">
+      <div>○ A) Temizlik ürünleri üretimi</div><div>○ B) İlaç geliştirme</div>
+      <div>○ C) Gıda üretimi</div><div>○ D) Enerji depolama (pil) teknolojileri</div>
+      <div>○ E) Bir şiirin kafiye düzeni</div>
+    </div></div>
+  <div class="soru"><span class="no">6.</span> <span class="tip">Çoktan Seçmeli</span> Bilgisayarların işlemesi, telefonların şarj olması ve ekranların ışıldaması gibi olaylar temelde neye dayanır?
+    <div class="secenekler">
+      <div>○ A) Atomun yapısındaki elektronların hareketine</div><div>○ B) Yalnızca yazılım kodlarına</div>
+      <div>○ C) Atmosferdeki nem oranına</div><div>○ D) Cihazın rengine</div>
+      <div>○ E) Kullanıcının hızına</div>
+    </div></div>
+  <div class="soru"><span class="no">7.</span> <span class="tip">Çoktan Seçmeli</span> Çakıl, kum, odun kömürü ve kumaş katmanlarından oluşan bir su filtresi ile suyun berraklaştırılması hangi türde bir işlemdir?
+    <div class="secenekler">
+      <div>○ A) Kimyasal değişim</div><div>○ B) Fiziksel ayırma</div>
+      <div>○ C) Nükleer tepkime</div><div>○ D) Biyolojik fotosentez</div>
+      <div>○ E) Radyoaktif bozunma</div>
+    </div></div>
+  <div class="soru"><span class="no">8.</span> <span class="tip">Çoktan Seçmeli</span> Aşağıdakilerden hangisi kimya biliminin "günlük hayata katkısına ilişkin bir çıkarım" örneğidir?
+    <div class="secenekler">
+      <div>○ A) "Dün hava güneşliydi."</div>
+      <div>○ B) "Sabun kullandığımda ellerimdeki yağ çözüldüğü için daha temiz hissediyorum, bu bir kimyasal etkileşimdir."</div>
+      <div>○ C) "Bugün okula geç kaldım."</div>
+      <div>○ D) "Kırmızı rengi severim."</div>
+      <div>○ E) "Sınıfımızda 30 öğrenci var."</div>
+    </div></div>
+  <div class="baglam">
+    <div class="baglam-lbl">9–10. Bağlam Temelli · Kamp Ateşi</div>
+    <p style="margin:0">Doğada kamp yapan bir grup, yanlarında kibrit ya da çakmak bulunmadığını fark ediyor; ancak çantalarında kolonya, bir miktar bitkisel yağ ve pamuklu bir bez bulunuyor. Grup, kolonyayı bezin üzerine dökerek ve bir taşla kıvılcım çıkararak ateş yakmayı başarıyor; ateşin uzun süre yanmasını sağlamak için de üzerine az miktarda yağ ekliyorlar.</p>
+  </div>
+  <div class="soru"><span class="no">9.</span> a) Kolonyanın hızla tutuşup bezin ateşi başlatmasını sağlayan özelliği nedir? Bu durumu kimyasal bir kavramla adlandırarak açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">10.</span> b) Yağın ateşe eklenmesiyle kolonyanın ateşe eklenmesi arasındaki farkı, ikisinin de "yanıcı" olmasına rağmen neden birinin daha hızlı, diğerinin daha uzun süre yandığını tartışarak açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+
+  <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Ünite 1 — KİM.9.1.1</span></div>
+</div>
+
+<!-- ============ ÜNİTE 2 ============ -->
+<div class="page">
+  <div class="unit-kicker">Bölüm I · Kimya Hayattır · Ünite 2 · KİM.9.1.2</div>
+  <h2 class="unit-title">2. Kimyanın Alt Disiplinleri</h2>
+  <div class="lo-box">
+    <b>Öğrenme Çıktısı</b> Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme
+    <b style="margin-top:8px">Beceri</b> Sınıflandırma / İlişkilendirme
+    <ul>
+      <li>a) Kimyanın alt disiplinlerini (analitik, biyokimya, organik, anorganik, fizikokimya, polimer kimyası) tanımlar.</li>
+      <li>b) Her disiplinin uygulama alanlarına örnekler verir.</li>
+      <li>c) Günlük hayattaki bir durumu ilgili disipline ilişkilendirir.</li>
+    </ul>
+  </div>
+
+  <h3 class="konu-h">Konu Anlatımı</h3>
+  <p>Kimya, gündelik yaşamın her alanında etkilidir; besin maddelerinden tarımda kullanılan gübrelere, çamaşır deterjanlarından şampuanlara kadar birçok ürün kimyanın etkisi altındadır. Bu geniş kapsamlı bilim dalı altı ana alt disipline ayrılır: maddelerin bileşenlerini ve miktarlarını belirleyen <b>analitik kimya</b> (nitel/nicel analiz), canlı organizmalardaki tepkimeleri inceleyen <b>biyokimya</b>, karbon bileşiklerini inceleyen (ve bileşik çeşitliliği nedeniyle kimyanın en geniş alanı olan) <b>organik kimya</b>, karbon içermeyen bileşikleri (asit, baz, tuz, metal, mineral) inceleyen <b>anorganik kimya</b>, kimyasal sistemlerin fiziksel faktörlere (sıcaklık, basınç, derişim) bağlı davranışını ve enerji dönüşümlerini inceleyen <b>fizikokimya</b>, ve büyük moleküllerin (makromoleküllerin) kimyasını inceleyen <b>polimer kimyası</b>.</p>
+  <p>Bu disiplinler birbirinden kopuk değildir; gerçek bir problem çoğu zaman birden fazla disiplinin bir arada kullanılmasını gerektirir. Örneğin yeni bir ilaç geliştirmek hem organik kimya (molekülün sentezi), hem biyokimya (vücuttaki etkisi), hem de analitik kimya (saflık ve doz kontrolü) bilgisini aynı anda kullanır.</p>
+
+  <div class="box kavram">
+    <div class="lbl">💡 Kavram · Nitel ve Nicel Analiz</div>
+    Bir maddenin hangi element/bileşiklerden oluştuğunu bulmaya yarayan analize <b>nitel (kalitatif)</b>, bu bileşenlerin miktarını belirlemeyi hedefleyen analize <b>nicel (kantitatif)</b> analiz denir.
+  </div>
+
+  <div class="box ornek">
+    <div class="lbl">✔ Örnek Çözüm</div>
+    <b>Soru:</b> Bir araştırmacı, bir bitkiden elde ettiği özütteki etken maddenin yapısını belirleyip laboratuvarda sentezliyor; ardından bu maddenin insan vücudundaki etkisini inceliyor. Bu iki aşama hangi disiplinlerle ilişkilidir?<br/><br/>
+    <b>Çözüm:</b> Etken maddenin yapısını belirleyip sentezlemek <b>organik kimya</b>nın (karbon bileşiklerinin incelenmesi/sentezi) konusudur; maddenin vücuttaki etkisini incelemek ise <b>biyokimya</b>nın (canlı organizmalardaki kimyasal süreçlerin incelenmesi) konusudur. <b>Sonuç:</b> Organik kimya ve biyokimya.
+  </div>
+
+  <div class="box notlarim">
+    <div class="lbl">✎ Notlarım</div>
+    <div class="cevap-satir"></div><div class="cevap-satir"></div><div class="cevap-satir"></div>
+  </div>
+
+  <div class="box uygulama">
+    <div class="lbl">📱 Uygulamada Dene — Modül 2</div>
+    Uygulamanın 2. modülünde altı disiplin kartını çevirerek incele, sonra "Örneği Doğru Disipline Eşleştir" etkinliğini tamamla. Aşağıya en çok ilgini çeken disiplini ve nedenini yaz.
+    <div class="cevap-satir" style="margin-top:8px"></div>
+  </div>
+
+  <div class="kavramlar-list">
+    <div class="lbl">📚 Bu Ünitenin Kavramları</div>
+    <dt>Analitik Kimya</dt><dd>Maddelerin bileşenlerini ve miktarlarını belirleyen disiplin.</dd>
+    <dt>Organik Kimya</dt><dd>Karbon içeren bileşikleri inceleyen disiplin.</dd>
+    <dt>Anorganik Kimya</dt><dd>Karbon içermeyen bileşikleri inceleyen disiplin.</dd>
+    <dt>Fizikokimya</dt><dd>Kimyasal sistemlerin fiziksel faktörlere bağlı davranışını inceleyen disiplin.</dd>
+  </div>
+
+  <div class="sorular-h">SORULAR</div>
+  <div class="soru"><span class="no">1.</span> <span class="tip">Açık Uçlu</span> Analitik kimyayı, nitel ve nicel analiz kavramlarını kullanarak kendi cümlelerinle tanımla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">2.</span> <span class="tip">Açık Uçlu</span> Organik kimyanın neden "kimyanın en geniş alanı" olarak nitelendirildiğini açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">3.</span> <span class="tip">Açık Uçlu</span> Bir yapıştırıcının geliştirilmesi hangi disiplinle en çok ilişkilidir? Gerekçelendir.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">4.</span> <span class="tip">Açık Uçlu</span> Fizikokimya ile anorganik kimya arasındaki temel fark nedir?
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">5.</span> <span class="tip">Çoktan Seçmeli</span> Bir laboratuvarda kandaki demir miktarının mg/dL cinsinden ölçülmesi hangi analiz türüne örnektir?
+    <div class="secenekler">
+      <div>○ A) Nitel analiz</div><div>○ B) Nicel analiz</div>
+      <div>○ C) Fiziksel analiz</div><div>○ D) Radyoaktif analiz</div>
+      <div>○ E) Termodinamik analiz</div>
+    </div></div>
+  <div class="soru"><span class="no">6.</span> <span class="tip">Çoktan Seçmeli</span> DNA ve protein yapısının incelenmesi hangi disiplinin doğrudan konusudur?
+    <div class="secenekler">
+      <div>○ A) Anorganik kimya</div><div>○ B) Polimer kimyası</div>
+      <div>○ C) Biyokimya</div><div>○ D) Fizikokimya</div>
+      <div>○ E) Analitik kimya</div>
+    </div></div>
+  <div class="soru"><span class="no">7.</span> <span class="tip">Çoktan Seçmeli</span> Metal ve minerallerin özelliklerinin incelenmesi hangi disiplinin kapsamına girer?
+    <div class="secenekler">
+      <div>○ A) Organik kimya</div><div>○ B) Biyokimya</div>
+      <div>○ C) Anorganik kimya</div><div>○ D) Polimer kimyası</div>
+      <div>○ E) Hiçbiri</div>
+    </div></div>
+  <div class="soru"><span class="no">8.</span> <span class="tip">Çoktan Seçmeli</span> Bir motorda yakıtın yanma verimini ve bu sırasındaki enerji dönüşümünü incelemek hangi disiplinin konusudur?
+    <div class="secenekler">
+      <div>○ A) Fizikokimya</div><div>○ B) Organik kimya</div>
+      <div>○ C) Polimer kimyası</div><div>○ D) Analitik kimya</div>
+      <div>○ E) Anorganik kimya</div>
+    </div></div>
+  <div class="baglam">
+    <div class="baglam-lbl">9–10. Bağlam Temelli · Biyobozunur Ambalaj Projesi</div>
+    <p style="margin:0">Bir araştırma ekibi, doğada kısa sürede parçalanabilen, büyük moleküllerden oluşan yeni bir ambalaj malzemesi geliştiriyor. Malzeme piyasaya sürülmeden önce, malzemenin bozunma sırasında açığa çıkardığı bileşenlerin insan sağlığına zararlı olup olmadığı ayrıca test ediliyor.</p>
+  </div>
+  <div class="soru"><span class="no">9.</span> a) Malzemenin geliştirilme (büyük moleküllerin tasarlanma) aşaması hangi disiplinle ilişkilidir? Gerekçelendir.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">10.</span> b) Bozunma sırasında açığa çıkan bileşenlerin miktarının ve türünün belirlenmesi hangi disiplinle ilişkilidir? Gerekçelendir.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+
+  <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Ünite 2 — KİM.9.1.2</span></div>
+</div>
+
+<!-- ============ ÜNİTE 3 ============ -->
+<div class="page">
+  <div class="unit-kicker">Bölüm I · Kimya Hayattır · Ünite 3 · KİM.9.1.3</div>
+  <h2 class="unit-title">3. Kimya Alanında Kariyer Olanakları</h2>
+  <div class="lo-box">
+    <b>Öğrenme Çıktısı</b> Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme
+    <b style="margin-top:8px">Beceri</b> Araştırma / Kariyer Planlama
+    <ul>
+      <li>a) Kimya alanındaki eğitim basamaklarını (ön lisans, lisans) tanımlar.</li>
+      <li>b) Kimya bilgisinin kullanıldığı sektörleri listeler.</li>
+      <li>c) Kendi ilgi alanlarıyla kariyer fırsatlarını ilişkilendirir.</li>
+    </ul>
+  </div>
+
+  <h3 class="konu-h">Konu Anlatımı</h3>
+  <p>Kimya bilimi; ürettiği bilgi ve yöntemlerle çeşitli maddelerin özelliklerinin belirlenmesine ve günlük hayattaki kullanım alanlarının anlaşılmasına yardımcı olur. Kimya teknolojisi ön lisans programlarını tamamlayanlar <b>kimya teknikeri</b> unvanı alarak laboratuvar teknikeri, kalite kontrol analisti gibi pozisyonlarda çalışabilir. Üniversitelerin dört yıllık lisans programları (kimya, kimya mühendisliği, polimer malzeme mühendisliği, kimya öğretmenliği) ise sırasıyla <b>kimyager</b>, <b>kimya mühendisi</b>, <b>polimer malzeme mühendisi</b> ve <b>kimya öğretmeni</b> unvanlarına yol açar.</p>
+  <p>Kimya bilgisiyle çalışılabilecek sekiz temel sektör şunlardır: <b>kimya endüstrisi</b> (boya, plastik, deterjan üretimi), <b>agronomi ve tarım</b> (gübre, pestisit), <b>sağlık ve biyoteknoloji</b> (adli kimya, ilaç geliştirme), <b>malzeme ve nanoteknoloji</b>, <b>çevre ve sürdürülebilirlik</b> (atık yönetimi, su arıtma), <b>eğitim ve akademik çalışma</b>, <b>enerji sektörü</b> (pil teknolojileri) ve <b>gıda ve içecek endüstrisi</b> (moleküler gastronomi dâhil). Kariyer planlaması dört basamaklı bir döngüdür: kişisel özellikleri tanıma (öz farkındalık), fırsatları araştırma, karar verip plan yapma ve planı uygulama.</p>
+
+  <div class="box gercek">
+    <div class="lbl">🌍 Gerçek Hayattan</div>
+    Nobel Ödüllü biyokimyager Aziz Sancar, DNA onarım mekanizmaları üzerine yaptığı çalışmalarla 2015 Nobel Kimya Ödülü'nü kazandı — kimya alanında bu ödülü alan ilk Türk vatandaşı oldu. "Türk Aynştaynı" olarak anılan Oktay Sinanoğlu ise 25 yaşında Yale'de en genç profesör unvanını aldı ve atom-molekül kuramına önemli katkılar sağladı.
+  </div>
+
+  <div class="box ornek">
+    <div class="lbl">✔ Örnek Çözüm</div>
+    <b>Soru:</b> Bir kişi, elektrikli araçlarda kullanılan pillerin enerji depolama kapasitesini artırmaya yönelik bir projede çalışmak istiyor. Bu kişi hangi kariyer sektörüne yönelmelidir?<br/><br/>
+    <b>Çözüm:</b> Pil teknolojileri ve enerji depolama sistemleri, sekiz sektörden "enerji sektörü" kapsamına girer. <b>Sonuç:</b> Enerji sektörü.
+  </div>
+
+  <div class="box notlarim">
+    <div class="lbl">✎ Notlarım</div>
+    <div class="cevap-satir"></div><div class="cevap-satir"></div><div class="cevap-satir"></div>
+  </div>
+
+  <div class="box uygulama">
+    <div class="lbl">📱 Uygulamada Dene — Modül 3</div>
+    Uygulamanın 3. modülünde sekiz kariyer sektörü kartını incele. Aşağıya en çok ilgini çeken iki sektörü ve bu sektörlerde hangi görevde çalışmak isteyebileceğini yaz.
+    <div class="cevap-satir" style="margin-top:8px"></div><div class="cevap-satir"></div>
+  </div>
+
+  <div class="kavramlar-list">
+    <div class="lbl">📚 Bu Ünitenin Kavramları</div>
+    <dt>Kimya Teknikeri</dt><dd>Kimya teknolojisi ön lisans programını tamamlayan, laboratuvar/kalite kontrol alanında çalışan kişi.</dd>
+    <dt>Kariyer Planlama Döngüsü</dt><dd>Öz farkındalık, fırsat araştırma, karar/plan yapma ve planı uygulama basamaklarından oluşan döngü.</dd>
+  </div>
+
+  <div class="sorular-h">SORULAR</div>
+  <div class="soru"><span class="no">1.</span> <span class="tip">Açık Uçlu</span> Kimya teknikeri ile kimyager arasındaki eğitim düzeyi farkını açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">2.</span> <span class="tip">Açık Uçlu</span> Kariyer planlama döngüsünün dört basamağını sırasıyla yaz ve her birini bir cümleyle açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">3.</span> <span class="tip">Açık Uçlu</span> Moleküler gastronomi kavramının ortaya çıkışında kimya biliminin rolü nedir?
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">4.</span> <span class="tip">Açık Uçlu</span> Sekiz kariyer sektöründen ikisini seçip her birinde kimya bilgisinin nasıl kullanıldığını örnekle açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">5.</span> <span class="tip">Çoktan Seçmeli</span> Kimya teknolojisi ön lisans programını tamamlayan biri hangi unvanı alır?
+    <div class="secenekler">
+      <div>○ A) Kimya mühendisi</div><div>○ B) Kimya teknikeri</div>
+      <div>○ C) Kimya öğretmeni</div><div>○ D) Polimer malzeme mühendisi</div>
+      <div>○ E) Kimyager</div>
+    </div></div>
+  <div class="soru"><span class="no">6.</span> <span class="tip">Çoktan Seçmeli</span> Su arıtma teknolojileri ve atık yönetimi hangi kariyer sektörünün kapsamına girer?
+    <div class="secenekler">
+      <div>○ A) Kimya endüstrisi</div><div>○ B) Çevre ve sürdürülebilirlik</div>
+      <div>○ C) Eğitim ve akademik çalışma</div><div>○ D) Gıda ve içecek endüstrisi</div>
+      <div>○ E) Agronomi ve tarım</div>
+    </div></div>
+  <div class="soru"><span class="no">7.</span> <span class="tip">Çoktan Seçmeli</span> Adli kimya ve ilaç geliştirme çalışmaları hangi sektörün kapsamına girer?
+    <div class="secenekler">
+      <div>○ A) Malzeme ve nanoteknoloji</div><div>○ B) Sağlık ve biyoteknoloji</div>
+      <div>○ C) Enerji sektörü</div><div>○ D) Kimya endüstrisi</div>
+      <div>○ E) Eğitim ve akademik çalışma</div>
+    </div></div>
+  <div class="soru"><span class="no">8.</span> <span class="tip">Çoktan Seçmeli</span> Kariyer planlama döngüsünde "fırsatları araştırma" basamağından hemen sonra hangi basamak gelir?
+    <div class="secenekler">
+      <div>○ A) Planı uygulama</div><div>○ B) Öz farkındalık</div>
+      <div>○ C) Karar verip plan yapma</div><div>○ D) Hiçbiri, döngü burada biter</div>
+      <div>○ E) Tekrar fırsat araştırma</div>
+    </div></div>
+  <div class="baglam">
+    <div class="baglam-lbl">9–10. Bağlam Temelli · Bir Öğrencinin Kararsızlığı</div>
+    <p style="margin:0">Bir öğrenci, hem gıda ürünlerinin analiz süreçlerine hem de yeni malzemelerin (örneğin nanomalzemelerin) geliştirilmesine ilgi duyduğunu fark ediyor; ancak hangi alanda ilerleyeceğine henüz karar veremiyor. Öğretmeni, önce her iki alanda kısa süreli gözlem/staj deneyimi edinmesini, ardından bu deneyimlere göre karar vermesini öneriyor.</p>
+  </div>
+  <div class="soru"><span class="no">9.</span> a) Öğretmenin önerisi, kariyer planlama döngüsünün hangi iki basamağıyla ilişkilidir? Açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">10.</span> b) Öğrencinin ilgi duyduğu iki alan (gıda analizi, nanomalzeme geliştirme) hangi kariyer sektörleriyle eşleşir?
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+
+  <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Ünite 3 — KİM.9.1.3</span></div>
+</div>
+
+<!-- ============ ÜNİTE 4 ============ -->
+<div class="page">
+  <div class="unit-kicker">Bölüm I · Kimya Hayattır · Ünite 4 · KİM.9.1.4</div>
+  <h2 class="unit-title">4. Kimyasal Maddelerin Kullanımı ve Güvenlik</h2>
+  <div class="lo-box">
+    <b>Öğrenme Çıktısı</b> Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme
+    <b style="margin-top:8px">Beceri</b> Problem Çözme
+    <ul>
+      <li>a) Kimyasal maddelerin güvenli kullanımına ilişkin laboratuvar kurallarını tanımlar.</li>
+      <li>b) Risk piktogramlarını tanır ve anlamlarını açıklar.</li>
+      <li>c) Farklı ortamlarda kimyasal madde kullanımından kaynaklanan güvenlik problemlerine çözüm üretir.</li>
+    </ul>
+  </div>
+
+  <h3 class="konu-h">Konu Anlatımı</h3>
+  <p>Kimyasal maddeler tarım, ilaç ve temizlik gibi birçok sektörde yaygın kullanılır ancak bu kullanım güvenlik risklerini de beraberinde getirir. Laboratuvarda uyulması gereken temel kurallardan bazıları şunlardır: kimyasal maddeler yakından koklanmaz, tadına bakılmaz; sıvılar pipetle aktarılırken kesinlikle puar kullanılır, asla ağızla çekilmez; asit çözeltisi hazırlanırken asit, baget yardımıyla yavaşça suyun içine dökülür (tersi değil); kimyasal madde cilde/göze temas ederse bölge en az 15 dakika bol suyla yıkanır.</p>
+  <p>Kimyasal madde etiketlerinde bulunan sağlık ve güvenlik işaretlerine <b>risk piktogramları</b> denir; bunlar arasında patlayıcı, oksitleyici, yanıcı/parlayıcı, zehirli, korozif, çevreye zararlı, tahriş edici, sağlığa zararlı, radyoaktif ve basınçlı gaz piktogramları bulunur. <b>Kimyasal depolama matrisi</b>, hangi maddelerin birlikte depolanabileceğini belirleyen bir plan sistemidir — örneğin su ile temas ettiğinde alevlenen maddeler nemli ortamlardan uzak tutulmalıdır. Çamaşır suyu (NaClO) ile tuz ruhu (HCl) gibi farklı temizlik ürünlerinin karıştırılması, zehirli klor gazı gibi tehlikeli sonuçlar doğurabilir; bu yüzden temizlik ürünleri asla gelişigüzel karıştırılmamalıdır.</p>
+
+  <div class="box kavram">
+    <div class="lbl">💡 Kavram · Risk Piktogramı</div>
+    Kimyasal maddelerin etiketlerinde bulunan, o maddenin taşıdığı tehlike türünü (patlayıcı, zehirli, korozif vb.) sembolle gösteren, sağlık ve güvenlik amaçlı işaret.
+  </div>
+
+  <div class="box ornek">
+    <div class="lbl">✔ Örnek Çözüm</div>
+    <b>Soru:</b> Bir kişi banyo temizliğinde önce tuz ruhu, ardından üzerini durulamadan çamaşır suyu kullanıyor ve ortamda boğucu bir gaz oluşuyor. Bu durumun nedeni nedir ve nasıl önlenebilirdi?<br/><br/>
+    <b>Çözüm:</b> Tuz ruhu (asit) ile çamaşır suyu (baz/oksitleyici) tepkimeye girdiğinde zehirli klor gazı açığa çıkar. Bu kaza, farklı temizlik ürünlerinin asla karıştırılmaması ve bir ürün kullanıldıktan sonra yüzeyin iyice durulanması kuralına uyularak önlenebilirdi. <b>Sonuç:</b> Farklı kimyasal aile ürünleri karıştırılmamalı, kullanım aralarında durulama yapılmalıdır.
+  </div>
+
+  <div class="box notlarim">
+    <div class="lbl">✎ Notlarım</div>
+    <div class="cevap-satir"></div><div class="cevap-satir"></div><div class="cevap-satir"></div>
+  </div>
+
+  <div class="box uygulama">
+    <div class="lbl">📱 Uygulamada Dene — Modül 4</div>
+    Uygulamanın 4. modülünde "Güvenlik Senaryosu Simülatörü"nde en az 3 farklı madde kombinasyonunu dene, sonra "Tehlike Piktogramlarını Eşleştir" etkinliğini tamamla. Hangi kombinasyonun tehlikeli çıktığını aşağıya yaz.
+    <div class="cevap-satir" style="margin-top:8px"></div>
+  </div>
+
+  <div class="kavramlar-list">
+    <div class="lbl">📚 Bu Ünitenin Kavramları</div>
+    <dt>Korozif Madde</dt><dd>Canlı dokuyu tahrip eden ya da metali aşındıran madde.</dd>
+    <dt>Kimyasal Depolama Matrisi</dt><dd>Kimyasal maddelerin hangi koşullarda birlikte/ayrı depolanacağını belirleyen plan sistemi.</dd>
+  </div>
+
+  <div class="sorular-h">SORULAR</div>
+  <div class="soru"><span class="no">1.</span> <span class="tip">Açık Uçlu</span> Sıvı kimyasalların pipetle aktarılmasında puar kullanılmasının nedenini açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">2.</span> <span class="tip">Açık Uçlu</span> Asit çözeltisi hazırlarken izlenmesi gereken doğru sırayı, nedeniyle birlikte açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">3.</span> <span class="tip">Açık Uçlu</span> Bir kimyasal göze/cilde temas ettiğinde uygulanması gereken ilk yardım adımını yaz.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">4.</span> <span class="tip">Açık Uçlu</span> Kimyasal depolama matrisinin amacını bir örnekle açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">5.</span> <span class="tip">Çoktan Seçmeli</span> Aşağıdakilerden hangisi laboratuvar güvenlik kurallarına UYGUNDUR?
+    <div class="secenekler">
+      <div>○ A) Kimyasalın tadına bakarak ne olduğunu anlamaya çalışmak</div>
+      <div>○ B) Kimyasal kullanmadan önce etiketi dikkatle okumak</div>
+      <div>○ C) Pipetle sıvıyı ağızla çekmek</div>
+      <div>○ D) Kırık cam malzemeyi elle toplamak</div>
+      <div>○ E) Atık kimyasalları lavaboya dökmek</div>
+    </div></div>
+  <div class="soru"><span class="no">6.</span> <span class="tip">Çoktan Seçmeli</span> Canlı dokuyu tahrip eden ya da metali aşındıran maddeleri belirten piktogram hangisidir?
+    <div class="secenekler">
+      <div>○ A) Zehirli</div><div>○ B) Korozif</div>
+      <div>○ C) Oksitleyici</div><div>○ D) Çevreye zararlı</div>
+      <div>○ E) Basınçlı gaz</div>
+    </div></div>
+  <div class="soru"><span class="no">7.</span> <span class="tip">Çoktan Seçmeli</span> Sodyum metalinin su ile teması sırasında dikkat edilmesi gereken en önemli risk nedir?
+    <div class="secenekler">
+      <div>○ A) Suyun rengi değişir</div><div>○ B) Şiddetli tepkime ve patlama riski oluşur</div>
+      <div>○ C) Hiçbir risk yoktur</div><div>○ D) Sodyum suda hemen buharlaşır</div>
+      <div>○ E) Su donar</div>
+    </div></div>
+  <div class="soru"><span class="no">8.</span> <span class="tip">Çoktan Seçmeli</span> Aşağıdakilerden hangisi zehirli buhar/gaz oluşturan maddelerle çalışırken alınması gereken bir önlemdir?
+    <div class="secenekler">
+      <div>○ A) Maddeyi açık havada değil kapalı bir çekmecede tutmak</div>
+      <div>○ B) Çeker ocak kullanmak</div>
+      <div>○ C) Maddeyi doğrudan güneş ışığında bırakmak</div>
+      <div>○ D) Etiketi çıkarmak</div>
+      <div>○ E) Maddeyi metal kaplarda saklamak</div>
+    </div></div>
+  <div class="baglam">
+    <div class="baglam-lbl">9–10. Bağlam Temelli · Mutfakta Yağ Çözücü Kazası</div>
+    <p style="margin:0">Bir kişi, mutfakta tavaları temizlemek için güçlü bir yağ çözücü (sodyum hidroksit çözeltisi) ve su karışımı hazırlıyor. Eldiven giyerek üç büyük tavayı aynı anda kaptan çıkarmaya çalışırken tavalar elinden kayıp tekrar kabın içine düşüyor; bu sırada yüzüne kaptaki sıvıdan sıçramalar oluyor.</p>
+  </div>
+  <div class="soru"><span class="no">9.</span> a) Bu kazada ihmal edilen laboratuvar/güvenlik kuralı(ları) nelerdir? Açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">10.</span> b) Yüzüne sıçrama olan kişinin uygulaması gereken ilk yardım adımı nedir?
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+
+  <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Ünite 4 — KİM.9.1.4</span></div>
+</div>
+
+<!-- ============ ÜNİTE 5 ============ -->
+<div class="page">
+  <div class="unit-kicker">Bölüm II · Atomdan Periyodik Tabloya · Ünite 5 · KİM.9.1.5</div>
+  <h2 class="unit-title">5. Atom Teorileri ve Atomun Yapısı</h2>
+  <div class="lo-box">
+    <b>Öğrenme Çıktısı</b> Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme
+    <b style="margin-top:8px">Beceri</b> Bilginin Değişebilirliğine İlişkin Çıkarım Yapma
+    <ul>
+      <li>a) Atom teorilerinin (Dalton, Thomson, Rutherford, Bohr, Modern) temel varsayımlarını tanımlar.</li>
+      <li>b) Her teorinin hangi kanıtla değiştiğini/geliştirildiğini açıklar.</li>
+      <li>c) Atom teorilerindeki değişim sürecinden bilimsel bilginin değişebilirliğine ilişkin çıkarım yapar.</li>
+    </ul>
+  </div>
+
+  <h3 class="konu-h">Konu Anlatımı</h3>
+  <p>Atom modeli, 120 yılda beş kez değişti — her seferinde eski model tamamen "yanlış" olduğu için değil, yeni bir kanıtı açıklayamadığı için geliştirildi. <b>Dalton (1803)</b>: atom, bölünemez ve içi dolu bir küredir. <b>Thomson (1897)</b>: katot ışını deneyleriyle elektron keşfedildi; atom, pozitif yüklü bir hamur içine gömülü elektronlardan oluşan bir küre olarak tasvir edildi. <b>Rutherford (1911)</b>: altın yaprak deneyinde alfa parçacıklarının bir kısmının büyük açılarla geri sekmesi, pozitif yükün küçük ve yoğun bir çekirdekte toplandığını gösterdi. <b>Bohr (1913)</b>: elektronlar çekirdek etrafında belirli enerji seviyelerinde (yörüngelerde) hareket eder; enerji soğurunca üst seviyeye çıkar (absorbsiyon), enerji yayarak alt seviyeye iner (emisyon). <b>Modern/Kuantum Model (1926)</b>: Heisenberg belirsizlik ilkesine göre elektronun konumu ve hızı aynı anda kesin bilinemez; elektronlar belirli yörüngelerde değil, bulunma olasılığının yüksek olduğu üç boyutlu bölgelerde (orbitallerde) tanımlanır.</p>
+  <p>Atomun temel tanecikleri proton ve nötron (çekirdekte) ile elektrondur (çekirdek dışında). Elektron ve protonun yük büyüklüğü aynıdır (sırasıyla -1 ve +1 bağıl yük); nötron nötrdür. Bir proton/nötronun kütlesi bir elektronunkinden yaklaşık 1836 kat fazladır. Nötr bir atomda proton sayısı elektron sayısına eşittir; proton sayısı elementin <b>atom numarasını (Z)</b> belirler.</p>
+
+  <div class="box kavram">
+    <div class="lbl">💡 Kavram · Bilimsel Model</div>
+    Doğrudan gözlemlenemeyen bir süreci (atom altı bir olayı), elde edilen kanıtlara dayanarak temsil eden basitleştirilmiş bir açıklama/çizim.
+  </div>
+
+  <div class="box ornek">
+    <div class="lbl">✔ Örnek Çözüm</div>
+    <b>Soru:</b> Rutherford'un altın yaprak deneyinde, alfa parçacıklarının çoğunun sapmadan geçmesi neyi gösterir?<br/><br/>
+    <b>Çözüm:</b> Parçacıkların büyük çoğunluğunun sapmadan geçmesi, atomun büyük bölümünün boşluk olduğunu gösterir; yalnızca küçük bir kısmının büyük açıyla sekmesi ise pozitif yükün ve kütlenin çok küçük bir hacimde (çekirdekte) toplandığına işaret eder. <b>Sonuç:</b> Atom, çoğunlukla boşluktan oluşan, merkezinde küçük ve yoğun bir çekirdek bulunan bir yapıdır.
+  </div>
+
+  <div class="box notlarim">
+    <div class="lbl">✎ Notlarım</div>
+    <div class="cevap-satir"></div><div class="cevap-satir"></div><div class="cevap-satir"></div>
+  </div>
+
+  <div class="box uygulama">
+    <div class="lbl">📱 Uygulamada Dene — Modül 5</div>
+    Uygulamanın 5. modülünde zaman tünelindeki beş modele sırayla tıkla; her modelin varsayımını ve neden aşıldığını oku. Sonra "Kendi Atomunu İnşa Et" bölümünde 3 farklı proton/nötron/elektron kombinasyonu dene.
+    <div class="cevap-satir" style="margin-top:8px"></div>
+  </div>
+
+  <div class="kavramlar-list">
+    <div class="lbl">📚 Bu Ünitenin Kavramları</div>
+    <dt>Atom Numarası (Z)</dt><dd>Bir atomun çekirdeğindeki proton sayısı; elementin kimliğini belirler.</dd>
+    <dt>Absorbsiyon / Emisyon</dt><dd>Elektronun üst enerji seviyesine çıkarken enerji soğurması / alt seviyeye inerken enerji yayması.</dd>
+    <dt>Belirsizlik İlkesi</dt><dd>Bir elektronun konumu ve hızının aynı anda kesin olarak belirlenemeyeceğini ifade eden ilke (Heisenberg).</dd>
+  </div>
+
+  <div class="sorular-h">SORULAR</div>
+  <div class="soru"><span class="no">1.</span> <span class="tip">Açık Uçlu</span> Thomson modelinin, Dalton modelinden farkını açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">2.</span> <span class="tip">Açık Uçlu</span> Bohr modelinin çok elektronlu atomlarda neden yetersiz kaldığını açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">3.</span> <span class="tip">Açık Uçlu</span> "Bir atom teorisi kanıtla çeliştiğinde bilim insanları teoriyi tamamen terk eder." ifadesine katılıyor musun? Atom teorileri tarihinden bir örnekle açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">4.</span> <span class="tip">Açık Uçlu</span> Proton, nötron ve elektronun kütle ve yük özelliklerini karşılaştırarak açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">5.</span> <span class="tip">Çoktan Seçmeli</span> Elektronu ilk kez keşfeden bilim insanı ve teorisi hangisidir?
+    <div class="secenekler">
+      <div>○ A) Dalton</div><div>○ B) Thomson</div>
+      <div>○ C) Rutherford</div><div>○ D) Bohr</div>
+      <div>○ E) Heisenberg</div>
+    </div></div>
+  <div class="soru"><span class="no">6.</span> <span class="tip">Çoktan Seçmeli</span> Atomun çoğunlukla boşluktan oluştuğunu ve pozitif yükün küçük bir çekirdekte toplandığını hangi deney/model ortaya koymuştur?
+    <div class="secenekler">
+      <div>○ A) Dalton modeli</div><div>○ B) Thomson modeli</div>
+      <div>○ C) Rutherford'un altın yaprak deneyi</div><div>○ D) Bohr modeli</div>
+      <div>○ E) Aufbau ilkesi</div>
+    </div></div>
+  <div class="soru"><span class="no">7.</span> <span class="tip">Çoktan Seçmeli</span> Elektronun belirli bir anda çekirdeğe göre tam konumunun bilinemeyeceğini öngören ilke hangisidir?
+    <div class="secenekler">
+      <div>○ A) Pauli dışlama ilkesi</div><div>○ B) Hund kuralı</div>
+      <div>○ C) Heisenberg belirsizlik ilkesi</div><div>○ D) Aufbau ilkesi</div>
+      <div>○ E) Kütlenin korunumu kanunu</div>
+    </div></div>
+  <div class="soru"><span class="no">8.</span> <span class="tip">Çoktan Seçmeli</span> Bir proton veya nötronun kütlesi, bir elektronun kütlesinden yaklaşık kaç kat fazladır?
+    <div class="secenekler">
+      <div>○ A) 2</div><div>○ B) 18</div>
+      <div>○ C) 1836</div><div>○ D) 6,02×10²³</div>
+      <div>○ E) 100</div>
+    </div></div>
+  <div class="baglam">
+    <div class="baglam-lbl">9–10. Bağlam Temelli · Bir Bilim Merkezindeki Yeni Bulgular</div>
+    <p style="margin:0">Dünyanın en büyük parçacık çarpıştırıcısında yapılan yeni bir deney, maddeyi oluşturan taneciklerle ilgili önceden bilinmeyen bir veri ortaya koyuyor. Bilim insanları bu veriyi mevcut atom modeliyle karşılaştırıp modelin bazı noktalarını yeniden değerlendirmeye başlıyor.</p>
+  </div>
+  <div class="soru"><span class="no">9.</span> a) Bu durum, bilimsel bilginin hangi temel özelliğini örnekler? Açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">10.</span> b) Atom teorileri tarihinden, bu duruma benzer bir örnek vererek karşılaştır.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+
+  <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Ünite 5 — KİM.9.1.5</span></div>
+</div>
+
+<!-- ============ ÜNİTE 6 ============ -->
+<div class="page">
+  <div class="unit-kicker">Bölüm II · Atomdan Periyodik Tabloya · Ünite 6 · KİM.9.1.6</div>
+  <h2 class="unit-title">6. Atom Orbitalleri ve Elektron Dizilimi</h2>
+  <div class="lo-box">
+    <b>Öğrenme Çıktısı</b> Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme
+    <b style="margin-top:8px">Beceri</b> Tahmin Etme
+    <ul>
+      <li>a) Atom orbitallerinin (s, p, d, f) temel özelliklerini tanımlar.</li>
+      <li>b) Aufbau ilkesi, Pauli dışlama ilkesi ve Hund kuralını kullanarak elektron dizilimi oluşturur.</li>
+      <li>c) Orbitallerin bağıl enerji sıralamasına ilişkin tahminde bulunur.</li>
+    </ul>
+  </div>
+
+  <h3 class="konu-h">Konu Anlatımı</h3>
+  <p>Modern atom teorisine göre elektronun bulunma olasılığının yüksek olduğu üç boyutlu bölgeye <b>orbital</b> denir. Orbital türleri s, p, d ve f'dir: s orbitali küre şeklindedir ve her enerji seviyesinde bulunur; p orbitalleri 2. enerji seviyesinden, d orbitalleri 3.'ten, f orbitalleri 4.'ten itibaren bulunur. Çok elektronlu atomlarda orbitallerin bağıl enerji sıralaması genellikle şöyledir: <b>1s &lt; 2s &lt; 2p &lt; 3s &lt; 3p &lt; 4s &lt; 3d &lt; 4p &lt; 5s &lt; 4d &lt; 5p &lt; 6s &lt; 4f …</b></p>
+  <p>Elektronlar bu orbitallere üç kuralla yerleşir. <b>Aufbau ilkesi:</b> elektronlar önce en düşük enerjili boş orbitale, atomun toplam enerjisini en aza indirecek şekilde yerleşir. <b>Pauli dışlama ilkesi:</b> bir orbitalde en fazla 2 elektron bulunabilir ve bu elektronların spinleri zıt yönlü olmalıdır. <b>Hund kuralı:</b> eş enerjili orbitaller (örn. üç 2p orbitali) önce birer elektronla, aynı yönlü spinle tek tek doldurulur; eşleşme ancak boş orbital kalmayınca başlar — çünkü birbirini iten aynı yüklü elektronlar enerjilerini azaltmak için olabildiğince uzak durur. Tam dolu ya da tam yarı dolu alt kabuklar (küresel simetri) ekstra kararlılık sağlar; bu yüzden krom (Cr, [Ar]4s¹3d⁵) ve bakır (Cu, [Ar]4s¹3d¹⁰) gibi bazı elementlerde gözlenen dizilim, saf Aufbau öngörüsünden küçük farklarla ayrılır.</p>
+
+  <div class="box kavram">
+    <div class="lbl">💡 Kavram · Hund Kuralı</div>
+    Eş enerjili orbitallerin önce birer elektronla, aynı yönlü spinle tek tek doldurulması; eşleşmenin ancak tüm orbitaller tek elektronla dolduktan sonra başlaması.
+  </div>
+
+  <div class="box ornek">
+    <div class="lbl">✔ Örnek Çözüm</div>
+    <b>Soru:</b> 7 elektronlu azot (N) atomunun elektron dizilimini Aufbau, Pauli ve Hund kurallarına göre yaz.<br/><br/>
+    <b>Çözüm:</b> Aufbau ilkesine göre önce 1s (2 elektron), sonra 2s (2 elektron) dolar; kalan 3 elektron 2p orbitallerine (üç eş enerjili orbital) Hund kuralına göre birer birer, aynı yönde yerleşir — hiçbiri eşleşmez, çünkü 3 elektron için 3 boş orbital vardır. <b>Sonuç:</b> 1s² 2s² 2p³ (2p orbitallerinin üçü de tek elektronlu).
+  </div>
+
+  <div class="box notlarim">
+    <div class="lbl">✎ Notlarım</div>
+    <div class="cevap-satir"></div><div class="cevap-satir"></div><div class="cevap-satir"></div>
+  </div>
+
+  <div class="box uygulama">
+    <div class="lbl">📱 Uygulamada Dene — Modül 6</div>
+    Uygulamanın 6. modülünde "Elektron Dizilimi Simülatörü"nü kullan: Z=7 (N) ve Z=8 (O) için orbital kutu diyagramlarını karşılaştır, sonra Z=24 (Cr) için gözlenen dizilimi incele.
+    <div class="cevap-satir" style="margin-top:8px"></div>
+  </div>
+
+  <div class="kavramlar-list">
+    <div class="lbl">📚 Bu Ünitenin Kavramları</div>
+    <dt>Orbital</dt><dd>Elektronun bulunma olasılığının yüksek olduğu üç boyutlu bölge.</dd>
+    <dt>Aufbau İlkesi</dt><dd>Elektronların en düşük enerjili boş orbitalden başlayarak yerleşmesi.</dd>
+    <dt>Pauli Dışlama İlkesi</dt><dd>Bir orbitalde en fazla 2, zıt spinli elektron bulunabilmesi.</dd>
+    <dt>Küresel Simetri</dt><dd>Çekirdek çekim gücünün eş enerjili alt orbitallere dengeli dağılması; tam/yarı dolu orbitallerde görülen ekstra kararlılık hâli.</dd>
+  </div>
+
+  <div class="sorular-h">SORULAR</div>
+  <div class="soru"><span class="no">1.</span> <span class="tip">Açık Uçlu</span> Aufbau ilkesini kendi cümlelerinle tanımla ve bir örnekle göster.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">2.</span> <span class="tip">Açık Uçlu</span> Pauli dışlama ilkesine göre bir orbitaldeki iki elektronun neden zıt spinli olması gerektiğini açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">3.</span> <span class="tip">Açık Uçlu</span> 8 elektronlu oksijen (O) atomunun 2p orbitallerindeki elektron dağılımını Hund kuralına göre çiz/açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">4.</span> <span class="tip">Açık Uçlu</span> Krom (Cr) atomunda gözlenen elektron diziliminin, Aufbau ilkesinin saf öngörüsünden neden farklı olabileceğini açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">5.</span> <span class="tip">Çoktan Seçmeli</span> Bir orbitalde en fazla kaç elektron bulunabilir?
+    <div class="secenekler">
+      <div>○ A) 1</div><div>○ B) 2</div>
+      <div>○ C) 3</div><div>○ D) 6</div>
+      <div>○ E) 8</div>
+    </div></div>
+  <div class="soru"><span class="no">6.</span> <span class="tip">Çoktan Seçmeli</span> Aşağıdaki orbital dolum sıralamalarından hangisi doğrudur?
+    <div class="secenekler">
+      <div>○ A) 1s &lt; 2p &lt; 2s &lt; 3s</div><div>○ B) 1s &lt; 2s &lt; 2p &lt; 3s</div>
+      <div>○ C) 2s &lt; 1s &lt; 2p &lt; 3s</div><div>○ D) 3s &lt; 2p &lt; 2s &lt; 1s</div>
+      <div>○ E) 1s &lt; 2s &lt; 3s &lt; 2p</div>
+    </div></div>
+  <div class="soru"><span class="no">7.</span> <span class="tip">Çoktan Seçmeli</span> Üç eş enerjili p orbitaline üç elektron yerleştirilecekse Hund kuralına göre nasıl dağılır?
+    <div class="secenekler">
+      <div>○ A) Bir orbitalde 2, diğerinde 1, üçüncüsü boş</div>
+      <div>○ B) Üç orbitalin de birer elektronla, aynı yönde dolu olması</div>
+      <div>○ C) Üç elektron da aynı orbitalde toplanır</div>
+      <div>○ D) Orbitaller rastgele dolar, kural yoktur</div>
+      <div>○ E) Elektronlar d orbitaline geçer</div>
+    </div></div>
+  <div class="soru"><span class="no">8.</span> <span class="tip">Çoktan Seçmeli</span> Tam dolu ya da tam yarı dolu bir alt kabuğun atoma kazandırdığı özellik nedir?
+    <div class="secenekler">
+      <div>○ A) Ekstra kararlılık (küresel simetri)</div><div>○ B) Kütle artışı</div>
+      <div>○ C) Renk değişimi</div><div>○ D) Radyoaktiflik</div>
+      <div>○ E) Hiçbir özellik kazandırmaz</div>
+    </div></div>
+  <div class="baglam">
+    <div class="baglam-lbl">9–10. Bağlam Temelli · Bir Öğrencinin Hatası</div>
+    <p style="margin:0">Bir öğrenci, 6 elektronlu karbon (C) atomunun elektron dizilimini gösterirken 2p orbitallerinden birine 2 elektron (eşleşmiş), diğer ikisini boş olarak çizmiş.</p>
+  </div>
+  <div class="soru"><span class="no">9.</span> a) Öğrencinin çizimi hangi kuralla çelişmektedir? Açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">10.</span> b) Karbon atomunun 2p orbitallerindeki doğru elektron dağılımını yaz ve gerekçelendir.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+
+  <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Ünite 6 — KİM.9.1.6</span></div>
+</div>
+
+<!-- ============ ÜNİTE 7 ============ -->
+<div class="page">
+  <div class="unit-kicker">Bölüm II · Atomdan Periyodik Tabloya · Ünite 7 · KİM.9.1.7</div>
+  <h2 class="unit-title">7. Periyodik Tabloda Yer Bulma</h2>
+  <div class="lo-box">
+    <b>Öğrenme Çıktısı</b> Elektronların atom orbitallerine yerleşimine, elementlerin periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme
+    <b style="margin-top:8px">Beceri</b> Tümevarımsal Akıl Yürütme
+    <ul>
+      <li>a) Elektron diziliminden periyot ve grup numarasını belirler.</li>
+      <li>b) Elementlerin iyon oluşum eğilimini elektron dizilimiyle ilişkilendirir.</li>
+      <li>c) Bu ilişkilerden periyodik tablodaki konumla ilgili genellemeler yapar.</li>
+    </ul>
+  </div>
+
+  <h3 class="konu-h">Konu Anlatımı</h3>
+  <p>Mendeleyev 1869'da elementleri kütle numaralarına göre sıralayıp henüz keşfedilmemiş elementlerin yerini boş bırakan ilk periyodik tabloyu oluşturdu; Henry Moseley'nin önerisiyle günümüzde elementler <b>atom numarasına</b> göre sıralanır. Bir elementin periyodik tablodaki "adresi" elektron diziliminden okunabilir: <b>(A grubu)</b> elektron diziliminin en yüksek temel enerji düzeyi (n) periyot numarasını, dizilim s veya p ile bitiyorsa en yüksek enerji düzeyindeki toplam elektron sayısı grup numarasını verir. <b>(B grubu)</b> dizilim d ile bitiyorsa, en son ns ve (n-1)d orbitallerindeki toplam elektron sayısı grup numarasını verir (ns²(n-1)d⁶,⁷,⁸ → 8B; toplam 11 → 1B; toplam 12 → 2B).</p>
+  <p>A grubu elementlerine <b>baş grup (ana grup)</b>, B grubu elementlerine <b>yan grup</b> elementleri denir. s ile bitenler s blok, p ile bitenler p blok, d ile bitenler d blok (geçiş metalleri), f ile bitenler f blok (iç geçiş metalleri: lantanit/aktinit) olarak adlandırılır. Grupların özel adları: 1A alkali metaller (H hariç), 2A toprak alkali metaller, 3A toprak metalleri, 7A halojenler, 8A soy gazlar. Atomlar kararlı bir soy gaz dizilimine ulaşmak için elektron alıp verir: en yüksek enerji düzeyindeki elektronları verince <b>katyon</b>, elektron alınca <b>anyon</b> oluşur. Aynı elektron sayısına/dizilimine sahip tanecikler <b>izoelektronik</b> olarak adlandırılır (örn. Ne, F⁻, Na⁺ — hepsi 10 elektronlu).</p>
+
+  <div class="box kavram">
+    <div class="lbl">💡 Kavram · Valans Elektron</div>
+    Bir atomun en dış enerji kabuğundaki elektronlar; kimyasal bağ ve iyon oluşumunu, periyodik tablodaki grup numarasını belirler.
+  </div>
+
+  <div class="box ornek">
+    <div class="lbl">✔ Örnek Çözüm</div>
+    <b>Soru:</b> Elektron dizilimi [Ne] 3s² 3p⁴ olan elementin periyodik tablodaki adresini bul.<br/><br/>
+    <b>Çözüm:</b> En yüksek enerji düzeyi n=3 → 3. periyot. Dizilim p orbitaliyle bitiyor → A grubu. En yüksek düzeydeki toplam elektron sayısı 2+4=6 → 6A grubu. <b>Sonuç:</b> 3. periyot, 6A grubu (bu element kükürttür, S).
+  </div>
+
+  <div class="box notlarim">
+    <div class="lbl">✎ Notlarım</div>
+    <div class="cevap-satir"></div><div class="cevap-satir"></div><div class="cevap-satir"></div>
+  </div>
+
+  <div class="box uygulama">
+    <div class="lbl">📱 Uygulamada Dene — Modül 7</div>
+    Uygulamanın 7. modülündeki tam periyodik tabloda en az 6 farklı elemente tıkla; her birinin "adres açıklamasını" oku. Sonra "Adres Bulma Kuralları" alıştırmasında en az 3 elektron diziliminin periyot/grubunu tahmin et.
+    <div class="cevap-satir" style="margin-top:8px"></div>
+  </div>
+
+  <div class="kavramlar-list">
+    <div class="lbl">📚 Bu Ünitenin Kavramları</div>
+    <dt>İzoelektronik</dt><dd>Aynı sayıda elektrona (ve aynı elektron dizilimine) sahip atom/iyonlar.</dd>
+    <dt>Katyon / Anyon</dt><dd>Elektron vererek oluşan pozitif iyon / elektron alarak oluşan negatif iyon.</dd>
+    <dt>Baş Grup / Yan Grup</dt><dd>A grubu elementleri (baş grup) / B grubu elementleri (yan grup, geçiş metalleri).</dd>
+  </div>
+
+  <div class="sorular-h">SORULAR</div>
+  <div class="soru"><span class="no">1.</span> <span class="tip">Açık Uçlu</span> Bir elementin periyot numarasını elektron diziliminden nasıl bulacağını açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">2.</span> <span class="tip">Açık Uçlu</span> A grubu ile B grubu elementlerinin grup numarasını bulma kuralları arasındaki farkı açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">3.</span> <span class="tip">Açık Uçlu</span> İzoelektronik kavramını bir örnekle açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">4.</span> <span class="tip">Açık Uçlu</span> Soy gazların neden kararlı olduğunu elektron dizilimiyle ilişkilendirerek açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">5.</span> <span class="tip">Çoktan Seçmeli</span> Elektron dizilimi [Ar] 4s² 3d⁶ olan bir element hangi gruptadır?
+    <div class="secenekler">
+      <div>○ A) 6A</div><div>○ B) 2A</div>
+      <div>○ C) 8B</div><div>○ D) 8A</div>
+      <div>○ E) 1B</div>
+    </div></div>
+  <div class="soru"><span class="no">6.</span> <span class="tip">Çoktan Seçmeli</span> Bileşiklerinde yalnızca +1 yüklü iyon oluşturan, su ile şiddetli tepkimeye giren grup hangisidir?
+    <div class="secenekler">
+      <div>○ A) 7A — Halojenler</div><div>○ B) 1A — Alkali metaller</div>
+      <div>○ C) 8A — Soy gazlar</div><div>○ D) 2A — Toprak alkali metaller</div>
+      <div>○ E) 3B — Geçiş metalleri</div>
+    </div></div>
+  <div class="soru"><span class="no">7.</span> <span class="tip">Çoktan Seçmeli</span> ¹¹Na atomunun kararlı katyonu (Na⁺) oluşurken elektron dizilimi hangi soy gazınkine benzer?
+    <div class="secenekler">
+      <div>○ A) He</div><div>○ B) Ne</div>
+      <div>○ C) Ar</div><div>○ D) Kr</div>
+      <div>○ E) Xe</div>
+    </div></div>
+  <div class="soru"><span class="no">8.</span> <span class="tip">Çoktan Seçmeli</span> Elektron dizilimi p orbitaliyle biten bir element hangi grup türündedir?
+    <div class="secenekler">
+      <div>○ A) B grubu (yan grup)</div><div>○ B) A grubu (baş grup)</div>
+      <div>○ C) Lantanit serisi</div><div>○ D) Aktinit serisi</div>
+      <div>○ E) Hiçbiri</div>
+    </div></div>
+  <div class="baglam">
+    <div class="baglam-lbl">9–10. Bağlam Temelli · Üç Tanecik, Tek Dizilim</div>
+    <p style="margin:0">Bir öğrenci üç farklı taneciğin (bir nötr atom, bir anyon, bir katyon) elektron dizilimini hesaplıyor ve üçünün de 1s² 2s² 2p⁶ dizilimine sahip olduğunu (yani 10 elektronlu olduğunu) buluyor. Ancak bu üç taneciğin proton sayıları birbirinden farklıdır.</p>
+  </div>
+  <div class="soru"><span class="no">9.</span> a) Bu üç taneciğin ortak elektron dizilimine sahip olmasına rağmen farklı elementler/iyonlar olabilmesini sağlayan nedir?
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">10.</span> b) Proton sayısı 9, 10 ve 11 olan üç taneciğin bu grupta hangi tanecikler (atom/iyon) olabileceğini belirle.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+
+  <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Ünite 7 — KİM.9.1.7</span></div>
+</div>
+
+<!-- ============ ÜNİTE 8 ============ -->
+<div class="page">
+  <div class="unit-kicker">Bölüm II · Atomdan Periyodik Tabloya · Ünite 8 · KİM.9.1.8</div>
+  <h2 class="unit-title">8. Periyodik Özellikler</h2>
+  <div class="lo-box">
+    <b>Öğrenme Çıktısı</b> Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme
+    <b style="margin-top:8px">Beceri</b> Çözümleme
+    <ul>
+      <li>a) Atom yarıçapı, iyonlaşma enerjisi ve elektronegatifliğin tanımlarını yapar.</li>
+      <li>b) Bu özelliklerin periyot ve gruplardaki değişim eğilimlerini belirler.</li>
+      <li>c) Değişim eğilimlerini çekirdek çekimi ve enerji seviyesi kavramlarıyla çözümler.</li>
+    </ul>
+  </div>
+
+  <h3 class="konu-h">Konu Anlatımı</h3>
+  <p><b>Atom yarıçapı</b>, bir grupta yukarıdan aşağıya inildikçe artar (enerji seviyesi/katman sayısı arttığı için en dış elektron çekirdekten uzaklaşır); bir periyotta soldan sağa gidildikçe azalır (elektronlar aynı katmana eklenirken artan çekirdek yükü onları daha güçlü çeker). <b>İyonlaşma enerjisi</b> (gaz hâlindeki nötr bir atomdan elektron koparmak için gereken enerji) tam ters yönde değişir: grupta aşağı inildikçe azalır, periyotta sağa gidildikçe artar. 2A ve 5A gruplarındaki elementlerin iyonlaşma enerjisi, kendilerinden sonraki gruptan yüksektir — çünkü tam dolu (ns²) veya yarı dolu (np³) alt kabuklar ekstra kararlılık sağlar. Bir elementin art arda ölçülen iyonlaşma enerjileri (İE₁, İE₂, İE₃…) her zaman artar; ancak valans elektronlar tükenip bir alt (dolu, kararlı) enerji seviyesinden elektron koparılmaya başlanınca değerde büyük bir <b>sıçrama</b> gözlenir.</p>
+  <p><b>Elektronegatiflik</b> (bir atomun bağ elektronlarını kendine çekme gücü, 0-4 arası Pauling ölçeğinde), atom yarıçapıyla ters, iyonlaşma enerjisiyle aynı yönde değişir: periyotta soldan sağa artar, grupta yukarıdan aşağıya azalır. Flor (F), 4,0 değeriyle en yüksek elektronegatifliğe sahip elementtir; soy gazların elektronegatifliğinden söz edilmez. Katyon oluşumunda (elektron sayısı azalırken proton sayısı sabit kalınca çekim artar) yarıçap küçülür; anyon oluşumunda (elektron sayısı artınca çekim elektron başına azalır) yarıçap büyür.</p>
+
+  <div class="box kavram">
+    <div class="lbl">💡 Kavram · İyonlaşma Enerjisi</div>
+    Gaz hâlindeki nötr bir atomdan bir elektron koparmak için gereken minimum enerji (1. iyonlaşma enerjisi); bir atomun elektron sayısı kadar iyonlaşma enerjisi değeri ölçülebilir.
+  </div>
+
+  <div class="box ornek">
+    <div class="lbl">✔ Örnek Çözüm</div>
+    <b>Soru:</b> Sodyumun (Na) ardışık iyonlaşma enerjileri İE₁=496, İE₂=4562 kJ/mol'dür. Bu büyük sıçramanın nedeni nedir?<br/><br/>
+    <b>Çözüm:</b> Sodyumun tek valans elektronu vardır ([Ne]3s¹). İlk elektron (3s¹) nispeten kolay koparılır çünkü tek başınadır ve dış katmandadır. İkinci elektron ise dolu ve kararlı [Ne] (soy gaz) dizilimindeki bir alt enerji seviyesinden koparılmak zorundadır; bu yüzden gereken enerji çok daha büyüktür. <b>Sonuç:</b> Sıçrama, valans elektronların tükendiğinin göstergesidir.
+  </div>
+
+  <div class="box notlarim">
+    <div class="lbl">✎ Notlarım</div>
+    <div class="cevap-satir"></div><div class="cevap-satir"></div><div class="cevap-satir"></div>
+  </div>
+
+  <div class="box uygulama">
+    <div class="lbl">📱 Uygulamada Dene — Modül 8</div>
+    Uygulamanın 8. modülünde "Trend Görselleştirici"de üç özelliği (yarıçap, iyonlaşma enerjisi, elektronegatiflik) 2. periyot ve 1A grubu için karşılaştır. Sonra "Ardışık İyonlaşma Enerjisi" grafiğinde sıçramanın nerede oluştuğunu gözlemle.
+    <div class="cevap-satir" style="margin-top:8px"></div>
+  </div>
+
+  <div class="kavramlar-list">
+    <div class="lbl">📚 Bu Ünitenin Kavramları</div>
+    <dt>Atom Yarıçapı</dt><dd>Çekirdek ile en dış elektron katmanı arasındaki uzaklık.</dd>
+    <dt>Elektronegatiflik</dt><dd>Bir atomun kimyasal bağdaki ortak elektron çiftini kendine çekme eğiliminin ölçüsü.</dd>
+    <dt>Sıçrama (İyonlaşma Enerjisinde)</dt><dd>Valans elektronlar tükendikten sonra bir alt, kararlı enerji seviyesinden elektron koparmanın gerektirdiği ani büyük enerji artışı.</dd>
+  </div>
+
+  <div class="sorular-h">SORULAR</div>
+  <div class="soru"><span class="no">1.</span> <span class="tip">Açık Uçlu</span> Atom yarıçapının aynı grupta neden aşağı doğru arttığını açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">2.</span> <span class="tip">Açık Uçlu</span> İyonlaşma enerjisinin aynı periyotta soldan sağa neden arttığını açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">3.</span> <span class="tip">Açık Uçlu</span> Bir katyonun, oluştuğu nötr atomdan neden küçük olduğunu proton/elektron sayısı ile ilişkilendirerek açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">4.</span> <span class="tip">Açık Uçlu</span> Elektronegatiflik ile iyonlaşma enerjisinin periyodik tablodaki değişim yönleri arasındaki benzerliği açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">5.</span> <span class="tip">Çoktan Seçmeli</span> Periyodik tabloda bir periyotta soldan sağa gidildikçe atom yarıçapı nasıl değişir?
+    <div class="secenekler">
+      <div>○ A) Artar</div><div>○ B) Azalır</div>
+      <div>○ C) Değişmez</div><div>○ D) Önce artar sonra azalır</div>
+      <div>○ E) Rastgele değişir</div>
+    </div></div>
+  <div class="soru"><span class="no">6.</span> <span class="tip">Çoktan Seçmeli</span> Periyodik tabloda en yüksek elektronegatifliğe sahip element hangisidir?
+    <div class="secenekler">
+      <div>○ A) Sezyum (Cs)</div><div>○ B) Flor (F)</div>
+      <div>○ C) Helyum (He)</div><div>○ D) Sodyum (Na)</div>
+      <div>○ E) Oksijen (O)</div>
+    </div></div>
+  <div class="soru"><span class="no">7.</span> <span class="tip">Çoktan Seçmeli</span> Bir anyon (örneğin Cl⁻) oluşurken atom yarıçapında ne olur?
+    <div class="secenekler">
+      <div>○ A) Değişmez</div><div>○ B) Küçülür</div>
+      <div>○ C) Büyür</div><div>○ D) Önce büyür sonra küçülür</div>
+      <div>○ E) Sıfır olur</div>
+    </div></div>
+  <div class="soru"><span class="no">8.</span> <span class="tip">Çoktan Seçmeli</span> 2A grubu elementlerinin iyonlaşma enerjisinin kendilerinden sonraki (3A) gruptan yüksek olmasının nedeni nedir?
+    <div class="secenekler">
+      <div>○ A) 2A grubu elementlerinin ns² (tam dolu alt kabuk) dizilimi ekstra kararlılık sağlar</div>
+      <div>○ B) 2A grubu elementlerinin atom yarıçapı sıfırdır</div>
+      <div>○ C) 2A grubu elementleri ametaldir</div>
+      <div>○ D) 3A grubu elementlerinin elektronu yoktur</div>
+      <div>○ E) Bu bir ölçüm hatasıdır</div>
+    </div></div>
+  <div class="baglam">
+    <div class="baglam-lbl">9–10. Bağlam Temelli · Magnezyumun Dört İyonlaşma Enerjisi</div>
+    <p style="margin:0">Bir magnezyum (Mg) atomunun ardışık iyonlaşma enerjileri şu şekilde ölçülüyor: İE₁=738, İE₂=1451, İE₃=7733, İE₄=10540 kJ/mol. Değerler arasında İE₂'den İE₃'e geçişte diğer geçişlere göre orantısal olarak çok daha büyük bir artış gözleniyor.</p>
+  </div>
+  <div class="soru"><span class="no">9.</span> a) Magnezyumun valans elektron sayısı kaçtır? Bu bilgiyi kullanarak İE₂→İE₃ arasındaki büyük sıçramanın nedenini açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">10.</span> b) Bu veriler, magnezyumun kararlı bileşiklerinde kaç yüklü (Mg⁺ mi, Mg²⁺ mi) iyon oluşturmasının beklendiğini destekler? Gerekçelendir.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+
+  <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Ünite 8 — KİM.9.1.8</span></div>
+</div>
+
+<!-- ============ CEVAP ANAHTARI ============ -->
+<div class="page">
+  <h2 style="font-family:Arial,sans-serif; font-size:22px;">Ek · Cevap Anahtarı</h2>
+  <p style="font-family:Arial,sans-serif; font-size:11.5px; color:#5a5e78;">Açık uçlu sorularda tek bir "doğru cevap" yoktur; notlar hangi kavram/ilişkinin doğru kullanılması gerektiğini gösterir. Çoktan seçmeli ve bağlam temelli sorularda doğru şık ve kısa gerekçesi verilmiştir.</p>
+
+  <div class="ca-unit">
+    <h4>Ünite 1 — Günlük Hayatta Kimya (KİM.9.1.1)</h4>
+    <div class="ca-item">1-4. Cevaplar, ilgili "Konu Anlatımı" bölümündeki kavram ve ilişkilerle tutarlı, gerekçeli bir açıklama içermelidir.</div>
+    <div class="ca-item"><b>5. E</b> — Bir şiirin kafiye düzeni, kimya biliminin etkilediği bir sektör değildir; diğer dördü (temizlik, ilaç, gıda, enerji) doğrudan kimya uygulamalarıdır.</div>
+    <div class="ca-item"><b>6. A</b> — Bilgisayar, telefon ve ekran teknolojileri atomdaki elektronların hareketine dayanır.</div>
+    <div class="ca-item"><b>7. B</b> — Katmanlardan geçirerek katı parçacıkları tutmak, maddenin kimliğini değiştirmeyen fiziksel bir ayırma işlemidir.</div>
+    <div class="ca-item"><b>8. B</b> — Gözlemlenen bir olaydan (sabunun yağı çözmesi) kimyasal bir ilişkiye ulaşmak, çıkarım yapmanın bir örneğidir.</div>
+    <div class="ca-item">9-10. Açık uçlu — konu anlatımındaki ilgili kavramla değerlendirilir (kolonya/yağın yanıcılığı ve yanma süresi farkı).</div>
+  </div>
+
+  <div class="ca-unit">
+    <h4>Ünite 2 — Kimyanın Alt Disiplinleri (KİM.9.1.2)</h4>
+    <div class="ca-item">1-4. Cevaplar, ilgili "Konu Anlatımı" bölümündeki kavram ve ilişkilerle tutarlı, gerekçeli bir açıklama içermelidir.</div>
+    <div class="ca-item"><b>5. B</b> — Bir bileşenin miktarının sayısal olarak (mg/dL) belirlenmesi nicel analizdir.</div>
+    <div class="ca-item"><b>6. C</b> — DNA ve protein yapısı, canlı organizmalardaki kimyasal yapıları inceleyen biyokimyanın konusudur.</div>
+    <div class="ca-item"><b>7. C</b> — Metal ve mineraller, karbon içermeyen bileşikler olduğundan anorganik kimyanın kapsamına girer.</div>
+    <div class="ca-item"><b>8. A</b> — Yanma verimi ve enerji dönüşümü, fiziksel faktörlerin kimyasal sistemlere etkisini inceleyen fizikokimyanın konusudur.</div>
+    <div class="ca-item">9-10. Açık uçlu — konu anlatımındaki ilgili kavramla değerlendirilir (polimer kimyası / analitik kimya ayrımı).</div>
+  </div>
+
+  <div class="ca-unit">
+    <h4>Ünite 3 — Kimya Alanında Kariyer Olanakları (KİM.9.1.3)</h4>
+    <div class="ca-item">1-4. Cevaplar, ilgili "Konu Anlatımı" bölümündeki kavram ve ilişkilerle tutarlı, gerekçeli bir açıklama içermelidir.</div>
+    <div class="ca-item"><b>5. B</b> — Kimya teknolojisi ön lisans programı, kimya teknikeri unvanı kazandırır.</div>
+    <div class="ca-item"><b>6. B</b> — Su arıtma ve atık yönetimi, çevre ve sürdürülebilirlik sektörünün kapsamındadır.</div>
+    <div class="ca-item"><b>7. B</b> — Adli kimya ve ilaç geliştirme, sağlık ve biyoteknoloji sektörünün konusudur.</div>
+    <div class="ca-item"><b>8. C</b> — Kariyer planlama döngüsünde fırsat araştırmadan sonra karar verip plan yapma basamağı gelir.</div>
+    <div class="ca-item">9-10. Açık uçlu — konu anlatımındaki ilgili kavramla değerlendirilir (kariyer döngüsü basamakları / sektör eşleştirme).</div>
+  </div>
+
+  <div class="ca-unit">
+    <h4>Ünite 4 — Kimyasal Maddelerin Kullanımı ve Güvenlik (KİM.9.1.4)</h4>
+    <div class="ca-item">1-4. Cevaplar, ilgili "Konu Anlatımı" bölümündeki kavram ve ilişkilerle tutarlı, gerekçeli bir açıklama içermelidir.</div>
+    <div class="ca-item"><b>5. B</b> — Kullanmadan önce etiketi okumak temel güvenlik kuralıdır; diğer seçenekler ihlaldir.</div>
+    <div class="ca-item"><b>6. B</b> — Canlı dokuyu tahrip eden/metali aşındıran maddeleri belirten piktogram korozif işaretidir.</div>
+    <div class="ca-item"><b>7. B</b> — Sodyum su ile şiddetli tepkimeye girer ve patlama riski oluşturur.</div>
+    <div class="ca-item"><b>8. B</b> — Zehirli buhar/gaz oluşturan maddelerle çalışırken çeker ocak kullanılmalıdır.</div>
+    <div class="ca-item">9-10. Açık uçlu — konu anlatımındaki ilgili kavramla değerlendirilir (güvenlik kuralı ihlali / ilk yardım).</div>
+  </div>
+
+  <div class="ca-unit">
+    <h4>Ünite 5 — Atom Teorileri ve Atomun Yapısı (KİM.9.1.5)</h4>
+    <div class="ca-item">1-4. Cevaplar, ilgili "Konu Anlatımı" bölümündeki kavram ve ilişkilerle tutarlı, gerekçeli bir açıklama içermelidir.</div>
+    <div class="ca-item"><b>5. B</b> — Elektronu ilk kez Thomson keşfetmiştir (katot ışını deneyleri).</div>
+    <div class="ca-item"><b>6. C</b> — Rutherford'un altın yaprak (alfa saçılma) deneyi, çekirdeğin varlığını ortaya koymuştur.</div>
+    <div class="ca-item"><b>7. C</b> — Heisenberg belirsizlik ilkesi, konum ve hızın aynı anda kesin bilinemeyeceğini öngörür.</div>
+    <div class="ca-item"><b>8. C</b> — Bir proton/nötronun kütlesi bir elektronunkinden yaklaşık 1836 kat fazladır.</div>
+    <div class="ca-item">9-10. Açık uçlu — konu anlatımındaki ilgili kavramla değerlendirilir (bilimsel bilginin değişebilirliği).</div>
+  </div>
+
+  <div class="ca-unit">
+    <h4>Ünite 6 — Atom Orbitalleri ve Elektron Dizilimi (KİM.9.1.6)</h4>
+    <div class="ca-item">1-4. Cevaplar, ilgili "Konu Anlatımı" bölümündeki kavram ve ilişkilerle tutarlı, gerekçeli bir açıklama içermelidir.</div>
+    <div class="ca-item"><b>5. B</b> — Pauli dışlama ilkesine göre bir orbitalde en fazla 2 (zıt spinli) elektron bulunabilir.</div>
+    <div class="ca-item"><b>6. B</b> — Doğru bağıl enerji sıralaması 1s &lt; 2s &lt; 2p &lt; 3s şeklindedir.</div>
+    <div class="ca-item"><b>7. B</b> — Hund kuralına göre üç eş enerjili orbital önce birer elektronla, aynı yönde dolar.</div>
+    <div class="ca-item"><b>8. A</b> — Tam/yarı dolu alt kabuklar küresel simetri nedeniyle ekstra kararlılık sağlar.</div>
+    <div class="ca-item">9-10. Açık uçlu — konu anlatımındaki ilgili kavramla değerlendirilir (Hund kuralı ihlali / doğru dağılım).</div>
+  </div>
+
+  <div class="ca-unit">
+    <h4>Ünite 7 — Periyodik Tabloda Yer Bulma (KİM.9.1.7)</h4>
+    <div class="ca-item">1-4. Cevaplar, ilgili "Konu Anlatımı" bölümündeki kavram ve ilişkilerle tutarlı, gerekçeli bir açıklama içermelidir.</div>
+    <div class="ca-item"><b>5. C</b> — ns²(n-1)d⁶ dizilimi 8B grubuna karşılık gelir.</div>
+    <div class="ca-item"><b>6. B</b> — Yalnızca +1 iyon oluşturan, su ile şiddetli tepkimeye giren grup 1A (alkali metaller)dir.</div>
+    <div class="ca-item"><b>7. B</b> — Na⁺, 3s¹ elektronunu vererek [Ne] (Neon) dizilimine ulaşır.</div>
+    <div class="ca-item"><b>8. B</b> — Elektron dizilimi s veya p ile biten elementler A grubu (baş grup) elementleridir.</div>
+    <div class="ca-item">9-10. Açık uçlu — konu anlatımındaki ilgili kavramla değerlendirilir (izoelektronik taneciklerde proton sayısı farkı; F⁻, Ne, Na⁺).</div>
+  </div>
+
+  <div class="ca-unit">
+    <h4>Ünite 8 — Periyodik Özellikler (KİM.9.1.8)</h4>
+    <div class="ca-item">1-4. Cevaplar, ilgili "Konu Anlatımı" bölümündeki kavram ve ilişkilerle tutarlı, gerekçeli bir açıklama içermelidir.</div>
+    <div class="ca-item"><b>5. B</b> — Bir periyotta soldan sağa gidildikçe artan çekirdek yükü nedeniyle atom yarıçapı azalır.</div>
+    <div class="ca-item"><b>6. B</b> — Flor (F), 4,0 değeriyle en yüksek elektronegatifliğe sahip elementtir.</div>
+    <div class="ca-item"><b>7. C</b> — Elektron sayısı artan bir anyonun yarıçapı, nötr atomdan daha büyüktür.</div>
+    <div class="ca-item"><b>8. A</b> — 2A grubunun tam dolu ns² dizilimi ekstra kararlılık sağlayıp iyonlaşma enerjisini yükseltir.</div>
+    <div class="ca-item">9-10. Açık uçlu — konu anlatımındaki ilgili kavramla değerlendirilir (Mg'nin 2 valans elektronu, İE₃'teki sıçrama, Mg²⁺ oluşumu).</div>
+  </div>
+
+  <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Cevap Anahtarı</span></div>
+</div>
+
+<!-- ============ KAPANIŞ ============ -->
+<div class="page cover" style="background:linear-gradient(160deg,#0c0a1f,#211f47 55%,#14122c);">
+  <div class="emoji">⚛️ 🧪 🔬</div>
+  <h1 style="font-size:28px">Tebrikler!</h1>
+  <div class="sub">Kimya Hayattır ve Atomdan Periyodik Tabloya temasının 8 ünitesini tamamladın.</div>
+  <div class="badges" style="max-width:520px">
+    <span class="badge">1 Günlük Hayatta Kimya</span><span class="badge">2 Alt Disiplinler</span>
+    <span class="badge">3 Kariyer Olanakları</span><span class="badge">4 Madde Güvenliği</span>
+    <span class="badge">5 Atom Teorileri</span><span class="badge">6 Orbitaller</span>
+    <span class="badge">7 Periyodik Tabloda Yer Bulma</span><span class="badge">8 Periyodik Özellikler</span>
+  </div>
+  <div class="sub" style="font-style:italic; max-width:480px;">Kimyayı günlük hayatta gördün, atom teorilerinin nasıl geliştiğini izledin, orbitalleri doldurdun ve periyodik tabloyu bir kimyager gibi okumaya başladın.</div>
+  <div class="site" style="margin-top:20px">Kimya 9 · Kimya Hayattır ve Atomdan Periyodik Tabloya Ders Defteri</div>
+  <div class="author">Türkiye Yüzyılı Maarif Modeli 9. Sınıf Kimya Dersi Öğretim Programı temel alınarak hazırlanmıştır.</div>
+</div>
+
+
+
+</body>
+</html>
