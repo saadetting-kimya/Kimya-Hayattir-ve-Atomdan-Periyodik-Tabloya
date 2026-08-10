@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Atom Orbitalleri ve Elektron Dizilimi — AtomLab 9</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2246%22 fill=%22%236d5bff%22/></svg>">
+<link rel="stylesheet" href="../assets/css/style.css?v=1" />
+</head>
+<body>
+<div id="nav-root"></div>
+
+<header class="hero">
+  <div class="container">
+    <span class="eyebrow">Modül 6 · KİM.9.1.6</span>
+    <h1 style="max-width:760px">Atom Orbitalleri ve Elektron Dizilimi</h1>
+    <p class="lead" style="max-width:680px">Elektronlar bir amfi tiyatroya girer gibi orbitallere yerleşir: önce en öndeki (en düşük enerjili) boş koltuklar dolar. Üç basit kural bu yerleşimi tamamen belirler.</p>
+  </div>
+</header>
+
+<section class="section tight">
+  <div class="container">
+    <div class="callout concept" style="max-width:820px">
+      <h5>🤔 Merak Et</h5>
+      <p>Bir atomdaki elektronlar rastgele mi dağılır, yoksa bir düzen mi izler? 25 elektronlu manganda (Mn) neden bazı orbitaller tek tek, bazıları çift dolar? Aşağıdaki simülatörle herhangi bir elementin elektronlarını orbitallere adım adım yerleştir.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">🔍 Keşfet</span>
+      <h2>Elektron Dizilimi Simülatörü</h2>
+      <p>Bir element seç; Aufbau ilkesine göre dolum sırasını ve orbital kutu diyagramını incele.</p>
+    </div>
+    <div class="card">
+      <div class="controls" style="grid-template-columns:1fr; max-width:480px">
+        <div class="control-row" style="grid-template-columns:110px 1fr 60px">
+          <label for="zpick">Atom Numarası (Z)</label>
+          <input type="range" id="zpick" min="1" max="36" step="1" value="7" />
+          <output id="zpick-out">7</output>
+        </div>
+      </div>
+      <div class="readouts" style="grid-template-columns:repeat(3,1fr); margin-top:10px">
+        <div class="readout" style="background:var(--surface-2); border-color:var(--line)"><div class="k" style="color:var(--ink-faint)">Element</div><div class="v" id="el-name" style="color:var(--ink)">–</div></div>
+        <div class="readout" style="background:var(--surface-2); border-color:var(--line)"><div class="k" style="color:var(--ink-faint)">Elektron Dizilimi</div><div class="v" id="el-config" style="color:var(--ink); font-size:14px">–</div></div>
+        <div class="readout" style="background:var(--surface-2); border-color:var(--line)"><div class="k" style="color:var(--ink-faint)">Kısaltılmış (Soy Gaz)</div><div class="v" id="el-short" style="color:var(--ink); font-size:14px">–</div></div>
+      </div>
+      <div style="margin-top:18px">
+        <div class="small" style="margin-bottom:8px">Orbital Kutu Diyagramı (Hund kuralı + Pauli dışlama ilkesi)</div>
+        <div class="orbital-diagram" id="orbital-diagram"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="discover">
+      <h3><span class="ico">🔍</span> Keşfet: Kuralları Test Et</h3>
+      <div class="mission">
+        <div class="m-title">Görev</div>
+        <ol>
+          <li>Z=7 (N) için 2p orbitallerindeki 3 elektronun neden hepsi aynı yönde (tek tek) yerleştiğini simülatörden gözlemle.</li>
+          <li>Z=8 (O) için 2p orbitallerinden birinde neden eşleşme başladığını gözlemle. Bu, Hund kuralının hangi ifadesiyle açıklanır?</li>
+          <li>Z=24 (Cr) ve Z=29 (Cu) elementlerinde gözlenen elektron diziliminin, saf Aufbau ilkesinin beklediğinden neden farklı olabileceğini araştır (ipucu: yarı dolu/tam dolu orbitallerin ekstra kararlılığı).</li>
+        </ol>
+      </div>
+      <div class="journal">
+        <label>📓 Keşif Günlüğü — gözlemlerin</label>
+        <textarea id="journal6" placeholder="Örn: Azotta (N) 2p orbitalleri..."></textarea>
+        <div class="save-state"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="container prose">
+    <div class="section-head">
+      <span class="eyebrow">💡 Açıkla</span>
+      <h2>Üç Kural, Tek Düzen</h2>
+    </div>
+    <p>Atom orbitalleri s, p, d ve f olmak üzere dört çeşittir; s orbitali küre şeklindedir ve tüm enerji seviyelerinde bulunur, p orbitalleri ikinci enerji seviyesinden, d orbitalleri üçüncüden, f orbitalleri dördüncüden itibaren bulunur. Çok elektronlu atomlarda orbitallerin bağıl enerji sıralaması genellikle şöyledir: <strong>1s &lt; 2s &lt; 2p &lt; 3s &lt; 3p &lt; 4s &lt; 3d &lt; 4p &lt; 5s &lt; 4d &lt; 5p &lt; 6s &lt; 4f …</strong> Elektronlar bu sıralamaya göre üç temel ilkeyle yerleşir:</p>
+    <ul>
+      <li><strong>Aufbau İlkesi</strong> — Elektronlar önce en düşük enerjili boş orbitale, atomun toplam enerjisini en aza indirecek şekilde yerleşir.</li>
+      <li><strong>Pauli Dışlama İlkesi</strong> — Bir orbitalde en fazla 2 elektron bulunabilir ve bu elektronların spinleri zıt yönlü olmalıdır.</li>
+      <li><strong>Hund Kuralı</strong> — Eş enerjili orbitaller (örn. üç 2p orbitali) önce birer elektronla, aynı yönlü spinle tek tek doldurulur; birbirini iten elektronlar enerjilerini azaltmak için ancak boş orbital kalmayınca eşleşmeye başlar.</li>
+    </ul>
+    <div class="callout real">
+      <h5>Küresel Simetri ve Kararlılık</h5>
+      <p>Çekirdeğin çekim gücü eş enerjili alt orbitallere dengeli dağıldığında (tam dolu ya da tam yarı dolu orbitallerde olduğu gibi) atomun kararlılığı artar. Bu yüzden krom (Cr) ve bakır (Cu) gibi bazı elementlerde gözlenen gerçek elektron dizilimi, saf Aufbau ilkesinin öngördüğünden küçük farklılıklar gösterebilir — ⁴s¹3d⁵ dizilimi, yarı dolu 3d alt kabuğunun getirdiği ekstra kararlılık nedeniyle ⁴s²3d⁴'ten daha kararlıdır.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">✅ Değerlendir</span>
+      <h2>Bağlam Temelli Sorular</h2>
+    </div>
+    <div id="quiz-host"></div>
+  </div>
+</section>
+
+<div id="footer-root"></div>
+
+<script type="module">
+  import { mountNav, mountFooter } from "../assets/js/nav.js?v=1";
+  import { renderQuiz, markVisited, bindJournal } from "../assets/js/quiz-engine.js?v=1";
+  import { QUIZ } from "../assets/js/quiz-data.js?v=1";
+  import { EL_BY_Z, buildConfig, toConventionalOrder, configString, nobleGasShorthand } from "../assets/js/periodic-data.js?v=1";
+
+  mountNav("orbital");
+  mountFooter();
+  markVisited("orbital");
+  bindJournal(document.getElementById("journal6"), "orbital-1");
+  renderQuiz(document.getElementById("quiz-host"), QUIZ.orbital, "orbital");
+
+  const SUBSHELL_ORBITALS = { s:1, p:3, d:5, f:7 };
+
+  /** Hund kuralına göre kutulara ok dağıtır: önce her kutuya bir "up" ok, sonra kalanlara "down". */
+  function fillBoxes(orbitalCount, electronCount) {
+    const boxes = Array.from({length: orbitalCount}, () => []);
+    let remaining = electronCount;
+    for (let i = 0; i < orbitalCount && remaining > 0; i++) { boxes[i].push("up"); remaining--; }
+    for (let i = 0; i < orbitalCount && remaining > 0; i++) { boxes[i].push("down"); remaining--; }
+    return boxes;
+  }
+
+  const zpick = document.getElementById("zpick");
+  function refresh() {
+    const z = +zpick.value;
+    document.getElementById("zpick-out").textContent = z;
+    const el = EL_BY_Z[z];
+    document.getElementById("el-name").textContent = `${el.sym} · ${el.name} (Z=${z})`;
+    document.getElementById("el-config").textContent = configString(z);
+    document.getElementById("el-short").textContent = nobleGasShorthand(z);
+
+    const ordered = toConventionalOrder(buildConfig(z));
+    const host = document.getElementById("orbital-diagram");
+    host.innerHTML = "";
+    ordered.forEach(sub => {
+      const orbCount = SUBSHELL_ORBITALS[sub.l];
+      const boxes = fillBoxes(orbCount, sub.count);
+      const row = document.createElement("div");
+      row.className = "orb-shell";
+      const label = document.createElement("div");
+      label.className = "shell-label";
+      label.textContent = sub.label;
+      row.appendChild(label);
+      const group = document.createElement("div");
+      group.className = "orb-group";
+      boxes.forEach(arrows => {
+        const box = document.createElement("div");
+        box.className = "orb-box";
+        arrows.forEach(dir => {
+          const span = document.createElement("span");
+          span.className = "arrow " + dir;
+          span.textContent = dir === "up" ? "↑" : "↓";
+          box.appendChild(span);
+        });
+        group.appendChild(box);
+      });
+      row.appendChild(group);
+      host.appendChild(row);
+    });
+  }
+  zpick.addEventListener("input", refresh);
+  refresh();
+</script>
+</body>
+</html>

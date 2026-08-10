@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Periyodik Özellikler — AtomLab 9</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2246%22 fill=%22%236d5bff%22/></svg>">
+<link rel="stylesheet" href="../assets/css/style.css?v=1" />
+<style>
+  .bars{ display:flex; align-items:flex-end; gap:10px; height:220px; padding:10px 6px 0; }
+  .bar-col{ flex:1; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; height:100%; }
+  .bar{ width:100%; max-width:56px; border-radius:8px 8px 0 0; background:linear-gradient(180deg,var(--gas),var(--gas-dark)); transition:height .3s; position:relative; }
+  .bar .val{ position:absolute; top:-20px; left:0; right:0; text-align:center; font-family:var(--mono); font-size:11px; color:#f1eeff; }
+  .bar-label{ margin-top:8px; font-size:12px; font-weight:700; color:#c7bfe6; text-align:center; }
+  .bar-sub{ font-size:10px; color:#8a80b3; }
+</style>
+</head>
+<body>
+<div id="nav-root"></div>
+
+<header class="hero">
+  <div class="container">
+    <span class="eyebrow">Modül 8 · KİM.9.1.8</span>
+    <h1 style="max-width:760px">Periyodik Özellikler</h1>
+    <p class="lead" style="max-width:680px">Atom yarıçapı, iyonlaşma enerjisi ve elektronegatiflik — periyodik tabloda üç görünmez eğilim gizli. Bunları grafikte gözünle gör.</p>
+  </div>
+</header>
+
+<section class="section tight">
+  <div class="container">
+    <div class="callout concept" style="max-width:820px">
+      <h5>🤔 Merak Et</h5>
+      <p>Sodyum (Na) atomu neden potasyumdan (K) küçük ama klordan (Cl) çok daha büyük? Aynı periyotta ve aynı grupta atom büyüklüğü neden farklı yönlerde değişir? Aşağıdaki grafikte periyot ve grup boyunca üç özelliğin nasıl değiştiğini keşfet.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">🔍 Keşfet</span>
+      <h2>Trend Görselleştirici</h2>
+      <p>Bir özellik ve bir periyot/grup seç; eğilimi grafikte gözlemle.</p>
+    </div>
+    <div class="card">
+      <div class="controls" style="grid-template-columns:1fr 1fr; display:grid; max-width:640px">
+        <div class="control-row" style="grid-template-columns:90px 1fr">
+          <label>Özellik</label>
+          <select id="prop-pick" style="padding:8px; border-radius:8px; border:1px solid var(--line)">
+            <option value="r">Atom Yarıçapı (pm)</option>
+            <option value="ie">1. İyonlaşma Enerjisi (kJ/mol)</option>
+            <option value="en">Elektronegatiflik (Pauling)</option>
+          </select>
+        </div>
+        <div class="control-row" style="grid-template-columns:90px 1fr">
+          <label>Seri</label>
+          <select id="series-pick" style="padding:8px; border-radius:8px; border:1px solid var(--line)"></select>
+        </div>
+      </div>
+      <div class="lab-panel" style="margin-top:16px">
+        <div class="lab-head"><div class="lab-title"><span class="dot"></span> <span id="chart-title">Grafik</span></div></div>
+        <div class="bars" id="bars"></div>
+      </div>
+      <div class="callout model" style="margin-top:14px" id="trend-note"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">🔍 Keşfet</span>
+      <h2>İyonlaşma Enerjisindeki "Sıçrama"</h2>
+      <p>Bir element seç; art arda elektron koparmanın neden giderek zorlaştığını (ve valans elektronlar bittiğinde neden aniden çok zorlaştığını) gözlemle.</p>
+    </div>
+    <div class="card">
+      <select id="succ-pick" style="padding:8px; border-radius:8px; border:1px solid var(--line); max-width:260px"></select>
+      <div class="bars" id="succ-bars" style="height:200px; margin-top:14px"></div>
+      <div class="callout real" id="succ-note" style="margin-top:10px"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="discover">
+      <h3><span class="ico">🔍</span> Keşfet: İyon mu Büyür, Küçülür mü?</h3>
+      <div class="mission">
+        <div class="m-title">Görev</div>
+        <ol>
+          <li>Aşağıdaki atom→iyon çiftlerinde hangilerinin küçüldüğünü, hangilerinin büyüdüğünü not al.</li>
+          <li>Katyon oluşumunda elektron sayısı azalır (aynı çekirdek yükü daha az elektronu çeker) — neden küçülür? Anyon oluşumunda tam tersi neden olur?</li>
+        </ol>
+      </div>
+      <div class="chiprow" id="ion-pairs" style="margin-top:10px"></div>
+      <div class="journal">
+        <label>📓 Keşif Günlüğü — gözlemlerin</label>
+        <textarea id="journal8" placeholder="Örn: Na atomu Na+ iyonuna dönüşünce küçülür çünkü..."></textarea>
+        <div class="save-state"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="container prose">
+    <div class="section-head">
+      <span class="eyebrow">💡 Açıkla</span>
+      <h2>Üç Eğilim, Tek Neden: Çekirdek Çekimi</h2>
+    </div>
+    <p><strong>Atom yarıçapı</strong>, aynı grupta yukarıdan aşağıya inildikçe artar (enerji seviyesi sayısı arttığı için elektron çekirdekten uzaklaşır) ve aynı periyotta soldan sağa gidildikçe azalır (elektronlar aynı enerji seviyesine eklenirken artan çekirdek yükü onları daha güçlü çeker).</p>
+    <p><strong>İyonlaşma enerjisi</strong> tam ters yönde değişir: bir grupta yukarıdan aşağıya inildikçe azalır (dış elektron çekirdekten uzak ve gevşek tutulur), bir periyotta soldan sağa gidildikçe artar. 2A ve 5A gruplarındaki elementlerin iyonlaşma enerjisi, kendilerinden sonraki gruptan daha yüksektir — çünkü tam dolu (2A: ns²) veya yarı dolu (5A: np³) alt kabuklar ekstra kararlılık sağlar ve elektron koparmak zorlaşır.</p>
+    <p><strong>Elektronegatiflik</strong>, atom yarıçapıyla ters, iyonlaşma enerjisiyle aynı yönde değişir: periyotta soldan sağa artar, grupta yukarıdan aşağıya azalır. Soy gazların elektronegatifliğinden söz edilmez çünkü bu elementler kararlı yapıları nedeniyle bağ elektronu çekmeye "istekli" değildir.</p>
+    <div class="callout real">
+      <h5>Gerçek Hayattan</h5>
+      <p>Flor (F), 4,0 elektronegatiflik değeriyle periyodik tablonun en elektronegatif elementidir — bu yüzden diğer neredeyse tüm elementlerle güçlü, kararlı bağlar oluşturur (örn. diş macunlarındaki flor bileşikleri, diş minesini güçlendirir).</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">✅ Değerlendir</span>
+      <h2>Bağlam Temelli Sorular</h2>
+    </div>
+    <div id="quiz-host"></div>
+  </div>
+</section>
+
+<div id="footer-root"></div>
+
+<script type="module">
+  import { mountNav, mountFooter } from "../assets/js/nav.js?v=1";
+  import { renderQuiz, markVisited, bindJournal } from "../assets/js/quiz-engine.js?v=1";
+  import { QUIZ } from "../assets/js/quiz-data.js?v=1";
+  import { EL_BY_Z, PROPS } from "../assets/js/periodic-data.js?v=1";
+
+  mountNav("ozellikler");
+  mountFooter();
+  markVisited("ozellikler");
+  bindJournal(document.getElementById("journal8"), "ozellikler-1");
+  renderQuiz(document.getElementById("quiz-host"), QUIZ.ozellikler, "ozellikler");
+
+  const SERIES = {
+    "p2": { label:"2. Periyot (Li → Ne)", zs:[3,4,5,6,7,8,9,10], dir:"periyot" },
+    "p3": { label:"3. Periyot (Na → Ar)", zs:[11,12,13,14,15,16,17,18], dir:"periyot" },
+    "g1": { label:"1A Grubu (Li → Cs)", zs:[3,11,19,37,55], dir:"grup" },
+    "g2": { label:"2A Grubu (Be → Ba)", zs:[4,12,20,38,56], dir:"grup" },
+    "g17": { label:"7A Grubu — Halojenler (F → I)", zs:[9,17,35,53], dir:"grup" },
+  };
+  const PROP_META = {
+    r: { unit:"pm", trendPeriyot:"azalır (soldan sağa)", trendGrup:"artar (yukarıdan aşağıya)" },
+    ie: { unit:"kJ/mol", trendPeriyot:"artar (soldan sağa)", trendGrup:"azalır (yukarıdan aşağıya)" },
+    en: { unit:"", trendPeriyot:"artar (soldan sağa)", trendGrup:"azalır (yukarıdan aşağıya)" },
+  };
+
+  const seriesPick = document.getElementById("series-pick");
+  seriesPick.innerHTML = Object.entries(SERIES).map(([k,s]) => `<option value="${k}">${s.label}</option>`).join("");
+  const propPick = document.getElementById("prop-pick");
+
+  function renderChart() {
+    const propKey = propPick.value;
+    const seriesKey = seriesPick.value;
+    const series = SERIES[seriesKey];
+    const meta = PROP_META[propKey];
+    const propNames = { r:"Atom Yarıçapı", ie:"1. İyonlaşma Enerjisi", en:"Elektronegatiflik" };
+    document.getElementById("chart-title").textContent = `${propNames[propKey]} — ${series.label}`;
+
+    const values = series.zs.map(z => PROPS[z] ? PROPS[z][propKey] : null);
+    const maxV = Math.max(...values.filter(v => v !== null && v !== undefined), 1);
+    const bars = document.getElementById("bars");
+    bars.innerHTML = series.zs.map((z,i) => {
+      const el = EL_BY_Z[z];
+      const v = values[i];
+      const h = (v == null) ? 4 : Math.max(6, (v / maxV) * 190);
+      return `
+        <div class="bar-col">
+          <div class="bar" style="height:${h}px; ${v==null?"background:#362f63":""}">
+            <span class="val">${v == null ? "—" : v}</span>
+          </div>
+          <div class="bar-label">${el.sym}<div class="bar-sub">Z=${z}</div></div>
+        </div>
+      `;
+    }).join("");
+
+    const trend = series.dir === "periyot" ? meta.trendPeriyot : meta.trendGrup;
+    document.getElementById("trend-note").innerHTML = `<h5>Eğilim</h5><p>${propNames[propKey]}, bu ${series.dir === "periyot" ? "periyotta soldan sağa gidildikçe" : "grupta yukarıdan aşağıya inildikçe"} <strong>${trend}</strong>.</p>`;
+  }
+  propPick.addEventListener("input", renderChart);
+  seriesPick.addEventListener("input", renderChart);
+  renderChart();
+
+  /* ---- Ardışık iyonlaşma enerjisi ---- */
+  const SUCCESSIVE = {
+    4:  { name:"Berilyum (Be)", ve:2, ie:[900,1757,14849,21006] },
+    5:  { name:"Bor (B)", ve:3, ie:[800,2427,3660,25026] },
+    11: { name:"Sodyum (Na)", ve:1, ie:[496,4562,6912,9544] },
+    12: { name:"Magnezyum (Mg)", ve:2, ie:[738,1451,7733,10540] },
+    13: { name:"Alüminyum (Al)", ve:3, ie:[577,1817,2745,11578] },
+  };
+  const succPick = document.getElementById("succ-pick");
+  succPick.innerHTML = Object.entries(SUCCESSIVE).map(([z,d]) => `<option value="${z}">${d.name}</option>`).join("");
+  function renderSucc() {
+    const d = SUCCESSIVE[+succPick.value];
+    const maxV = Math.max(...d.ie);
+    document.getElementById("succ-bars").innerHTML = d.ie.map((v,i) => `
+      <div class="bar-col">
+        <div class="bar" style="height:${Math.max(6,(v/maxV)*170)}px; ${i>=d.ve?"background:linear-gradient(180deg,var(--heat),var(--heat-dark))":""}">
+          <span class="val">${v.toLocaleString("tr-TR")}</span>
+        </div>
+        <div class="bar-label">İE${i+1}</div>
+      </div>
+    `).join("");
+    document.getElementById("succ-note").innerHTML = `<h5>Gözlemle</h5><p>${d.name}'un valans elektron sayısı ${d.ve}. İlk ${d.ve} elektron nispeten kolay kopar (mavi çubuklar); ${d.ve+1}. elektron ise bir alt (dolu, kararlı) enerji seviyesinden söküldüğü için enerji ihtiyacında büyük bir <strong>sıçrama</strong> görülür (turuncu çubuklar).</p>`;
+  }
+  succPick.addEventListener("input", renderSucc);
+  renderSucc();
+
+  /* ---- İyon yarıçapı çiftleri ---- */
+  const ION_PAIRS = [
+    { atom:"Na", ar:186, ion:"Na⁺", ir:102, shrink:true },
+    { atom:"Mg", ar:160, ion:"Mg²⁺", ir:72, shrink:true },
+    { atom:"Al", ar:143, ion:"Al³⁺", ir:54, shrink:true },
+    { atom:"F", ar:72, ion:"F⁻", ir:133, shrink:false },
+    { atom:"O", ar:73, ion:"O²⁻", ir:140, shrink:false },
+    { atom:"Cl", ar:99, ion:"Cl⁻", ir:181, shrink:false },
+  ];
+  document.getElementById("ion-pairs").innerHTML = ION_PAIRS.map(p => `
+    <div class="chip">
+      <span class="sw" style="background:var(--mol-a); width:${Math.max(10,p.ar/10)}px; height:${Math.max(10,p.ar/10)}px"></span>
+      ${p.atom} (${p.ar} pm) → ${p.ion} (${p.ir} pm)
+      <span class="sw" style="background:var(--mol-b); width:${Math.max(10,p.ir/10)}px; height:${Math.max(10,p.ir/10)}px"></span>
+      ${p.shrink ? "↓ küçülür" : "↑ büyür"}
+    </div>
+  `).join("");
+</script>
+</body>
+</html>

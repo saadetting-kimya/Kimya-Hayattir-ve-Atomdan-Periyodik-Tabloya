@@ -144,20 +144,23 @@ export const CAT_LABELS = {
 };
 
 /* ---------- Ana grup elementleri için periyodik özellik verisi ----------
-   Kaynak: hesaplanmış (Clementi) atom yarıçapı [pm], 1. iyonlaşma enerjisi
-   [kJ/mol], Pauling elektronegatifliği. Yalnızca KİM.9.1.8 kapsamındaki
-   ana grup (1A, 2A, 13A-18A) elementleri için verilmiştir. */
+   Z=1-20 için değerler doğrudan kaynak ders kitabındaki (Kimya 9, Cilt 1,
+   1.2.4 Periyodik Özellikler) tablolardan alınmıştır (atom yarıçapı pm,
+   1. iyonlaşma enerjisi kJ/mol, Pauling elektronegatifliği). Z=31 ve
+   sonrası için genel kabul görmüş referans değerleri kullanılmıştır.
+   Yalnızca KİM.9.1.8 kapsamındaki ana grup (1A, 2A, 13A-18A) elementleri
+   için verilmiştir. */
 export const PROPS = {
-  1:{r:53,ie:1312,en:2.20},               2:{r:31,ie:2372,en:null},
-  3:{r:167,ie:520,en:0.98},   4:{r:112,ie:899,en:1.57},
-  5:{r:87,ie:801,en:2.04},    6:{r:67,ie:1086,en:2.55},
-  7:{r:56,ie:1402,en:3.04},   8:{r:48,ie:1314,en:3.44},
-  9:{r:42,ie:1681,en:3.98},   10:{r:38,ie:2081,en:null},
-  11:{r:190,ie:496,en:0.93},  12:{r:145,ie:738,en:1.31},
-  13:{r:118,ie:577,en:1.61},  14:{r:111,ie:786,en:1.90},
-  15:{r:98,ie:1012,en:2.19},  16:{r:88,ie:1000,en:2.58},
-  17:{r:79,ie:1251,en:3.16},  18:{r:71,ie:1521,en:null},
-  19:{r:243,ie:419,en:0.82},  20:{r:194,ie:590,en:1.00},
+  1:{r:37,ie:1312,en:2.20},                2:{r:31,ie:2372,en:null},
+  3:{r:152,ie:520,en:0.98},   4:{r:112,ie:900,en:1.57},
+  5:{r:85,ie:800,en:2.04},    6:{r:77,ie:1086,en:2.55},
+  7:{r:70,ie:1402,en:3.04},   8:{r:73,ie:1314,en:3.44},
+  9:{r:72,ie:1681,en:4.00},   10:{r:70,ie:2080,en:null},
+  11:{r:186,ie:496,en:0.93},  12:{r:160,ie:738,en:1.31},
+  13:{r:143,ie:577,en:1.61},  14:{r:118,ie:786,en:1.90},
+  15:{r:110,ie:1012,en:2.19}, 16:{r:103,ie:1000,en:2.58},
+  17:{r:99,ie:1255,en:3.16},  18:{r:98,ie:1520,en:null},
+  19:{r:227,ie:419,en:0.82},  20:{r:197,ie:590,en:1.00},
   31:{r:136,ie:579,en:1.81},  32:{r:125,ie:762,en:2.01},
   33:{r:114,ie:947,en:2.18},  34:{r:103,ie:941,en:2.55},
   35:{r:94,ie:1140,en:2.96},  36:{r:88,ie:1351,en:3.00},
