@@ -147,10 +147,37 @@
     { key:"su", name:"Su (H₂O)" },
     { key:"sirke", name:"Sirke (seyreltik asetik asit)" },
   ];
-  const DANGER = {
-    "camasir+tuzruhu": "☠ TEHLİKE — Zehirli Klor Gazı! Çamaşır suyu (baz, NaClO) ile tuz ruhu (asit, HCl) karıştığında boğucu ve zehirli klor gazı (Cl₂) açığa çıkar. Bu iki ürün ASLA birlikte kullanılmamalıdır; kapalı alanda solunduğunda öksürük, göğüs ağrısı, bulantıya yol açar.",
-    "sodyum+su": "☠ TEHLİKE — Şiddetli Tepkime ve Patlama Riski! Alkali metal olan sodyum, su ile çok hızlı ve ekzotermik tepkimeye girer; açığa çıkan hidrojen gazı tutuşabilir. Sodyum asla doğrudan su dolu bir kaba atılmamalıdır.",
-    "kirecc+camasir": "⚠ DİKKAT — Farklı asit-baz aile ürünlerini karıştırmak öngörülemeyen tepkimelere ve tahriş edici gaz çıkışına yol açabilir. Temizlik ürünleri farklı kimyasal aileler arasında karıştırılmamalıdır.",
+  /* Yedi maddenin ikili tüm kombinasyonları (21 çift) — hiçbiri "bilinmiyor" diye
+     geçiştirilmez; her çift için gerçek kimyaya dayanan bir sonuç verilir.
+     level: "tehlike" (☠ acil/şiddetli tehlike), "dikkat" (⚠ ısı/aşındırıcılık riski
+     taşıyan ama kontrollü yapılan tepkime türü), "guvenli" (gözle görülür tehlike yok). */
+  const REACTIONS = {
+    "camasir+kirecc": { level:"tehlike", msg:"☠ TEHLİKE — Zehirli Gaz Riski! Çamaşır suyu (NaClO) güçlü bir asitle (HNO₃) karıştığında, tuz ruhuyla karıştığında olduğu gibi boğucu, klor içerikli gazlar açığa çıkabilir. Çamaşır suyunu hiçbir asitle karıştırma." },
+    "camasir+sirke": { level:"tehlike", msg:"☠ TEHLİKE — Zehirli Gaz Riski! Sirke zayıf bir asit olsa da çamaşır suyuyla (NaClO) karıştığında yine tahriş edici, klor içerikli gaz açığa çıkarabilir. 'Çamaşır suyunu sirkeyle karıştırma' günlük hayatta sık tekrarlanan gerçek bir güvenlik uyarısıdır." },
+    "camasir+sodyum": { level:"tehlike", msg:"☠ TEHLİKE — Şiddetli Tepkime! Çamaşır suyu da büyük oranda sudan oluşan sulu bir çözeltidir; sodyum metali bu çözeltiyle de saf suyla girdiği gibi hızlı, ısı ve yanıcı hidrojen gazı açığa çıkaran bir tepkimeye girer." },
+    "camasir+su": { level:"guvenli", msg:"Çamaşır suyu zaten sulu bir çözeltidir; su eklemek yalnızca seyreltir, tehlikeli bir tepkime gözlenmez. Yine de çamaşır suyu her zaman iyi havalandırılan bir alanda kullanılmalıdır." },
+    "camasir+tuzruhu": { level:"tehlike", msg:"☠ TEHLİKE — Zehirli Klor Gazı! Çamaşır suyu (baz, NaClO) ile tuz ruhu (asit, HCl) karıştığında boğucu ve zehirli klor gazı (Cl₂) açığa çıkar. Bu iki ürün ASLA birlikte kullanılmamalıdır; kapalı alanda solunduğunda öksürük, göğüs ağrısı, bulantıya yol açar." },
+    "camasir+yagc": { level:"guvenli", msg:"İkisi de baz özelliği taşır (çamaşır suyunun içinde zaten stabilize edici NaOH bulunur); karıştıklarında tehlikeli yeni bir gaz açığa çıkmaz. Yine de farklı temizlik ürünlerini gelişigüzel karıştırmak önerilmez." },
+    "kirecc+sirke": { level:"guvenli", msg:"İkisi de asidik özellik taşır; karıştıklarında yalnızca daha asidik bir karışım oluşur, dramatik bir gaz veya patlama riski beklenmez. Yine de HNO₃ derişikse ciltte ve gözde tahrişe yol açabilir." },
+    "kirecc+sodyum": { level:"tehlike", msg:"☠ TEHLİKE — Çok Şiddetli Tepkime! Sodyum metali güçlü bir asitle (HNO₃) karşılaştığında sudakinden çok daha hızlı, patlamaya varabilecek şiddette tepkime verir; ayrıca zehirli azot oksit gazları da açığa çıkabilir." },
+    "kirecc+su": { level:"dikkat", msg:"⚠ DİKKAT — Asidi Suya Ekle Kuralı! Derişik asidin suyla seyreltilmesi ısı açığa çıkaran (ekzotermik) bir olaydır. Asit her zaman ince bir şekilde suya eklenir, asla suyu asidin üzerine dökme — aksi hâlde sıçrama ve yanık riski oluşur." },
+    "kirecc+tuzruhu": { level:"dikkat", msg:"⚠ DİKKAT — Çok Güçlü Aşındırıcı Karışım! Nitrik asit (HNO₃) ile hidroklorik asit (HCl), belirli oranda karıştırıldığında 'kral suyu' (aqua regia) adı verilen, altını bile çözebilen son derece aşındırıcı bir karışım oluşturur. Bu iki güçlü asit birlikte kullanılmamalıdır." },
+    "kirecc+yagc": { level:"dikkat", msg:"⚠ DİKKAT — Nötrleşme Tepkimesi, Isı Açığa Çıkar! Güçlü asit (HNO₃) ile güçlü baz (NaOH) karıştığında tuz ve su oluşturan bir nötrleşme tepkimesi gerçekleşir; bu tepkime ekzotermiktir ve derişik çözeltilerde sıçramaya yol açacak kadar ısınabilir." },
+    "sirke+sodyum": { level:"tehlike", msg:"☠ TEHLİKE — Şiddetli Tepkime! Sirke büyük oranda sudan oluşan seyreltik bir asit çözeltisidir; sodyum metali bu çözeltiyle de saf suyla girdiği gibi hızlı, ısı ve yanıcı hidrojen gazı açığa çıkaran şiddetli bir tepkimeye girer — asidin varlığı tepkimeyi daha da hızlandırır." },
+    "sirke+su": { level:"guvenli", msg:"Sirkenin suyla seyreltilmesi güvenli bir işlemdir; tehlikeli bir tepkime gözlenmez." },
+    "sirke+tuzruhu": { level:"guvenli", msg:"İkisi de asit olduğu için karışım yalnızca daha asidik hâle gelir; dramatik bir tehlike beklenmez, ama HCl derişikse tahriş edicidir." },
+    "sirke+yagc": { level:"dikkat", msg:"⚠ DİKKAT — Nötrleşme Tepkimesi! Zayıf asit sirke, güçlü baz NaOH ile nötrleşerek sodyum asetat ve su oluşturur. Tepkimenin kendisi nispeten ılımlıdır ama NaOH derişik hâlde ciltte ve gözde ciddi yanıklara yol açabilecek kadar aşındırıcıdır." },
+    "sodyum+su": { level:"tehlike", msg:"☠ TEHLİKE — Şiddetli Tepkime ve Patlama Riski! Alkali metal olan sodyum, su ile çok hızlı ve ekzotermik tepkimeye girer; açığa çıkan hidrojen gazı tutuşabilir. Sodyum asla doğrudan su dolu bir kaba atılmamalıdır." },
+    "sodyum+tuzruhu": { level:"tehlike", msg:"☠ TEHLİKE — Çok Şiddetli Tepkime! Sodyum metali güçlü bir asitle (HCl) karşılaştığında saf suyla girdiğinden çok daha hızlı ve şiddetli tepkime verir; büyük miktarda ısı ve yanıcı hidrojen gazı bir anda açığa çıkar." },
+    "sodyum+yagc": { level:"tehlike", msg:"☠ TEHLİKE — Şiddetli Tepkime! Yağ çözücü de büyük oranda sudan oluşan kostik bir çözeltidir (NaOH); sodyum metali bu çözeltinin suyuyla da hızlı, ısı ve yanıcı hidrojen gazı açığa çıkaran bir tepkimeye girer." },
+    "su+tuzruhu": { level:"dikkat", msg:"⚠ DİKKAT — Asidi Suya Ekle Kuralı! Derişik tuz ruhunun suyla seyreltilmesi ısı açığa çıkarır. Asit her zaman ince bir şekilde suya eklenir, asla tam tersi yapılmaz — aksi hâlde sıçrama ve yanık riski oluşur." },
+    "su+yagc": { level:"dikkat", msg:"⚠ DİKKAT — Bazı Suya Ekle Kuralı! Katı NaOH'in suda çözünmesi de yüksek ısı açığa çıkaran bir olaydır. Yavaş yavaş ve karıştırarak eklenmelidir; aksi hâlde sıçrama ve yanık riski oluşur." },
+    "tuzruhu+yagc": { level:"dikkat", msg:"⚠ DİKKAT — Nötrleşme Tepkimesi, Isı Açığa Çıkar! Güçlü asit (HCl) ile güçlü baz (NaOH) karıştığında tuz (NaCl) ve su oluşturan nötrleşme tepkimesi gerçekleşir; ekzotermiktir, derişik çözeltilerde sıçrama riski taşır." },
+  };
+  const LEVEL_STYLE = {
+    tehlike: { border:"var(--bad)", bg:"rgba(229,72,77,.08)", title:"var(--bad)", label:"Sonuç — Tehlike" },
+    dikkat:  { border:"var(--heat)", bg:"rgba(255,176,32,.08)", title:"var(--heat-dark)", label:"Sonuç — Dikkat" },
+    guvenli: { border:"var(--good)", bg:"rgba(47,191,110,.08)", title:"#177a44", label:"Sonuç — Belirgin Tehlike Yok" },
   };
   function normKey(a, b) { return [a, b].sort().join("+"); }
   const mixA = document.getElementById("mixA"), mixB = document.getElementById("mixB");
@@ -163,11 +190,9 @@
       resultEl.innerHTML = `<div class="callout concept"><h5>Sonuç</h5><p>Aynı maddeyi kendisiyle karıştırdın — gözlemlenebilir bir tepkime yok.</p></div>`;
       return;
     }
-    if (DANGER[key]) {
-      resultEl.innerHTML = `<div class="callout real" style="border-color:var(--bad); background:rgba(229,72,77,.08)"><h5 style="color:var(--bad)">Sonuç</h5><p>${DANGER[key]}</p></div>`;
-    } else {
-      resultEl.innerHTML = `<div class="callout model"><h5>Sonuç</h5><p>Bu kombinasyon ders kitabında bilinen bir "acil tehlike" örneği olarak geçmiyor — ama bu, kimyasalların güvenle karıştırılabileceği anlamına gelmez. Etiket talimatı olmadan hiçbir kimyasal madde gelişigüzel karıştırılmamalıdır.</p></div>`;
-    }
+    const r = REACTIONS[key];
+    const s = LEVEL_STYLE[r.level];
+    resultEl.innerHTML = `<div class="callout real" style="border-color:${s.border}; background:${s.bg}"><h5 style="color:${s.title}">${s.label}</h5><p>${r.msg}</p></div>`;
   });
 
   /* ---- GHS piktogram eşleştirme ---- */
