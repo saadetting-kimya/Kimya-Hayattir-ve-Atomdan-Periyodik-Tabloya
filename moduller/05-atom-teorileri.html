@@ -299,11 +299,22 @@
         svg.appendChild(svgEl("circle", { cx:ex, cy:ey, r:4, fill:"#ff5b9d" }));
       });
     } else if (kind === "bohr") {
-      [40,70,98].forEach(r => svg.appendChild(svgEl("circle", { cx, cy, r, fill:"none", stroke:"#362f63", "stroke-width":1.5 })));
-      svg.appendChild(svgEl("circle", { cx, cy, r:14, fill:"#ff5b9d" }));
-      [ [40,-Math.PI/2],[70,0.8],[98,2.6] ].forEach(([r,a]) => {
-        svg.appendChild(svgEl("circle", { cx:cx+Math.cos(a)*r, cy:cy+Math.sin(a)*r, r:6, fill:"#ffb020" }));
+      /* Bohr modeli, tarihsel olarak hidrojen atomunun (tek proton + tek elektron)
+         çizgi spektrumunu açıklamak için geliştirildi — bu yüzden temsili çizim de
+         hidrojeni gösterir: elektron yalnızca temel hâlde (n=1, K katmanı) bulunur. */
+      const SHELLS = [ { r:40, sym:"K", n:1 }, { r:70, sym:"L", n:2 }, { r:98, sym:"M", n:3 } ];
+      SHELLS.forEach(sh => {
+        svg.appendChild(svgEl("circle", { cx, cy, r:sh.r, fill:"none", stroke:"#362f63", "stroke-width":1.5 }));
+        const lbl = svgEl("text", { x:cx, y:cy-sh.r-6, "text-anchor":"middle", fill:"#8b83b0", "font-size":9, "font-family":"Arial,sans-serif", "font-weight":700 });
+        lbl.textContent = `${sh.sym} (n=${sh.n})`;
+        svg.appendChild(lbl);
       });
+      svg.appendChild(svgEl("circle", { cx, cy, r:14, fill:"#ff5b9d" }));
+      const nucLbl = svgEl("text", { x:cx, y:cy+4, "text-anchor":"middle", fill:"#fff", "font-size":11, "font-weight":800, "font-family":"Arial,sans-serif" });
+      nucLbl.textContent = "p⁺";
+      svg.appendChild(nucLbl);
+      const ea = 200 * Math.PI/180;
+      svg.appendChild(svgEl("circle", { cx:cx+Math.cos(ea)*40, cy:cy+Math.sin(ea)*40, r:6, fill:"#ffb020" }));
     } else if (kind === "orbital") {
       /* Modern (kuantum) model: elektronun "an be an" konumunu değil, zaman içinde en sık
          bulunduğu bölgeyi gösteren nokta-yoğunluklu olasılık bulutu (1s'e benzer basit radyal dağılım). */
@@ -478,8 +489,16 @@
       const a = Math.random()*Math.PI*2, rr = Math.random()*nucR;
       svg.appendChild(svgEl("circle", { cx:cx+Math.cos(a)*rr, cy:cy+Math.sin(a)*rr, r:4.5, fill: i<p ? "#3fb6ff" : "#9c92c4" }));
     }
+    const SHELL_SYM = ["K","L","M","N"];
     const shellCounts = []; let rem = e;
     [2,8,8,8].forEach(cap => { const c = Math.min(cap, rem); if (c>0){ shellCounts.push(c); rem -= c; } });
+    /* Katman etiketleri (K/n=1, L/n=2 ...) sabit bir köşe lejantında gösterilir —
+       elektron sayısına göre değişen açılarda bir etiket koymak dönen noktalarla çakışabilirdi. */
+    shellCounts.forEach((count, si) => {
+      const lbl = svgEl("text", { x:10, y:20+si*15, "text-anchor":"start", fill:"#8b83b0", "font-size":10.5, "font-family":"Arial,sans-serif", "font-weight":700 });
+      lbl.textContent = `${SHELL_SYM[si] || "?"} (n=${si+1}) — ${count} e⁻`;
+      svg.appendChild(lbl);
+    });
     shellCounts.forEach((count, si) => {
       const r = 45 + si*28;
       svg.appendChild(svgEl("circle", { cx, cy, r, fill:"none", stroke:"#362f63", "stroke-width":1.2 }));
