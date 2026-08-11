@@ -195,7 +195,7 @@
     const dt = (now - t0) / 1000; t0 = now;
     electrons.forEach(e => {
       e.angle += dt * e.speed * (0.6 + 0.1 * Math.sin(now/900));
-      const x = cx + Math.cos(e.angle) * e.r, y = cy + Math.sin(e.angle) * e.r * 0.55;
+      const x = cx + Math.cos(e.angle) * e.r, y = cy + Math.sin(e.angle) * e.r;
       e.el.setAttribute("cx", x); e.el.setAttribute("cy", y);
     });
     requestAnimationFrame(tick);
