@@ -22,6 +22,11 @@
     body{ background:#fff; }
     .page{ margin:0; box-shadow:none; width:auto; min-height:auto; page-break-after:always; }
     .noprint{ display:none !important; }
+    .soru, .box, .baglam, .kavramlar-list, .worksheet, .lo-box, .draw-box, .ca-item, .ca-unit h4,
+    table.wk tr, table.usage tr{
+      break-inside:avoid; page-break-inside:avoid;
+    }
+    .baglam{ break-after:avoid; page-break-after:avoid; }
   }
   h1,h2,h3,h4{ font-family: Arial, Helvetica, sans-serif; font-weight:800; color:var(--ink); margin:0 0 .4em; }
   p{ margin:0 0 .8em; }
