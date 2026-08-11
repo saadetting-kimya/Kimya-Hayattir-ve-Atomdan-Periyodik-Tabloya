@@ -464,4 +464,62 @@ footer a{ color:var(--gas-dark); text-decoration:none; font-weight:700; }
 .dnd-bin.over{ border-color:var(--gas); background:rgba(109,91,255,.06); }
 .dnd-bin .bin-label{ flex:0 0 auto; color:var(--ink-faint); font-size:11px; text-transform:uppercase; letter-spacing:.04em; }
 .dnd-bin .dnd-chip.correct{ background:rgba(47,191,110,.14); border-color:var(--good); }
+
+/* ---------- +/- Sayaç (stepper) ---------- */
+.stepper{ display:flex; align-items:center; gap:12px; }
+.stepper button{
+  width:36px; height:36px; border-radius:9px; border:1px solid var(--lab-line); background:var(--lab-glass);
+  color:#f1eeff; font-size:19px; font-weight:800; cursor:pointer; transition:.12s; line-height:1;
+}
+.stepper button:hover{ border-color:var(--gas); color:var(--gas); background:rgba(109,91,255,.12); }
+.stepper button:disabled{ opacity:.3; cursor:not-allowed; }
+.stepper .val{ min-width:46px; text-align:center; font-family:var(--mono); font-size:19px; font-weight:800; color:#f1eeff; }
+.stepper.on-light button{ background:var(--surface-2); border-color:var(--line); color:var(--ink); }
+.stepper.on-light button:hover{ border-color:var(--gas); color:var(--gas-dark); background:rgba(109,91,255,.08); }
+.stepper.on-light .val{ color:var(--ink); }
+
+/* ---------- pH laboratuvarı ---------- */
+.ph-tubes{ display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
+.ph-tube-btn{
+  width:66px; display:flex; flex-direction:column; align-items:center; gap:6px; cursor:pointer;
+  background:none; border:none; font-family:Arial,sans-serif; padding:4px; border-radius:10px;
+}
+.ph-tube-btn:hover{ background:var(--surface-2); }
+.ph-tube-btn.selected{ background:rgba(109,91,255,.1); }
+.ph-tube-glass{
+  width:30px; height:64px; border-radius:0 0 13px 13px; border:2px solid #b8bcd4; border-top:none;
+  position:relative; overflow:hidden; background:#fff;
+}
+.ph-tube-btn.selected .ph-tube-glass{ border-color:var(--gas); box-shadow:0 0 0 2px rgba(109,91,255,.25); }
+.ph-tube-liquid{ position:absolute; bottom:0; left:0; right:0; height:68%; transition:background .3s; }
+.ph-tube-label{ font-size:9.5px; color:var(--ink-soft); text-align:center; line-height:1.2; font-weight:700; }
+
+.ph-scale{ position:relative; height:26px; border-radius:8px; margin:34px 4px 16px;
+  background:linear-gradient(90deg,#b71c1c 0%,#e53935 14%,#fb8c00 28%,#fdd835 42%,#43a047 50%,#00897b 58%,#1e88e5 72%,#5e35b1 86%,#311b56 100%); }
+.ph-scale .ph-tick{ position:absolute; top:100%; transform:translateX(-50%); font-size:9px; color:var(--ink-faint); font-family:var(--mono); margin-top:3px; }
+.ph-scale .marker{
+  position:absolute; top:-9px; width:4px; height:44px; background:var(--ink); border-radius:2px;
+  transform:translateX(-50%); transition:left .35s ease;
+}
+.ph-scale .marker .tag{
+  position:absolute; top:-24px; left:50%; transform:translateX(-50%); font-family:var(--mono); font-size:11.5px;
+  font-weight:800; color:#fff; background:var(--ink); padding:2px 7px; border-radius:5px; white-space:nowrap;
+}
+.ph-readout{ display:flex; align-items:center; gap:14px; margin-top:8px; }
+.ph-readout .swatch{ width:46px; height:46px; border-radius:12px; flex:0 0 auto; border:1px solid var(--line); box-shadow:var(--shadow-1); }
+.ph-readout .txt b{ display:block; font-size:15px; color:var(--ink); }
+.ph-readout .txt span{ font-size:12.5px; color:var(--ink-soft); }
+.ph-dilute-note{ font-size:12.5px; color:var(--ink-soft); background:var(--surface-2); border-radius:10px; padding:10px 12px; margin-top:12px; }
+
+/* ---------- 3B orbital görselleştirici ---------- */
+.orbital3d-picker{ display:flex; flex-wrap:wrap; gap:6px; margin-bottom:10px; }
+.orbital3d-picker button{
+  font-family:var(--mono); font-size:12px; font-weight:800; padding:6px 12px; border-radius:8px;
+  border:1px solid var(--lab-line); background:var(--lab-glass); color:#c7bfe6; cursor:pointer; transition:.12s;
+}
+.orbital3d-picker button:hover{ border-color:var(--gas); color:#fff; }
+.orbital3d-picker button.active{ background:var(--gas); border-color:var(--gas); color:#fff; }
+.orbital3d-legend{ display:flex; gap:16px; margin-top:10px; font-size:11.5px; color:#a199c9; }
+.orbital3d-legend .lg{ display:flex; align-items:center; gap:6px; }
+.orbital3d-legend .sw{ width:13px; height:13px; border-radius:4px; }
 .dnd-bin .dnd-chip.wrong{ background:rgba(229,72,77,.14); border-color:var(--bad); }

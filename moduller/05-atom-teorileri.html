@@ -50,6 +50,75 @@
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">🔍 Keşfet</span>
+      <h2>Bohr'un Deneyini Sen Yap: Hidrojen Atom Spektrumu</h2>
+      <p>Bohr, katman modelini hayal etmedi — hidrojen gazının yaydığı ışığı inceleyip modelini bu gözlemlere göre kurdu. Aynı "deneyi" sanal olarak sen de yap ve enerji seviyelerinin varlığını kendi gözlemlerinden çıkar.</p>
+    </div>
+    <div class="two-col">
+      <div class="lab-panel">
+        <div class="lab-head">
+          <div class="lab-title"><span class="dot"></span> Hidrojen Deşarj Tüpü</div>
+          <span class="lab-hint">seviye seç, ışınla</span>
+        </div>
+        <div class="stage" id="bohr-stage" style="aspect-ratio:16/12"></div>
+        <div class="controls" style="grid-template-columns:1fr; margin-top:14px">
+          <div class="control-row" style="grid-template-columns:120px 1fr">
+            <label>Üst Seviye (n₂)</label>
+            <div class="stepper"><button id="bohr-nh-minus">−</button><span class="val" id="bohr-nh-val">3</span><button id="bohr-nh-plus">+</button></div>
+          </div>
+          <div class="control-row" style="grid-template-columns:120px 1fr">
+            <label>Alt Seviye (n₁)</label>
+            <div class="stepper"><button id="bohr-nl-minus">−</button><span class="val" id="bohr-nl-val">2</span><button id="bohr-nl-plus">+</button></div>
+          </div>
+        </div>
+        <div class="btnbar">
+          <button class="btn primary" id="bohr-emit">✨ Işınla (Elektronu Düşür)</button>
+          <button class="btn" id="bohr-reset">↺ Spektrumu Sıfırla</button>
+        </div>
+      </div>
+      <div>
+        <div class="readouts" style="grid-template-columns:1fr 1fr">
+          <div class="readout"><div class="k">Geçiş</div><div class="v" id="bohr-transition" style="font-size:16px">n=3 → n=2</div></div>
+          <div class="readout"><div class="k">Dalga Boyu (λ)</div><div class="v" id="bohr-wavelength">656<span class="u">nm</span></div></div>
+        </div>
+        <div class="chart-wrap" style="margin-top:14px">
+          <div class="chart-label"><span>Gözlenen Çizgi Spektrumu (380–750 nm görünür bölge)</span><span id="bohr-count">0 çizgi</span></div>
+          <div id="bohr-spectrum-bar" style="position:relative; height:52px; border-radius:8px; overflow:hidden; background:repeating-linear-gradient(90deg,#0c0a1f,#0c0a1f 9px,#14122c 9px,#14122c 10px);"></div>
+        </div>
+        <div class="callout real" style="margin-top:14px" id="bohr-note">
+          <h5>Gözlemle</h5>
+          <p>n=3→2 geçişini ışınla; kırmızı bir çizgi belirir. Bu, gözle görülebilen ilk Balmer çizgisi olan H-alfa'dır (656 nm).</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="discover" style="margin-top:22px">
+      <h3><span class="ico">🔍</span> Keşfet: Görünmeyen Çizgiler de Var mı?</h3>
+      <div class="mission">
+        <div class="m-title">Görev 1 — Balmer Serisini Tamamla</div>
+        <ol>
+          <li>n=3→2, n=4→2, n=5→2 ve n=6→2 geçişlerinin hepsini sırayla ışınla. Dördü de görünür bölgede mi? Enerji seviyesi arttıkça çizgiler birbirine nasıl yaklaşıyor?</li>
+        </ol>
+      </div>
+      <div class="mission">
+        <div class="m-title">Görev 2 — Lyman ve Paschen Serileri</div>
+        <ol>
+          <li>n=2→1 geçişini dene (Lyman serisi). Spektrumda görünür bir çizgi oluşuyor mu? Neden?</li>
+          <li>n=4→3 geçişini dene (Paschen serisi, kızılötesi). Sonucu Balmer serisiyle karşılaştır.</li>
+        </ol>
+      </div>
+      <div class="journal">
+        <label>📓 Keşif Günlüğü — Bohr gibi düşün</label>
+        <textarea id="journal5b" placeholder="Örn: Sadece n=2'ye inen geçişler gözle görülüyor çünkü..."></textarea>
+        <div class="save-state"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">🔍 Keşfet</span>
       <h2>Kendi Atomunu İnşa Et</h2>
       <p>Proton, nötron ve elektron sayısını gir; atomun elementini, kütle numarasını ve yükünü hesapla.</p>
     </div>
@@ -67,21 +136,18 @@
         </div>
       </div>
       <div>
-        <div class="controls">
-          <div class="control-row">
-            <label for="b-p">Proton (Z)</label>
-            <input type="range" id="b-p" min="1" max="20" step="1" value="6" />
-            <output id="b-p-out">6</output>
+        <div class="controls" style="grid-template-columns:1fr">
+          <div class="control-row" style="grid-template-columns:110px 1fr">
+            <label>Proton (Z)</label>
+            <div class="stepper"><button id="b-p-minus">−</button><span class="val" id="b-p-out">6</span><button id="b-p-plus">+</button></div>
           </div>
-          <div class="control-row">
-            <label for="b-n">Nötron</label>
-            <input type="range" id="b-n" min="0" max="24" step="1" value="6" />
-            <output id="b-n-out">6</output>
+          <div class="control-row" style="grid-template-columns:110px 1fr">
+            <label>Nötron</label>
+            <div class="stepper"><button id="b-n-minus">−</button><span class="val" id="b-n-out">6</span><button id="b-n-plus">+</button></div>
           </div>
-          <div class="control-row">
-            <label for="b-e">Elektron</label>
-            <input type="range" id="b-e" min="0" max="24" step="1" value="6" />
-            <output id="b-e-out">6</output>
+          <div class="control-row" style="grid-template-columns:110px 1fr">
+            <label>Elektron</label>
+            <div class="stepper"><button id="b-e-minus">−</button><span class="val" id="b-e-out">6</span><button id="b-e-plus">+</button></div>
           </div>
         </div>
         <div class="particle-count">
@@ -155,6 +221,7 @@
   mountFooter();
   markVisited("teori");
   bindJournal(document.getElementById("journal5"), "teori-1");
+  bindJournal(document.getElementById("journal5b"), "teori-bohr");
   renderQuiz(document.getElementById("quiz-host"), QUIZ.teori, "teori");
 
   const NS = "http://www.w3.org/2000/svg";
@@ -229,10 +296,132 @@
   timeline.querySelectorAll(".tl-item").forEach(el => el.addEventListener("click", () => showModel(+el.dataset.i)));
   showModel(0);
 
-  /* ---- Atom inşa et ---- */
-  const bp = document.getElementById("b-p"), bn = document.getElementById("b-n"), be = document.getElementById("b-e");
+  /* ---- Bohr Deneyi: Hidrojen Atom Spektrumu ---- */
+  const RYDBERG_NM = 1.097373e-2; // nm^-1 (=1.097373e7 m^-1)
+  function transitionWavelengthNm(nHigh, nLow) {
+    const invLambda = RYDBERG_NM * (1 / (nLow * nLow) - 1 / (nHigh * nHigh));
+    return 1 / invLambda;
+  }
+  /** Dan Bruton'un yaklaşık dalga boyu → RGB algoritması (görünür bölge 380-750nm). */
+  function wavelengthToRGB(nm) {
+    let r=0,g=0,b=0;
+    if (nm >= 380 && nm < 440) { r = -(nm-440)/(440-380); g = 0; b = 1; }
+    else if (nm >= 440 && nm < 490) { r = 0; g = (nm-440)/(490-440); b = 1; }
+    else if (nm >= 490 && nm < 510) { r = 0; g = 1; b = -(nm-510)/(510-490); }
+    else if (nm >= 510 && nm < 580) { r = (nm-510)/(580-510); g = 1; b = 0; }
+    else if (nm >= 580 && nm < 645) { r = 1; g = -(nm-645)/(645-580); b = 0; }
+    else if (nm >= 645 && nm <= 750) { r = 1; g = 0; b = 0; }
+    let factor = 1;
+    if (nm >= 380 && nm < 420) factor = 0.3 + 0.7*(nm-380)/(420-380);
+    else if (nm >= 700 && nm <= 750) factor = 0.3 + 0.7*(750-nm)/(750-700);
+    const to255 = v => Math.round(255 * Math.pow(Math.max(0, Math.min(1, v)) * factor, 0.8));
+    return `rgb(${to255(r)},${to255(g)},${to255(b)})`;
+  }
+  const SERIES_NAMES = { 1: "Lyman (mor ötesi)", 2: "Balmer (görünür)", 3: "Paschen (kızıl ötesi)" };
+
+  const bohrState = { nh: 3, nl: 2 };
+  const bohrStage = document.getElementById("bohr-stage");
+  const bohrSvg = svgEl("svg", { viewBox: "0 0 400 280" });
+  bohrStage.appendChild(bohrSvg);
+  const B_LEFT = 60, B_RIGHT = 340, B_BOTTOM = 245, B_TOP = 25;
+  function levelY(n) {
+    const E = (n2) => -13.6 / (n2*n2);
+    const norm = (E(n) - E(1)) / (E(6) - E(1));
+    return B_BOTTOM - norm * (B_BOTTOM - B_TOP);
+  }
+  function drawBohrDiagram() {
+    bohrSvg.innerHTML = "";
+    for (let n = 1; n <= 6; n++) {
+      const y = levelY(n);
+      bohrSvg.appendChild(svgEl("line", { x1:B_LEFT, y1:y, x2:B_RIGHT, y2:y, stroke: (n===bohrState.nh||n===bohrState.nl) ? "#ffb020" : "#362f63", "stroke-width": (n===bohrState.nh||n===bohrState.nl) ? 2.5 : 1.5 }));
+      const lbl = svgEl("text", { x:B_LEFT-10, y:y+4, "text-anchor":"end", fill:"#a199c9", "font-size":11, "font-family":"monospace" });
+      lbl.textContent = `n=${n}`;
+      bohrSvg.appendChild(lbl);
+    }
+    const infLbl = svgEl("text", { x:B_LEFT-10, y:B_TOP+2, "text-anchor":"end", fill:"#8a80b3", "font-size":9, "font-family":"monospace" });
+    infLbl.textContent = "n=∞";
+    bohrSvg.appendChild(infLbl);
+    // Nucleus
+    bohrSvg.appendChild(svgEl("circle", { cx: (B_LEFT+B_RIGHT)/2, cy: B_BOTTOM+18, r:8, fill:"#ff5b9d" }));
+  }
+  function updateBohrControls() {
+    document.getElementById("bohr-nh-val").textContent = bohrState.nh;
+    document.getElementById("bohr-nl-val").textContent = bohrState.nl;
+    const lambda = transitionWavelengthNm(bohrState.nh, bohrState.nl);
+    const visible = lambda >= 380 && lambda <= 750;
+    document.getElementById("bohr-transition").textContent = `n=${bohrState.nh} → n=${bohrState.nl}`;
+    document.getElementById("bohr-wavelength").innerHTML = visible
+      ? `${lambda.toFixed(0)}<span class="u">nm</span>`
+      : `${lambda < 380 ? lambda.toFixed(0) : lambda.toFixed(0)}<span class="u">nm (${lambda<380?"UV":"IR"})</span>`;
+    drawBohrDiagram();
+  }
+  function clampBohr() {
+    bohrState.nh = Math.max(2, Math.min(6, bohrState.nh));
+    bohrState.nl = Math.max(1, Math.min(bohrState.nh - 1, bohrState.nl));
+  }
+  document.getElementById("bohr-nh-plus").addEventListener("click", () => { bohrState.nh++; clampBohr(); updateBohrControls(); });
+  document.getElementById("bohr-nh-minus").addEventListener("click", () => { bohrState.nh--; clampBohr(); updateBohrControls(); });
+  document.getElementById("bohr-nl-plus").addEventListener("click", () => { bohrState.nl++; clampBohr(); updateBohrControls(); });
+  document.getElementById("bohr-nl-minus").addEventListener("click", () => { bohrState.nl--; clampBohr(); updateBohrControls(); });
+
+  let bohrLineCount = 0;
+  const bohrBar = document.getElementById("bohr-spectrum-bar");
+  document.getElementById("bohr-emit").addEventListener("click", () => {
+    const { nh, nl } = bohrState;
+    const lambda = transitionWavelengthNm(nh, nl);
+    const visible = lambda >= 380 && lambda <= 750;
+    const note = document.getElementById("bohr-note");
+
+    // Foton animasyonu: nh seviyesinden nl seviyesine düşen küçük bir daire
+    const photon = svgEl("circle", { cx: (B_LEFT+B_RIGHT)/2, cy: levelY(nh), r: 6, fill: visible ? wavelengthToRGB(lambda) : "#6a6a8a" });
+    bohrSvg.appendChild(photon);
+    const y0 = levelY(nh), y1 = levelY(nl);
+    let t0 = performance.now();
+    function anim(now) {
+      const t = Math.min(1, (now - t0) / 550);
+      photon.setAttribute("cy", y0 + (y1 - y0) * t);
+      photon.setAttribute("r", 6 - 2*t);
+      if (t < 1) requestAnimationFrame(anim);
+      else photon.remove();
+    }
+    requestAnimationFrame(anim);
+
+    if (visible) {
+      bohrLineCount++;
+      const pos = ((lambda - 380) / (750 - 380)) * 100;
+      const tick = document.createElement("div");
+      tick.style.cssText = `position:absolute; left:${pos}%; top:0; bottom:0; width:3px; background:${wavelengthToRGB(lambda)}; box-shadow:0 0 8px ${wavelengthToRGB(lambda)};`;
+      bohrBar.appendChild(tick);
+      document.getElementById("bohr-count").textContent = `${bohrLineCount} çizgi`;
+      note.innerHTML = `<h5>Gözlemle</h5><p>n=${nh}→${nl} geçişi ${lambda.toFixed(0)} nm'de <strong>görünür</strong> bir çizgi üretti (${SERIES_NAMES[nl] || ""} serisi). Bu ışık gerçekten bir spektroskopla gözlenebilir.</p>`;
+    } else {
+      note.innerHTML = `<h5>Gözlemle</h5><p>n=${nh}→${nl} geçişi ${lambda.toFixed(0)} nm'de bir foton üretti, ama bu <strong>${lambda<380?"mor ötesi (UV)":"kızıl ötesi (IR)"}</strong> bölgede — insan gözü bunu göremez. Bu yüzden bu seri (${SERIES_NAMES[nl] || ""}) çıplak gözle keşfedilemedi.</p>`;
+    }
+  });
+  document.getElementById("bohr-reset").addEventListener("click", () => {
+    bohrBar.innerHTML = "";
+    bohrLineCount = 0;
+    document.getElementById("bohr-count").textContent = "0 çizgi";
+  });
+  updateBohrControls();
+
+  /* ---- Atom inşa et (+/- sayaçlarla) ---- */
+  const builderState = { p: 6, n: 6, e: 6 };
+  const BUILDER_LIMITS = { p: [1, 20], n: [0, 24], e: [0, 24] };
+  function stepBuilder(key, delta) {
+    const [lo, hi] = BUILDER_LIMITS[key];
+    builderState[key] = Math.max(lo, Math.min(hi, builderState[key] + delta));
+    refreshBuilder();
+  }
+  document.getElementById("b-p-plus").addEventListener("click", () => stepBuilder("p", 1));
+  document.getElementById("b-p-minus").addEventListener("click", () => stepBuilder("p", -1));
+  document.getElementById("b-n-plus").addEventListener("click", () => stepBuilder("n", 1));
+  document.getElementById("b-n-minus").addEventListener("click", () => stepBuilder("n", -1));
+  document.getElementById("b-e-plus").addEventListener("click", () => stepBuilder("e", 1));
+  document.getElementById("b-e-minus").addEventListener("click", () => stepBuilder("e", -1));
+
   function refreshBuilder() {
-    const p = +bp.value, n = +bn.value, e = +be.value;
+    const p = builderState.p, n = builderState.n, e = builderState.e;
     document.getElementById("b-p-out").textContent = p;
     document.getElementById("b-n-out").textContent = n;
     document.getElementById("b-e-out").textContent = e;
@@ -267,7 +456,6 @@
       }
     });
   }
-  [bp,bn,be].forEach(inp => inp.addEventListener("input", refreshBuilder));
   refreshBuilder();
 </script>
 </body>
