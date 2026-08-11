@@ -195,42 +195,94 @@
     resultEl.innerHTML = `<div class="callout real" style="border-color:${s.border}; background:${s.bg}"><h5 style="color:${s.title}">${s.label}</h5><p>${r.msg}</p></div>`;
   });
 
-  /* ---- GHS piktogram eşleştirme ---- */
+  /* ---- GHS piktogram eşleştirme ----
+     İkonlar, ders kitabındaki (Temel Güvenlik Uyarı İşaretleri) piktogramlarla aynı
+     standart GHS biçiminde çizilmiştir: kırmızı çerçeveli baklava dilimi, beyaz zemin,
+     siyah sembol. Kitapta tam olarak bu 9 piktogram yer alır (radyoaktif GHS'te yoktur). */
+  const FRAME = (inner) => `<svg viewBox="0 0 64 64"><polygon points="32,3 61,32 32,61 3,32" fill="#fff" stroke="#da291c" stroke-width="4"/>${inner}</svg>`;
   const ICONS = {
-    patlayici: `<svg viewBox="0 0 64 64"><polygon points="32,4 40,24 60,24 44,36 50,58 32,45 14,58 20,36 4,24 24,24" fill="#ffb020"/></svg>`,
-    oksitleyici: `<svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="14" fill="#ffb020"/><path d="M32 4 L36 18 L28 18 Z M32 60 L36 46 L28 46 Z M4 32 L18 28 L18 36 Z M60 32 L46 28 L46 36 Z" fill="#ff5b9d"/></svg>`,
-    yanici: `<svg viewBox="0 0 64 64"><path d="M32 4 C20 20 16 30 16 40 A16 16 0 0 0 48 40 C48 30 44 20 32 4 Z" fill="#ff8a3d"/></svg>`,
-    zehirli: `<svg viewBox="0 0 64 64"><circle cx="32" cy="26" r="16" fill="#e9e9f5"/><circle cx="25" cy="24" r="4" fill="#14152b"/><circle cx="39" cy="24" r="4" fill="#14152b"/><path d="M20 50 L44 50 L40 60 L24 60 Z" fill="#e9e9f5"/></svg>`,
-    korozif: `<svg viewBox="0 0 64 64"><path d="M14 8 L50 8 L44 30 L34 30 L30 60 L24 30 L20 30 Z" fill="#3fb6ff"/></svg>`,
-    cevre: `<svg viewBox="0 0 64 64"><circle cx="32" cy="40" r="16" fill="#3fb6ff"/><path d="M32 26 C24 10 40 4 40 4 C40 4 40 20 32 26 Z" fill="#2fbf6e"/></svg>`,
-    tahris: `<svg viewBox="0 0 64 64"><rect x="28" y="10" width="8" height="30" fill="#ffb020"/><rect x="28" y="46" width="8" height="8" fill="#ffb020"/></svg>`,
-    saglik: `<svg viewBox="0 0 64 64"><circle cx="32" cy="20" r="10" fill="#ff5b9d"/><path d="M18 60 C18 42 46 42 46 60 Z" fill="#ff5b9d"/><path d="M32 30 L32 46 M24 38 L40 38" stroke="#14152b" stroke-width="3"/></svg>`,
-    radyoaktif: `<svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="6" fill="#ffb020"/><g fill="#ffb020"><path d="M32 32 L20 12 A22 22 0 0 1 44 12 Z"/></g></svg>`,
-    gaz: `<svg viewBox="0 0 64 64"><rect x="24" y="10" width="16" height="44" rx="6" fill="#3fb6ff"/><rect x="28" y="4" width="8" height="10" fill="#9c92c4"/></svg>`,
+    patlayici: FRAME(`
+      <circle cx="30" cy="38" r="6.5" fill="#111"/>
+      <path d="M35 33 Q41 27 38 19" stroke="#111" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+      <circle cx="38" cy="17" r="2" fill="#111"/>
+      <g stroke="#111" stroke-width="2.6" stroke-linecap="round">
+        <line x1="30" y1="38" x2="17" y2="31"/>
+        <line x1="30" y1="38" x2="13" y2="40"/>
+        <line x1="30" y1="38" x2="17" y2="50"/>
+        <line x1="30" y1="38" x2="28" y2="53"/>
+        <line x1="30" y1="38" x2="40" y2="50"/>
+        <line x1="30" y1="38" x2="47" y2="41"/>
+      </g>`),
+    oksitleyici: FRAME(`
+      <circle cx="32" cy="43" r="8.5" fill="#111"/>
+      <path d="M32 13 C25 22 23 29 27 34 C26 30 30 28 30 24 C35 29 37 33 32 40 C39 35 41 28 37 21 C39 23 39 17 32 13 Z" fill="#111"/>`),
+    yanici: FRAME(`
+      <path d="M32 11 C21 24 18 33 24 41 C22 34 28 30 28 23 C34 29 37 34 31 43 C42 37 46 28 39 20 C41 24 40 15 32 11 Z" fill="#111"/>`),
+    zehirli: FRAME(`
+      <circle cx="32" cy="25" r="11" fill="#111"/>
+      <circle cx="27" cy="24" r="2.8" fill="#fff"/>
+      <circle cx="37" cy="24" r="2.8" fill="#fff"/>
+      <path d="M25 32 Q32 37 39 32 L37 40 L32 37 L27 40 Z" fill="#111"/>
+      <g stroke="#111" stroke-width="3" stroke-linecap="round">
+        <line x1="17" y1="44" x2="46" y2="55"/>
+        <line x1="46" y1="44" x2="17" y2="55"/>
+      </g>
+      <g fill="#111">
+        <circle cx="17" cy="44" r="2.3"/><circle cx="46" cy="44" r="2.3"/>
+        <circle cx="17" cy="55" r="2.3"/><circle cx="46" cy="55" r="2.3"/>
+      </g>`),
+    korozif: FRAME(`
+      <rect x="9" y="45" width="19" height="4.5" fill="#111"/>
+      <path d="M14 19 L25 34 L21 37 L11 23 Z" fill="#111"/>
+      <circle cx="22" cy="41" r="1.7" fill="#111"/>
+      <path d="M38 45 C36 41 37 37 40 36 C40 33 43 32 44.5 35 C47 33 50 35 49 38 L48 46 C48 49 45 51.5 42 50.5 C39 50.5 37 47.5 38 45 Z" fill="#111"/>
+      <path d="M47 19 L37 33 L41 36 L50 23 Z" fill="#111"/>
+      <circle cx="41" cy="40" r="1.7" fill="#111"/>`),
+    tahris: FRAME(`
+      <rect x="28.5" y="13" width="7" height="25" rx="2.2" fill="#111"/>
+      <circle cx="32" cy="47" r="4.4" fill="#111"/>`),
+    cevre: FRAME(`
+      <g stroke="#111" stroke-width="2.4" stroke-linecap="round">
+        <line x1="19" y1="46" x2="19" y2="18"/>
+        <line x1="19" y1="25" x2="11" y2="17"/>
+        <line x1="19" y1="29" x2="27" y2="19"/>
+        <line x1="19" y1="35" x2="12" y2="29"/>
+      </g>
+      <g stroke="#111" stroke-width="2.2" fill="none" stroke-linecap="round">
+        <path d="M7 47 Q11 44 15 47 T23 47 T31 47 T39 47 T47 47"/>
+        <path d="M7 52 Q11 49 15 52 T23 52 T31 52 T39 52 T47 52"/>
+      </g>
+      <path d="M35 43 C39 40 45 40 48 43 C45 46 39 46 35 43 Z" fill="#111"/>
+      <path d="M48 43 L52 40 L52 46 Z" fill="#111"/>`),
+    saglik: FRAME(`
+      <circle cx="32" cy="17" r="6" fill="#111"/>
+      <path d="M19 47 C19 34 45 34 45 47 Z" fill="#111"/>
+      <polygon points="32,25 34,31 40,29 35,33 39,38 33,35 32,41 31,35 25,38 29,33 24,29 30,31" fill="#fff"/>`),
+    gaz: FRAME(`
+      <rect x="24" y="17" width="16" height="32" rx="6" fill="#111"/>
+      <rect x="29" y="10" width="6" height="8" fill="#111"/>`),
   };
   const PICTOGRAMS = [
     { key:"patlayici", name:"Patlayıcı" },
     { key:"oksitleyici", name:"Oksitleyici" },
-    { key:"yanici", name:"Yanıcı, Parlayıcı" },
     { key:"zehirli", name:"Zehirli" },
+    { key:"yanici", name:"Yanıcı, Parlayıcı" },
     { key:"korozif", name:"Korozif" },
-    { key:"cevre", name:"Çevreye Zararlı" },
     { key:"tahris", name:"Tahriş Edici" },
+    { key:"cevre", name:"Çevreye Zararlı Maddeler" },
     { key:"saglik", name:"Sağlık Etkisi" },
-    { key:"radyoaktif", name:"Radyoaktif" },
-    { key:"gaz", name:"Basınçlı Gaz" },
+    { key:"gaz", name:"Gaz" },
   ];
   const DEFS = [
-    { label:"Kıvılcım, ısınma, alev, vurma veya sürtünmeye maruz kaldığında patlayabilir.", bin:"patlayici" },
-    { label:"Havasız ortamda bile alev alabilir; yanıcı maddelerle karıştığında patlayabilir.", bin:"oksitleyici" },
-    { label:"Alevlenme noktası çok düşüktür; ateş, kıvılcım ve ısıdan uzak tutulmalıdır.", bin:"yanici" },
-    { label:"Ağız, deri veya solunum yoluyla vücuda girdiğinde zehirlenmeye, hatta kansere yol açabilir.", bin:"zehirli" },
-    { label:"Canlı dokuyu tahrip eder ya da metali aşındırır/paslandırır.", bin:"korozif" },
-    { label:"Suya ve doğadaki canlılara zarar verir; doğaya dökülmemelidir.", bin:"cevre" },
-    { label:"Deriye ve göze zarar verebilir; buharı solunmamalıdır.", bin:"tahris" },
-    { label:"İnsan sağlığına kısa veya uzun dönemli hasar verebilir, kanser riski taşır.", bin:"saglik" },
-    { label:"Çevresine radyasyon yayar; canlı dokularda kalıcı hasara neden olabilir.", bin:"radyoaktif" },
-    { label:"Basınç altında gaz içerir; ısıtıldığında patlayabilir.", bin:"gaz" },
+    { label:"Kıvılcım, ısınma, alev, vurma, çarpma ve sürtünmeye maruz kaldığında patlayabilir. Ateş, kıvılcım ve ısıdan uzak tutulmalıdır.", bin:"patlayici" },
+    { label:"Havasız ortamda bile alev alabilir veya yanabilir. Yanıcı maddelerle karıştırıldığında patlayabilir.", bin:"oksitleyici" },
+    { label:"Zehirli veya çok zehirlidir. Ağız, deri ve solunum yolu ile zehirlenmelere yol açar; kanser riski taşır.", bin:"zehirli" },
+    { label:"Yanıcı ve parlayıcıdır. Alevlenme noktası çok düşüktür; ateş, kıvılcım ve ısıdan uzak tutulmalıdır.", bin:"yanici" },
+    { label:"Canlı dokuyu tahrip eder ya da demiri aşındırır/paslandırır. Deriye ve göze hasar verir.", bin:"korozif" },
+    { label:"Deriye ve göze zarar verebilir, buharı solunmamalıdır. Ozon tabakasına zarar verebilir.", bin:"tahris" },
+    { label:"Suya ve doğadaki canlılara zarar verir; doğaya dökülmemeli ve salınmamalıdır.", bin:"cevre" },
+    { label:"İnsan sağlığına kısa veya uzun dönemli hasarlar verebilir; ağız yoluyla alınmamalı ve solunmamalıdır.", bin:"saglik" },
+    { label:"Basınç altında gaz içerir. Çıkan gaz soğuk olabilir ve ısıtıldığında patlayabilir.", bin:"gaz" },
   ];
 
   const ghsGrid = document.getElementById("ghs-grid");
