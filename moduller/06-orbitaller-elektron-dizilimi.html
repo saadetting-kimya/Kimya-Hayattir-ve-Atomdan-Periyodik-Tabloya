@@ -37,6 +37,40 @@
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">🔍 Keşfet</span>
+      <h2>Orbital Aslında Ne Demek? — Uzun Pozlu Fotoğraf Benzetimi</h2>
+      <p>Bir arı, çiçeğin çevresinde gözle takip edilemeyecek kadar hızlı uçar. "Şu an tam olarak neredesin?" diye sorsan cevap alamazsın — ama uzun pozlu bir fotoğraf çekersen, arının <strong>en sık bulunduğu bölgeler koyu, nadiren gittiği bölgeler açık renkli</strong> bulanık bir iz bırakır. Elektron da çekirdek çevresinde tam olarak böyle davranır: belirli bir "yörüngesi" yoktur, yalnızca <strong>bulunma olasılığının yüksek olduğu bir bölge</strong> — yani orbital — vardır.</p>
+    </div>
+    <div class="two-col">
+      <div class="lab-panel">
+        <div class="lab-head">
+          <div class="lab-title"><span class="dot"></span> Elektron Nerede?</div>
+          <span class="lab-hint" id="expo-count">anlık</span>
+        </div>
+        <div class="stage" id="expo-stage"><canvas id="expo-canvas"></canvas></div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; padding-top:12px">
+          <button class="btn on-dark small active" id="expo-mode-instant">📍 Anlık Konum</button>
+          <button class="btn on-dark small" id="expo-mode-expose">📷 Uzun Pozlu Fotoğraf Çek</button>
+          <button class="btn on-dark small" id="expo-reset">↺ Temizle</button>
+        </div>
+      </div>
+      <div>
+        <div class="callout model">
+          <h5>Anlık Konum modu</h5>
+          <p>Her ~0,25 saniyede elektron rastgele bir yerde "yakalanır" — tek bir nokta yanıp söner, önceki konumdan iz kalmaz. Bu, elektronun belirli bir yörüngede dolanmadığını, konumunun tahmin edilemediğini gösterir.</p>
+        </div>
+        <div class="callout real" style="margin-top:14px">
+          <h5>Uzun Pozlu Fotoğraf modu</h5>
+          <p>Aynı elektronun binlerce "anlık konumunu" üst üste biriktir. Noktaların yoğunlaştığı bölge — çekirdeğe ne çok yakın ne çok uzak, ortalama bir mesafedeki küresel bir kabuk — <strong>1s orbitalinin</strong> gerçek olasılık bulutudur. Aşağıdaki 3B sınır yüzey diyagramı, bu bulutun "kenarını" çizdiğimizde ortaya çıkan matematiksel şekildir.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">🔍 Keşfet</span>
       <h2>Orbital Sınır Yüzeyleri — 3B Görselleştirici</h2>
       <p>Sahneyi sürükleyerek döndür. Her orbitalin gerçek açısal fonksiyonundan (küresel harmonik) üretilen sınır yüzeyine bakıyorsun — çizim değil, matematiksel şekil.</p>
     </div>
@@ -158,6 +192,83 @@
   markVisited("orbital");
   bindJournal(document.getElementById("journal6"), "orbital-1");
   renderQuiz(document.getElementById("quiz-host"), QUIZ.orbital, "orbital");
+
+  /* ---- Orbital benzetimi: Uzun Pozlu Fotoğraf ---- */
+  const expoCanvas = document.getElementById("expo-canvas");
+  const expoCtx = expoCanvas.getContext("2d");
+  const expoStage = document.getElementById("expo-stage");
+  const expoCountEl = document.getElementById("expo-count");
+  let expoMode = "instant";
+  let expoFrames = 0;
+  let expoAcc = [];
+
+  /** 1s orbitaline benzer basit radyal olasılık dağılımı: çekirdeğe çok yakın ya da
+   * çok uzakta seyrek, orta mesafede en yoğun bir küresel kabuk (projeksiyon 2B). */
+  function sampleCloudPoint() {
+    const r = (Math.random() + Math.random() + Math.random()) / 3;
+    const a = Math.random() * Math.PI * 2;
+    return { x: 0.5 + Math.cos(a) * r * 0.42, y: 0.5 + Math.sin(a) * r * 0.42 };
+  }
+
+  function resizeExpoCanvas() {
+    const rect = expoStage.getBoundingClientRect();
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    expoCanvas.width = Math.max(1, rect.width * dpr);
+    expoCanvas.height = Math.max(1, rect.height * dpr);
+  }
+
+  function drawExpo() {
+    const w = expoCanvas.width, h = expoCanvas.height;
+    expoCtx.clearRect(0, 0, w, h);
+    expoCtx.fillStyle = "#0c0a1c";
+    expoCtx.fillRect(0, 0, w, h);
+    expoCtx.fillStyle = "#8f7cff";
+    expoAcc.forEach((p, i) => {
+      expoCtx.globalAlpha = i === expoAcc.length - 1 ? 1 : 0.22;
+      expoCtx.beginPath();
+      expoCtx.arc(p.x * w, p.y * h, w * (i === expoAcc.length - 1 ? 0.012 : 0.006), 0, Math.PI * 2);
+      expoCtx.fillStyle = i === expoAcc.length - 1 ? "#ffd166" : "#8f7cff";
+      expoCtx.fill();
+    });
+    expoCtx.globalAlpha = 1;
+    expoCtx.fillStyle = "#ff5b9d";
+    expoCtx.beginPath();
+    expoCtx.arc(w / 2, h / 2, w * 0.018, 0, Math.PI * 2);
+    expoCtx.fill();
+  }
+
+  let expoTimer = null;
+  function expoTick() {
+    const p = sampleCloudPoint();
+    if (expoMode === "instant") {
+      expoAcc = [p];
+    } else {
+      expoAcc.push(p);
+      if (expoAcc.length > 1400) expoAcc.shift();
+      expoFrames++;
+      expoCountEl.textContent = `${expoFrames} kare biriktirildi`;
+    }
+    drawExpo();
+  }
+
+  function setExpoMode(mode) {
+    expoMode = mode;
+    expoAcc = [];
+    expoFrames = 0;
+    expoCountEl.textContent = mode === "instant" ? "anlık" : "0 kare biriktirildi";
+    document.getElementById("expo-mode-instant").classList.toggle("active", mode === "instant");
+    document.getElementById("expo-mode-expose").classList.toggle("active", mode === "expose");
+    clearInterval(expoTimer);
+    expoTimer = setInterval(expoTick, mode === "instant" ? 260 : 35);
+    drawExpo();
+  }
+  document.getElementById("expo-mode-instant").addEventListener("click", () => setExpoMode("instant"));
+  document.getElementById("expo-mode-expose").addEventListener("click", () => setExpoMode("expose"));
+  document.getElementById("expo-reset").addEventListener("click", () => setExpoMode(expoMode));
+  window.addEventListener("resize", () => { resizeExpoCanvas(); drawExpo(); });
+  window.addEventListener("pagehide", () => clearInterval(expoTimer));
+  resizeExpoCanvas();
+  setExpoMode("instant");
 
   /* ---- 3B Orbital Sınır Yüzeyi Görselleştirici ---- */
   const orb3dStage = document.getElementById("orbital3d-stage");
