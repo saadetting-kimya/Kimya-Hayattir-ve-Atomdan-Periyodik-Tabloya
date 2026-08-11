@@ -98,6 +98,40 @@
 
   .print-bar{ position:fixed; top:14px; right:14px; z-index:10; font-family:Arial,sans-serif; }
   .print-bar button{ font-weight:800; padding:10px 18px; border-radius:999px; border:none; background:#14152b; color:#fff; cursor:pointer; box-shadow:0 4px 14px rgba(0,0,0,.25); }
+
+  /* ---- Doldurulabilir çalışma tabloları (Uygulamada Dene / etkinlikler) ---- */
+  table.wk{ width:100%; border-collapse:collapse; margin:10px 0 4px; font-family:Arial,sans-serif; font-size:10.8px; }
+  table.wk th{ background:var(--accent); color:#fff; border:1px solid var(--accent); padding:6px 7px; text-align:left; font-size:9.5px; text-transform:uppercase; letter-spacing:.02em; }
+  table.wk td{ border:1px solid var(--line); padding:7px 7px; vertical-align:top; color:var(--ink); }
+  table.wk td.fill{ background:repeating-linear-gradient(#fff,#fff 12px,#eceefa 13px); min-height:26px; height:26px; }
+  table.wk td.center{ text-align:center; }
+  table.wk tr:nth-child(even) td:not(.fill){ background:#fafafe; }
+
+  /* ---- Elle çizim/işaretleme kutuları ---- */
+  .draw-row{ display:flex; gap:10px; flex-wrap:wrap; margin:10px 0; }
+  .draw-box{
+    flex:1 1 140px; min-width:120px; border:1.5px solid var(--ink); border-radius:6px; padding:6px;
+    font-family:Arial,sans-serif;
+  }
+  .draw-box .dcap{ font-size:9.5px; font-weight:800; text-align:center; margin-bottom:4px; color:var(--ink-soft); }
+  .draw-box .darea{
+    height:64px; border-radius:4px;
+    background-image: linear-gradient(#e3e5f2 1px, transparent 1px), linear-gradient(90deg, #e3e5f2 1px, transparent 1px);
+    background-size: 8px 8px; background-color:#fdfdff;
+  }
+  .grid-fill{ display:grid; gap:8px; margin:10px 0; }
+  .grid-fill.c2{ grid-template-columns:1fr 1fr; }
+  .grid-fill.c3{ grid-template-columns:1fr 1fr 1fr; }
+  .fill-card{ border:1px solid var(--line); border-radius:6px; padding:8px 10px; font-family:Arial,sans-serif; font-size:10.5px; }
+  .fill-card b{ display:block; font-size:9.5px; text-transform:uppercase; letter-spacing:.03em; color:var(--accent); margin-bottom:4px; }
+
+  .worksheet{
+    border:2px solid var(--ink); border-radius:8px; padding:12px 14px; margin:14px 0; font-family:Arial,sans-serif; font-size:11.5px;
+    background:#fcfcff;
+  }
+  .worksheet .wlbl{ font-weight:800; font-size:10.5px; text-transform:uppercase; letter-spacing:.04em; margin-bottom:8px; display:flex; align-items:center; gap:6px; color:var(--ink); }
+  .worksheet p{ font-size:11px; margin:0 0 8px; }
+  .worksheet .hint{ font-size:10px; color:#5a5e78; font-style:italic; margin-top:2px; }
 </style>
 </head>
 <body>
@@ -197,16 +231,36 @@
     <div class="cevap-satir"></div><div class="cevap-satir"></div><div class="cevap-satir"></div>
   </div>
 
-  <div class="box uygulama">
-    <div class="lbl">📱 Uygulamada Dene — Modül 1</div>
-    AtomLab 9 uygulamasının 1. modülünde "Kimyasal Maddeleri Kullanım Alanına Göre Grupla" etkinliğini tamamla. En az 15 maddeyi doğru kategoriye (temizlik, ilaç/sağlık, gıda, enerji, tarım) yerleştirdikten sonra, aşağıya kendi hayatından iki örnek daha ekle.
-    <div class="cevap-satir" style="margin-top:8px"></div><div class="cevap-satir"></div>
+  <div class="worksheet">
+    <div class="wlbl">📱 Uygulamada Dene — Modül 1 (2 Etkinlik)</div>
+    <p><b>1) Sınıflandırma Etkinliği —</b> AtomLab 9'un 1. modülünde "Kimyasal Maddeleri Kullanım Alanına Göre Grupla" etkinliğini tamamla (en az 15 madde). Sonra uygulamada geçmeyen, kendi hayatından iki örnek daha bul ve doğru kategoriyi yaz.</p>
+    <table class="wk">
+      <tr><th>Madde (kendi örneğin)</th><th>Kullanım Alanı (temizlik / ilaç / gıda / enerji / tarım)</th></tr>
+      <tr><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td class="fill"></td><td class="fill"></td></tr>
+    </table>
+    <p style="margin-top:14px"><b>2) pH Laboratuvarı Etkinliği —</b> Her maddeye tıklamadan önce pH'ını tahmin et; sonra uygulamadan okuduğun değeri, asit/baz/nötr sınıfını ve "Eklenen Su"yu 5 birime getirdiğinde okunan yeni pH'ı tabloya yaz.</p>
+    <table class="wk">
+      <tr><th>Madde</th><th>Tahminim (pH)</th><th>Uygulama (pH)</th><th>Asit / Baz / Nötr</th><th>5 birim su sonrası pH</th></tr>
+      <tr><td>Limon Tuzu</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Sirke</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Gazlı İçecek</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Diş Macunu</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Karbonat</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Sıvı Sabun</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Antiasit Tablet</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Çamaşır Suyu</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Lavabo Açıcı</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
+    <p class="hint">Bulgu: Tabloyu incele — su eklemek pH'ı hep aynı yöne mi götürüyor, yoksa maddenin asit/baz olmasına göre mi değişiyor? Gözlemini bir cümlede yaz: ______________________________________________</p>
   </div>
 
   <div class="kavramlar-list">
     <div class="lbl">📚 Bu Ünitenin Kavramları</div>
     <dt>Kimyasal Madde</dt><dd>Belirli bir bileşime ve karakteristik özelliklere sahip, doğal ya da üretilmiş her türlü madde.</dd>
     <dt>Çıkarım</dt><dd>Gözlemlenen örneklerden yola çıkarak genel bir sonuca ulaşma süreci.</dd>
+    <dt>pH</dt><dd>Bir çözeltinin asitlik/bazlık derecesini gösteren, 0-14 arasında değişen ölçek; 7 nötrdür.</dd>
+    <dt>Seyreltme</dt><dd>Bir çözeltiye su eklenerek derişiminin azaltılması; pH'ı 7'ye yaklaştırır ama tam nötr yapmaz.</dd>
   </div>
 
   <div class="sorular-h">SORULAR</div>
@@ -290,10 +344,18 @@
     <div class="cevap-satir"></div><div class="cevap-satir"></div><div class="cevap-satir"></div>
   </div>
 
-  <div class="box uygulama">
-    <div class="lbl">📱 Uygulamada Dene — Modül 2</div>
-    Uygulamanın 2. modülünde altı disiplin kartını çevirerek incele, sonra "Örneği Doğru Disipline Eşleştir" etkinliğini tamamla. Aşağıya en çok ilgini çeken disiplini ve nedenini yaz.
-    <div class="cevap-satir" style="margin-top:8px"></div>
+  <div class="worksheet">
+    <div class="wlbl">📱 Uygulamada Dene — Modül 2</div>
+    <p>Uygulamada altı disiplin kartını çevirerek incele, sonra "Örneği Doğru Disipline Eşleştir" etkinliğini tamamla. Her disiplin için uygulamada gördüğün bir örneği ve kendi bulduğun yeni bir örneği tabloya yaz.</p>
+    <table class="wk">
+      <tr><th>Disiplin</th><th>Uygulamadaki Bir Örnek</th><th>Kendi Bulduğun Örnek</th></tr>
+      <tr><td>Analitik Kimya</td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Biyokimya</td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Organik Kimya</td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Anorganik Kimya</td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Fizikokimya</td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Polimer Kimyası</td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
   </div>
 
   <div class="kavramlar-list">
@@ -383,10 +445,16 @@
     <div class="cevap-satir"></div><div class="cevap-satir"></div><div class="cevap-satir"></div>
   </div>
 
-  <div class="box uygulama">
-    <div class="lbl">📱 Uygulamada Dene — Modül 3</div>
-    Uygulamanın 3. modülünde sekiz kariyer sektörü kartını incele. Aşağıya en çok ilgini çeken iki sektörü ve bu sektörlerde hangi görevde çalışmak isteyebileceğini yaz.
-    <div class="cevap-satir" style="margin-top:8px"></div><div class="cevap-satir"></div>
+  <div class="worksheet">
+    <div class="wlbl">📱 Uygulamada Dene — Modül 3</div>
+    <p>Uygulamada sekiz kariyer sektörü kartını incele. En çok ilgini çeken üç sektörü seç; her biri için hangi görevde çalışmak isteyebileceğini ve kariyer planlama döngüsünün hangi basamağında olduğunu yaz.</p>
+    <table class="wk">
+      <tr><th>Sektör</th><th>İlgimi Çeken Görev</th><th>Şu An Hangi Basamaktayım?</th></tr>
+      <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
+    <p class="hint">Basamaklar: Öz farkındalık · Fırsat araştırma · Karar/plan yapma · Planı uygulama</p>
   </div>
 
   <div class="kavramlar-list">
@@ -474,10 +542,22 @@
     <div class="cevap-satir"></div><div class="cevap-satir"></div><div class="cevap-satir"></div>
   </div>
 
-  <div class="box uygulama">
-    <div class="lbl">📱 Uygulamada Dene — Modül 4</div>
-    Uygulamanın 4. modülünde "Güvenlik Senaryosu Simülatörü"nde en az 3 farklı madde kombinasyonunu dene, sonra "Tehlike Piktogramlarını Eşleştir" etkinliğini tamamla. Hangi kombinasyonun tehlikeli çıktığını aşağıya yaz.
-    <div class="cevap-satir" style="margin-top:8px"></div>
+  <div class="worksheet">
+    <div class="wlbl">📱 Uygulamada Dene — Modül 4 (2 Etkinlik)</div>
+    <p><b>1) Güvenlik Senaryosu Simülatörü —</b> Uygulamada en az 4 farklı madde kombinasyonunu "karıştır"; sonucu tabloya yaz.</p>
+    <table class="wk">
+      <tr><th>1. Madde</th><th>2. Madde</th><th>Sonuç (Tehlike var mı? Ne oluşur?)</th></tr>
+      <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
+    <p style="margin-top:12px"><b>2) Tehlike Piktogramlarını Eşleştir —</b> Uygulamadaki 10 piktogramı tamamladıktan sonra, aşağıdaki üç piktogramı hafızandan çiz.</p>
+    <div class="draw-row">
+      <div class="draw-box"><div class="dcap">Korozif</div><div class="darea"></div></div>
+      <div class="draw-box"><div class="dcap">Yanıcı, Parlayıcı</div><div class="darea"></div></div>
+      <div class="draw-box"><div class="dcap">Zehirli</div><div class="darea"></div></div>
+    </div>
   </div>
 
   <div class="kavramlar-list">
@@ -569,10 +649,42 @@
     <div class="cevap-satir"></div><div class="cevap-satir"></div><div class="cevap-satir"></div>
   </div>
 
-  <div class="box uygulama">
-    <div class="lbl">📱 Uygulamada Dene — Modül 5</div>
-    Uygulamanın 5. modülünde zaman tünelindeki beş modele sırayla tıkla; her modelin varsayımını ve neden aşıldığını oku. Sonra "Kendi Atomunu İnşa Et" bölümünde 3 farklı proton/nötron/elektron kombinasyonu dene.
-    <div class="cevap-satir" style="margin-top:8px"></div>
+  <div class="worksheet">
+    <div class="wlbl">📱 Uygulamada Dene — Modül 5 (3 Etkinlik)</div>
+    <p><b>1) Atom Modelleri Zaman Tüneli —</b> Uygulamada her modele tıkla; kutuya kendi çizimini yap (küre, üzümlü kek, çekirdek+boşluk, katmanlı, bulut gibi), sonra varsayımını ve hangi kanıtla aşıldığını tabloya özetle.</p>
+    <div class="draw-row">
+      <div class="draw-box"><div class="dcap">Dalton · 1803</div><div class="darea"></div></div>
+      <div class="draw-box"><div class="dcap">Thomson · 1897</div><div class="darea"></div></div>
+      <div class="draw-box"><div class="dcap">Rutherford · 1911</div><div class="darea"></div></div>
+      <div class="draw-box"><div class="dcap">Bohr · 1913</div><div class="darea"></div></div>
+      <div class="draw-box"><div class="dcap">Modern · 1926</div><div class="darea"></div></div>
+    </div>
+    <table class="wk">
+      <tr><th>Model</th><th>Varsayımı (1 cümle)</th><th>Hangi Kanıtla Aşıldı?</th></tr>
+      <tr><td>Dalton</td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Thomson</td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Rutherford</td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Bohr</td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
+
+    <p style="margin-top:14px"><b>2) Bohr'un Deneyini Sen Yap: Hidrojen Spektrumu —</b> Uygulamada her geçişi "ışınla"; okuduğun dalga boyunu ve görünür olup olmadığını yaz.</p>
+    <table class="wk">
+      <tr><th>Geçiş</th><th>Seri</th><th>λ (nm) — Uygulamadan Oku</th><th>Görünür mü? (E/H)</th></tr>
+      <tr><td class="center">n=3 → 2</td><td>Balmer</td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td class="center">n=4 → 2</td><td>Balmer</td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td class="center">n=5 → 2</td><td>Balmer</td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td class="center">n=2 → 1</td><td>Lyman</td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td class="center">n=4 → 3</td><td>Paschen</td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
+    <p class="hint">Gözlem: Hangi seri çıplak gözle görülüyor? Bu seri neden tarihte ilk keşfedilen oldu? ___________________________________</p>
+
+    <p style="margin-top:14px"><b>3) Kendi Atomunu İnşa Et —</b> +/− sayaçlarla aşağıdaki tanecikleri kur; uygulamanın hesapladığı sonuçları tabloya yaz.</p>
+    <table class="wk">
+      <tr><th>Proton</th><th>Nötron</th><th>Elektron</th><th>Element</th><th>Kütle No (A)</th><th>Yük</th><th>Tanecik Türü</th></tr>
+      <tr><td class="center">6</td><td class="center">6</td><td class="center">6</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td class="center">11</td><td class="center">12</td><td class="center">10</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td class="center">17</td><td class="center">18</td><td class="center">18</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
   </div>
 
   <div class="kavramlar-list">
@@ -580,6 +692,7 @@
     <dt>Atom Numarası (Z)</dt><dd>Bir atomun çekirdeğindeki proton sayısı; elementin kimliğini belirler.</dd>
     <dt>Absorbsiyon / Emisyon</dt><dd>Elektronun üst enerji seviyesine çıkarken enerji soğurması / alt seviyeye inerken enerji yayması.</dd>
     <dt>Belirsizlik İlkesi</dt><dd>Bir elektronun konumu ve hızının aynı anda kesin olarak belirlenemeyeceğini ifade eden ilke (Heisenberg).</dd>
+    <dt>Balmer / Lyman / Paschen Serisi</dt><dd>Hidrojen atomunun sırasıyla n=2, n=1 ve n=3 enerji seviyesine düşen elektron geçişlerinden oluşan spektrum çizgi grupları.</dd>
   </div>
 
   <div class="sorular-h">SORULAR</div>
@@ -661,10 +774,31 @@
     <div class="cevap-satir"></div><div class="cevap-satir"></div><div class="cevap-satir"></div>
   </div>
 
-  <div class="box uygulama">
-    <div class="lbl">📱 Uygulamada Dene — Modül 6</div>
-    Uygulamanın 6. modülünde "Elektron Dizilimi Simülatörü"nü kullan: Z=7 (N) ve Z=8 (O) için orbital kutu diyagramlarını karşılaştır, sonra Z=24 (Cr) için gözlenen dizilimi incele.
-    <div class="cevap-satir" style="margin-top:8px"></div>
+  <div class="worksheet">
+    <div class="wlbl">📱 Uygulamada Dene — Modül 6 (2 Etkinlik)</div>
+    <p><b>1) Orbital Sınır Yüzeyleri (3B Görselleştirici) —</b> Uygulamada en az 5 orbital türüne tıkla, sahneyi döndür; gördüğün şekli aşağıya kendi çizginle taşı ve tabloyu doldur.</p>
+    <div class="draw-row">
+      <div class="draw-box"><div class="dcap">s (1s / 2s)</div><div class="darea"></div></div>
+      <div class="draw-box"><div class="dcap">p (2pz)</div><div class="darea"></div></div>
+      <div class="draw-box"><div class="dcap">d (3dxy)</div><div class="darea"></div></div>
+    </div>
+    <table class="wk">
+      <tr><th>Orbital</th><th>Şekli (biçimi)</th><th>Lob Sayısı</th><th>Düğüm Düzlemi Var mı?</th></tr>
+      <tr><td>1s</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>2pz</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>3dxy</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>3dz²</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
+
+    <p style="margin-top:14px"><b>2) Şimdi Kuralına Göre Diz: Elektron Dizilimi Simülatörü —</b> Önce kutulara kendi tahmininle ok (↑↓) çiz, sonra uygulamada aynı Z'yi seçip kontrol et.</p>
+    <table class="wk">
+      <tr><th>Element (Z)</th><th>1s</th><th>2s</th><th>2p (3 kutu)</th><th>3s</th><th>3p (3 kutu)</th></tr>
+      <tr><td>N (Z=7)</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>O (Z=8)</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Na (Z=11)</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>P (Z=15)</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
+    <p class="hint">Bonus: Z=24 (Cr) için uygulamadan gözlenen dizilimi oku — Aufbau'nun saf öngörüsünden (…4s²3d⁴) neden farklı (…4s¹3d⁵) çıkıyor? _____________________________</p>
   </div>
 
   <div class="kavramlar-list">
@@ -673,6 +807,7 @@
     <dt>Aufbau İlkesi</dt><dd>Elektronların en düşük enerjili boş orbitalden başlayarak yerleşmesi.</dd>
     <dt>Pauli Dışlama İlkesi</dt><dd>Bir orbitalde en fazla 2, zıt spinli elektron bulunabilmesi.</dd>
     <dt>Küresel Simetri</dt><dd>Çekirdek çekim gücünün eş enerjili alt orbitallere dengeli dağılması; tam/yarı dolu orbitallerde görülen ekstra kararlılık hâli.</dd>
+    <dt>Düğüm Düzlemi</dt><dd>Bir orbitalde elektron bulunma olasılığının sıfır olduğu, faz işaretinin değiştiği yüzey.</dd>
   </div>
 
   <div class="sorular-h">SORULAR</div>
@@ -756,10 +891,16 @@
     <div class="cevap-satir"></div><div class="cevap-satir"></div><div class="cevap-satir"></div>
   </div>
 
-  <div class="box uygulama">
-    <div class="lbl">📱 Uygulamada Dene — Modül 7</div>
-    Uygulamanın 7. modülündeki tam periyodik tabloda en az 6 farklı elemente tıkla; her birinin "adres açıklamasını" oku. Sonra "Adres Bulma Kuralları" alıştırmasında en az 3 elektron diziliminin periyot/grubunu tahmin et.
-    <div class="cevap-satir" style="margin-top:8px"></div>
+  <div class="worksheet">
+    <div class="wlbl">📱 Uygulamada Dene — Modül 7</div>
+    <p>Uygulamadaki tam periyodik tabloda aşağıdaki elementlere tıkla; elektron dizilimini önce sen tahmin et, sonra uygulamayla kontrol edip periyot/grup adresini yaz.</p>
+    <table class="wk">
+      <tr><th>Element</th><th>Tahminim: Periyot / Grup</th><th>Uygulama: Periyot / Grup</th><th>Kategori</th></tr>
+      <tr><td>Ca (Z=20)</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Fe (Z=26)</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Br (Z=35)</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Xe (Z=54)</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
   </div>
 
   <div class="kavramlar-list">
@@ -848,10 +989,22 @@
     <div class="cevap-satir"></div><div class="cevap-satir"></div><div class="cevap-satir"></div>
   </div>
 
-  <div class="box uygulama">
-    <div class="lbl">📱 Uygulamada Dene — Modül 8</div>
-    Uygulamanın 8. modülünde "Trend Görselleştirici"de üç özelliği (yarıçap, iyonlaşma enerjisi, elektronegatiflik) 2. periyot ve 1A grubu için karşılaştır. Sonra "Ardışık İyonlaşma Enerjisi" grafiğinde sıçramanın nerede oluştuğunu gözlemle.
-    <div class="cevap-satir" style="margin-top:8px"></div>
+  <div class="worksheet">
+    <div class="wlbl">📱 Uygulamada Dene — Modül 8 (2 Etkinlik)</div>
+    <p><b>1) Trend Görselleştirici —</b> Üç özelliği, 2. periyot ve 1A grubu için grafikte incele; okuduğun uç değerleri tabloya yaz.</p>
+    <table class="wk">
+      <tr><th>Özellik</th><th>2. Periyot: En Büyük → En Küçük</th><th>1A Grubu: En Büyük → En Küçük</th></tr>
+      <tr><td>Atom Yarıçapı</td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>İyonlaşma Enerjisi</td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Elektronegatiflik</td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
+    <p style="margin-top:12px"><b>2) Ardışık İyonlaşma Enerjisi —</b> Mg, Al ve Na'yı sırayla seç; sıçramanın kaçıncı iyonlaşma enerjisinde olduğunu ve bunun valans elektron sayısıyla ilişkisini yaz.</p>
+    <table class="wk">
+      <tr><th>Element</th><th>Valans Elektron Sayısı</th><th>Sıçrama Nerede? (İEₓ → İEₓ₊₁)</th></tr>
+      <tr><td>Na</td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Mg</td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Al</td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
   </div>
 
   <div class="kavramlar-list">
