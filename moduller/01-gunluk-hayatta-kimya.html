@@ -50,6 +50,48 @@
   </div>
 </section>
 
+<section class="section tight">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">🔍 Keşfet</span>
+      <h2>pH Laboratuvarı — Günlük Hayattaki Kimyasalları Test Et</h2>
+      <p>Bir maddeye tıklayarak sanal pH kâğıdına batır; sonra suyla seyrelterek pH'ın nasıl değiştiğini gözlemle. (Kaynak: Etkinlik-1.1 — Farklı Kimyasal Maddelerin Özelliklerini Belirleyebilme)</p>
+    </div>
+    <div class="card">
+      <div class="ph-tubes" id="ph-tubes"></div>
+
+      <div class="ph-scale" id="ph-scale">
+        <span class="ph-tick" style="left:0%">0</span>
+        <span class="ph-tick" style="left:25%">3,5</span>
+        <span class="ph-tick" style="left:50%">7</span>
+        <span class="ph-tick" style="left:75%">10,5</span>
+        <span class="ph-tick" style="left:100%">14</span>
+        <div class="marker" id="ph-marker" style="left:50%"><span class="tag" id="ph-marker-tag">7,0</span></div>
+      </div>
+
+      <div class="ph-readout">
+        <div class="swatch" id="ph-swatch" style="background:#43a047"></div>
+        <div class="txt">
+          <b id="ph-name">Yukarıdan bir madde seç</b>
+          <span id="ph-classify">pH kâğıdı seni bekliyor</span>
+        </div>
+      </div>
+
+      <div class="controls" style="grid-template-columns:1fr; max-width:360px; margin-top:18px">
+        <div class="control-row" style="grid-template-columns:140px 1fr">
+          <label style="color:var(--ink-soft)">💧 Eklenen Su</label>
+          <div class="stepper on-light">
+            <button id="ph-water-minus">−</button>
+            <span class="val" id="ph-water-val">0</span>
+            <button id="ph-water-plus">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="ph-dilute-note" id="ph-note">Bir madde seçtiğinde, su ekledikçe pH değerinin 7'ye (nötr) doğru nasıl yaklaştığını — ama tam olarak 7 olmadığını — izleyebilirsin.</div>
+    </div>
+  </div>
+</section>
+
 <section class="section">
   <div class="container">
     <div class="discover">
@@ -199,6 +241,99 @@
     });
     renderPool();
   });
+
+  /* ---- pH Laboratuvarı ---- */
+  const PH_SUBSTANCES = [
+    { name: "Limon Tuzu",       ph: 2.2  },
+    { name: "Sirke",            ph: 2.5  },
+    { name: "Gazlı İçecek",     ph: 2.8  },
+    { name: "Diş Macunu",       ph: 7.5  },
+    { name: "Karbonat",         ph: 8.3  },
+    { name: "Sıvı Sabun",       ph: 9.5  },
+    { name: "Antiasit Tablet",  ph: 10.0 },
+    { name: "Çamaşır Suyu",     ph: 11.5 },
+    { name: "Lavabo Açıcı",     ph: 13.5 },
+  ];
+  const PH_STOPS = [
+    [0, "#b71c1c"], [2, "#e53935"], [4, "#fb8c00"], [6, "#fdd835"],
+    [7, "#43a047"], [8, "#00897b"], [10, "#1e88e5"], [12, "#5e35b1"], [14, "#311b56"],
+  ];
+  function hexLerp(h1, h2, t) {
+    const a = parseInt(h1.slice(1), 16), b = parseInt(h2.slice(1), 16);
+    const ar=(a>>16)&255, ag=(a>>8)&255, ab=a&255, br=(b>>16)&255, bg=(b>>8)&255, bb=b&255;
+    const r = Math.round(ar+(br-ar)*t), g = Math.round(ag+(bg-ag)*t), bl = Math.round(ab+(bb-ab)*t);
+    return `rgb(${r},${g},${bl})`;
+  }
+  function pHColor(ph) {
+    ph = Math.max(0, Math.min(14, ph));
+    for (let i = 0; i < PH_STOPS.length - 1; i++) {
+      const [p0, c0] = PH_STOPS[i], [p1, c1] = PH_STOPS[i+1];
+      if (ph >= p0 && ph <= p1) return hexLerp(c0, c1, (ph - p0) / (p1 - p0));
+    }
+    return PH_STOPS[PH_STOPS.length-1][1];
+  }
+  function pHClassify(ph) {
+    if (ph < 6.5) return "Asidik";
+    if (ph > 7.5) return "Bazik";
+    return "Nötr";
+  }
+  function dilutedPH(basePH, water) { return 7 + (basePH - 7) / (1 + water * 0.35); }
+
+  let phSelectedIdx = null, phWater = 0;
+  const phTubesHost = document.getElementById("ph-tubes");
+  phTubesHost.innerHTML = PH_SUBSTANCES.map((s, i) => `
+    <button class="ph-tube-btn" data-i="${i}">
+      <div class="ph-tube-glass"><div class="ph-tube-liquid" style="background:${pHColor(s.ph)}"></div></div>
+      <div class="ph-tube-label">${s.name}</div>
+    </button>
+  `).join("");
+
+  function updatePhDisplay() {
+    const marker = document.getElementById("ph-marker");
+    const tag = document.getElementById("ph-marker-tag");
+    const swatch = document.getElementById("ph-swatch");
+    const nameEl = document.getElementById("ph-name");
+    const classifyEl = document.getElementById("ph-classify");
+    const note = document.getElementById("ph-note");
+    document.getElementById("ph-water-val").textContent = phWater;
+
+    if (phSelectedIdx === null) {
+      marker.style.left = "50%"; tag.textContent = "7,0"; swatch.style.background = "#43a047";
+      nameEl.textContent = "Yukarıdan bir madde seç"; classifyEl.textContent = "pH kâğıdı seni bekliyor";
+      return;
+    }
+    const sub = PH_SUBSTANCES[phSelectedIdx];
+    const ph = dilutedPH(sub.ph, phWater);
+    const color = pHColor(ph);
+    marker.style.left = `${(ph / 14) * 100}%`;
+    tag.textContent = ph.toFixed(2).replace(".", ",");
+    swatch.style.background = color;
+    nameEl.textContent = sub.name + (phWater > 0 ? ` (+${phWater} birim su)` : "");
+    classifyEl.textContent = `${pHClassify(ph)} · başlangıç pH ${sub.ph.toFixed(1).replace(".", ",")}`;
+    note.textContent = phWater === 0
+      ? "Şimdi sağdaki + düğmesine basarak su ekle ve pH'ın nasıl değiştiğini izle."
+      : `${phWater} birim su eklendi: pH ${sub.ph.toFixed(1).replace(".", ",")}'ten ${ph.toFixed(2).replace(".", ",")}'e doğru nötre (7) yaklaştı — ama seyreltme tek başına asidi/bazı tamamen nötrleştirmez.`;
+  }
+  phTubesHost.querySelectorAll(".ph-tube-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      phTubesHost.querySelectorAll(".ph-tube-btn").forEach(b => b.classList.remove("selected"));
+      btn.classList.add("selected");
+      phSelectedIdx = +btn.dataset.i;
+      phWater = 0;
+      updatePhDisplay();
+    });
+  });
+  document.getElementById("ph-water-plus").addEventListener("click", () => {
+    if (phSelectedIdx === null) return;
+    phWater = Math.min(10, phWater + 1);
+    updatePhDisplay();
+  });
+  document.getElementById("ph-water-minus").addEventListener("click", () => {
+    if (phSelectedIdx === null) return;
+    phWater = Math.max(0, phWater - 1);
+    updatePhDisplay();
+  });
+  updatePhDisplay();
 </script>
 </body>
 </html>
