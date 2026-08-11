@@ -75,11 +75,10 @@
       <p>Bir element seç; Aufbau ilkesine göre dolum sırasını ve orbital kutu diyagramını incele.</p>
     </div>
     <div class="card">
-      <div class="controls" style="grid-template-columns:1fr; max-width:480px">
-        <div class="control-row" style="grid-template-columns:110px 1fr 60px">
-          <label for="zpick">Atom Numarası (Z)</label>
-          <input type="range" id="zpick" min="1" max="36" step="1" value="7" />
-          <output id="zpick-out">7</output>
+      <div class="controls" style="grid-template-columns:1fr; max-width:360px">
+        <div class="control-row" style="grid-template-columns:150px 1fr">
+          <label>Atom Numarası (Z)</label>
+          <div class="stepper on-light"><button id="zpick-minus">−</button><span class="val" id="zpick-out">7</span><button id="zpick-plus">+</button></div>
         </div>
       </div>
       <div class="readouts" style="grid-template-columns:repeat(3,1fr); margin-top:10px">
@@ -188,9 +187,9 @@
     return boxes;
   }
 
-  const zpick = document.getElementById("zpick");
+  let zpickVal = 7;
   function refresh() {
-    const z = +zpick.value;
+    const z = zpickVal;
     document.getElementById("zpick-out").textContent = z;
     const el = EL_BY_Z[z];
     document.getElementById("el-name").textContent = `${el.sym} · ${el.name} (Z=${z})`;
@@ -231,7 +230,8 @@
       host.appendChild(row);
     });
   }
-  zpick.addEventListener("input", refresh);
+  document.getElementById("zpick-plus").addEventListener("click", () => { zpickVal = Math.min(36, zpickVal + 1); refresh(); });
+  document.getElementById("zpick-minus").addEventListener("click", () => { zpickVal = Math.max(1, zpickVal - 1); refresh(); });
   refresh();
 </script>
 </body>
