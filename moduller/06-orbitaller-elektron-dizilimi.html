@@ -71,6 +71,48 @@
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">🔍 Keşfet</span>
+      <h2>Şimdi Şekilleri Keşfet: Okulda "En Sık Bulunduğun Yer" Benzetimi</h2>
+      <p>Arının uzun pozlu fotoğrafı sana orbitalin <strong>genel</strong> fikrini verdi: yörünge değil, olasılık bölgesi. Şimdi aynı fikri orbitallerin <strong>farklı şekillerine</strong> taşıyalım. Bir okulda üç farklı öğrenciyi bir yıl boyunca izlediğini düşün — her öğrencinin "en sık bulunduğu yer" alışkanlığı, giriş holüne (merkeze) göre farklı bir şekil çizer.</p>
+    </div>
+    <div class="two-col">
+      <div class="lab-panel">
+        <div class="lab-head">
+          <div class="lab-title"><span class="dot"></span> Okul Krokisi — Öğrenci Nerede?</div>
+          <span class="lab-hint" id="school-count">anlık</span>
+        </div>
+        <div class="stage" id="school-stage"><canvas id="school-canvas"></canvas></div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; padding-top:12px">
+          <button class="btn on-dark small active" id="school-student-s">🎓 Öğrenci S</button>
+          <button class="btn on-dark small" id="school-student-p">🎓 Öğrenci P</button>
+          <button class="btn on-dark small" id="school-student-d">🎓 Öğrenci D</button>
+        </div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; padding-top:8px">
+          <button class="btn on-dark small active" id="school-mode-instant">📍 Anlık Konum</button>
+          <button class="btn on-dark small" id="school-mode-expose">📅 Bir Yıl Boyunca İzle</button>
+          <button class="btn on-dark small" id="school-reset">↺ Temizle</button>
+        </div>
+      </div>
+      <div>
+        <div class="callout model" id="school-desc">
+          <h5 id="school-desc-title">Öğrenci S'nin alışkanlığı</h5>
+          <p id="school-desc-text">Teneffüslerde okulun her yönüne eşit olasılıkla gider; giriş holüne çok yakın ya da çok uzak durmaz.</p>
+        </div>
+        <div class="callout real" style="margin-top:14px">
+          <h5>Şekil neden böyle çıkıyor?</h5>
+          <p>Bir öğrencinin "en sık gittiği yerler" alışkanlığı neyse, bir yıl sonunda noktalar o alışkanlığın şeklini çizer. Elektronun da bir orbitaldeki "alışkanlığı" matematiksel bir dalga fonksiyonudur — ama sonuç aynı: nerede daha sık bulunuyorsa, orası daha koyu görünür.</p>
+        </div>
+        <div class="btnbar" style="margin-top:14px">
+          <a href="#orbital3d-stage" class="btn primary">👇 Şimdi Gerçek Bir Atomda Gör (3B)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">🔍 Keşfet</span>
       <h2>Orbital Sınır Yüzeyleri — 3B Görselleştirici</h2>
       <p>Sahneyi sürükleyerek döndür. Her orbitalin gerçek açısal fonksiyonundan (küresel harmonik) üretilen sınır yüzeyine bakıyorsun — çizim değil, matematiksel şekil.</p>
     </div>
@@ -269,6 +311,121 @@
   window.addEventListener("pagehide", () => clearInterval(expoTimer));
   resizeExpoCanvas();
   setExpoMode("instant");
+
+  /* ---- Orbital şekilleri benzetimi: Okulda "En Sık Bulunduğun Yer" ----
+     Üç farklı "öğrenci" — s, p, d — okulun merkezine (giriş holü) göre farklı bir
+     açısal alışkanlıkla dolaşır. Bir yıl boyunca biriken konum noktaları, o
+     alışkanlığın şeklini (küre / halter / dört yapraklı yonca) çizer — tıpkı
+     gerçek s/p/d orbitallerinin açısal olasılık dağılımları gibi. */
+  const SCHOOL_INFO = {
+    s: { title:"Öğrenci S'nin alışkanlığı", text:"Teneffüslerde okulun her yönüne eşit olasılıkla gider; giriş holüne çok yakın ya da çok uzak durmaz.", wings: [] },
+    p: { title:"Öğrenci P'nin alışkanlığı", text:"Günün büyük kısmını yalnızca kuzey kanadı ile güney kanadı arasında geçirir; giriş holünde (ortada) neredeyse hiç durmaz.", wings: ["Kuzey Kanadı","Güney Kanadı"] },
+    d: { title:"Öğrenci D'nin alışkanlığı", text:"Dört farklı köşeyi (A, B, C, D kanatlarını) sırayla dolaşır; kanatların ortasında ve giriş holünde pek durmaz.", wings: ["A Kanadı","B Kanadı","C Kanadı","D Kanadı"] },
+  };
+  function angularWeight(kind, angle) {
+    if (kind === "p") return Math.sin(angle) ** 2; // dikey (kuzey-güney) iki lob
+    if (kind === "d") return Math.sin(2*angle) ** 2; // dört köşegen lob
+    return 1;
+  }
+  function sampleSchoolPoint(kind) {
+    let angle = 0;
+    for (let tries = 0; tries < 30; tries++) {
+      angle = Math.random() * Math.PI * 2;
+      if (Math.random() < angularWeight(kind, angle)) break;
+    }
+    const r = (Math.random() + Math.random() + Math.random()) / 3;
+    return { x: 0.5 + Math.cos(angle) * r * 0.42, y: 0.5 + Math.sin(angle) * r * 0.42 };
+  }
+
+  const schoolCanvas = document.getElementById("school-canvas");
+  const schoolCtx = schoolCanvas.getContext("2d");
+  const schoolStage = document.getElementById("school-stage");
+  const schoolCountEl = document.getElementById("school-count");
+  let schoolKind = "s";
+  let schoolMode = "instant";
+  let schoolFrames = 0;
+  let schoolAcc = [];
+
+  function resizeSchoolCanvas() {
+    const rect = schoolStage.getBoundingClientRect();
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    schoolCanvas.width = Math.max(1, rect.width * dpr);
+    schoolCanvas.height = Math.max(1, rect.height * dpr);
+  }
+
+  function drawSchool() {
+    const w = schoolCanvas.width, h = schoolCanvas.height;
+    schoolCtx.clearRect(0, 0, w, h);
+    schoolCtx.fillStyle = "#0c0a1c";
+    schoolCtx.fillRect(0, 0, w, h);
+    schoolAcc.forEach((p, i) => {
+      const last = i === schoolAcc.length - 1;
+      schoolCtx.globalAlpha = last ? 1 : 0.22;
+      schoolCtx.beginPath();
+      schoolCtx.arc(p.x * w, p.y * h, w * (last ? 0.012 : 0.006), 0, Math.PI * 2);
+      schoolCtx.fillStyle = last ? "#ffd166" : "#8f7cff";
+      schoolCtx.fill();
+    });
+    schoolCtx.globalAlpha = 1;
+    schoolCtx.fillStyle = "#ff5b9d";
+    schoolCtx.beginPath();
+    schoolCtx.arc(w / 2, h / 2, w * 0.018, 0, Math.PI * 2);
+    schoolCtx.fill();
+    // Kanat etiketleri (yalnızca p/d öğrencisi için, konum ipucu amaçlı)
+    const wings = SCHOOL_INFO[schoolKind].wings;
+    if (wings.length) {
+      schoolCtx.fillStyle = "#8b83b0";
+      schoolCtx.font = `${Math.round(w*0.028)}px Arial`;
+      schoolCtx.textAlign = "center";
+      const positions = wings.length === 2
+        ? [[0.5,0.08],[0.5,0.94]]
+        : [[0.85,0.16],[0.15,0.16],[0.85,0.86],[0.15,0.86]];
+      wings.forEach((label, i) => schoolCtx.fillText(label, positions[i][0]*w, positions[i][1]*h));
+    }
+  }
+
+  let schoolTimer = null;
+  function schoolTick() {
+    const p = sampleSchoolPoint(schoolKind);
+    if (schoolMode === "instant") {
+      schoolAcc = [p];
+    } else {
+      schoolAcc.push(p);
+      if (schoolAcc.length > 1400) schoolAcc.shift();
+      schoolFrames++;
+      schoolCountEl.textContent = `${schoolFrames} gün biriktirildi`;
+    }
+    drawSchool();
+  }
+
+  function setSchoolMode(mode) {
+    schoolMode = mode;
+    schoolAcc = [];
+    schoolFrames = 0;
+    schoolCountEl.textContent = mode === "instant" ? "anlık" : "0 gün biriktirildi";
+    document.getElementById("school-mode-instant").classList.toggle("active", mode === "instant");
+    document.getElementById("school-mode-expose").classList.toggle("active", mode === "expose");
+    clearInterval(schoolTimer);
+    schoolTimer = setInterval(schoolTick, mode === "instant" ? 260 : 35);
+    drawSchool();
+  }
+  function setSchoolKind(kind) {
+    schoolKind = kind;
+    ["s","p","d"].forEach(k => document.getElementById(`school-student-${k}`).classList.toggle("active", k === kind));
+    document.getElementById("school-desc-title").textContent = SCHOOL_INFO[kind].title;
+    document.getElementById("school-desc-text").textContent = SCHOOL_INFO[kind].text;
+    setSchoolMode(schoolMode);
+  }
+  document.getElementById("school-student-s").addEventListener("click", () => setSchoolKind("s"));
+  document.getElementById("school-student-p").addEventListener("click", () => setSchoolKind("p"));
+  document.getElementById("school-student-d").addEventListener("click", () => setSchoolKind("d"));
+  document.getElementById("school-mode-instant").addEventListener("click", () => setSchoolMode("instant"));
+  document.getElementById("school-mode-expose").addEventListener("click", () => setSchoolMode("expose"));
+  document.getElementById("school-reset").addEventListener("click", () => setSchoolMode(schoolMode));
+  window.addEventListener("resize", () => { resizeSchoolCanvas(); drawSchool(); });
+  window.addEventListener("pagehide", () => clearInterval(schoolTimer));
+  resizeSchoolCanvas();
+  setSchoolMode("instant");
 
   /* ---- 3B Orbital Sınır Yüzeyi Görselleştirici ---- */
   const orb3dStage = document.getElementById("orbital3d-stage");
