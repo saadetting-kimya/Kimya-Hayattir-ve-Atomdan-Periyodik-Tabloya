@@ -72,7 +72,7 @@
     <div class="section-head">
       <span class="eyebrow">🔍 Keşfet</span>
       <h2>Şimdi Şekilleri Keşfet: Okulda "En Sık Bulunduğun Yer" Benzetimi</h2>
-      <p>Arının uzun pozlu fotoğrafı sana orbitalin <strong>genel</strong> fikrini verdi: yörünge değil, olasılık bölgesi. Şimdi aynı fikri orbitallerin <strong>farklı şekillerine</strong> taşıyalım. Bir okulda üç farklı öğrenciyi bir yıl boyunca izlediğini düşün: biri teneffüslerde hep sınıfının çevresinde kalır; biri kütüphane ile kantin arasında mekik dokur; biri de dört farklı kulüp odası arasında dolaşır. Her öğrenciyi teneffüste "en sık nerede bulacağını" işaretlersen, o öğrencinin <strong>bulunma olasılığının yüksek olduğu bölgeyi</strong> haritalamış olursun — tıpkı bir elektronun orbitalindeki bulunma olasılığı gibi.</p>
+      <p>Arının uzun pozlu fotoğrafı sana orbitalin <strong>genel</strong> fikrini verdi: yörünge değil, olasılık bölgesi. Şimdi aynı fikri orbitallerin <strong>farklı şekillerine</strong> taşıyalım. Bir okulda üç arkadaşı bir yıl boyunca izlediğini düşün: Ahmet teneffüslerde hep sınıfının çevresinde kalır; Mert kütüphane ile kantin arasında mekik dokur; Selma da dört farklı kulüp odası arasında dolaşır. Her birini teneffüste "en sık nerede bulacağını" işaretlersen, o arkadaşının <strong>bulunma olasılığının yüksek olduğu bölgeyi</strong> haritalamış olursun — tıpkı bir elektronun orbitalindeki bulunma olasılığı gibi.</p>
     </div>
     <div class="two-col">
       <div class="lab-panel">
@@ -82,9 +82,9 @@
         </div>
         <div class="stage" id="school-stage"><canvas id="school-canvas"></canvas></div>
         <div style="display:flex; gap:8px; flex-wrap:wrap; padding-top:12px">
-          <button class="btn on-dark small active" id="school-student-s">🎓 Öğrenci S</button>
-          <button class="btn on-dark small" id="school-student-p">🎓 Öğrenci P</button>
-          <button class="btn on-dark small" id="school-student-d">🎓 Öğrenci D</button>
+          <button class="btn on-dark small active" id="school-student-s">🎓 Ahmet</button>
+          <button class="btn on-dark small" id="school-student-p">🎓 Mert</button>
+          <button class="btn on-dark small" id="school-student-d">🎓 Selma</button>
         </div>
         <div style="display:flex; gap:8px; flex-wrap:wrap; padding-top:8px">
           <button class="btn on-dark small active" id="school-mode-instant">📍 Anlık Konum</button>
@@ -94,7 +94,7 @@
       </div>
       <div>
         <div class="callout model" id="school-desc">
-          <h5 id="school-desc-title">S öğrencisi — Sınıf ve Çevresi</h5>
+          <h5 id="school-desc-title">Ahmet (s) — Sınıf ve Çevresi</h5>
           <p id="school-desc-text">Yıl boyu teneffüslerde sınıfının bulunduğu merkezi bölgede ve yakın çevresinde dolaşır. Herhangi bir yöne özel bir eğilimi yoktur; okulun her tarafına biraz uğrar, ne çok yakın ne çok uzak durur.</p>
         </div>
         <div class="callout real" style="margin-top:14px">
@@ -318,9 +318,9 @@
      alışkanlığın şeklini (küre / halter / dört yapraklı yonca) çizer — tıpkı
      gerçek s/p/d orbitallerinin açısal olasılık dağılımları gibi. */
   const SCHOOL_INFO = {
-    s: { title:"S öğrencisi — Sınıf ve Çevresi", text:"Yıl boyu teneffüslerde sınıfının bulunduğu merkezi bölgede ve yakın çevresinde dolaşır. Herhangi bir yöne özel bir eğilimi yoktur; okulun her tarafına biraz uğrar, ne çok yakın ne çok uzak durur.", wings: [] },
-    p: { title:"P öğrencisi — Kütüphane ↔ Kantin", text:"Teneffüslerin neredeyse tamamını yalnızca İKİ karşıt mekân arasında geçirir: bir ucu kütüphane, diğer ucu kantin. Bu ikisi arasındaki koridorda ve okulun ortasında neredeyse hiç durmaz.", wings: ["Kütüphane","Kantin"] },
-    d: { title:"D öğrencisi — Dört Farklı Kulüp Odası", text:"Üye olduğu dört kulüp yüzünden okulun dört köşesini sırayla dolaşır: basketbol sahası, müzik odası, bilim laboratuvarı ve sanat atölyesi. Kulüpler arasındaki yollarda ve okulun ortasında pek durmaz.", wings: ["Basketbol Sahası","Müzik Odası","Bilim Lab.","Sanat Atölyesi"] },
+    s: { title:"Ahmet (s) — Sınıf ve Çevresi", text:"Yıl boyu teneffüslerde sınıfının bulunduğu merkezi bölgede ve yakın çevresinde dolaşır. Herhangi bir yöne özel bir eğilimi yoktur; okulun her tarafına biraz uğrar, ne çok yakın ne çok uzak durur.", wings: [] },
+    p: { title:"Mert (p) — Kütüphane ↔ Kantin", text:"Teneffüslerin neredeyse tamamını yalnızca İKİ karşıt mekân arasında geçirir: bir ucu kütüphane, diğer ucu kantin. Bu ikisi arasındaki koridorda ve okulun ortasında neredeyse hiç durmaz.", wings: ["Kütüphane","Kantin"] },
+    d: { title:"Selma (d) — Dört Farklı Kulüp Odası", text:"Üye olduğu dört kulüp yüzünden okulun dört köşesini sırayla dolaşır: basketbol sahası, müzik odası, bilim laboratuvarı ve sanat atölyesi. Kulüpler arasındaki yollarda ve okulun ortasında pek durmaz.", wings: ["Basketbol Sahası","Müzik Odası","Bilim Lab.","Sanat Atölyesi"] },
   };
   function angularWeight(kind, angle) {
     if (kind === "p") return Math.sin(angle) ** 2; // dikey (kuzey-güney) iki lob
