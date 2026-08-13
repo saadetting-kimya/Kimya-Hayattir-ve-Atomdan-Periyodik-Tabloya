@@ -182,8 +182,17 @@ const FILL_ORDER = [
 ];
 const SUBSHELL_CAP = { s:2, p:6, d:10, f:14 };
 
-/** Aufbau ilkesine göre (istisnasız, öğretim programı düzeyinde) Z elektronunu
- * dağıtır. Dönen dizi [{n, l, label, count, cap}] şeklindedir (dolum sırasıyla). */
+/* Yarı dolu/tam dolu d alt kabuğunun ekstra kararlılığı yüzünden Aufbau'nun
+   ("4s önce dolar") genel kuralına uymayan, deneysel olarak doğrulanmış
+   istisnalar (ilk 36 element sınırında yalnızca Cr ve Cu). */
+const AUFBAU_EXCEPTIONS = {
+  24: { "4s":1, "3d":5 },  // Cr: [Ar] 3d⁵ 4s¹ (yarı dolu 3d + yarı dolu 4s)
+  29: { "4s":1, "3d":10 }, // Cu: [Ar] 3d¹⁰ 4s¹ (tam dolu 3d + yarı dolu 4s)
+};
+
+/** Aufbau ilkesine göre Z elektronunu dağıtır; Cr ve Cu için bilinen istisna
+ * dizilimini uygular. Dönen dizi [{n, l, label, count, cap}] şeklindedir
+ * (dolum sırasıyla). */
 export function buildConfig(z) {
   let remaining = z;
   const subshells = [];
@@ -195,6 +204,12 @@ export function buildConfig(z) {
     const count = Math.min(cap, remaining);
     subshells.push({ n, l, label, count, cap });
     remaining -= count;
+  }
+  const exception = AUFBAU_EXCEPTIONS[z];
+  if (exception) {
+    for (const s of subshells) {
+      if (exception[s.label] !== undefined) s.count = exception[s.label];
+    }
   }
   return subshells;
 }

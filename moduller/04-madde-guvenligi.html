@@ -117,6 +117,42 @@
 <section class="section">
   <div class="container">
     <div class="section-head">
+      <span class="eyebrow">🔍 Keşfet</span>
+      <h2>Etkinlik — Kimyasal Depolama Matrisi</h2>
+      <p>Bir depoda iki farklı tehlike sınıfından madde bulunuyor. Birlikte depolanıp depolanamayacağını önce tahmin et, sonra "Cevabı Gör" ile ders kitabındaki gerçek depolama matrisinden kontrol et.</p>
+    </div>
+    <div class="card">
+      <div class="controls" style="grid-template-columns:1fr 1fr; max-width:520px">
+        <div class="control-row" style="grid-template-columns:1fr">
+          <label for="storeA">1. Madde Sınıfı</label>
+          <select id="storeA" style="padding:8px; border-radius:8px; border:1px solid var(--line)"></select>
+        </div>
+        <div class="control-row" style="grid-template-columns:1fr">
+          <label for="storeB">2. Madde Sınıfı</label>
+          <select id="storeB" style="padding:8px; border-radius:8px; border:1px solid var(--line)"></select>
+        </div>
+      </div>
+      <div class="small" style="margin:14px 0 8px">Önce tahminini yap:</div>
+      <div class="btnbar">
+        <button class="btn" data-guess="ok">✅ Birlikte depolanabilir</button>
+        <button class="btn" data-guess="caution">⚠️ Özel önlemle depolanabilir</button>
+        <button class="btn" data-guess="water">🧯 Su ile temas ederse tehlikeli olur</button>
+        <button class="btn" data-guess="no">❌ Asla birlikte depolanamaz</button>
+      </div>
+      <div id="storeResult" style="margin-top:14px"></div>
+    </div>
+
+    <div class="card" style="margin-top:16px; overflow-x:auto">
+      <div class="small" style="margin-bottom:10px">Tam Depolama Matrisi (ders kitabından)</div>
+      <div id="storage-matrix" class="storage-matrix"></div>
+      <div class="storage-legend" id="storage-legend"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
       <span class="eyebrow">✅ Değerlendir</span>
       <h2>Bağlam Temelli Sorular</h2>
     </div>
@@ -288,6 +324,90 @@
     document.getElementById("ghs-status").style.display = "none";
     ghsGrid.querySelectorAll(".ghs-card").forEach(c => c.classList.remove("correct","wrong"));
     renderGhsPool();
+  });
+
+  /* ---- Kimyasal Depolama Matrisi ----
+     Değerler, ders kitabının "Kimyasal Maddelerin Depolanması" matris sayfasından
+     (s. 40) birebir okunmuştur — 9 GHS piktogram sınıfı arasındaki depolama
+     uyumluluğunu gösterir. Matris simetriktir. */
+  const STORAGE_CLASSES = [
+    { key:"yanici",      name:"Yanıcı, Parlayıcı" },
+    { key:"patlayici",   name:"Patlayıcı" },
+    { key:"zehirli",     name:"Zehirli" },
+    { key:"oksitleyici", name:"Oksitleyici" },
+    { key:"gaz",         name:"Gaz" },
+    { key:"tahris",      name:"Tahriş Edici" },
+    { key:"saglik",      name:"Sağlık Etkisi" },
+    { key:"korozif",     name:"Korozif" },
+    { key:"cevre",       name:"Çevreye Zararlı Maddeler" },
+  ];
+  // Satır/sütun sırası STORAGE_CLASSES ile aynıdır.
+  const STORAGE_MATRIX = [
+    /* yanici      */ ["ok","no","no","no","no","water","water","no","no"],
+    /* patlayici   */ ["no","ok","no","no","no","no","no","no","no"],
+    /* zehirli     */ ["no","no","ok","no","no","ok","ok","no","no"],
+    /* oksitleyici */ ["no","no","no","ok","no","no","no","no","no"],
+    /* gaz         */ ["no","no","no","no","ok","caution","caution","no","no"],
+    /* tahris      */ ["water","no","ok","no","caution","ok","ok","ok","no"],
+    /* saglik      */ ["water","no","ok","no","caution","ok","ok","ok","no"],
+    /* korozif     */ ["no","no","no","no","no","ok","ok","ok","no"],
+    /* cevre       */ ["no","no","no","no","no","no","no","no","ok"],
+  ];
+  const STORAGE_LEGEND = {
+    ok:      { label:"Birlikte depolanabilir.", color:"var(--good)" },
+    no:      { label:"Birlikte depolanamaz.", color:"var(--bad)" },
+    caution: { label:"Özel önlemler alınarak birlikte depolanabilir.", color:"#e6c229" },
+    water:   { label:"Su ile temas ettiğinde alevlenebilir, gaz çıkaran veya kendiliğinden yanmaya yatkın maddelerle depolanamaz.", color:"#f28c28" },
+  };
+  const STORAGE_SYMBOL = { ok:"✓", no:"✗", caution:"!", water:"!" };
+
+  function storageRelation(i, j) { return STORAGE_MATRIX[i][j]; }
+
+  const smHost = document.getElementById("storage-matrix");
+  smHost.style.gridTemplateColumns = `repeat(${STORAGE_CLASSES.length + 1}, 40px)`;
+  let smRows = "";
+  smRows += `<div class="sm-corner"></div>`;
+  STORAGE_CLASSES.forEach(c => { smRows += `<div class="sm-head" title="${c.name}">${ICONS[c.key]}</div>`; });
+  STORAGE_CLASSES.forEach((rc, i) => {
+    smRows += `<div class="sm-row-label" title="${rc.name}">${ICONS[rc.key]}</div>`;
+    STORAGE_CLASSES.forEach((cc, j) => {
+      const rel = storageRelation(i, j);
+      smRows += `<div class="storage-cell ${rel}" data-i="${i}" data-j="${j}">${STORAGE_SYMBOL[rel]}</div>`;
+    });
+  });
+  smHost.innerHTML = smRows;
+
+  document.getElementById("storage-legend").innerHTML = Object.values(STORAGE_LEGEND).map(l => `
+    <div class="sl-item"><span class="sl-swatch" style="background:${l.color}"></span><span>${l.label}</span></div>
+  `).join("");
+
+  const storeA = document.getElementById("storeA");
+  const storeB = document.getElementById("storeB");
+  [storeA, storeB].forEach((sel, idx) => {
+    sel.innerHTML = STORAGE_CLASSES.map((c, i) => `<option value="${i}">${c.name}</option>`).join("");
+    sel.value = idx === 0 ? 0 : 1;
+  });
+
+  function clearStorageHighlight() {
+    smHost.querySelectorAll(".storage-cell.hl").forEach(c => c.classList.remove("hl"));
+  }
+  document.querySelectorAll('[data-guess]').forEach(btn => {
+    btn.addEventListener("click", () => {
+      const i = +storeA.value, j = +storeB.value;
+      const rel = storageRelation(i, j);
+      const guess = btn.dataset.guess;
+      const correct = guess === rel;
+      clearStorageHighlight();
+      smHost.querySelector(`.storage-cell[data-i="${i}"][data-j="${j}"]`)?.classList.add("hl");
+      smHost.querySelector(`.storage-cell[data-i="${j}"][data-j="${i}"]`)?.classList.add("hl");
+      const legend = STORAGE_LEGEND[rel];
+      const nameA = STORAGE_CLASSES[i].name, nameB = STORAGE_CLASSES[j].name;
+      const resultEl = document.getElementById("storeResult");
+      resultEl.innerHTML = `<div class="callout ${correct ? "real" : "concept"}">
+        <h5>${correct ? "✅ Doğru tahmin!" : "❌ Tahminin yanlış — gerçek cevap:"}</h5>
+        <p><strong>${nameA}</strong> ile <strong>${nameB}</strong>: ${legend.label}</p>
+      </div>`;
+    });
   });
 </script>
 </body>

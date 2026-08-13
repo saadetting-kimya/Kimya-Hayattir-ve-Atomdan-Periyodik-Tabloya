@@ -23,16 +23,16 @@ const ANGULAR = {
 };
 
 export const ORBITAL_INFO = {
-  "1s":     { label: "1s", shape: "Küre", desc: "Tüm yönlerde eşit olasılık; işaret değişimi (düğüm düzlemi) yoktur." },
-  "2s":     { label: "2s", shape: "Küre (+ iç radyal düğüm)", desc: "Açısal olarak 1s ile aynı küresel sınır yüzeyine sahiptir; aradaki fark (bir radyal düğüm küresi) bu sınır-yüzey gösteriminde görünmez." },
-  "2pz":    { label: "2pz", shape: "Halter (iki lob)", desc: "Dikey eksende iki lob; ekvator düzleminde bir düğüm düzlemi vardır." },
-  "2px":    { label: "2px", shape: "Halter (iki lob)", desc: "x eksenine göre yönelmiş iki lob." },
-  "2py":    { label: "2py", shape: "Halter (iki lob)", desc: "y eksenine göre yönelmiş iki lob." },
-  "3dz2":   { label: "3dz²", shape: "Halter + halka", desc: "Eksen boyunca iki lob ve ekvator çevresinde bir halka (torus) — diğer d orbitallerinden farklı bir görünümü vardır." },
-  "3dxz":   { label: "3dxz", shape: "Dört yapraklı yonca", desc: "Eksenler arasında (45°) uzanan dört lob." },
-  "3dyz":   { label: "3dyz", shape: "Dört yapraklı yonca", desc: "Eksenler arasında (45°) uzanan dört lob." },
-  "3dx2y2": { label: "3dx²-y²", shape: "Dört yapraklı yonca", desc: "Dört lob doğrudan eksenler üzerinde uzanır." },
-  "3dxy":   { label: "3dxy", shape: "Dört yapraklı yonca", desc: "Dört lob eksenler arasında (45°) uzanır." },
+  "1s":     { label: "1s", shape: "Küre", desc: "Tüm yönlerde eşit olasılık; işaret değişimi (düğüm düzlemi) yoktur.", subshell: "1s", capacity: 2 },
+  "2s":     { label: "2s", shape: "Küre (+ iç radyal düğüm)", desc: "Açısal olarak 1s ile aynı küresel sınır yüzeyine sahiptir; aradaki fark (bir radyal düğüm küresi) bu sınır-yüzey gösteriminde görünmez.", subshell: "2s", capacity: 2 },
+  "2pz":    { label: "2pz", shape: "Halter (iki lob)", desc: "Dikey eksende iki lob; ekvator düzleminde bir düğüm düzlemi vardır.", subshell: "2p", capacity: 2 },
+  "2px":    { label: "2px", shape: "Halter (iki lob)", desc: "x eksenine göre yönelmiş iki lob.", subshell: "2p", capacity: 2 },
+  "2py":    { label: "2py", shape: "Halter (iki lob)", desc: "y eksenine göre yönelmiş iki lob.", subshell: "2p", capacity: 2 },
+  "3dz2":   { label: "3dz²", shape: "Halter + halka", desc: "Eksen boyunca iki lob ve ekvator çevresinde bir halka (torus) — diğer d orbitallerinden farklı bir görünümü vardır.", subshell: "3d", capacity: 2 },
+  "3dxz":   { label: "3dxz", shape: "Dört yapraklı yonca", desc: "Eksenler arasında (45°) uzanan dört lob.", subshell: "3d", capacity: 2 },
+  "3dyz":   { label: "3dyz", shape: "Dört yapraklı yonca", desc: "Eksenler arasında (45°) uzanan dört lob.", subshell: "3d", capacity: 2 },
+  "3dx2y2": { label: "3dx²-y²", shape: "Dört yapraklı yonca", desc: "Dört lob doğrudan eksenler üzerinde uzanır.", subshell: "3d", capacity: 2 },
+  "3dxy":   { label: "3dxy", shape: "Dört yapraklı yonca", desc: "Dört lob eksenler arasında (45°) uzanır.", subshell: "3d", capacity: 2 },
 };
 
 const POS_COLOR = new THREE.Color(0x6d5bff);
