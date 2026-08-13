@@ -48,6 +48,10 @@
         </div>
         <div class="stage" id="expo-stage"><canvas id="expo-canvas"></canvas></div>
         <div style="display:flex; gap:8px; flex-wrap:wrap; padding-top:12px">
+          <button class="btn on-dark small active" id="expo-shell-1s">1s</button>
+          <button class="btn on-dark small" id="expo-shell-2s">2s</button>
+        </div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; padding-top:8px">
           <button class="btn on-dark small active" id="expo-mode-instant">📍 Anlık Konum</button>
           <button class="btn on-dark small" id="expo-mode-expose">📷 Uzun Pozlu Fotoğraf Çek</button>
           <button class="btn on-dark small" id="expo-reset">↺ Temizle</button>
@@ -60,7 +64,11 @@
         </div>
         <div class="callout real" style="margin-top:14px">
           <h5>Uzun Pozlu Fotoğraf modu</h5>
-          <p>Aynı elektronun binlerce "anlık konumunu" üst üste biriktir. Noktaların yoğunlaştığı bölge — çekirdeğe ne çok yakın ne çok uzak, ortalama bir mesafedeki küresel bir kabuk — <strong>1s orbitalinin</strong> gerçek olasılık bulutudur. Aşağıdaki 3B sınır yüzey diyagramı, bu bulutun "kenarını" çizdiğimizde ortaya çıkan matematiksel şekildir.</p>
+          <p>Aynı elektronun binlerce "anlık konumunu" üst üste biriktir. Noktaların yoğunlaştığı bölge — çekirdeğe ne çok yakın ne çok uzak, ortalama bir mesafedeki küresel bir kabuk — seçtiğin orbitalin gerçek olasılık bulutudur. Aşağıdaki 3B sınır yüzey diyagramı, bu bulutun "kenarını" çizdiğimizde ortaya çıkan matematiksel şekildir.</p>
+        </div>
+        <div class="callout real" style="margin-top:14px" id="expo-size-note">
+          <h5>1s ile 2s Büyüklük Farkı</h5>
+          <p><strong>1s</strong> ve <strong>2s</strong> düğmelerine sırayla basıp aynı süre uzun pozlu fotoğraf çek: 2s bulutunun çekirdekten çok daha uzağa yayıldığını, yani <strong>çok daha büyük</strong> bir hacmi kapladığını göreceksin — çünkü n=2 seviyesindeki elektron, n=1'dekinden daha yüksek enerjilidir ve çekirdekten ortalama olarak daha uzakta bulunur.</p>
         </div>
       </div>
     </div>
@@ -133,6 +141,10 @@
         <div class="callout model" id="orb3d-desc">
           <h5>Şekil</h5>
           <p id="orb3d-desc-text">Yükleniyor…</p>
+        </div>
+        <div class="readouts" style="grid-template-columns:1fr 1fr; margin-top:14px">
+          <div class="readout" style="background:var(--surface-2); border-color:var(--line)"><div class="k" style="color:var(--ink-faint)">Kaç Elektron Alır?</div><div class="v" id="orb3d-capacity" style="color:var(--ink)">–</div></div>
+          <div class="readout" style="background:var(--surface-2); border-color:var(--line)"><div class="k" style="color:var(--ink-faint)">Eş Enerjili (Dejenere) Orbitaller</div><div class="v" id="orb3d-degenerate" style="color:var(--ink); font-size:13px">–</div></div>
         </div>
         <div class="callout real" style="margin-top:14px">
           <h5>Hatırla</h5>
@@ -293,15 +305,24 @@
   const expoStage = document.getElementById("expo-stage");
   const expoCountEl = document.getElementById("expo-count");
   let expoMode = "instant";
+  let expoShell = "1s";
   let expoFrames = 0;
   let expoAcc = [];
 
-  /** 1s orbitaline benzer basit radyal olasılık dağılımı: çekirdeğe çok yakın ya da
+  /* 2s'nin ortalama yarıçapı 1s'ninkinden belirgin biçimde büyüktür (n=2 seviyesi,
+   * çekirdekten daha uzak) — bu ölçek farkı, gerçek radyal olasılık dağılımlarının
+   * basitleştirilmiş bir temsilidir (2s'nin iç radyal düğümü burada gösterilmez). */
+  const SHELL_SCALE = { "1s": 0.42, "2s": 0.70 };
+
+  /** s orbitaline benzer basit radyal olasılık dağılımı: çekirdeğe çok yakın ya da
    * çok uzakta seyrek, orta mesafede en yoğun bir küresel kabuk (projeksiyon 2B). */
   function sampleCloudPoint() {
     const r = (Math.random() + Math.random() + Math.random()) / 3;
     const a = Math.random() * Math.PI * 2;
-    return { x: 0.5 + Math.cos(a) * r * 0.42, y: 0.5 + Math.sin(a) * r * 0.42 };
+    const scale = SHELL_SCALE[expoShell];
+    const x = 0.5 + Math.cos(a) * r * scale;
+    const y = 0.5 + Math.sin(a) * r * scale;
+    return { x: Math.min(0.97, Math.max(0.03, x)), y: Math.min(0.97, Math.max(0.03, y)) };
   }
 
   function resizeExpoCanvas() {
@@ -359,6 +380,14 @@
   document.getElementById("expo-mode-instant").addEventListener("click", () => setExpoMode("instant"));
   document.getElementById("expo-mode-expose").addEventListener("click", () => setExpoMode("expose"));
   document.getElementById("expo-reset").addEventListener("click", () => setExpoMode(expoMode));
+  function setExpoShell(shell) {
+    expoShell = shell;
+    document.getElementById("expo-shell-1s").classList.toggle("active", shell === "1s");
+    document.getElementById("expo-shell-2s").classList.toggle("active", shell === "2s");
+    setExpoMode(expoMode);
+  }
+  document.getElementById("expo-shell-1s").addEventListener("click", () => setExpoShell("1s"));
+  document.getElementById("expo-shell-2s").addEventListener("click", () => setExpoShell("2s"));
   window.addEventListener("resize", () => { resizeExpoCanvas(); drawExpo(); });
   window.addEventListener("pagehide", () => clearInterval(expoTimer));
   resizeExpoCanvas();
@@ -496,8 +525,16 @@
   function selectOrbital3d(key) {
     viewer.setOrbital(key);
     picker.querySelectorAll("button").forEach(b => b.classList.toggle("active", b.dataset.key === key));
-    document.getElementById("orb3d-title").textContent = `${ORBITAL_INFO[key].label} Orbitali`;
-    document.getElementById("orb3d-desc-text").innerHTML = `<strong>${ORBITAL_INFO[key].shape}.</strong> ${ORBITAL_INFO[key].desc}`;
+    const info = ORBITAL_INFO[key];
+    document.getElementById("orb3d-title").textContent = `${info.label} Orbitali`;
+    document.getElementById("orb3d-desc-text").innerHTML = `<strong>${info.shape}.</strong> ${info.desc}`;
+    document.getElementById("orb3d-capacity").textContent = `En fazla ${info.capacity} elektron (zıt spinli)`;
+    const siblings = Object.entries(ORBITAL_INFO)
+      .filter(([k, v]) => v.subshell === info.subshell && k !== key)
+      .map(([, v]) => v.label);
+    document.getElementById("orb3d-degenerate").textContent = siblings.length
+      ? `${info.subshell} alt kabuğundaki diğerleri: ${siblings.join(", ")}`
+      : "Bu alt kabukta tek orbital var, eşi yok.";
   }
   picker.querySelectorAll("button").forEach(b => b.addEventListener("click", () => selectOrbital3d(b.dataset.key)));
   selectOrbital3d("2pz");
