@@ -35,6 +35,53 @@
     margin-top:6px; font-size:10.5px; font-weight:800; padding:3px 8px; border-radius:999px;
     background:var(--gas); color:#fff; display:inline-block;
   }
+
+  /* Atom yarıçapı: gerçek ölçekli daireler */
+  .radius-row{ display:flex; align-items:flex-end; gap:16px; min-height:210px; padding:10px 4px 0; flex-wrap:wrap; }
+  .radius-col{ display:flex; flex-direction:column; align-items:center; gap:6px; }
+  .radius-circle{ border-radius:50%; background:radial-gradient(circle at 35% 30%, var(--gas), var(--gas-dark)); box-shadow:0 0 0 2px rgba(255,255,255,.08) inset; }
+  .radius-circle.group2a{ outline:2px solid #ffd166; outline-offset:2px; }
+  .radius-circle.group5a{ outline:2px solid #c792ff; outline-offset:2px; }
+  .radius-ph{ border-radius:50%; border:1.5px dashed #463d80; }
+
+  /* İyonlaşma enerjisi: elektron koparma istasyonu + gösterge */
+  .ie-station{ display:flex; align-items:center; gap:20px; margin-top:16px; min-height:150px; flex-wrap:wrap; }
+  .ie-atom{ position:relative; width:74px; height:74px; border-radius:50%; background:radial-gradient(circle at 35% 30%, #2c2560, #17123a); border:2px solid var(--gas); display:flex; align-items:center; justify-content:center; font-family:var(--mono); font-weight:800; font-size:18px; color:#f1eeff; flex:0 0 auto; }
+  .ie-electron{ position:absolute; width:10px; height:10px; border-radius:50%; background:#ffd166; box-shadow:0 0 8px #ffd166; top:50%; left:50%; margin:-5px 0 0 -5px; transition:transform .8s ease-in, opacity .8s ease-in; opacity:1; }
+  .ie-electron.flying{ transform:translate(130px,-100px); opacity:0; }
+  .gauge-wrap{ flex:0 0 auto; text-align:center; }
+  .gauge-wrap svg{ width:150px; height:88px; display:block; }
+  .gauge-needle{ transform-origin:75px 75px; transition:transform .9s cubic-bezier(.2,.85,.25,1); }
+  .gauge-val{ margin-top:2px; font-family:var(--mono); font-weight:800; font-size:15px; color:var(--heat); }
+  .gauge-label{ font-size:10.5px; color:#8a80b3; }
+  .ie-pull-btn{ margin-left:auto; }
+
+  /* Koordinat grafiği (Z — özellik değeri) */
+  .coord-graph{ width:100%; height:auto; }
+  .coord-graph .axis{ stroke:#463d80; stroke-width:1; }
+  .coord-graph .axis-label{ fill:#8a80b3; font-size:8px; font-family:var(--mono); }
+  .coord-graph .pt{ fill:var(--gas); stroke:#fff; stroke-width:1; }
+  .coord-graph .pt.group2a{ fill:#ffd166; }
+  .coord-graph .pt.group5a{ fill:#c792ff; }
+  .coord-graph .trace{ fill:none; stroke:var(--gas); stroke-width:2; opacity:.65; }
+  .coord-graph .trend-arrow{ stroke:var(--good); stroke-width:2.5; }
+
+  /* Elektronegatiflik: bağlı atom çifti + kısmi yük */
+  .bond-pick{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:6px; }
+  .bond-pick button{ font-family:var(--mono); font-size:11.5px; font-weight:700; padding:5px 10px; border-radius:999px; border:1.5px solid var(--lab-line); background:transparent; color:#c7bfe6; cursor:pointer; }
+  .bond-pick button.active{ border-color:var(--gas); background:rgba(109,91,255,.18); color:#fff; }
+  .bond-stage{ display:flex; align-items:center; justify-content:center; padding:26px 10px 34px; position:relative; }
+  .bond-atom{ width:92px; height:92px; border-radius:50%; background:radial-gradient(circle at 35% 30%, #2c2560, #17123a); border:3px solid var(--lab-line); display:flex; flex-direction:column; align-items:center; justify-content:center; cursor:pointer; transition:.15s; position:relative; z-index:2; flex:0 0 auto; }
+  .bond-atom:hover{ border-color:var(--gas); }
+  .bond-atom .sym{ font-family:var(--mono); font-weight:800; font-size:22px; color:#f1eeff; }
+  .bond-atom .en-val{ font-size:10.5px; color:#8a80b3; margin-top:2px; min-height:12px; }
+  .bond-atom.win{ border-color:var(--mol-b); box-shadow:0 0 14px rgba(255,91,157,.4); cursor:default; }
+  .bond-atom.lose{ border-color:var(--mol-a); cursor:default; }
+  .bond-line{ width:80px; height:4px; background:var(--lab-line); flex:0 0 auto; margin:0 -6px; position:relative; z-index:1; }
+  .bond-charge{ position:absolute; top:-30px; left:50%; transform:translateX(-50%) scale(0); font-weight:800; font-family:var(--mono); transition:transform .4s cubic-bezier(.3,1.4,.4,1); }
+  .bond-charge.show{ transform:translateX(-50%) scale(1); }
+  .bond-charge.neg{ color:var(--mol-b); }
+  .bond-charge.pos{ color:var(--mol-a); }
 </style>
 </head>
 <body>
@@ -61,34 +108,58 @@
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">🔍 Keşfet</span>
-      <h2>Trend Görselleştirici: Grafiği Kendin Oluştur</h2>
-      <p>Bir özellik ve bir periyot/grup seç. Elementlere <strong>sırayla</strong> tıkla, değerini keşfet — grafik, sen keşfettikçe kendiliğinden oluşacak.</p>
+      <h2>Atom Yarıçapı: Gerçek Ölçekli Boy Karşılaştırması</h2>
+      <p>Bir periyot/grup seç. Elementlere <strong>sırayla</strong> tıkla, "📏 Ölç" ile gerçek boyutunu ortaya çıkar — daireler birbirine göre <strong>gerçek oranında</strong> çizilecek.</p>
     </div>
     <div class="card">
-      <div class="controls" style="grid-template-columns:1fr 1fr; display:grid; max-width:640px">
-        <div class="control-row" style="grid-template-columns:90px 1fr">
-          <label>Özellik</label>
-          <select id="prop-pick" style="padding:8px; border-radius:8px; border:1px solid var(--line)">
-            <option value="r">Atom Yarıçapı (pm)</option>
-            <option value="ie">1. İyonlaşma Enerjisi (kJ/mol)</option>
-            <option value="en">Elektronegatiflik (Pauling)</option>
-          </select>
-        </div>
-        <div class="control-row" style="grid-template-columns:90px 1fr">
-          <label>Seri</label>
-          <select id="series-pick" style="padding:8px; border-radius:8px; border:1px solid var(--line)"></select>
-        </div>
+      <div class="control-row" style="grid-template-columns:90px 1fr; max-width:420px">
+        <label>Seri</label>
+        <select id="r-series-pick" style="padding:8px; border-radius:8px; border:1px solid var(--line)"></select>
       </div>
       <div class="lab-panel" style="margin-top:16px">
         <div class="lab-head">
-          <div class="lab-title"><span class="dot"></span> <span id="chart-title">Grafik</span></div>
-          <button class="btn on-dark small" id="trend-reset">↺ Sıfırla</button>
+          <div class="lab-title"><span class="dot"></span> <span id="r-title">Ölçüm İstasyonu</span></div>
+          <button class="btn on-dark small" id="r-reset">↺ Sıfırla</button>
         </div>
-        <div class="trend-picker" id="trend-picker"></div>
-        <div class="bars" id="bars" style="margin-top:18px"></div>
+        <div class="trend-picker" id="r-picker"></div>
+        <div class="radius-row" id="r-row" style="margin-top:18px"></div>
       </div>
-      <div class="callout model" style="margin-top:14px" id="trend-note"></div>
-      <div class="small" style="color:var(--ink-faint); margin-top:8px">🟡 çerçeveli kutular 2A, 🟣 çerçeveli kutular 5A grubu elementleridir — tam/yarı dolu alt kabuğun getirdiği ekstra kararlılık nedeniyle bu elementlerin değerleri komşularından sapabilir.</div>
+      <div class="callout model" style="margin-top:14px" id="r-note"></div>
+      <div class="small" style="color:var(--ink-faint); margin-top:8px">🟡 çerçeveli kutular 2A, 🟣 çerçeveli kutular 5A grubu elementleridir.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">🔍 Keşfet</span>
+      <h2>Elektron Koparma Makinesi: 1. İyonlaşma Enerjisi</h2>
+      <p>Atomlardan sırayla bir elektron koparmayı dene. Enerji ölçer harcanan enerjiyi gösterecek; her ölçüm sağdaki grafiğe (yatay eksen: atom numarası, dikey eksen: iyonlaşma enerjisi) otomatik işlenecek.</p>
+    </div>
+    <div class="card">
+      <div class="control-row" style="grid-template-columns:90px 1fr; max-width:420px">
+        <label>Seri</label>
+        <select id="ie-series-pick" style="padding:8px; border-radius:8px; border:1px solid var(--line)"></select>
+      </div>
+      <div class="two-col" style="margin-top:16px">
+        <div class="lab-panel">
+          <div class="lab-head">
+            <div class="lab-title"><span class="dot"></span> Elektron Koparma İstasyonu</div>
+            <button class="btn on-dark small" id="ie-reset">↺ Sıfırla</button>
+          </div>
+          <div class="trend-picker" id="ie-picker"></div>
+          <div class="ie-station" id="ie-station"></div>
+        </div>
+        <div class="lab-panel">
+          <div class="lab-head">
+            <div class="lab-title"><span class="dot"></span> Grafik: Atom No — İyonlaşma Enerjisi</div>
+            <button class="btn on-dark small" id="ie-trend-btn" disabled>📈 Eğilimi Göster</button>
+          </div>
+          <svg id="ie-graph" class="coord-graph" viewBox="0 0 320 200"></svg>
+        </div>
+      </div>
+      <div class="callout model" style="margin-top:14px" id="ie-note"></div>
     </div>
   </div>
 </section>
@@ -104,6 +175,27 @@
       <select id="succ-pick" style="padding:8px; border-radius:8px; border:1px solid var(--line); max-width:260px"></select>
       <div class="bars" id="succ-bars" style="height:200px; margin-top:14px"></div>
       <div class="callout real" id="succ-note" style="margin-top:10px"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">🔍 Keşfet</span>
+      <h2>Bağ Kimin Daha "Aç Gözlü"? Elektronegatiflik</h2>
+      <p>İki atom birbirine bağlanmış. Elektronu hangisinin daha güçlü çekeceğini <strong>önce tahmin et</strong>, sonra o atoma tıkla — tahminin doğru mu, kısmi yükler ne kadar büyük, hemen gör.</p>
+    </div>
+    <div class="card">
+      <div class="bond-pick" id="bond-pick"></div>
+      <div class="lab-panel" style="margin-top:10px">
+        <div class="lab-head">
+          <div class="lab-title"><span class="dot"></span> Bağ İstasyonu</div>
+          <button class="btn on-dark small" id="bond-reset">↺ Yeniden Tahmin Et</button>
+        </div>
+        <div class="bond-stage" id="bond-stage"></div>
+      </div>
+      <div class="callout model" style="margin-top:14px" id="bond-note"></div>
     </div>
   </div>
 </section>
@@ -177,21 +269,6 @@
     "g2": { label:"2A Grubu (Be → Ca)", zs:[4,12,20], dir:"grup" },
     "g17": { label:"7A Grubu — Halojenler (F → Br)", zs:[9,17,35], dir:"grup" },
   };
-  const PROP_META = {
-    r: { unit:"pm", trendPeriyot:"azalır (soldan sağa)", trendGrup:"artar (yukarıdan aşağıya)" },
-    ie: { unit:"kJ/mol", trendPeriyot:"artar (soldan sağa)", trendGrup:"azalır (yukarıdan aşağıya)" },
-    en: { unit:"", trendPeriyot:"artar (soldan sağa)", trendGrup:"azalır (yukarıdan aşağıya)" },
-  };
-
-  const seriesPick = document.getElementById("series-pick");
-  seriesPick.innerHTML = Object.entries(SERIES).map(([k,s]) => `<option value="${k}">${s.label}</option>`).join("");
-  const propPick = document.getElementById("prop-pick");
-
-  const PROP_NAMES = { r:"Atom Yarıçapı", ie:"1. İyonlaşma Enerjisi", en:"Elektronegatiflik" };
-  const PROP_ICON = { r:"📏", ie:"⚡", en:"🧲" };
-  const PROP_ACTION = { r:"Ölç", ie:"Kopar", en:"Çek" };
-
-  let trendRevealed = [];
 
   function groupClass(z) {
     const g = EL_BY_Z[z].group;
@@ -200,86 +277,306 @@
     return "";
   }
 
-  function renderTrendPicker() {
-    const series = SERIES[seriesPick.value];
-    const propKey = propPick.value;
-    const picker = document.getElementById("trend-picker");
-    const nextIdx = trendRevealed.findIndex(r => !r);
-    picker.innerHTML = series.zs.map((z, i) => {
-      const el = EL_BY_Z[z];
-      const done = trendRevealed[i];
-      const isActive = i === nextIdx;
-      const state = done ? "done" : (isActive ? "active" : "locked");
-      const v = done && PROPS[z] ? PROPS[z][propKey] : null;
-      return `
-        <div class="trend-card ${state} ${groupClass(z)}" data-idx="${i}">
-          <div class="tc-sym">${el.sym}</div>
-          <div class="tc-z">Z=${z}</div>
-          <div class="tc-val">${done ? (v == null ? "—" : v) : (isActive ? "?" : "")}</div>
-          ${isActive ? `<div class="tc-btn">${PROP_ICON[propKey]} ${PROP_ACTION[propKey]}</div>` : ""}
-        </div>
-      `;
-    }).join("");
-    picker.querySelectorAll(".trend-card.active").forEach(card => {
-      card.addEventListener("click", () => revealTrend(+card.dataset.idx));
-    });
-  }
+  /* ============ 1) ATOM YARIÇAPI — gerçek ölçekli daireler ============ */
+  (function () {
+    const seriesPick = document.getElementById("r-series-pick");
+    seriesPick.innerHTML = Object.entries(SERIES).map(([k,s]) => `<option value="${k}">${s.label}</option>`).join("");
+    let revealed = [];
 
-  function renderTrendBars() {
-    const series = SERIES[seriesPick.value];
-    const propKey = propPick.value;
-    const values = series.zs.map((z, i) => (trendRevealed[i] && PROPS[z]) ? PROPS[z][propKey] : null);
-    const known = values.filter(v => v !== null && v !== undefined);
-    const maxV = Math.max(...known, 1);
-    const bars = document.getElementById("bars");
-    bars.innerHTML = series.zs.map((z, i) => {
-      const el = EL_BY_Z[z];
-      const v = values[i];
-      const h = (v == null) ? 4 : Math.max(6, (v / maxV) * 190);
-      return `
-        <div class="bar-col">
-          <div class="bar ${groupClass(z)}" style="height:${h}px; ${v==null?"background:#241f47":""}">
-            ${v != null ? `<span class="val">${v}</span>` : ""}
+    function series() { return SERIES[seriesPick.value]; }
+
+    function render() {
+      const s = series();
+      const nextIdx = revealed.findIndex(r => !r);
+      const picker = document.getElementById("r-picker");
+      picker.innerHTML = s.zs.map((z, i) => {
+        const el = EL_BY_Z[z];
+        const done = revealed[i];
+        const isActive = i === nextIdx;
+        const state = done ? "done" : (isActive ? "active" : "locked");
+        return `
+          <div class="trend-card ${state} ${groupClass(z)}" data-idx="${i}">
+            <div class="tc-sym">${el.sym}</div>
+            <div class="tc-z">Z=${z}</div>
+            <div class="tc-val">${done ? PROPS[z].r + " pm" : (isActive ? "?" : "")}</div>
+            ${isActive ? `<div class="tc-btn">📏 Ölç</div>` : ""}
           </div>
-          <div class="bar-label">${el.sym}<div class="bar-sub">Z=${z}</div></div>
+        `;
+      }).join("");
+      picker.querySelectorAll(".trend-card.active").forEach(card => {
+        card.addEventListener("click", () => { revealed[+card.dataset.idx] = true; render(); });
+      });
+
+      const maxR = Math.max(...s.zs.map(z => PROPS[z].r));
+      const row = document.getElementById("r-row");
+      row.innerHTML = s.zs.map((z, i) => {
+        const el = EL_BY_Z[z];
+        if (!revealed[i]) {
+          return `<div class="radius-col"><div class="radius-circle radius-ph" style="width:14px; height:14px"></div><div class="bar-label">${el.sym}<div class="bar-sub">Z=${z}</div></div></div>`;
+        }
+        const d = Math.max(10, (PROPS[z].r / maxR) * 130);
+        return `
+          <div class="radius-col">
+            <div class="radius-circle ${groupClass(z)}" style="width:${d}px; height:${d}px"></div>
+            <div class="bar-label">${el.sym}<div class="bar-sub">${PROPS[z].r} pm</div></div>
+          </div>
+        `;
+      }).join("");
+
+      const doneCount = revealed.filter(Boolean).length;
+      const note = document.getElementById("r-note");
+      if (doneCount < s.zs.length) {
+        note.innerHTML = `<h5>Devam Et</h5><p>${doneCount}/${s.zs.length} atom ölçüldü. Sıradaki atomun kutusuna tıklayıp "📏 Ölç" ile gerçek boyutunu ortaya çıkar.</p>`;
+      } else {
+        const trend = s.dir === "periyot" ? "azalır (soldan sağa)" : "artar (yukarıdan aşağıya)";
+        note.innerHTML = `<h5>Eğilim — Tüm Atomları Ölçtün!</h5><p>Atom yarıçapı, bu ${s.dir === "periyot" ? "periyotta soldan sağa gidildikçe" : "grupta yukarıdan aşağıya inildikçe"} <strong>${trend}</strong>.</p>`;
+      }
+      document.getElementById("r-title").textContent = `Ölçüm İstasyonu — ${s.label}`;
+    }
+    function reset() {
+      revealed = series().zs.map(() => false);
+      render();
+    }
+    seriesPick.addEventListener("input", reset);
+    document.getElementById("r-reset").addEventListener("click", reset);
+    reset();
+  })();
+
+  /* ============ 2) İYONLAŞMA ENERJİSİ — elektron koparma + gösterge + koordinat grafiği ============ */
+  (function () {
+    const seriesPick = document.getElementById("ie-series-pick");
+    seriesPick.innerHTML = Object.entries(SERIES).map(([k,s]) => `<option value="${k}">${s.label}</option>`).join("");
+    let revealed = [];
+    let trendShown = false;
+    let busy = false;
+
+    function series() { return SERIES[seriesPick.value]; }
+    function seriesYMax() {
+      const maxIE = Math.max(...series().zs.map(z => PROPS[z].ie));
+      return Math.ceil(maxIE * 1.15 / 100) * 100;
+    }
+
+    function renderPicker() {
+      const s = series();
+      const nextIdx = revealed.findIndex(r => !r);
+      const picker = document.getElementById("ie-picker");
+      picker.innerHTML = s.zs.map((z, i) => {
+        const el = EL_BY_Z[z];
+        const done = revealed[i];
+        const isActive = i === nextIdx && !busy;
+        const state = done ? "done" : (i === nextIdx ? "active" : "locked");
+        return `
+          <div class="trend-card ${done ? "done" : (i === nextIdx ? "active" : "locked")} ${groupClass(z)}" data-idx="${i}">
+            <div class="tc-sym">${el.sym}</div>
+            <div class="tc-z">Z=${z}</div>
+            <div class="tc-val">${done ? PROPS[z].ie + " kJ/mol" : (i === nextIdx ? "?" : "")}</div>
+            ${isActive ? `<div class="tc-btn">⚡ Kopar</div>` : ""}
+          </div>
+        `;
+      }).join("");
+      picker.querySelectorAll(".trend-card.active").forEach(card => {
+        card.addEventListener("click", () => pull(+card.dataset.idx));
+      });
+    }
+
+    function buildGraph() {
+      const s = series();
+      const zs = s.zs;
+      const plotX0 = 38, plotX1 = 308, plotY0 = 14, plotY1 = 168;
+      const xMin = zs[0] - 1, xMax = zs[zs.length - 1] + 1;
+      const yMax = seriesYMax();
+      const xScale = z => plotX0 + (z - xMin) / (xMax - xMin) * (plotX1 - plotX0);
+      const yScale = v => plotY1 - (v / yMax) * (plotY1 - plotY0);
+
+      let svg = `<defs><marker id="ie-arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="var(--good)"/></marker></defs>`;
+      svg += `<line class="axis" x1="${plotX0}" y1="${plotY0}" x2="${plotX0}" y2="${plotY1}"/>`;
+      svg += `<line class="axis" x1="${plotX0}" y1="${plotY1}" x2="${plotX1}" y2="${plotY1}"/>`;
+      [0, yMax / 2, yMax].forEach(v => {
+        const y = yScale(v);
+        svg += `<line class="axis" x1="${plotX0 - 3}" y1="${y}" x2="${plotX0}" y2="${y}"/>`;
+        svg += `<text class="axis-label" x="${plotX0 - 6}" y="${y + 3}" text-anchor="end">${Math.round(v)}</text>`;
+      });
+      zs.forEach(z => {
+        const x = xScale(z);
+        svg += `<line class="axis" x1="${x}" y1="${plotY1}" x2="${x}" y2="${plotY1 + 3}"/>`;
+        svg += `<text class="axis-label" x="${x}" y="${plotY1 + 13}" text-anchor="middle">${z}</text>`;
+      });
+      svg += `<text class="axis-label" x="${(plotX0 + plotX1) / 2}" y="196" text-anchor="middle">Atom No (Z)</text>`;
+      svg += `<text class="axis-label" transform="rotate(-90 10 ${(plotY0 + plotY1) / 2})" x="10" y="${(plotY0 + plotY1) / 2}" text-anchor="middle">kJ/mol</text>`;
+
+      const revealedPts = zs.map((z, i) => revealed[i] ? { x: xScale(z), y: yScale(PROPS[z].ie) } : null).filter(Boolean);
+      if (revealedPts.length > 1) {
+        svg += `<polyline class="trace" points="${revealedPts.map(p => `${p.x},${p.y}`).join(" ")}"/>`;
+      }
+      zs.forEach((z, i) => {
+        if (!revealed[i]) return;
+        svg += `<circle class="pt ${groupClass(z)}" cx="${xScale(z)}" cy="${yScale(PROPS[z].ie)}" r="4.5"/>`;
+      });
+      if (trendShown && revealedPts.length > 1) {
+        const first = revealedPts[0], last = revealedPts[revealedPts.length - 1];
+        svg += `<line class="trend-arrow" x1="${first.x}" y1="${first.y - 10}" x2="${last.x}" y2="${last.y - 10}" marker-end="url(#ie-arrow)"/>`;
+      }
+      return svg;
+    }
+    function renderGraph() {
+      document.getElementById("ie-graph").innerHTML = buildGraph();
+    }
+
+    function updateNote() {
+      const s = series();
+      const doneCount = revealed.filter(Boolean).length;
+      const note = document.getElementById("ie-note");
+      const trendBtn = document.getElementById("ie-trend-btn");
+      if (doneCount < s.zs.length) {
+        trendBtn.disabled = true;
+        note.innerHTML = `<h5>Devam Et</h5><p>${doneCount}/${s.zs.length} atomdan elektron koparıldı. Sıradaki atomun kutusuna tıklayıp "⚡ Kopar" ile enerjisini ölç.</p>`;
+        return;
+      }
+      trendBtn.disabled = false;
+      if (!trendShown) {
+        note.innerHTML = `<h5>Tüm Atomları Ölçtün!</h5><p>Grafiğe bak — bir eğilim fark ediyor musun? Emin olmak için "📈 Eğilimi Göster" düğmesine bas.</p>`;
+      } else {
+        const trend = s.dir === "periyot" ? "artar (soldan sağa)" : "azalır (yukarıdan aşağıya)";
+        note.innerHTML = `<h5>Eğilim Ortaya Çıktı!</h5><p>1. İyonlaşma enerjisi, bu ${s.dir === "periyot" ? "periyotta soldan sağa gidildikçe" : "grupta yukarıdan aşağıya inildikçe"} <strong>${trend}</strong>. 2A ve 5A grubu elementlerinde (🟡/🟣 çerçeveli) tam/yarı dolu alt kabuk kararlılığı nedeniyle küçük sapmalar görebilirsin.</p>`;
+      }
+    }
+
+    function pull(idx) {
+      if (busy) return;
+      busy = true;
+      const s = series();
+      const z = s.zs[idx];
+      const v = PROPS[z].ie;
+      const yMax = seriesYMax();
+      const el = EL_BY_Z[z];
+      document.getElementById("ie-station").innerHTML = `
+        <div class="ie-atom">${el.sym}<div class="ie-electron" id="ie-e"></div></div>
+        <div class="gauge-wrap">
+          <svg viewBox="0 0 150 90">
+            <path d="M10,80 A65,65 0 0 1 140,80" fill="none" stroke="var(--lab-line)" stroke-width="9"/>
+            <line class="gauge-needle" id="gauge-needle" x1="75" y1="80" x2="75" y2="20" stroke="var(--heat)" stroke-width="4" stroke-linecap="round" style="transform:rotate(-90deg)"/>
+            <circle cx="75" cy="80" r="5" fill="var(--heat)"/>
+          </svg>
+          <div class="gauge-val" id="gauge-val">0 kJ/mol</div>
+          <div class="gauge-label">Enerji Ölçer</div>
         </div>
       `;
-    }).join("");
-  }
-
-  function updateTrendNote() {
-    const series = SERIES[seriesPick.value];
-    const propKey = propPick.value;
-    const meta = PROP_META[propKey];
-    const note = document.getElementById("trend-note");
-    const doneCount = trendRevealed.filter(Boolean).length;
-    if (doneCount < series.zs.length) {
-      note.innerHTML = `<h5>Devam Et</h5><p>${doneCount}/${series.zs.length} element keşfedildi. Sıradaki elementin kutusuna tıklayıp "${PROP_ACTION[propKey]}" ile değerini ortaya çıkar.</p>`;
-      return;
+      renderPicker();
+      const electron = document.getElementById("ie-e");
+      const needle = document.getElementById("gauge-needle");
+      const valEl = document.getElementById("gauge-val");
+      const deg = -90 + Math.min(1, v / yMax) * 180;
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        electron.classList.add("flying");
+        needle.style.transform = `rotate(${deg}deg)`;
+      }));
+      let t0 = null;
+      function tick(now) {
+        if (t0 === null) t0 = now;
+        const p = Math.min(1, (now - t0) / 850);
+        valEl.textContent = Math.round(v * p).toLocaleString("tr-TR") + " kJ/mol";
+        if (p < 1) { requestAnimationFrame(tick); return; }
+        revealed[idx] = true;
+        busy = false;
+        renderPicker();
+        renderGraph();
+        updateNote();
+      }
+      requestAnimationFrame(tick);
     }
-    const trend = series.dir === "periyot" ? meta.trendPeriyot : meta.trendGrup;
-    note.innerHTML = `<h5>Eğilim — Grafiğini Tamamladın!</h5><p>${PROP_NAMES[propKey]}, bu ${series.dir === "periyot" ? "periyotta soldan sağa gidildikçe" : "grupta yukarıdan aşağıya inildikçe"} <strong>${trend}</strong>.</p>`;
-  }
 
-  function revealTrend(idx) {
-    trendRevealed[idx] = true;
-    renderTrendPicker();
-    renderTrendBars();
-    updateTrendNote();
-  }
+    function reset() {
+      revealed = series().zs.map(() => false);
+      trendShown = false;
+      busy = false;
+      document.getElementById("ie-station").innerHTML = `<div class="small" style="color:var(--ink-faint)">Bir atomun kutusuna tıklayıp "⚡ Kopar" ile başla.</div>`;
+      renderPicker();
+      renderGraph();
+      updateNote();
+    }
+    seriesPick.addEventListener("input", reset);
+    document.getElementById("ie-reset").addEventListener("click", reset);
+    document.getElementById("ie-trend-btn").addEventListener("click", () => { trendShown = true; renderGraph(); updateNote(); });
+    reset();
+  })();
 
-  function resetTrend() {
-    const series = SERIES[seriesPick.value];
-    trendRevealed = series.zs.map(() => false);
-    document.getElementById("chart-title").textContent = `${PROP_NAMES[propPick.value]} — ${series.label}`;
-    renderTrendPicker();
-    renderTrendBars();
-    updateTrendNote();
-  }
-  propPick.addEventListener("input", resetTrend);
-  seriesPick.addEventListener("input", resetTrend);
-  document.getElementById("trend-reset").addEventListener("click", resetTrend);
-  resetTrend();
+  /* ============ 3) ELEKTRONEGATİFLİK — bağlı atom çifti, tahmin + kısmi yük ============ */
+  (function () {
+    const BOND_PAIRS = [
+      { a: 6, b: 1, label: "C–H" },
+      { a: 7, b: 1, label: "N–H" },
+      { a: 6, b: 8, label: "C–O" },
+      { a: 1, b: 17, label: "H–Cl" },
+      { a: 1, b: 9, label: "H–F" },
+      { a: 11, b: 17, label: "Na–Cl" },
+    ];
+    let pairIdx = 0;
+    let guessed = null;
+
+    function renderPairPicker() {
+      document.getElementById("bond-pick").innerHTML = BOND_PAIRS.map((p, i) =>
+        `<button data-idx="${i}" class="${i === pairIdx ? "active" : ""}">${p.label}</button>`
+      ).join("");
+      document.querySelectorAll("#bond-pick button").forEach(btn => {
+        btn.addEventListener("click", () => selectPair(+btn.dataset.idx));
+      });
+    }
+
+    function renderStage() {
+      const p = BOND_PAIRS[pairIdx];
+      const elA = EL_BY_Z[p.a], elB = EL_BY_Z[p.b];
+      document.getElementById("bond-stage").innerHTML = `
+        <div class="bond-atom" id="bond-a"><div class="sym">${elA.sym}</div><div class="en-val" id="bond-a-en"></div><div class="bond-charge" id="bond-a-charge"></div></div>
+        <div class="bond-line"></div>
+        <div class="bond-atom" id="bond-b"><div class="sym">${elB.sym}</div><div class="en-val" id="bond-b-en"></div><div class="bond-charge" id="bond-b-charge"></div></div>
+      `;
+      document.getElementById("bond-a").addEventListener("click", () => guess("a"));
+      document.getElementById("bond-b").addEventListener("click", () => guess("b"));
+    }
+
+    function guess(side) {
+      if (guessed) return;
+      guessed = side;
+      const p = BOND_PAIRS[pairIdx];
+      const elA = EL_BY_Z[p.a], elB = EL_BY_Z[p.b];
+      const enA = PROPS[p.a].en, enB = PROPS[p.b].en;
+      const winnerSide = enA >= enB ? "a" : "b";
+      const diff = Math.abs(enA - enB);
+      const correct = side === winnerSide;
+
+      document.getElementById("bond-a-en").textContent = `EN ${enA.toFixed(2)}`;
+      document.getElementById("bond-b-en").textContent = `EN ${enB.toFixed(2)}`;
+      document.getElementById("bond-a").classList.add(winnerSide === "a" ? "win" : "lose");
+      document.getElementById("bond-b").classList.add(winnerSide === "b" ? "win" : "lose");
+
+      const scale = (0.7 + Math.min(diff, 2.5) * 0.5).toFixed(2);
+      const winEl = document.getElementById(winnerSide === "a" ? "bond-a-charge" : "bond-b-charge");
+      const loseEl = document.getElementById(winnerSide === "a" ? "bond-b-charge" : "bond-a-charge");
+      winEl.textContent = "δ⁻"; winEl.className = "bond-charge neg";
+      loseEl.textContent = "δ⁺"; loseEl.className = "bond-charge pos";
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        winEl.classList.add("show");
+        winEl.style.transform = `translateX(-50%) scale(${scale})`;
+        loseEl.classList.add("show");
+        loseEl.style.transform = `translateX(-50%) scale(${scale})`;
+      }));
+
+      const winnerName = winnerSide === "a" ? elA.name : elB.name;
+      const loserName = winnerSide === "a" ? elB.name : elA.name;
+      const magnitude = diff < 0.5 ? "küçük" : diff < 1.5 ? "orta büyüklükte" : "büyük";
+      document.getElementById("bond-note").innerHTML = `<h5>${correct ? "Doğru Tahmin!" : "Tahminin Tutmadı"}</h5><p>${winnerName}, elektronegatifliği daha yüksek olduğu için (EN ${Math.max(enA, enB).toFixed(2)} > ${Math.min(enA, enB).toFixed(2)}) bağ elektronunu ${loserName}'a göre daha güçlü çekiyor — üzerinde kısmi negatif yük (δ⁻) oluşuyor, ${loserName} üzerinde de kısmi pozitif yük (δ⁺). Elektronegatiflik farkı ${diff.toFixed(2)} — ${magnitude} bir fark olduğu için yük işaretleri buna göre büyütülüp küçültülüyor.</p>`;
+    }
+
+    function selectPair(idx) {
+      pairIdx = idx;
+      guessed = null;
+      renderPairPicker();
+      renderStage();
+      document.getElementById("bond-note").innerHTML = `<h5>Tahmin Et</h5><p>Bu bağda elektronu hangi atomun daha güçlü çekeceğini düşünüyorsun? O atoma tıkla.</p>`;
+    }
+    document.getElementById("bond-reset").addEventListener("click", () => selectPair(pairIdx));
+    selectPair(0);
+  })();
 
   /* ---- Ardışık iyonlaşma enerjisi ---- */
   const SUCCESSIVE = {

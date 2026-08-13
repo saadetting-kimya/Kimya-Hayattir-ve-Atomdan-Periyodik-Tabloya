@@ -263,7 +263,7 @@
     <div class="section-head">
       <span class="eyebrow">🔍 Keşfet</span>
       <h2>Anyon ve Katyon Elektron Dizilimi</h2>
-      <p>Metaller elektron vererek katyon, ametaller elektron alarak anyon oluşturur. Bir element seç; nötr atomla iyonun elektron dizilimini yan yana karşılaştır.</p>
+      <p>Metaller elektron vererek katyon, ametaller elektron alarak anyon oluşturur. Bir element seç — nötr atomun dizilimini sana verelim, iyonu <strong>sen oluştur</strong>: katyon için doğru kutulardan elektron çıkar, anyon için doğru kutulara elektron ekle. Hangi soy gazla aynı dizilime ulaştığını sonunda keşfedeceksin.</p>
     </div>
     <div class="card">
       <div class="controls" style="grid-template-columns:1fr; max-width:420px">
@@ -274,7 +274,7 @@
       </div>
       <div class="two-col" style="margin-top:16px">
         <div>
-          <div class="small" style="margin-bottom:8px; font-weight:700">Nötr Atom</div>
+          <div class="small" style="margin-bottom:8px; font-weight:700">Nötr Atom (verilen)</div>
           <div class="readouts" style="grid-template-columns:1fr 1fr">
             <div class="readout" style="background:var(--surface-2); border-color:var(--line)"><div class="k" style="color:var(--ink-faint)">Elektron Sayısı</div><div class="v" id="ion-neutral-e" style="color:var(--ink)">–</div></div>
             <div class="readout" style="background:var(--surface-2); border-color:var(--line)"><div class="k" style="color:var(--ink-faint)">Kısaltılmış Dizilim</div><div class="v" id="ion-neutral-config" style="color:var(--ink); font-size:13px">–</div></div>
@@ -282,12 +282,15 @@
           <div class="orbital-diagram" id="ion-neutral-diagram" style="margin-top:10px"></div>
         </div>
         <div>
-          <div class="small" style="margin-bottom:8px; font-weight:700" id="ion-label">İyon</div>
+          <div class="small" style="margin-bottom:8px; font-weight:700" id="ion-label">İyon (sen oluştur)</div>
           <div class="readouts" style="grid-template-columns:1fr 1fr">
-            <div class="readout" style="background:var(--surface-2); border-color:var(--line)"><div class="k" style="color:var(--ink-faint)">Elektron Sayısı</div><div class="v" id="ion-ion-e" style="color:var(--ink)">–</div></div>
-            <div class="readout" style="background:var(--surface-2); border-color:var(--line)"><div class="k" style="color:var(--ink-faint)">Kısaltılmış Dizilim</div><div class="v" id="ion-ion-config" style="color:var(--ink); font-size:13px">–</div></div>
+            <div class="readout" style="background:var(--surface-2); border-color:var(--line)"><div class="k" style="color:var(--ink-faint)">Elektron / Hedef</div><div class="v" id="ion-ion-e" style="color:var(--ink)">–</div></div>
+            <div class="readout" style="background:var(--surface-2); border-color:var(--line)"><div class="k" style="color:var(--ink-faint)">Kısaltılmış Dizilim</div><div class="v" id="ion-ion-config" style="color:var(--ink); font-size:13px">?</div></div>
           </div>
           <div class="orbital-diagram" id="ion-ion-diagram" style="margin-top:10px"></div>
+          <div class="btnbar" style="margin-top:10px">
+            <button class="btn small" id="ion-reset">↺ Sıfırla</button>
+          </div>
         </div>
       </div>
       <div id="ion-note" style="margin-top:14px"></div>
@@ -806,6 +809,7 @@
     .filter(el => el.z <= 36 && el.z > 1 && ION_CHARGE_BY_GROUP[el.group] !== undefined)
     .sort((a, b) => a.z - b.z);
 
+  /** Salt-okunur (nötr atom) kutu diyagramı çizer. */
   function renderIonDiagram(hostId, electronCount) {
     const host = document.getElementById(hostId);
     host.innerHTML = "";
@@ -851,32 +855,146 @@
     return `${sym}${supDigits[mag] ?? mag}${charge > 0 ? "⁺" : "⁻"}`;
   }
 
+  // İnteraktif iyon kutu diyagramının durumu.
+  let ionSubshells = [];   // nötr atomun alt kabuk listesi (dolum sırasıyla) — iyon oluştururken bu kabuklar dışına çıkılmaz
+  let ionBoxes = [];       // ionSubshells ile paralel: [{up,down}, ...] her alt kabuk için
+  let ionCharge = 0;
+  let ionTargetElectrons = 0;
+  let ionMistakes = 0;
+
+  function ionTotalElectrons() {
+    return ionBoxes.reduce((s, boxes) => s + boxes.reduce((s2,b) => s2 + (b.up?1:0) + (b.down?1:0), 0), 0);
+  }
+  function ionSubshellFilled(si) {
+    return ionBoxes[si].reduce((s,b) => s + (b.up?1:0) + (b.down?1:0), 0);
+  }
+  function ionHighestOccupiedIdx() {
+    for (let i = ionSubshells.length - 1; i >= 0; i--) if (ionSubshellFilled(i) > 0) return i;
+    return -1;
+  }
+  function ionLowestSubshellWithSpace() {
+    for (let i = 0; i < ionSubshells.length; i++) {
+      const cap = SUBSHELL_ORBITALS[ionSubshells[i].l] * 2;
+      if (ionSubshellFilled(i) < cap) return i;
+    }
+    return -1;
+  }
+
+  function setIonFeedback(kind, html) {
+    const el = document.getElementById("ion-note");
+    el.innerHTML = html ? `<div class="callout ${kind}"><p>${html}</p></div>` : "";
+  }
+
+  function renderIonInteractive() {
+    const host = document.getElementById("ion-ion-diagram");
+    host.innerHTML = "";
+    ionSubshells.forEach((sub, si) => {
+      const orbCount = SUBSHELL_ORBITALS[sub.l];
+      const row = document.createElement("div");
+      row.className = "orb-shell";
+      const label = document.createElement("div");
+      label.className = "shell-label";
+      label.textContent = sub.label;
+      row.appendChild(label);
+      const group = document.createElement("div");
+      group.className = "orb-group";
+      for (let bi = 0; bi < orbCount; bi++) {
+        const st = ionBoxes[si][bi];
+        const box = document.createElement("div");
+        box.className = "orb-box";
+        if (st.up) { const s = document.createElement("span"); s.className = "arrow up"; s.textContent = "↑"; box.appendChild(s); }
+        if (st.down) { const s = document.createElement("span"); s.className = "arrow down"; s.textContent = "↓"; box.appendChild(s); }
+        box.addEventListener("click", () => attemptIonEdit(si, bi));
+        group.appendChild(box);
+      }
+      row.appendChild(group);
+      host.appendChild(row);
+    });
+    document.getElementById("ion-ion-e").textContent = `${ionTotalElectrons()} / ${ionTargetElectrons}`;
+  }
+
+  function attemptIonEdit(si, bi) {
+    const box = ionBoxes[si][bi];
+    const total = ionTotalElectrons();
+    if (ionCharge > 0) {
+      // Katyon: elektron çıkarma modu — yalnızca en yüksek enerjili dolu alt kabuktan çıkarılabilir.
+      if (total <= ionTargetElectrons) { setIonFeedback("concept", "Hedef elektron sayısına zaten ulaştın."); return; }
+      if (!box.up && !box.down) { setIonFeedback("concept", "Bu kutu zaten boş."); return; }
+      const hIdx = ionHighestOccupiedIdx();
+      if (si !== hIdx) {
+        ionMistakes++;
+        setIonFeedback("concept", `⚠️ Önce en yüksek enerjili dolu alt kabuktan (<strong>${ionSubshells[hIdx].label}</strong>) elektron çıkarmalısın.`);
+        return;
+      }
+      if (box.down) box.down = false; else box.up = false;
+    } else {
+      // Anyon: elektron ekleme modu — Aufbau, Hund ve Pauli ilkeleri geçerli.
+      if (total >= ionTargetElectrons) { setIonFeedback("concept", "Hedef elektron sayısına zaten ulaştın."); return; }
+      if (box.up && box.down) { setIonFeedback("concept", "⚠️ <strong>Pauli dışlama ilkesi:</strong> bu kutu zaten dolu."); return; }
+      const lowIdx = ionLowestSubshellWithSpace();
+      if (si !== lowIdx) {
+        ionMistakes++;
+        setIonFeedback("concept", `⚠️ <strong>Aufbau ilkesi:</strong> önce daha düşük enerjili alt kabuğu (<strong>${ionSubshells[lowIdx].label}</strong>) tamamen doldurmalısın.`);
+        return;
+      }
+      const boxEmpty = !box.up && !box.down;
+      if (!boxEmpty) {
+        const hasEmptySibling = ionBoxes[si].some((b, i) => i !== bi && !b.up && !b.down);
+        if (hasEmptySibling) {
+          ionMistakes++;
+          setIonFeedback("concept", `⚠️ <strong>Hund kuralı:</strong> aynı alt kabukta boş kutu kalmışken eşleme yapamazsın.`);
+          return;
+        }
+      }
+      if (!box.up) box.up = true; else box.down = true;
+    }
+    renderIonInteractive();
+    checkIonComplete();
+  }
+
+  function checkIonComplete() {
+    const total = ionTotalElectrons();
+    const el = EL_BY_Z[+ionPick.value];
+    const ionSym = ionNotation(el.sym, ionCharge);
+    if (total !== ionTargetElectrons) { setIonFeedback("", ""); return; }
+    document.getElementById("ion-ion-config").textContent = nobleGasShorthand(ionTargetElectrons);
+    let note = `<h5>✅ ${el.sym} → ${ionSym}</h5><p><strong>${el.name}</strong>, ${ionSym} iyonunu doğru oluşturdun (${el.z} → ${ionTargetElectrons} elektron).`;
+    if (NOBLE_Z.has(ionTargetElectrons)) {
+      const nobleName = EL_BY_Z[ionTargetElectrons] ? EL_BY_Z[ionTargetElectrons].name : "";
+      note += ` Bu elektron dizilimi, en yakın soy gaz olan <strong>${nobleName}</strong> ile birebir aynıdır — yani ${ionSym} soy gaz elektron dizilimine ulaşarak kararlı hâle gelir.`;
+    }
+    note += ionMistakes === 0 ? ` Hiç kural hatası yapmadan bitirdin, tebrikler!` : ` Bu denemede ${ionMistakes} kural hatası yaptın.`;
+    note += `</p>`;
+    setIonFeedback("real", note);
+  }
+
   function refreshIon() {
     const z = +ionPick.value;
     const el = EL_BY_Z[z];
-    const charge = ION_CHARGE_BY_GROUP[el.group];
-    const ionElectrons = z - charge;
-    const ionSym = ionNotation(el.sym, charge);
+    ionCharge = ION_CHARGE_BY_GROUP[el.group];
+    ionTargetElectrons = z - ionCharge;
+    ionMistakes = 0;
 
     document.getElementById("ion-neutral-e").textContent = z;
     document.getElementById("ion-neutral-config").textContent = nobleGasShorthand(z);
     renderIonDiagram("ion-neutral-diagram", z);
 
-    document.getElementById("ion-label").textContent = `İyon (${ionSym})`;
-    document.getElementById("ion-ion-e").textContent = ionElectrons;
-    document.getElementById("ion-ion-config").textContent = nobleGasShorthand(ionElectrons);
-    renderIonDiagram("ion-ion-diagram", ionElectrons);
+    document.getElementById("ion-label").textContent = `İyon (${ionNotation(el.sym, ionCharge)}) — sen oluştur`;
+    document.getElementById("ion-ion-config").textContent = "?";
 
-    const verb = charge > 0 ? `${charge} elektron vererek` : `${Math.abs(charge)} elektron alarak`;
-    let note = `<div class="callout real"><h5>${el.sym} → ${ionSym}</h5><p><strong>${el.name}</strong>, ${verb} ${ionSym} iyonuna dönüşür (${z} → ${ionElectrons} elektron).`;
-    if (NOBLE_Z.has(ionElectrons)) {
-      const nobleName = EL_BY_Z[ionElectrons] ? EL_BY_Z[ionElectrons].name : "";
-      note += ` Bu elektron dizilimi, en yakın soy gaz olan <strong>${nobleName}</strong> ile birebir aynıdır — yani ${ionSym} soy gaz elektron dizilimine ulaşarak kararlı hâle gelir.`;
-    }
-    note += `</p></div>`;
-    document.getElementById("ion-note").innerHTML = note;
+    // İyon kutuları, nötr atomun aynı alt kabuk yapısıyla başlar (kaynak: verilen nötr atom).
+    ionSubshells = toConventionalOrder(buildConfig(z));
+    ionBoxes = ionSubshells.map(sub => {
+      const orbCount = SUBSHELL_ORBITALS[sub.l];
+      const filled = fillBoxes(orbCount, sub.count);
+      return filled.map(arrows => ({ up: arrows.includes("up"), down: arrows.includes("down") }));
+    });
+    renderIonInteractive();
+    const verb = ionCharge > 0 ? `${ionCharge} elektron çıkararak` : `${Math.abs(ionCharge)} elektron ekleyerek`;
+    setIonFeedback("model", `${el.name} (${el.sym}), ${verb} ${ionNotation(el.sym, ionCharge)} iyonuna dönüşür. Sağdaki kutulara tıklayıp iyonu sen oluştur.`);
   }
   ionPick.addEventListener("change", refreshIon);
+  document.getElementById("ion-reset").addEventListener("click", refreshIon);
   refreshIon();
 </script>
 </body>
