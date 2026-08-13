@@ -148,7 +148,7 @@
     <div class="section-head">
       <span class="eyebrow">🔍 Keşfet</span>
       <h2>Şimdi Kuralına Göre Diz: Elektron Dizilimi Simülatörü</h2>
-      <p>Bir element seç; Aufbau ilkesine göre dolum sırasını ve orbital kutu diyagramını incele.</p>
+      <p>Bir element seç, sonra elektronları orbital kutularına <strong>kendin</strong> yerleştir. Aufbau, Hund veya Pauli ilkesine aykırı bir yerleştirme denersen uygulama seni uyaracak.</p>
     </div>
     <div class="card">
       <div class="controls" style="grid-template-columns:1fr; max-width:360px">
@@ -159,12 +159,26 @@
       </div>
       <div class="readouts" style="grid-template-columns:repeat(3,1fr); margin-top:10px">
         <div class="readout" style="background:var(--surface-2); border-color:var(--line)"><div class="k" style="color:var(--ink-faint)">Element</div><div class="v" id="el-name" style="color:var(--ink)">–</div></div>
-        <div class="readout" style="background:var(--surface-2); border-color:var(--line)"><div class="k" style="color:var(--ink-faint)">Elektron Dizilimi</div><div class="v" id="el-config" style="color:var(--ink); font-size:14px">–</div></div>
-        <div class="readout" style="background:var(--surface-2); border-color:var(--line)"><div class="k" style="color:var(--ink-faint)">Kısaltılmış (Soy Gaz)</div><div class="v" id="el-short" style="color:var(--ink); font-size:14px">–</div></div>
+        <div class="readout" style="background:var(--surface-2); border-color:var(--line)"><div class="k" style="color:var(--ink-faint)">Yerleştirilen / Toplam Elektron</div><div class="v" id="el-progress" style="color:var(--ink)">0 / 0</div></div>
+        <div class="readout" style="background:var(--surface-2); border-color:var(--line)"><div class="k" style="color:var(--ink-faint)">Kural Hatası Sayısı</div><div class="v" id="el-mistakes" style="color:var(--ink)">0</div></div>
+      </div>
+      <div class="btnbar" style="margin-top:14px">
+        <span class="small" style="align-self:center">Yerleştirilecek elektronun spini:</span>
+        <button class="btn small active" id="spin-up" data-spin="up">↑ Yukarı Spin</button>
+        <button class="btn small" id="spin-down" data-spin="down">↓ Aşağı Spin</button>
       </div>
       <div style="margin-top:18px">
-        <div class="small" style="margin-bottom:8px">Orbital Kutu Diyagramı (Hund kuralı + Pauli dışlama ilkesi)</div>
+        <div class="small" style="margin-bottom:8px">Orbital Kutu Diyagramı — kutulara tıklayarak elektron yerleştir</div>
         <div class="orbital-diagram" id="orbital-diagram"></div>
+      </div>
+      <div id="orbital-feedback" style="margin-top:14px"></div>
+      <div class="btnbar" style="margin-top:14px">
+        <button class="btn" id="orbital-reset">↺ Sıfırla</button>
+        <button class="btn" id="orbital-reveal">👁 Doğru Cevabı Göster</button>
+      </div>
+      <div class="readouts" style="grid-template-columns:repeat(2,1fr); margin-top:10px" id="orbital-answer-box" hidden>
+        <div class="readout" style="background:var(--surface-2); border-color:var(--line)"><div class="k" style="color:var(--ink-faint)">Elektron Dizilimi</div><div class="v" id="el-config" style="color:var(--ink); font-size:14px">–</div></div>
+        <div class="readout" style="background:var(--surface-2); border-color:var(--line)"><div class="k" style="color:var(--ink-faint)">Kısaltılmış (Soy Gaz)</div><div class="v" id="el-short" style="color:var(--ink); font-size:14px">–</div></div>
       </div>
     </div>
   </div>
@@ -177,9 +191,10 @@
       <div class="mission">
         <div class="m-title">Görev</div>
         <ol>
-          <li>Z=7 (N) için 2p orbitallerindeki 3 elektronun neden hepsi aynı yönde (tek tek) yerleştiğini simülatörden gözlemle.</li>
-          <li>Z=8 (O) için 2p orbitallerinden birinde neden eşleşme başladığını gözlemle. Bu, Hund kuralının hangi ifadesiyle açıklanır?</li>
-          <li>Z=24 (Cr) ve Z=29 (Cu) elementlerinde gözlenen elektron diziliminin, saf Aufbau ilkesinin beklediğinden neden farklı olabileceğini araştır (ipucu: yarı dolu/tam dolu orbitallerin ekstra kararlılığı).</li>
+          <li>Z=7 (N) seç ve 3 elektronu 2p kutularına kendin yerleştir. Önce üçünü de tek tek ayrı kutulara mı, yoksa ikisini aynı kutuya mı koyacağını tahmin et, sonra dene — yanlış sıraya göre eşlemeyi bilerek dener misin? Uygulama sana ne uyarısı verir?</li>
+          <li>Z=8 (O) seç; 4. elektronu yerleştirirken artık eşleşme yapman gerektiğini fark edeceksin. Bu, Hund kuralının hangi ifadesiyle açıklanır?</li>
+          <li>Bilerek 2s dolmadan önce 2p'ye elektron koymayı dene. Uygulama hangi ilkeyi hatırlatıyor?</li>
+          <li>Z=24 (Cr) ve Z=29 (Cu) elementlerini kendin doldur. Beklediğin 4s²3d⁴ / 4s²3d⁹ yerine hangi dizilimi tamamlaman gerekti? Bunun nedenini araştır (ipucu: yarı dolu/tam dolu orbitallerin ekstra kararlılığı).</li>
         </ol>
       </div>
       <div class="journal">
@@ -453,7 +468,8 @@
 
   const SUBSHELL_ORBITALS = { s:1, p:3, d:5, f:7 };
 
-  /** Hund kuralına göre kutulara ok dağıtır: önce her kutuya bir "up" ok, sonra kalanlara "down". */
+  /** Hund kuralına göre kutulara ok dağıtır: önce her kutuya bir "up" ok, sonra kalanlara "down".
+   * "Doğru Cevabı Göster" ve iç doğrulama için kullanılır. */
   function fillBoxes(orbitalCount, electronCount) {
     const boxes = Array.from({length: orbitalCount}, () => []);
     let remaining = electronCount;
@@ -463,25 +479,30 @@
   }
 
   let zpickVal = 7;
-  function refresh() {
-    const z = zpickVal;
-    document.getElementById("zpick-out").textContent = z;
-    const el = EL_BY_Z[z];
-    document.getElementById("el-name").textContent = `${el.sym} · ${el.name} (Z=${z})`;
-    document.getElementById("el-config").textContent = configString(z);
-    document.getElementById("el-short").textContent = nobleGasShorthand(z);
+  let currentSpin = "up";
+  let mistakeCount = 0;
+  let targetSubshells = [];  // [{n,l,label,count(=hedef),cap}], dolum sırası (Aufbau) ile
+  let studentState = [];     // targetSubshells ile paralel: [{up,down}, ...] her alt kabuk için
 
-    const filled = buildConfig(z);
-    const ordered = toConventionalOrder(filled);
-    const lastSub = filled[filled.length - 1];
-    const L_TO_3D_KEY = { s: "2s", p: "2pz", d: "3dz2" };
-    if (lastSub && L_TO_3D_KEY[lastSub.l]) selectOrbital3d(L_TO_3D_KEY[lastSub.l]);
+  function totalPlaced() {
+    return studentState.reduce((sum, boxes) => sum + boxes.reduce((s,b) => s + (b.up?1:0) + (b.down?1:0), 0), 0);
+  }
+  function subshellFull(si) {
+    const cap = SUBSHELL_ORBITALS[targetSubshells[si].l] * 2;
+    const filled = studentState[si].reduce((s,b) => s + (b.up?1:0) + (b.down?1:0), 0);
+    return filled >= cap;
+  }
 
+  function setFeedback(kind, html) {
+    const el = document.getElementById("orbital-feedback");
+    el.innerHTML = html ? `<div class="callout ${kind}"><p>${html}</p></div>` : "";
+  }
+
+  function renderDiagram() {
     const host = document.getElementById("orbital-diagram");
     host.innerHTML = "";
-    ordered.forEach(sub => {
+    targetSubshells.forEach((sub, si) => {
       const orbCount = SUBSHELL_ORBITALS[sub.l];
-      const boxes = fillBoxes(orbCount, sub.count);
       const row = document.createElement("div");
       row.className = "orb-shell";
       const label = document.createElement("div");
@@ -490,20 +511,125 @@
       row.appendChild(label);
       const group = document.createElement("div");
       group.className = "orb-group";
-      boxes.forEach(arrows => {
+      for (let bi = 0; bi < orbCount; bi++) {
+        const boxState = studentState[si][bi];
         const box = document.createElement("div");
         box.className = "orb-box";
-        arrows.forEach(dir => {
-          const span = document.createElement("span");
-          span.className = "arrow " + dir;
-          span.textContent = dir === "up" ? "↑" : "↓";
-          box.appendChild(span);
-        });
+        box.dataset.si = si;
+        box.dataset.bi = bi;
+        if (boxState.up) { const s = document.createElement("span"); s.className = "arrow up"; s.textContent = "↑"; box.appendChild(s); }
+        if (boxState.down) { const s = document.createElement("span"); s.className = "arrow down"; s.textContent = "↓"; box.appendChild(s); }
+        box.addEventListener("click", () => attemptPlace(si, bi));
         group.appendChild(box);
-      });
+      }
       row.appendChild(group);
       host.appendChild(row);
     });
+    document.getElementById("el-progress").textContent = `${totalPlaced()} / ${zpickVal}`;
+    document.getElementById("el-mistakes").textContent = mistakeCount;
+  }
+
+  function attemptPlace(si, bi) {
+    if (totalPlaced() >= zpickVal) {
+      setFeedback("concept", "Bu element için gereken tüm elektronlar zaten yerleştirildi. Yeni bir element denemek için Z değerini değiştir veya sıfırla.");
+      return;
+    }
+    const box = studentState[si][bi];
+    if (box.up && box.down) {
+      mistakeCount++;
+      setFeedback("concept", "⚠️ <strong>Pauli dışlama ilkesi:</strong> bu kutu zaten dolu — bir orbitalde en fazla 2 elektron bulunabilir.");
+      renderDiagram();
+      return;
+    }
+    if ((currentSpin === "up" && box.up) || (currentSpin === "down" && box.down)) {
+      mistakeCount++;
+      setFeedback("concept", "⚠️ <strong>Pauli dışlama ilkesi:</strong> aynı orbitaldeki iki elektron aynı spine sahip olamaz. Diğer spini seçip tekrar dene.");
+      renderDiagram();
+      return;
+    }
+    const boxEmpty = !box.up && !box.down;
+    if (boxEmpty) {
+      // Aufbau: bu alt kabuktan önceki tüm alt kabuklar tam dolu olmalı.
+      for (let sj = 0; sj < si; sj++) {
+        if (!subshellFull(sj)) {
+          mistakeCount++;
+          setFeedback("concept", `⚠️ <strong>Aufbau ilkesi:</strong> ${targetSubshells[si].label} orbitaline geçmeden önce ${targetSubshells[sj].label} orbitali tamamen dolmalı (düşük enerjili orbitaller önce dolar).`);
+          renderDiagram();
+          return;
+        }
+      }
+    } else {
+      // Eşleme (pairing): aynı alt kabukta boş kutu kalmışsa Hund kuralı ihlal edilir.
+      const hasEmptySibling = studentState[si].some((b, i) => i !== bi && !b.up && !b.down);
+      if (hasEmptySibling) {
+        mistakeCount++;
+        setFeedback("concept", `⚠️ <strong>Hund kuralı:</strong> aynı enerjideki (${targetSubshells[si].label}) orbitallerin hepsine birer elektron yerleştirmeden eşleme yapılamaz. Boş kutu kalmışken bu kutuyu eşleme.`);
+        renderDiagram();
+        return;
+      }
+    }
+    if (currentSpin === "up") box.up = true; else box.down = true;
+    const placed = totalPlaced();
+    if (placed >= zpickVal) {
+      setFeedback("real", `✅ <strong>Doğru!</strong> ${EL_BY_Z[zpickVal].name} (Z=${zpickVal}) için elektron dizilimini kurallara uygun biçimde tamamladın. ${mistakeCount === 0 ? "Hiç kural hatası yapmadan bitirdin, tebrikler!" : `Bu denemede ${mistakeCount} kural hatası yaptın.`}`);
+      revealAnswer();
+    } else {
+      setFeedback("", "");
+    }
+    renderDiagram();
+  }
+
+  function revealAnswer() {
+    document.getElementById("el-config").textContent = configString(zpickVal);
+    document.getElementById("el-short").textContent = nobleGasShorthand(zpickVal);
+    document.getElementById("orbital-answer-box").hidden = false;
+  }
+
+  document.getElementById("spin-up").addEventListener("click", (e) => {
+    currentSpin = "up";
+    e.currentTarget.classList.add("active");
+    document.getElementById("spin-down").classList.remove("active");
+  });
+  document.getElementById("spin-down").addEventListener("click", (e) => {
+    currentSpin = "down";
+    e.currentTarget.classList.add("active");
+    document.getElementById("spin-up").classList.remove("active");
+  });
+  document.getElementById("orbital-reset").addEventListener("click", () => {
+    mistakeCount = 0;
+    studentState = targetSubshells.map(sub => Array.from({length: SUBSHELL_ORBITALS[sub.l]}, () => ({up:false, down:false})));
+    document.getElementById("orbital-answer-box").hidden = true;
+    setFeedback("", "");
+    renderDiagram();
+  });
+  document.getElementById("orbital-reveal").addEventListener("click", () => {
+    targetSubshells.forEach((sub, si) => {
+      const orbCount = SUBSHELL_ORBITALS[sub.l];
+      const boxes = fillBoxes(orbCount, sub.count);
+      studentState[si] = boxes.map(arrows => ({ up: arrows.includes("up"), down: arrows.includes("down") }));
+    });
+    revealAnswer();
+    setFeedback("", "");
+    renderDiagram();
+  });
+
+  function refresh() {
+    const z = zpickVal;
+    document.getElementById("zpick-out").textContent = z;
+    const el = EL_BY_Z[z];
+    document.getElementById("el-name").textContent = `${el.sym} · ${el.name} (Z=${z})`;
+    document.getElementById("orbital-answer-box").hidden = true;
+    mistakeCount = 0;
+    setFeedback("", "");
+
+    const filled = buildConfig(z);
+    targetSubshells = toConventionalOrder(filled);
+    studentState = targetSubshells.map(sub => Array.from({length: SUBSHELL_ORBITALS[sub.l]}, () => ({up:false, down:false})));
+    const lastSub = filled[filled.length - 1];
+    const L_TO_3D_KEY = { s: "2s", p: "2pz", d: "3dz2" };
+    if (lastSub && L_TO_3D_KEY[lastSub.l]) selectOrbital3d(L_TO_3D_KEY[lastSub.l]);
+
+    renderDiagram();
   }
   document.getElementById("zpick-plus").addEventListener("click", () => { zpickVal = Math.min(36, zpickVal + 1); refresh(); });
   document.getElementById("zpick-minus").addEventListener("click", () => { zpickVal = Math.max(1, zpickVal - 1); refresh(); });
