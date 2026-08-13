@@ -13,6 +13,28 @@
   .bar .val{ position:absolute; top:-20px; left:0; right:0; text-align:center; font-family:var(--mono); font-size:11px; color:#f1eeff; }
   .bar-label{ margin-top:8px; font-size:12px; font-weight:700; color:#c7bfe6; text-align:center; }
   .bar-sub{ font-size:10px; color:#8a80b3; }
+  .bar.group2a{ outline:2px solid #ffd166; outline-offset:2px; }
+  .bar.group5a{ outline:2px solid #c792ff; outline-offset:2px; }
+
+  .trend-picker{ display:flex; gap:10px; flex-wrap:wrap; }
+  .trend-card{
+    width:92px; padding:10px 8px; border-radius:12px; background:var(--lab-glass); border:2px solid var(--lab-line);
+    text-align:center; transition:.15s;
+  }
+  .trend-card.group2a{ border-color:#ffd166; }
+  .trend-card.group5a{ border-color:#c792ff; }
+  .trend-card .tc-sym{ font-family:var(--mono); font-weight:800; font-size:16px; color:#f1eeff; }
+  .trend-card .tc-z{ font-size:10px; color:#8a80b3; }
+  .trend-card .tc-val{ margin-top:6px; font-family:var(--mono); font-size:12px; font-weight:700; color:var(--heat); min-height:15px; }
+  .trend-card.locked{ opacity:.4; }
+  .trend-card.active{ cursor:pointer; border-color:var(--gas); box-shadow:0 0 0 3px rgba(109,91,255,.2); }
+  .trend-card.active:hover{ background:rgba(109,91,255,.14); }
+  .trend-card.active .tc-val{ color:#fff; font-weight:800; }
+  .trend-card.done .tc-val{ color:var(--good); }
+  .trend-card .tc-btn{
+    margin-top:6px; font-size:10.5px; font-weight:800; padding:3px 8px; border-radius:999px;
+    background:var(--gas); color:#fff; display:inline-block;
+  }
 </style>
 </head>
 <body>
@@ -39,8 +61,8 @@
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">🔍 Keşfet</span>
-      <h2>Trend Görselleştirici</h2>
-      <p>Bir özellik ve bir periyot/grup seç; eğilimi grafikte gözlemle.</p>
+      <h2>Trend Görselleştirici: Grafiği Kendin Oluştur</h2>
+      <p>Bir özellik ve bir periyot/grup seç. Elementlere <strong>sırayla</strong> tıkla, değerini keşfet — grafik, sen keşfettikçe kendiliğinden oluşacak.</p>
     </div>
     <div class="card">
       <div class="controls" style="grid-template-columns:1fr 1fr; display:grid; max-width:640px">
@@ -58,10 +80,15 @@
         </div>
       </div>
       <div class="lab-panel" style="margin-top:16px">
-        <div class="lab-head"><div class="lab-title"><span class="dot"></span> <span id="chart-title">Grafik</span></div></div>
-        <div class="bars" id="bars"></div>
+        <div class="lab-head">
+          <div class="lab-title"><span class="dot"></span> <span id="chart-title">Grafik</span></div>
+          <button class="btn on-dark small" id="trend-reset">↺ Sıfırla</button>
+        </div>
+        <div class="trend-picker" id="trend-picker"></div>
+        <div class="bars" id="bars" style="margin-top:18px"></div>
       </div>
       <div class="callout model" style="margin-top:14px" id="trend-note"></div>
+      <div class="small" style="color:var(--ink-faint); margin-top:8px">🟡 çerçeveli kutular 2A, 🟣 çerçeveli kutular 5A grubu elementleridir — tam/yarı dolu alt kabuğun getirdiği ekstra kararlılık nedeniyle bu elementlerin değerleri komşularından sapabilir.</div>
     </div>
   </div>
 </section>
@@ -93,6 +120,7 @@
         </ol>
       </div>
       <div class="chiprow" id="ion-pairs" style="margin-top:10px"></div>
+      <p style="color:#c7bfe6; font-size:13px; margin-top:12px">Elektronun tam olarak hangi orbitalden ayrıldığını ya da hangi orbitale eklendiğini görmek ister misin? Modül 6'daki <a href="06-orbitaller-elektron-dizilimi.html#" style="color:var(--gas)">Anyon ve Katyon Elektron Dizilimi</a> uygulamasında, aynı bu atom→iyon çiftlerinin orbital kutu diyagramlarını yan yana karşılaştırabilirsin.</p>
       <div class="journal">
         <label>📓 Keşif Günlüğü — gözlemlerin</label>
         <textarea id="journal8" placeholder="Örn: Na atomu Na+ iyonuna dönüşünce küçülür çünkü..."></textarea>
@@ -159,37 +187,99 @@
   seriesPick.innerHTML = Object.entries(SERIES).map(([k,s]) => `<option value="${k}">${s.label}</option>`).join("");
   const propPick = document.getElementById("prop-pick");
 
-  function renderChart() {
-    const propKey = propPick.value;
-    const seriesKey = seriesPick.value;
-    const series = SERIES[seriesKey];
-    const meta = PROP_META[propKey];
-    const propNames = { r:"Atom Yarıçapı", ie:"1. İyonlaşma Enerjisi", en:"Elektronegatiflik" };
-    document.getElementById("chart-title").textContent = `${propNames[propKey]} — ${series.label}`;
+  const PROP_NAMES = { r:"Atom Yarıçapı", ie:"1. İyonlaşma Enerjisi", en:"Elektronegatiflik" };
+  const PROP_ICON = { r:"📏", ie:"⚡", en:"🧲" };
+  const PROP_ACTION = { r:"Ölç", ie:"Kopar", en:"Çek" };
 
-    const values = series.zs.map(z => PROPS[z] ? PROPS[z][propKey] : null);
-    const maxV = Math.max(...values.filter(v => v !== null && v !== undefined), 1);
+  let trendRevealed = [];
+
+  function groupClass(z) {
+    const g = EL_BY_Z[z].group;
+    if (g === 2) return "group2a";
+    if (g === 15) return "group5a";
+    return "";
+  }
+
+  function renderTrendPicker() {
+    const series = SERIES[seriesPick.value];
+    const propKey = propPick.value;
+    const picker = document.getElementById("trend-picker");
+    const nextIdx = trendRevealed.findIndex(r => !r);
+    picker.innerHTML = series.zs.map((z, i) => {
+      const el = EL_BY_Z[z];
+      const done = trendRevealed[i];
+      const isActive = i === nextIdx;
+      const state = done ? "done" : (isActive ? "active" : "locked");
+      const v = done && PROPS[z] ? PROPS[z][propKey] : null;
+      return `
+        <div class="trend-card ${state} ${groupClass(z)}" data-idx="${i}">
+          <div class="tc-sym">${el.sym}</div>
+          <div class="tc-z">Z=${z}</div>
+          <div class="tc-val">${done ? (v == null ? "—" : v) : (isActive ? "?" : "")}</div>
+          ${isActive ? `<div class="tc-btn">${PROP_ICON[propKey]} ${PROP_ACTION[propKey]}</div>` : ""}
+        </div>
+      `;
+    }).join("");
+    picker.querySelectorAll(".trend-card.active").forEach(card => {
+      card.addEventListener("click", () => revealTrend(+card.dataset.idx));
+    });
+  }
+
+  function renderTrendBars() {
+    const series = SERIES[seriesPick.value];
+    const propKey = propPick.value;
+    const values = series.zs.map((z, i) => (trendRevealed[i] && PROPS[z]) ? PROPS[z][propKey] : null);
+    const known = values.filter(v => v !== null && v !== undefined);
+    const maxV = Math.max(...known, 1);
     const bars = document.getElementById("bars");
-    bars.innerHTML = series.zs.map((z,i) => {
+    bars.innerHTML = series.zs.map((z, i) => {
       const el = EL_BY_Z[z];
       const v = values[i];
       const h = (v == null) ? 4 : Math.max(6, (v / maxV) * 190);
       return `
         <div class="bar-col">
-          <div class="bar" style="height:${h}px; ${v==null?"background:#362f63":""}">
-            <span class="val">${v == null ? "—" : v}</span>
+          <div class="bar ${groupClass(z)}" style="height:${h}px; ${v==null?"background:#241f47":""}">
+            ${v != null ? `<span class="val">${v}</span>` : ""}
           </div>
           <div class="bar-label">${el.sym}<div class="bar-sub">Z=${z}</div></div>
         </div>
       `;
     }).join("");
-
-    const trend = series.dir === "periyot" ? meta.trendPeriyot : meta.trendGrup;
-    document.getElementById("trend-note").innerHTML = `<h5>Eğilim</h5><p>${propNames[propKey]}, bu ${series.dir === "periyot" ? "periyotta soldan sağa gidildikçe" : "grupta yukarıdan aşağıya inildikçe"} <strong>${trend}</strong>.</p>`;
   }
-  propPick.addEventListener("input", renderChart);
-  seriesPick.addEventListener("input", renderChart);
-  renderChart();
+
+  function updateTrendNote() {
+    const series = SERIES[seriesPick.value];
+    const propKey = propPick.value;
+    const meta = PROP_META[propKey];
+    const note = document.getElementById("trend-note");
+    const doneCount = trendRevealed.filter(Boolean).length;
+    if (doneCount < series.zs.length) {
+      note.innerHTML = `<h5>Devam Et</h5><p>${doneCount}/${series.zs.length} element keşfedildi. Sıradaki elementin kutusuna tıklayıp "${PROP_ACTION[propKey]}" ile değerini ortaya çıkar.</p>`;
+      return;
+    }
+    const trend = series.dir === "periyot" ? meta.trendPeriyot : meta.trendGrup;
+    note.innerHTML = `<h5>Eğilim — Grafiğini Tamamladın!</h5><p>${PROP_NAMES[propKey]}, bu ${series.dir === "periyot" ? "periyotta soldan sağa gidildikçe" : "grupta yukarıdan aşağıya inildikçe"} <strong>${trend}</strong>.</p>`;
+  }
+
+  function revealTrend(idx) {
+    trendRevealed[idx] = true;
+    renderTrendPicker();
+    renderTrendBars();
+    updateTrendNote();
+  }
+
+  function resetTrend() {
+    const series = SERIES[seriesPick.value];
+    trendRevealed = series.zs.map(() => false);
+    document.getElementById("chart-title").textContent = `${PROP_NAMES[propPick.value]} — ${series.label}`;
+    renderTrendPicker();
+    renderTrendBars();
+    updateTrendNote();
+  }
+  propPick.addEventListener("input", resetTrend);
+  seriesPick.addEventListener("input", resetTrend);
+  document.getElementById("trend-reset").addEventListener("click", resetTrend);
+  resetTrend();
 
   /* ---- Ardışık iyonlaşma enerjisi ---- */
   const SUCCESSIVE = {
