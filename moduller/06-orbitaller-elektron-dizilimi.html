@@ -321,8 +321,8 @@
   renderQuiz(document.getElementById("quiz-host"), QUIZ.orbital, "orbital");
 
   /* ---- Önce Sırala: Orbitalleri Enerjiye Göre Diz ----
-   * Z≤36 müfredat sınırı için Aufbau (n+l kuralı) dolum sırasının
-   * tamamı bu 8 alt kabuktan oluşur. */
+   * Z≤36 müfredat sınırı için Aufbau dolum sırasının tamamı bu 8 alt
+   * kabuktan oluşur. */
   const ENERGY_ORDER = ["1s", "2s", "2p", "3s", "3p", "4s", "3d", "4p"];
   let energyPoolItems = [];
   let energyOrderItems = [];
@@ -370,7 +370,14 @@
       chip.classList.toggle("wrong", energyOrderItems[i] !== ENERGY_ORDER[i]);
     });
     if (correctCount === ENERGY_ORDER.length) {
-      fb.innerHTML = `<div class="callout real"><h5>✅ Doğru!</h5><p>Aufbau ilkesine göre dolum sırası: <strong>${ENERGY_ORDER.join(" < ")}</strong>. Fark ettiysen 4s, 3d'den önce dolar — çünkü (n+l) kuralına göre 4s'nin (4+0=4) enerjisi 3d'nin (3+2=5) enerjisinden düşüktür.</p></div>`;
+      fb.innerHTML = `<div class="callout real"><h5>✅ Doğru!</h5><p>Aufbau ilkesine göre dolum sırası: <strong>${ENERGY_ORDER.join(" < ")}</strong>. Fark ettiysen 4s, 3d'den önce dolar. Bunu ezberlemenin klasik yolu <strong>diyagonal kural</strong> diyagramıdır: alt kabukları katmana (satır) ve türe (sütun: s, p, d) göre bir ızgaraya yaz, sonra sağ üstten sol alta doğru çapraz çizgiler çekip izle — izlediğin sıra tam olarak bu sıradır.</p>
+      <div class="diag-grid">
+        <div class="diag-row"><span class="diag-cell filled">1s<b>1</b></span></div>
+        <div class="diag-row"><span class="diag-cell filled">2s<b>2</b></span><span class="diag-cell filled">2p<b>3</b></span></div>
+        <div class="diag-row"><span class="diag-cell filled">3s<b>4</b></span><span class="diag-cell filled">3p<b>5</b></span><span class="diag-cell filled">3d<b>7</b></span></div>
+        <div class="diag-row"><span class="diag-cell filled">4s<b>6</b></span><span class="diag-cell filled">4p<b>8</b></span></div>
+      </div>
+      </div>`;
     } else {
       fb.innerHTML = `<div class="callout concept"><h5>${correctCount}/${ENERGY_ORDER.length} doğru konumda</h5><p>Yeşil işaretli kutular doğru sırada, kırmızılar değil. Yanlış olanlara tekrar tıklayıp havuza geri alabilir, sonra doğru sırayla yeniden ekleyebilirsin.</p></div>`;
     }

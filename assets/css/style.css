@@ -417,6 +417,19 @@ footer a{ color:var(--gas-dark); text-decoration:none; font-weight:700; }
 .pc-neutron .dot{ background:#9c92c4; }
 .pc-electron .dot{ background:var(--heat); }
 
+/* ---------- Diyagonal kural diyagramı (Aufbau dolum sırası) ---------- */
+.diag-grid{ display:flex; flex-direction:column; gap:6px; margin-top:12px; }
+.diag-row{ display:flex; gap:6px; }
+.diag-cell{
+  position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center;
+  width:54px; height:44px; border-radius:8px; background:var(--surface-2); border:1px solid var(--line);
+  font-family:var(--mono); font-size:12px; font-weight:700; color:var(--ink);
+}
+.diag-cell b{
+  position:absolute; top:-7px; right:-7px; width:18px; height:18px; border-radius:50%;
+  background:var(--gas); color:#fff; font-size:10px; display:flex; align-items:center; justify-content:center;
+}
+
 /* ---------- Kimyasal depolama matrisi ---------- */
 .storage-matrix{ display:inline-grid; gap:3px; }
 .storage-matrix .sm-corner{ width:40px; height:40px; }
