@@ -112,6 +112,19 @@
   table.wk td.center{ text-align:center; }
   table.wk tr:nth-child(even) td:not(.fill){ background:#fafafe; }
 
+  /* ---- Kimyasal depolama matrisi ---- */
+  table.depo-matrix{ border-collapse:collapse; margin:12px auto; font-family:Arial,sans-serif; font-size:10px; }
+  table.depo-matrix th, table.depo-matrix td{ border:1px solid var(--line); width:27px; height:27px; text-align:center; padding:0; }
+  table.depo-matrix th{ background:#f0f1fa; font-size:8.3px; font-weight:700; color:var(--ink-soft); }
+  table.depo-matrix td.ok{ background:#177a44; color:#fff; font-weight:800; }
+  table.depo-matrix td.no{ background:#a83232; color:#fff; font-weight:800; }
+  table.depo-matrix td.caution{ background:#c9a227; color:#2b2200; font-weight:800; }
+  table.depo-matrix td.water{ background:#d9930a; color:#fff; font-weight:800; }
+  .depo-legend{ font-family:Arial,sans-serif; font-size:10px; margin-top:8px; color:var(--ink-soft); }
+  .depo-legend div{ margin-bottom:3px; }
+  .depo-legend .sw{ display:inline-block; width:11px; height:11px; border-radius:2px; margin-right:6px; vertical-align:middle; }
+  .depo-key{ font-family:Arial,sans-serif; font-size:9.5px; color:var(--ink-soft); margin-top:6px; }
+
   /* ---- Elle çizim/işaretleme kutuları ---- */
   .draw-row{ display:flex; gap:10px; flex-wrap:wrap; margin:10px 0; }
   .draw-box{
@@ -531,6 +544,28 @@
   <p>Kimyasal maddeler tarım, ilaç ve temizlik gibi birçok sektörde yaygın kullanılır ancak bu kullanım güvenlik risklerini de beraberinde getirir. Laboratuvarda uyulması gereken temel kurallardan bazıları şunlardır: kimyasal maddeler yakından koklanmaz, tadına bakılmaz; sıvılar pipetle aktarılırken kesinlikle puar kullanılır, asla ağızla çekilmez; asit çözeltisi hazırlanırken asit, baget yardımıyla yavaşça suyun içine dökülür (tersi değil); kimyasal madde cilde/göze temas ederse bölge en az 15 dakika bol suyla yıkanır.</p>
   <p>Kimyasal madde etiketlerinde bulunan sağlık ve güvenlik işaretlerine <b>risk piktogramları</b> denir; bunlar arasında patlayıcı, oksitleyici, zehirli, yanıcı/parlayıcı, korozif, tahriş edici, çevreye zararlı, sağlığa zararlı, gaz ve radyoaktif maddeler piktogramları bulunur. <b>Kimyasal depolama matrisi</b>, hangi maddelerin birlikte depolanabileceğini belirleyen bir plan sistemidir — örneğin su ile temas ettiğinde alevlenen maddeler nemli ortamlardan uzak tutulmalıdır. Çamaşır suyu (NaClO) ile tuz ruhu (HCl) gibi farklı temizlik ürünlerinin karıştırılması, zehirli klor gazı gibi tehlikeli sonuçlar doğurabilir; bu yüzden temizlik ürünleri asla gelişigüzel karıştırılmamalıdır.</p>
 
+  <div style="text-align:center; margin:14px 0">
+    <table class="depo-matrix">
+      <tr><th></th><th>YAN</th><th>PAT</th><th>ZEH</th><th>OKS</th><th>GAZ</th><th>TAH</th><th>SAĞ</th><th>KOR</th><th>ÇEV</th></tr>
+      <tr><th>YAN</th><td class="ok">✓</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="water">!</td><td class="water">!</td><td class="no">✗</td><td class="no">✗</td></tr>
+      <tr><th>PAT</th><td class="no">✗</td><td class="ok">✓</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td></tr>
+      <tr><th>ZEH</th><td class="no">✗</td><td class="no">✗</td><td class="ok">✓</td><td class="no">✗</td><td class="no">✗</td><td class="ok">✓</td><td class="ok">✓</td><td class="no">✗</td><td class="no">✗</td></tr>
+      <tr><th>OKS</th><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="ok">✓</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td></tr>
+      <tr><th>GAZ</th><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="ok">✓</td><td class="caution">!</td><td class="caution">!</td><td class="no">✗</td><td class="no">✗</td></tr>
+      <tr><th>TAH</th><td class="water">!</td><td class="no">✗</td><td class="ok">✓</td><td class="no">✗</td><td class="caution">!</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="no">✗</td></tr>
+      <tr><th>SAĞ</th><td class="water">!</td><td class="no">✗</td><td class="ok">✓</td><td class="no">✗</td><td class="caution">!</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="no">✗</td></tr>
+      <tr><th>KOR</th><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="no">✗</td></tr>
+      <tr><th>ÇEV</th><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="ok">✓</td></tr>
+    </table>
+    <div class="depo-key">YAN: Yanıcı/Parlayıcı · PAT: Patlayıcı · ZEH: Zehirli · OKS: Oksitleyici · GAZ: Gaz · TAH: Tahriş Edici · SAĞ: Sağlık Etkisi · KOR: Korozif · ÇEV: Çevreye Zararlı Maddeler</div>
+    <div class="depo-legend">
+      <div><span class="sw" style="background:#177a44"></span>✓ Birlikte depolanabilir.</div>
+      <div><span class="sw" style="background:#a83232"></span>✗ Birlikte depolanamaz.</div>
+      <div><span class="sw" style="background:#c9a227"></span>! Özel önlemler alınarak birlikte depolanabilir.</div>
+      <div><span class="sw" style="background:#d9930a"></span>! Su ile temas ettiğinde alevlenebilir, gaz çıkaran veya kendiliğinden yanmaya yatkın maddelerle depolanamaz.</div>
+    </div>
+  </div>
+
   <div class="box kavram">
     <div class="lbl">💡 Kavram · Risk Piktogramı</div>
     Kimyasal maddelerin etiketlerinde bulunan, o maddenin taşıdığı tehlike türünü (patlayıcı, zehirli, korozif vb.) sembolle gösteren, sağlık ve güvenlik amaçlı işaret.
@@ -548,7 +583,7 @@
   </div>
 
   <div class="worksheet">
-    <div class="wlbl">📱 Uygulamada Dene — Modül 4 (2 Etkinlik)</div>
+    <div class="wlbl">📱 Uygulamada Dene — Modül 4 (3 Etkinlik)</div>
     <p><b>1) Güvenlik Senaryosu Simülatörü —</b> Uygulamada en az 4 farklı madde kombinasyonunu "karıştır"; sonucu tabloya yaz.</p>
     <table class="wk">
       <tr><th>1. Madde</th><th>2. Madde</th><th>Sonuç (Tehlike var mı? Ne oluşur?)</th></tr>
@@ -564,6 +599,14 @@
       <div class="draw-box"><div class="dcap">Zehirli</div><div class="darea"></div></div>
       <div class="draw-box"><div class="dcap">Radyoaktif Maddeler</div><div class="darea"></div></div>
     </div>
+    <p style="margin-top:12px"><b>3) Kimyasal Depolama Matrisi —</b> Uygulamada en az 4 farklı tehlike sınıfı çiftini seç, tahminini yap ve gerçek cevabı kontrol et; sonucu yukarıdaki tablodan doğrulayarak yaz.</p>
+    <table class="wk">
+      <tr><th>1. Sınıf</th><th>2. Sınıf</th><th>Tahminim</th><th>Gerçek Cevap</th></tr>
+      <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
   </div>
 
   <div class="kavramlar-list">
