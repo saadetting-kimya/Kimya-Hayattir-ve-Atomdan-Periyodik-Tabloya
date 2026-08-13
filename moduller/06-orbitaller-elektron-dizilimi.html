@@ -159,6 +159,27 @@
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">🔍 Keşfet</span>
+      <h2>Önce Sırala: Orbitaller Hangi Sırayla Dolar?</h2>
+      <p>Elektronlar orbitallere enerjilerine göre, en düşükten en yükseğe doğru yerleşir. Aşağıdaki 8 orbitali tıklayarak <strong>artan enerji sırasına</strong> diz — Z≤36 arası tüm elementler için gereken sıralamanın tamamı bu.</p>
+    </div>
+    <div class="card">
+      <div class="small" style="margin-bottom:8px">Havuz — sırayla tıkla (doğru sıraya göre)</div>
+      <div class="dnd-pool" id="energy-pool"></div>
+      <div class="small" style="margin:16px 0 8px">Senin Sıralaman (düşük enerji → yüksek enerji)</div>
+      <div class="dnd-bin" id="energy-order"></div>
+      <div class="btnbar" style="margin-top:14px">
+        <button class="btn" id="energy-check">✓ Kontrol Et</button>
+        <button class="btn" id="energy-reset">↺ Sıfırla</button>
+      </div>
+      <div id="energy-feedback" style="margin-top:14px"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">🔍 Keşfet</span>
       <h2>Şimdi Kuralına Göre Diz: Elektron Dizilimi Simülatörü</h2>
       <p>Bir element seç, sonra elektronları orbital kutularına <strong>kendin</strong> yerleştir. Aufbau, Hund veya Pauli ilkesine aykırı bir yerleştirme denersen uygulama seni uyaracak.</p>
     </div>
@@ -298,6 +319,64 @@
   markVisited("orbital");
   bindJournal(document.getElementById("journal6"), "orbital-1");
   renderQuiz(document.getElementById("quiz-host"), QUIZ.orbital, "orbital");
+
+  /* ---- Önce Sırala: Orbitalleri Enerjiye Göre Diz ----
+   * Z≤36 müfredat sınırı için Aufbau (n+l kuralı) dolum sırasının
+   * tamamı bu 8 alt kabuktan oluşur. */
+  const ENERGY_ORDER = ["1s", "2s", "2p", "3s", "3p", "4s", "3d", "4p"];
+  let energyPoolItems = [];
+  let energyOrderItems = [];
+
+  function renderEnergySort() {
+    const poolEl = document.getElementById("energy-pool");
+    const orderEl = document.getElementById("energy-order");
+    poolEl.innerHTML = energyPoolItems.map(label => `<span class="dnd-chip" data-label="${label}">${label}</span>`).join("");
+    orderEl.innerHTML = energyOrderItems.map((label, i) => `<span class="dnd-chip" data-label="${label}" data-idx="${i}">${i + 1}. ${label}</span>`).join("");
+    poolEl.querySelectorAll(".dnd-chip").forEach(chip => {
+      chip.addEventListener("click", () => {
+        const label = chip.dataset.label;
+        energyPoolItems = energyPoolItems.filter(l => l !== label);
+        energyOrderItems.push(label);
+        renderEnergySort();
+      });
+    });
+    orderEl.querySelectorAll(".dnd-chip").forEach(chip => {
+      chip.addEventListener("click", () => {
+        const idx = +chip.dataset.idx;
+        const [label] = energyOrderItems.splice(idx, 1);
+        energyPoolItems.push(label);
+        renderEnergySort();
+      });
+    });
+  }
+
+  function resetEnergySort() {
+    energyPoolItems = [...ENERGY_ORDER].sort(() => Math.random() - 0.5);
+    energyOrderItems = [];
+    document.getElementById("energy-feedback").innerHTML = "";
+    renderEnergySort();
+  }
+
+  document.getElementById("energy-check").addEventListener("click", () => {
+    const fb = document.getElementById("energy-feedback");
+    if (energyOrderItems.length < ENERGY_ORDER.length) {
+      fb.innerHTML = `<div class="callout concept"><p>Önce havuzdaki 8 orbitalin hepsini sıraya yerleştirmelisin (${energyOrderItems.length}/${ENERGY_ORDER.length}).</p></div>`;
+      return;
+    }
+    const correctCount = energyOrderItems.filter((label, i) => label === ENERGY_ORDER[i]).length;
+    const orderEl = document.getElementById("energy-order");
+    orderEl.querySelectorAll(".dnd-chip").forEach((chip, i) => {
+      chip.classList.toggle("correct", energyOrderItems[i] === ENERGY_ORDER[i]);
+      chip.classList.toggle("wrong", energyOrderItems[i] !== ENERGY_ORDER[i]);
+    });
+    if (correctCount === ENERGY_ORDER.length) {
+      fb.innerHTML = `<div class="callout real"><h5>✅ Doğru!</h5><p>Aufbau ilkesine göre dolum sırası: <strong>${ENERGY_ORDER.join(" < ")}</strong>. Fark ettiysen 4s, 3d'den önce dolar — çünkü (n+l) kuralına göre 4s'nin (4+0=4) enerjisi 3d'nin (3+2=5) enerjisinden düşüktür.</p></div>`;
+    } else {
+      fb.innerHTML = `<div class="callout concept"><h5>${correctCount}/${ENERGY_ORDER.length} doğru konumda</h5><p>Yeşil işaretli kutular doğru sırada, kırmızılar değil. Yanlış olanlara tekrar tıklayıp havuza geri alabilir, sonra doğru sırayla yeniden ekleyebilirsin.</p></div>`;
+    }
+  });
+  document.getElementById("energy-reset").addEventListener("click", resetEnergySort);
+  resetEnergySort();
 
   /* ---- Orbital benzetimi: Uzun Pozlu Fotoğraf ---- */
   const expoCanvas = document.getElementById("expo-canvas");

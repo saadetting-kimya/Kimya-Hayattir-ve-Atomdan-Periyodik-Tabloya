@@ -487,7 +487,7 @@ footer a{ color:var(--gas-dark); text-decoration:none; font-weight:700; }
 }
 .dnd-bin.over{ border-color:var(--gas); background:rgba(109,91,255,.06); }
 .dnd-bin .bin-label{ flex:0 0 auto; color:var(--ink-faint); font-size:11px; text-transform:uppercase; letter-spacing:.04em; }
-.dnd-bin .dnd-chip.correct{ background:rgba(47,191,110,.14); border-color:var(--good); }
+.dnd-bin .dnd-chip.correct{ background:rgba(47,191,110,.14); border-color:var(--good); color:var(--good); }
 
 /* ---------- +/- Sayaç (stepper) ---------- */
 .stepper{ display:flex; align-items:center; gap:12px; }
@@ -546,4 +546,4 @@ footer a{ color:var(--gas-dark); text-decoration:none; font-weight:700; }
 .orbital3d-legend{ display:flex; gap:16px; margin-top:10px; font-size:11.5px; color:#a199c9; }
 .orbital3d-legend .lg{ display:flex; align-items:center; gap:6px; }
 .orbital3d-legend .sw{ width:13px; height:13px; border-radius:4px; }
-.dnd-bin .dnd-chip.wrong{ background:rgba(229,72,77,.14); border-color:var(--bad); }
+.dnd-bin .dnd-chip.wrong{ background:rgba(229,72,77,.14); border-color:var(--bad); color:var(--bad); }
