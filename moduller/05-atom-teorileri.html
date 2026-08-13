@@ -91,7 +91,7 @@
       <div class="lab-panel">
         <div class="lab-head">
           <div class="lab-title"><span class="dot"></span> Hidrojen Deşarj Tüpü</div>
-          <span class="lab-hint">seviye seç, ışınla</span>
+          <span class="lab-hint">seviye seç, soğur, ışınla</span>
         </div>
         <div class="stage" id="bohr-stage" style="aspect-ratio:16/12"></div>
         <div style="display:flex; gap:8px; margin-top:10px">
@@ -109,7 +109,8 @@
           </div>
         </div>
         <div class="btnbar">
-          <button class="btn primary" id="bohr-emit">✨ Işınla (Elektronu Düşür)</button>
+          <button class="btn on-dark" id="bohr-absorb">🌞 Soğur (Enerji Ver → Uyarılma)</button>
+          <button class="btn primary" id="bohr-emit" disabled>✨ Işınla (Elektronu Düşür)</button>
           <button class="btn" id="bohr-reset">↺ Spektrumu Sıfırla</button>
         </div>
       </div>
@@ -134,13 +135,13 @@
       <div class="mission">
         <div class="m-title">Görev 1 — Balmer Serisini Tamamla</div>
         <ol>
-          <li>n=3→2, n=4→2, n=5→2 ve n=6→2 geçişlerinin hepsini sırayla ışınla. Dördü de görünür bölgede mi? Enerji seviyesi arttıkça çizgiler birbirine nasıl yaklaşıyor?</li>
+          <li>n=3→2, n=4→2, n=5→2 ve n=6→2 geçişlerinin hepsinde önce "Soğur" ile elektronu uyar, sonra "Işınla" ile bırak — sırayla dördünü de dene. Dördü de görünür bölgede mi? Enerji seviyesi arttıkça çizgiler birbirine nasıl yaklaşıyor?</li>
         </ol>
       </div>
       <div class="mission">
         <div class="m-title">Görev 2 — Lyman ve Paschen Serileri</div>
         <ol>
-          <li>n=2→1 geçişini dene (Lyman serisi). Spektrumda görünür bir çizgi oluşuyor mu? Neden?</li>
+          <li>n=2→1 geçişini dene (önce soğur, sonra ışınla — Lyman serisi). Spektrumda görünür bir çizgi oluşuyor mu? Neden?</li>
           <li>n=4→3 geçişini dene (Paschen serisi, kızılötesi). Sonucu Balmer serisiyle karşılaştır.</li>
         </ol>
       </div>
@@ -419,6 +420,7 @@
   function ringR(n) { return 16 + (n-1)*15; }
 
   let lastEmit = null; // { nh, nl, lambda, visible }
+  let electronN = bohrState.nl; // elektronun ŞU AN bulunduğu seviye — önce soğurma (uyarılma), sonra emisyon sırasını zorunlu kılar
 
   function gapColor(lambda, visible) { return visible ? wavelengthToRGB(lambda) : "#5a5578"; }
 
@@ -434,8 +436,12 @@
     }
     const infLbl = svgEl("text", { x:B_LEFT-10, y:levelY(6)-13, "text-anchor":"end", fill:"#8a80b3", "font-size":9, "font-family":"monospace" });
     infLbl.textContent = "n=∞";
-    bohrSvg.appendChild(infLbl);
     bohrSvg.appendChild(svgEl("circle", { cx: (B_LEFT+B_RIGHT)/2, cy: B_BOTTOM+18, r:8, fill:"#ff5b9d" }));
+    const nucLbl = svgEl("text", { x:(B_LEFT+B_RIGHT)/2, y:B_BOTTOM+18+4, "text-anchor":"middle", fill:"#fff", "font-size":8, "font-weight":800, "font-family":"Arial,sans-serif" });
+    nucLbl.textContent = "p⁺";
+    bohrSvg.appendChild(nucLbl);
+    // Elektronun şu anki konumu — soğurma öncesi alt seviyede, soğurduktan sonra üst seviyede durur.
+    bohrSvg.appendChild(svgEl("circle", { id:"bohr-electron-dot", cx: B_RIGHT-40, cy: levelY(electronN), r:6, fill:"#ffb020" }));
     // Enerji farkını temsil eden renkli şerit: son ışınlanan geçiş, iki seviye arasında kalıcı bir şerit olarak vurgulanır.
     if (lastEmit && lastEmit.nh === bohrState.nh && lastEmit.nl === bohrState.nl) {
       const gx = B_RIGHT - 14;
@@ -460,9 +466,8 @@
     const pLbl = svgEl("text", { x:R_CX, y:R_CY+3, "text-anchor":"middle", fill:"#fff", "font-size":8, "font-weight":800, "font-family":"Arial,sans-serif" });
     pLbl.textContent = "p⁺";
     bohrSvg.appendChild(pLbl);
-    // Elektron (temel/geçiş sonrası hâlde) — üst eksende (açı=-90°), etiketlerle çakışmaz.
-    const activeN = (lastEmit && lastEmit.nh===bohrState.nh && lastEmit.nl===bohrState.nl) ? bohrState.nl : bohrState.nh;
-    bohrSvg.appendChild(svgEl("circle", { cx:R_CX, cy:R_CY-ringR(activeN), r:6, fill:"#ffb020" }));
+    // Elektronun şu anki konumu — üst eksende (açı=-90°), etiketlerle çakışmaz.
+    bohrSvg.appendChild(svgEl("circle", { id:"bohr-electron-dot", cx:R_CX, cy:R_CY-ringR(electronN), r:6, fill:"#ffb020" }));
     // Enerji farkını temsil eden renkli yay: son ışınlanan geçişin iki katmanı arasında.
     if (lastEmit && lastEmit.nh === bohrState.nh && lastEmit.nl === bohrState.nl) {
       const col = gapColor(lastEmit.lambda, lastEmit.visible);
@@ -480,6 +485,17 @@
     if (bohrState.view === "rings") drawRings(); else drawLadder();
   }
 
+  const bohrAbsorbBtn = document.getElementById("bohr-absorb");
+  const bohrEmitBtn = document.getElementById("bohr-emit");
+  const bohrNote = document.getElementById("bohr-note");
+
+  function setBohrStage(stage) {
+    // "ground": elektron alt seviyede bekliyor, soğurma yapılabilir.
+    // "excited": elektron soğurma ile üst seviyeye çıktı, emisyon yapılabilir.
+    bohrAbsorbBtn.disabled = stage === "excited";
+    bohrEmitBtn.disabled = stage === "ground";
+  }
+
   function updateBohrControls() {
     document.getElementById("bohr-nh-val").textContent = bohrState.nh;
     document.getElementById("bohr-nl-val").textContent = bohrState.nl;
@@ -489,6 +505,12 @@
     document.getElementById("bohr-wavelength").innerHTML = visible
       ? `${lambda.toFixed(0)}<span class="u">nm</span>`
       : `${lambda < 380 ? lambda.toFixed(0) : lambda.toFixed(0)}<span class="u">nm (${lambda<380?"UV":"IR"})</span>`;
+    // Seviye seçimi değiştiğinde elektron her zaman taban (alt) seviyeye döner —
+    // önce soğurma, sonra emisyon sırası her geçiş için yeniden kurulur.
+    electronN = bohrState.nl;
+    lastEmit = null;
+    setBohrStage("ground");
+    bohrNote.innerHTML = `<h5>Önce Soğurma</h5><p>Elektron şu an temel (alt) seviyede, n=${bohrState.nl}. n=${bohrState.nh} seviyesine sıçraması için "Soğur" düğmesiyle ona enerji ver.</p>`;
     renderBohrStage();
   }
   function clampBohr() {
@@ -514,12 +536,84 @@
 
   let bohrLineCount = 0;
   const bohrBar = document.getElementById("bohr-spectrum-bar");
-  document.getElementById("bohr-emit").addEventListener("click", () => {
+
+  function hideElectronDot() {
+    const dot = document.getElementById("bohr-electron-dot");
+    if (dot) dot.style.opacity = "0";
+  }
+
+  bohrAbsorbBtn.addEventListener("click", () => {
+    if (bohrAbsorbBtn.disabled) return;
     const { nh, nl } = bohrState;
     const lambda = transitionWavelengthNm(nh, nl);
     const visible = lambda >= 380 && lambda <= 750;
-    const note = document.getElementById("bohr-note");
     const col = gapColor(lambda, visible);
+    bohrAbsorbBtn.disabled = true; // animasyon sırasında çift tıklamayı engelle
+    hideElectronDot();
+
+    if (bohrState.view === "rings") {
+      // Dışarıdan gelen foton, en dış katmanın ötesinden başlayıp elektronu n=nl'de bulur ve soğurulur.
+      const rStart = ringR(6) + 34;
+      const photon = svgEl("circle", { cx:R_CX, cy:R_CY-rStart, r:5, fill:col });
+      bohrSvg.appendChild(photon);
+      const r0 = rStart, r1 = ringR(nl);
+      let t0 = performance.now();
+      (function anim(now) {
+        const t = Math.min(1, (now - t0) / 400);
+        photon.setAttribute("cy", R_CY - (r0 + (r1 - r0) * t));
+        if (t < 1) { requestAnimationFrame(anim); return; }
+        photon.remove();
+        // Foton soğuruldu — elektron uyarılarak n=nl'den n=nh'ye sıçrar.
+        const electron = svgEl("circle", { cx:R_CX, cy:R_CY-ringR(nl), r:6, fill:col });
+        bohrSvg.appendChild(electron);
+        const r2 = ringR(nl), r3 = ringR(nh);
+        let t1 = performance.now();
+        (function anim2(now2) {
+          const tt = Math.min(1, (now2 - t1) / 450);
+          electron.setAttribute("cy", R_CY - (r2 + (r3 - r2) * tt));
+          if (tt < 1) { requestAnimationFrame(anim2); return; }
+          electronN = nh; setBohrStage("excited");
+          bohrNote.innerHTML = `<h5>Soğurma (Absorbsiyon)</h5><p>Hidrojen atomuna n=${nh}→${nl} geçişinin enerjisi kadar (${lambda.toFixed(0)} nm) bir foton verildi; elektron bu enerjiyi soğurup <strong>uyarılmış n=${nh} seviyesine</strong> sıçradı. Şimdi "Işınla" düğmesiyle elektronun bu fazla enerjiyi tekrar ışık olarak yayıp taban seviyeye döndüğünü gözlemleyebilirsin.</p>`;
+          renderBohrStage();
+        })(performance.now());
+      })(performance.now());
+    } else {
+      // Dışarıdan gelen foton, tablonun sağından girip elektronu n=nl'de bulur ve soğurulur.
+      const photon = svgEl("circle", { cx: B_RIGHT+30, cy: levelY(nl), r:5, fill: col });
+      bohrSvg.appendChild(photon);
+      const x0 = B_RIGHT+30, x1 = B_RIGHT-40;
+      let t0 = performance.now();
+      (function anim(now) {
+        const t = Math.min(1, (now - t0) / 400);
+        photon.setAttribute("cx", x0 + (x1 - x0) * t);
+        if (t < 1) { requestAnimationFrame(anim); return; }
+        photon.remove();
+        // Foton soğuruldu — elektron uyarılarak n=nl'den n=nh'ye sıçrar.
+        const electron = svgEl("circle", { cx:B_RIGHT-40, cy: levelY(nl), r:6, fill: col });
+        bohrSvg.appendChild(electron);
+        const y0 = levelY(nl), y1 = levelY(nh);
+        let t1 = performance.now();
+        (function anim2(now2) {
+          const tt = Math.min(1, (now2 - t1) / 450);
+          electron.setAttribute("cy", y0 + (y1 - y0) * tt);
+          if (tt < 1) { requestAnimationFrame(anim2); return; }
+          electronN = nh; setBohrStage("excited");
+          bohrNote.innerHTML = `<h5>Soğurma (Absorbsiyon)</h5><p>Hidrojen atomuna n=${nh}→${nl} geçişinin enerjisi kadar (${lambda.toFixed(0)} nm) bir foton verildi; elektron bu enerjiyi soğurup <strong>uyarılmış n=${nh} seviyesine</strong> sıçradı. Şimdi "Işınla" düğmesiyle elektronun bu fazla enerjiyi tekrar ışık olarak yayıp taban seviyeye döndüğünü gözlemleyebilirsin.</p>`;
+          renderBohrStage();
+        })(performance.now());
+      })(performance.now());
+    }
+  });
+
+  bohrEmitBtn.addEventListener("click", () => {
+    if (bohrEmitBtn.disabled) return;
+    const { nh, nl } = bohrState;
+    const lambda = transitionWavelengthNm(nh, nl);
+    const visible = lambda >= 380 && lambda <= 750;
+    const note = bohrNote;
+    const col = gapColor(lambda, visible);
+    bohrEmitBtn.disabled = true; // animasyon sırasında çift tıklamayı engelle
+    hideElectronDot();
 
     if (bohrState.view === "rings") {
       const photon = svgEl("circle", { cx:R_CX, cy:R_CY-ringR(nh), r:6, fill:col });
@@ -531,7 +625,7 @@
         const r = r0 + (r1 - r0) * t;
         photon.setAttribute("cy", R_CY - r);
         if (t < 1) requestAnimationFrame(anim);
-        else { lastEmit = { nh, nl, lambda, visible }; renderBohrStage(); }
+        else { lastEmit = { nh, nl, lambda, visible }; electronN = nl; setBohrStage("ground"); renderBohrStage(); }
       })(performance.now());
     } else {
       const photon = svgEl("circle", { cx: (B_LEFT+B_RIGHT)/2, cy: levelY(nh), r: 6, fill: col });
@@ -543,7 +637,7 @@
         photon.setAttribute("cy", y0 + (y1 - y0) * t);
         photon.setAttribute("r", 6 - 2*t);
         if (t < 1) requestAnimationFrame(anim);
-        else { lastEmit = { nh, nl, lambda, visible }; renderBohrStage(); }
+        else { lastEmit = { nh, nl, lambda, visible }; electronN = nl; setBohrStage("ground"); renderBohrStage(); }
       })(performance.now());
     }
 
@@ -554,15 +648,17 @@
       tick.style.cssText = `position:absolute; left:${pos}%; top:0; bottom:0; width:3px; background:${wavelengthToRGB(lambda)}; box-shadow:0 0 8px ${wavelengthToRGB(lambda)};`;
       bohrBar.appendChild(tick);
       document.getElementById("bohr-count").textContent = `${bohrLineCount} çizgi`;
-      note.innerHTML = `<h5>Gözlemle</h5><p>n=${nh}→${nl} geçişi ${lambda.toFixed(0)} nm'de <strong>görünür</strong> bir çizgi üretti (${SERIES_NAMES[nl] || ""} serisi). Bu ışık gerçekten bir spektroskopla gözlenebilir. "Katman Modeli" görünümüne geçip aynı geçişi halkalar üzerinde de izleyebilirsin.</p>`;
+      note.innerHTML = `<h5>Emisyon</h5><p>n=${nh}→${nl} geçişi ${lambda.toFixed(0)} nm'de <strong>görünür</strong> bir çizgi üretti (${SERIES_NAMES[nl] || ""} serisi). Bu ışık gerçekten bir spektroskopla gözlenebilir. "Katman Modeli" görünümüne geçip aynı geçişi halkalar üzerinde de izleyebilirsin. Tekrar denemek için "Soğur" düğmesine basabilirsin.</p>`;
     } else {
-      note.innerHTML = `<h5>Gözlemle</h5><p>n=${nh}→${nl} geçişi ${lambda.toFixed(0)} nm'de bir foton üretti, ama bu <strong>${lambda<380?"mor ötesi (UV)":"kızıl ötesi (IR)"}</strong> bölgede — insan gözü bunu göremez. Bu yüzden bu seri (${SERIES_NAMES[nl] || ""}) çıplak gözle keşfedilemedi.</p>`;
+      note.innerHTML = `<h5>Emisyon</h5><p>n=${nh}→${nl} geçişi ${lambda.toFixed(0)} nm'de bir foton üretti, ama bu <strong>${lambda<380?"mor ötesi (UV)":"kızıl ötesi (IR)"}</strong> bölgede — insan gözü bunu göremez. Bu yüzden bu seri (${SERIES_NAMES[nl] || ""}) çıplak gözle keşfedilemedi. Tekrar denemek için "Soğur" düğmesine basabilirsin.</p>`;
     }
   });
   document.getElementById("bohr-reset").addEventListener("click", () => {
     bohrBar.innerHTML = "";
     bohrLineCount = 0;
     lastEmit = null;
+    electronN = bohrState.nl;
+    setBohrStage("ground");
     document.getElementById("bohr-count").textContent = "0 çizgi";
     renderBohrStage();
   });

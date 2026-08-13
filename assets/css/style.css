@@ -392,7 +392,7 @@ footer a{ color:var(--gas-dark); text-decoration:none; font-weight:700; }
 /* ---------- Orbital diyagramı ---------- */
 .orbital-diagram{ display:flex; flex-direction:column; gap:10px; }
 .orb-shell{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
-.orb-shell .shell-label{ font-family:var(--mono); font-size:11.5px; color:#a199c9; width:38px; flex:0 0 auto; }
+.orb-shell .shell-label{ font-family:var(--mono); font-size:11.5px; color:var(--ink-soft); font-weight:700; width:38px; flex:0 0 auto; }
 .orb-boxes{ display:flex; gap:4px; flex-wrap:wrap; }
 .orb-box{
   width:30px; height:30px; border:2px solid var(--lab-line); border-radius:6px; background:#0c0a1f;
@@ -401,8 +401,8 @@ footer a{ color:var(--gas-dark); text-decoration:none; font-weight:700; }
 .orb-box .arrow{ font-size:15px; line-height:1; }
 .orb-box .arrow.up{ color:var(--mol-a); }
 .orb-box .arrow.down{ color:var(--mol-b); }
-.orb-group{ display:flex; gap:3px; padding:3px; border-radius:8px; background:rgba(255,255,255,.03); }
-.orb-group-label{ font-size:9.5px; color:#8a80b3; align-self:center; margin-right:2px; font-family:var(--mono); }
+.orb-group{ display:flex; gap:3px; padding:3px; border-radius:8px; background:rgba(12,10,31,.04); }
+.orb-group-label{ font-size:9.5px; color:var(--ink-faint); align-self:center; margin-right:2px; font-family:var(--mono); font-weight:700; }
 
 /* ---------- Atom modeli (basit SVG görselleştirme) ---------- */
 .atom-model{ display:flex; align-items:center; justify-content:center; width:100%; height:100%; }
@@ -443,8 +443,8 @@ footer a{ color:var(--gas-dark); text-decoration:none; font-weight:700; }
   margin:16px auto 10px; position:relative; z-index:2; transition:.15s;
 }
 .tl-item.active .tl-dot{ background:var(--gas); border-color:var(--gas); box-shadow:0 0 0 5px rgba(109,91,255,.2); }
-.tl-year{ text-align:center; font-family:var(--mono); font-size:11px; color:#a199c9; font-weight:700; }
-.tl-name{ text-align:center; font-size:13.5px; font-weight:800; color:#f1eeff; margin-top:2px; }
+.tl-year{ text-align:center; font-family:var(--mono); font-size:11px; color:var(--ink-faint); font-weight:700; }
+.tl-name{ text-align:center; font-size:13.5px; font-weight:800; color:var(--ink-soft); margin-top:2px; }
 .tl-item.active .tl-name{ color:var(--gas); }
 
 /* ---------- Sürükle-bırak eşleştirme ---------- */
