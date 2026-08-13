@@ -225,6 +225,43 @@
   </div>
 </section>
 
+<section class="section tight">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">🔍 Keşfet</span>
+      <h2>Anyon ve Katyon Elektron Dizilimi</h2>
+      <p>Metaller elektron vererek katyon, ametaller elektron alarak anyon oluşturur. Bir element seç; nötr atomla iyonun elektron dizilimini yan yana karşılaştır.</p>
+    </div>
+    <div class="card">
+      <div class="controls" style="grid-template-columns:1fr; max-width:420px">
+        <div class="control-row" style="grid-template-columns:150px 1fr">
+          <label for="ion-pick">Element</label>
+          <select id="ion-pick" style="padding:8px; border-radius:8px; border:1px solid var(--line)"></select>
+        </div>
+      </div>
+      <div class="two-col" style="margin-top:16px">
+        <div>
+          <div class="small" style="margin-bottom:8px; font-weight:700">Nötr Atom</div>
+          <div class="readouts" style="grid-template-columns:1fr 1fr">
+            <div class="readout" style="background:var(--surface-2); border-color:var(--line)"><div class="k" style="color:var(--ink-faint)">Elektron Sayısı</div><div class="v" id="ion-neutral-e" style="color:var(--ink)">–</div></div>
+            <div class="readout" style="background:var(--surface-2); border-color:var(--line)"><div class="k" style="color:var(--ink-faint)">Kısaltılmış Dizilim</div><div class="v" id="ion-neutral-config" style="color:var(--ink); font-size:13px">–</div></div>
+          </div>
+          <div class="orbital-diagram" id="ion-neutral-diagram" style="margin-top:10px"></div>
+        </div>
+        <div>
+          <div class="small" style="margin-bottom:8px; font-weight:700" id="ion-label">İyon</div>
+          <div class="readouts" style="grid-template-columns:1fr 1fr">
+            <div class="readout" style="background:var(--surface-2); border-color:var(--line)"><div class="k" style="color:var(--ink-faint)">Elektron Sayısı</div><div class="v" id="ion-ion-e" style="color:var(--ink)">–</div></div>
+            <div class="readout" style="background:var(--surface-2); border-color:var(--line)"><div class="k" style="color:var(--ink-faint)">Kısaltılmış Dizilim</div><div class="v" id="ion-ion-config" style="color:var(--ink); font-size:13px">–</div></div>
+          </div>
+          <div class="orbital-diagram" id="ion-ion-diagram" style="margin-top:10px"></div>
+        </div>
+      </div>
+      <div id="ion-note" style="margin-top:14px"></div>
+    </div>
+  </div>
+</section>
+
 <section class="section">
   <div class="container">
     <div class="section-head">
@@ -634,6 +671,90 @@
   document.getElementById("zpick-plus").addEventListener("click", () => { zpickVal = Math.min(36, zpickVal + 1); refresh(); });
   document.getElementById("zpick-minus").addEventListener("click", () => { zpickVal = Math.max(1, zpickVal - 1); refresh(); });
   refresh();
+
+  /* ---- Anyon ve Katyon Elektron Dizilimi ----
+   * Yalnızca ana grup (1A, 2A, 13A, 15A, 16A, 17A), Z≤36 ve basit tek
+   * iyon oluşturan elementlerle sınırlıdır — geçiş metali iyonlarında
+   * elektronlar en yüksek n'li orbitalden (4s), 3d'den değil, önce
+   * ayrılır; bu istisna 9. sınıf müfredatının kapsamı dışındadır. */
+  const NOBLE_Z = new Set([2, 10, 18, 36, 54, 86, 118]);
+  const ION_CHARGE_BY_GROUP = { 1: 1, 2: 2, 13: 3, 15: -3, 16: -2, 17: -1 };
+  const ION_CANDIDATES = Object.values(EL_BY_Z)
+    .filter(el => el.z <= 36 && el.z > 1 && ION_CHARGE_BY_GROUP[el.group] !== undefined)
+    .sort((a, b) => a.z - b.z);
+
+  function renderIonDiagram(hostId, electronCount) {
+    const host = document.getElementById(hostId);
+    host.innerHTML = "";
+    const ordered = toConventionalOrder(buildConfig(electronCount));
+    ordered.forEach(sub => {
+      const orbCount = SUBSHELL_ORBITALS[sub.l];
+      const boxes = fillBoxes(orbCount, sub.count);
+      const row = document.createElement("div");
+      row.className = "orb-shell";
+      const label = document.createElement("div");
+      label.className = "shell-label";
+      label.textContent = sub.label;
+      row.appendChild(label);
+      const group = document.createElement("div");
+      group.className = "orb-group";
+      boxes.forEach(arrows => {
+        const box = document.createElement("div");
+        box.className = "orb-box";
+        arrows.forEach(dir => {
+          const span = document.createElement("span");
+          span.className = "arrow " + dir;
+          span.textContent = dir === "up" ? "↑" : "↓";
+          box.appendChild(span);
+        });
+        group.appendChild(box);
+      });
+      row.appendChild(group);
+      host.appendChild(row);
+    });
+  }
+
+  const ionPick = document.getElementById("ion-pick");
+  ionPick.innerHTML = ION_CANDIDATES.map(el => {
+    const charge = ION_CHARGE_BY_GROUP[el.group];
+    const sign = charge > 0 ? `${charge}+` : `${Math.abs(charge)}−`;
+    return `<option value="${el.z}">${el.sym} · ${el.name} (${sign} iyonu)</option>`;
+  }).join("");
+  ionPick.value = 11; // Na
+
+  function ionNotation(sym, charge) {
+    const supDigits = { 1:"", 2:"²", 3:"³" };
+    const mag = Math.abs(charge);
+    return `${sym}${supDigits[mag] ?? mag}${charge > 0 ? "⁺" : "⁻"}`;
+  }
+
+  function refreshIon() {
+    const z = +ionPick.value;
+    const el = EL_BY_Z[z];
+    const charge = ION_CHARGE_BY_GROUP[el.group];
+    const ionElectrons = z - charge;
+    const ionSym = ionNotation(el.sym, charge);
+
+    document.getElementById("ion-neutral-e").textContent = z;
+    document.getElementById("ion-neutral-config").textContent = nobleGasShorthand(z);
+    renderIonDiagram("ion-neutral-diagram", z);
+
+    document.getElementById("ion-label").textContent = `İyon (${ionSym})`;
+    document.getElementById("ion-ion-e").textContent = ionElectrons;
+    document.getElementById("ion-ion-config").textContent = nobleGasShorthand(ionElectrons);
+    renderIonDiagram("ion-ion-diagram", ionElectrons);
+
+    const verb = charge > 0 ? `${charge} elektron vererek` : `${Math.abs(charge)} elektron alarak`;
+    let note = `<div class="callout real"><h5>${el.sym} → ${ionSym}</h5><p><strong>${el.name}</strong>, ${verb} ${ionSym} iyonuna dönüşür (${z} → ${ionElectrons} elektron).`;
+    if (NOBLE_Z.has(ionElectrons)) {
+      const nobleName = EL_BY_Z[ionElectrons] ? EL_BY_Z[ionElectrons].name : "";
+      note += ` Bu elektron dizilimi, en yakın soy gaz olan <strong>${nobleName}</strong> ile birebir aynıdır — yani ${ionSym} soy gaz elektron dizilimine ulaşarak kararlı hâle gelir.`;
+    }
+    note += `</p></div>`;
+    document.getElementById("ion-note").innerHTML = note;
+  }
+  ionPick.addEventListener("change", refreshIon);
+  refreshIon();
 </script>
 </body>
 </html>
