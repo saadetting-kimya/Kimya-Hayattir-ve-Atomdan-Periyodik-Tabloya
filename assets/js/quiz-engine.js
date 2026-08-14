@@ -5,6 +5,42 @@
    ========================================================= */
 
 const STORAGE_KEY = "atomlab9_progress";
+const ERROR_KEY = "atomlab9_errors";
+
+function saveWrongQuestion(moduleKey, questionIndex, q) {
+  try {
+    const errors =
+      JSON.parse(localStorage.getItem(ERROR_KEY)) || {};
+
+    if (!errors[moduleKey]) {
+      errors[moduleKey] = {};
+    }
+
+    const questionKey = String(questionIndex);
+
+    if (!errors[moduleKey][questionKey]) {
+      errors[moduleKey][questionKey] = {
+        questionIndex,
+        text: q.text,
+        context: q.context || "",
+        correct: q.correct,
+        explain: q.explain || "",
+        wrongCount: 1
+      };
+    } else {
+      errors[moduleKey][questionKey].wrongCount =
+        (errors[moduleKey][questionKey].wrongCount || 0) + 1;
+    }
+
+    localStorage.setItem(
+      ERROR_KEY,
+      JSON.stringify(errors)
+    );
+
+  } catch (err) {
+    console.error("Yanlış soru kaydedilemedi:", err);
+  }
+}
 
 export function readProgress() {
   try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
@@ -61,8 +97,20 @@ export function renderQuiz(hostEl, questions, moduleKey) {
           if (idx === q.correct) el.classList.add("correct");
         });
         const isCorrect = oi === q.correct;
-        if (!isCorrect) o.classList.add("wrong");
-        state.answered++;
+
+if (!isCorrect) {
+  o.classList.add("wrong");
+
+  if (moduleKey) {
+    saveWrongQuestion(
+      moduleKey,
+      qi,
+      q
+    );
+  }
+}
+
+state.answered++;
         if (isCorrect) state.correct++;
         fbEl.classList.add("show", isCorrect ? "ok" : "no");
         fbEl.textContent = (isCorrect ? "✓ Doğru — " : "✕ Tekrar düşün — ") + (q.explain || "");
