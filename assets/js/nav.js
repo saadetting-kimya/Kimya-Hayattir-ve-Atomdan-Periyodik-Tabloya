@@ -21,6 +21,7 @@ const LINKS = [
   { href: link("moduller/06-orbitaller-elektron-dizilimi.html"), label: "Orbitaller & Dizilim", key: "orbital", num: "6" },
   { href: link("moduller/07-periyodik-tabloda-yer-bulma.html"), label: "Periyodik Tabloda Yer Bulma", key: "yerbulma", num: "7" },
   { href: link("moduller/08-periyodik-ozellikler.html"), label: "Periyodik Özellikler", key: "ozellikler", num: "8" },
+   { href: link("yanlislarim.html"), label: "❌ Yanlışlarım", key: "wrong", num: "" },
   { href: link("Kimya%209%20Ders%20Defteri.pdf"), label: "📘 Ders Defteri", key: "defter", num: "" },
 ];
 
