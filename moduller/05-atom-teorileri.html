@@ -564,11 +564,6 @@
   let bohrLineCount = 0;
   const bohrBar = document.getElementById("bohr-spectrum-bar");
 
-  function hideElectronDot() {
-    const dot = document.getElementById("bohr-electron-dot");
-    if (dot) dot.style.opacity = "0";
-  }
-
   bohrAbsorbBtn.addEventListener("click", () => {
     if (bohrAbsorbBtn.disabled) return;
     const { nh, nl } = bohrState;
@@ -617,8 +612,9 @@
         })(performance.now());
       })(performance.now());
     } else {
-      hideElectronDot();
-      // Dışarıdan gelen foton, tablonun sağından girip elektronu n=nl'de bulur ve soğurulur.
+      // Dışarıdan gelen foton, tablonun sağından girip elektronun (hiç kaybolmadan
+      // aynı nokta) bulunduğu n=nl seviyesine ulaşıp tam orada soğurulur.
+      const dot = document.getElementById("bohr-electron-dot");
       const photon = svgEl("circle", { cx: B_RIGHT+30, cy: levelY(nl), r:5, fill: col });
       bohrSvg.appendChild(photon);
       const x0 = B_RIGHT+30, x1 = B_RIGHT-40;
@@ -628,17 +624,17 @@
         photon.setAttribute("cx", x0 + (x1 - x0) * t);
         if (t < 1) { requestAnimationFrame(anim); return; }
         photon.remove();
-        // Foton soğuruldu — elektron uyarılarak n=nl'den n=nh'ye sıçrar.
-        const electron = svgEl("circle", { cx:B_RIGHT-40, cy: levelY(nl), r:6, fill: col });
-        bohrSvg.appendChild(electron);
+        // Foton, elektronun tam üzerinde soğuruldu — elektron kısaca fotonun rengini
+        // alır (soğurma anı), sonra aynı nokta olarak üst seviyeye sıçrar.
+        if (dot) dot.setAttribute("fill", col);
         const y0 = levelY(nl), y1 = levelY(nh);
         let t1 = performance.now();
         (function anim2(now2) {
           const tt = Math.min(1, (now2 - t1) / 450);
-          electron.setAttribute("cy", y0 + (y1 - y0) * tt);
+          if (dot) dot.setAttribute("cy", y0 + (y1 - y0) * tt);
           if (tt < 1) { requestAnimationFrame(anim2); return; }
           electronN = nh; setBohrStage("excited");
-          bohrNote.innerHTML = `<h5>Soğurma (Absorbsiyon)</h5><p>Hidrojen atomuna n=${nh}→${nl} geçişinin enerjisi kadar (${lambda.toFixed(0)} nm) bir foton verildi; elektron bu enerjiyi soğurup <strong>uyarılmış n=${nh} seviyesine</strong> sıçradı. Şimdi "Işınla" düğmesiyle elektronun bu fazla enerjiyi tekrar ışık olarak yayıp taban seviyeye döndüğünü gözlemleyebilirsin.</p>`;
+          bohrNote.innerHTML = `<h5>Soğurma (Absorbsiyon)</h5><p>Hidrojen atomuna n=${nh}→${nl} geçişinin enerjisi kadar (${lambda.toFixed(0)} nm) bir foton verildi; elektron bu enerjiyi tam üzerine geldiği anda soğurup <strong>uyarılmış n=${nh} seviyesine</strong> sıçradı. Şimdi "Işınla" düğmesiyle elektronun bu fazla enerjiyi tekrar ışık olarak yayıp taban seviyeye döndüğünü gözlemleyebilirsin.</p>`;
           renderBohrStage();
         })(performance.now());
       })(performance.now());
@@ -685,17 +681,22 @@
         setBohrStage("ground"); renderBohrStage();
       })(performance.now());
     } else {
-      hideElectronDot();
-      const photon = svgEl("circle", { cx: (B_LEFT+B_RIGHT)/2, cy: levelY(nh), r: 6, fill: col });
+      // Foton, elektronun (hiç kaybolmadan aynı nokta) bulunduğu noktadan çıkıp
+      // uzaklaşıp sönerken, elektron aynı anda alt seviyeye iner.
+      const dot = document.getElementById("bohr-electron-dot");
+      const photon = svgEl("circle", { cx: B_RIGHT-40, cy: levelY(nh), r: 5, fill: col });
       bohrSvg.appendChild(photon);
+      const px0 = B_RIGHT-40, px1 = B_RIGHT+40;
       const y0 = levelY(nh), y1 = levelY(nl);
       let t0 = performance.now();
       (function anim(now) {
         const t = Math.min(1, (now - t0) / 550);
-        photon.setAttribute("cy", y0 + (y1 - y0) * t);
-        photon.setAttribute("r", 6 - 2*t);
-        if (t < 1) requestAnimationFrame(anim);
-        else { lastEmit = { nh, nl, lambda, visible }; electronN = nl; setBohrStage("ground"); renderBohrStage(); }
+        photon.setAttribute("cx", px0 + (px1 - px0) * t);
+        photon.setAttribute("opacity", 1 - t * 0.75);
+        if (dot) dot.setAttribute("cy", y0 + (y1 - y0) * t);
+        if (t < 1) { requestAnimationFrame(anim); return; }
+        photon.remove();
+        lastEmit = { nh, nl, lambda, visible }; electronN = nl; setBohrStage("ground"); renderBohrStage();
       })(performance.now());
     }
 
