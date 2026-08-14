@@ -1,139 +1,103 @@
 /* =========================================================
    AtomLab 9 — quiz-engine.js
-   Bağlam temelli değerlendirme sorularını render eder,
-   puanlar ve sonucu localStorage'a kaydeder (ilerleme takibi).
+   Quiz motoru
+   - Her modülde 5 soru gösterir
+   - 5 seçeneklidir
+   - Yanlış soruları kaydeder
+   - Benzer soru getirir
+   - İlerlemeyi kaydeder
    ========================================================= */
 
 const STORAGE_KEY = "atomlab9_progress";
 const ERROR_KEY = "atomlab9_errors";
 
-function saveWrongQuestion(moduleKey, questionIndex, q) {
-  try {
-    const errors =
-      JSON.parse(localStorage.getItem(ERROR_KEY)) || {};
-
-    if (!errors[moduleKey]) {
-      errors[moduleKey] = {};
-    }
-
-    const questionKey = String(questionIndex);
-
-    if (!errors[moduleKey][questionKey]) {
-      errors[moduleKey][questionKey] = {
-        questionIndex,
-        text: q.text,
-        context: q.context || "",
-        correct: q.correct,
-        explain: q.explain || "",
-        wrongCount: 1
-      };
-    } else {
-      errors[moduleKey][questionKey].wrongCount =
-        (errors[moduleKey][questionKey].wrongCount || 0) + 1;
-    }
-
-    localStorage.setItem(
-      ERROR_KEY,
-      JSON.stringify(errors)
-    );
-
-  } catch (err) {
-    console.error("Yanlış soru kaydedilemedi:", err);
-  }
-}
+/* =========================================================
+   İLERLEME
+   ========================================================= */
 
 export function readProgress() {
-  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
-  catch { return {}; }
+  try {
+    return JSON.parse(
+      localStorage.getItem(STORAGE_KEY)
+    ) || {};
+  } catch {
+    return {};
+  }
 }
+
 export function writeProgress(p) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(p));
+  localStorage.setItem(
+    STORAGE_KEY,
+    JSON.stringify(p)
+  );
 }
-export function markModuleScore(moduleKey, score, total) {
+
+export function markModuleScore(
+  moduleKey,
+  score,
+  total
+) {
   const p = readProgress();
-  p[moduleKey] = { score, total, at: Date.now() };
+
+  p[moduleKey] = {
+    score,
+    total,
+    at: Date.now()
+  };
+
   writeProgress(p);
 }
+
 export function markVisited(moduleKey) {
   const p = readProgress();
-  p[moduleKey] = p[moduleKey] || { visited: true };
+
+  p[moduleKey] =
+    p[moduleKey] || {};
+
   p[moduleKey].visited = true;
+
   writeProgress(p);
 }
 
-export function renderQuiz(hostEl, questions, moduleKey) {
+/* =========================================================
+   YANLIŞ SORULARI OKU
+   ========================================================= */
 
-  if (!hostEl || !Array.isArray(questions)) return;
-
-  hostEl.innerHTML = "";
-
-  /* =====================================================
-     AYARLAR
-     ===================================================== */
-
-  const INITIAL_COUNT = 5;
-  const ERROR_KEY = "atomlab9_errors";
-
-  /*
-   * Havuzdan sadece 5 soru seçiyoruz.
-   * Soruların tamamı quiz-data.js içinde kalmaya devam eder.
-   */
-  function getInitialQuestions() {
-
-    const pool = [...questions];
-
-    /*
-     * Her açılışta farklı sorular gelsin.
-     */
-    for (let i = pool.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [pool[i], pool[j]] = [pool[j], pool[i]];
-    }
-
-    return pool.slice(0, INITIAL_COUNT);
+function readErrors() {
+  try {
+    return JSON.parse(
+      localStorage.getItem(ERROR_KEY)
+    ) || {};
+  } catch {
+    return {};
   }
+}
 
-  /* =====================================================
-     YANLIŞ SORULARI OKU
-     ===================================================== */
+/* =========================================================
+   YANLIŞ SORUYU KAYDET
+   ========================================================= */
 
-  function readErrors() {
+function saveWrongQuestion(
+  moduleKey,
+  q,
+  questionIndex
+) {
+  try {
 
-    try {
-
-      return JSON.parse(
-        localStorage.getItem(ERROR_KEY)
-      ) || {};
-
-    } catch {
-
-      return {};
-
-    }
-  }
-
-  /* =====================================================
-     YANLIŞ SORUYU KAYDET
-     ===================================================== */
-
-  function saveWrongQuestion(q, originalIndex) {
-
-    const errors = readErrors();
+    const errors =
+      readErrors();
 
     if (!errors[moduleKey]) {
       errors[moduleKey] = {};
     }
 
-    /*
-     * Sorunun benzersiz anahtarı.
-     */
-    const questionKey =
-      `${moduleKey}_${originalIndex}`;
+    const key =
+      `${moduleKey}_${questionIndex}`;
 
-    if (!errors[moduleKey][questionKey]) {
+    if (!errors[moduleKey][key]) {
 
-      errors[moduleKey][questionKey] = {
-        questionIndex: originalIndex,
+      errors[moduleKey][key] = {
+        questionIndex,
         context: q.context || "",
         text: q.text || "",
         options: q.options || [],
@@ -144,7 +108,8 @@ export function renderQuiz(hostEl, questions, moduleKey) {
 
     } else {
 
-      errors[moduleKey][questionKey].wrongCount++;
+      errors[moduleKey][key].wrongCount =
+        (errors[moduleKey][key].wrongCount || 0) + 1;
 
     }
 
@@ -152,68 +117,71 @@ export function renderQuiz(hostEl, questions, moduleKey) {
       ERROR_KEY,
       JSON.stringify(errors)
     );
-  }
 
-  /* =====================================================
-     KELİMELERİ AYIKLA
-     ===================================================== */
+  } catch (err) {
 
-  function normalizeText(text) {
-
-    return String(text || "")
-      .toLowerCase()
-      .replace(/[.,!?;:()"']/g, "")
-      .split(/\s+/)
-      .filter(word => word.length > 3);
+    console.error(
+      "Yanlış soru kaydedilemedi:",
+      err
+    );
 
   }
+}
 
-  /* =====================================================
-     BENZER SORU BUL
-     ===================================================== */
+/* =========================================================
+   METİN NORMALİZE
+   ========================================================= */
 
-  function findSimilarQuestion(
-    wrongQuestion,
-    usedQuestions
-  ) {
+function normalizeText(text) {
 
-    const wrongWords = new Set(
+  return String(text || "")
+    .toLowerCase()
+    .replace(/[.,!?;:()"']/g, "")
+    .split(/\s+/)
+    .filter(word => word.length > 3);
+
+}
+
+/* =========================================================
+   BENZER SORU BUL
+   ========================================================= */
+
+function findSimilarQuestion(
+  wrongQuestion,
+  questions,
+  usedQuestions
+) {
+
+  const wrongWords =
+    new Set(
       normalizeText(
-        (wrongQuestion.context || "") +
-        " " +
-        (wrongQuestion.text || "")
+        `${wrongQuestion.context || ""} ${wrongQuestion.text || ""}`
       )
     );
 
-    let candidates = questions.filter(q => {
+  let candidates =
+    questions.filter(q => {
 
-      /*
-       * Daha önce gösterilmiş soruları tekrar verme.
-       */
-      if (usedQuestions.has(q.__index)) {
-        return false;
-      }
+      const index =
+        questions.indexOf(q);
 
-      return true;
+      return !usedQuestions.has(index);
 
     });
 
-    if (candidates.length === 0) {
-      return null;
-    }
+  if (candidates.length === 0) {
+    return null;
+  }
 
-    /*
-     * Soruların kelime benzerliğini hesapla.
-     */
-    candidates = candidates.map(q => {
+  candidates =
+    candidates.map(q => {
 
-      const words = new Set(
-        normalizeText(
-          (q.context || "") +
-          " " +
-          (q.text || "")
-        )
-      );
+      const words =
+        new Set(
+          normalizeText(
+            `${q.context || ""} ${q.text || ""}`
+          )
+        );
 
       let score = 0;
 
@@ -232,79 +200,154 @@ export function renderQuiz(hostEl, questions, moduleKey) {
 
     });
 
-    /*
-     * En benzer sorular üstte.
-     */
-    candidates.sort(
-      (a, b) => b.score - a.score
+  candidates.sort(
+    (a, b) =>
+      b.score - a.score
+  );
+
+  const bestScore =
+    candidates[0].score;
+
+  const best =
+    candidates.filter(
+      item =>
+        item.score === bestScore
     );
 
-    /*
-     * Aynı konudan birkaç soru varsa
-     * bunlardan rastgele birini seç.
-     */
-    const bestScore =
-      candidates[0].score;
+  const selected =
+    best[
+      Math.floor(
+        Math.random() * best.length
+      )
+    ];
 
-    const best =
-      candidates.filter(
-        item => item.score === bestScore
-      );
+  return selected.question;
+}
 
-    const selected =
-      best[
-        Math.floor(Math.random() * best.length)
-      ];
+/* =========================================================
+   QUIZ
+   ========================================================= */
 
-    return selected.question;
+export function renderQuiz(
+  hostEl,
+  questions,
+  moduleKey
+) {
+
+  if (
+    !hostEl ||
+    !Array.isArray(questions) ||
+    questions.length === 0
+  ) {
+
+    if (hostEl) {
+
+      hostEl.innerHTML = `
+        <div class="quiz-empty">
+          Bağlam temelli soru bulunamadı.
+        </div>
+      `;
+
+    }
+
+    return;
   }
 
-  /* =====================================================
-     BAŞLANGIÇTA SADECE 5 SORU
-     ===================================================== */
+  hostEl.innerHTML = "";
+
+  /* -------------------------------------------------------
+     AYAR
+     ------------------------------------------------------- */
+
+  const QUESTION_COUNT = 5;
+
+  /* -------------------------------------------------------
+     SORULARI KARIŞTIR
+     ------------------------------------------------------- */
+
+  function shuffle(array) {
+
+    const arr =
+      [...array];
+
+    for (
+      let i = arr.length - 1;
+      i > 0;
+      i--
+    ) {
+
+      const j =
+        Math.floor(
+          Math.random() * (i + 1)
+        );
+
+      [
+        arr[i],
+        arr[j]
+      ] =
+      [
+        arr[j],
+        arr[i]
+      ];
+
+    }
+
+    return arr;
+  }
+
+  /* -------------------------------------------------------
+     İLK 5 SORU
+     ------------------------------------------------------- */
 
   let activeQuestions =
-    getInitialQuestions();
+    shuffle(questions)
+      .slice(
+        0,
+        Math.min(
+          QUESTION_COUNT,
+          questions.length
+        )
+      );
 
-  /*
-   * Gösterilmiş soruların indexleri.
-   */
+  /* -------------------------------------------------------
+     KULLANILAN SORULAR
+     ------------------------------------------------------- */
+
   const usedQuestions =
     new Set();
 
   activeQuestions.forEach(q => {
 
-    /*
-     * quiz-data içindeki gerçek indexi bul.
-     */
-    const index =
-      questions.indexOf(q);
-
-    q.__index = index;
-
-    usedQuestions.add(index);
+    usedQuestions.add(
+      questions.indexOf(q)
+    );
 
   });
+
+  /* -------------------------------------------------------
+     DURUM
+     ------------------------------------------------------- */
 
   const state = {
     answered: 0,
     correct: 0
   };
 
-  /* =====================================================
-     ANA QUIZ ALANI
-     ===================================================== */
+  /* -------------------------------------------------------
+     ANA ALAN
+     ------------------------------------------------------- */
 
   const wrap =
     document.createElement("div");
 
-  wrap.className = "quiz";
+  wrap.className =
+    "quiz";
 
   hostEl.appendChild(wrap);
 
-  /* =====================================================
+  /* -------------------------------------------------------
      ÖZET
-     ===================================================== */
+     ------------------------------------------------------- */
 
   const summary =
     document.createElement("div");
@@ -314,55 +357,76 @@ export function renderQuiz(hostEl, questions, moduleKey) {
 
   hostEl.appendChild(summary);
 
-  /* =====================================================
-     ÖZETİ GÜNCELLE
-     ===================================================== */
+  /* -------------------------------------------------------
+     ÖZET GÜNCELLE
+     ------------------------------------------------------- */
 
   function updateSummary() {
 
     summary.innerHTML = `
+
       <div>
-        <div class="small" style="color:#c7bfe6">
+
+        <div
+          class="small"
+          style="color:#c7bfe6"
+        >
           İlerleme
         </div>
 
         <div class="score">
-          ${state.answered}/${activeQuestions.length}
+
+          ${state.answered}/${QUESTION_COUNT}
           yanıtlandı ·
-          <span>${state.correct}</span>
+
+          <span>
+            ${state.correct}
+          </span>
+
           doğru
+
         </div>
+
       </div>
 
       ${
-        state.answered === activeQuestions.length
+        state.answered >= QUESTION_COUNT
           ?
-        `<div class="badge-live" style="color:#7CE0A8">
-          Modül tamamlandı
-        </div>`
+
+        `
+          <div
+            class="badge-live"
+            style="color:#7CE0A8"
+          >
+            Modül tamamlandı
+          </div>
+        `
+
           :
+
         ""
       }
+
     `;
 
     if (
-      state.answered === activeQuestions.length &&
+      state.answered >= QUESTION_COUNT &&
       moduleKey
     ) {
 
       markModuleScore(
         moduleKey,
         state.correct,
-        activeQuestions.length
+        QUESTION_COUNT
       );
 
     }
 
   }
 
-  /* =====================================================
+  /* -------------------------------------------------------
      BENZER SORUYU GETİR
-     ===================================================== */
+     ------------------------------------------------------- */
 
   function replaceWithSimilar(
     card,
@@ -372,52 +436,67 @@ export function renderQuiz(hostEl, questions, moduleKey) {
     const similar =
       findSimilarQuestion(
         wrongQuestion,
+        questions,
         usedQuestions
       );
 
     if (!similar) {
 
-      card.querySelector(
-        ".qfeedback"
-      ).innerHTML += `
+      const feedback =
+        card.querySelector(
+          ".qfeedback"
+        );
+
+      feedback.innerHTML += `
+
         <div class="similar-none">
-          Bu konu için yeni soru kalmadı.
+
+          Bu konu için başka soru kalmadı.
+
         </div>
+
       `;
 
       return;
-
     }
 
-    /*
-     * Yeni soruyu işaretle.
-     */
-    similar.__index =
-      questions.indexOf(similar);
+    const similarIndex =
+      questions.indexOf(
+        similar
+      );
 
     usedQuestions.add(
-      similar.__index
+      similarIndex
     );
 
-    /*
-     * Yanlış sorunun yerine
-     * benzer soruyu koyuyoruz.
-     *
-     * Böylece ekranda yine sadece 5 soru var.
-     */
-    const newCard =
-      createQuestionCard(
-        similar,
+    const position =
+      Number(
         card.dataset.position
       );
 
-    card.replaceWith(newCard);
+    /*
+     * Eski sorunun yerine
+     * yeni soruyu koy.
+     */
+
+    activeQuestions[position] =
+      similar;
+
+    const newCard =
+      createQuestionCard(
+        similar,
+        position
+      );
+
+    card.replaceWith(
+      newCard
+    );
 
   }
 
-  /* =====================================================
-     SORU KARTI OLUŞTUR
-     ===================================================== */
+  /* -------------------------------------------------------
+     SORU KARTI
+     ------------------------------------------------------- */
 
   function createQuestionCard(
     q,
@@ -433,19 +512,18 @@ export function renderQuiz(hostEl, questions, moduleKey) {
     card.dataset.position =
       position;
 
-    card.dataset.questionIndex =
-      q.__index;
-
-    /* ---------------------------------------------------
+    /* -----------------------------------------------------
        SORU BAŞLIĞI
-       --------------------------------------------------- */
+       ----------------------------------------------------- */
 
     card.innerHTML = `
 
       <div class="qhead">
 
         <span class="qn">
-          SORU ${Number(position) + 1}/${INITIAL_COUNT}
+
+          SORU ${position + 1}/${QUESTION_COUNT}
+
         </span>
 
       </div>
@@ -453,75 +531,106 @@ export function renderQuiz(hostEl, questions, moduleKey) {
       ${
         q.context
           ?
+
         `
           <div class="qcontext">
             ${q.context}
           </div>
         `
+
           :
+
         ""
       }
 
       <div class="qtext">
+
         ${q.text}
+
       </div>
 
       <div class="qopts"></div>
 
       <div class="qfeedback"></div>
+
     `;
 
     const optsEl =
-      card.querySelector(".qopts");
+      card.querySelector(
+        ".qopts"
+      );
 
-    const fbEl =
-      card.querySelector(".qfeedback");
+    const feedbackEl =
+      card.querySelector(
+        ".qfeedback"
+      );
 
-    /* ---------------------------------------------------
-       5 ŞIK
-       --------------------------------------------------- */
+    /* -----------------------------------------------------
+       ŞIKLAR
+       ----------------------------------------------------- */
 
     q.options.forEach(
-      (opt, oi) => {
+      (option, optionIndex) => {
 
-        const o =
-          document.createElement("div");
+        const optionEl =
+          document.createElement(
+            "div"
+          );
 
-        o.className =
+        optionEl.className =
           "qopt";
 
-        o.innerHTML = `
+        optionEl.innerHTML = `
+
           <span class="bullet">
-            ${String.fromCharCode(65 + oi)}
+
+            ${String.fromCharCode(
+              65 + optionIndex
+            )}
+
           </span>
 
           <span>
-            ${opt}
+
+            ${option}
+
           </span>
+
         `;
 
-        o.addEventListener(
+        optionEl.addEventListener(
           "click",
           () => {
 
-            if (card.dataset.done) {
+            if (
+              card.dataset.done
+            ) {
+
               return;
+
             }
 
-            card.dataset.done = "1";
+            card.dataset.done =
+              "1";
 
-            const opts =
-              [...optsEl.children];
+            /* ---------------------------------------------
+               TÜM ŞIKLARI KİLİTLE
+               --------------------------------------------- */
 
-            opts.forEach(
-              (el, idx) => {
+            const allOptions =
+              [
+                ...optsEl.children
+              ];
+
+            allOptions.forEach(
+              (el, index) => {
 
                 el.classList.add(
                   "disabled"
                 );
 
                 if (
-                  idx === q.correct
+                  index === q.correct
                 ) {
 
                   el.classList.add(
@@ -534,82 +643,95 @@ export function renderQuiz(hostEl, questions, moduleKey) {
             );
 
             const isCorrect =
-              oi === q.correct;
+              optionIndex === q.correct;
 
-            /* -----------------------------------------
+            /* ---------------------------------------------
                DOĞRU
-               ----------------------------------------- */
+               --------------------------------------------- */
 
             if (isCorrect) {
 
-              o.classList.add(
+              optionEl.classList.add(
                 "correct"
               );
 
               state.correct++;
 
-              fbEl.classList.add(
+              feedbackEl.classList.add(
                 "show",
                 "ok"
               );
 
-              fbEl.innerHTML = `
-                ✓ Doğru!
+              feedbackEl.innerHTML = `
+
+                <div>
+
+                  ✓ Doğru!
+
+                </div>
 
                 <div class="q-explain">
+
                   ${q.explain || ""}
+
                 </div>
+
               `;
 
             }
 
-            /* -----------------------------------------
+            /* ---------------------------------------------
                YANLIŞ
-               ----------------------------------------- */
+               --------------------------------------------- */
 
             else {
 
-              o.classList.add(
+              optionEl.classList.add(
                 "wrong"
               );
 
               saveWrongQuestion(
+                moduleKey,
                 q,
-                q.__index
+                questions.indexOf(q)
               );
 
-              fbEl.classList.add(
+              feedbackEl.classList.add(
                 "show",
                 "no"
               );
 
-              fbEl.innerHTML = `
+              feedbackEl.innerHTML = `
 
                 <div>
+
                   ✕ Yanlış.
+
                 </div>
 
                 <div class="q-explain">
-                  ${
-                    q.explain || ""
-                  }
+
+                  ${q.explain || ""}
+
                 </div>
 
                 <button
                   type="button"
                   class="btn similar-btn"
                 >
+
                   🔄 Benzerini Çöz
+
                 </button>
 
               `;
 
-              const similarBtn =
-                fbEl.querySelector(
+              const similarButton =
+                feedbackEl.querySelector(
                   ".similar-btn"
                 );
 
-              similarBtn.addEventListener(
+              similarButton.addEventListener(
                 "click",
                 () => {
 
@@ -630,7 +752,9 @@ export function renderQuiz(hostEl, questions, moduleKey) {
           }
         );
 
-        optsEl.appendChild(o);
+        optsEl.appendChild(
+          optionEl
+        );
 
       }
     );
@@ -638,20 +762,22 @@ export function renderQuiz(hostEl, questions, moduleKey) {
     return card;
   }
 
-  /* =====================================================
-     İLK 5 SORUYU EKRANA BAS
-     ===================================================== */
+  /* -------------------------------------------------------
+     İLK SORULARI OLUŞTUR
+     ------------------------------------------------------- */
 
   activeQuestions.forEach(
-    (q, index) => {
+    (question, position) => {
 
       const card =
         createQuestionCard(
-          q,
-          index
+          question,
+          position
         );
 
-      wrap.appendChild(card);
+      wrap.appendChild(
+        card
+      );
 
     }
   );
@@ -659,50 +785,74 @@ export function renderQuiz(hostEl, questions, moduleKey) {
   updateSummary();
 
 }
-state.answered++;
-        if (isCorrect) state.correct++;
-        fbEl.classList.add("show", isCorrect ? "ok" : "no");
-        fbEl.textContent = (isCorrect ? "✓ Doğru — " : "✕ Tekrar düşün — ") + (q.explain || "");
-        updateSummary();
-      });
-      optsEl.appendChild(o);
-    });
-    wrap.appendChild(card);
-  });
 
-  const summary = document.createElement("div");
-  summary.className = "quiz-summary";
-  wrap.appendChild(summary);
+/* =========================================================
+   KEŞİF GÜNLÜĞÜ
+   ========================================================= */
 
-  function updateSummary() {
-    summary.innerHTML = `
-      <div>
-        <div class="small" style="color:#c7bfe6">İlerleme</div>
-        <div class="score">${state.answered}/${questions.length} yanıtlandı · <span>${state.correct}</span> doğru</div>
-      </div>
-      ${state.answered === questions.length ? `<div class="badge-live" style="color:#7CE0A8">Modül tamamlandı</div>` : ""}
-    `;
-    if (state.answered === questions.length && moduleKey) {
-      markModuleScore(moduleKey, state.correct, questions.length);
-    }
+export function bindJournal(
+  textareaEl,
+  key
+) {
+
+  if (!textareaEl) {
+    return;
   }
-  updateSummary();
-}
 
-/** Keşif günlüğü (yansıtma notu) — localStorage'a otomatik kaydeder */
-export function bindJournal(textareaEl, key) {
-  if (!textareaEl) return;
-  const saveState = textareaEl.parentElement.querySelector(".save-state");
-  const full = "atomlab9_journal_" + key;
-  const saved = localStorage.getItem(full);
-  if (saved) textareaEl.value = saved;
-  let t;
-  textareaEl.addEventListener("input", () => {
-    clearTimeout(t);
-    if (saveState) saveState.textContent = "";
-    t = setTimeout(() => {
-      localStorage.setItem(full, textareaEl.value);
-      if (saveState) { saveState.textContent = "✓ Kaydedildi (bu tarayıcıda saklanır)"; }
-    }, 500);
-  });
+  const saveState =
+    textareaEl.parentElement
+      ?.querySelector(
+        ".save-state"
+      );
+
+  const fullKey =
+    "atomlab9_journal_" +
+    key;
+
+  const saved =
+    localStorage.getItem(
+      fullKey
+    );
+
+  if (saved) {
+    textareaEl.value =
+      saved;
+  }
+
+  let timer;
+
+  textareaEl.addEventListener(
+    "input",
+    () => {
+
+      clearTimeout(timer);
+
+      if (saveState) {
+        saveState.textContent =
+          "";
+      }
+
+      timer =
+        setTimeout(
+          () => {
+
+            localStorage.setItem(
+              fullKey,
+              textareaEl.value
+            );
+
+            if (saveState) {
+
+              saveState.textContent =
+                "✓ Kaydedildi (bu tarayıcıda saklanır)";
+
+            }
+
+          },
+          500
+        );
+
+    }
+  );
+
 }
