@@ -198,43 +198,800 @@ export const QUIZ = {
   ],
 
   orbital: [
-    {
-      context: "Bir Öğrencinin Çizdiği Orbital Şeması",
-      text: "Bir öğrenci, 2p³ elektron dizilimine sahip bir alt kabuğu gösterirken üç 2p orbitalinden ikisini elektron çifti ile tam dolu, birini ise boş çizmiştir. Bu şema hangi ilkeyle çelişir?",
-      options: ["Pauli dışlama ilkesiyle, çünkü orbitalde en fazla 2 elektron olabilir", "Hund kuralıyla, çünkü eş enerjili orbitaller önce birer elektronla tek tek dolmalıdır, hemen eşleşmemelidir", "Aufbau ilkesiyle, çünkü elektronlar 2p'den önce 3s'ye yerleşmelidir", "Hiçbir ilkeyle çelişmez, bu dizilim geçerlidir", "Kütlenin korunumu kanunuyla çelişir"],
-      correct: 1,
-      explain: "Hund kuralına göre eş enerjili orbitaller (üç 2p orbitali gibi) önce birer elektronla, aynı yönlü spinle tek tek doldurulur; üç elektronlu bir p alt kabuğunda üç orbitalin de tek elektronla dolu olması, hiçbirinin henüz eşleşmemiş olması beklenir.",
-    },
-    {
-      context: "Beklenenden Farklı Bir Dizilim",
-      text: "Bir öğretmen, 24 elektronlu bir atomun beklenen elektron diziliminin [Ar] 4s² 3d⁴ olması gerekirken, deneysel olarak gözlenen diziliminin [Ar] 4s¹ 3d⁵ olduğunu belirtiyor. Bu farkın en olası açıklaması nedir?",
-      options: ["Deneysel ölçüm hatalıdır, doğrusu her zaman [Ar] 4s² 3d⁴'tür", "Yarı dolu (3d⁵) bir alt kabuğun getirdiği ekstra kararlılık, elektronun 4s'den 3d'ye kaymasını enerji açısından daha uygun kılar", "Bu atom radyoaktif olduğu için dizilimi kararsızdır", "4s orbitali bu atomda hiç dolmaz", "3d orbitali bu atomda mevcut değildir"],
-      correct: 1,
-      explain: "Krom (Cr) gibi bazı atomlarda, tam yarı dolu (d⁵) bir alt kabuğun küresel simetrisi ve elektron-elektron itmesinin azalması ekstra kararlılık sağlar; bu yüzden saf Aufbau öngörüsünden küçük bir sapma gözlenir.",
-    },
-    {
-      context: "Bir Orbital Kutusundaki İki Ok",
-      text: "Bir orbital şemasında tek bir kutuda (orbitalde) biri yukarı biri aşağı yönlü iki ok gösteriliyor. Bu gösterim hangi ilkenin doğrudan bir uygulamasıdır?",
-      options: ["Hund kuralının, çünkü elektronlar önce ayrı ayrı yerleşmelidir", "Aufbau ilkesinin, çünkü elektronlar önce düşük enerjili orbitale yerleşir", "Kütlenin korunumu kanununun", "Bu gösterim hiçbir ilkeyle ilgili değildir, sadece estetik bir tercihtir", "Pauli dışlama ilkesinin, çünkü aynı orbitaldeki iki elektron zıt spinli olmalıdır"],
-      correct: 4,
-      explain: "Pauli dışlama ilkesine göre bir orbitalde en fazla 2 elektron bulunabilir ve bu iki elektronun spinleri zıt yönlü (biri yukarı, biri aşağı) olmalıdır.",
-    },
-    {
-      context: "Elektron Dizilimini Sıfırdan Kurmak",
-      text: "Bir öğrenci 15 elektronlu bir atomun elektron dizilimini yazarken önce 3p orbitaline, sonra 3s orbitaline elektron yerleştiriyor. Bu sıralama hangi ilkeye aykırıdır?",
-      options: ["Hund kuralına, çünkü p orbitalleri s'den önce dolmalıdır", "Pauli dışlama ilkesine, çünkü aynı orbitalde iki elektron kullanılmıştır", "Hiçbir ilkeye aykırı değildir, sıralama önemli değildir", "İzoelektronik kurala aykırıdır", "Aufbau ilkesine, çünkü elektronlar enerjisi düşük orbitalden (3s) başlanarak, enerjisi daha yüksek orbitale (3p) doğru sırayla yerleştirilmelidir"],
-      correct: 4,
-      explain: "Aufbau ilkesine göre elektronlar önce enerjisi en düşük boş orbitalden başlayarak yerleştirilir; 3s orbitali 3p'den daha düşük enerjilidir, bu yüzden önce 3s dolmalıdır.",
-    },
-    {
-      context: "Kararlı Bir Alt Kabuk",
-      text: "Bir atomun son enerji düzeyindeki p orbitallerinin tamamı tek elektronla (yarı dolu) yerleşmiş durumda ve çekirdeğin çekim gücü bu orbitallere dengeli dağılmış. Bu durumda atomun bu alt kabuğu için ne söylenebilir?",
-      options: ["Kararsızdır ve hemen elektron kaybeder", "Bu durum hiçbir zaman gerçekleşmez", "Atomun kütlesi bu durumda değişir", "Küresel simetri özelliği gösterir ve göreli olarak kararlıdır", "Bu durum sadece d orbitalleri için geçerlidir"],
-      correct: 3,
-      explain: "Çekirdeğin çekim gücü eş enerjili alt orbitallere dengeli dağıldığında (tam dolu ya da tam yarı dolu durumlarda olduğu gibi) atom küresel simetri gösterir ve göreli olarak daha kararlıdır.",
-    },
-  ],
 
+  /* =====================================================
+     1 — ORBİTAL KAVRAMI VE TÜRLERİ
+     ===================================================== */
+
+  {
+    context: "Bir öğrenci atomun elektronlarının çekirdek çevresindeki dağılımını inceliyor.",
+    text: "Orbital kavramı aşağıdakilerden hangisini ifade eder?",
+    options: [
+      "Elektronun çekirdek etrafında izlediği kesin dairesel yol",
+      "Elektronun bulunma olasılığının yüksek olduğu üç boyutlu bölge",
+      "Atom çekirdeğinin kapladığı hacim",
+      "Elektronların tamamının bulunduğu tek enerji düzeyi",
+      "Protonların hareket ettiği bölge"
+    ],
+    correct: 1,
+    explain: "Orbital, elektronun bulunma olasılığının yüksek olduğu çekirdek çevresindeki üç boyutlu bölgedir."
+  },
+
+  {
+    context: "Bir öğretmen s, p, d ve f orbitallerini karşılaştırıyor.",
+    text: "Bir s alt kabuğunda kaç orbital bulunur?",
+    options: [
+      "1",
+      "2",
+      "3",
+      "5",
+      "7"
+    ],
+    correct: 0,
+    explain: "s alt kabuğunda yalnızca 1 orbital bulunur."
+  },
+
+  {
+    context: "Bir atomun p alt kabuğu inceleniyor.",
+    text: "Bir p alt kabuğunda kaç orbital bulunur?",
+    options: [
+      "1",
+      "2",
+      "3",
+      "5",
+      "7"
+    ],
+    correct: 2,
+    explain: "p alt kabuğunda üç eş enerjili orbital bulunur."
+  },
+
+  {
+    context: "Bir kimya öğrencisi d alt kabuğunun kapasitesini araştırıyor.",
+    text: "Bir d alt kabuğunda toplam kaç orbital bulunur?",
+    options: [
+      "1",
+      "2",
+      "3",
+      "5",
+      "7"
+    ],
+    correct: 3,
+    explain: "d alt kabuğunda 5 orbital bulunur."
+  },
+
+  {
+    context: "Elektronların farklı alt kabuklara yerleşimi inceleniyor.",
+    text: "Aşağıdaki alt kabuklardan hangisi 7 orbital içerir?",
+    options: [
+      "s",
+      "p",
+      "d",
+      "f",
+      "Hiçbiri"
+    ],
+    correct: 3,
+    explain: "f alt kabuğunda 7 orbital bulunur."
+  },
+
+  /* =====================================================
+     2 — ELEKTRON KAPASİTESİ
+     ===================================================== */
+
+  {
+    context: "Bir öğrenci orbitallerin elektron kapasitelerini karşılaştırıyor.",
+    text: "Bir orbitalde en fazla kaç elektron bulunabilir?",
+    options: [
+      "1",
+      "2",
+      "3",
+      "4",
+      "6"
+    ],
+    correct: 1,
+    explain: "Pauli dışlama ilkesine göre bir orbitalde en fazla 2 elektron bulunabilir."
+  },
+
+  {
+    context: "s alt kabuğunun elektron kapasitesi araştırılıyor.",
+    text: "Bir s alt kabuğu en fazla kaç elektron alabilir?",
+    options: [
+      "1",
+      "2",
+      "4",
+      "6",
+      "10"
+    ],
+    correct: 1,
+    explain: "s alt kabuğunda 1 orbital vardır ve her orbital en fazla 2 elektron alır."
+  },
+
+  {
+    context: "p alt kabuğunun elektron kapasitesi inceleniyor.",
+    text: "Bir p alt kabuğu en fazla kaç elektron alabilir?",
+    options: [
+      "2",
+      "4",
+      "6",
+      "8",
+      "10"
+    ],
+    correct: 2,
+    explain: "p alt kabuğunda 3 orbital bulunur. 3 × 2 = 6 elektron alabilir."
+  },
+
+  {
+    context: "d alt kabuğu inceleniyor.",
+    text: "Bir d alt kabuğunun maksimum elektron kapasitesi kaçtır?",
+    options: [
+      "2",
+      "6",
+      "8",
+      "10",
+      "14"
+    ],
+    correct: 3,
+    explain: "d alt kabuğunda 5 orbital bulunur. 5 × 2 = 10 elektron."
+  },
+
+  {
+    context: "f alt kabuğunun kapasitesi hesaplanıyor.",
+    text: "Bir f alt kabuğu en fazla kaç elektron içerebilir?",
+    options: [
+      "6",
+      "8",
+      "10",
+      "12",
+      "14"
+    ],
+    correct: 4,
+    explain: "f alt kabuğunda 7 orbital vardır. 7 × 2 = 14 elektron."
+  },
+
+  /* =====================================================
+     3 — AUFBAU İLKESİ
+     ===================================================== */
+
+  {
+    context: "Bir öğrenci elektron dizilimi oluşturmaya başlıyor.",
+    text: "Aufbau ilkesine göre elektronlar orbitallere nasıl yerleşir?",
+    options: [
+      "Önce en yüksek enerjili orbitallere yerleşir.",
+      "Rastgele orbitallere yerleşir.",
+      "Önce düşük enerjili orbitallere yerleşir.",
+      "Sadece p orbitallerine yerleşir.",
+      "Her zaman yalnızca son katmana yerleşir."
+    ],
+    correct: 2,
+    explain: "Aufbau ilkesine göre elektronlar temel hâlde düşük enerjili orbitallerden başlayarak yerleşir."
+  },
+
+  {
+    context: "Bir öğrenci 3s ve 3p orbitallerini karşılaştırıyor.",
+    text: "Elektron dizilimi oluşturulurken hangisi önce dolar?",
+    options: [
+      "3p",
+      "3s",
+      "İkisi aynı anda",
+      "4p",
+      "3d"
+    ],
+    correct: 1,
+    explain: "3s orbitali 3p orbitalinden daha düşük enerjilidir ve önce dolar."
+  },
+
+  {
+    context: "Bir atomun elektron dizilimi yazılıyor.",
+    text: "Aşağıdaki sıralamalardan hangisi elektronların yerleşimi için doğrudur?",
+    options: [
+      "1s → 2s → 2p → 3s → 3p",
+      "1s → 2p → 2s → 3p → 3s",
+      "2s → 1s → 2p → 3s → 3p",
+      "1s → 3s → 2s → 2p → 3p",
+      "2p → 2s → 1s → 3s → 3p"
+    ],
+    correct: 0,
+    explain: "Bu temel orbitaller için enerji sırası 1s, 2s, 2p, 3s, 3p şeklindedir."
+  },
+
+  {
+    context: "Bir öğrenci 10 elektronlu bir atomun dizilimini oluşturuyor.",
+    text: "10 elektronlu nötr atomda son elektron hangi alt kabuğa yerleşir?",
+    options: [
+      "1s",
+      "2s",
+      "2p",
+      "3s",
+      "3p"
+    ],
+    correct: 2,
+    explain: "10 elektron için dizilim 1s² 2s² 2p⁶ olur."
+  },
+
+  {
+    context: "Bir atomun elektron dizilimi 1s² 2s² 2p⁶ 3s¹ şeklindedir.",
+    text: "Bu atomun son elektronu hangi alt kabuktadır?",
+    options: [
+      "1s",
+      "2s",
+      "2p",
+      "3s",
+      "3p"
+    ],
+    correct: 3,
+    explain: "Dizilimin son terimi 3s¹ olduğundan son elektron 3s alt kabuğundadır."
+  },
+
+  {
+    context: "Bir öğrenci elektronların enerji sırasını karıştırıyor.",
+    text: "Aşağıdaki orbitallerden hangisi daha düşük enerjilidir?",
+    options: [
+      "3p",
+      "3s",
+      "4s",
+      "3d",
+      "4p"
+    ],
+    correct: 1,
+    explain: "Verilen orbitaller arasında 3s daha düşük enerjilidir."
+  },
+
+  {
+    context: "Bir atomun elektronları temel hâlde yerleştiriliyor.",
+    text: "Elektronların düşük enerjili orbitallerden başlayarak yerleşmesini açıklayan ilke hangisidir?",
+    options: [
+      "Hund kuralı",
+      "Pauli ilkesi",
+      "Aufbau ilkesi",
+      "Belirsizlik ilkesi",
+      "Kütlenin korunumu"
+    ],
+    correct: 2,
+    explain: "Bu açıklama doğrudan Aufbau ilkesine aittir."
+  },
+
+  /* =====================================================
+     4 — PAULİ DIŞLAMA İLKESİ
+     ===================================================== */
+
+  {
+    context: "Bir orbital kutusunda iki elektron gösteriliyor.",
+    text: "Aynı orbitalde bulunan iki elektronun spinleri nasıl olmalıdır?",
+    options: [
+      "Aynı yönde",
+      "Zıt yönde",
+      "Spinleri olmak zorunda değildir",
+      "Biri üç kat büyük olmalıdır",
+      "İkisi de spinsiz olmalıdır"
+    ],
+    correct: 1,
+    explain: "Pauli dışlama ilkesine göre aynı orbitaldeki iki elektronun spinleri zıt yönlü olmalıdır."
+  },
+
+  {
+    context: "Bir öğrenci bir orbital kutusuna üç elektron yerleştirmiştir.",
+    text: "Bu gösterim neden yanlıştır?",
+    options: [
+      "Orbital en fazla 2 elektron alabilir.",
+      "Orbital yalnızca proton alabilir.",
+      "Orbital yalnızca nötron alabilir.",
+      "Elektronlar sadece p orbitallerinde bulunabilir.",
+      "Elektronların kütlesi farklıdır."
+    ],
+    correct: 0,
+    explain: "Bir orbital en fazla iki elektron alabilir."
+  },
+
+  {
+    context: "Bir orbital şemasında aynı kutuda iki elektron aynı yönlü oklarla gösteriliyor.",
+    text: "Bu gösterim hangi ilkeye aykırıdır?",
+    options: [
+      "Aufbau",
+      "Hund",
+      "Pauli dışlama",
+      "Avogadro",
+      "Lavoisier"
+    ],
+    correct: 2,
+    explain: "Aynı orbitaldeki iki elektronun spinleri zıt olmalıdır."
+  },
+
+  {
+    context: "Bir öğrenci Pauli ilkesini açıklıyor.",
+    text: "Aşağıdakilerden hangisi Pauli dışlama ilkesine uygundur?",
+    options: [
+      "Bir orbitalde 3 elektron bulunması",
+      "Bir orbitalde 2 elektronun aynı spinli olması",
+      "Bir orbitalde 2 elektronun zıt spinli olması",
+      "Her orbitalin 4 elektron alması",
+      "Elektronların çekirdekte bulunması"
+    ],
+    correct: 2,
+    explain: "Bir orbitalde en fazla iki elektron bulunabilir ve bunların spinleri zıt olmalıdır."
+  },
+
+  {
+    context: "2s orbitali inceleniyor.",
+    text: "2s orbitaline kaç elektron yerleştiğinde orbital dolmuş olur?",
+    options: [
+      "1",
+      "2",
+      "3",
+      "4",
+      "6"
+    ],
+    correct: 1,
+    explain: "Tek bir orbital en fazla iki elektron içerir."
+  },
+
+  {
+    context: "Bir öğretmen elektronların aynı orbitaldeki durumunu soruyor.",
+    text: "Aşağıdaki ifadelerden hangisi doğrudur?",
+    options: [
+      "Aynı orbitaldeki iki elektronun spinleri mutlaka aynıdır.",
+      "Aynı orbitalde üç elektron bulunabilir.",
+      "Aynı orbitalde en fazla iki elektron bulunur.",
+      "Elektronlar orbitallere kuralsız yerleşir.",
+      "Pauli ilkesi yalnızca d orbitallerinde geçerlidir."
+    ],
+    correct: 2,
+    explain: "Pauli dışlama ilkesi tüm orbitaller için geçerlidir ve bir orbitalde en fazla iki elektron bulunabilir."
+  },
+
+  /* =====================================================
+     5 — HUND KURALI
+     ===================================================== */
+
+  {
+    context: "Bir atomun 2p³ elektron dizilimi inceleniyor.",
+    text: "Hund kuralına göre üç elektron 2p orbitallerine nasıl yerleşmelidir?",
+    options: [
+      "Tek bir orbitalde üç elektron bulunmalıdır.",
+      "Bir orbital çift, biri tek, biri boş olmalıdır.",
+      "Üç orbitalin her birinde birer elektron bulunmalıdır.",
+      "İki orbital boş kalmalıdır.",
+      "Elektronların tamamı aynı orbitale yerleşmelidir."
+    ],
+    correct: 2,
+    explain: "Eş enerjili p orbitalleri önce birer elektronla tek tek doldurulur."
+  },
+
+  {
+    context: "Bir p alt kabuğuna elektronlar yerleştiriliyor.",
+    text: "Hund kuralının temel amacı aşağıdakilerden hangisidir?",
+    options: [
+      "Eş enerjili orbitallerin önce tek tek doldurulmasını sağlamak",
+      "Elektronları çekirdeğe taşımak",
+      "Protonları orbitallere yerleştirmek",
+      "Her orbitalde dört elektron bulunmasını sağlamak",
+      "Elektronları yalnızca s orbitaline yerleştirmek"
+    ],
+    correct: 0,
+    explain: "Hund kuralına göre eş enerjili orbitaller eşleşmeden önce tek tek elektron alır."
+  },
+
+  {
+    context: "2p⁴ elektron dizilimi için orbital şeması hazırlanıyor.",
+    text: "Hund kuralına uygun olarak 2p⁴ nasıl gösterilir?",
+    options: [
+      "↑↓  ↑↓  boş",
+      "↑   ↑   ↑↓",
+      "↑↓  boş  boş",
+      "↑↓  ↑↓  ↑↓",
+      "↑   ↑↓  boş"
+    ],
+    correct: 1,
+    explain: "Önce üç p orbitali birer elektron alır, ardından dördüncü elektron eşleşir."
+  },
+
+  {
+    context: "2p² elektron dizilimi için orbital kutuları çiziliyor.",
+    text: "Hund kuralına göre doğru gösterim hangisidir?",
+    options: [
+      "↑↓  boş  boş",
+      "↑   ↑   boş",
+      "↑↓  ↑   boş",
+      "↑↓  ↑↓  boş",
+      "↑   boş  ↑↓"
+    ],
+    correct: 1,
+    explain: "İki elektron, eş enerjili iki ayrı p orbitaline tek tek yerleşir."
+  },
+
+  {
+    context: "Bir öğrenci 3p³ için ↑↓, ↑, boş şeklinde bir şema çiziyor.",
+    text: "Bu şemanın hatası nedir?",
+    options: [
+      "Pauli ilkesi ihlal edilmiştir.",
+      "3p'de yalnızca iki orbital vardır.",
+      "Hund kuralına göre üç orbital önce birer elektron almalıdır.",
+      "Aufbau nedeniyle 3p hiç dolamaz.",
+      "Elektronların tamamı eşleşmelidir."
+    ],
+    correct: 2,
+    explain: "3p³ için üç eş enerjili p orbitalinin her birinde bir elektron bulunmalıdır."
+  },
+
+  {
+    context: "Eş enerjili orbitallerde elektronların dağılımı inceleniyor.",
+    text: "Aşağıdakilerden hangisi Hund kuralına uygundur?",
+    options: [
+      "↑↓  ↑↓  ↑",
+      "↑↓  ↑↓  boş",
+      "↑   ↑   ↑",
+      "↑↓  boş  boş",
+      "↑↑  ↑   boş"
+    ],
+    correct: 2,
+    explain: "Eş enerjili üç orbitalin önce birer elektronla tek tek dolması Hund kuralına uygundur."
+  },
+
+  /* =====================================================
+     6 — ORBİTAL ENERJİ SIRASI
+     ===================================================== */
+
+  {
+    context: "Elektron dizilimi oluşturuluyor.",
+    text: "Aşağıdaki orbitallerden hangisi diğerlerinden önce dolar?",
+    options: [
+      "3p",
+      "4s",
+      "3d",
+      "4p",
+      "5s"
+    ],
+    correct: 1,
+    explain: "Temel enerji sıralamasında 4s, 3d'den önce gelir."
+  },
+
+  {
+    context: "Bir öğrenci 4s ve 3d orbitallerinin enerji sırasını inceliyor.",
+    text: "Elektron dizilimi oluşturulurken hangisine önce elektron yerleşir?",
+    options: [
+      "3d",
+      "4s",
+      "İkisine aynı anda",
+      "4p",
+      "5s"
+    ],
+    correct: 1,
+    explain: "Elektron yerleşim sırasına göre 4s, 3d'den önce gelir."
+  },
+
+  {
+    context: "Elektronların orbitallere yerleşme sırası yazılıyor.",
+    text: "Aşağıdaki sıralamalardan hangisi doğrudur?",
+    options: [
+      "3p → 4s → 3d",
+      "3d → 4s → 4p",
+      "4s → 3p → 3d",
+      "3p → 3d → 4s",
+      "4p → 4s → 3d"
+    ],
+    correct: 0,
+    explain: "Temel yerleşim sırasına göre 3p'den sonra 4s, ardından 3d gelir."
+  },
+
+  {
+    context: "Bir elektron dizilimi oluşturulurken enerji sırası kontrol ediliyor.",
+    text: "Aşağıdakilerden hangisi elektronların yerleşim sırasının bir parçasıdır?",
+    options: [
+      "1s → 2s → 2p → 3s",
+      "1s → 2p → 2s → 3s",
+      "2s → 1s → 2p → 3p",
+      "2p → 1s → 3s → 2s",
+      "3s → 2p → 2s → 1s"
+    ],
+    correct: 0,
+    explain: "Düşük enerjiden yüksek enerjiye doğru temel sıra 1s, 2s, 2p, 3s şeklindedir."
+  },
+
+  {
+    context: "Bir atomun elektron dizilimi yazılıyor.",
+    text: "Aşağıdaki orbitallerden hangisi 3p'den sonra gelir?",
+    options: [
+      "2p",
+      "3s",
+      "4s",
+      "2s",
+      "1s"
+    ],
+    correct: 2,
+    explain: "Elektron yerleşim sıralamasında 3p'den sonra 4s gelir."
+  },
+
+  /* =====================================================
+     7 — ELEKTRON DİZİLİMİ
+     ===================================================== */
+
+  {
+    context: "Atom numarası 6 olan karbon atomu inceleniyor.",
+    text: "Karbon atomunun temel hâl elektron dizilimi hangisidir?",
+    options: [
+      "1s² 2s² 2p²",
+      "1s² 2s² 2p⁴",
+      "1s² 2p⁴",
+      "1s² 2s¹ 2p³",
+      "1s² 2s² 3p²"
+    ],
+    correct: 0,
+    explain: "Karbonun 6 elektronu vardır: 1s² 2s² 2p²."
+  },
+
+  {
+    context: "Atom numarası 7 olan azot atomu inceleniyor.",
+    text: "Azot atomunun elektron dizilimi hangisidir?",
+    options: [
+      "1s² 2s² 2p³",
+      "1s² 2s² 2p⁵",
+      "1s² 2s¹ 2p⁴",
+      "1s² 2p⁵",
+      "1s² 2s² 3p³"
+    ],
+    correct: 0,
+    explain: "Azotun 7 elektronu vardır: 1s² 2s² 2p³."
+  },
+
+  {
+    context: "Atom numarası 8 olan oksijen atomu inceleniyor.",
+    text: "Oksijen atomunun temel hâl elektron dizilimi hangisidir?",
+    options: [
+      "1s² 2s² 2p²",
+      "1s² 2s² 2p³",
+      "1s² 2s² 2p⁴",
+      "1s² 2s² 2p⁵",
+      "1s² 2p⁶"
+    ],
+    correct: 2,
+    explain: "Oksijenin 8 elektronu vardır: 1s² 2s² 2p⁴."
+  },
+
+  {
+    context: "Atom numarası 9 olan flor atomu inceleniyor.",
+    text: "Flor atomunun elektron dizilimi hangisidir?",
+    options: [
+      "1s² 2s² 2p³",
+      "1s² 2s² 2p⁴",
+      "1s² 2s² 2p⁵",
+      "1s² 2s² 2p⁶",
+      "1s² 2s¹ 2p⁶"
+    ],
+    correct: 2,
+    explain: "Florun 9 elektronu vardır: 1s² 2s² 2p⁵."
+  },
+
+  {
+    context: "Atom numarası 10 olan neon atomu inceleniyor.",
+    text: "Neon atomunun elektron dizilimi hangisidir?",
+    options: [
+      "1s² 2s² 2p⁴",
+      "1s² 2s² 2p⁵",
+      "1s² 2s² 2p⁶",
+      "1s² 2s⁶ 2p²",
+      "1s² 2p⁸"
+    ],
+    correct: 2,
+    explain: "Neonun 10 elektronu vardır: 1s² 2s² 2p⁶."
+  },
+
+  {
+    context: "Atom numarası 11 olan sodyum atomu inceleniyor.",
+    text: "Sodyum atomunun elektron dizilimi hangisidir?",
+    options: [
+      "1s² 2s² 2p⁶ 3s¹",
+      "1s² 2s² 2p⁵ 3s²",
+      "1s² 2s² 2p⁶ 3p¹",
+      "1s² 2s² 2p⁶ 4s¹",
+      "1s² 2s² 2p⁴ 3s³"
+    ],
+    correct: 0,
+    explain: "Sodyumun 11 elektronu vardır: 1s² 2s² 2p⁶ 3s¹."
+  },
+
+  {
+    context: "Atom numarası 12 olan magnezyum atomu inceleniyor.",
+    text: "Magnezyum atomunun elektron dizilimi hangisidir?",
+    options: [
+      "1s² 2s² 2p⁶ 3s¹",
+      "1s² 2s² 2p⁶ 3s²",
+      "1s² 2s² 2p⁶ 3p²",
+      "1s² 2s² 2p⁵ 3s³",
+      "1s² 2s² 2p⁶ 4s²"
+    ],
+    correct: 1,
+    explain: "Magnezyumun 12 elektronu vardır: 1s² 2s² 2p⁶ 3s²."
+  },
+
+  {
+    context: "Atom numarası 13 olan alüminyum atomu inceleniyor.",
+    text: "Alüminyum atomunun son elektronu hangi alt kabuğa yerleşir?",
+    options: [
+      "2s",
+      "2p",
+      "3s",
+      "3p",
+      "4s"
+    ],
+    correct: 3,
+    explain: "Alüminyumun dizilimi 1s² 2s² 2p⁶ 3s² 3p¹ şeklindedir."
+  },
+
+  {
+    context: "Atom numarası 15 olan fosfor atomu inceleniyor.",
+    text: "Fosfor atomunun elektron dizilimi hangisidir?",
+    options: [
+      "1s² 2s² 2p⁶ 3s² 3p¹",
+      "1s² 2s² 2p⁶ 3s² 3p²",
+      "1s² 2s² 2p⁶ 3s² 3p³",
+      "1s² 2s² 2p⁶ 3s² 3p⁴",
+      "1s² 2s² 2p⁶ 3s² 3p⁵"
+    ],
+    correct: 2,
+    explain: "Fosforun 15 elektronu vardır ve dizilimi 1s² 2s² 2p⁶ 3s² 3p³ şeklindedir."
+  },
+
+  {
+    context: "Atom numarası 17 olan klor atomu inceleniyor.",
+    text: "Klor atomunun elektron dizilimi hangisidir?",
+    options: [
+      "1s² 2s² 2p⁶ 3s² 3p³",
+      "1s² 2s² 2p⁶ 3s² 3p⁴",
+      "1s² 2s² 2p⁶ 3s² 3p⁵",
+      "1s² 2s² 2p⁶ 3s² 3p⁶",
+      "1s² 2s² 2p⁶ 3p⁵"
+    ],
+    correct: 2,
+    explain: "Klorun 17 elektronu vardır: 1s² 2s² 2p⁶ 3s² 3p⁵."
+  },
+
+  /* =====================================================
+     8 — ELEKTRON SAYISINDAN ATOM NUMARASI
+     ===================================================== */
+
+  {
+    context: "Bir nötr atomun elektron dizilimi 1s² 2s² 2p⁶ şeklindedir.",
+    text: "Bu atomun atom numarası kaçtır?",
+    options: [
+      "6",
+      "8",
+      "10",
+      "12",
+      "14"
+    ],
+    correct: 2,
+    explain: "Elektron sayısı 2 + 2 + 6 = 10'dur. Nötr atomda elektron sayısı atom numarasına eşittir."
+  },
+
+  {
+    context: "Bir nötr atomun elektron dizilimi 1s² 2s² 2p⁶ 3s¹ şeklindedir.",
+    text: "Bu atomun atom numarası kaçtır?",
+    options: [
+      "9",
+      "10",
+      "11",
+      "12",
+      "13"
+    ],
+    correct: 2,
+    explain: "Toplam elektron sayısı 11'dir. Nötr atomun atom numarası 11 olur."
+  },
+
+  {
+    context: "Bir atomun elektron dizilimi 1s² 2s² 2p⁶ 3s² şeklindedir.",
+    text: "Bu atomun atom numarası kaçtır?",
+    options: [
+      "10",
+      "11",
+      "12",
+      "13",
+      "14"
+    ],
+    correct: 2,
+    explain: "2 + 2 + 6 + 2 = 12 elektron vardır."
+  },
+
+  {
+    context: "Bir nötr atomun elektron dizilimi 1s² 2s² 2p⁶ 3s² 3p² şeklindedir.",
+    text: "Bu atomun atom numarası kaçtır?",
+    options: [
+      "12",
+      "13",
+      "14",
+      "15",
+      "16"
+    ],
+    correct: 2,
+    explain: "Toplam elektron sayısı 14'tür."
+  },
+
+  {
+    context: "Bir nötr atomun son elektronunun 3p alt kabuğuna yerleştiği biliniyor.",
+    text: "Aşağıdaki atomlardan hangisi buna örnek olabilir?",
+    options: [
+      "Neon",
+      "Sodyum",
+      "Magnezyum",
+      "Alüminyum",
+      "Klor"
+    ],
+    correct: 4,
+    explain: "Klorun elektron dizilimi 1s² 2s² 2p⁶ 3s² 3p⁵ şeklindedir."
+  },
+
+  /* =====================================================
+     9 — DEĞERLİK ELEKTRONLARI
+     ===================================================== */
+
+  {
+    context: "Sodyum atomunun elektron dizilimi 1s² 2s² 2p⁶ 3s¹ şeklindedir.",
+    text: "Sodyum atomunun en dış enerji düzeyinde kaç elektron vardır?",
+    options: [
+      "1",
+      "2",
+      "6",
+      "8",
+      "11"
+    ],
+    correct: 0,
+    explain: "En dış enerji düzeyi n=3'tür ve burada 3s¹ bulunduğundan 1 elektron vardır."
+  },
+
+  {
+    context: "Magnezyum atomunun elektron dizilimi 1s² 2s² 2p⁶ 3s² şeklindedir.",
+    text: "Magnezyumun en dış enerji düzeyindeki elektron sayısı kaçtır?",
+    options: [
+      "1",
+      "2",
+      "6",
+      "8",
+      "12"
+    ],
+    correct: 1,
+    explain: "En dış enerji düzeyinde 3s² bulunduğundan 2 elektron vardır."
+  },
+
+  {
+    context: "Klor atomunun elektron dizilimi 1s² 2s² 2p⁶ 3s² 3p⁵ şeklindedir.",
+    text: "Klorun en dış enerji düzeyinde kaç elektron bulunur?",
+    options: [
+      "2",
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    correct: 3,
+    explain: "En dış katmanda 3s² + 3p⁵ = 7 elektron vardır."
+  },
+
+  {
+    context: "Neon atomunun elektron dizilimi 1s² 2s² 2p⁶ şeklindedir.",
+    text: "Neonun en dış enerji düzeyindeki elektron sayısı kaçtır?",
+    options: [
+      "2",
+      "4",
+      "6",
+      "8",
+      "10"
+    ],
+    correct: 3,
+    explain: "İkinci enerji düzeyinde 2s² + 2p⁶ = 8 elektron vardır."
+  },
+
+  {
+    context: "Bir atomun elektron dizilimi 1s² 2s² 2p⁶ 3s² 3p³ şeklindedir.",
+    text: "Bu atomun en dış enerji düzeyindeki elektron sayısı kaçtır?",
+    options: [
+      "3",
+      "4",
+      "5",
+      "6",
+      "8"
+    ],
+    correct: 2,
+    explain: "En dış düzeyde 3s² + 3p³ = 5 elektron bulunur."
+  }
+
+],
   yerbulma: [
     {
       context: "Bir Elektron Diziliminden Adres Bulmak",
