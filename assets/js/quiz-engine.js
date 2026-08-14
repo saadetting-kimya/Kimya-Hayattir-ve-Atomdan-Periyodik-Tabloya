@@ -146,82 +146,142 @@ function normalizeText(text) {
    BENZER SORU BUL
    ========================================================= */
 
-function findSimilarQuestion(
-  wrongQuestion,
-  questions,
-  usedQuestions
-) {
+function findSimilarQuestion(wrongQuestion, usedQuestions) {
 
-  const wrongWords =
-    new Set(
-      normalizeText(
-        `${wrongQuestion.context || ""} ${wrongQuestion.text || ""}`
-      )
-    );
+  const wrongWords = new Set(
+    normalizeText(
+      (wrongQuestion.context || "") +
+      " " +
+      (wrongQuestion.text || "")
+    )
+  );
 
-  let candidates =
-    questions.filter(q => {
+  /*
+   * Önce daha önce hiç gösterilmemiş soruları bul.
+   */
+  let candidates = questions.filter(q => {
 
-      const index =
-        questions.indexOf(q);
+    const index = questions.indexOf(q);
 
-      return !usedQuestions.has(index);
+    // Yanlış yapılan sorunun kendisini tekrar verme
+    if (q === wrongQuestion) return false;
 
-    });
+    // Daha önce gösterilmiş soruları tekrar verme
+    if (usedQuestions.has(index)) return false;
 
-  if (candidates.length === 0) {
-    return null;
-  }
+    return true;
+  });
 
-  candidates =
-    candidates.map(q => {
+  /*
+   * Hiç kullanılmamış soru varsa,
+   * bunların içinden en benzer olanı seç.
+   */
+  if (candidates.length > 0) {
 
-      const words =
-        new Set(
-          normalizeText(
-            `${q.context || ""} ${q.text || ""}`
-          )
-        );
+    candidates = candidates.map(q => {
+
+      const words = new Set(
+        normalizeText(
+          (q.context || "") +
+          " " +
+          (q.text || "")
+        )
+      );
 
       let score = 0;
 
       words.forEach(word => {
-
         if (wrongWords.has(word)) {
           score++;
         }
-
       });
+
+      /*
+       * Aynı context'e ekstra puan.
+       */
+      if (
+        q.context &&
+        wrongQuestion.context &&
+        q.context === wrongQuestion.context
+      ) {
+        score += 10;
+      }
 
       return {
         question: q,
         score
       };
-
     });
 
-  candidates.sort(
-    (a, b) =>
-      b.score - a.score
-  );
+    candidates.sort((a, b) => b.score - a.score);
 
-  const bestScore =
-    candidates[0].score;
+    /*
+     * En yüksek benzerlik puanına sahip sorular
+     * arasından rastgele seç.
+     */
+    const bestScore = candidates[0].score;
 
-  const best =
-    candidates.filter(
-      item =>
-        item.score === bestScore
+    const best = candidates.filter(
+      item => item.score === bestScore
     );
 
-  const selected =
-    best[
-      Math.floor(
-        Math.random() * best.length
-      )
-    ];
+    const selected =
+      best[Math.floor(Math.random() * best.length)];
 
-  return selected.question;
+    return selected.question;
+  }
+
+  /*
+   * Buraya geldiysek havuzdaki bütün sorular
+   * daha önce kullanılmış demektir.
+   *
+   * Yanlış sorunun kendisi hariç,
+   * havuzdaki en benzer soruyu bul.
+   *
+   * Böylece uygulama hiçbir zaman gereksiz yere
+   * "başka soru yok" demeyecek.
+   */
+  let fallback = questions
+    .filter(q => q !== wrongQuestion)
+    .map(q => {
+
+      const words = new Set(
+        normalizeText(
+          (q.context || "") +
+          " " +
+          (q.text || "")
+        )
+      );
+
+      let score = 0;
+
+      words.forEach(word => {
+        if (wrongWords.has(word)) {
+          score++;
+        }
+      });
+
+      if (
+        q.context &&
+        wrongQuestion.context &&
+        q.context === wrongQuestion.context
+      ) {
+        score += 10;
+      }
+
+      return {
+        question: q,
+        score
+      };
+    });
+
+  if (fallback.length === 0) {
+    return null;
+  }
+
+  fallback.sort((a, b) => b.score - a.score);
+
+  return fallback[0].question;
 }
 
 /* =========================================================
@@ -440,25 +500,18 @@ export function renderQuiz(
         usedQuestions
       );
 
-    if (!similar) {
+   if (!similar) {
 
-      const feedback =
-        card.querySelector(
-          ".qfeedback"
-        );
+  card.querySelector(
+    ".qfeedback"
+  ).innerHTML += `
+    <div class="similar-none">
+      Bu modülün soru havuzunda yeni soru kalmadı.
+    </div>
+  `;
 
-      feedback.innerHTML += `
-
-        <div class="similar-none">
-
-          Bu konu için başka soru kalmadı.
-
-        </div>
-
-      `;
-
-      return;
-    }
+  return;
+}
 
     const similarIndex =
       questions.indexOf(
