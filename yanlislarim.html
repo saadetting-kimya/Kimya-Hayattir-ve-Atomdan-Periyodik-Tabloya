@@ -1,1 +1,71 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
+<title>AtomLab 9 — Yanlışlarım</title>
+
+<meta name="description"
+content="AtomLab 9 — Öğrencinin yanlış yaptığı sorular." />
+
+<link rel="stylesheet"
+href="assets/css/style.css?v=1" />
+</head>
+
+<body>
+
+<div id="nav-root"></div>
+
+<main>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="section-head">
+
+        <span class="eyebrow">
+          Kişisel Tekrar Alanın
+        </span>
+
+        <h1>❌ Yanlışlarım</h1>
+
+        <p>
+          Testlerde yanlış yaptığın soruları burada tekrar
+          inceleyebilir, doğru cevapları ve açıklamaları görebilirsin.
+        </p>
+
+      </div>
+
+      <div id="wrong-questions-root"></div>
+
+    </div>
+  </section>
+
+</main>
+
+<div id="footer-root"></div>
+
+<script type="module">
+
+  import {
+    mountNav,
+    mountFooter
+  } from "./assets/js/nav.js?v=1";
+
+  import {
+    renderWrongQuestions
+  } from "./assets/js/wrong-questions.js?v=1";
+
+  mountNav("wrong");
+
+  mountFooter();
+
+  renderWrongQuestions(
+    document.getElementById("wrong-questions-root")
+  );
+
+</script>
+
+</body>
+</html>
