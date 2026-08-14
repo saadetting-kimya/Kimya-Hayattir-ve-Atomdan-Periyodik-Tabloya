@@ -560,3 +560,39 @@ footer a{ color:var(--gas-dark); text-decoration:none; font-weight:700; }
 .orbital3d-legend .lg{ display:flex; align-items:center; gap:6px; }
 .orbital3d-legend .sw{ width:13px; height:13px; border-radius:4px; }
 .dnd-bin .dnd-chip.wrong{ background:rgba(229,72,77,.14); border-color:var(--bad); color:var(--bad); }
+/* ---------------------------------------------------------
+   QUIZ — TEKRAR DÜŞÜN BUTONU
+   --------------------------------------------------------- */
+
+.qretry {
+  margin-top: 16px;
+}
+
+.quiz-retry-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 12px 18px;
+
+  border: 0;
+  border-radius: 12px;
+
+  background: #5b4ce2;
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.quiz-retry-btn:hover {
+  opacity: 0.9;
+}
+
+.quiz-retry-btn:active {
+  transform: scale(0.97);
+}
