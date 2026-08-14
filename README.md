@@ -78,14 +78,19 @@ Ardından `http://localhost:8000/index.html` adresini açın.
 
 ## Ders Defterini yeniden üretme
 
-`defter/index.html`, tarayıcıda "Yazdır / PDF Kaydet" düğmesiyle veya komut satırından
-headless Chromium ile PDF'e dönüştürülebilir:
+`defter/index.html`, tarayıcıda "Yazdır / PDF Kaydet" düğmesiyle elle PDF'e
+dönüştürülebilir (sayfa numarası içermez — tarayıcının kendi baskı diyaloğu
+özel altbilgi şablonunu desteklemez).
+
+**Gerçek sayfa numaralı** resmî PDF ise `tools/build-pdf.js` ile üretilir. Düz
+`chromium --print-to-pdf` komutu yalnızca Chrome'un varsayılan, özelleştirilemeyen
+başlık/altbilgisini destekler (dosya yolunu çirkin biçimde yazar, punto/etiket
+ayarlanamaz); bu yüzden sayfa numaraları Playwright üzerinden CDP'nin
+`footerTemplate` mekanizmasıyla, her fiziksel sayfada güvenilir biçimde üretilir:
 
 ```bash
-chromium --headless --disable-gpu --no-sandbox \
-  --print-to-pdf="Kimya 9 Ders Defteri.pdf" \
-  --print-to-pdf-no-header --no-pdf-header-footer \
-  "file://$(pwd)/defter/index.html"
+npm install
+npm run build:pdf   # Kimya 9 Ders Defteri.pdf'i defter/index.html'den yeniden üretir
 ```
 
 ## Kaynak

@@ -1,0 +1,11 @@
+{
+  "name": "kimya-9-ders-defteri",
+  "private": true,
+  "description": "AtomLab 9 sitesi bağımlılıksızdır; bu package.json yalnızca Ders Defteri PDF'ini (gerçek sayfa numaralarıyla) yeniden üretmek için kullanılan tools/build-pdf.js betiğinin bağımlılığını (Playwright) tutar.",
+  "scripts": {
+    "build:pdf": "node tools/build-pdf.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.56.1"
+  }
+}
