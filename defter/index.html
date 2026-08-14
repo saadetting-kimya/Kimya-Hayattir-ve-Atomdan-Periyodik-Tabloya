@@ -37,7 +37,7 @@
     .page.cover{ min-height:calc(297mm - 32mm); }
     .footer-tag{ left:0; right:0; bottom:0; }
     .noprint{ display:none !important; }
-    .soru, .box, .baglam, .kavramlar-list, .lo-box, .draw-box, .draw-row, .ca-item, .ca-unit h4,
+    .soru, .box, .baglam, .kavramlar-list, .lo-box, .draw-box, .draw-row, .ca-item, .ca-unit, .depo-wrap,
     table.wk, table.usage, table.depo-matrix{
       break-inside:avoid; page-break-inside:avoid;
     }
@@ -50,6 +50,7 @@
     .konu-h{ break-after:avoid; page-break-after:avoid; }
     .sorular-h{ break-after:avoid; page-break-after:avoid; }
     .wlbl{ break-after:avoid; page-break-after:avoid; }
+    .kavramlar-list dt{ break-inside:avoid; page-break-inside:avoid; }
   }
   h1,h2,h3,h4{ font-family: Arial, Helvetica, sans-serif; font-weight:800; color:var(--ink); margin:0 0 .4em; }
   p{ margin:0 0 .6em; }
@@ -91,6 +92,13 @@
   h3.konu-h{ font-size:16px; border-bottom:2px solid var(--ink); padding-bottom:3px; margin-top:16px; }
   h4.alt-h{ font-family:Arial,sans-serif; font-size:13px; margin-top:12px; color:var(--accent); }
 
+  /* ---- İki sütunlu dizgi (defter ailesindeki diğer kitaplarla tutarlı) ----
+     CSS Grid yerine multi-column (columns) kullanılır: konu anlatımı bir üniteyi
+     tek .page div'i olarak akışkan biçimde birden fazla fiziksel sayfaya
+     taşabildiğinden, Grid öğeleri sayfa sınırında güvenilir bölünmez (taşma/boş
+     sayfa hatası riski); multi-column ise içeriği sütun sütun, sayfa kırılımına
+     uygun şekilde akıtır. */
+  .konu-cols, .sorular-cols, .ca-cols{ columns:2; column-gap:10mm; }
   .box{ border-radius:6px; padding:10px 12px; margin:10px 0; font-family:Arial,sans-serif; font-size:11.8px; }
   .box .lbl{ font-weight:800; font-size:10px; text-transform:uppercase; letter-spacing:.05em; margin-bottom:5px; display:flex; align-items:center; gap:5px; }
   .kavram{ border:2px solid var(--accent); background:#f5f4fd; }
@@ -104,8 +112,8 @@
   .notlarim{ border:1.5px dashed #8a8ea8; min-height:56px; background:repeating-linear-gradient(#fff,#fff 20px,#e7e9f3 21px); }
   .notlarim .lbl{ color:#5a5e78; }
 
-  .kavramlar-list{ border:1px solid var(--line); border-radius:6px; padding:9px 12px; margin:10px 0; font-family:Arial,sans-serif; font-size:11.5px; background:#fafafe; }
-  .kavramlar-list .lbl{ font-weight:800; font-size:10px; text-transform:uppercase; color:#5a5e78; margin-bottom:5px; }
+  .kavramlar-list{ border:1px solid var(--line); border-radius:6px; padding:9px 12px; margin:10px 0; font-family:Arial,sans-serif; font-size:11.5px; background:#fafafe; columns:2; column-gap:10mm; }
+  .kavramlar-list .lbl{ font-weight:800; font-size:10px; text-transform:uppercase; color:#5a5e78; margin-bottom:5px; column-span:all; }
   .kavramlar-list dt{ font-weight:800; margin-top:5px; }
   .kavramlar-list dd{ margin:0 0 2px; color:var(--ink-soft); }
 
@@ -253,6 +261,7 @@
   </div>
 
   <h3 class="konu-h">Konu Anlatımı</h3>
+  <div class="konu-cols">
   <p>Sabah yüzünü yıkamandan akşam telefonunu şarj etmene kadar geçen her an, aslında görünmez bir kimya laboratuvarındasın. El ve yüz temizlemede kullanılan su ve sabun, hastalıklarla mücadelede kullanılan ilaçlar, bilgisayardaki silisyum çipi, günümüzde önemli bir sorun hâline gelen plastik atıkların giderilmesi — bu örneklerin tamamı kimyasal maddeleri ve olayları içerir. Kimya bilimi; temizlik, ilaç, gıda, enerji ve tarım gibi pek çok sektörü etkiler ve insanların maddeleri nasıl etkileşime geçirebileceğini, bu süreçlerin günlük hayatta nasıl uygulanabileceğini anlamalarına yardımcı olur.</p>
   <p>Bilgisayarların işlemesi, telefonların şarj olması ve televizyon ekranlarının ışıldaması gibi olaylar, atomun yapısındaki elektronların hareketine dayanır — bu defterin ikinci bölümünde (Ünite 5-8) tam olarak bu atom yapısını inceleyeceksin. Kimya bilgisi, doğada hayatta kalma becerilerini bile güçlendirir: kolonya, aseton veya yağ gibi maddeler yanıcı özellikleri sayesinde ateş yakmakta kullanılabilir; çakıl-kum-kömür katmanlarından geçirilen su, fiziksel bir süzme işlemiyle temizlenebilir.</p>
 
@@ -272,6 +281,7 @@
     <div class="cevap-satir"></div><div class="cevap-satir"></div><div class="cevap-satir"></div>
   </div>
 
+  </div>
   <div class="worksheet">
     <div class="wlbl">📱 Uygulamada Dene — Modül 1 (2 Etkinlik)</div>
     <p><b>1) Sınıflandırma Etkinliği —</b> AtomLab 9'un 1. modülünde "Kimyasal Maddeleri Kullanım Alanına Göre Grupla" etkinliğini tamamla (en az 15 madde). Sonra uygulamada geçmeyen, kendi hayatından iki örnek daha bul ve doğru kategoriyi yaz.</p>
@@ -305,6 +315,7 @@
   </div>
 
   <div class="sorular-h">SORULAR</div>
+  <div class="sorular-cols">
   <div class="soru"><span class="no">1.</span> <span class="tip">Açık Uçlu</span> Kimyanın günlük hayata katkısını, en az iki farklı sektörden (temizlik, ilaç, gıda, enerji, tarım) örnek vererek açıkla.
     <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
   <div class="soru"><span class="no">2.</span> <span class="tip">Açık Uçlu</span> Bir ürünün (örneğin bir temizlik malzemesinin) etiketindeki içerik bilgisi, o ürünü güvenle kullanmana nasıl yardımcı olur?
@@ -348,6 +359,7 @@
   <div class="soru"><span class="no">10.</span> b) Yağın ateşe eklenmesiyle kolonyanın ateşe eklenmesi arasındaki farkı, ikisinin de "yanıcı" olmasına rağmen neden birinin daha hızlı, diğerinin daha uzun süre yandığını tartışarak açıkla.
     <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
 
+  </div>
   <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Ünite 1 — KİM.9.1.1</span></div>
 </div>
 
@@ -366,6 +378,7 @@
   </div>
 
   <h3 class="konu-h">Konu Anlatımı</h3>
+  <div class="konu-cols">
   <p>Kimya, gündelik yaşamın her alanında etkilidir; besin maddelerinden tarımda kullanılan gübrelere, çamaşır deterjanlarından şampuanlara kadar birçok ürün kimyanın etkisi altındadır. Bu geniş kapsamlı bilim dalı altı ana alt disipline ayrılır: maddelerin bileşenlerini ve miktarlarını belirleyen <b>analitik kimya</b> (nitel/nicel analiz), canlı organizmalardaki tepkimeleri inceleyen <b>biyokimya</b>, karbon bileşiklerini inceleyen (ve bileşik çeşitliliği nedeniyle kimyanın en geniş alanı olan) <b>organik kimya</b>, karbon içermeyen bileşikleri (asit, baz, tuz, metal, mineral) inceleyen <b>anorganik kimya</b>, kimyasal sistemlerin fiziksel faktörlere (sıcaklık, basınç, derişim) bağlı davranışını ve enerji dönüşümlerini inceleyen <b>fizikokimya</b>, ve büyük moleküllerin (makromoleküllerin) kimyasını inceleyen <b>polimer kimyası</b>.</p>
   <p>Bu disiplinler birbirinden kopuk değildir; gerçek bir problem çoğu zaman birden fazla disiplinin bir arada kullanılmasını gerektirir. Örneğin yeni bir ilaç geliştirmek hem organik kimya (molekülün sentezi), hem biyokimya (vücuttaki etkisi), hem de analitik kimya (saflık ve doz kontrolü) bilgisini aynı anda kullanır.</p>
 
@@ -385,6 +398,7 @@
     <div class="cevap-satir"></div><div class="cevap-satir"></div><div class="cevap-satir"></div>
   </div>
 
+  </div>
   <div class="worksheet short-worksheet">
     <div class="wlbl">📱 Uygulamada Dene — Modül 2</div>
     <p>Uygulamada altı disiplin kartını çevirerek incele, sonra "Örneği Doğru Disipline Eşleştir" etkinliğini tamamla. Her disiplin için uygulamada gördüğün bir örneği ve kendi bulduğun yeni bir örneği tabloya yaz.</p>
@@ -408,6 +422,7 @@
   </div>
 
   <div class="sorular-h">SORULAR</div>
+  <div class="sorular-cols">
   <div class="soru"><span class="no">1.</span> <span class="tip">Açık Uçlu</span> Analitik kimyayı, nitel ve nicel analiz kavramlarını kullanarak kendi cümlelerinle tanımla.
     <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
   <div class="soru"><span class="no">2.</span> <span class="tip">Açık Uçlu</span> Organik kimyanın neden "kimyanın en geniş alanı" olarak nitelendirildiğini açıkla.
@@ -449,6 +464,7 @@
   <div class="soru"><span class="no">10.</span> b) Bozunma sırasında açığa çıkan bileşenlerin miktarının ve türünün belirlenmesi hangi disiplinle ilişkilidir? Gerekçelendir.
     <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
 
+  </div>
   <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Ünite 2 — KİM.9.1.2</span></div>
 </div>
 
@@ -467,6 +483,7 @@
   </div>
 
   <h3 class="konu-h">Konu Anlatımı</h3>
+  <div class="konu-cols">
   <p>Kimya bilimi; ürettiği bilgi ve yöntemlerle çeşitli maddelerin özelliklerinin belirlenmesine ve günlük hayattaki kullanım alanlarının anlaşılmasına yardımcı olur. Kimya teknolojisi ön lisans programlarını tamamlayanlar <b>kimya teknikeri</b> unvanı alarak laboratuvar teknikeri, kalite kontrol analisti gibi pozisyonlarda çalışabilir. Üniversitelerin dört yıllık lisans programları (kimya, kimya mühendisliği, polimer malzeme mühendisliği, kimya öğretmenliği) ise sırasıyla <b>kimyager</b>, <b>kimya mühendisi</b>, <b>polimer malzeme mühendisi</b> ve <b>kimya öğretmeni</b> unvanlarına yol açar.</p>
   <p>Kimya bilgisiyle çalışılabilecek sekiz temel sektör şunlardır: <b>kimya endüstrisi</b> (boya, plastik, deterjan üretimi), <b>agronomi ve tarım</b> (gübre, pestisit), <b>sağlık ve biyoteknoloji</b> (adli kimya, ilaç geliştirme), <b>malzeme ve nanoteknoloji</b>, <b>çevre ve sürdürülebilirlik</b> (atık yönetimi, su arıtma), <b>eğitim ve akademik çalışma</b>, <b>enerji sektörü</b> (pil teknolojileri) ve <b>gıda ve içecek endüstrisi</b> (moleküler gastronomi dâhil). Kariyer planlaması dört basamaklı bir döngüdür: kişisel özellikleri tanıma (öz farkındalık), fırsatları araştırma, karar verip plan yapma ve planı uygulama.</p>
 
@@ -486,6 +503,7 @@
     <div class="cevap-satir"></div><div class="cevap-satir"></div><div class="cevap-satir"></div>
   </div>
 
+  </div>
   <div class="worksheet short-worksheet">
     <div class="wlbl">📱 Uygulamada Dene — Modül 3</div>
     <p>Uygulamada sekiz kariyer sektörü kartını incele. En çok ilgini çeken üç sektörü seç; her biri için hangi görevde çalışmak isteyebileceğini ve kariyer planlama döngüsünün hangi basamağında olduğunu yaz.</p>
@@ -505,6 +523,7 @@
   </div>
 
   <div class="sorular-h">SORULAR</div>
+  <div class="sorular-cols">
   <div class="soru"><span class="no">1.</span> <span class="tip">Açık Uçlu</span> Kimya teknikeri ile kimyager arasındaki eğitim düzeyi farkını açıkla.
     <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
   <div class="soru"><span class="no">2.</span> <span class="tip">Açık Uçlu</span> Kariyer planlama döngüsünün dört basamağını sırasıyla yaz ve her birini bir cümleyle açıkla.
@@ -546,6 +565,7 @@
   <div class="soru"><span class="no">10.</span> b) Öğrencinin ilgi duyduğu iki alan (gıda analizi, nanomalzeme geliştirme) hangi kariyer sektörleriyle eşleşir?
     <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
 
+  </div>
   <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Ünite 3 — KİM.9.1.3</span></div>
 </div>
 
@@ -564,10 +584,11 @@
   </div>
 
   <h3 class="konu-h">Konu Anlatımı</h3>
+  <div class="konu-cols">
   <p>Kimyasal maddeler tarım, ilaç ve temizlik gibi birçok sektörde yaygın kullanılır ancak bu kullanım güvenlik risklerini de beraberinde getirir. Laboratuvarda uyulması gereken temel kurallardan bazıları şunlardır: kimyasal maddeler yakından koklanmaz, tadına bakılmaz; sıvılar pipetle aktarılırken kesinlikle puar kullanılır, asla ağızla çekilmez; asit çözeltisi hazırlanırken asit, baget yardımıyla yavaşça suyun içine dökülür (tersi değil); kimyasal madde cilde/göze temas ederse bölge en az 15 dakika bol suyla yıkanır.</p>
   <p>Kimyasal madde etiketlerinde bulunan sağlık ve güvenlik işaretlerine <b>risk piktogramları</b> denir; bunlar arasında patlayıcı, oksitleyici, zehirli, yanıcı/parlayıcı, korozif, tahriş edici, çevreye zararlı, sağlığa zararlı, gaz ve radyoaktif maddeler piktogramları bulunur. <b>Kimyasal depolama matrisi</b>, hangi maddelerin birlikte depolanabileceğini belirleyen bir plan sistemidir — örneğin su ile temas ettiğinde alevlenen maddeler nemli ortamlardan uzak tutulmalıdır. Çamaşır suyu (NaClO) ile tuz ruhu (HCl) gibi farklı temizlik ürünlerinin karıştırılması, zehirli klor gazı gibi tehlikeli sonuçlar doğurabilir; bu yüzden temizlik ürünleri asla gelişigüzel karıştırılmamalıdır.</p>
 
-  <div style="text-align:center; margin:10px 0">
+  <div class="depo-wrap" style="text-align:center; margin:10px 0">
     <table class="depo-matrix">
       <tr><th></th><th>YAN</th><th>PAT</th><th>ZEH</th><th>OKS</th><th>GAZ</th><th>TAH</th><th>SAĞ</th><th>KOR</th><th>ÇEV</th></tr>
       <tr><th>YAN</th><td class="ok">✓</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="water">!</td><td class="water">!</td><td class="no">✗</td><td class="no">✗</td></tr>
@@ -605,6 +626,7 @@
     <div class="cevap-satir"></div><div class="cevap-satir"></div><div class="cevap-satir"></div>
   </div>
 
+  </div>
   <div class="worksheet">
     <div class="wlbl">📱 Uygulamada Dene — Modül 4 (3 Etkinlik)</div>
     <p><b>1) Güvenlik Senaryosu Simülatörü —</b> Uygulamada en az 4 farklı madde kombinasyonunu "karıştır"; sonucu tabloya yaz.</p>
@@ -639,6 +661,7 @@
   </div>
 
   <div class="sorular-h">SORULAR</div>
+  <div class="sorular-cols">
   <div class="soru"><span class="no">1.</span> <span class="tip">Açık Uçlu</span> Sıvı kimyasalların pipetle aktarılmasında puar kullanılmasının nedenini açıkla.
     <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
   <div class="soru"><span class="no">2.</span> <span class="tip">Açık Uçlu</span> Asit çözeltisi hazırlarken izlenmesi gereken doğru sırayı, nedeniyle birlikte açıkla.
@@ -684,6 +707,7 @@
   <div class="soru"><span class="no">10.</span> b) Yüzüne sıçrama olan kişinin uygulaması gereken ilk yardım adımı nedir?
     <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
 
+  </div>
   <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Ünite 4 — KİM.9.1.4</span></div>
 </div>
 
@@ -702,6 +726,7 @@
   </div>
 
   <h3 class="konu-h">Konu Anlatımı</h3>
+  <div class="konu-cols">
   <p>Atom modeli, 120 yılda beş kez değişti — her seferinde eski model tamamen "yanlış" olduğu için değil, yeni bir kanıtı açıklayamadığı için geliştirildi. <b>Dalton (1803)</b>: atom, bölünemez ve içi dolu bir küredir. <b>Thomson (1897)</b>: katot ışını deneyleriyle elektron keşfedildi; atom, pozitif yüklü bir hamur içine gömülü elektronlardan oluşan bir küre olarak tasvir edildi. <b>Rutherford (1911)</b>: altın yaprak deneyinde alfa parçacıklarının bir kısmının büyük açılarla geri sekmesi, pozitif yükün küçük ve yoğun bir çekirdekte toplandığını gösterdi. <b>Bohr (1913)</b>: elektronlar çekirdek etrafında belirli enerji seviyelerinde (yörüngelerde) hareket eder; enerji soğurunca üst seviyeye çıkar (absorbsiyon), enerji yayarak alt seviyeye iner (emisyon). <b>Modern/Kuantum Model (1926)</b>: Heisenberg belirsizlik ilkesine göre elektronun konumu ve hızı aynı anda kesin bilinemez; elektronlar belirli yörüngelerde değil, bulunma olasılığının yüksek olduğu üç boyutlu bölgelerde (orbitallerde) tanımlanır.</p>
   <p>Atomun temel tanecikleri proton ve nötron (çekirdekte) ile elektrondur (çekirdek dışında). Elektron ve protonun yük büyüklüğü aynıdır (sırasıyla -1 ve +1 bağıl yük); nötron nötrdür. Bir proton/nötronun kütlesi bir elektronunkinden yaklaşık 1836 kat fazladır. Nötr bir atomda proton sayısı elektron sayısına eşittir; proton sayısı elementin <b>atom numarasını (Z)</b> belirler.</p>
   <p>Bohr'un modeline giden yol, Newton'un güneş ışığını bir prizmadan geçirip bütün renklerin (kırmızıdan mora, aralıksız) ortaya çıktığını göstermesiyle başlar — buna <b>sürekli spektrum</b> denir. Ancak bir gaz (örneğin hidrojen) enerjiyle uyarılıp yaydığı ışık aynı şekilde bir prizmadan geçirilirse, ortaya TÜM renkler değil yalnızca BELİRLİ birkaç renk (dalga boyu) çıkar; buna <b>kesikli (çizgi) spektrum</b> denir. Bu fark, enerjinin atom içinde her değeri değil yalnızca belirli (kuantumlanmış) seviyeleri alabildiğinin ilk kanıtıydı ve Bohr'u katman modeline götürdü.</p>
@@ -722,6 +747,7 @@
     <div class="cevap-satir"></div><div class="cevap-satir"></div><div class="cevap-satir"></div>
   </div>
 
+  </div>
   <div class="worksheet">
     <div class="wlbl">📱 Uygulamada Dene — Modül 5 (4 Etkinlik)</div>
     <p><b>1) Atom Modelleri Zaman Tüneli —</b> Uygulamada her modele tıkla; kutuya kendi çizimini yap (küre, üzümlü kek, çekirdek+boşluk, katmanlı, bulut gibi), sonra varsayımını ve hangi kanıtla aşıldığını tabloya özetle.</p>
@@ -777,6 +803,7 @@
   </div>
 
   <div class="sorular-h">SORULAR</div>
+  <div class="sorular-cols">
   <div class="soru"><span class="no">1.</span> <span class="tip">Açık Uçlu</span> Thomson modelinin, Dalton modelinden farkını açıkla.
     <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
   <div class="soru"><span class="no">2.</span> <span class="tip">Açık Uçlu</span> Bohr modelinin çok elektronlu atomlarda neden yetersiz kaldığını açıkla.
@@ -818,6 +845,7 @@
   <div class="soru"><span class="no">10.</span> b) Atom teorileri tarihinden, bu duruma benzer bir örnek vererek karşılaştır.
     <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
 
+  </div>
   <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Ünite 5 — KİM.9.1.5</span></div>
 </div>
 
@@ -836,6 +864,7 @@
   </div>
 
   <h3 class="konu-h">Konu Anlatımı</h3>
+  <div class="konu-cols">
   <p>Modern atom teorisine göre elektronun bulunma olasılığının yüksek olduğu üç boyutlu bölgeye <b>orbital</b> denir. Orbital türleri s, p, d ve f'dir: s orbitali küre şeklindedir ve her enerji seviyesinde bulunur; p orbitalleri 2. enerji seviyesinden, d orbitalleri 3.'ten, f orbitalleri 4.'ten itibaren bulunur. Çok elektronlu atomlarda orbitallerin bağıl enerji sıralaması genellikle şöyledir: <b>1s &lt; 2s &lt; 2p &lt; 3s &lt; 3p &lt; 4s &lt; 3d &lt; 4p &lt; 5s &lt; 4d &lt; 5p &lt; 6s &lt; 4f …</b></p>
   <p>Bu sıralamayı ezberlemenin klasik yolu <b>diyagonal kural</b> diyagramıdır: alt kabuklar katmana (satır) ve türe (sütun: s, p, d) göre bir ızgaraya yazılır, sonra sağ üstten sol alta doğru çapraz çizgiler çekilip izlenir. Aşağıdaki tabloda her kutunun sağ üst köşesindeki küçük sayı, o alt kabuğun dolum sırasındaki yerini gösterir:</p>
   <table class="wk" style="max-width:280px">
@@ -869,6 +898,7 @@
     <div class="cevap-satir"></div><div class="cevap-satir"></div><div class="cevap-satir"></div>
   </div>
 
+  </div>
   <div class="worksheet">
     <div class="wlbl">📱 Uygulamada Dene — Modül 6 (6 Etkinlik)</div>
     <p><b>1) Önce Sırala: Orbitaller Hangi Sırayla Dolar? —</b> Uygulamada 8 orbitali (1s, 2s, 2p, 3s, 3p, 4s, 3d, 4p) tıklayarak artan enerji sırasına diz, "Kontrol Et" ile doğrula. Doğru sıralamayı aşağıya yaz.</p>
@@ -938,6 +968,7 @@
   </div>
 
   <div class="sorular-h">SORULAR</div>
+  <div class="sorular-cols">
   <div class="soru"><span class="no">1.</span> <span class="tip">Açık Uçlu</span> Aufbau ilkesini kendi cümlelerinle tanımla ve bir örnekle göster.
     <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
   <div class="soru"><span class="no">2.</span> <span class="tip">Açık Uçlu</span> Pauli dışlama ilkesine göre bir orbitaldeki iki elektronun neden zıt spinli olması gerektiğini açıkla.
@@ -981,6 +1012,7 @@
   <div class="soru"><span class="no">10.</span> b) Karbon atomunun 2p orbitallerindeki doğru elektron dağılımını yaz ve gerekçelendir.
     <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
 
+  </div>
   <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Ünite 6 — KİM.9.1.6</span></div>
 </div>
 
@@ -999,6 +1031,7 @@
   </div>
 
   <h3 class="konu-h">Konu Anlatımı</h3>
+  <div class="konu-cols">
   <p>Mendeleyev 1869'da elementleri kütle numaralarına göre sıralayıp henüz keşfedilmemiş elementlerin yerini boş bırakan ilk periyodik tabloyu oluşturdu; Henry Moseley'nin önerisiyle günümüzde elementler <b>atom numarasına</b> göre sıralanır. Bir elementin periyodik tablodaki "adresi" elektron diziliminden okunabilir: <b>(A grubu)</b> elektron diziliminin en yüksek temel enerji düzeyi (n) periyot numarasını, dizilim s veya p ile bitiyorsa en yüksek enerji düzeyindeki toplam elektron sayısı grup numarasını verir. <b>(B grubu)</b> dizilim d ile bitiyorsa, en son ns ve (n-1)d orbitallerindeki toplam elektron sayısı grup numarasını verir (ns²(n-1)d⁶,⁷,⁸ → 8B; toplam 11 → 1B; toplam 12 → 2B).</p>
   <p>A grubu elementlerine <b>baş grup (ana grup)</b>, B grubu elementlerine <b>yan grup</b> elementleri denir. s ile bitenler s blok, p ile bitenler p blok, d ile bitenler d blok (geçiş metalleri), f ile bitenler f blok (iç geçiş metalleri: lantanit/aktinit) olarak adlandırılır. Grupların özel adları: 1A alkali metaller (H hariç), 2A toprak alkali metaller, 3A toprak metalleri, 7A halojenler, 8A soy gazlar. Atomlar kararlı bir soy gaz dizilimine ulaşmak için elektron alıp verir: en yüksek enerji düzeyindeki elektronları verince <b>katyon</b>, elektron alınca <b>anyon</b> oluşur. Aynı elektron sayısına/dizilimine sahip tanecikler <b>izoelektronik</b> olarak adlandırılır (örn. Ne, F⁻, Na⁺ — hepsi 10 elektronlu).</p>
 
@@ -1018,6 +1051,7 @@
     <div class="cevap-satir"></div><div class="cevap-satir"></div><div class="cevap-satir"></div>
   </div>
 
+  </div>
   <div class="worksheet short-worksheet">
     <div class="wlbl">📱 Uygulamada Dene — Modül 7</div>
     <p>Uygulamadaki tam periyodik tabloda aşağıdaki elementlere tıkla; elektron dizilimini önce sen tahmin et, sonra uygulamayla kontrol edip periyot/grup adresini yaz.</p>
@@ -1038,6 +1072,7 @@
   </div>
 
   <div class="sorular-h">SORULAR</div>
+  <div class="sorular-cols">
   <div class="soru"><span class="no">1.</span> <span class="tip">Açık Uçlu</span> Bir elementin periyot numarasını elektron diziliminden nasıl bulacağını açıkla.
     <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
   <div class="soru"><span class="no">2.</span> <span class="tip">Açık Uçlu</span> A grubu ile B grubu elementlerinin grup numarasını bulma kuralları arasındaki farkı açıkla.
@@ -1079,6 +1114,7 @@
   <div class="soru"><span class="no">10.</span> b) Proton sayısı 9, 10 ve 11 olan üç taneciğin bu grupta hangi tanecikler (atom/iyon) olabileceğini belirle.
     <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
 
+  </div>
   <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Ünite 7 — KİM.9.1.7</span></div>
 </div>
 
@@ -1097,6 +1133,7 @@
   </div>
 
   <h3 class="konu-h">Konu Anlatımı</h3>
+  <div class="konu-cols">
   <p><b>Atom yarıçapı</b>, bir grupta yukarıdan aşağıya inildikçe artar (enerji seviyesi/katman sayısı arttığı için en dış elektron çekirdekten uzaklaşır); bir periyotta soldan sağa gidildikçe azalır (elektronlar aynı katmana eklenirken artan çekirdek yükü onları daha güçlü çeker). <b>İyonlaşma enerjisi</b> (gaz hâlindeki nötr bir atomdan elektron koparmak için gereken enerji) tam ters yönde değişir: grupta aşağı inildikçe azalır, periyotta sağa gidildikçe artar. 2A ve 5A gruplarındaki elementlerin iyonlaşma enerjisi, kendilerinden sonraki gruptan yüksektir — çünkü tam dolu (ns²) veya yarı dolu (np³) alt kabuklar ekstra kararlılık sağlar. Bir elementin art arda ölçülen iyonlaşma enerjileri (İE₁, İE₂, İE₃…) her zaman artar; ancak valans elektronlar tükenip bir alt (dolu, kararlı) enerji seviyesinden elektron koparılmaya başlanınca değerde büyük bir <b>sıçrama</b> gözlenir.</p>
   <p><b>Elektronegatiflik</b> (bir atomun bağ elektronlarını kendine çekme gücü, 0-4 arası Pauling ölçeğinde), atom yarıçapıyla ters, iyonlaşma enerjisiyle aynı yönde değişir: periyotta soldan sağa artar, grupta yukarıdan aşağıya azalır. Flor (F), 4,0 değeriyle en yüksek elektronegatifliğe sahip elementtir; soy gazların elektronegatifliğinden söz edilmez. Katyon oluşumunda (elektron sayısı azalırken proton sayısı sabit kalınca çekim artar) yarıçap küçülür; anyon oluşumunda (elektron sayısı artınca çekim elektron başına azalır) yarıçap büyür.</p>
 
@@ -1116,6 +1153,7 @@
     <div class="cevap-satir"></div><div class="cevap-satir"></div><div class="cevap-satir"></div>
   </div>
 
+  </div>
   <div class="worksheet">
     <div class="wlbl">📱 Uygulamada Dene — Modül 8 (4 Etkinlik)</div>
     <p><b>1) Atom Yarıçapı: Gerçek Ölçekli Boy Karşılaştırması —</b> 2. periyot ve 1A grubundaki her atomu sırayla "📏 Ölç" ile ortaya çıkar; daireler gerçek oranda büyür/küçülür. En büyük ve en küçük atomu tabloya yaz.</p>
@@ -1166,6 +1204,7 @@
   </div>
 
   <div class="sorular-h">SORULAR</div>
+  <div class="sorular-cols">
   <div class="soru"><span class="no">1.</span> <span class="tip">Açık Uçlu</span> Atom yarıçapının aynı grupta neden aşağı doğru arttığını açıkla.
     <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
   <div class="soru"><span class="no">2.</span> <span class="tip">Açık Uçlu</span> İyonlaşma enerjisinin aynı periyotta soldan sağa neden arttığını açıkla.
@@ -1209,6 +1248,7 @@
   <div class="soru"><span class="no">10.</span> b) Bu veriler, magnezyumun kararlı bileşiklerinde kaç yüklü (Mg⁺ mi, Mg²⁺ mi) iyon oluşturmasının beklendiğini destekler? Gerekçelendir.
     <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
 
+  </div>
   <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Ünite 8 — KİM.9.1.8</span></div>
 </div>
 
@@ -1217,6 +1257,7 @@
   <h2 style="font-family:Arial,sans-serif; font-size:22px;">Ek · Cevap Anahtarı</h2>
   <p style="font-family:Arial,sans-serif; font-size:11.5px; color:#5a5e78;">Açık uçlu sorularda tek bir "doğru cevap" yoktur; notlar hangi kavram/ilişkinin doğru kullanılması gerektiğini gösterir. Çoktan seçmeli ve bağlam temelli sorularda doğru şık ve kısa gerekçesi verilmiştir.</p>
 
+  <div class="ca-cols">
   <div class="ca-unit">
     <h4>Ünite 1 — Günlük Hayatta Kimya (KİM.9.1.1)</h4>
     <div class="ca-item">1-4. Cevaplar, ilgili "Konu Anlatımı" bölümündeki kavram ve ilişkilerle tutarlı, gerekçeli bir açıklama içermelidir.</div>
@@ -1295,6 +1336,7 @@
     <div class="ca-item"><b>7. B</b> — Elektron sayısı artan bir anyonun yarıçapı, nötr atomdan daha büyüktür.</div>
     <div class="ca-item"><b>8. C</b> — 2A grubunun tam dolu ns² dizilimi ekstra kararlılık sağlayıp iyonlaşma enerjisini yükseltir.</div>
     <div class="ca-item">9-10. Açık uçlu — konu anlatımındaki ilgili kavramla değerlendirilir (Mg'nin 2 valans elektronu, İE₃'teki sıçrama, Mg²⁺ oluşumu).</div>
+  </div>
   </div>
 
   <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Cevap Anahtarı</span></div>
