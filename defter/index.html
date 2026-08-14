@@ -35,7 +35,6 @@
        üstte/altta beyaz boşluk kalır. Basılabilir alan artık @page margin'i
        düşülmüş haliyle 265mm (297mm - 16mm - 16mm) yüksekliğindedir. */
     .page.cover{ min-height:calc(297mm - 32mm); }
-    .footer-tag{ left:0; right:0; bottom:0; }
     .noprint{ display:none !important; }
     .soru, .box, .baglam, .kavramlar-list, .lo-box, .draw-box, .draw-row, .ca-item, .ca-unit, .depo-wrap,
     table.wk, table.usage, table.depo-matrix{
@@ -54,7 +53,13 @@
   }
   h1,h2,h3,h4{ font-family: Arial, Helvetica, sans-serif; font-weight:800; color:var(--ink); margin:0 0 .4em; }
   p{ margin:0 0 .6em; }
-  .footer-tag{ position:absolute; bottom:10mm; left:15mm; right:15mm; display:flex; justify-content:space-between; font-family:Arial,sans-serif; font-size:9.5px; color:#8a8ea8; border-top:1px solid var(--line); padding-top:6px; }
+  /* footer-tag KASITLI OLARAK normal akışta (position:absolute DEĞİL): bir .page
+     div'i (bir ünitenin tamamı) birden fazla fiziksel A4 sayfasına taşabildiğinden,
+     mutlak konumlandırma toplam (çok sayfalı) kutunun sonuna göre hesaplanır ve bu
+     nokta çoğunlukla son fiziksel sayfanın ortasına denk gelip canlı metnin üzerine
+     biner. Normal akışta ise ünitenin son sorusundan hemen sonra, üstte kalıp asla
+     başka içerikle çakışmayan bir "ünite sonu" etiketi olarak görünür. */
+  .footer-tag{ display:flex; justify-content:space-between; margin-top:14px; font-family:Arial,sans-serif; font-size:9.5px; color:#8a8ea8; border-top:1px solid var(--line); padding-top:6px; }
 
   /* ---- Kapak ---- */
   .cover{ background:linear-gradient(160deg,#14122c,#211f47 60%,#0c0a1f); color:#fff; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; }
@@ -120,7 +125,7 @@
   .sorular-h{ font-family:Arial,sans-serif; font-size:15px; margin-top:18px; border-top:3px solid var(--ink); padding-top:8px; }
   .soru{ margin:9px 0; font-family:Georgia,serif; font-size:12.3px; }
   .soru .no{ font-weight:800; }
-  .soru .tip{ font-family:Arial,sans-serif; font-size:8.5px; font-weight:800; border:1px solid var(--ink); border-radius:999px; padding:2px 7px; margin-right:6px; text-transform:uppercase; }
+  .soru .tip{ font-family:Arial,sans-serif; font-size:9px; font-weight:800; border:1px solid var(--ink); border-radius:999px; padding:2px 7px; margin-right:6px; text-transform:uppercase; }
   .cevap-satir{ border-bottom:1px dotted #8a8ea8; height:15px; margin:3px 0; }
   .secenekler{ margin:5px 0 0 22px; }
   .secenekler div{ margin-bottom:2px; }
@@ -146,7 +151,7 @@
   /* ---- Kimyasal depolama matrisi ---- */
   table.depo-matrix{ border-collapse:collapse; margin:12px auto; font-family:Arial,sans-serif; font-size:10px; }
   table.depo-matrix th, table.depo-matrix td{ border:1px solid var(--line); width:27px; height:27px; text-align:center; padding:0; }
-  table.depo-matrix th{ background:#f0f1fa; font-size:8.3px; font-weight:700; color:var(--ink-soft); }
+  table.depo-matrix th{ background:#f0f1fa; font-size:9px; font-weight:700; color:var(--ink-soft); }
   table.depo-matrix td.ok{ background:#177a44; color:#fff; font-weight:800; }
   table.depo-matrix td.no{ background:#a83232; color:#fff; font-weight:800; }
   table.depo-matrix td.caution{ background:#c9a227; color:#2b2200; font-weight:800; }
