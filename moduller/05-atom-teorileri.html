@@ -576,44 +576,48 @@
     const visible = lambda >= 380 && lambda <= 750;
     const col = gapColor(lambda, visible);
     bohrAbsorbBtn.disabled = true; // animasyon sırasında çift tıklamayı engelle
-    hideElectronDot();
 
     if (bohrState.view === "rings") {
-      // Elektron katmanında dönmeye devam ederken, dışarıdan gelen foton elektronun
-      // ŞU ANKİ açısını hedef alarak yaklaşır ve onunla tam orada karşılaşıp soğurulur.
-      orbitPaused = true;
-      const startAngle = electronAngle;
+      // Elektron (kendisi, hiç kaybolmadan) katmanında dönmeye devam ederken, dışarıdan
+      // gelen foton onun O ANKİ (her karede yeniden okunan, canlı) konumunu hedef alır.
       const rStart = ringR(6) + 34;
-      const photon = svgEl("circle", { cx:R_CX+Math.cos(startAngle)*rStart, cy:R_CY+Math.sin(startAngle)*rStart, r:5, fill:col });
+      const r1 = ringR(nl);
+      const photon = svgEl("circle", { cx:R_CX+Math.cos(electronAngle)*rStart, cy:R_CY+Math.sin(electronAngle)*rStart, r:5, fill:col });
       bohrSvg.appendChild(photon);
-      const r0 = rStart, r1 = ringR(nl);
       let t0 = performance.now();
       (function anim(now) {
-        const t = Math.min(1, (now - t0) / 500);
-        const r = r0 + (r1 - r0) * t;
-        photon.setAttribute("cx", R_CX + Math.cos(startAngle) * r);
-        photon.setAttribute("cy", R_CY + Math.sin(startAngle) * r);
+        const t = Math.min(1, (now - t0) / 650);
+        const r = rStart + (r1 - rStart) * t;
+        const ang = electronAngle; // elektron hâlâ dönüyor — foton her karede güncel açısını izler
+        photon.setAttribute("cx", R_CX + Math.cos(ang) * r);
+        photon.setAttribute("cy", R_CY + Math.sin(ang) * r);
         if (t < 1) { requestAnimationFrame(anim); return; }
         photon.remove();
-        // Foton soğuruldu — elektron uyarılarak n=nl'den n=nh'ye, dönüşünü sürdürerek sıçrar.
-        const electron = svgEl("circle", { cx:R_CX+Math.cos(startAngle)*ringR(nl), cy:R_CY+Math.sin(startAngle)*ringR(nl), r:6, fill:col });
-        bohrSvg.appendChild(electron);
+        // Foton, elektronun tam o anki konumunda soğuruldu — elektron kısaca fotonun
+        // rengini alır (soğurma anı), sonra dönüşünü sürdürerek üst katmana sıçrar.
+        orbitPaused = true;
+        const hitAngle = electronAngle;
+        const dot = document.getElementById("bohr-electron-dot");
+        if (dot) dot.setAttribute("fill", col);
         const r2 = ringR(nl), r3 = ringR(nh);
         let t1 = performance.now();
         (function anim2(now2) {
           const tt = Math.min(1, (now2 - t1) / 450);
           const r = r2 + (r3 - r2) * tt;
-          const ang = startAngle + tt * 1.6;
-          electron.setAttribute("cx", R_CX + Math.cos(ang) * r);
-          electron.setAttribute("cy", R_CY + Math.sin(ang) * r);
+          const ang2 = hitAngle + tt * 1.6;
+          if (dot) {
+            dot.setAttribute("cx", R_CX + Math.cos(ang2) * r);
+            dot.setAttribute("cy", R_CY + Math.sin(ang2) * r);
+          }
           if (tt < 1) { requestAnimationFrame(anim2); return; }
-          electronN = nh; electronAngle = startAngle + 1.6; orbitPaused = false;
+          electronN = nh; electronAngle = hitAngle + 1.6; orbitPaused = false;
           setBohrStage("excited");
-          bohrNote.innerHTML = `<h5>Soğurma (Absorbsiyon)</h5><p>Hidrojen atomuna n=${nh}→${nl} geçişinin enerjisi kadar (${lambda.toFixed(0)} nm) bir foton verildi; elektron bu enerjiyi soğurup <strong>uyarılmış n=${nh} seviyesine</strong> sıçradı. Şimdi "Işınla" düğmesiyle elektronun bu fazla enerjiyi tekrar ışık olarak yayıp taban seviyeye döndüğünü gözlemleyebilirsin.</p>`;
+          bohrNote.innerHTML = `<h5>Soğurma (Absorbsiyon)</h5><p>Hidrojen atomuna n=${nh}→${nl} geçişinin enerjisi kadar (${lambda.toFixed(0)} nm) bir foton verildi; dönmekte olan elektron bu enerjiyi tam üzerine geldiği anda soğurup <strong>uyarılmış n=${nh} seviyesine</strong> sıçradı. Şimdi "Işınla" düğmesiyle elektronun bu fazla enerjiyi tekrar ışık olarak yayıp taban seviyeye döndüğünü gözlemleyebilirsin.</p>`;
           renderBohrStage();
         })(performance.now());
       })(performance.now());
     } else {
+      hideElectronDot();
       // Dışarıdan gelen foton, tablonun sağından girip elektronu n=nl'de bulur ve soğurulur.
       const photon = svgEl("circle", { cx: B_RIGHT+30, cy: levelY(nl), r:5, fill: col });
       bohrSvg.appendChild(photon);
@@ -649,26 +653,39 @@
     const note = bohrNote;
     const col = gapColor(lambda, visible);
     bohrEmitBtn.disabled = true; // animasyon sırasında çift tıklamayı engelle
-    hideElectronDot();
 
     if (bohrState.view === "rings") {
+      // Dönmekte olan elektronun (hiç kaybolmadan, aynı nokta) İÇİNDEN enerji farkına
+      // uygun renkli bir foton çıkıp uzaklaşırken, elektron aynı anda alt katmana iner.
       orbitPaused = true;
       const startAngle = electronAngle;
-      const photon = svgEl("circle", { cx:R_CX+Math.cos(startAngle)*ringR(nh), cy:R_CY+Math.sin(startAngle)*ringR(nh), r:6, fill:col });
+      const dot = document.getElementById("bohr-electron-dot");
+      const photon = svgEl("circle", { cx:R_CX+Math.cos(startAngle)*ringR(nh), cy:R_CY+Math.sin(startAngle)*ringR(nh), r:5, fill:col });
       bohrSvg.appendChild(photon);
-      const r0 = ringR(nh), r1 = ringR(nl);
+      const rOut0 = ringR(nh), rOut1 = ringR(6) + 34;
+      const rDrop0 = ringR(nh), rDrop1 = ringR(nl);
       let t0 = performance.now();
       (function anim(now) {
         const t = Math.min(1, (now - t0) / 550);
-        const r = r0 + (r1 - r0) * t;
+        // foton, elektronun ayrıldığı noktadan başlayıp dışa doğru uzaklaşır ve söner.
+        const rp = rOut0 + (rOut1 - rOut0) * t;
+        photon.setAttribute("cx", R_CX + Math.cos(startAngle) * rp);
+        photon.setAttribute("cy", R_CY + Math.sin(startAngle) * rp);
+        photon.setAttribute("opacity", 1 - t * 0.75);
+        // elektron (aynı nokta) aynı anda alt katmana iner, dönüşünü sürdürür.
+        const rd = rDrop0 + (rDrop1 - rDrop0) * t;
         const ang = startAngle + t * 1.6;
-        photon.setAttribute("cx", R_CX + Math.cos(ang) * r);
-        photon.setAttribute("cy", R_CY + Math.sin(ang) * r);
+        if (dot) {
+          dot.setAttribute("cx", R_CX + Math.cos(ang) * rd);
+          dot.setAttribute("cy", R_CY + Math.sin(ang) * rd);
+        }
         if (t < 1) { requestAnimationFrame(anim); return; }
+        photon.remove();
         lastEmit = { nh, nl, lambda, visible }; electronN = nl; electronAngle = startAngle + 1.6; orbitPaused = false;
         setBohrStage("ground"); renderBohrStage();
       })(performance.now());
     } else {
+      hideElectronDot();
       const photon = svgEl("circle", { cx: (B_LEFT+B_RIGHT)/2, cy: levelY(nh), r: 6, fill: col });
       bohrSvg.appendChild(photon);
       const y0 = levelY(nh), y1 = levelY(nl);
