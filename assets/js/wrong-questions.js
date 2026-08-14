@@ -1,12 +1,12 @@
 /* =========================================================
    AtomLab 9 — wrong-questions.js
-   ÖĞRENCİNİN YANLIŞ YAPTIĞI SORULAR
+   Yanlış Sorular + Benzerini Çöz
    ========================================================= */
 
 const ERROR_KEY = "atomlab9_errors";
 
 /* ---------------------------------------------------------
-   KAYITLI YANLIŞLARI OKU
+   YANLIŞLARI OKU
    --------------------------------------------------------- */
 
 function readErrors() {
@@ -20,10 +20,266 @@ function readErrors() {
 }
 
 /* ---------------------------------------------------------
-   YANLIŞLARI EKRANA GETİR
+   SORU HAVUZUNU BUL
    --------------------------------------------------------- */
 
-export function renderWrongQuestions(hostEl) {
+async function loadQuestionPool() {
+  try {
+    const module = await import("./quiz-data.js?v=1");
+    return module.QUIZ || {};
+  } catch (err) {
+    console.error("Soru havuzu yüklenemedi:", err);
+    return {};
+  }
+}
+
+/* ---------------------------------------------------------
+   BENZER SORU SEÇ
+   --------------------------------------------------------- */
+
+function findSimilarQuestion(pool, moduleKey, wrongQuestion) {
+
+  const questions = pool[moduleKey];
+
+  if (!questions || !Array.isArray(questions)) {
+    return null;
+  }
+
+  /*
+     Yanlış sorunun aynısını tekrar göstermiyoruz.
+     Öncelik aynı kazanım/context olan sorular.
+  */
+
+  let candidates = questions.filter(q => {
+
+    if (q.text === wrongQuestion.text) {
+      return false;
+    }
+
+    if (
+      wrongQuestion.questionIndex !== undefined &&
+      q.questionIndex === wrongQuestion.questionIndex
+    ) {
+      return false;
+    }
+
+    return true;
+  });
+
+  if (candidates.length === 0) {
+    return null;
+  }
+
+  /*
+     Havuzdan rastgele soru seç
+  */
+
+  const index =
+    Math.floor(Math.random() * candidates.length);
+
+  return candidates[index];
+}
+
+/* ---------------------------------------------------------
+   BENZER SORUYU GÖSTER
+   --------------------------------------------------------- */
+
+function showSimilarQuestion(
+  hostEl,
+  moduleKey,
+  wrongQuestion,
+  pool
+) {
+
+  const q =
+    findSimilarQuestion(
+      pool,
+      moduleKey,
+      wrongQuestion
+    );
+
+  if (!q) {
+    alert(
+      "Bu konu için şu anda başka soru bulunamadı."
+    );
+    return;
+  }
+
+  hostEl.innerHTML = "";
+
+  const card =
+    document.createElement("div");
+
+  card.className =
+    "wrong-similar-card";
+
+  card.innerHTML = `
+    <div class="wrong-similar-head">
+      <span>🧠 BENZER SORU</span>
+      <span>${moduleKey}</span>
+    </div>
+
+    ${
+      q.context
+        ? `
+          <div class="wrong-question-context">
+            ${q.context}
+          </div>
+        `
+        : ""
+    }
+
+    <div class="wrong-question-text">
+      ${q.text}
+    </div>
+
+    <div class="wrong-similar-options"></div>
+
+    <div class="wrong-similar-feedback"></div>
+  `;
+
+  const options =
+    card.querySelector(
+      ".wrong-similar-options"
+    );
+
+  const feedback =
+    card.querySelector(
+      ".wrong-similar-feedback"
+    );
+
+  q.options.forEach((option, index) => {
+
+    const button =
+      document.createElement("button");
+
+    button.className =
+      "wrong-similar-option";
+
+    button.innerHTML = `
+      <span>
+        ${String.fromCharCode(65 + index)}
+      </span>
+      ${option}
+    `;
+
+    button.addEventListener(
+      "click",
+      () => {
+
+        if (card.dataset.done) {
+          return;
+        }
+
+        card.dataset.done = "1";
+
+        const buttons =
+          [...options.children];
+
+        buttons.forEach((btn, i) => {
+
+          btn.disabled = true;
+
+          if (i === q.correct) {
+            btn.classList.add("correct");
+          }
+
+        });
+
+        if (index === q.correct) {
+
+          button.classList.add("correct");
+
+          feedback.className =
+            "wrong-similar-feedback correct";
+
+          feedback.innerHTML = `
+            ✓ Doğru!
+
+            <div>
+              ${q.explain || ""}
+            </div>
+
+            <button
+              class="btn primary"
+              id="next-similar-question">
+              Başka Bir Benzer Soru Çöz →
+            </button>
+          `;
+
+          document
+            .getElementById(
+              "next-similar-question"
+            )
+            .addEventListener(
+              "click",
+              () => {
+
+                showSimilarQuestion(
+                  hostEl,
+                  moduleKey,
+                  wrongQuestion,
+                  pool
+                );
+
+              }
+            );
+
+        } else {
+
+          button.classList.add("wrong");
+
+          feedback.className =
+            "wrong-similar-feedback wrong";
+
+          feedback.innerHTML = `
+            ✕ Yanlış.
+
+            <div>
+              ${q.explain || ""}
+            </div>
+
+            <button
+              class="btn primary"
+              id="next-similar-question">
+              Yeni Bir Benzer Soru →
+            </button>
+          `;
+
+          document
+            .getElementById(
+              "next-similar-question"
+            )
+            .addEventListener(
+              "click",
+              () => {
+
+                showSimilarQuestion(
+                  hostEl,
+                  moduleKey,
+                  wrongQuestion,
+                  pool
+                );
+
+              }
+            );
+        }
+
+      }
+    );
+
+    options.appendChild(button);
+
+  });
+
+  hostEl.appendChild(card);
+}
+
+/* ---------------------------------------------------------
+   YANLIŞLARI RENDER ET
+   --------------------------------------------------------- */
+
+export async function renderWrongQuestions(hostEl) {
 
   if (!hostEl) return;
 
@@ -31,9 +287,8 @@ export function renderWrongQuestions(hostEl) {
 
   const errors = readErrors();
 
-  const modules = Object.keys(errors);
-
-  /* Hiç yanlış yoksa */
+  const modules =
+    Object.keys(errors);
 
   if (modules.length === 0) {
 
@@ -44,7 +299,9 @@ export function renderWrongQuestions(hostEl) {
           🎯
         </div>
 
-        <h3>Henüz yanlış yaptığın soru yok.</h3>
+        <h3>
+          Henüz yanlış yaptığın soru yok.
+        </h3>
 
         <p>
           Testlerde zorlandığın sorular burada
@@ -57,6 +314,9 @@ export function renderWrongQuestions(hostEl) {
     return;
   }
 
+  const pool =
+    await loadQuestionPool();
+
   const wrap =
     document.createElement("div");
 
@@ -66,10 +326,6 @@ export function renderWrongQuestions(hostEl) {
   hostEl.appendChild(wrap);
 
   let totalWrong = 0;
-
-  /* -------------------------------------------------------
-     MODÜLLER
-     ------------------------------------------------------- */
 
   modules.forEach(moduleKey => {
 
@@ -94,19 +350,13 @@ export function renderWrongQuestions(hostEl) {
 
     moduleBox.innerHTML = `
       <div class="wrong-module-title">
-        <span>
-          ${moduleKey}
-        </span>
+        <span>${moduleKey}</span>
 
         <span class="wrong-count">
           ${questionKeys.length} soru
         </span>
       </div>
     `;
-
-    /* -----------------------------------------------------
-       SORULAR
-       ----------------------------------------------------- */
 
     questionKeys.forEach(key => {
 
@@ -120,6 +370,7 @@ export function renderWrongQuestions(hostEl) {
         "wrong-question-card";
 
       card.innerHTML = `
+
         <div class="wrong-question-number">
           SORU ${q.questionIndex + 1}
         </div>
@@ -141,7 +392,9 @@ export function renderWrongQuestions(hostEl) {
         <div class="wrong-question-answer">
           <strong>
             Doğru cevap:
-            ${String.fromCharCode(65 + q.correct)}
+            ${String.fromCharCode(
+              65 + q.correct
+            )}
           </strong>
         </div>
 
@@ -150,11 +403,47 @@ export function renderWrongQuestions(hostEl) {
         </div>
 
         <div class="wrong-question-meta">
+
           Bu soruyu
           <strong>${q.wrongCount}</strong>
           kez yanlış yaptın.
+
         </div>
+
+        <button
+          class="btn primary similar-btn">
+          🧠 Benzerini Çöz
+        </button>
+
+        <div class="similar-question-host"></div>
       `;
+
+      const button =
+        card.querySelector(
+          ".similar-btn"
+        );
+
+      const similarHost =
+        card.querySelector(
+          ".similar-question-host"
+        );
+
+      button.addEventListener(
+        "click",
+        () => {
+
+          button.style.display =
+            "none";
+
+          showSimilarQuestion(
+            similarHost,
+            moduleKey,
+            q,
+            pool
+          );
+
+        }
+      );
 
       moduleBox.appendChild(card);
 
@@ -163,10 +452,6 @@ export function renderWrongQuestions(hostEl) {
     wrap.appendChild(moduleBox);
 
   });
-
-  /* -------------------------------------------------------
-     ÜST BİLGİ
-     ------------------------------------------------------- */
 
   const info =
     document.createElement("div");
