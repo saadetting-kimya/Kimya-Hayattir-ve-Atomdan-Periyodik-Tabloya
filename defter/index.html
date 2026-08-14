@@ -12,22 +12,33 @@
   *{ box-sizing:border-box; }
   body{
     margin:0; background:var(--bg); color:var(--ink);
-    font-family: Georgia, "Times New Roman", serif; line-height:1.5; font-size:12.5px;
+    font-family: Georgia, "Times New Roman", serif; line-height:1.42; font-size:12.5px;
   }
   .page{
     width:210mm; min-height:297mm; margin:14px auto; background:var(--paper);
     padding:16mm 15mm; position:relative; box-shadow:0 2px 10px rgba(0,0,0,.12);
   }
-  @page{ size:210mm 297mm; margin:0; }
+  /* Sayfa kenar boşlukları @page üzerinden ayarlanır (padding üzerinden değil):
+     bir ünite tek bir .page div'i olarak birden fazla fiziksel A4 sayfasına
+     taşabildiğinden (uzun konu anlatımı + çok etkinlikli çalışma sayfaları),
+     kenar boşluğu .page'in kendi padding'i olsaydı yalnızca taştığı ilk ve son
+     fiziksel sayfada uygulanır, aradaki tüm sayfalar kenar boşluksuz (kağıda
+     kadar dayanan metinle) basılırdı. @page margin ise basılan HER fiziksel
+     sayfaya otomatik ve eşit uygulanır — kitap baskısı için gereken düzenli,
+     yeterli kenar boşluğunu garanti eden doğru mekanizma budur. */
+  @page{ size:210mm 297mm; margin:16mm 15mm; }
   @media print{
     body{ background:#fff; }
-    .page{ margin:0; box-shadow:none; width:auto; min-height:auto; page-break-after:always; }
+    .page{ margin:0; box-shadow:none; width:auto; min-height:auto; padding:0; page-break-after:always; }
     /* Kapak sayfaları içeriği dikeyde ortalar; min-height:auto ile içerik kısa kalırsa
-       gradyan arka plan tüm fiziksel sayfayı kaplamaz ve üstte/altta beyaz boşluk kalır. */
-    .page.cover{ min-height:297mm; }
+       gradyan arka plan tüm fiziksel sayfanın basılabilir alanını kaplamaz ve
+       üstte/altta beyaz boşluk kalır. Basılabilir alan artık @page margin'i
+       düşülmüş haliyle 265mm (297mm - 16mm - 16mm) yüksekliğindedir. */
+    .page.cover{ min-height:calc(297mm - 32mm); }
+    .footer-tag{ left:0; right:0; bottom:0; }
     .noprint{ display:none !important; }
-    .soru, .box, .baglam, .kavramlar-list, .lo-box, .draw-box, .ca-item, .ca-unit h4,
-    table.wk tr, table.usage tr{
+    .soru, .box, .baglam, .kavramlar-list, .lo-box, .draw-box, .draw-row, .ca-item, .ca-unit h4,
+    table.wk, table.usage, table.depo-matrix{
       break-inside:avoid; page-break-inside:avoid;
     }
     /* .worksheet kutuları (özellikle çok etkinlikli olanlar) tek bir A4 sayfasından uzun
@@ -36,9 +47,12 @@
        .short-worksheet ile işaretlenen) bölünmemesi sağlanır; uzun olanlar doğal akışla bölünür. */
     .worksheet.short-worksheet{ break-inside:avoid; page-break-inside:avoid; }
     .baglam{ break-after:avoid; page-break-after:avoid; }
+    .konu-h{ break-after:avoid; page-break-after:avoid; }
+    .sorular-h{ break-after:avoid; page-break-after:avoid; }
+    .wlbl{ break-after:avoid; page-break-after:avoid; }
   }
   h1,h2,h3,h4{ font-family: Arial, Helvetica, sans-serif; font-weight:800; color:var(--ink); margin:0 0 .4em; }
-  p{ margin:0 0 .8em; }
+  p{ margin:0 0 .6em; }
   .footer-tag{ position:absolute; bottom:10mm; left:15mm; right:15mm; display:flex; justify-content:space-between; font-family:Arial,sans-serif; font-size:9.5px; color:#8a8ea8; border-top:1px solid var(--line); padding-top:6px; }
 
   /* ---- Kapak ---- */
@@ -54,30 +68,30 @@
   .cover .author{ margin-top:40px; font-family:Arial,sans-serif; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:#8a80b3; }
 
   /* ---- İçindekiler / Nasıl Kullanılır ---- */
-  .toc-bolum{ font-family:Arial,sans-serif; font-weight:800; font-size:12.5px; letter-spacing:.05em; text-transform:uppercase; color:var(--accent); margin:14px 0 6px; }
-  .toc-item{ display:flex; justify-content:space-between; padding:5px 0; border-bottom:1px dotted var(--line); font-family:Arial,sans-serif; font-size:13px; }
+  .toc-bolum{ font-family:Arial,sans-serif; font-weight:800; font-size:12.5px; letter-spacing:.05em; text-transform:uppercase; color:var(--accent); margin:10px 0 5px; }
+  .toc-item{ display:flex; justify-content:space-between; padding:4px 0; border-bottom:1px dotted var(--line); font-family:Arial,sans-serif; font-size:13px; }
   .toc-item b{ margin-right:8px; }
   .toc-item .kod{ color:#8a8ea8; font-size:11px; }
 
-  table.usage{ width:100%; border-collapse:collapse; margin:14px 0; font-family:Arial,sans-serif; font-size:12px; }
-  table.usage th, table.usage td{ border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top; }
+  table.usage{ width:100%; border-collapse:collapse; margin:10px 0; font-family:Arial,sans-serif; font-size:12px; }
+  table.usage th, table.usage td{ border:1px solid var(--line); padding:6px 9px; text-align:left; vertical-align:top; }
   table.usage th{ background:#f0f1fa; }
 
   .soru-turleri{ display:flex; gap:10px; flex-wrap:wrap; margin:10px 0; }
   .st-chip{ font-family:Arial,sans-serif; font-size:10.5px; font-weight:800; border:1.5px solid var(--ink); padding:4px 10px; border-radius:999px; }
 
   /* ---- Ünite başlığı ---- */
-  .unit-kicker{ font-family:Arial,sans-serif; font-weight:800; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); margin-bottom:6px; }
-  .unit-title{ font-family:Arial,sans-serif; font-size:23px; margin-bottom:14px; }
-  .lo-box{ border:2px solid var(--ink); border-radius:6px; padding:12px 16px; margin-bottom:16px; font-family:Arial,sans-serif; font-size:12px; }
+  .unit-kicker{ font-family:Arial,sans-serif; font-weight:800; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); margin-bottom:5px; }
+  .unit-title{ font-family:Arial,sans-serif; font-size:23px; margin-bottom:10px; }
+  .lo-box{ border:2px solid var(--ink); border-radius:6px; padding:10px 14px; margin-bottom:12px; font-family:Arial,sans-serif; font-size:12px; }
   .lo-box b{ display:block; font-size:11px; text-transform:uppercase; letter-spacing:.04em; margin-bottom:3px; }
-  .lo-box ul{ margin:6px 0 0; padding-left:18px; }
-  .lo-box li{ margin-bottom:3px; }
+  .lo-box ul{ margin:5px 0 0; padding-left:18px; }
+  .lo-box li{ margin-bottom:2px; }
 
-  h3.konu-h{ font-size:16px; border-bottom:2px solid var(--ink); padding-bottom:4px; margin-top:22px; }
-  h4.alt-h{ font-family:Arial,sans-serif; font-size:13px; margin-top:16px; color:var(--accent); }
+  h3.konu-h{ font-size:16px; border-bottom:2px solid var(--ink); padding-bottom:3px; margin-top:16px; }
+  h4.alt-h{ font-family:Arial,sans-serif; font-size:13px; margin-top:12px; color:var(--accent); }
 
-  .box{ border-radius:6px; padding:12px 14px; margin:14px 0; font-family:Arial,sans-serif; font-size:11.8px; }
+  .box{ border-radius:6px; padding:10px 12px; margin:10px 0; font-family:Arial,sans-serif; font-size:11.8px; }
   .box .lbl{ font-weight:800; font-size:10px; text-transform:uppercase; letter-spacing:.05em; margin-bottom:5px; display:flex; align-items:center; gap:5px; }
   .kavram{ border:2px solid var(--accent); background:#f5f4fd; }
   .kavram .lbl{ color:var(--accent); }
@@ -90,22 +104,22 @@
   .notlarim{ border:1.5px dashed #8a8ea8; min-height:56px; background:repeating-linear-gradient(#fff,#fff 20px,#e7e9f3 21px); }
   .notlarim .lbl{ color:#5a5e78; }
 
-  .kavramlar-list{ border:1px solid var(--line); border-radius:6px; padding:10px 14px; margin:14px 0; font-family:Arial,sans-serif; font-size:11.5px; background:#fafafe; }
-  .kavramlar-list .lbl{ font-weight:800; font-size:10px; text-transform:uppercase; color:#5a5e78; margin-bottom:6px; }
-  .kavramlar-list dt{ font-weight:800; margin-top:6px; }
+  .kavramlar-list{ border:1px solid var(--line); border-radius:6px; padding:9px 12px; margin:10px 0; font-family:Arial,sans-serif; font-size:11.5px; background:#fafafe; }
+  .kavramlar-list .lbl{ font-weight:800; font-size:10px; text-transform:uppercase; color:#5a5e78; margin-bottom:5px; }
+  .kavramlar-list dt{ font-weight:800; margin-top:5px; }
   .kavramlar-list dd{ margin:0 0 2px; color:var(--ink-soft); }
 
-  .sorular-h{ font-family:Arial,sans-serif; font-size:15px; margin-top:24px; border-top:3px solid var(--ink); padding-top:10px; }
-  .soru{ margin:12px 0; font-family:Georgia,serif; font-size:12.3px; }
+  .sorular-h{ font-family:Arial,sans-serif; font-size:15px; margin-top:18px; border-top:3px solid var(--ink); padding-top:8px; }
+  .soru{ margin:9px 0; font-family:Georgia,serif; font-size:12.3px; }
   .soru .no{ font-weight:800; }
   .soru .tip{ font-family:Arial,sans-serif; font-size:8.5px; font-weight:800; border:1px solid var(--ink); border-radius:999px; padding:2px 7px; margin-right:6px; text-transform:uppercase; }
-  .cevap-satir{ border-bottom:1px dotted #8a8ea8; height:16px; margin:4px 0; }
-  .secenekler{ margin:6px 0 0 22px; }
-  .secenekler div{ margin-bottom:3px; }
-  .baglam{ border-left:3px solid var(--accent-2); background:#fdf8ee; padding:10px 12px; margin:14px 0; font-size:12px; }
+  .cevap-satir{ border-bottom:1px dotted #8a8ea8; height:15px; margin:3px 0; }
+  .secenekler{ margin:5px 0 0 22px; }
+  .secenekler div{ margin-bottom:2px; }
+  .baglam{ border-left:3px solid var(--accent-2); background:#fdf8ee; padding:9px 11px; margin:10px 0; font-size:12px; }
   .baglam .baglam-lbl{ font-family:Arial,sans-serif; font-weight:800; font-size:10px; text-transform:uppercase; color:var(--accent-2); margin-bottom:4px; }
 
-  .ca-unit{ margin-bottom:18px; }
+  .ca-unit{ margin-bottom:14px; }
   .ca-unit h4{ font-family:Arial,sans-serif; font-size:13px; border-bottom:1px solid var(--line); padding-bottom:4px; }
   .ca-item{ font-size:11.5px; margin-bottom:5px; }
   .ca-item b{ font-family:Arial,sans-serif; }
@@ -114,10 +128,10 @@
   .print-bar button{ font-weight:800; padding:10px 18px; border-radius:999px; border:none; background:#14152b; color:#fff; cursor:pointer; box-shadow:0 4px 14px rgba(0,0,0,.25); }
 
   /* ---- Doldurulabilir çalışma tabloları (Uygulamada Dene / etkinlikler) ---- */
-  table.wk{ width:100%; border-collapse:collapse; margin:10px 0 4px; font-family:Arial,sans-serif; font-size:10.8px; }
-  table.wk th{ background:var(--accent); color:#fff; border:1px solid var(--accent); padding:6px 7px; text-align:left; font-size:9.5px; text-transform:uppercase; letter-spacing:.02em; }
-  table.wk td{ border:1px solid var(--line); padding:7px 7px; vertical-align:top; color:var(--ink); }
-  table.wk td.fill{ background:repeating-linear-gradient(#fff,#fff 12px,#eceefa 13px); min-height:26px; height:26px; }
+  table.wk{ width:100%; border-collapse:collapse; margin:8px 0 4px; font-family:Arial,sans-serif; font-size:10.8px; }
+  table.wk th{ background:var(--accent); color:#fff; border:1px solid var(--accent); padding:5px 7px; text-align:left; font-size:9.5px; text-transform:uppercase; letter-spacing:.02em; }
+  table.wk td{ border:1px solid var(--line); padding:5px 7px; vertical-align:top; color:var(--ink); }
+  table.wk td.fill{ background:repeating-linear-gradient(#fff,#fff 12px,#eceefa 13px); min-height:24px; height:24px; }
   table.wk td.center{ text-align:center; }
   table.wk tr:nth-child(even) td:not(.fill){ background:#fafafe; }
 
@@ -135,29 +149,29 @@
   .depo-key{ font-family:Arial,sans-serif; font-size:9.5px; color:var(--ink-soft); margin-top:6px; }
 
   /* ---- Elle çizim/işaretleme kutuları ---- */
-  .draw-row{ display:flex; gap:10px; flex-wrap:wrap; margin:10px 0; }
+  .draw-row{ display:flex; gap:8px; flex-wrap:wrap; margin:8px 0; }
   .draw-box{
-    flex:1 1 140px; min-width:120px; border:1.5px solid var(--ink); border-radius:6px; padding:6px;
+    flex:1 1 140px; min-width:120px; border:1.5px solid var(--ink); border-radius:6px; padding:5px;
     font-family:Arial,sans-serif;
   }
-  .draw-box .dcap{ font-size:9.5px; font-weight:800; text-align:center; margin-bottom:4px; color:var(--ink-soft); }
+  .draw-box .dcap{ font-size:9.5px; font-weight:800; text-align:center; margin-bottom:3px; color:var(--ink-soft); }
   .draw-box .darea{
-    height:64px; border-radius:4px;
+    height:58px; border-radius:4px;
     background-image: linear-gradient(#e3e5f2 1px, transparent 1px), linear-gradient(90deg, #e3e5f2 1px, transparent 1px);
     background-size: 8px 8px; background-color:#fdfdff;
   }
-  .grid-fill{ display:grid; gap:8px; margin:10px 0; }
+  .grid-fill{ display:grid; gap:7px; margin:8px 0; }
   .grid-fill.c2{ grid-template-columns:1fr 1fr; }
   .grid-fill.c3{ grid-template-columns:1fr 1fr 1fr; }
-  .fill-card{ border:1px solid var(--line); border-radius:6px; padding:8px 10px; font-family:Arial,sans-serif; font-size:10.5px; }
-  .fill-card b{ display:block; font-size:9.5px; text-transform:uppercase; letter-spacing:.03em; color:var(--accent); margin-bottom:4px; }
+  .fill-card{ border:1px solid var(--line); border-radius:6px; padding:7px 9px; font-family:Arial,sans-serif; font-size:10.5px; }
+  .fill-card b{ display:block; font-size:9.5px; text-transform:uppercase; letter-spacing:.03em; color:var(--accent); margin-bottom:3px; }
 
   .worksheet{
-    border:2px solid var(--ink); border-radius:8px; padding:12px 14px; margin:14px 0; font-family:Arial,sans-serif; font-size:11.5px;
+    border:2px solid var(--ink); border-radius:8px; padding:10px 12px; margin:10px 0; font-family:Arial,sans-serif; font-size:11.5px;
     background:#fcfcff;
   }
-  .worksheet .wlbl{ font-weight:800; font-size:10.5px; text-transform:uppercase; letter-spacing:.04em; margin-bottom:8px; display:flex; align-items:center; gap:6px; color:var(--ink); }
-  .worksheet p{ font-size:11px; margin:0 0 8px; }
+  .worksheet .wlbl{ font-weight:800; font-size:10.5px; text-transform:uppercase; letter-spacing:.04em; margin-bottom:6px; display:flex; align-items:center; gap:6px; color:var(--ink); }
+  .worksheet p{ font-size:11px; margin:0 0 6px; }
   .worksheet .hint{ font-size:10px; color:#5a5e78; font-style:italic; margin-top:2px; }
 </style>
 </head>
@@ -371,7 +385,7 @@
     <div class="cevap-satir"></div><div class="cevap-satir"></div><div class="cevap-satir"></div>
   </div>
 
-  <div class="worksheet">
+  <div class="worksheet short-worksheet">
     <div class="wlbl">📱 Uygulamada Dene — Modül 2</div>
     <p>Uygulamada altı disiplin kartını çevirerek incele, sonra "Örneği Doğru Disipline Eşleştir" etkinliğini tamamla. Her disiplin için uygulamada gördüğün bir örneği ve kendi bulduğun yeni bir örneği tabloya yaz.</p>
     <table class="wk">
@@ -472,7 +486,7 @@
     <div class="cevap-satir"></div><div class="cevap-satir"></div><div class="cevap-satir"></div>
   </div>
 
-  <div class="worksheet">
+  <div class="worksheet short-worksheet">
     <div class="wlbl">📱 Uygulamada Dene — Modül 3</div>
     <p>Uygulamada sekiz kariyer sektörü kartını incele. En çok ilgini çeken üç sektörü seç; her biri için hangi görevde çalışmak isteyebileceğini ve kariyer planlama döngüsünün hangi basamağında olduğunu yaz.</p>
     <table class="wk">
@@ -553,7 +567,7 @@
   <p>Kimyasal maddeler tarım, ilaç ve temizlik gibi birçok sektörde yaygın kullanılır ancak bu kullanım güvenlik risklerini de beraberinde getirir. Laboratuvarda uyulması gereken temel kurallardan bazıları şunlardır: kimyasal maddeler yakından koklanmaz, tadına bakılmaz; sıvılar pipetle aktarılırken kesinlikle puar kullanılır, asla ağızla çekilmez; asit çözeltisi hazırlanırken asit, baget yardımıyla yavaşça suyun içine dökülür (tersi değil); kimyasal madde cilde/göze temas ederse bölge en az 15 dakika bol suyla yıkanır.</p>
   <p>Kimyasal madde etiketlerinde bulunan sağlık ve güvenlik işaretlerine <b>risk piktogramları</b> denir; bunlar arasında patlayıcı, oksitleyici, zehirli, yanıcı/parlayıcı, korozif, tahriş edici, çevreye zararlı, sağlığa zararlı, gaz ve radyoaktif maddeler piktogramları bulunur. <b>Kimyasal depolama matrisi</b>, hangi maddelerin birlikte depolanabileceğini belirleyen bir plan sistemidir — örneğin su ile temas ettiğinde alevlenen maddeler nemli ortamlardan uzak tutulmalıdır. Çamaşır suyu (NaClO) ile tuz ruhu (HCl) gibi farklı temizlik ürünlerinin karıştırılması, zehirli klor gazı gibi tehlikeli sonuçlar doğurabilir; bu yüzden temizlik ürünleri asla gelişigüzel karıştırılmamalıdır.</p>
 
-  <div style="text-align:center; margin:14px 0">
+  <div style="text-align:center; margin:10px 0">
     <table class="depo-matrix">
       <tr><th></th><th>YAN</th><th>PAT</th><th>ZEH</th><th>OKS</th><th>GAZ</th><th>TAH</th><th>SAĞ</th><th>KOR</th><th>ÇEV</th></tr>
       <tr><th>YAN</th><td class="ok">✓</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="water">!</td><td class="water">!</td><td class="no">✗</td><td class="no">✗</td></tr>
@@ -1004,7 +1018,7 @@
     <div class="cevap-satir"></div><div class="cevap-satir"></div><div class="cevap-satir"></div>
   </div>
 
-  <div class="worksheet">
+  <div class="worksheet short-worksheet">
     <div class="wlbl">📱 Uygulamada Dene — Modül 7</div>
     <p>Uygulamadaki tam periyodik tabloda aşağıdaki elementlere tıkla; elektron dizilimini önce sen tahmin et, sonra uygulamayla kontrol edip periyot/grup adresini yaz.</p>
     <table class="wk">
