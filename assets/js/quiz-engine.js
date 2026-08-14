@@ -1,288 +1,881 @@
 /* =========================================================
-   AtomLab 9 — quiz-engine.js
-   Quiz motoru
-   - Her modülde 5 soru gösterir
-   - 5 seçeneklidir
-   - Yanlış soruları kaydeder
-   - Benzer soru getirir
-   - İlerlemeyi kaydeder
+   ATOMLAB 9 — QUIZ ENGINE
+   ---------------------------------------------------------
+   • Soru havuzundan rastgele soru seçer
+   • Kazanım bilgisini normalize eder
+   • Yanlış soruyu kaydeder
+   • AYNI KAZANIMDAN benzer soru getirir
+   • Öğrencinin öğrenme sürecini takip eder
+   • Kazanım bazında başarı hesaplar
+   • Benzer sorulardaki gelişimi kaydeder
+   • Keşif Günlüğünü kaydeder
    ========================================================= */
 
-const STORAGE_KEY = "atomlab9_progress";
+const STORAGE_KEY = "atomlab9_learning";
 const ERROR_KEY = "atomlab9_errors";
+const JOURNAL_PREFIX = "atomlab9_journal_";
+
+const QUESTION_COUNT = 5;
+
 
 /* =========================================================
-   İLERLEME
+   YARDIMCI
+   ========================================================= */
+
+function safeJSON(value, fallback = {}) {
+  try {
+    return JSON.parse(value) ?? fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+
+/* =========================================================
+   VERİYİ NORMALİZE ET
+   ---------------------------------------------------------
+   Eski sorularda:
+      kazanim
+
+   Yeni sorularda:
+      kazanım
+
+   olabilir.
+
+   İkisini de destekliyoruz.
+   ========================================================= */
+
+function normalizeQuestion(q, index, moduleKey) {
+
+  if (!q || typeof q !== "object") {
+    return null;
+  }
+
+  const kazanım =
+    q.kazanim ||
+    q["kazanım"] ||
+    q.kazanım ||
+    "Kazanım belirtilmemiş";
+
+  return {
+    ...q,
+
+    id:
+      q.id ||
+      `${moduleKey}-${index + 1}`,
+
+    kazanım,
+
+    kazanim: kazanım,
+
+    konu:
+      q.konu ||
+      q.topic ||
+      "",
+
+    context:
+      q.context ||
+      "",
+
+    text:
+      q.text ||
+      q.question ||
+      "",
+
+    options:
+      Array.isArray(q.options)
+        ? q.options
+        : [],
+
+    correct:
+      Number.isInteger(q.correct)
+        ? q.correct
+        : 0,
+
+    explain:
+      q.explain ||
+      "",
+
+    difficulty:
+      q.difficulty ||
+      "orta",
+
+    module:
+      moduleKey
+  };
+}
+
+
+/* =========================================================
+   TÜM SORU HAVUZUNU TEK HAVUZA ÇEVİR
+   ========================================================= */
+
+export function buildQuestionPool(quizData) {
+
+  const pool = [];
+
+  if (!quizData || typeof quizData !== "object") {
+    return pool;
+  }
+
+  Object.entries(quizData).forEach(
+    ([moduleKey, questions]) => {
+
+      if (!Array.isArray(questions)) {
+        return;
+      }
+
+      questions.forEach(
+        (question, index) => {
+
+          const normalized =
+            normalizeQuestion(
+              question,
+              index,
+              moduleKey
+            );
+
+          if (
+            normalized &&
+            normalized.text &&
+            normalized.options.length === 5
+          ) {
+
+            pool.push(normalized);
+
+          }
+
+        }
+      );
+
+    }
+  );
+
+  return pool;
+}
+
+
+/* =========================================================
+   İLERLEMEYİ OKU
    ========================================================= */
 
 export function readProgress() {
-  try {
-    return JSON.parse(
-      localStorage.getItem(STORAGE_KEY)
-    ) || {};
-  } catch {
-    return {};
-  }
-}
 
-export function writeProgress(p) {
-  localStorage.setItem(
-    STORAGE_KEY,
-    JSON.stringify(p)
+  return safeJSON(
+    localStorage.getItem(STORAGE_KEY),
+    {
+      questions: {},
+      kazanımlar: {},
+      sessions: []
+    }
   );
+
 }
 
-export function markModuleScore(
-  moduleKey,
-  score,
-  total
-) {
-  const p = readProgress();
-
-  p[moduleKey] = {
-    score,
-    total,
-    at: Date.now()
-  };
-
-  writeProgress(p);
-}
-
-export function markVisited(moduleKey) {
-  const p = readProgress();
-
-  p[moduleKey] =
-    p[moduleKey] || {};
-
-  p[moduleKey].visited = true;
-
-  writeProgress(p);
-}
 
 /* =========================================================
-   YANLIŞ SORULARI OKU
+   İLERLEMEYİ KAYDET
    ========================================================= */
 
-function readErrors() {
-  try {
-    return JSON.parse(
-      localStorage.getItem(ERROR_KEY)
-    ) || {};
-  } catch {
-    return {};
-  }
+export function writeProgress(progress) {
+
+  localStorage.setItem(
+    STORAGE_KEY,
+    JSON.stringify(progress)
+  );
+
 }
+
+
+/* =========================================================
+   SORU SONUCUNU KAYDET
+   ========================================================= */
+
+function recordAnswer(
+  question,
+  isCorrect,
+  moduleKey
+) {
+
+  const progress =
+    readProgress();
+
+  const id =
+    question.id;
+
+  if (!progress.questions[id]) {
+
+    progress.questions[id] = {
+      id,
+      kazanım:
+        question.kazanım,
+      module:
+        moduleKey,
+      attempts: 0,
+      correct: 0,
+      wrong: 0,
+      history: []
+    };
+
+  }
+
+  const record =
+    progress.questions[id];
+
+  record.attempts++;
+
+  if (isCorrect) {
+    record.correct++;
+  } else {
+    record.wrong++;
+  }
+
+  record.history.push({
+
+    correct:
+      isCorrect,
+
+    at:
+      Date.now()
+
+  });
+
+
+  /* -------------------------------------------------------
+     KAZANIM İSTATİSTİĞİ
+     ------------------------------------------------------- */
+
+  const kazanım =
+    question.kazanım ||
+    "Kazanım belirtilmemiş";
+
+
+  if (!progress.kazanımlar[kazanım]) {
+
+    progress.kazanımlar[kazanım] = {
+
+      attempts: 0,
+
+      correct: 0,
+
+      wrong: 0,
+
+      firstAttempt: null,
+
+      lastAttempt: null,
+
+      improvement: 0
+
+    };
+
+  }
+
+  const stat =
+    progress.kazanımlar[kazanım];
+
+
+  stat.attempts++;
+
+  if (isCorrect) {
+    stat.correct++;
+  } else {
+    stat.wrong++;
+  }
+
+
+  if (!stat.firstAttempt) {
+
+    stat.firstAttempt = {
+      correct:
+        isCorrect,
+      at:
+        Date.now()
+    };
+
+  }
+
+
+  stat.lastAttempt = {
+
+    correct:
+      isCorrect,
+
+    at:
+      Date.now()
+
+  };
+
+
+  /*
+   * İlk deneme yanlış,
+   * sonraki aynı kazanım doğru ise
+   * öğrenme gelişimi olarak kaydet.
+   */
+
+  if (
+    stat.firstAttempt &&
+    !stat.firstAttempt.correct &&
+    isCorrect
+  ) {
+
+    stat.improvement++;
+
+  }
+
+
+  writeProgress(progress);
+
+}
+
 
 /* =========================================================
    YANLIŞ SORUYU KAYDET
    ========================================================= */
 
 function saveWrongQuestion(
-  moduleKey,
-  q,
-  questionIndex
+  question,
+  moduleKey
 ) {
-  try {
 
-    const errors =
-      readErrors();
-
-    if (!errors[moduleKey]) {
-      errors[moduleKey] = {};
-    }
-
-    const key =
-      `${moduleKey}_${questionIndex}`;
-
-    if (!errors[moduleKey][key]) {
-
-      errors[moduleKey][key] = {
-        questionIndex,
-        context: q.context || "",
-        text: q.text || "",
-        options: q.options || [],
-        correct: q.correct,
-        explain: q.explain || "",
-        wrongCount: 1
-      };
-
-    } else {
-
-      errors[moduleKey][key].wrongCount =
-        (errors[moduleKey][key].wrongCount || 0) + 1;
-
-    }
-
-    localStorage.setItem(
-      ERROR_KEY,
-      JSON.stringify(errors)
+  const errors =
+    safeJSON(
+      localStorage.getItem(ERROR_KEY),
+      {}
     );
 
-  } catch (err) {
 
-    console.error(
-      "Yanlış soru kaydedilemedi:",
-      err
-    );
+  if (!errors[moduleKey]) {
+
+    errors[moduleKey] = {};
 
   }
+
+
+  if (
+    !errors[moduleKey][question.id]
+  ) {
+
+    errors[moduleKey][question.id] = {
+
+      id:
+        question.id,
+
+      kazanım:
+        question.kazanım,
+
+      konu:
+        question.konu,
+
+      context:
+        question.context,
+
+      text:
+        question.text,
+
+      wrongCount:
+        1,
+
+      lastWrong:
+        Date.now()
+
+    };
+
+  } else {
+
+    errors[moduleKey][question.id]
+      .wrongCount++;
+
+    errors[moduleKey][question.id]
+      .lastWrong =
+      Date.now();
+
+  }
+
+
+  localStorage.setItem(
+    ERROR_KEY,
+    JSON.stringify(errors)
+  );
+
 }
 
+
 /* =========================================================
-   METİN NORMALİZE
+   METNİ NORMALİZE ET
    ========================================================= */
 
 function normalizeText(text) {
 
   return String(text || "")
-    .toLowerCase()
+    .toLocaleLowerCase("tr-TR")
     .replace(/[.,!?;:()"']/g, "")
     .split(/\s+/)
-    .filter(word => word.length > 3);
+    .filter(
+      word => word.length > 3
+    );
 
 }
+
 
 /* =========================================================
    BENZER SORU BUL
+   ---------------------------------------------------------
+   ÖNCE:
+      aynı kazanım
+
+   SONRA:
+      aynı konu
+
+   SONRA:
+      aynı bağlam
+
+   SONRA:
+      ortak kelimeler
    ========================================================= */
 
-function findSimilarQuestion(wrongQuestion, usedQuestions) {
+function findSimilarQuestion(
+  wrongQuestion,
+  questionPool,
+  usedQuestions
+) {
 
-  const wrongWords = new Set(
-    normalizeText(
-      (wrongQuestion.context || "") +
-      " " +
-      (wrongQuestion.text || "")
-    )
-  );
+  if (
+    !wrongQuestion ||
+    !Array.isArray(questionPool)
+  ) {
 
-  /*
-   * Önce daha önce hiç gösterilmemiş soruları bul.
-   */
-  let candidates = questions.filter(q => {
+    return null;
 
-    const index = questions.indexOf(q);
+  }
 
-    // Yanlış yapılan sorunun kendisini tekrar verme
-    if (q === wrongQuestion) return false;
 
-    // Daha önce gösterilmiş soruları tekrar verme
-    if (usedQuestions.has(index)) return false;
-
-    return true;
-  });
-
-  /*
-   * Hiç kullanılmamış soru varsa,
-   * bunların içinden en benzer olanı seç.
-   */
-  if (candidates.length > 0) {
-
-    candidates = candidates.map(q => {
-
-      const words = new Set(
-        normalizeText(
-          (q.context || "") +
-          " " +
-          (q.text || "")
-        )
-      );
-
-      let score = 0;
-
-      words.forEach(word => {
-        if (wrongWords.has(word)) {
-          score++;
-        }
-      });
-
-      /*
-       * Aynı context'e ekstra puan.
-       */
-      if (
-        q.context &&
-        wrongQuestion.context &&
-        q.context === wrongQuestion.context
-      ) {
-        score += 10;
-      }
-
-      return {
-        question: q,
-        score
-      };
-    });
-
-    candidates.sort((a, b) => b.score - a.score);
-
-    /*
-     * En yüksek benzerlik puanına sahip sorular
-     * arasından rastgele seç.
-     */
-    const bestScore = candidates[0].score;
-
-    const best = candidates.filter(
-      item => item.score === bestScore
+  const wrongWords =
+    new Set(
+      normalizeText(
+        `${wrongQuestion.context || ""}
+         ${wrongQuestion.konu || ""}
+         ${wrongQuestion.text || ""}`
+      )
     );
 
-    const selected =
-      best[Math.floor(Math.random() * best.length)];
 
-    return selected.question;
+  let candidates =
+    questionPool.filter(
+      q => {
+
+        if (
+          q.id ===
+          wrongQuestion.id
+        ) {
+          return false;
+        }
+
+        if (
+          usedQuestions.has(q.id)
+        ) {
+          return false;
+        }
+
+        /*
+         * EN ÖNEMLİ KURAL:
+         * Aynı kazanım değilse
+         * benzer soru olarak seçme.
+         */
+
+        if (
+          q.kazanım !==
+          wrongQuestion.kazanım
+        ) {
+
+          return false;
+
+        }
+
+        return true;
+
+      }
+    );
+
+
+  if (
+    candidates.length === 0
+  ) {
+
+    return null;
+
   }
 
-  /*
-   * Buraya geldiysek havuzdaki bütün sorular
-   * daha önce kullanılmış demektir.
-   *
-   * Yanlış sorunun kendisi hariç,
-   * havuzdaki en benzer soruyu bul.
-   *
-   * Böylece uygulama hiçbir zaman gereksiz yere
-   * "başka soru yok" demeyecek.
-   */
-  let fallback = questions
-    .filter(q => q !== wrongQuestion)
-    .map(q => {
 
-      const words = new Set(
-        normalizeText(
-          (q.context || "") +
-          " " +
-          (q.text || "")
-        )
-      );
+  candidates =
+    candidates.map(
+      q => {
 
-      let score = 0;
+        const words =
+          new Set(
+            normalizeText(
+              `${q.context || ""}
+               ${q.konu || ""}
+               ${q.text || ""}`
+            )
+          );
 
-      words.forEach(word => {
-        if (wrongWords.has(word)) {
-          score++;
+
+        let score = 0;
+
+
+        words.forEach(
+          word => {
+
+            if (
+              wrongWords.has(word)
+            ) {
+
+              score++;
+
+            }
+
+          }
+        );
+
+
+        if (
+          q.konu &&
+          wrongQuestion.konu &&
+          q.konu ===
+          wrongQuestion.konu
+        ) {
+
+          score += 8;
+
         }
-      });
+
+
+        if (
+          q.context &&
+          wrongQuestion.context &&
+          q.context ===
+          wrongQuestion.context
+        ) {
+
+          score += 10;
+
+        }
+
+
+        return {
+
+          question: q,
+
+          score
+
+        };
+
+      }
+    );
+
+
+  candidates.sort(
+    (a, b) =>
+      b.score - a.score
+  );
+
+
+  const bestScore =
+    candidates[0].score;
+
+
+  const best =
+    candidates.filter(
+      item =>
+        item.score ===
+        bestScore
+    );
+
+
+  return best[
+    Math.floor(
+      Math.random() *
+      best.length
+    )
+  ].question;
+
+}
+
+
+/* =========================================================
+   MODÜL PUANI
+   ========================================================= */
+
+export function markModuleScore(
+  moduleKey,
+  score,
+  total
+) {
+
+  const progress =
+    readProgress();
+
+
+  if (
+    !progress.sessions
+  ) {
+
+    progress.sessions = [];
+
+  }
+
+
+  progress.sessions.push({
+
+    module:
+      moduleKey,
+
+    score,
+
+    total,
+
+    percentage:
+      total
+        ? Math.round(
+            score / total * 100
+          )
+        : 0,
+
+    at:
+      Date.now()
+
+  });
+
+
+  writeProgress(progress);
+
+}
+
+
+/* =========================================================
+   MODÜL ZİYARET
+   ========================================================= */
+
+export function markVisited(
+  moduleKey
+) {
+
+  const progress =
+    readProgress();
+
+
+  if (
+    !progress.visited
+  ) {
+
+    progress.visited = {};
+
+  }
+
+
+  progress.visited[
+    moduleKey
+  ] = Date.now();
+
+
+  writeProgress(progress);
+
+}
+
+
+/* =========================================================
+   KAZANIM ANALİZİ
+   ========================================================= */
+
+export function getLearningAnalysis() {
+
+  const progress =
+    readProgress();
+
+
+  const results = [];
+
+
+  Object.entries(
+    progress.kazanımlar || {}
+  ).forEach(
+    ([kazanım, stat]) => {
+
+      const percentage =
+        stat.attempts
+          ? Math.round(
+              stat.correct /
+              stat.attempts *
+              100
+            )
+          : 0;
+
+
+      let level =
+        "Başlangıç";
+
 
       if (
-        q.context &&
-        wrongQuestion.context &&
-        q.context === wrongQuestion.context
+        percentage >= 85
       ) {
-        score += 10;
+
+        level =
+          "Çok iyi";
+
+      } else if (
+        percentage >= 70
+      ) {
+
+        level =
+          "İyi";
+
+      } else if (
+        percentage >= 50
+      ) {
+
+        level =
+          "Gelişiyor";
+
       }
 
-      return {
-        question: q,
-        score
-      };
-    });
 
-  if (fallback.length === 0) {
-    return null;
+      let trend =
+        "Sabit";
+
+
+      if (
+        stat.improvement > 0
+      ) {
+
+        trend =
+          "Gelişiyor ↑";
+
+      }
+
+
+      results.push({
+
+        kazanım,
+
+        attempts:
+          stat.attempts,
+
+        correct:
+          stat.correct,
+
+        wrong:
+          stat.wrong,
+
+        percentage,
+
+        level,
+
+        trend
+
+      });
+
+    }
+  );
+
+
+  results.sort(
+    (a, b) =>
+      a.percentage -
+      b.percentage
+  );
+
+
+  return results;
+
+}
+
+
+/* =========================================================
+   GENEL ÖĞRENME RAPORU
+   ========================================================= */
+
+export function getLearningReport() {
+
+  const results =
+    getLearningAnalysis();
+
+
+  if (
+    results.length === 0
+  ) {
+
+    return {
+
+      totalKazanım: 0,
+
+      average: 0,
+
+      strongest: null,
+
+      weakest: null,
+
+      trend:
+        "Henüz yeterli veri yok",
+
+      results: []
+
+    };
+
   }
 
-  fallback.sort((a, b) => b.score - a.score);
 
-  return fallback[0].question;
+  const average =
+    Math.round(
+      results.reduce(
+        (sum, item) =>
+          sum +
+          item.percentage,
+        0
+      ) /
+      results.length
+    );
+
+
+  const weakest =
+    results[0];
+
+
+  const strongest =
+    results[
+      results.length - 1
+    ];
+
+
+  const hasImprovement =
+    results.some(
+      item =>
+        item.trend ===
+        "Gelişiyor ↑"
+    );
+
+
+  return {
+
+    totalKazanım:
+      results.length,
+
+    average,
+
+    strongest,
+
+    weakest,
+
+    trend:
+      hasImprovement
+        ? "Öğrenme gelişimi gözleniyor ↑"
+        : "Yeterli süreç verisi oluşuyor",
+
+    results
+
+  };
+
 }
+
 
 /* =========================================================
    QUIZ
@@ -311,19 +904,41 @@ export function renderQuiz(
     }
 
     return;
+
   }
 
-  hostEl.innerHTML = "";
 
-  /* -------------------------------------------------------
-     AYAR
-     ------------------------------------------------------- */
+  /*
+   * VERİYİ NORMALİZE ET
+   */
 
-  const QUESTION_COUNT = 5;
+  const normalizedQuestions =
+    questions
+      .map(
+        (q, index) =>
+          normalizeQuestion(
+            q,
+            index,
+            moduleKey
+          )
+      )
+      .filter(Boolean);
 
-  /* -------------------------------------------------------
-     SORULARI KARIŞTIR
-     ------------------------------------------------------- */
+
+  if (
+    normalizedQuestions.length === 0
+  ) {
+
+    hostEl.innerHTML = `
+      <div class="quiz-empty">
+        Geçerli soru bulunamadı.
+      </div>
+    `;
+
+    return;
+
+  }
+
 
   function shuffle(array) {
 
@@ -331,15 +946,18 @@ export function renderQuiz(
       [...array];
 
     for (
-      let i = arr.length - 1;
+      let i =
+        arr.length - 1;
       i > 0;
       i--
     ) {
 
       const j =
         Math.floor(
-          Math.random() * (i + 1)
+          Math.random() *
+          (i + 1)
         );
+
 
       [
         arr[i],
@@ -353,73 +971,69 @@ export function renderQuiz(
     }
 
     return arr;
+
   }
 
-  /* -------------------------------------------------------
-     İLK 5 SORU
-     ------------------------------------------------------- */
 
   let activeQuestions =
-    shuffle(questions)
-      .slice(
-        0,
-        Math.min(
-          QUESTION_COUNT,
-          questions.length
-        )
-      );
-
-  /* -------------------------------------------------------
-     KULLANILAN SORULAR
-     ------------------------------------------------------- */
-
-  const usedQuestions =
-    new Set();
-
-  activeQuestions.forEach(q => {
-
-    usedQuestions.add(
-      questions.indexOf(q)
+    shuffle(
+      normalizedQuestions
+    ).slice(
+      0,
+      Math.min(
+        QUESTION_COUNT,
+        normalizedQuestions.length
+      )
     );
 
-  });
 
-  /* -------------------------------------------------------
-     DURUM
-     ------------------------------------------------------- */
+  const usedQuestions =
+    new Set(
+      activeQuestions.map(
+        q => q.id
+      )
+    );
+
 
   const state = {
+
     answered: 0,
+
     correct: 0
+
   };
 
-  /* -------------------------------------------------------
-     ANA ALAN
-     ------------------------------------------------------- */
+
+  hostEl.innerHTML = "";
+
 
   const wrap =
-    document.createElement("div");
+    document.createElement(
+      "div"
+    );
 
   wrap.className =
     "quiz";
 
-  hostEl.appendChild(wrap);
 
-  /* -------------------------------------------------------
-     ÖZET
-     ------------------------------------------------------- */
+  hostEl.appendChild(
+    wrap
+  );
+
 
   const summary =
-    document.createElement("div");
+    document.createElement(
+      "div"
+    );
 
   summary.className =
     "quiz-summary";
 
-  hostEl.appendChild(summary);
 
-  /* -------------------------------------------------------
-     ÖZET GÜNCELLE
-     ------------------------------------------------------- */
+  hostEl.appendChild(
+    summary
+  );
+
 
   function updateSummary() {
 
@@ -450,8 +1064,10 @@ export function renderQuiz(
       </div>
 
       ${
-        state.answered >= QUESTION_COUNT
-          ?
+        state.answered >=
+        QUESTION_COUNT
+
+        ?
 
         `
           <div
@@ -462,16 +1078,17 @@ export function renderQuiz(
           </div>
         `
 
-          :
+        :
 
         ""
       }
 
     `;
 
+
     if (
-      state.answered >= QUESTION_COUNT &&
-      moduleKey
+      state.answered >=
+      QUESTION_COUNT
     ) {
 
       markModuleScore(
@@ -484,9 +1101,6 @@ export function renderQuiz(
 
   }
 
-  /* -------------------------------------------------------
-     BENZER SORUYU GETİR
-     ------------------------------------------------------- */
 
   function replaceWithSimilar(
     card,
@@ -496,44 +1110,54 @@ export function renderQuiz(
     const similar =
       findSimilarQuestion(
         wrongQuestion,
-        questions,
+        normalizedQuestions,
         usedQuestions
       );
 
-   if (!similar) {
 
-  card.querySelector(
-    ".qfeedback"
-  ).innerHTML += `
-    <div class="similar-none">
-      Bu modülün soru havuzunda yeni soru kalmadı.
-    </div>
-  `;
+    if (!similar) {
 
-  return;
-}
+      const feedback =
+        card.querySelector(
+          ".qfeedback"
+        );
 
-    const similarIndex =
-      questions.indexOf(
-        similar
-      );
+
+      if (feedback) {
+
+        feedback.innerHTML += `
+
+          <div class="similar-none">
+
+            Bu kazanım için
+            kullanılabilecek yeni
+            benzer soru kalmadı.
+
+          </div>
+
+        `;
+
+      }
+
+      return;
+
+    }
+
 
     usedQuestions.add(
-      similarIndex
+      similar.id
     );
+
 
     const position =
       Number(
         card.dataset.position
       );
 
-    /*
-     * Eski sorunun yerine
-     * yeni soruyu koy.
-     */
 
     activeQuestions[position] =
       similar;
+
 
     const newCard =
       createQuestionCard(
@@ -541,15 +1165,13 @@ export function renderQuiz(
         position
       );
 
+
     card.replaceWith(
       newCard
     );
 
   }
 
-  /* -------------------------------------------------------
-     SORU KARTI
-     ------------------------------------------------------- */
 
   function createQuestionCard(
     q,
@@ -557,17 +1179,18 @@ export function renderQuiz(
   ) {
 
     const card =
-      document.createElement("div");
+      document.createElement(
+        "div"
+      );
+
 
     card.className =
       "qcard";
 
+
     card.dataset.position =
       position;
 
-    /* -----------------------------------------------------
-       SORU BAŞLIĞI
-       ----------------------------------------------------- */
 
     card.innerHTML = `
 
@@ -575,26 +1198,45 @@ export function renderQuiz(
 
         <span class="qn">
 
-          SORU ${position + 1}/${QUESTION_COUNT}
+          SORU
+          ${position + 1}/${QUESTION_COUNT}
 
         </span>
 
+        ${
+          q.kazanım
+            ?
+            `
+              <span
+                class="q-kazanim"
+              >
+                ${q.kazanım}
+              </span>
+            `
+            :
+            ""
+        }
+
       </div>
+
 
       ${
         q.context
           ?
 
-        `
-          <div class="qcontext">
-            ${q.context}
-          </div>
-        `
+          `
+            <div class="qcontext">
+
+              ${q.context}
+
+            </div>
+          `
 
           :
 
-        ""
+          ""
       }
+
 
       <div class="qtext">
 
@@ -602,36 +1244,41 @@ export function renderQuiz(
 
       </div>
 
+
       <div class="qopts"></div>
 
       <div class="qfeedback"></div>
 
     `;
 
+
     const optsEl =
       card.querySelector(
         ".qopts"
       );
+
 
     const feedbackEl =
       card.querySelector(
         ".qfeedback"
       );
 
-    /* -----------------------------------------------------
-       ŞIKLAR
-       ----------------------------------------------------- */
 
     q.options.forEach(
-      (option, optionIndex) => {
+      (
+        option,
+        optionIndex
+      ) => {
 
         const optionEl =
           document.createElement(
             "div"
           );
 
+
         optionEl.className =
           "qopt";
+
 
         optionEl.innerHTML = `
 
@@ -651,6 +1298,7 @@ export function renderQuiz(
 
         `;
 
+
         optionEl.addEventListener(
           "click",
           () => {
@@ -663,27 +1311,31 @@ export function renderQuiz(
 
             }
 
+
             card.dataset.done =
               "1";
 
-            /* ---------------------------------------------
-               TÜM ŞIKLARI KİLİTLE
-               --------------------------------------------- */
 
             const allOptions =
               [
                 ...optsEl.children
               ];
 
+
             allOptions.forEach(
-              (el, index) => {
+              (
+                el,
+                index
+              ) => {
 
                 el.classList.add(
                   "disabled"
                 );
 
+
                 if (
-                  index === q.correct
+                  index ===
+                  q.correct
                 ) {
 
                   el.classList.add(
@@ -695,12 +1347,22 @@ export function renderQuiz(
               }
             );
 
-            const isCorrect =
-              optionIndex === q.correct;
 
-            /* ---------------------------------------------
-               DOĞRU
-               --------------------------------------------- */
+            const isCorrect =
+              optionIndex ===
+              q.correct;
+
+
+            /*
+             * ÖĞRENME KAYDI
+             */
+
+            recordAnswer(
+              q,
+              isCorrect,
+              moduleKey
+            );
+
 
             if (isCorrect) {
 
@@ -708,22 +1370,25 @@ export function renderQuiz(
                 "correct"
               );
 
+
               state.correct++;
+
 
               feedbackEl.classList.add(
                 "show",
                 "ok"
               );
 
+
               feedbackEl.innerHTML = `
 
                 <div>
-
                   ✓ Doğru!
-
                 </div>
 
-                <div class="q-explain">
+                <div
+                  class="q-explain"
+                >
 
                   ${q.explain || ""}
 
@@ -731,38 +1396,34 @@ export function renderQuiz(
 
               `;
 
-            }
-
-            /* ---------------------------------------------
-               YANLIŞ
-               --------------------------------------------- */
-
-            else {
+            } else {
 
               optionEl.classList.add(
                 "wrong"
               );
 
+
               saveWrongQuestion(
-                moduleKey,
                 q,
-                questions.indexOf(q)
+                moduleKey
               );
+
 
               feedbackEl.classList.add(
                 "show",
                 "no"
               );
 
+
               feedbackEl.innerHTML = `
 
                 <div>
-
                   ✕ Yanlış.
-
                 </div>
 
-                <div class="q-explain">
+                <div
+                  class="q-explain"
+                >
 
                   ${q.explain || ""}
 
@@ -779,12 +1440,14 @@ export function renderQuiz(
 
               `;
 
-              const similarButton =
+
+              const button =
                 feedbackEl.querySelector(
                   ".similar-btn"
                 );
 
-              similarButton.addEventListener(
+
+              button.addEventListener(
                 "click",
                 () => {
 
@@ -798,12 +1461,15 @@ export function renderQuiz(
 
             }
 
+
             state.answered++;
+
 
             updateSummary();
 
           }
         );
+
 
         optsEl.appendChild(
           optionEl
@@ -812,21 +1478,24 @@ export function renderQuiz(
       }
     );
 
+
     return card;
+
   }
 
-  /* -------------------------------------------------------
-     İLK SORULARI OLUŞTUR
-     ------------------------------------------------------- */
 
   activeQuestions.forEach(
-    (question, position) => {
+    (
+      question,
+      position
+    ) => {
 
       const card =
         createQuestionCard(
           question,
           position
         );
+
 
       wrap.appendChild(
         card
@@ -835,9 +1504,16 @@ export function renderQuiz(
     }
   );
 
+
+  markVisited(
+    moduleKey
+  );
+
+
   updateSummary();
 
 }
+
 
 /* =========================================================
    KEŞİF GÜNLÜĞÜ
@@ -849,8 +1525,30 @@ export function bindJournal(
 ) {
 
   if (!textareaEl) {
+
     return;
+
   }
+
+
+  const fullKey =
+    JOURNAL_PREFIX +
+    key;
+
+
+  const saved =
+    localStorage.getItem(
+      fullKey
+    );
+
+
+  if (saved) {
+
+    textareaEl.value =
+      saved;
+
+  }
+
 
   const saveState =
     textareaEl.parentElement
@@ -858,32 +1556,26 @@ export function bindJournal(
         ".save-state"
       );
 
-  const fullKey =
-    "atomlab9_journal_" +
-    key;
-
-  const saved =
-    localStorage.getItem(
-      fullKey
-    );
-
-  if (saved) {
-    textareaEl.value =
-      saved;
-  }
 
   let timer;
+
 
   textareaEl.addEventListener(
     "input",
     () => {
 
-      clearTimeout(timer);
+      clearTimeout(
+        timer
+      );
+
 
       if (saveState) {
+
         saveState.textContent =
-          "";
+          "Yazılıyor...";
+
       }
+
 
       timer =
         setTimeout(
@@ -894,10 +1586,11 @@ export function bindJournal(
               textareaEl.value
             );
 
+
             if (saveState) {
 
               saveState.textContent =
-                "✓ Kaydedildi (bu tarayıcıda saklanır)";
+                "✓ Kaydedildi";
 
             }
 
