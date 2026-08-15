@@ -6,7 +6,7 @@
    (her modülün toplamında A-E şıkları yaklaşık eşit sıklıkta doğrudur).
    ========================================================= */
 
-export const QUIZ = {
+const QUIZ = {
  gunluk: [
   {
     context: "Doğada Su Filtresi",
@@ -1394,7 +1394,7 @@ export const QUIZ = {
     explain: "Uzun zincirli büyük moleküller polimerlerdir. Polimerlerin yapısı ile özellikleri arasındaki ilişki polimer kimyasında incelenir."
   }
 
-]
+],
   kariyer: [
   {
     context: "Bir Fabrikadaki Kalite Kontrol Analisti",
@@ -6621,3 +6621,5 @@ export const QUIZ = {
     }
   ]
 };
+
+window.QUIZ = QUIZ;
