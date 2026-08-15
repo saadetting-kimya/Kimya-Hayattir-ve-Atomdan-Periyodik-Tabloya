@@ -144,12 +144,12 @@ export const QUESTION_BANK = {
       options: [
         "↑↓  ↑↓  —",
         "↑↓  ↑  ↑",
-        "↑  ↑  ↑↓",
+        "↑  ↑  ↑",
         "↑↓  —  ↑↓",
         "↑↓  ↓  ↑"
       ],
       correct: 1,
-      explain: "2p⁴ için üç p orbitali önce birer paralel spinli elektron alır; dördüncü elektron bu orbitallerden birinde eşleşir."
+      explain: "2p⁴ için üç p orbitali önce birer paralel spinli elektron alır; dördüncü elektron bu orbitallerden birinde eşleşir. (Hangi orbitalin eşleştiği önemli değildir — \"↑ ↑ ↑\" seçeneği yalnızca 3 elektron gösterdiği için yanlıştır, elektron sayısı eksiktir.)"
     },
 
     {
@@ -521,13 +521,13 @@ export const QUESTION_BANK = {
       text: "Aşağıdaki taneciklerden hangisi Ar atomu ile aynı elektron sayısına sahiptir?",
       options: [
         "K",
-        "K⁺",
+        "Mg²⁺",
         "Cl⁻",
         "Ca⁺",
         "S"
       ],
       correct: 2,
-      explain: "Ar 18 elektrona sahiptir. Cl⁻ de 17 + 1 = 18 elektrona sahiptir."
+      explain: "Ar 18 elektrona sahiptir. Cl⁻ de 17 + 1 = 18 elektrona sahiptir. (Mg²⁺: 12 − 2 = 10, Ca⁺: 20 − 1 = 19, K: 19, S: 16 elektron.)"
     },
 
     {

@@ -4183,8 +4183,8 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       "konu": "Hund-Pauli birlikte",
       "difficulty": "zor",
-      "context": "Bir p alt kabuğuna elektronlar yerleştiriliyor.",
-      "text": "Aşağıdaki gösterimlerden hangisi hem Hund hem Pauli ilkelerine uygundur?",
+      "context": "Bir p alt kabuğuna 4 elektron yerleştiriliyor.",
+      "text": "p alt kabuğundaki 4 elektronun aşağıdaki gösterimlerinden hangisi hem Hund hem Pauli ilkelerine uygundur?",
       "options": [
         "↑↑  ↑  boş",
         "↑↓  ↑  ↑",
@@ -5540,7 +5540,7 @@ export const QUIZ = {
         "Cl",
         "Br",
         "Hepsi eşittir",
-        "Br"
+        "I"
       ],
       "correct": 0,
       "explain": "Elektronegatiflik grupta aşağı doğru azalır. Flor en yüksek elektronegatifliğe sahiptir."
