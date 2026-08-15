@@ -807,6 +807,47 @@ footer a{ color:var(--gas-dark); text-decoration:none; font-weight:700; }
   min-width: 150px;
 }
 
+/* Yanlış soru tablosunda soru ve açıklamaya daha fazla alan ver */
+.report-wrong-table {
+  table-layout: fixed;
+}
+
+.report-wrong-table th:nth-child(1),
+.report-wrong-table td:nth-child(1) {
+  width: 11%;
+}
+
+.report-wrong-table th:nth-child(2),
+.report-wrong-table td:nth-child(2) {
+  width: 12%;
+}
+
+.report-wrong-table th:nth-child(3),
+.report-wrong-table td:nth-child(3) {
+  width: 14%;
+}
+
+.report-wrong-table th:nth-child(4),
+.report-wrong-table td:nth-child(4) {
+  width: 27%;
+}
+
+.report-wrong-table th:nth-child(5),
+.report-wrong-table td:nth-child(5) {
+  width: 7%;
+  text-align: center;
+}
+
+.report-wrong-table th:nth-child(6),
+.report-wrong-table td:nth-child(6) {
+  width: 29%;
+}
+
+.report-wrong-table td {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
 
 /* =========================================================
    DURUM ETİKETLERİ
@@ -963,7 +1004,7 @@ footer a{ color:var(--gas-dark); text-decoration:none; font-weight:700; }
 
   @page {
     size: A4;
-    margin: 10mm;
+    margin: 0;
   }
 
 
@@ -995,9 +1036,10 @@ footer a{ color:var(--gas-dark); text-decoration:none; font-weight:700; }
 
 
   .report-page {
+    box-sizing: border-box;
     width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 10mm;
   }
 
 
@@ -1044,6 +1086,16 @@ footer a{ color:var(--gas-dark); text-decoration:none; font-weight:700; }
   .report-table th,
   .report-table td {
     padding: 5px;
+  }
+
+  .report-wrong-table {
+    font-size: 9px;
+  }
+
+  .report-wrong-table th,
+  .report-wrong-table td {
+    padding: 5.5px;
+    line-height: 1.35;
   }
 
 }
