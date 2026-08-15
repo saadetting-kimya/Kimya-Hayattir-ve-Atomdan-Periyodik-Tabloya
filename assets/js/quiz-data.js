@@ -1318,13 +1318,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir laboratuvarda numune hazırlama, çözelti hazırlama ve cihazların günlük kullanımını gerçekleştiren çalışan iki yıllık kimya teknolojisi mezunudur. Bu kişinin görev tanımı aşağıdakilerden hangisine daha uygundur?",
       "options": [
-        "Kimya teknikeri",
         "Kimya mühendisi",
-        "Kimyager",
-        "Kimya öğretmeni",
-        "Tıp doktoru"
-      ],
-      "correct": 0,
+        "Kimya teknikeri",
+        "Kimyager",        "Kimya öğretmeni",        "Tıp doktoru"      ],
+      "correct": 1,
       "explain": "Ön lisans düzeyindeki kimya teknolojisi eğitimi, laboratuvar ve kalite kontrol gibi alanlarda teknikerlik görevlerine hazırlık sağlar."
     },
     {
@@ -1332,13 +1329,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir öğrenci maddelerin yapısını, özelliklerini ve dönüşümlerini derinlemesine incelemek istiyor. Üniversitede doğrudan kimya bilimi üzerine dört yıllık eğitim almak isteyen bu öğrencinin tercih edebileceği bölüm hangisidir?",
       "options": [
-        "Kimya",
-        "Tarih",
         "Mimarlık",
-        "Hukuk",
-        "Gazetecilik"
-      ],
-      "correct": 0,
+        "Tarih",        "Kimya",
+        "Hukuk",        "Gazetecilik"      ],
+      "correct": 2,
       "explain": "Kimya bölümü, maddelerin yapısı, özellikleri, tepkimeleri ve dönüşümleri üzerine lisans eğitimi verir."
     },
     {
@@ -1360,13 +1354,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir araştırmacı yeni bir ilacın etken maddesini geliştiriyor ve bu maddenin yapısını inceleyerek farklı türevler sentezliyor. Bu çalışma hangi kariyer alanıyla doğrudan ilişkilidir?",
       "options": [
-        "Kimya ve ilaç araştırmaları",
-        "Spor yönetimi",
-        "Mimarlık",
         "Turizm",
-        "Tarih"
-      ],
-      "correct": 0,
+        "Spor yönetimi",        "Mimarlık",        "Kimya ve ilaç araştırmaları",
+        "Tarih"      ],
+      "correct": 3,
       "explain": "İlaç geliştirme ve etken madde sentezi kimya biliminin önemli uygulama alanlarındandır."
     },
     {
@@ -1388,13 +1379,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir ekip, içme suyundaki zararlı maddeleri uzaklaştırmak için yeni bir arıtma yöntemi geliştiriyor. Bu çalışma hangi kariyer alanıyla en yakından ilişkilidir?",
       "options": [
-        "Çevre ve sürdürülebilirlik",
-        "Moda tasarımı",
-        "Basın-yayın",
-        "Arkeoloji",
-        "Müzik"
+        "Müzik",
+        "Moda tasarımı",        "Basın-yayın",        "Arkeoloji",        "Çevre ve sürdürülebilirlik"
       ],
-      "correct": 0,
+      "correct": 4,
       "explain": "Su arıtma, atık yönetimi ve çevre kirliliğinin azaltılması kimyanın çevre ve sürdürülebilirlik alanındaki uygulamalarıdır."
     },
     {
@@ -1416,13 +1404,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir kimya şirketinde çalışan uzman, daha dayanıklı ve çevreye daha az zarar veren boyalar geliştirmek için çalışıyor. Bu çalışma hangi sektörle doğrudan ilişkilidir?",
       "options": [
-        "Kimya endüstrisi",
         "Turizm",
-        "Spor",
-        "Hukuk",
-        "Müzik"
-      ],
-      "correct": 0,
+        "Kimya endüstrisi",
+        "Spor",        "Hukuk",        "Müzik"      ],
+      "correct": 1,
       "explain": "Boya, plastik, deterjan ve benzeri ürünlerin geliştirilmesi kimya endüstrisinin çalışma alanlarındandır."
     },
     {
@@ -1430,13 +1415,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir bilim insanı plastiklerin daha dayanıklı, hafif ve geri dönüştürülebilir hâle getirilmesi üzerine çalışıyor. Bu çalışma hangi alana örnektir?",
       "options": [
-        "Malzeme ve polimer teknolojileri",
-        "Astronomi",
         "Tarih",
-        "Coğrafya",
-        "Müzik"
-      ],
-      "correct": 0,
+        "Astronomi",        "Malzeme ve polimer teknolojileri",
+        "Coğrafya",        "Müzik"      ],
+      "correct": 2,
       "explain": "Polimerlerin geliştirilmesi ve yeni malzemelerin tasarlanması kimyanın malzeme teknolojileriyle kesişen alanlarındandır."
     },
     {
@@ -1444,13 +1426,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir kişi üniversitede kimya öğretmenliği eğitimi alarak lise öğrencilerine kimya dersi vermeye başlıyor. Bu kariyer yolu hangi alanla ilişkilidir?",
       "options": [
-        "Kimya eğitimi",
-        "Enerji üretimi",
-        "İlaç sanayisi",
         "Madencilik",
-        "Gıda üretimi"
-      ],
-      "correct": 0,
+        "Enerji üretimi",        "İlaç sanayisi",        "Kimya eğitimi",
+        "Gıda üretimi"      ],
+      "correct": 3,
       "explain": "Kimya öğretmenliği, kimya bilgisinin eğitim alanında kullanılmasına yönelik bir kariyer yoludur."
     },
     {
@@ -1458,13 +1437,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir bilim insanı üniversitede yeni maddelerin özelliklerini araştırıyor ve elde ettiği sonuçları bilimsel makalelerde yayımlıyor. Bu kariyer hangi alanla ilişkilidir?",
       "options": [
-        "Akademik araştırma",
-        "Turizm",
-        "Spor",
-        "Halkla ilişkiler",
-        "Ulaştırma"
+        "Ulaştırma",
+        "Turizm",        "Spor",        "Halkla ilişkiler",        "Akademik araştırma"
       ],
-      "correct": 0,
+      "correct": 4,
       "explain": "Üniversitelerde bilimsel araştırma yapmak ve sonuçları yayımlamak akademik kariyerin temel özelliklerindendir."
     },
     {
@@ -1486,13 +1462,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir laboratuvar uzmanı olay yerinden alınan örneklerde belirli kimyasal maddelerin bulunup bulunmadığını araştırıyor. Bu çalışma hangi alana örnektir?",
       "options": [
-        "Adli kimya",
         "Astronomi",
-        "Mimarlık",
-        "Jeoloji tarihi",
-        "Dilbilim"
-      ],
-      "correct": 0,
+        "Adli kimya",
+        "Mimarlık",        "Jeoloji tarihi",        "Dilbilim"      ],
+      "correct": 1,
       "explain": "Olay yeri örneklerinin kimyasal analizlerle incelenmesi adli kimyanın çalışma alanlarından biridir."
     },
     {
@@ -1500,13 +1473,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir şirket cilt bakım ürünlerinin formülünü geliştirirken maddelerin birbirleriyle uyumunu ve ürünün kararlılığını araştırıyor. Bu çalışma hangi sektöre örnektir?",
       "options": [
-        "Kozmetik",
-        "Ulaştırma",
         "Turizm",
-        "Hukuk",
-        "Mimarlık"
-      ],
-      "correct": 0,
+        "Ulaştırma",        "Kozmetik",
+        "Hukuk",        "Mimarlık"      ],
+      "correct": 2,
       "explain": "Kozmetik ürünlerin formülasyonu, kararlılığı ve güvenliği kimyanın uygulama alanlarındandır."
     },
     {
@@ -1514,13 +1484,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir araştırmacı bitkilerin ihtiyaç duyduğu elementleri daha verimli sağlayabilecek gübreler geliştirmeye çalışıyor. Bu çalışma hangi alanla ilişkilidir?",
       "options": [
-        "Tarım ve kimya",
-        "Müzik",
-        "Turizm",
         "Spor",
-        "Basın"
-      ],
-      "correct": 0,
+        "Müzik",        "Turizm",        "Tarım ve kimya",
+        "Basın"      ],
+      "correct": 3,
       "explain": "Gübrelerin geliştirilmesi ve bitki besinlerinin incelenmesi kimyanın tarımsal uygulamalarından biridir."
     },
     {
@@ -1528,13 +1495,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir tesiste petrolden çeşitli kimyasal ürünler elde edilmekte ve bu ürünler plastik, boya ve yakıt üretiminde kullanılmaktadır. Bu çalışma hangi sektörle ilgilidir?",
       "options": [
-        "Petrokimya",
-        "Turizm",
-        "Eğitim",
-        "Spor",
-        "Mimarlık"
+        "Mimarlık",
+        "Turizm",        "Eğitim",        "Spor",        "Petrokimya"
       ],
-      "correct": 0,
+      "correct": 4,
       "explain": "Petrolden kimyasal ürünlerin elde edilmesi petrokimya sektörünün temel faaliyetlerindendir."
     },
     {
@@ -1556,13 +1520,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir araştırmacı yakıt hücrelerinde gerçekleşen kimyasal tepkimelerden daha verimli elektrik elde etmeye çalışıyor. Bu çalışma hangi alana girer?",
       "options": [
-        "Enerji teknolojileri",
         "Turizm",
-        "Eğitim tarihi",
-        "Spor",
-        "Mimarlık"
-      ],
-      "correct": 0,
+        "Enerji teknolojileri",
+        "Eğitim tarihi",        "Spor",        "Mimarlık"      ],
+      "correct": 1,
       "explain": "Yakıt hücreleri ve enerji dönüşüm teknolojileri kimyanın enerji alanındaki uygulamalarındandır."
     },
     {
@@ -1570,13 +1531,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir laboratuvarda nehir suyundan alınan örneklerde ağır metal miktarları ölçülüyor. Bu çalışma hangi amaçla yapılmaktadır?",
       "options": [
-        "Çevre kirliliğini belirlemek",
-        "Suyun rengini değiştirmek",
         "Yeni bir müzik türü geliştirmek",
-        "Tarihî eserleri sınıflandırmak",
-        "Sporcuları seçmek"
-      ],
-      "correct": 0,
+        "Suyun rengini değiştirmek",        "Çevre kirliliğini belirlemek",
+        "Tarihî eserleri sınıflandırmak",        "Sporcuları seçmek"      ],
+      "correct": 2,
       "explain": "Sudaki ağır metal miktarlarının belirlenmesi çevre kirliliğinin izlenmesi ve değerlendirilmesinde kullanılır."
     },
     {
@@ -1584,13 +1542,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir ilaç fabrikasında üretilen tabletlerden alınan örneklerde etken madde miktarı ölçülüyor. Bu çalışmanın temel amacı nedir?",
       "options": [
-        "Ürünün kalite ve standartlara uygunluğunu kontrol etmek",
-        "Tabletin rengini değiştirmek",
-        "Fabrikanın reklamını yapmak",
         "Yeni bir bina tasarlamak",
-        "Çalışanların vardiyasını belirlemek"
-      ],
-      "correct": 0,
+        "Tabletin rengini değiştirmek",        "Fabrikanın reklamını yapmak",        "Ürünün kalite ve standartlara uygunluğunu kontrol etmek",
+        "Çalışanların vardiyasını belirlemek"      ],
+      "correct": 3,
       "explain": "Etken madde miktarının ölçülmesi ilacın kalite ve standartlara uygunluğunun kontrol edilmesini sağlar."
     },
     {
@@ -1598,13 +1553,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir araştırmacı biyolojik örneklerdeki molekülleri inceleyerek hastalıkların tanısına yardımcı olacak yöntemler geliştiriyor. Bu çalışma hangi alanların kesişimindedir?",
       "options": [
-        "Kimya ve sağlık/biyokimya",
-        "Kimya ve müzik",
-        "Kimya ve spor tarihi",
-        "Kimya ve mimarlık tarihi",
-        "Kimya ve turizm"
+        "Kimya ve turizm",
+        "Kimya ve müzik",        "Kimya ve spor tarihi",        "Kimya ve mimarlık tarihi",        "Kimya ve sağlık/biyokimya"
       ],
-      "correct": 0,
+      "correct": 4,
       "explain": "Biyolojik moleküllerin incelenmesi kimya, biyokimya ve sağlık bilimlerinin kesişiminde yer alır."
     },
     {
@@ -1626,13 +1578,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir tesiste plastik atıklar türlerine göre ayrılıyor ve yeniden kullanılabilecek hammaddelere dönüştürülüyor. Kimya bu sürece nasıl katkı sağlar?",
       "options": [
-        "Maddelerin yapısını ve özelliklerini inceleyerek uygun ayırma ve dönüşüm yöntemleri geliştirebilir.",
         "Atıkların rengini yalnızca gözlemleyerek",
-        "Atıkların tarihini araştırarak",
-        "Tesisin reklamını yaparak",
-        "Çalışanların kıyafetlerini tasarlayarak"
-      ],
-      "correct": 0,
+        "Maddelerin yapısını ve özelliklerini inceleyerek uygun ayırma ve dönüşüm yöntemleri geliştirebilir.",
+        "Atıkların tarihini araştırarak",        "Tesisin reklamını yaparak",        "Çalışanların kıyafetlerini tasarlayarak"      ],
+      "correct": 1,
       "explain": "Kimya, maddelerin yapısını ve özelliklerini kullanarak geri dönüşüm ve yeniden kullanım süreçlerinin geliştirilmesine katkı sağlar."
     },
     {
@@ -1640,13 +1589,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir firma doğada daha kısa sürede parçalanabilen ambalaj malzemeleri geliştirmek istiyor. Kimyanın hangi katkısı bu hedefe doğrudan yardımcı olabilir?",
       "options": [
-        "Yeni özelliklere sahip malzemelerin tasarlanması",
-        "Reklam sloganı hazırlanması",
         "Ürünlerin mağazada sergilenmesi",
-        "Taşıma araçlarının boyanması",
-        "Satış fiyatının belirlenmesi"
-      ],
-      "correct": 0,
+        "Reklam sloganı hazırlanması",        "Yeni özelliklere sahip malzemelerin tasarlanması",
+        "Taşıma araçlarının boyanması",        "Satış fiyatının belirlenmesi"      ],
+      "correct": 2,
       "explain": "Kimya, malzemelerin moleküler yapısını değiştirerek biyobozunurluk gibi istenen özelliklerin geliştirilmesine katkı sağlayabilir."
     },
     {
@@ -1654,13 +1600,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir aşçı yemeklerin dokusunu ve aromasını bilimsel yöntemlerle geliştirmek için proteinlerin ve diğer moleküllerin davranışlarını inceliyor. Bu yaklaşım hangi alanla ilişkilidir?",
       "options": [
-        "Moleküler gastronomi",
-        "Astronomi",
-        "Arkeoloji",
         "Hukuk",
-        "Jeoloji"
-      ],
-      "correct": 0,
+        "Astronomi",        "Arkeoloji",        "Moleküler gastronomi",
+        "Jeoloji"      ],
+      "correct": 3,
       "explain": "Moleküler gastronomi, yemek hazırlama süreçlerini moleküler düzeyde açıklamak ve geliştirmek için kimyadan yararlanır."
     },
     {
@@ -1668,13 +1611,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir tekstil firması kumaşların daha dayanıklı, leke tutmaz ve su geçirmez olması için yeni işlemler geliştiriyor. Bu çalışmada kimyanın hangi uygulaması görülür?",
       "options": [
-        "Tekstil ve malzeme kimyası",
-        "Turizm",
-        "Spor",
-        "Tarih",
-        "Müzik"
+        "Müzik",
+        "Turizm",        "Spor",        "Tarih",        "Tekstil ve malzeme kimyası"
       ],
-      "correct": 0,
+      "correct": 4,
       "explain": "Tekstil liflerinin ve yüzeylerinin kimyasal özelliklerinin değiştirilmesi tekstil kimyasının uygulama alanıdır."
     },
     {
@@ -1696,13 +1636,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir araştırmacı daha az kirletici ve daha verimli yakıtlar geliştirmeye çalışıyor. Bu çalışma hangi alanla doğrudan ilişkilidir?",
       "options": [
-        "Enerji ve çevre",
         "Turizm",
-        "Müzik",
-        "Spor",
-        "Tarih"
-      ],
-      "correct": 0,
+        "Enerji ve çevre",
+        "Müzik",        "Spor",        "Tarih"      ],
+      "correct": 1,
       "explain": "Yakıtların geliştirilmesi hem enerji ihtiyacının karşılanması hem de çevresel etkilerin azaltılması açısından kimyanın önemli çalışma alanıdır."
     },
     {
@@ -1710,13 +1647,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir ekip kimyasal maddelerin çok küçük miktarlarını ölçebilen yeni bir analiz cihazı geliştiriyor. Bu çalışmada hangi alanlar birlikte kullanılabilir?",
       "options": [
-        "Kimya ve teknoloji",
-        "Tarih ve edebiyat",
         "Spor ve müzik",
-        "Turizm ve hukuk",
-        "Mimarlık ve tarih"
-      ],
-      "correct": 0,
+        "Tarih ve edebiyat",        "Kimya ve teknoloji",
+        "Turizm ve hukuk",        "Mimarlık ve tarih"      ],
+      "correct": 2,
       "explain": "Kimyasal analiz cihazlarının geliştirilmesi kimya bilgisinin teknoloji ve mühendislikle birlikte kullanılmasını gerektirir."
     },
     {
@@ -1724,13 +1658,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir uzman fabrikadaki kimyasal maddelerin güvenli şekilde depolanması, etiketlenmesi ve kullanılmasına yönelik prosedürler hazırlıyor. Bu görev hangi ihtiyaca yöneliktir?",
       "options": [
-        "Kimyasal güvenliği sağlamak",
-        "Ürünlerin reklamını yapmak",
-        "Çalışanların maaşını hesaplamak",
         "Bina tasarlamak",
-        "Satış hedefi belirlemek"
-      ],
-      "correct": 0,
+        "Ürünlerin reklamını yapmak",        "Çalışanların maaşını hesaplamak",        "Kimyasal güvenliği sağlamak",
+        "Satış hedefi belirlemek"      ],
+      "correct": 3,
       "explain": "Kimyasalların güvenli depolanması, etiketlenmesi ve kullanılması iş sağlığı ve kimyasal güvenlik açısından önemlidir."
     },
     {
@@ -1738,13 +1669,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir uzman içme suyundaki iyonların ve çözünmüş maddelerin miktarlarını düzenli olarak ölçüyor. Bu kişinin çalışmasının temel amacı nedir?",
       "options": [
-        "Su kalitesini değerlendirmek",
-        "Suyun tadını değiştirmek",
-        "Suyun rengini değiştirmek",
-        "Suyu ısıtmak",
-        "Suyun satışını artırmak"
+        "Suyun satışını artırmak",
+        "Suyun tadını değiştirmek",        "Suyun rengini değiştirmek",        "Suyu ısıtmak",        "Su kalitesini değerlendirmek"
       ],
-      "correct": 0,
+      "correct": 4,
       "explain": "Sudaki çözünmüş maddelerin ve iyonların ölçülmesi su kalitesinin değerlendirilmesinde kullanılır."
     },
     {
@@ -1766,13 +1694,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir araştırmacı gerçekleştirdiği tepkimede daha az çözücü ve daha az tehlikeli madde kullanmaya çalışıyor. Bu yaklaşımın temel amacı nedir?",
       "options": [
-        "Çevresel etkiyi ve tehlikeyi azaltmak",
         "Deney süresini mutlaka uzatmak",
-        "Daha fazla atık üretmek",
-        "Kimyasal madde tüketimini artırmak",
-        "Ürün sayısını azaltmak"
-      ],
-      "correct": 0,
+        "Çevresel etkiyi ve tehlikeyi azaltmak",
+        "Daha fazla atık üretmek",        "Kimyasal madde tüketimini artırmak",        "Ürün sayısını azaltmak"      ],
+      "correct": 1,
       "explain": "Yeşil kimyanın amaçlarından biri tehlikeli maddelerin kullanımını ve atık oluşumunu azaltmaktır."
     },
     {
@@ -1780,13 +1705,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Uzay araçlarında kullanılmak üzere yüksek sıcaklığa dayanıklı yeni malzemeler geliştiriliyor. Bu çalışma kimyanın hangi uygulama alanıyla ilişkilidir?",
       "options": [
-        "İleri malzeme teknolojileri",
-        "Turizm",
         "Gıda servisi",
-        "Spor yönetimi",
-        "Tarih"
-      ],
-      "correct": 0,
+        "Turizm",        "İleri malzeme teknolojileri",
+        "Spor yönetimi",        "Tarih"      ],
+      "correct": 2,
       "explain": "Yüksek sıcaklığa ve zorlu koşullara dayanıklı malzemelerin geliştirilmesi ileri malzeme kimyasının uygulamalarındandır."
     },
     {
@@ -1794,13 +1716,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir öğrenci yeni maddeler sentezlemekten ve laboratuvarda deney yapmaktan hoşlanıyor. Kimya alanında kariyer planlarken aşağıdakilerden hangisi onun ilgisine en uygun seçeneklerden biridir?",
       "options": [
-        "Kimya araştırmacılığı",
-        "Spor hakemliği",
-        "Turizm rehberliği",
         "Mimarlık tarihi",
-        "Gazetecilik"
-      ],
-      "correct": 0,
+        "Spor hakemliği",        "Turizm rehberliği",        "Kimya araştırmacılığı",
+        "Gazetecilik"      ],
+      "correct": 3,
       "explain": "Yeni maddeler sentezlemek ve laboratuvar araştırmaları yürütmek kimya araştırmacılığıyla doğrudan ilişkilidir."
     },
     {
@@ -1808,13 +1727,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir kimya lisans mezunu aşağıdaki alanlardan hangisinde çalışabilir?",
       "options": [
-        "İlaç, gıda, boya, çevre veya araştırma laboratuvarları",
-        "Yalnızca spor salonlarında",
-        "Yalnızca turizm sektöründe",
-        "Yalnızca hukuk bürolarında",
-        "Hiçbir laboratuvarda çalışamaz"
+        "Hiçbir laboratuvarda çalışamaz",
+        "Yalnızca spor salonlarında",        "Yalnızca turizm sektöründe",        "Yalnızca hukuk bürolarında",        "İlaç, gıda, boya, çevre veya araştırma laboratuvarları"
       ],
-      "correct": 0,
+      "correct": 4,
       "explain": "Kimya eğitimi alan kişiler birçok sektörde, özellikle laboratuvar, üretim, kalite kontrol ve araştırma alanlarında görev alabilir."
     },
     {
@@ -1836,13 +1752,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir kozmetik ürün piyasaya sunulmadan önce içeriğindeki maddelerin güvenliği ve ürünün kararlılığı test ediliyor. Bu süreç neden önemlidir?",
       "options": [
-        "Ürünün güvenli ve uygun olduğunun değerlendirilmesi için",
         "Ürünün daha pahalı satılması için",
-        "Ürünün renginin mutlaka değiştirilmesi için",
-        "Reklam süresini artırmak için",
-        "Ambalajı büyütmek için"
-      ],
-      "correct": 0,
+        "Ürünün güvenli ve uygun olduğunun değerlendirilmesi için",
+        "Ürünün renginin mutlaka değiştirilmesi için",        "Reklam süresini artırmak için",        "Ambalajı büyütmek için"      ],
+      "correct": 1,
       "explain": "Kozmetik ürünlerin güvenliği, içeriği ve kararlılığı tüketici sağlığı açısından değerlendirilmelidir."
     },
     {
@@ -1850,13 +1763,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir kimya öğretmeni öğrencilerine deney yaptırırken kimyasal maddelerin özelliklerini ve güvenli kullanımını da öğretiyor. Burada kimya bilgisinin hangi kullanım alanı öne çıkar?",
       "options": [
-        "Eğitim",
-        "Madencilik",
         "Petrokimya",
-        "Gıda üretimi",
-        "Tekstil"
-      ],
-      "correct": 0,
+        "Madencilik",        "Eğitim",
+        "Gıda üretimi",        "Tekstil"      ],
+      "correct": 2,
       "explain": "Kimya bilgisinin öğrencilere aktarılması kimya eğitiminin temel çalışma alanıdır."
     },
     {
@@ -1864,13 +1774,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir ekip antiseptik bir ürün geliştirirken ürünün mikroorganizmalar üzerindeki etkisini ve kimyasal kararlılığını araştırıyor. Bu çalışma hangi sektörle ilişkilidir?",
       "options": [
-        "Sağlık ve kimya",
-        "Turizm",
-        "Spor",
         "Müzik",
-        "Mimarlık"
-      ],
-      "correct": 0,
+        "Turizm",        "Spor",        "Sağlık ve kimya",
+        "Mimarlık"      ],
+      "correct": 3,
       "explain": "Antiseptik ve benzeri ürünlerin geliştirilmesi kimya ile sağlık sektörünün kesişiminde yer alır."
     },
     {
@@ -1878,13 +1785,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir fabrikada laboratuvarda belirlenen kimyasal üretim koşulları büyük üretim hattına aktarılıyor. Bu süreçte kimya bilgisinin yanında hangi alanın bilgisine özellikle ihtiyaç duyulur?",
       "options": [
-        "Mühendislik",
-        "Tarih",
-        "Müzik",
-        "Turizm",
-        "Edebiyat"
+        "Edebiyat",
+        "Tarih",        "Müzik",        "Turizm",        "Mühendislik"
       ],
-      "correct": 0,
+      "correct": 4,
       "explain": "Laboratuvar ölçeğindeki kimyasal süreçlerin büyük üretim sistemlerine aktarılmasında mühendislik bilgisi önemlidir."
     },
     {
@@ -1906,13 +1810,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir öğrenci laboratuvar çalışmalarını seviyor, maddelerin özelliklerini merak ediyor ve yeni ürünler geliştirmek istiyor. Bu öğrencinin kimya alanında kariyer seçmesinin temel nedeni aşağıdakilerden hangisi olabilir?",
       "options": [
-        "İlgi ve yeteneklerini kimya alanındaki çalışma fırsatlarıyla birleştirebilmesi",
         "Kimya alanında hiç laboratuvar bulunmaması",
-        "Kimya mesleklerinin yalnızca masa başı olması",
-        "Kimyanın hiçbir sektörde kullanılmaması",
-        "Kimya eğitiminin uygulama içermemesi"
-      ],
-      "correct": 0,
+        "İlgi ve yeteneklerini kimya alanındaki çalışma fırsatlarıyla birleştirebilmesi",
+        "Kimya mesleklerinin yalnızca masa başı olması",        "Kimyanın hiçbir sektörde kullanılmaması",        "Kimya eğitiminin uygulama içermemesi"      ],
+      "correct": 1,
       "explain": "Kariyer seçiminde kişinin ilgi ve yeteneklerini alanın sunduğu çalışma olanaklarıyla eşleştirmesi önemlidir."
     },
     {
@@ -1934,13 +1835,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Enerji ihtiyacının artması ve çevre sorunlarının önem kazanması kimya alanında hangi çalışmaların önemini artırabilir?",
       "options": [
-        "Yeni enerji depolama sistemleri ve sürdürülebilir malzemeler",
-        "Yalnızca geleneksel boya üretimi",
         "Yalnızca ambalaj tasarımı",
-        "Yalnızca reklam çalışmaları",
-        "Kimyayla ilgisiz alanlar"
-      ],
-      "correct": 0,
+        "Yalnızca geleneksel boya üretimi",        "Yeni enerji depolama sistemleri ve sürdürülebilir malzemeler",
+        "Yalnızca reklam çalışmaları",        "Kimyayla ilgisiz alanlar"      ],
+      "correct": 2,
       "explain": "Enerji depolama, sürdürülebilir malzemeler ve çevre dostu teknolojiler gelecekte kimyanın önemli çalışma alanları arasında yer alabilir."
     },
     {
@@ -1948,13 +1846,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Tıp eğitimi alan bir bilim insanı daha sonra moleküler biyoloji alanında araştırmalar yaparak DNA onarım mekanizmalarını inceliyor. Bu kariyer yolu neyi gösterir?",
       "options": [
-        "Farklı bilim alanlarının kesişiminde kariyer yapılabileceğini",
-        "Bilim dallarının birbirinden tamamen bağımsız olduğunu",
-        "Tıp eğitiminin araştırmaya engel olduğunu",
         "Kimyanın biyolojiyle ilgisinin olmadığını",
-        "Bilim insanlarının yalnızca tek alanda çalışabileceğini"
-      ],
-      "correct": 0,
+        "Bilim dallarının birbirinden tamamen bağımsız olduğunu",        "Tıp eğitiminin araştırmaya engel olduğunu",        "Farklı bilim alanlarının kesişiminde kariyer yapılabileceğini",
+        "Bilim insanlarının yalnızca tek alanda çalışabileceğini"      ],
+      "correct": 3,
       "explain": "Modern bilimde tıp, kimya, biyokimya ve moleküler biyoloji gibi alanlar birbirleriyle güçlü biçimde ilişkilidir."
     },
     {
@@ -1962,13 +1857,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir kimya mezunu laboratuvarda geliştirdiği çevre dostu temizlik ürününü ticari bir ürüne dönüştürmek istiyor. Bu süreçte kimya bilgisinin yanında hangi beceriye ihtiyaç duyabilir?",
       "options": [
-        "Girişimcilik ve ürün geliştirme",
-        "Yalnızca spor becerisi",
-        "Yalnızca müzik bilgisi",
-        "Yalnızca tarih bilgisi",
-        "Hiçbir ek beceriye ihtiyaç yoktur"
+        "Hiçbir ek beceriye ihtiyaç yoktur",
+        "Yalnızca spor becerisi",        "Yalnızca müzik bilgisi",        "Yalnızca tarih bilgisi",        "Girişimcilik ve ürün geliştirme"
       ],
-      "correct": 0,
+      "correct": 4,
       "explain": "Bilimsel bir ürünün ticari ürüne dönüştürülmesinde girişimcilik, ürün geliştirme ve pazar bilgisi de önemlidir."
     },
     {
@@ -1990,13 +1882,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir boya firmasındaki kimyager yeni formül geliştirirken üretim mühendisi üretim hattını, kalite uzmanı ise ürünün standartlara uygunluğunu kontrol ediyor. Bu durum neyi gösterir?",
       "options": [
-        "Kimya sektöründe farklı uzmanlıkların birlikte çalışabildiğini",
-        "Kimyagerlerin yalnızca üretim hattında çalıştığını",
         "Kalite kontrolün gereksiz olduğunu",
-        "Mühendislerin kimyayla ilgilenmediğini",
-        "Ürün geliştirmede araştırmaya gerek olmadığını"
-      ],
-      "correct": 0,
+        "Kimyagerlerin yalnızca üretim hattında çalıştığını",        "Kimya sektöründe farklı uzmanlıkların birlikte çalışabildiğini",
+        "Mühendislerin kimyayla ilgilenmediğini",        "Ürün geliştirmede araştırmaya gerek olmadığını"      ],
+      "correct": 2,
       "explain": "Kimya sektöründe ürün geliştirme, üretim ve kalite kontrol süreçlerinde farklı uzmanlıklar birlikte çalışabilir."
     },
     {
@@ -2018,13 +1907,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Kimya alanında çalışan bir kişi yeni analiz cihazlarının ve yeni malzemelerin geliştirilmesiyle karşılaşıyor. Bu durumda neden kendisini geliştirmeye devam etmesi gerekir?",
       "options": [
-        "Bilim ve teknolojideki gelişmeleri takip etmek için",
-        "Kimya bilgisinin zamanla tamamen gereksiz hâle gelmesi için",
-        "Laboratuvar çalışmalarını bırakmak için",
         "Mesleğini değiştirmek zorunda olduğu için",
-        "Bilimsel gelişmelerin kimyayı etkilememesi nedeniyle"
-      ],
-      "correct": 0,
+        "Kimya bilgisinin zamanla tamamen gereksiz hâle gelmesi için",        "Laboratuvar çalışmalarını bırakmak için",        "Bilim ve teknolojideki gelişmeleri takip etmek için",
+        "Bilimsel gelişmelerin kimyayı etkilememesi nedeniyle"      ],
+      "correct": 3,
       "explain": "Bilim ve teknoloji sürekli geliştiği için kimya alanında çalışanların yeni yöntemleri, cihazları ve bilgileri takip etmesi önemlidir."
     },
     {
@@ -2046,13 +1932,10 @@ export const QUIZ = {
       "kazanim": "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
       "text": "Bir kimyager yeni bir ürün geliştirirken ürünün insan sağlığı ve çevre üzerindeki etkilerini de değerlendiriyor. Bu yaklaşım neden önemlidir?",
       "options": [
-        "Bilimsel ve teknolojik çalışmaların güvenli ve sorumlu biçimde yürütülmesi için",
-        "Ürünün mutlaka daha pahalı olması için",
         "Deney sayısını artırmak için",
-        "Laboratuvar süresini uzatmak için",
-        "Ürünün rengini değiştirmek için"
-      ],
-      "correct": 0,
+        "Ürünün mutlaka daha pahalı olması için",        "Bilimsel ve teknolojik çalışmaların güvenli ve sorumlu biçimde yürütülmesi için",
+        "Laboratuvar süresini uzatmak için",        "Ürünün rengini değiştirmek için"      ],
+      "correct": 2,
       "explain": "Kimyasal ürünlerin geliştirilmesinde insan sağlığı, çevre ve güvenlik etkilerinin dikkate alınması bilimsel sorumluluğun bir parçasıdır."
     },
     {
