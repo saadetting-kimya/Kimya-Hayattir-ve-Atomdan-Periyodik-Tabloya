@@ -1301,7 +1301,8 @@ function generateLearningComment(
 export function renderQuiz(
   hostEl,
   questions,
-  moduleKey
+  moduleKey,
+  extraPool
 ) {
 
   if (
@@ -1335,6 +1336,19 @@ export function renderQuiz(
 
 
   hostEl.innerHTML = "";
+
+
+  /*
+   * "Benzerini Çöz" için aday havuzu: modülün kendi soruları
+   * + varsa harici bir pekiştirme havuzu (ör. question-bank.js).
+   * extraPool yalnızca burada, yeniden deneme sorusu ararken
+   * kullanılır — başlangıç sorularının seçimini etkilemez.
+   */
+
+  const remediationPool =
+    Array.isArray(extraPool) && extraPool.length > 0
+      ? questions.concat(extraPool)
+      : questions;
 
 
   /* =======================================================
@@ -1645,7 +1659,7 @@ export function renderQuiz(
     const similar =
       findSimilarQuestion(
         wrongQuestion,
-        questions,
+        remediationPool,
         usedQuestions
       );
 

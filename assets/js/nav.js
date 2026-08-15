@@ -2,7 +2,7 @@
    AtomLab 9 — nav.js
    Paylaşılan üst menüyü enjekte eder ve aktif sayfayı işaretler.
    ========================================================= */
-import { readProgress } from "./quiz-engine.js?v=1";
+import { readProgress } from "./quiz-engine.js?v=2";
 
 // Sayfa "moduller/" içindeyse "../" ile köke çık, sitede değilse dosya adını doğrudan kullan.
 const inModules = location.pathname.includes("/moduller/");

@@ -312,8 +312,9 @@
 
 <script type="module">
   import { mountNav, mountFooter } from "../assets/js/nav.js?v=1";
-  import { renderQuiz, markVisited, bindJournal } from "../assets/js/quiz-engine.js?v=1";
-  import { QUIZ } from "../assets/js/quiz-data.js?v=3";
+  import { renderQuiz, markVisited, bindJournal } from "../assets/js/quiz-engine.js?v=2";
+  import { QUIZ } from "../assets/js/quiz-data.js?v=4";
+  import { QUESTION_BANK } from "../question-bank.js?v=1";
   import { EL_BY_Z, buildConfig, toConventionalOrder, configString, nobleGasShorthand } from "../assets/js/periodic-data.js?v=1";
   import { mountOrbitalViewer, ORBITAL_INFO } from "../assets/js/orbital-3d.js?v=1";
 
@@ -321,7 +322,7 @@
   mountFooter();
   markVisited("orbital");
   bindJournal(document.getElementById("journal6"), "orbital-1");
-  renderQuiz(document.getElementById("quiz-host"), QUIZ.orbital, "orbital");
+  renderQuiz(document.getElementById("quiz-host"), QUIZ.orbital, "orbital", QUESTION_BANK.kim916);
 
   /* ---- Önce Sırala: Orbitalleri Enerjiye Göre Diz ----
    * Z≤36 müfredat sınırı için Aufbau dolum sırasının tamamı bu 8 alt
