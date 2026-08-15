@@ -6,7 +6,7 @@
    (her modülün toplamında A-E şıkları yaklaşık eşit sıklıkta doğrudur).
    ========================================================= */
 
-const QUIZ = {
+export const QUIZ = {
  gunluk: [
   {
     context: "Doğada Su Filtresi",
@@ -667,13 +667,8 @@ const QUIZ = {
     correct: 1,
     explain: "Etiketler ürünün tehlikeleri, kullanım koşulları, saklama şartları ve güvenlik önlemleri hakkında önemli bilgiler verir."
   }
-],
-  disiplin: [
-
-  // =====================================================
-  // KİM.9.1.2 — KİMYA DİSİPLİNLERİ
-  // =====================================================
-
+ ],
+ disiplin: [
   {
     context: "İlaç Fabrikasında Bir Gün",
     kazanim: "KİM.9.1.2",
@@ -688,7 +683,6 @@ const QUIZ = {
     correct: 3,
     explain: "Bir numunenin bileşimini ve miktarını belirlemek analitik kimyanın; karbon temelli yeni bileşiklerin sentezi ise organik kimyanın çalışma alanıdır."
   },
-
   {
     context: "Kan Tahlili",
     kazanim: "KİM.9.1.2",
@@ -703,7 +697,6 @@ const QUIZ = {
     correct: 0,
     explain: "Bir örneğin içerdiği maddelerin miktarlarının belirlenmesi analitik kimyanın temel çalışma alanlarından biridir."
   },
-
   {
     context: "Bilinmeyen Bir Numune",
     kazanim: "KİM.9.1.2",
@@ -718,7 +711,6 @@ const QUIZ = {
     correct: 1,
     explain: "Bir örnekte hangi maddelerin veya iyonların bulunduğunu belirleme nitel analiz olarak adlandırılır ve analitik kimyanın konusudur."
   },
-
   {
     context: "Miktar Belirleme",
     kazanim: "KİM.9.1.2",
@@ -733,7 +725,6 @@ const QUIZ = {
     correct: 2,
     explain: "Bir maddenin miktarının sayısal olarak belirlenmesi nicel analizdir."
   },
-
   {
     context: "İlaç Molekülü Tasarımı",
     kazanim: "KİM.9.1.2",
@@ -748,7 +739,6 @@ const QUIZ = {
     correct: 3,
     explain: "Karbon temelli bileşiklerin yapılarını, özelliklerini ve tepkimelerini inceleyen disiplin organik kimyadır."
   },
-
   {
     context: "Yakıt Araştırması",
     kazanim: "KİM.9.1.2",
@@ -763,7 +753,6 @@ const QUIZ = {
     correct: 0,
     explain: "Hidrokarbonlar ve karbon temelli bileşiklerin yapısı ile tepkimeleri organik kimyanın temel konularındandır."
   },
-
   {
     context: "Parfüm Molekülleri",
     kazanim: "KİM.9.1.2",
@@ -778,7 +767,6 @@ const QUIZ = {
     correct: 1,
     explain: "Parfümlerde kullanılan koku verici moleküllerin önemli bir bölümü organik bileşiklerdir ve bunların sentezi organik kimyanın konusudur."
   },
-
   {
     context: "Petrol Ürünleri",
     kazanim: "KİM.9.1.2",
@@ -793,7 +781,6 @@ const QUIZ = {
     correct: 2,
     explain: "Petrol ürünlerinin büyük bölümünü hidrokarbonlar oluşturur ve hidrokarbonların kimyası organik kimyanın temel konusudur."
   },
-
   {
     context: "Proteinlerin Yapısı",
     kazanim: "KİM.9.1.2",
@@ -808,7 +795,6 @@ const QUIZ = {
     correct: 0,
     explain: "Biyokimya canlılarda bulunan maddeleri ve canlı sistemlerde gerçekleşen kimyasal süreçleri inceler."
   },
-
   {
     context: "DNA Araştırması",
     kazanim: "KİM.9.1.2",
@@ -823,7 +809,6 @@ const QUIZ = {
     correct: 1,
     explain: "DNA canlılarda bulunan biyomoleküllerden biridir. Yapısı ve canlılardaki kimyasal işlevleri biyokimyanın çalışma alanına girer."
   },
-
   {
     context: "Enzimlerin Çalışması",
     kazanim: "KİM.9.1.2",
@@ -838,7 +823,6 @@ const QUIZ = {
     correct: 2,
     explain: "Enzimler canlı sistemlerde görev yapan biyomoleküllerdir ve işlevlerinin incelenmesi biyokimyanın önemli konularındandır."
   },
-
   {
     context: "Hücrede Enerji Üretimi",
     kazanim: "KİM.9.1.2",
@@ -853,7 +837,6 @@ const QUIZ = {
     correct: 0,
     explain: "Canlı hücrelerde gerçekleşen kimyasal tepkimelerin incelenmesi biyokimyanın çalışma alanıdır."
   },
-
   {
     context: "Plastik Geliştirme",
     kazanim: "KİM.9.1.2",
@@ -868,7 +851,6 @@ const QUIZ = {
     correct: 1,
     explain: "Küçük moleküllerin birleşmesiyle oluşan büyük moleküllerin, yani polimerlerin sentezi ve özellikleri polimer kimyasının konusudur."
   },
-
   {
     context: "Biyobozunur Ambalaj",
     kazanim: "KİM.9.1.2",
@@ -883,7 +865,6 @@ const QUIZ = {
     correct: 2,
     explain: "Biyobozunur polimerlerin sentezi, yapısı ve özellikleri polimer kimyasıyla doğrudan ilişkilidir."
   },
-
   {
     context: "Naylon Üretimi",
     kazanim: "KİM.9.1.2",
@@ -898,7 +879,6 @@ const QUIZ = {
     correct: 0,
     explain: "Naylon, uzun zincirli polimerik bir malzemedir. Polimerlerin yapısı ve özellikleri polimer kimyasının konusudur."
   },
-
   {
     context: "Plastiklerin Özellikleri",
     kazanim: "KİM.9.1.2",
@@ -913,7 +893,6 @@ const QUIZ = {
     correct: 1,
     explain: "Plastiklerin önemli bölümü polimerlerden oluşur ve polimerlerin fiziksel özelliklerinin incelenmesi polimer kimyasıyla ilişkilidir."
   },
-
   {
     context: "Çözünme Hızı",
     kazanim: "KİM.9.1.2",
@@ -928,7 +907,6 @@ const QUIZ = {
     correct: 0,
     explain: "Çözünme hızı ve sıcaklık gibi fiziksel değişkenler arasındaki ilişki fizikokimyanın çalışma alanına girer."
   },
-
   {
     context: "Tepkime Hızı",
     kazanim: "KİM.9.1.2",
@@ -943,7 +921,6 @@ const QUIZ = {
     correct: 2,
     explain: "Tepkime hızı, sıcaklık ve enerji arasındaki ilişkilerin incelenmesi fizikokimyanın konuları arasındadır."
   },
-
   {
     context: "Denge Araştırması",
     kazanim: "KİM.9.1.2",
@@ -958,7 +935,6 @@ const QUIZ = {
     correct: 0,
     explain: "Kimyasal denge ile sıcaklık, basınç ve derişim arasındaki ilişkiler fizikokimyanın önemli konularındandır."
   },
-
   {
     context: "Pil ve Enerji",
     kazanim: "KİM.9.1.2",
@@ -973,7 +949,6 @@ const QUIZ = {
     correct: 1,
     explain: "Kimyasal enerji ile elektrik enerjisi arasındaki dönüşümlerin incelenmesi fizikokimyanın elektrokimya alanıyla ilişkilidir."
   },
-
   {
     context: "Gazların Davranışı",
     kazanim: "KİM.9.1.2",
@@ -988,7 +963,6 @@ const QUIZ = {
     correct: 2,
     explain: "Maddelerin fiziksel koşullar altındaki davranışlarının incelenmesi fizikokimyanın çalışma alanlarından biridir."
   },
-
   {
     context: "Tuzların Özellikleri",
     kazanim: "KİM.9.1.2",
@@ -1003,7 +977,6 @@ const QUIZ = {
     correct: 0,
     explain: "Tuzlar, mineraller ve birçok karbon temelli olmayan bileşik anorganik kimyanın temel çalışma alanlarındandır."
   },
-
   {
     context: "Asit ve Bazlar",
     kazanim: "KİM.9.1.2",
@@ -1018,7 +991,6 @@ const QUIZ = {
     correct: 2,
     explain: "Asit, baz ve tuzların önemli bir bölümü anorganik kimyanın temel konuları arasında yer alır."
   },
-
   {
     context: "Mineral Araştırması",
     kazanim: "KİM.9.1.2",
@@ -1033,7 +1005,6 @@ const QUIZ = {
     correct: 0,
     explain: "Minerallerin ve birçok karbon temelli olmayan bileşiğin yapısı ve özellikleri anorganik kimyanın konusudur."
   },
-
   {
     context: "Metal Alaşım",
     kazanim: "KİM.9.1.2",
@@ -1048,7 +1019,6 @@ const QUIZ = {
     correct: 1,
     explain: "Metaller ve metal alaşımlarının kimyasal özellikleri anorganik kimyanın önemli çalışma alanlarındandır."
   },
-
   {
     context: "Yarı İletken Malzeme",
     kazanim: "KİM.9.1.2",
@@ -1063,7 +1033,6 @@ const QUIZ = {
     correct: 0,
     explain: "Karbon temelli olmayan bileşiklerin yapı ve özellikleri anorganik kimyanın çalışma alanına girer."
   },
-
   {
     context: "Su Analizi",
     kazanim: "KİM.9.1.2",
@@ -1078,7 +1047,6 @@ const QUIZ = {
     correct: 0,
     explain: "Belirli iyonların miktarlarının ölçülmesi analitik kimyanın doğrudan çalışma alanıdır."
   },
-
   {
     context: "Gıda Analizi",
     kazanim: "KİM.9.1.2",
@@ -1093,7 +1061,6 @@ const QUIZ = {
     correct: 1,
     explain: "Bir örnekteki bileşenlerin miktarlarının belirlenmesi analitik kimyanın temel amaçlarından biridir."
   },
-
   {
     context: "Hastane Laboratuvarı",
     kazanim: "KİM.9.1.2",
@@ -1108,7 +1075,6 @@ const QUIZ = {
     correct: 0,
     explain: "Biyolojik örneklerin bileşenlerinin belirlenmesi ve miktarlarının ölçülmesinde analitik kimya yöntemlerinden yararlanılır."
   },
-
   {
     context: "Biyomolekül Analizi",
     kazanim: "KİM.9.1.2",
@@ -1123,7 +1089,6 @@ const QUIZ = {
     correct: 0,
     explain: "Protein canlı sistemlerle ilişkili olduğu için biyokimyanın; miktarının ölçülmesi ise analitik kimyanın konusudur."
   },
-
   {
     context: "İlaç Çözünürlüğü",
     kazanim: "KİM.9.1.2",
@@ -1138,7 +1103,6 @@ const QUIZ = {
     correct: 1,
     explain: "Çözünürlük ve sıcaklık arasındaki ilişki fizikokimyanın incelediği fiziksel-kimyasal olaylardan biridir."
   },
-
   {
     context: "Katalizör Araştırması",
     kazanim: "KİM.9.1.2",
@@ -1153,7 +1117,6 @@ const QUIZ = {
     correct: 0,
     explain: "Tepkime hızı ve katalizörlerin tepkimeler üzerindeki etkileri fizikokimyanın konuları arasındadır."
   },
-
   {
     context: "Kimya Disiplinlerini Ayırt Etme",
     kazanim: "KİM.9.1.2",
@@ -1168,7 +1131,6 @@ const QUIZ = {
     correct: 1,
     explain: "Bir numunedeki belirli bir maddenin miktarını belirlemek analitik kimyanın doğrudan çalışma alanıdır."
   },
-
   {
     context: "Kimya Disiplinlerini Ayırt Etme",
     kazanim: "KİM.9.1.2",
@@ -1183,7 +1145,6 @@ const QUIZ = {
     correct: 2,
     explain: "Karbon temelli bileşiklerin sentezi ve tepkimeleri organik kimyanın temel çalışma alanıdır."
   },
-
   {
     context: "Kimya Disiplinlerini Ayırt Etme",
     kazanim: "KİM.9.1.2",
@@ -1198,7 +1159,6 @@ const QUIZ = {
     correct: 0,
     explain: "Canlılardaki kimyasal maddeler ve süreçler biyokimyanın temel çalışma alanıdır."
   },
-
   {
     context: "Kimya Disiplinlerini Ayırt Etme",
     kazanim: "KİM.9.1.2",
@@ -1213,7 +1173,6 @@ const QUIZ = {
     correct: 1,
     explain: "Polimerlerin sentezi, yapısı ve özelliklerinin incelenmesi polimer kimyasının çalışma alanıdır."
   },
-
   {
     context: "Kimya Disiplinlerini Ayırt Etme",
     kazanim: "KİM.9.1.2",
@@ -1228,7 +1187,6 @@ const QUIZ = {
     correct: 0,
     explain: "Tepkime hızı ile sıcaklık arasındaki ilişkinin incelenmesi fizikokimyanın çalışma alanıdır."
   },
-
   {
     context: "Disiplinlerin Birlikte Kullanılması",
     kazanim: "KİM.9.1.2",
@@ -1243,7 +1201,6 @@ const QUIZ = {
     correct: 1,
     explain: "Molekülün sentezi organik kimya, miktarının belirlenmesi analitik kimya, canlı sistemdeki etkilerinin incelenmesi ise biyokimya ile ilişkilidir."
   },
-
   {
     context: "Çevre Analizi",
     kazanim: "KİM.9.1.2",
@@ -1258,7 +1215,6 @@ const QUIZ = {
     correct: 0,
     explain: "Metal miktarlarının belirlenmesi analitik kimya; canlı sistemler üzerindeki etkilerinin incelenmesi biyokimya ile ilişkilidir."
   },
-
   {
     context: "Yeni Malzeme Geliştirme",
     kazanim: "KİM.9.1.2",
@@ -1273,7 +1229,6 @@ const QUIZ = {
     correct: 0,
     explain: "Polimerin sentezi ve yapısı polimer kimyasıyla, sıcaklığa bağlı fiziksel davranışı ise fizikokimyayla ilişkilendirilebilir."
   },
-
   {
     context: "Kimya Disiplinlerinin Kapsamı",
     kazanim: "KİM.9.1.2",
@@ -1288,7 +1243,6 @@ const QUIZ = {
     correct: 1,
     explain: "Kimya çok geniş bir bilim alanıdır. Maddelerin yapısı, özellikleri, tepkimeleri ve canlı sistemlerle ilişkileri farklı disiplinlerde ayrıntılı olarak incelenir."
   },
-
   {
     context: "Bir Laboratuvar Ekibi",
     kazanim: "KİM.9.1.2",
@@ -1303,7 +1257,6 @@ const QUIZ = {
     correct: 1,
     explain: "Gerçek bilimsel araştırmalarda farklı kimya disiplinleri aynı problemin farklı yönlerini açıklamak için birlikte kullanılabilir."
   },
-
   {
     context: "Günlük Hayatta Kimya Disiplinleri",
     kazanim: "KİM.9.1.2",
@@ -1318,7 +1271,6 @@ const QUIZ = {
     correct: 0,
     explain: "Aktif organik maddenin sentezi organik kimya; miktarının belirlenmesi analitik kimya; canlı doku üzerindeki etkilerinin araştırılması biyokimya ile ilişkilidir."
   },
-
   {
     context: "Kimya Disiplinlerini Sınıflandırma",
     kazanim: "KİM.9.1.2",
@@ -1333,7 +1285,6 @@ const QUIZ = {
     correct: 0,
     explain: "Analitik kimya maddelerin nitel ve nicel analizini yaparak 'ne var?' ve 'ne kadar var?' sorularına cevap arar."
   },
-
   {
     context: "Kimya Disiplinlerini Sınıflandırma",
     kazanim: "KİM.9.1.2",
@@ -1348,7 +1299,6 @@ const QUIZ = {
     correct: 2,
     explain: "Karbon temelli bileşiklerin yapısı, sentezi ve tepkimeleri organik kimyanın temel konularıdır."
   },
-
   {
     context: "Kimya Disiplinlerini Sınıflandırma",
     kazanim: "KİM.9.1.2",
@@ -1363,7 +1313,6 @@ const QUIZ = {
     correct: 0,
     explain: "Kimyasal sistemlerin sıcaklık, basınç, enerji ve derişim gibi fiziksel değişkenlerle ilişkisi fizikokimyanın konusudur."
   },
-
   {
     context: "Kimya Disiplinlerini Sınıflandırma",
     kazanim: "KİM.9.1.2",
@@ -1378,7 +1327,6 @@ const QUIZ = {
     correct: 1,
     explain: "Canlı sistemlerdeki moleküllerin görevleri ve kimyasal süreçleri biyokimyanın çalışma alanına girer."
   },
-
   {
     context: "Kimya Disiplinlerini Sınıflandırma",
     kazanim: "KİM.9.1.2",
@@ -1393,11 +1341,11 @@ const QUIZ = {
     correct: 0,
     explain: "Uzun zincirli büyük moleküller polimerlerdir. Polimerlerin yapısı ile özellikleri arasındaki ilişki polimer kimyasında incelenir."
   }
-
-],
-  kariyer: [
+ ],
+ kariyer: [
   {
     context: "Bir Fabrikadaki Kalite Kontrol Analisti",
+    kazanim: "KİM.9.1.7",
     text: "İki yıllık bir kimya teknolojisi ön lisans programını tamamlayan bir kişi, bir gıda fabrikasında ürünlerin bileşimini kontrol eden bir pozisyonda çalışmaya başlıyor. Bu kişinin eğitim düzeyi ve unvanı hakkında hangisi doğrudur?",
     options: [
       "Kimya mühendisi unvanına sahiptir",
@@ -1407,12 +1355,11 @@ const QUIZ = {
       "Polimer mühendisi unvanına sahiptir"
     ],
     correct: 3,
-    kazanim: "KİM.9.1.7",
     explain: "Kimya teknolojisi ön lisans programını tamamlayan kişiler kimya teknikeri olarak görev yapabilir."
   },
-
   {
     context: "Laboratuvarda Çalışan Tekniker",
+    kazanim: "KİM.9.1.7",
     text: "Bir laboratuvarda numune hazırlama, çözelti hazırlama ve cihazların günlük kullanımını gerçekleştiren çalışan iki yıllık kimya teknolojisi mezunudur. Bu kişinin görev tanımı aşağıdakilerden hangisine daha uygundur?",
     options: [
       "Kimya teknikeri",
@@ -1422,12 +1369,11 @@ const QUIZ = {
       "Tıp doktoru"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Ön lisans düzeyindeki kimya teknolojisi eğitimi, laboratuvar ve kalite kontrol gibi alanlarda teknikerlik görevlerine hazırlık sağlar."
   },
-
   {
     context: "Üniversitede Kimya Eğitimi",
+    kazanim: "KİM.9.1.7",
     text: "Bir öğrenci maddelerin yapısını, özelliklerini ve dönüşümlerini derinlemesine incelemek istiyor. Üniversitede doğrudan kimya bilimi üzerine dört yıllık eğitim almak isteyen bu öğrencinin tercih edebileceği bölüm hangisidir?",
     options: [
       "Kimya",
@@ -1437,12 +1383,11 @@ const QUIZ = {
       "Gazetecilik"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Kimya bölümü, maddelerin yapısı, özellikleri, tepkimeleri ve dönüşümleri üzerine lisans eğitimi verir."
   },
-
   {
     context: "Kimya Mühendisinin Çalışma Alanı",
+    kazanim: "KİM.9.1.7",
     text: "Bir kimya mühendisi laboratuvarda geliştirilmiş bir üretim yönteminin fabrikada büyük ölçekli uygulanması için çalışıyor. Bu görev aşağıdakilerden hangisiyle en çok ilişkilidir?",
     options: [
       "Tarih araştırması",
@@ -1452,12 +1397,11 @@ const QUIZ = {
       "Arkeolojik kazı"
     ],
     correct: 1,
-    kazanim: "KİM.9.1.7",
     explain: "Kimya mühendisleri kimyasal üretim süreçlerinin tasarlanması, geliştirilmesi ve büyük ölçekte uygulanmasıyla ilgilenebilir."
   },
-
   {
     context: "İlaç Araştırma Laboratuvarı",
+    kazanim: "KİM.9.1.7",
     text: "Bir araştırmacı yeni bir ilacın etken maddesini geliştiriyor ve bu maddenin yapısını inceleyerek farklı türevler sentezliyor. Bu çalışma hangi kariyer alanıyla doğrudan ilişkilidir?",
     options: [
       "Kimya ve ilaç araştırmaları",
@@ -1467,12 +1411,11 @@ const QUIZ = {
       "Tarih"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "İlaç geliştirme ve etken madde sentezi kimya biliminin önemli uygulama alanlarındandır."
   },
-
   {
     context: "Gıda Laboratuvarı",
+    kazanim: "KİM.9.1.7",
     text: "Bir gıda fabrikasında çalışan kimyager, ürünlerdeki katkı maddelerinin miktarını ve bileşimini analiz ediyor. Bu çalışma hangi sektöre örnektir?",
     options: [
       "Tekstil",
@@ -1482,12 +1425,11 @@ const QUIZ = {
       "Turizm"
     ],
     correct: 1,
-    kazanim: "KİM.9.1.7",
     explain: "Gıda sektöründe ürünlerin bileşiminin ve güvenliğinin kimyasal analizlerle kontrol edilmesi önemli bir çalışma alanıdır."
   },
-
   {
     context: "Su Arıtma Tesisinde Çalışma",
+    kazanim: "KİM.9.1.7",
     text: "Bir ekip, içme suyundaki zararlı maddeleri uzaklaştırmak için yeni bir arıtma yöntemi geliştiriyor. Bu çalışma hangi kariyer alanıyla en yakından ilişkilidir?",
     options: [
       "Çevre ve sürdürülebilirlik",
@@ -1497,12 +1439,11 @@ const QUIZ = {
       "Müzik"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Su arıtma, atık yönetimi ve çevre kirliliğinin azaltılması kimyanın çevre ve sürdürülebilirlik alanındaki uygulamalarıdır."
   },
-
   {
     context: "Pil Teknolojisi",
+    kazanim: "KİM.9.1.7",
     text: "Bir araştırma ekibi elektrikli araçlarda kullanılabilecek daha yüksek kapasiteli piller geliştirmeye çalışıyor. Bu çalışma en çok hangi sektörle ilişkilidir?",
     options: [
       "Enerji",
@@ -1512,12 +1453,11 @@ const QUIZ = {
       "Tarım tarihi"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Pil ve enerji depolama teknolojileri enerji alanında kimyanın önemli uygulamalarındandır."
   },
-
   {
     context: "Boya Fabrikası",
+    kazanim: "KİM.9.1.7",
     text: "Bir kimya şirketinde çalışan uzman, daha dayanıklı ve çevreye daha az zarar veren boyalar geliştirmek için çalışıyor. Bu çalışma hangi sektörle doğrudan ilişkilidir?",
     options: [
       "Kimya endüstrisi",
@@ -1527,12 +1467,11 @@ const QUIZ = {
       "Müzik"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Boya, plastik, deterjan ve benzeri ürünlerin geliştirilmesi kimya endüstrisinin çalışma alanlarındandır."
   },
-
   {
     context: "Polimer Araştırması",
+    kazanim: "KİM.9.1.7",
     text: "Bir bilim insanı plastiklerin daha dayanıklı, hafif ve geri dönüştürülebilir hâle getirilmesi üzerine çalışıyor. Bu çalışma hangi alana örnektir?",
     options: [
       "Malzeme ve polimer teknolojileri",
@@ -1542,12 +1481,11 @@ const QUIZ = {
       "Müzik"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Polimerlerin geliştirilmesi ve yeni malzemelerin tasarlanması kimyanın malzeme teknolojileriyle kesişen alanlarındandır."
   },
-
   {
     context: "Kimya Öğretmeni",
+    kazanim: "KİM.9.1.7",
     text: "Bir kişi üniversitede kimya öğretmenliği eğitimi alarak lise öğrencilerine kimya dersi vermeye başlıyor. Bu kariyer yolu hangi alanla ilişkilidir?",
     options: [
       "Kimya eğitimi",
@@ -1557,12 +1495,11 @@ const QUIZ = {
       "Gıda üretimi"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Kimya öğretmenliği, kimya bilgisinin eğitim alanında kullanılmasına yönelik bir kariyer yoludur."
   },
-
   {
     context: "Akademik Araştırma",
+    kazanim: "KİM.9.1.7",
     text: "Bir bilim insanı üniversitede yeni maddelerin özelliklerini araştırıyor ve elde ettiği sonuçları bilimsel makalelerde yayımlıyor. Bu kariyer hangi alanla ilişkilidir?",
     options: [
       "Akademik araştırma",
@@ -1572,12 +1509,11 @@ const QUIZ = {
       "Ulaştırma"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Üniversitelerde bilimsel araştırma yapmak ve sonuçları yayımlamak akademik kariyerin temel özelliklerindendir."
   },
-
   {
     context: "Kalite Kontrol",
+    kazanim: "KİM.9.1.7",
     text: "Bir fabrikada üretilen ürünlerden düzenli olarak numune alınarak ürünlerin standartlara uygunluğu kontrol ediliyor. Bu görev hangi çalışma alanına örnektir?",
     options: [
       "Kalite kontrol",
@@ -1587,12 +1523,11 @@ const QUIZ = {
       "Tarih"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Ürünlerin bileşiminin ve standartlara uygunluğunun kontrol edilmesi kimyada kalite kontrol çalışmalarının önemli bir parçasıdır."
   },
-
   {
     context: "Adli Kimya Laboratuvarı",
+    kazanim: "KİM.9.1.7",
     text: "Bir laboratuvar uzmanı olay yerinden alınan örneklerde belirli kimyasal maddelerin bulunup bulunmadığını araştırıyor. Bu çalışma hangi alana örnektir?",
     options: [
       "Adli kimya",
@@ -1602,12 +1537,11 @@ const QUIZ = {
       "Dilbilim"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Olay yeri örneklerinin kimyasal analizlerle incelenmesi adli kimyanın çalışma alanlarından biridir."
   },
-
   {
     context: "Kozmetik Ürün Geliştirme",
+    kazanim: "KİM.9.1.7",
     text: "Bir şirket cilt bakım ürünlerinin formülünü geliştirirken maddelerin birbirleriyle uyumunu ve ürünün kararlılığını araştırıyor. Bu çalışma hangi sektöre örnektir?",
     options: [
       "Kozmetik",
@@ -1617,12 +1551,11 @@ const QUIZ = {
       "Mimarlık"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Kozmetik ürünlerin formülasyonu, kararlılığı ve güvenliği kimyanın uygulama alanlarındandır."
   },
-
   {
     context: "Tarımda Gübre Geliştirme",
+    kazanim: "KİM.9.1.7",
     text: "Bir araştırmacı bitkilerin ihtiyaç duyduğu elementleri daha verimli sağlayabilecek gübreler geliştirmeye çalışıyor. Bu çalışma hangi alanla ilişkilidir?",
     options: [
       "Tarım ve kimya",
@@ -1632,12 +1565,11 @@ const QUIZ = {
       "Basın"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Gübrelerin geliştirilmesi ve bitki besinlerinin incelenmesi kimyanın tarımsal uygulamalarından biridir."
   },
-
   {
     context: "Petrokimya Tesisi",
+    kazanim: "KİM.9.1.7",
     text: "Bir tesiste petrolden çeşitli kimyasal ürünler elde edilmekte ve bu ürünler plastik, boya ve yakıt üretiminde kullanılmaktadır. Bu çalışma hangi sektörle ilgilidir?",
     options: [
       "Petrokimya",
@@ -1647,12 +1579,11 @@ const QUIZ = {
       "Mimarlık"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Petrolden kimyasal ürünlerin elde edilmesi petrokimya sektörünün temel faaliyetlerindendir."
   },
-
   {
     context: "Nanoteknoloji Laboratuvarı",
+    kazanim: "KİM.9.1.7",
     text: "Bir araştırma grubu çok küçük boyutlardaki malzemelerin özelliklerini değiştirerek daha işlevsel ürünler geliştirmeye çalışıyor. Bu çalışma hangi alanla ilişkilidir?",
     options: [
       "Nanoteknoloji ve malzeme bilimi",
@@ -1662,12 +1593,11 @@ const QUIZ = {
       "Müzik"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Nanometre ölçeğindeki malzemelerin özelliklerinin incelenmesi nanoteknoloji ve malzeme bilimiyle ilişkilidir."
   },
-
   {
     context: "Enerji Üretiminde Kimya",
+    kazanim: "KİM.9.1.7",
     text: "Bir araştırmacı yakıt hücrelerinde gerçekleşen kimyasal tepkimelerden daha verimli elektrik elde etmeye çalışıyor. Bu çalışma hangi alana girer?",
     options: [
       "Enerji teknolojileri",
@@ -1677,12 +1607,11 @@ const QUIZ = {
       "Mimarlık"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Yakıt hücreleri ve enerji dönüşüm teknolojileri kimyanın enerji alanındaki uygulamalarındandır."
   },
-
   {
     context: "Çevre Analizi",
+    kazanim: "KİM.9.1.7",
     text: "Bir laboratuvarda nehir suyundan alınan örneklerde ağır metal miktarları ölçülüyor. Bu çalışma hangi amaçla yapılmaktadır?",
     options: [
       "Çevre kirliliğini belirlemek",
@@ -1692,12 +1621,11 @@ const QUIZ = {
       "Sporcuları seçmek"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Sudaki ağır metal miktarlarının belirlenmesi çevre kirliliğinin izlenmesi ve değerlendirilmesinde kullanılır."
   },
-
   {
     context: "İlaç Kalite Kontrolü",
+    kazanim: "KİM.9.1.7",
     text: "Bir ilaç fabrikasında üretilen tabletlerden alınan örneklerde etken madde miktarı ölçülüyor. Bu çalışmanın temel amacı nedir?",
     options: [
       "Ürünün kalite ve standartlara uygunluğunu kontrol etmek",
@@ -1707,12 +1635,11 @@ const QUIZ = {
       "Çalışanların vardiyasını belirlemek"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Etken madde miktarının ölçülmesi ilacın kalite ve standartlara uygunluğunun kontrol edilmesini sağlar."
   },
-
   {
     context: "Kimya ve Sağlık",
+    kazanim: "KİM.9.1.7",
     text: "Bir araştırmacı biyolojik örneklerdeki molekülleri inceleyerek hastalıkların tanısına yardımcı olacak yöntemler geliştiriyor. Bu çalışma hangi alanların kesişimindedir?",
     options: [
       "Kimya ve sağlık/biyokimya",
@@ -1722,12 +1649,11 @@ const QUIZ = {
       "Kimya ve turizm"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Biyolojik moleküllerin incelenmesi kimya, biyokimya ve sağlık bilimlerinin kesişiminde yer alır."
   },
-
   {
     context: "Yeni Nesil Batarya",
+    kazanim: "KİM.9.1.7",
     text: "Bir ekip daha uzun süre çalışan ve daha kısa sürede şarj olabilen bataryalar geliştirmeye çalışıyor. Bu çalışmada kimyanın hangi uygulama alanından yararlanılır?",
     options: [
       "Enerji depolama ve malzeme kimyası",
@@ -1737,12 +1663,11 @@ const QUIZ = {
       "Spor"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Batarya geliştirme, elektrokimya, enerji depolama ve malzeme kimyasıyla yakından ilişkilidir."
   },
-
   {
     context: "Geri Dönüşüm Tesisi",
+    kazanim: "KİM.9.1.7",
     text: "Bir tesiste plastik atıklar türlerine göre ayrılıyor ve yeniden kullanılabilecek hammaddelere dönüştürülüyor. Kimya bu sürece nasıl katkı sağlar?",
     options: [
       "Maddelerin yapısını ve özelliklerini inceleyerek uygun ayırma ve dönüşüm yöntemleri geliştirebilir.",
@@ -1752,12 +1677,11 @@ const QUIZ = {
       "Çalışanların kıyafetlerini tasarlayarak"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Kimya, maddelerin yapısını ve özelliklerini kullanarak geri dönüşüm ve yeniden kullanım süreçlerinin geliştirilmesine katkı sağlar."
   },
-
   {
     context: "Biyobozunur Ambalaj",
+    kazanim: "KİM.9.1.7",
     text: "Bir firma doğada daha kısa sürede parçalanabilen ambalaj malzemeleri geliştirmek istiyor. Kimyanın hangi katkısı bu hedefe doğrudan yardımcı olabilir?",
     options: [
       "Yeni özelliklere sahip malzemelerin tasarlanması",
@@ -1767,12 +1691,11 @@ const QUIZ = {
       "Satış fiyatının belirlenmesi"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Kimya, malzemelerin moleküler yapısını değiştirerek biyobozunurluk gibi istenen özelliklerin geliştirilmesine katkı sağlayabilir."
   },
-
   {
     context: "Moleküler Gastronomi",
+    kazanim: "KİM.9.1.7",
     text: "Bir aşçı yemeklerin dokusunu ve aromasını bilimsel yöntemlerle geliştirmek için proteinlerin ve diğer moleküllerin davranışlarını inceliyor. Bu yaklaşım hangi alanla ilişkilidir?",
     options: [
       "Moleküler gastronomi",
@@ -1782,12 +1705,11 @@ const QUIZ = {
       "Jeoloji"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Moleküler gastronomi, yemek hazırlama süreçlerini moleküler düzeyde açıklamak ve geliştirmek için kimyadan yararlanır."
   },
-
   {
     context: "Tekstil Kimyası",
+    kazanim: "KİM.9.1.7",
     text: "Bir tekstil firması kumaşların daha dayanıklı, leke tutmaz ve su geçirmez olması için yeni işlemler geliştiriyor. Bu çalışmada kimyanın hangi uygulaması görülür?",
     options: [
       "Tekstil ve malzeme kimyası",
@@ -1797,12 +1719,11 @@ const QUIZ = {
       "Müzik"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Tekstil liflerinin ve yüzeylerinin kimyasal özelliklerinin değiştirilmesi tekstil kimyasının uygulama alanıdır."
   },
-
   {
     context: "Madencilikte Kimya",
+    kazanim: "KİM.9.1.7",
     text: "Bir ekip cevher içerisindeki değerli metalin daha verimli ayrılması için kimyasal yöntemler araştırıyor. Kimyanın hangi alandaki katkısı söz konusudur?",
     options: [
       "Madencilik ve metalurji",
@@ -1812,12 +1733,11 @@ const QUIZ = {
       "Müzik"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Metallerin cevherlerden ayrılması ve saflaştırılması kimya ve metalurjinin önemli uygulama alanlarındandır."
   },
-
   {
     context: "Yakıt Geliştirme",
+    kazanim: "KİM.9.1.7",
     text: "Bir araştırmacı daha az kirletici ve daha verimli yakıtlar geliştirmeye çalışıyor. Bu çalışma hangi alanla doğrudan ilişkilidir?",
     options: [
       "Enerji ve çevre",
@@ -1827,12 +1747,11 @@ const QUIZ = {
       "Tarih"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Yakıtların geliştirilmesi hem enerji ihtiyacının karşılanması hem de çevresel etkilerin azaltılması açısından kimyanın önemli çalışma alanıdır."
   },
-
   {
     context: "Laboratuvar Cihazı Geliştirme",
+    kazanim: "KİM.9.1.7",
     text: "Bir ekip kimyasal maddelerin çok küçük miktarlarını ölçebilen yeni bir analiz cihazı geliştiriyor. Bu çalışmada hangi alanlar birlikte kullanılabilir?",
     options: [
       "Kimya ve teknoloji",
@@ -1842,12 +1761,11 @@ const QUIZ = {
       "Mimarlık ve tarih"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Kimyasal analiz cihazlarının geliştirilmesi kimya bilgisinin teknoloji ve mühendislikle birlikte kullanılmasını gerektirir."
   },
-
   {
     context: "Kimyasal Güvenlik Uzmanı",
+    kazanim: "KİM.9.1.7",
     text: "Bir uzman fabrikadaki kimyasal maddelerin güvenli şekilde depolanması, etiketlenmesi ve kullanılmasına yönelik prosedürler hazırlıyor. Bu görev hangi ihtiyaca yöneliktir?",
     options: [
       "Kimyasal güvenliği sağlamak",
@@ -1857,12 +1775,11 @@ const QUIZ = {
       "Satış hedefi belirlemek"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Kimyasalların güvenli depolanması, etiketlenmesi ve kullanılması iş sağlığı ve kimyasal güvenlik açısından önemlidir."
   },
-
   {
     context: "Su Kalitesi Uzmanı",
+    kazanim: "KİM.9.1.7",
     text: "Bir uzman içme suyundaki iyonların ve çözünmüş maddelerin miktarlarını düzenli olarak ölçüyor. Bu kişinin çalışmasının temel amacı nedir?",
     options: [
       "Su kalitesini değerlendirmek",
@@ -1872,12 +1789,11 @@ const QUIZ = {
       "Suyun satışını artırmak"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Sudaki çözünmüş maddelerin ve iyonların ölçülmesi su kalitesinin değerlendirilmesinde kullanılır."
   },
-
   {
     context: "Kimya ve Sürdürülebilirlik",
+    kazanim: "KİM.9.1.7",
     text: "Bir şirket üretim sırasında oluşan atık miktarını azaltmak ve daha az tehlikeli maddeler kullanmak istiyor. Bu yaklaşım kimyanın hangi anlayışıyla ilişkilidir?",
     options: [
       "Sürdürülebilir ve yeşil kimya",
@@ -1887,12 +1803,11 @@ const QUIZ = {
       "Mimarlık"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Atıkları ve tehlikeli maddelerin kullanımını azaltmaya yönelik kimyasal süreçler yeşil kimya ve sürdürülebilirlik anlayışıyla ilişkilidir."
   },
-
   {
     context: "Yeşil Kimya Laboratuvarı",
+    kazanim: "KİM.9.1.7",
     text: "Bir araştırmacı gerçekleştirdiği tepkimede daha az çözücü ve daha az tehlikeli madde kullanmaya çalışıyor. Bu yaklaşımın temel amacı nedir?",
     options: [
       "Çevresel etkiyi ve tehlikeyi azaltmak",
@@ -1902,12 +1817,11 @@ const QUIZ = {
       "Ürün sayısını azaltmak"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Yeşil kimyanın amaçlarından biri tehlikeli maddelerin kullanımını ve atık oluşumunu azaltmaktır."
   },
-
   {
     context: "Kimya ve Uzay Teknolojileri",
+    kazanim: "KİM.9.1.7",
     text: "Uzay araçlarında kullanılmak üzere yüksek sıcaklığa dayanıklı yeni malzemeler geliştiriliyor. Bu çalışma kimyanın hangi uygulama alanıyla ilişkilidir?",
     options: [
       "İleri malzeme teknolojileri",
@@ -1917,12 +1831,11 @@ const QUIZ = {
       "Tarih"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Yüksek sıcaklığa ve zorlu koşullara dayanıklı malzemelerin geliştirilmesi ileri malzeme kimyasının uygulamalarındandır."
   },
-
   {
     context: "Kariyer Seçimi",
+    kazanim: "KİM.9.1.7",
     text: "Bir öğrenci yeni maddeler sentezlemekten ve laboratuvarda deney yapmaktan hoşlanıyor. Kimya alanında kariyer planlarken aşağıdakilerden hangisi onun ilgisine en uygun seçeneklerden biridir?",
     options: [
       "Kimya araştırmacılığı",
@@ -1932,12 +1845,11 @@ const QUIZ = {
       "Gazetecilik"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Yeni maddeler sentezlemek ve laboratuvar araştırmaları yürütmek kimya araştırmacılığıyla doğrudan ilişkilidir."
   },
-
   {
     context: "Kimya Mezununun Çalışabileceği Alan",
+    kazanim: "KİM.9.1.7",
     text: "Bir kimya lisans mezunu aşağıdaki alanlardan hangisinde çalışabilir?",
     options: [
       "İlaç, gıda, boya, çevre veya araştırma laboratuvarları",
@@ -1947,12 +1859,11 @@ const QUIZ = {
       "Hiçbir laboratuvarda çalışamaz"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Kimya eğitimi alan kişiler birçok sektörde, özellikle laboratuvar, üretim, kalite kontrol ve araştırma alanlarında görev alabilir."
   },
-
   {
     context: "Kimya ve Adli Bilimler",
+    kazanim: "KİM.9.1.7",
     text: "Bir adli laboratuvar uzmanı olay yerinden alınan toz, sıvı veya biyolojik örneklerin kimyasal özelliklerini inceliyor. Bu çalışmanın temel amacı nedir?",
     options: [
       "Olayla ilgili bilimsel kanıt elde etmek",
@@ -1962,12 +1873,11 @@ const QUIZ = {
       "Yeni bir spor dalı geliştirmek"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Adli kimyasal analizler olayların aydınlatılmasına yardımcı olabilecek bilimsel kanıtların elde edilmesini sağlar."
   },
-
   {
     context: "Kozmetik Güvenliği",
+    kazanim: "KİM.9.1.7",
     text: "Bir kozmetik ürün piyasaya sunulmadan önce içeriğindeki maddelerin güvenliği ve ürünün kararlılığı test ediliyor. Bu süreç neden önemlidir?",
     options: [
       "Ürünün güvenli ve uygun olduğunun değerlendirilmesi için",
@@ -1977,12 +1887,11 @@ const QUIZ = {
       "Ambalajı büyütmek için"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Kozmetik ürünlerin güvenliği, içeriği ve kararlılığı tüketici sağlığı açısından değerlendirilmelidir."
   },
-
   {
     context: "Kimya ve Eğitim",
+    kazanim: "KİM.9.1.7",
     text: "Bir kimya öğretmeni öğrencilerine deney yaptırırken kimyasal maddelerin özelliklerini ve güvenli kullanımını da öğretiyor. Burada kimya bilgisinin hangi kullanım alanı öne çıkar?",
     options: [
       "Eğitim",
@@ -1992,12 +1901,11 @@ const QUIZ = {
       "Tekstil"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Kimya bilgisinin öğrencilere aktarılması kimya eğitiminin temel çalışma alanıdır."
   },
-
   {
     context: "Kimya ve Sağlık Ürünleri",
+    kazanim: "KİM.9.1.7",
     text: "Bir ekip antiseptik bir ürün geliştirirken ürünün mikroorganizmalar üzerindeki etkisini ve kimyasal kararlılığını araştırıyor. Bu çalışma hangi sektörle ilişkilidir?",
     options: [
       "Sağlık ve kimya",
@@ -2007,12 +1915,11 @@ const QUIZ = {
       "Mimarlık"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Antiseptik ve benzeri ürünlerin geliştirilmesi kimya ile sağlık sektörünün kesişiminde yer alır."
   },
-
   {
     context: "Üretim Sürecinde Kimya",
+    kazanim: "KİM.9.1.7",
     text: "Bir fabrikada laboratuvarda belirlenen kimyasal üretim koşulları büyük üretim hattına aktarılıyor. Bu süreçte kimya bilgisinin yanında hangi alanın bilgisine özellikle ihtiyaç duyulur?",
     options: [
       "Mühendislik",
@@ -2022,12 +1929,11 @@ const QUIZ = {
       "Edebiyat"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Laboratuvar ölçeğindeki kimyasal süreçlerin büyük üretim sistemlerine aktarılmasında mühendislik bilgisi önemlidir."
   },
-
   {
     context: "Bilimsel Araştırmada Ekip Çalışması",
+    kazanim: "KİM.9.1.7",
     text: "Yeni bir ilaç geliştirme projesinde kimyager, biyolog, mühendis ve doktor birlikte çalışıyor. Bu durum hangi gerçeği gösterir?",
     options: [
       "Bilimsel problemlerin çözümünde farklı disiplinler birlikte çalışabilir.",
@@ -2037,12 +1943,11 @@ const QUIZ = {
       "Bilimsel çalışmalar yalnızca tek kişiyle yürütülür."
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Günümüzde birçok bilimsel ve teknolojik problem disiplinler arası ekip çalışmasıyla çözülmektedir."
   },
-
   {
     context: "Kimya Kariyerini Seçmek",
+    kazanim: "KİM.9.1.7",
     text: "Bir öğrenci laboratuvar çalışmalarını seviyor, maddelerin özelliklerini merak ediyor ve yeni ürünler geliştirmek istiyor. Bu öğrencinin kimya alanında kariyer seçmesinin temel nedeni aşağıdakilerden hangisi olabilir?",
     options: [
       "İlgi ve yeteneklerini kimya alanındaki çalışma fırsatlarıyla birleştirebilmesi",
@@ -2052,12 +1957,11 @@ const QUIZ = {
       "Kimya eğitiminin uygulama içermemesi"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Kariyer seçiminde kişinin ilgi ve yeteneklerini alanın sunduğu çalışma olanaklarıyla eşleştirmesi önemlidir."
   },
-
   {
     context: "Kimyanın Günlük Hayattaki Meslekleri",
+    kazanim: "KİM.9.1.7",
     text: "Aşağıdaki mesleklerden hangisinin çalışma alanında kimya bilgisine doğrudan ihtiyaç duyulabilir?",
     options: [
       "Kimyager",
@@ -2067,12 +1971,11 @@ const QUIZ = {
       "Hepsi"
     ],
     correct: 4,
-    kazanim: "KİM.9.1.7",
     explain: "Kimya bilgisi kimyagerlikten kalite kontrole, laboratuvar teknikerliğinden ilaç araştırmalarına kadar birçok meslekte kullanılabilir."
   },
-
   {
     context: "Kimyanın Gelecekteki Alanları",
+    kazanim: "KİM.9.1.7",
     text: "Enerji ihtiyacının artması ve çevre sorunlarının önem kazanması kimya alanında hangi çalışmaların önemini artırabilir?",
     options: [
       "Yeni enerji depolama sistemleri ve sürdürülebilir malzemeler",
@@ -2082,12 +1985,11 @@ const QUIZ = {
       "Kimyayla ilgisiz alanlar"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Enerji depolama, sürdürülebilir malzemeler ve çevre dostu teknolojiler gelecekte kimyanın önemli çalışma alanları arasında yer alabilir."
   },
-
   {
     context: "Bilim İnsanının Yolculuğu",
+    kazanim: "KİM.9.1.7",
     text: "Tıp eğitimi alan bir bilim insanı daha sonra moleküler biyoloji alanında araştırmalar yaparak DNA onarım mekanizmalarını inceliyor. Bu kariyer yolu neyi gösterir?",
     options: [
       "Farklı bilim alanlarının kesişiminde kariyer yapılabileceğini",
@@ -2097,12 +1999,11 @@ const QUIZ = {
       "Bilim insanlarının yalnızca tek alanda çalışabileceğini"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Modern bilimde tıp, kimya, biyokimya ve moleküler biyoloji gibi alanlar birbirleriyle güçlü biçimde ilişkilidir."
   },
-
   {
     context: "Kimya ve Girişimcilik",
+    kazanim: "KİM.9.1.7",
     text: "Bir kimya mezunu laboratuvarda geliştirdiği çevre dostu temizlik ürününü ticari bir ürüne dönüştürmek istiyor. Bu süreçte kimya bilgisinin yanında hangi beceriye ihtiyaç duyabilir?",
     options: [
       "Girişimcilik ve ürün geliştirme",
@@ -2112,12 +2013,11 @@ const QUIZ = {
       "Hiçbir ek beceriye ihtiyaç yoktur"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Bilimsel bir ürünün ticari ürüne dönüştürülmesinde girişimcilik, ürün geliştirme ve pazar bilgisi de önemlidir."
   },
-
   {
     context: "Kimya ve Ar-Ge",
+    kazanim: "KİM.9.1.7",
     text: "Bir şirket yeni nesil batarya malzemeleri geliştirmek için deneyler yapıyor, sonuçları karşılaştırıyor ve yeni formüller deniyor. Bu çalışma hangi birimin görevi olabilir?",
     options: [
       "Ar-Ge",
@@ -2127,12 +2027,11 @@ const QUIZ = {
       "Güvenlik"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Yeni ürün ve teknolojilerin geliştirilmesi araştırma-geliştirme (Ar-Ge) faaliyetlerinin temelidir."
   },
-
   {
     context: "Kimya Sektöründe İş Birliği",
+    kazanim: "KİM.9.1.7",
     text: "Bir boya firmasındaki kimyager yeni formül geliştirirken üretim mühendisi üretim hattını, kalite uzmanı ise ürünün standartlara uygunluğunu kontrol ediyor. Bu durum neyi gösterir?",
     options: [
       "Kimya sektöründe farklı uzmanlıkların birlikte çalışabildiğini",
@@ -2142,12 +2041,11 @@ const QUIZ = {
       "Ürün geliştirmede araştırmaya gerek olmadığını"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Kimya sektöründe ürün geliştirme, üretim ve kalite kontrol süreçlerinde farklı uzmanlıklar birlikte çalışabilir."
   },
-
   {
     context: "Kimya Mesleklerinin Çeşitliliği",
+    kazanim: "KİM.9.1.7",
     text: "Aşağıdakilerden hangisi kimya eğitiminin kullanılabileceği alanlardan biri değildir?",
     options: [
       "İlaç",
@@ -2157,12 +2055,11 @@ const QUIZ = {
       "Hiçbiri; kimya birçok farklı sektörde kullanılabilir"
     ],
     correct: 4,
-    kazanim: "KİM.9.1.7",
     explain: "Kimya; ilaç, gıda, çevre, enerji, malzeme, kozmetik ve daha birçok sektörde kullanılan temel bilimlerden biridir."
   },
-
   {
     context: "Kariyer ve Yaşam Boyu Öğrenme",
+    kazanim: "KİM.9.1.7",
     text: "Kimya alanında çalışan bir kişi yeni analiz cihazlarının ve yeni malzemelerin geliştirilmesiyle karşılaşıyor. Bu durumda neden kendisini geliştirmeye devam etmesi gerekir?",
     options: [
       "Bilim ve teknolojideki gelişmeleri takip etmek için",
@@ -2172,12 +2069,11 @@ const QUIZ = {
       "Bilimsel gelişmelerin kimyayı etkilememesi nedeniyle"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Bilim ve teknoloji sürekli geliştiği için kimya alanında çalışanların yeni yöntemleri, cihazları ve bilgileri takip etmesi önemlidir."
   },
-
   {
     context: "Kimya ve Toplum",
+    kazanim: "KİM.9.1.7",
     text: "Yeni bir su arıtma teknolojisinin geliştirilmesi, toplum açısından kimyanın hangi katkısını gösterir?",
     options: [
       "Toplumsal problemlere bilimsel ve teknolojik çözümler üretmesini",
@@ -2187,12 +2083,11 @@ const QUIZ = {
       "Kimyanın çevre sorunlarını çözemeyeceğini"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Kimya, su arıtma gibi toplumun ihtiyaçlarına yönelik teknolojik çözümlerin geliştirilmesine katkı sağlar."
   },
-
   {
     context: "Kimya Kariyerlerinde Sorumluluk",
+    kazanim: "KİM.9.1.7",
     text: "Bir kimyager yeni bir ürün geliştirirken ürünün insan sağlığı ve çevre üzerindeki etkilerini de değerlendiriyor. Bu yaklaşım neden önemlidir?",
     options: [
       "Bilimsel ve teknolojik çalışmaların güvenli ve sorumlu biçimde yürütülmesi için",
@@ -2202,12 +2097,11 @@ const QUIZ = {
       "Ürünün rengini değiştirmek için"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Kimyasal ürünlerin geliştirilmesinde insan sağlığı, çevre ve güvenlik etkilerinin dikkate alınması bilimsel sorumluluğun bir parçasıdır."
   },
-
   {
     context: "Geleceğin Kimyacısı",
+    kazanim: "KİM.9.1.7",
     text: "Bir lise öğrencisi gelecekte kimya alanında çalışmak istiyor. Aşağıdaki davranışlardan hangisi bu hedefe hazırlanmasına en çok katkı sağlar?",
     options: [
       "Kimya bilgisi yanında araştırma, problem çözme ve laboratuvar becerilerini geliştirmek",
@@ -2217,1483 +2111,1307 @@ const QUIZ = {
       "Yeni teknolojileri takip etmemek"
     ],
     correct: 0,
-    kazanim: "KİM.9.1.7",
     explain: "Kimya kariyerlerinde bilimsel bilgi kadar araştırma, problem çözme, deneysel çalışma ve teknolojiyi takip etme becerileri de önemlidir."
   }
-],
-      {
-      context: "Laboratuvar Önlüğü",
-      text: "Bir öğrenci laboratuvarda asit ve bazlarla deney yapacaktır. Aşağıdakilerden hangisi uygun bir güvenlik önlemidir?",
-      options: [
-        "Koruyucu gözlük ve önlük kullanmak",
-        "Kimyasalları çıplak elle taşımak",
-        "Deney sırasında yemek yemek",
-        "Kimyasalları koklayarak tanımak",
-        "Deney sırasında laboratuvar kapısını kilitlemek"
-      ],
-      correct: 0,
-      kazanım: "KİM.9.1.7",
-      explain: "Kimyasallarla çalışırken gözlük, önlük ve gerektiğinde eldiven gibi kişisel koruyucu donanımlar kullanılmalıdır."
-    },
-
-    {
-      context: "Laboratuvarda Dökülen Kimyasal",
-      text: "Bir öğrencinin kullandığı kimyasal maddenin bir miktarı laboratuvar tezgâhına dökülüyor. Öğrencinin ilk yapması gereken davranış hangisidir?",
-      options: [
-        "Dökülen maddeyi eliyle silmek",
-        "Maddeyi koklayarak tanımaya çalışmak",
-        "Durumu öğretmene veya sorumlu kişiye bildirmek",
-        "Üzerine başka bir kimyasal dökmek",
-        "Hiçbir şey olmamış gibi deneye devam etmek"
-      ],
-      correct: 2,
-      kazanım: "KİM.9.1.7",
-      explain: "Kimyasal dökülmelerde öğrencinin kendi başına müdahale etmek yerine öğretmeni veya laboratuvar sorumlusunu bilgilendirmesi gerekir."
-    },
-
-    {
-      context: "Kırılan Cam Malzeme",
-      text: "Laboratuvarda bir deney tüpü kırılıyor. Öğrencinin kırık cam parçalarıyla ilgili doğru davranışı hangisidir?",
-      options: [
-        "Cam parçalarını çıplak elle toplamak",
-        "Cam parçalarını uygun araçlarla toplamak ve sorumlu kişiye bildirmek",
-        "Camları normal çöp kutusuna atmak",
-        "Camları tezgâhın üzerinde bırakmak",
-        "Camları cebine koymak"
-      ],
-      correct: 1,
-      kazanım: "KİM.9.1.7",
-      explain: "Kırık camlar çıplak elle tutulmamalı, uygun araçlarla toplanmalı ve cam atıkları için ayrılmış kaplara konulmalıdır."
-    },
-
-    {
-      context: "Kimyasal Etiketleri",
-      text: "Bir öğrenci laboratuvarda kullanacağı kimyasalın şişesindeki etiketi okumadan maddeyi kullanmak istiyor. Bu davranış neden yanlıştır?",
-      options: [
-        "Etiketler yalnızca üretici firmanın reklamıdır",
-        "Etiketler sadece maddenin rengini gösterir",
-        "Etiketler deney süresini belirtir",
-        "Etiket, maddenin tehlikeleri ve güvenli kullanımı hakkında bilgi verebilir",
-        "Kimyasalların etiketlere ihtiyacı yoktur"
-      ],
-      correct: 3,
-      kazanım: "KİM.9.1.7",
-      explain: "Kimyasal etiketleri maddenin adı, tehlike sembolleri ve güvenli kullanımına ilişkin önemli bilgiler içerir."
-    },
-
-    {
-      context: "Koruyucu Gözlük",
-      text: "Bir öğrenci deney sırasında gözlük takmanın gereksiz olduğunu düşünüyor. Özellikle sıvı kimyasallarla çalışırken koruyucu gözlüğün temel amacı nedir?",
-      options: [
-        "Deneyin daha hızlı bitmesini sağlamak",
-        "Kimyasal sıçramalarına karşı gözleri korumak",
-        "Kimyasalın rengini değiştirmek",
-        "Görmeyi güçlendirmek",
-        "Kimyasalın buharlaşmasını önlemek"
-      ],
-      correct: 1,
-      kazanım: "KİM.9.1.7",
-      explain: "Koruyucu gözlük, kimyasal sıçramaları ve bazı fiziksel tehlikelere karşı gözleri korur."
-    },
-
-    {
-      context: "Laboratuvarda Saçların Toplanması",
-      text: "Uzun saçlı bir öğrencinin laboratuvar çalışması sırasında saçlarını toplaması neden önemlidir?",
-      options: [
-        "Saçların kimyasal tepkimeleri hızlandırmasını önlemek için",
-        "Saç renginin değişmesini önlemek için",
-        "Saçların deney sonucunu değiştirmesini önlemek için",
-        "Saçların kimyasal madde veya alevle temas etme riskini azaltmak için",
-        "Laboratuvarın daha güzel görünmesini sağlamak için"
-      ],
-      correct: 3,
-      kazanım: "KİM.9.1.7",
-      explain: "Uzun saçların açık bırakılması kimyasal maddeler veya alevle temas riskini artırabilir."
-    },
-
-    {
-      context: "Laboratuvarda Yemek",
-      text: "Bir öğrenci deney sırasında su şişesinden içmek istiyor. Laboratuvarda yiyecek ve içecek tüketilmemesinin temel nedeni nedir?",
-      options: [
-        "Deneylerin daha uzun sürmesi",
-        "Kimyasalların yiyecek veya içeceklere bulaşarak vücuda alınabilmesi",
-        "Su tüketiminin deneyleri bozması",
-        "Laboratuvarın sıcak olması",
-        "Yemeklerin kimyasal özellik göstermesi"
-      ],
-      correct: 1,
-      kazanım: "KİM.9.1.7",
-      explain: "Kimyasal maddeler yiyecek ve içeceklere bulaşabilir ve fark edilmeden vücuda alınabilir."
-    },
-
-    {
-      context: "Kimyasal Maddeyi Koklama",
-      text: "Bir öğrencinin kimyasal maddenin kokusunu doğrudan şişeden içine çekmesi neden tehlikelidir?",
-      options: [
-        "Kimyasalın rengi değişebilir",
-        "Madde katılaşabilir",
-        "Zararlı veya zehirli buharlar solunabilir",
-        "Şişe ağırlaşabilir",
-        "Kimyasalın sıcaklığı düşebilir"
-      ],
-      correct: 2,
-      kazanım: "KİM.9.1.7",
-      explain: "Kimyasal buharların doğrudan solunması zehirlenme veya solunum yollarında tahrişe neden olabilir."
-    },
-
-    {
-      context: "Puar Kullanımı",
-      text: "Laboratuvarda bir öğrenci pipetle sıvı çekmek için puar kullanıyor. Puar kullanımının temel amacı nedir?",
-      options: [
-        "Sıvının rengini değiştirmek",
-        "Pipeti ısıtmak",
-        "Kimyasalı karıştırmak",
-        "Pipeti temizlemek",
-        "Sıvının ağızla çekilmesini önlemek"
-      ],
-      correct: 4,
-      kazanım: "KİM.9.1.7",
-      explain: "Puar, sıvıların pipetle güvenli şekilde çekilmesini sağlar ve kimyasalın ağız yoluyla alınmasını önler."
-    },
-
-    {
-      context: "Asit ve Bazların Karıştırılması",
-      text: "Bir öğrenci güçlü bir asitle güçlü bir bazı kontrolsüz biçimde karıştırıyor. Bu işlem neden dikkatli yapılmalıdır?",
-      options: [
-        "Tepkime sırasında ısı açığa çıkabileceği için",
-        "Her zaman gaz oluştuğu için",
-        "Maddeler kesinlikle tepkimeye girmediği için",
-        "Sadece renk değişimi olduğu için",
-        "Karışım mutlaka donacağı için"
-      ],
-      correct: 0,
-      kazanım: "KİM.9.1.7",
-      explain: "Asit-baz tepkimelerinde önemli miktarda ısı açığa çıkabilir. Bu nedenle kontrollü çalışılmalıdır."
-    },
-
-    {
-      context: "Asit Seyreltme",
-      text: "Derişik bir asit suyla seyreltilirken neden asit suya yavaşça eklenmelidir?",
-      options: [
-        "Asidin rengini korumak için",
-        "Suyun kaynamasını engellemek için",
-        "Isı açığa çıkması nedeniyle sıçrama riskini azaltmak için",
-        "Asidin katılaşmasını sağlamak için",
-        "Asidin kokusunu azaltmak için"
-      ],
-      correct: 2,
-      kazanım: "KİM.9.1.7",
-      explain: "Seyreltme sırasında önemli miktarda ısı açığa çıkabilir. Asidin suya yavaşça eklenmesi sıçrama riskini azaltır."
-    },
-
-    {
-      context: "Temizlik Ürünleri",
-      text: "Evde kullanılan farklı temizlik ürünlerinin rastgele karıştırılmaması gerekir. Bunun temel nedeni nedir?",
-      options: [
-        "Hepsinin aynı renkte olması",
-        "Her zaman köpürmeleri",
-        "Temizlik etkilerinin azalması",
-        "Zehirli gaz veya tehlikeli maddeler oluşturabilecek tepkimeler gerçekleşebilmesi",
-        "Şişelerin büyümesi"
-      ],
-      correct: 3,
-      kazanım: "KİM.9.1.7",
-      explain: "Bazı temizlik maddeleri karıştırıldığında sağlığa zararlı gazlar veya başka tehlikeli ürünler oluşabilir."
-    },
-
-    {
-      context: "Çamaşır Suyu ve Asit",
-      text: "Çamaşır suyunun asitli bir temizlik maddesiyle karıştırılması neden özellikle tehlikelidir?",
-      options: [
-        "Suyun donmasına neden olduğu için",
-        "Zehirli klor gazı oluşabileceği için",
-        "Çamaşır suyunun rengini değiştirdiği için",
-        "Temizlik etkisini artırdığı için",
-        "Karışımın katılaşmasına neden olduğu için"
-      ],
-      correct: 1,
-      kazanım: "KİM.9.1.7",
-      explain: "Hipoklorit içeren çamaşır suyunun asitlerle karıştırılması klor gazı oluşmasına neden olabilir."
-    },
-
-    {
-      context: "Yanıcı Maddeler",
-      text: "Yanıcı bir kimyasalın açık alevin yanında tutulması neden uygun değildir?",
-      options: [
-        "Kimyasalın rengi değişeceği için",
-        "Şişe daha ağır olacağı için",
-        "Yanıcı maddenin tutuşma veya yangına neden olma riski bulunduğu için",
-        "Kimyasalın yoğunluğu azalacağı için",
-        "Etiket silineceği için"
-      ],
-      correct: 2,
-      kazanım: "KİM.9.1.7",
-      explain: "Yanıcı maddeler ateş ve kıvılcım kaynaklarından uzak tutulmalıdır."
-    },
-
-    {
-      context: "Kimyasal Atık",
-      text: "Bir deneyden sonra kalan kimyasal çözeltinin lavaboya dökülmesi neden her zaman uygun değildir?",
-      options: [
-        "Lavabo her zaman kırılacağı için",
-        "Kimyasal atıklar çevreye zarar verebilir ve uygun atık prosedürleriyle uzaklaştırılmalıdır",
-        "Çözelti mutlaka katılaşacağı için",
-        "Lavabo yalnızca su için tasarlanmıştır",
-        "Deney sonucu tekrar hesaplanacağı için"
-      ],
-      correct: 1,
-      kazanım: "KİM.9.1.7",
-      explain: "Kimyasal atıklar türlerine uygun biçimde toplanmalı ve bertaraf edilmelidir."
-    },
-
-    {
-      context: "Tehlike Piktogramı",
-      text: "Bir kimyasalın etiketinde alev sembolü bulunuyor. Bu sembol öncelikle neyi belirtir?",
-      options: [
-        "Madde radyoaktiftir",
-        "Madde yanıcıdır",
-        "Madde çevre dostudur",
-        "Madde basınçlı değildir",
-        "Madde yalnızca katı hâlde bulunur"
-      ],
-      correct: 1,
-      kazanım: "KİM.9.1.7",
-      explain: "Alev piktogramı maddenin yanıcılık gibi yangın tehlikeleri taşıdığını gösterir."
-    },
-
-    {
-      context: "Kafatası ve Çapraz Kemikler",
-      text: "Bir kimyasal etiketinde kafatası ve çapraz kemikler sembolü bulunuyor. Bu sembol neye karşı uyarır?",
-      options: [
-        "Akut toksisite gibi ciddi zehirlenme tehlikesine",
-        "Maddenin yanıcı olmadığına",
-        "Maddenin yalnızca çevreye zarar verdiğine",
-        "Maddenin radyoaktif olmadığına",
-        "Maddenin tamamen zararsız olduğuna"
-      ],
-      correct: 0,
-      kazanım: "KİM.9.1.7",
-      explain: "Kafatası ve çapraz kemikler piktogramı akut toksisite gibi ciddi zehirlenme tehlikelerini ifade eder."
-    },
-
-    {
-      context: "Çevre İçin Tehlikeli Madde",
-      text: "Bir kimyasalın etiketinde ölü balık ve ağaç sembolü bulunuyor. Bu sembol hangi tehlikeyi gösterir?",
-      options: [
-        "Patlama tehlikesini",
-        "Yanıcılığı",
-        "Çevreye, özellikle sucul canlılara zarar verme tehlikesini",
-        "Radyoaktifliği",
-        "Basınçlı gaz olduğunu"
-      ],
-      correct: 2,
-      kazanım: "KİM.9.1.7",
-      explain: "Çevre sembolü özellikle sucul çevreye zararlı olabilecek maddeler için kullanılır."
-    },
-
-    {
-      context: "Patlayıcı Madde",
-      text: "Etiketinde patlayan bomba sembolü bulunan bir maddeyle çalışırken temel tehlike nedir?",
-      options: [
-        "Maddenin suya dönüşmesi",
-        "Maddenin kesinlikle yanmaması",
-        "Maddenin renk değiştirmesi",
-        "Patlama tehlikesi",
-        "Maddenin donması"
-      ],
-      correct: 3,
-      kazanım: "KİM.9.1.7",
-      explain: "Patlayan bomba piktogramı patlayıcı özellik taşıyan maddeler için kullanılır."
-    },
-
-    {
-      context: "Basınçlı Gaz Tüpü",
-      text: "Bir gaz tüpünün yüksek sıcaklıkta bırakılması neden tehlikeli olabilir?",
-      options: [
-        "Gazın rengi değişeceği için",
-        "Basınç artışı ve tüpün zarar görmesi riski nedeniyle",
-        "Gazın mutlaka katılaşacağı için",
-        "Tüpün içindeki gazın suya dönüşeceği için",
-        "Etiketin büyüyeceği için"
-      ],
-      correct: 1,
-      kazanım: "KİM.9.1.7",
-      explain: "Basınçlı gaz tüpleri ısı kaynaklarından uzak tutulmalıdır; sıcaklık artışı basıncı yükseltebilir."
-    },
-
-    {
-      context: "Laboratuvar Havalandırması",
-      text: "Bazı kimyasal deneylerin çeker ocakta yapılmasının temel amacı nedir?",
-      options: [
-        "Deneyin rengini değiştirmek",
-        "Kimyasalın daha hızlı katılaşmasını sağlamak",
-        "Zararlı buhar ve gazların solunma riskini azaltmak",
-        "Deney tüplerini soğutmak",
-        "Elektrik tüketimini azaltmak"
-      ],
-      correct: 2,
-      kazanım: "KİM.9.1.7",
-      explain: "Çeker ocak, oluşabilecek zararlı buhar ve gazların ortamdan uzaklaştırılmasına yardımcı olur."
-    },
-
-    {
-      context: "Isıtılan Deney Tüpü",
-      text: "Bir öğrenci deney tüpündeki sıvıyı ısıtırken tüpün ağzını arkadaşına doğru tutuyor. Bu davranış neden tehlikelidir?",
-      options: [
-        "Sıvının rengi değişebilir",
-        "Tüpün daha hızlı soğumasına neden olur",
-        "Deney sonucu kesinlikle değişmez",
-        "Isınan madde sıçrayabilir veya gaz çıkışı gerçekleşebilir",
-        "Tüp daha ağır hâle gelir"
-      ],
-      correct: 3,
-      kazanım: "KİM.9.1.7",
-      explain: "Isıtılan maddeler sıçrayabilir veya gaz oluşturabilir. Deney tüpünün ağzı hiçbir zaman kişiye doğru tutulmamalıdır."
-    },
-
-    {
-      context: "Deney Tüpünü Isıtma",
-      text: "Bir deney tüpü doğrudan ve tek bir noktadan uzun süre ısıtılmak yerine neden hareket ettirilerek ısıtılabilir?",
-      options: [
-        "Tüpün rengini değiştirmek için",
-        "Isının daha dengeli dağılmasını sağlamak için",
-        "Kimyasalı katılaştırmak için",
-        "Tüpün hacmini artırmak için",
-        "Deneyi durdurmak için"
-      ],
-      correct: 1,
-      kazanım: "KİM.9.1.7",
-      explain: "Deney tüpünün kontrollü biçimde hareket ettirilmesi ısının daha dengeli dağılmasına yardımcı olur."
-    },
-
-    {
-      context: "Elektrikli Laboratuvar Araçları",
-      text: "Laboratuvarda elektrikli bir cihazın kablosunda hasar görülüyor. Öğrencinin doğru davranışı hangisidir?",
-      options: [
-        "Cihazı kullanmaya devam etmek",
-        "Kabloyu çıplak elle onarmak",
-        "Cihazı suyla temizlemek",
-        "Kabloyu bantla kapatıp kullanmak",
-        "Cihazı kullanmamak ve sorumlu kişiye bildirmek"
-      ],
-      correct: 4,
-      kazanım: "KİM.9.1.7",
-      explain: "Hasarlı elektrikli cihazlar kullanılmamalı ve durum sorumlu kişiye bildirilmelidir."
-    },
-
-    {
-      context: "Kimyasalın Göze Sıçraması",
-      text: "Bir kimyasal öğrencinin gözüne sıçrıyor. Laboratuvar güvenliği açısından en doğru ilk yaklaşım hangisidir?",
-      options: [
-        "Gözü ovuşturmak",
-        "Gözü kapatıp beklemek",
-        "Gözleri uygun göz yıkama sistemiyle bol suyla yıkamak ve hemen sorumlu kişiye haber vermek",
-        "Göze başka bir kimyasal damlatmak",
-        "Deneye devam etmek"
-      ],
-      correct: 2,
-      kazanım: "KİM.9.1.7",
-      explain: "Kimyasal göz temasında gözler bol suyla yıkanmalı ve olay derhal sorumlu kişiye bildirilmelidir."
-    },
-
-    {
-      context: "Kimyasalın Cilde Teması",
-      text: "Bir kimyasal madde öğrencinin cildine dökülüyor. En uygun davranış hangisidir?",
-      options: [
-        "Cildi hemen bol suyla yıkamak ve sorumlu kişiye haber vermek",
-        "Kimyasalı bezle daha fazla yaymak",
-        "Cildi kapatıp beklemek",
-        "Kimyasalı koklamak",
-        "Başka bir kimyasalla nötrleştirmeye çalışmak"
-      ],
-      correct: 0,
-      kazanım: "KİM.9.1.7",
-      explain: "Cilt temasında uygun ilk yardım prosedürleri uygulanmalı, bölge bol suyla yıkanmalı ve sorumlu kişiye haber verilmelidir."
-    },
-
-    {
-      context: "Yanlışlıkla Kimyasal İçme",
-      text: "Bir öğrenci yanlışlıkla laboratuvar kimyasalını ağzına alıyor. Güvenli yaklaşım hangisidir?",
-      options: [
-        "Kendi kendine başka bir kimyasal içmek",
-        "Durumu gizlemek",
-        "Hemen sorumlu kişiye haber vermek ve belirlenen acil durum prosedürünü uygulamak",
-        "Deneye devam etmek",
-        "Kimyasalı tekrar tadına bakmak"
-      ],
-      correct: 2,
-      kazanım: "KİM.9.1.7",
-      explain: "Kimyasalın ağız yoluyla alınması ciddi bir durumdur. Derhal sorumlu kişiye haber verilmeli ve uygun acil durum prosedürü uygulanmalıdır."
-    },
-
-    {
-      context: "Laboratuvar Acil Durumu",
-      text: "Laboratuvarda yangın çıktığında öğrencinin öncelikli davranışı ne olmalıdır?",
-      options: [
-        "Yangının fotoğrafını çekmek",
-        "Yangını tek başına büyütmeden söndürmeye çalışmak",
-        "Kimyasal şişelerini toplamaya başlamak",
-        "Güvenli biçimde ortamdan uzaklaşmak ve sorumlu kişiye haber vermek",
-        "Deneyi tamamlamak"
-      ],
-      correct: 3,
-      kazanım: "KİM.9.1.7",
-      explain: "Acil durumda öncelik kişisel güvenliktir. Öğrenci güvenli biçimde ortamdan uzaklaşmalı ve sorumlu kişilere haber vermelidir."
-    },
-
-    {
-      context: "Kimyasal Depolama",
-      text: "Kimyasalların laboratuvarda gelişigüzel aynı dolapta tutulması neden sakıncalıdır?",
-      options: [
-        "Şişelerin rengi değişebilir",
-        "Birbiriyle tepkimeye girebilecek maddeler temas edebilir",
-        "Kimyasalların tamamı donar",
-        "Etiketler otomatik olarak silinir",
-        "Laboratuvarın sıcaklığı düşer"
-      ],
-      correct: 1,
-      kazanım: "KİM.9.1.7",
-      explain: "Uyumsuz kimyasalların birlikte depolanması tehlikeli tepkimelere yol açabilir."
-    },
-
-    {
-      context: "Asitlerin Saklanması",
-      text: "Derişik asitlerin depolanmasında aşağıdakilerden hangisine dikkat edilmelidir?",
-      options: [
-        "Yanıcı maddelerle birlikte tutulmalıdır",
-        "Etiketsiz kaplara aktarılmalıdır",
-        "Uygun ve uyumlu depolama koşullarında, güvenli biçimde saklanmalıdır",
-        "Güneş altında bırakılmalıdır",
-        "Kapakları açık tutulmalıdır"
-      ],
-      correct: 2,
-      kazanım: "KİM.9.1.7",
-      explain: "Asitler özelliklerine ve uyumluluklarına göre uygun koşullarda depolanmalıdır."
-    },
-
-    {
-      context: "Etiketsiz Şişe",
-      text: "Laboratuvarda içeriği bilinmeyen etiketsiz bir şişe bulunuyor. Öğrencinin doğru davranışı hangisidir?",
-      options: [
-        "Koklayarak tanımak",
-        "Tadına bakmak",
-        "Başka bir şişeye aktarmak",
-        "Öğretmene veya laboratuvar sorumlusuna bildirmek ve kendiliğinden kullanmamak",
-        "Lavaboya dökmek"
-      ],
-      correct: 3,
-      kazanım: "KİM.9.1.7",
-      explain: "İçeriği bilinmeyen kimyasallar kullanılmamalı, koklanmamalı veya tadılmamalıdır."
-    },
-
-    {
-      context: "Kimyasalı Başka Kaba Aktarma",
-      text: "Bir öğrenci kimyasalı orijinal etiketini taşımayan başka bir kaba aktarıyor. Bu uygulamanın temel sakıncası nedir?",
-      options: [
-        "Kimyasalın kütlesi artar",
-        "Kimyasalın rengi değişir",
-        "Kabın içindeki maddenin kimliği ve tehlikeleri karışabilir",
-        "Kimyasal kesinlikle buharlaşmaz",
-        "Deney daha hızlı gerçekleşir"
-      ],
-      correct: 2,
-      kazanım: "KİM.9.1.7",
-      explain: "Kimyasallar başka kaba aktarılacaksa kap uygun şekilde etiketlenmelidir. Aksi durumda madde yanlış tanınabilir."
-    },
-
-    {
-      context: "Kimyasal Maddeyle Çalışma",
-      text: "Bir öğrenci deney sırasında kimyasalın özelliklerini bilmediğini fark ediyor. En doğru yaklaşım hangisidir?",
-      options: [
-        "Rastgele kullanmak",
-        "Tadına bakmak",
-        "Koklamak",
-        "Daha fazla miktarda kullanmak",
-        "Güvenlik bilgi ve etiketlerini incelemek ve sorumlu kişiye danışmak"
-      ],
-      correct: 4,
-      kazanım: "KİM.9.1.7",
-      explain: "Kimyasalın özellikleri ve tehlikeleri bilinmeden çalışma yapılmamalıdır."
-    },
-
-    {
-      context: "Laboratuvar Düzeni",
-      text: "Deney sırasında tezgâhın üzerinde gereksiz çok sayıda malzeme bulunması neden risklidir?",
-      options: [
-        "Deney daha güzel görünür",
-        "Kimyasalların rengi değişir",
-        "Çalışma alanı daralır ve devrilme, dökülme veya karışıklık riski artar",
-        "Maddelerin atom numarası değişir",
-        "Laboratuvarın sıcaklığı artar"
-      ],
-      correct: 2,
-      kazanım: "KİM.9.1.7",
-      explain: "Düzenli bir çalışma alanı kazaları ve kimyasal dökülmelerini önlemeye yardımcı olur."
-    },
-
-    {
-      context: "Laboratuvarda Koşmak",
-      text: "Laboratuvarda koşmak neden güvenlik açısından uygun değildir?",
-      options: [
-        "Kimyasalların atom yapısını değiştirir",
-        "Düşme, cam malzeme kırılması ve kimyasal dökülmesi riskini artırır",
-        "Deneylerin tamamını hızlandırır",
-        "Elektron sayısını değiştirir",
-        "Laboratuvarı soğutur"
-      ],
-      correct: 1,
-      kazanım: "KİM.9.1.7",
-      explain: "Laboratuvarda kontrollü hareket etmek kazaları önlemek açısından önemlidir."
-    },
-
-    {
-      context: "Laboratuvar Güvenlik Kuralları",
-      text: "Bir öğrenci deney yönergesini okumadan çalışmaya başlıyor. Bunun doğurabileceği temel sorun nedir?",
-      options: [
-        "Maddelerin atom numarası değişir",
-        "Deney mutlaka başarılı olur",
-        "Kimyasal maddelerin rengi kaybolur",
-        "Yanlış uygulama ve güvenlik riskleri ortaya çıkabilir",
-        "Laboratuvar otomatik olarak kapanır"
-      ],
-      correct: 3,
-      kazanım: "KİM.9.1.7",
-      explain: "Deney yönergesinin okunması hem doğru uygulama hem de güvenlik açısından gereklidir."
-    },
-
-    {
-      context: "Kişisel Koruyucu Donanım",
-      text: "Aşağıdakilerden hangisi kişisel koruyucu donanımlardan biridir?",
-      options: [
-        "Deney tüpü",
-        "Beher",
-        "Koruyucu gözlük",
-        "Spatül",
-        "Mezür"
-      ],
-      correct: 2,
-      kazanım: "KİM.9.1.7",
-      explain: "Koruyucu gözlük, kişiyi kimyasal ve fiziksel tehlikelere karşı korumaya yardımcı olan kişisel koruyucu donanımdır."
-    },
-
-    {
-      context: "Eldiven Kullanımı",
-      text: "Kimyasal maddelerle çalışırken uygun eldiven kullanılmasının amacı nedir?",
-      options: [
-        "Ellerin kimyasal maddelerle doğrudan temasını azaltmak",
-        "Deneyin süresini uzatmak",
-        "Kimyasalın sıcaklığını artırmak",
-        "Maddenin rengini değiştirmek",
-        "Elektronların hareketini durdurmak"
-      ],
-      correct: 0,
-      kazanım: "KİM.9.1.7",
-      explain: "Uygun eldiven, kimyasal maddelerin ciltle temas etme riskini azaltır."
-    },
-
-    {
-      context: "Eldivenle Telefon Kullanmak",
-      text: "Bir öğrenci laboratuvarda kimyasal maddeyle çalıştıktan sonra eldivenlerini çıkarmadan telefonuna dokunuyor. Bu davranış neden sakıncalıdır?",
-      options: [
-        "Telefonun ekranı daha parlak olur",
-        "Eldiven üzerindeki kimyasal kalıntılar başka yüzeylere taşınabilir",
-        "Telefonun pili kesinlikle biter",
-        "Kimyasalın atom numarası değişir",
-        "Eldivenler kendiliğinden temizlenir"
-      ],
-      correct: 1,
-      kazanım: "KİM.9.1.7",
-      explain: "Kimyasal bulaşmış eldivenlerle farklı yüzeylere dokunmak çapraz bulaşmaya neden olabilir."
-    },
-
-    {
-      context: "Deney Sonrası Eller",
-      text: "Laboratuvar çalışması bittikten sonra ellerin yıkanmasının temel nedeni nedir?",
-      options: [
-        "Kimyasalların tamamen yok olması için her zaman yeterlidir",
-        "Deney sonucunu değiştirmek için",
-        "Eller üzerinde kalabilecek kimyasal kalıntıları uzaklaştırmak için",
-        "Ellerin sıcaklığını artırmak için",
-        "Kimyasalın rengini değiştirmek için"
-      ],
-      correct: 2,
-      kazanım: "KİM.9.1.7",
-      explain: "Çalışma sonrasında ellerin uygun şekilde yıkanması kimyasal kalıntıların vücuda taşınmasını azaltır."
-    },
-
-    {
-      context: "Kimyasal Güvenlik Bilgisi",
-      text: "Bir kimyasalın sağlık, yangın ve depolama tehlikeleri hakkında ayrıntılı bilgiye ihtiyaç duyan öğrenci öncelikle hangi kaynağa başvurmalıdır?",
-      options: [
-        "Kimyasalın rengine",
-        "Arkadaşının tahminine",
-        "Şişenin boyutuna",
-        "Güvenlik Bilgi Formu (GBF/SDS) ve ürün etiketine",
-        "Maddenin kokusuna"
-      ],
-      correct: 3,
-      kazanım: "KİM.9.1.7",
-      explain: "Güvenlik Bilgi Formu ve etiketler kimyasalın tehlikeleri, güvenli kullanımı ve acil durumları hakkında bilgi sağlar."
-    },
-
-    {
-      context: "Güvenlik Piktogramlarını Okumak",
-      text: "Kimyasal güvenlik piktogramlarının kullanılmasının temel amacı nedir?",
-      options: [
-        "Maddeleri daha renkli göstermek",
-        "Tehlikeleri hızlı ve anlaşılır biçimde belirtmek",
-        "Kimyasalın fiyatını göstermek",
-        "Üretici firmanın logosunu göstermek",
-        "Maddenin atom numarasını göstermek"
-      ],
-      correct: 1,
-      kazanım: "KİM.9.1.7",
-      explain: "Piktogramlar kimyasal tehlikelerin hızlı ve standart biçimde anlaşılmasına yardımcı olur."
-    },
-
-    {
-      context: "Bilinmeyen Gaz",
-      text: "Bir deney sırasında beklenmeyen bir gaz oluşuyor. Öğrencinin gazı tanımak için doğrudan koklaması neden uygun değildir?",
-      options: [
-        "Gazların tamamı kokusuzdur",
-        "Gazın sıcaklığı değişir",
-        "Gaz zehirli veya tahriş edici olabilir",
-        "Gazın rengi değişir",
-        "Gaz mutlaka patlar"
-      ],
-      correct: 2,
-      kazanım: "KİM.9.1.7",
-      explain: "Bilinmeyen gazlar doğrudan solunmamalıdır. Zararlı veya zehirli olabilirler."
-    },
-
-    {
-      context: "Güvenlik ve Sorumluluk",
-      text: "Bir öğrenci arkadaşının laboratuvarda güvenlik kuralını ihlal ettiğini görüyor. En uygun davranış hangisidir?",
-      options: [
-        "Durumu görmezden gelmek",
-        "Kural ihlalini teşvik etmek",
-        "Fotoğraf çekmek",
-        "Güvenli davranması konusunda uyarmak ve gerekirse öğretmene bildirmek",
-        "Kendisi de aynı davranışı yapmak"
-      ],
-      correct: 3,
-      kazanım: "KİM.9.1.7",
-      explain: "Laboratuvar güvenliği yalnızca bireysel değil, ortak bir sorumluluktur."
-    },
-
-    {
-      context: "Kimyasal Maddelerin Taşınması",
-      text: "Bir öğrenci laboratuvarda birden fazla kimyasal şişesini aynı anda taşımaya çalışıyor. En güvenli yaklaşım hangisidir?",
-      options: [
-        "Hepsini üst üste koyarak taşımak",
-        "Şişeleri dengeli ve güvenli şekilde, gerektiğinde uygun taşıma kabı kullanarak taşımak",
-        "Şişeleri kapaksız taşımak",
-        "Şişeleri sallayarak taşımak",
-        "Kimyasalları etiketsiz kaba aktarmak"
-      ],
-      correct: 1,
-      kazanım: "KİM.9.1.7",
-      explain: "Kimyasallar taşınırken devrilme ve kırılma riskini azaltacak uygun taşıma yöntemleri kullanılmalıdır."
-    },
-
-    {
-      context: "Deney Sonrası Temizlik",
-      text: "Deney tamamlandıktan sonra çalışma alanının temizlenmesi neden önemlidir?",
-      options: [
-        "Kimyasal maddelerin çevreye yayılmasını ve sonraki çalışmalarda kazaları azaltmak için",
-        "Deney sonucunu değiştirmek için",
-        "Cam malzemeleri renklendirmek için",
-        "Atomların hareketini durdurmak için",
-        "Kimyasalları daha güçlü hâle getirmek için"
-      ],
-      correct: 0,
-      kazanım: "KİM.9.1.7",
-      explain: "Deney sonrası temizlik, kimyasal kalıntıların ve olası tehlikelerin sonraki çalışmalara taşınmasını önlemeye yardımcı olur."
-    },
-
-    {
-      context: "Güvenlik Kuralının Nedeni",
-      text: "Laboratuvar güvenlik kurallarının yalnızca deney sırasında değil, deney öncesinde de okunması neden önemlidir?",
-      options: [
-        "Kurallar yalnızca öğretmen için gereklidir",
-        "Deneyin sonucunu önceden değiştirmek için",
-        "Tehlikeleri önceden fark ederek uygun önlemleri almak için",
-        "Kimyasalların miktarını artırmak için",
-        "Deney süresini kesinlikle uzatmak için"
-      ],
-      correct: 2,
-      kazanım: "KİM.9.1.7",
-      explain: "Riskleri önceden bilmek uygun kişisel koruyucu donanımı ve çalışma yöntemini seçmeye yardımcı olur."
-    },
-
-    {
-      context: "Kimya ve Güvenlik",
-      text: "Kimya laboratuvarında güvenlik kurallarına uymanın temel amacı aşağıdakilerden hangisidir?",
-      options: [
-        "Deneyleri daha karmaşık hâle getirmek",
-        "Kimyasalları daha pahalı hâle getirmek",
-        "Sadece deney sonucunu doğru çıkarmak",
-        "İnsan sağlığını, çevreyi ve laboratuvar malzemelerini korumak",
-        "Kimyasal tepkimeleri tamamen durdurmak"
-      ],
-      correct: 3,
-      kazanım: "KİM.9.1.7",
-      explain: "Laboratuvar güvenliğinin temel amacı insan sağlığını, çevreyi ve laboratuvarın güvenli işleyişini korumaktır."
-    }
-
-  ],
-
-   teori: [
-    {
-      kazanım: "KİM.9.1.5",
-      context: "Altın Yaprak Deneyinin Şaşırtan Sonucu",
-      text: "Bir deneyde, ince bir altın yaprağa gönderilen pozitif yüklü alfa parçacıklarının büyük çoğunluğu sapmadan doğrudan geçerken, çok küçük bir kısmı büyük açılarla geri sekiyor. Bu gözlem, o döneme kadar kabul gören 'pozitif yükün atom içinde eşit dağıldığı' modelini neden geçersiz kılmıştır?",
-      options: [
-        "Çünkü hiçbir parçacık sapmamalıydı",
-        "Çünkü altın yaprak deneyleri sadece metallerde yapılabilir",
-        "Çünkü alfa parçacıkları negatif yüklüdür",
-        "Çünkü pozitif yük eşit dağılmış olsaydı hiçbir parçacık büyük açıyla geri sekmemeliydi; geri sekme, yoğun ve küçük bir pozitif bölgenin (çekirdeğin) varlığına işaret eder",
-        "Çünkü deney sonucu tamamen rastgeledir ve model üzerinde bir etkisi yoktur"
-      ],
-      correct: 3,
-      explain: "Alfa parçacıklarının büyük açılarla sapması, atomda küçük ve yoğun pozitif yüklü bir çekirdeğin bulunduğunu göstermiştir."
-    },
-
-    {
-      kazanım: "KİM.9.1.5",
-      context: "Bir Atomun Işık Yayması",
-      text: "Bir gaz deşarj tüpündeki atomlar dışarıdan enerji aldıktan sonra belirli renklerde ışık yayıyor. Bohr atom teorisine göre bu ışık yayma olayı nasıl gerçekleşir?",
-      options: [
-        "Elektronların çekirdeğe düşmesiyle",
-        "Uyarılmış elektronların daha yüksek enerji seviyesinden düşük enerji seviyesine geçerken enerji farkını ışık olarak yaymasıyla",
-        "Protonların yer değiştirmesiyle",
-        "Nötronların parçalanmasıyla",
-        "Atomun tamamen iyonlaşmasıyla"
-      ],
-      correct: 1,
-      explain: "Elektron üst enerji seviyesinden alt enerji seviyesine geçerken iki seviye arasındaki enerji farkını foton olarak yayar."
-    },
-
-    {
-      kazanım: "KİM.9.1.5",
-      context: "Bohr Modelinin Sınırı",
-      text: "Bohr atom modeli hidrojen atomunun çizgi spektrumunu başarıyla açıklarken çok elektronlu atomlarda aynı başarıyı gösterememiştir. Bunun temel nedeni aşağıdakilerden hangisidir?",
-      options: [
-        "Bohr modelinin yalnızca gazları açıklaması",
-        "Protonların çok elektronlu atomlarda bulunmaması",
-        "Nötronların Bohr modelinde fazla olması",
-        "Atom çekirdeğinin çok elektronlu atomlarda kaybolması",
-        "Elektron-elektron etkileşimlerinin ve daha karmaşık enerji düzeylerinin modeli yetersiz bırakması"
-      ],
-      correct: 4,
-      explain: "Çok elektronlu atomlarda elektronlar birbirleriyle etkileşir ve enerji düzeyleri hidrojen atomundan daha karmaşık hâle gelir."
-    },
-
-    {
-      kazanım: "KİM.9.1.5",
-      context: "Bilimsel Modellerin Değişimi",
-      text: "Dalton, Thomson, Rutherford, Bohr ve modern atom modelleri incelendiğinde bilimsel bilginin doğası hakkında hangi sonuca ulaşılabilir?",
-      options: [
-        "Bilimsel modeller yeni kanıtlarla geliştirilebilir",
-        "İlk ortaya atılan model her zaman doğrudur",
-        "Atom modeli hiçbir zaman değişmez",
-        "Deneysel kanıtların bilimsel modeller üzerinde etkisi yoktur",
-        "Bilimsel modeller yalnızca kişisel görüşlere dayanır"
-      ],
-      correct: 0,
-      explain: "Bilimsel modeller mevcut kanıtları açıklamak için geliştirilir ve yeni deneysel kanıtlarla değiştirilebilir."
-    },
-
-    {
-      kazanım: "KİM.9.1.5",
-      context: "Rutherford'un Çekirdek Modeli",
-      text: "Rutherford modeline göre atomun büyük kısmının boşluklu yapı göstermesinin temel kanıtı nedir?",
-      options: [
-        "Protonların çok hafif olması",
-        "Elektronların çekirdekte bulunması",
-        "Alfa parçacıklarının büyük çoğunluğunun altın yapraktan sapmadan geçmesi",
-        "Nötronların keşfedilmemiş olması",
-        "Atomların yalnızca gaz hâlinde bulunması"
-      ],
-      correct: 2,
-      explain: "Alfa parçacıklarının çoğunun sapmadan geçmesi atomun büyük kısmının boşluklu olduğunu göstermiştir."
-    },
-
-    {
-      kazanım: "KİM.9.1.5",
-      context: "Çekirdeğin Keşfi",
-      text: "Rutherford deneyinde çok az sayıdaki alfa parçacığının büyük açılarla sapması hangi sonuca götürmüştür?",
-      options: [
-        "Elektronların çok ağır olduğuna",
-        "Atomun tamamen dolu olduğuna",
-        "Nötronların negatif yüklü olduğuna",
-        "Pozitif yük ve kütlenin atomun çok küçük bir bölgesinde yoğunlaştığına",
-        "Atomlarda proton bulunmadığına"
-      ],
-      correct: 3,
-      explain: "Büyük açılı sapmalar, pozitif yük ve kütlenin küçük ve yoğun bir çekirdekte toplandığını göstermiştir."
-    },
-
-    {
-      kazanım: "KİM.9.1.5",
-      context: "Thomson Modeli",
-      text: "Thomson atom modelinde pozitif yük ve elektronların atom içerisinde nasıl dağıldığı kabul edilmiştir?",
-      options: [
-        "Pozitif yük merkezde, elektronlar çekirdekte",
-        "Pozitif yük atomun her tarafına yayılmış, elektronlar bu yapı içerisinde dağılmıştır",
-        "Elektronlar yalnızca belirli enerji düzeylerinde bulunur",
-        "Atom tamamen boşluktan oluşur",
-        "Nötronlar pozitif yükü dengeler"
-      ],
-      correct: 1,
-      explain: "Thomson modelinde pozitif yük atom hacmine yayılmış, elektronlar bu pozitif yapı içerisinde gömülü kabul edilmiştir."
-    },
-
-    {
-      kazanım: "KİM.9.1.5",
-      context: "Bohr'un Katmanlı Modeli",
-      text: "Bohr modelinin Rutherford modeline getirdiği temel yenilik aşağıdakilerden hangisidir?",
-      options: [
-        "Elektronların çekirdekte bulunduğunu ileri sürmesi",
-        "Protonları keşfetmesi",
-        "Nötronların varlığını açıklaması",
-        "Atomun tamamen boş olduğunu söylemesi",
-        "Elektronların belirli enerji düzeylerinde bulunabileceğini ileri sürmesi"
-      ],
-      correct: 4,
-      explain: "Bohr, elektronların belirli enerji düzeylerinde bulunabileceğini ve düzeyler arasında enerji alışverişi yapabileceğini öne sürmüştür."
-    },
-
-    {
-      kazanım: "KİM.9.1.5",
-      context: "Hidrojen Spektrumu",
-      text: "Hidrojen atomunun belirli dalga boylarında ışık yayması Bohr modelinde nasıl açıklanır?",
-      options: [
-        "Elektronların sürekli enerji yaymasıyla",
-        "Protonların titreşmesiyle",
-        "Elektronların belirli enerji düzeyleri arasında geçiş yapmasıyla",
-        "Nötronların ışık yaymasıyla",
-        "Çekirdeğin parçalanmasıyla"
-      ],
-      correct: 2,
-      explain: "Elektronlar belirli enerji düzeyleri arasında geçiş yaparken belirli enerjiye sahip fotonlar yayar."
-    },
-
-    {
-      kazanım: "KİM.9.1.5",
-      context: "Enerji Soğurulması",
-      text: "Bir elektron bulunduğu enerji düzeyinden daha yüksek bir enerji düzeyine geçiyorsa atom hangi olayı gerçekleştirmiştir?",
-      options: [
-        "Enerji soğurmuştur",
-        "Enerji yaymıştır",
-        "Proton kaybetmiştir",
-        "Nötron kazanmıştır",
-        "Çekirdek parçalanmıştır"
-      ],
-      correct: 0,
-      explain: "Elektron üst enerji düzeyine çıkmak için dışarıdan enerji soğurur."
-    },
-
-    {
-      kazanım: "KİM.9.1.5",
-      context: "Enerji Yayılması",
-      text: "Uyarılmış bir elektron daha düşük enerji düzeyine dönerken ne olur?",
-      options: [
-        "Atom mutlaka iyonlaşır",
-        "Elektron yok olur",
-        "Proton sayısı azalır",
-        "Enerji farkına karşılık gelen bir foton yayılır",
-        "Nötron sayısı artar"
-      ],
-      correct: 3,
-      explain: "Elektron daha düşük enerji seviyesine geçerken iki seviye arasındaki enerji farkı foton olarak yayılır."
-    },
-
-    {
-      kazanım: "KİM.9.1.5",
-      context: "Atom Modellerinin Sıralanması",
-      text: "Aşağıdaki atom modellerinden hangisi tarihsel gelişim açısından doğru sırayı verir?",
-      options: [
-        "Bohr → Dalton → Rutherford → Thomson",
-        "Dalton → Thomson → Rutherford → Bohr",
-        "Rutherford → Dalton → Bohr → Thomson",
-        "Thomson → Dalton → Bohr → Rutherford",
-        "Dalton → Rutherford → Thomson → Bohr"
-      ],
-      correct: 1,
-      explain: "Atom modeli tarihsel olarak Dalton, Thomson, Rutherford ve Bohr modelleri şeklinde gelişmiştir."
-    },
-
-    {
-      kazanım: "KİM.9.1.5",
-      context: "Dalton Modeli",
-      text: "Dalton atom modelinin temel varsayımlarından biri aşağıdakilerden hangisidir?",
-      options: [
-        "Atomlar bölünemez ve içi dolu kürelerdir",
-        "Elektronlar enerji düzeylerinde bulunur",
-        "Atomun merkezinde yoğun çekirdek vardır",
-        "Elektronların kesin konumu belirlenemez",
-        "Atomlar tamamen boşluktan oluşur"
-      ],
-      correct: 0,
-      explain: "Dalton atomu bölünemez, içi dolu ve küresel tanecikler olarak kabul etmiştir."
-    },
-
-    {
-      kazanım: "KİM.9.1.5",
-      context: "Atomun Bölünebilirliği",
-      text: "Elektronun keşfi Dalton'un hangi düşüncesinin değiştirilmesine neden olmuştur?",
-      options: [
-        "Elementlerin farklı özelliklere sahip olması",
-        "Bileşiklerin oluşması",
-        "Atomun bölünemez ve iç yapısı olmayan bir tanecik olduğu düşüncesi",
-        "Kimyasal tepkimelerin gerçekleşmesi",
-        "Maddenin korunması"
-      ],
-      correct: 2,
-      explain: "Elektronun keşfi atomun daha küçük parçacıklardan oluştuğunu göstermiş ve Dalton'un bölünemez atom görüşünü değiştirmiştir."
-    },
-
-    {
-      kazanım: "KİM.9.1.5",
-      context: "Modern Atom Modeli",
-      text: "Modern atom modelinde elektronların çekirdek çevresindeki konumu nasıl ifade edilir?",
-      options: [
-        "Kesin dairesel yörüngelerle",
-        "Çekirdeğin içinde",
-        "Tek bir sabit noktada",
-        "Belirli bir yolda hareket eden parçacıklar olarak",
-        "Bulunma olasılıklarının yüksek olduğu orbitallerle"
-      ],
-      correct: 4,
-      explain: "Modern atom modelinde elektronların kesin yörüngelerinden değil, bulunma olasılıklarının yüksek olduğu orbitallerden söz edilir."
-    },
-
-    {
-      kazanım: "KİM.9.1.6",
-      context: "Orbital Kavramı",
-      text: "Orbital kavramı için en doğru tanım aşağıdakilerden hangisidir?",
-      options: [
-        "Elektronun izlediği kesin yol",
-        "Elektronun bulunma olasılığının yüksek olduğu üç boyutlu bölge",
-        "Protonların hareket ettiği yörünge",
-        "Çekirdeğin tamamı",
-        "Bir atomun tamamı"
-      ],
-      correct: 1,
-      explain: "Orbital, elektronun bulunma olasılığının yüksek olduğu üç boyutlu bölgedir."
-    },
-
-    {
-      kazanım: "KİM.9.1.6",
-      context: "s Orbitali",
-      text: "Bir s alt kabuğunda kaç orbital bulunur?",
-      options: [
-        "1",
-        "2",
-        "3",
-        "5",
-        "7"
-      ],
-      correct: 0,
-      explain: "s alt kabuğunda yalnızca bir orbital bulunur."
-    },
-
-    {
-      kazanım: "KİM.9.1.6",
-      context: "p Orbitalleri",
-      text: "Bir p alt kabuğunda kaç orbital bulunur?",
-      options: [
-        "1",
-        "2",
-        "3",
-        "5",
-        "7"
-      ],
-      correct: 2,
-      explain: "p alt kabuğunda üç orbital bulunur."
-    },
-
-    {
-      kazanım: "KİM.9.1.6",
-      context: "d Orbitalleri",
-      text: "Bir d alt kabuğunda toplam kaç orbital bulunur?",
-      options: [
-        "1",
-        "2",
-        "3",
-        "5",
-        "7"
-      ],
-      correct: 3,
-      explain: "d alt kabuğunda beş orbital bulunur."
-    },
-
-    {
-      kazanım: "KİM.9.1.6",
-      context: "f Orbitalleri",
-      text: "Bir f alt kabuğunda toplam kaç orbital bulunur?",
-      options: [
-        "1",
-        "3",
-        "5",
-        "6",
-        "7"
-      ],
-      correct: 4,
-      explain: "f alt kabuğunda yedi orbital bulunur."
-    },
-
-    {
-      kazanım: "KİM.9.1.6",
-      context: "Orbital Kapasitesi",
-      text: "Bir orbitalde bulunabilecek maksimum elektron sayısı kaçtır?",
-      options: [
-        "1",
-        "2",
-        "4",
-        "6",
-        "8"
-      ],
-      correct: 1,
-      explain: "Pauli dışlama ilkesine göre bir orbital en fazla iki elektron içerir."
-    },
-
-    {
-      kazanım: "KİM.9.1.6",
-      context: "Alt Kabuk Kapasiteleri",
-      text: "p alt kabuğunun maksimum elektron kapasitesi kaçtır?",
-      options: [
-        "2",
-        "4",
-        "6",
-        "8",
-        "10"
-      ],
-      correct: 2,
-      explain: "p alt kabuğunda üç orbital vardır ve her orbital iki elektron aldığı için kapasite 6'dır."
-    },
-
-    {
-      kazanım: "KİM.9.1.6",
-      context: "Enerji Düzeyleri",
-      text: "Bir ana enerji düzeyinde bulunan alt kabukların türleri hangi kuantum sayısıyla ilişkilidir?",
-      options: [
-        "Baş kuantum sayısı",
-        "Spin kuantum sayısı",
-        "Manyetik kuantum sayısı",
-        "Kütle numarası",
-        "Atom numarası"
-      ],
-      correct: 0,
-      explain: "Ana enerji düzeyi baş kuantum sayısı n ile ifade edilir."
-    },
-
-    {
-      kazanım: "KİM.9.1.6",
-      context: "Orbital ve Yörünge Farkı",
-      text: "Bohr modelindeki yörünge kavramı ile modern atom modelindeki orbital kavramı arasındaki temel fark nedir?",
-      options: [
-        "İkisi tamamen aynıdır",
-        "Orbital çekirdeğin içinde bulunur",
-        "Yörünge elektronun kesin yolunu, orbital ise bulunma olasılığının yüksek olduğu bölgeyi ifade eder",
-        "Yörünge yalnızca protonlar için kullanılır",
-        "Orbital yalnızca nötronları açıklar"
-      ],
-      correct: 2,
-      explain: "Modern model elektronun kesin bir yolunu değil, bulunma olasılığının yüksek olduğu bölgeyi tanımlar."
-    },
-
-    {
-      kazanım: "KİM.9.1.6",
-      context: "Enerji ve Elektron",
-      text: "Bir atomdaki elektronun enerjisi arttığında elektron genel olarak hangi duruma geçer?",
-      options: [
-        "Çekirdeğe yaklaşır ve enerji kaybeder",
-        "Daha yüksek enerjili bir düzeye geçebilir",
-        "Protona dönüşür",
-        "Nötronu parçalar",
-        "Atom numarasını değiştirir"
-      ],
-      correct: 1,
-      explain: "Elektron enerji aldığında daha yüksek enerjili bir düzeye geçebilir."
-    },
-
-    {
-      kazanım: "KİM.9.1.6",
-      context: "Elektron Dizilimi",
-      text: "Bir atomun elektron dizilimini oluştururken elektronların öncelikle hangi orbitallere yerleşmesi beklenir?",
-      options: [
-        "En yüksek enerjili orbitallere",
-        "Rastgele orbitallere",
-        "Düşük enerjili orbitallere",
-        "Yalnızca d orbitallerine",
-        "Yalnızca f orbitallerine"
-      ],
-      correct: 2,
-      explain: "Aufbau ilkesine göre elektronlar temel hâlde düşük enerjili orbitallerden başlayarak yerleşir."
-    },
-
-    {
-      kazanım: "KİM.9.1.7",
-      context: "Periyodik Tablo ve Elektron Dizilimi",
-      text: "Bir elementin elektron diziliminin son kısmı 3s² 3p⁵ şeklindedir. Bu elementin değerlik elektron sayısı kaçtır?",
-      options: [
-        "2",
-        "5",
-        "6",
-        "7",
-        "8"
-      ],
-      correct: 3,
-      explain: "En dış enerji düzeyindeki elektronlar 3s² + 3p⁵ = 7 elektrondur."
-    },
-
-    {
-      kazanım: "KİM.9.1.7",
-      context: "Periyot Belirleme",
-      text: "Elektron dizilimi 1s² 2s² 2p⁶ 3s¹ olan nötr atom hangi periyottadır?",
-      options: [
-        "1",
-        "2",
-        "3",
-        "4",
-        "5"
-      ],
-      correct: 2,
-      explain: "Dizilimdeki en büyük baş kuantum sayısı 3 olduğundan atom 3. periyottadır."
-    },
-
-    {
-      kazanım: "KİM.9.1.7",
-      context: "Grup Belirleme",
-      text: "Elektron dizilimi 1s² 2s² 2p⁶ 3s² 3p⁵ olan element hangi gruptadır?",
-      options: [
-        "1A",
-        "2A",
-        "5A",
-        "7A",
-        "8A"
-      ],
-      correct: 3,
-      explain: "En dış enerji düzeyinde 7 elektron bulunduğu için element 7A grubundadır."
-    },
-
-    {
-      kazanım: "KİM.9.1.7",
-      context: "Soy Gaz Kararlılığı",
-      text: "Elektron dizilimi 1s² 2s² 2p⁶ olan bir atomun kimyasal olarak görece kararlı olmasının temel nedeni nedir?",
-      options: [
-        "Çekirdeğinde proton bulunmaması",
-        "Elektronlarının tamamının çekirdekte olması",
-        "En dış enerji düzeyinin dolu olması",
-        "Atom numarasının sıfır olması",
-        "Nötronlarının bulunmaması"
-      ],
-      correct: 2,
-      explain: "Neonun en dış enerji düzeyi 8 elektronla doludur ve bu durum kararlı elektron düzeni sağlar."
-    },
-
-    {
-      kazanım: "KİM.9.1.7",
-      context: "Değerlik Elektronları",
-      text: "Bir elementin değerlik elektron sayısının belirlenmesi neden önemlidir?",
-      options: [
-        "Elementin proton kütlesini belirler",
-        "Kimyasal bağ oluşturma ve tepkime eğilimi hakkında bilgi verir",
-        "Nötron sayısını doğrudan belirler",
-        "Elementin rengini kesin olarak belirler",
-        "Atomun çapını tek başına belirler"
-      ],
-      correct: 1,
-      explain: "Değerlik elektronları elementin bağ oluşturma ve kimyasal tepkime davranışında önemli rol oynar."
-    },
-
-    {
-      kazanım: "KİM.9.1.7",
-      context: "İyon Oluşumu",
-      text: "Sodyum atomunun Na⁺ iyonu oluşturmasının temel nedeni aşağıdakilerden hangisidir?",
-      options: [
-        "Bir elektron vererek daha kararlı elektron dizilimine ulaşması",
-        "Bir proton kazanması",
-        "Bir nötron kaybetmesi",
-        "İki elektron kazanması",
-        "Çekirdeğinin parçalanması"
-      ],
-      correct: 0,
-      explain: "Na atomu bir elektron vererek Ne ile aynı kararlı elektron dizilimine ulaşır."
-    },
-
-    {
-      kazanım: "KİM.9.1.7",
-      context: "İyon ve Elektron Sayısı",
-      text: "17 protonlu nötr bir atom bir elektron kazanırsa oluşan taneciğin elektron sayısı kaç olur?",
-      options: [
-        "16",
-        "17",
-        "18",
-        "19",
-        "34"
-      ],
-      correct: 2,
-      explain: "Nötr atomda 17 elektron vardır. Bir elektron kazanırsa elektron sayısı 18 olur."
-    },
-
-    {
-      kazanım: "KİM.9.1.7",
-      context: "İzoelektronik Tanecikler",
-      text: "Na⁺, Ne ve F⁻ taneciklerinin ortak özelliği aşağıdakilerden hangisidir?",
-      options: [
-        "Proton sayılarının eşit olması",
-        "Nötron sayılarının eşit olması",
-        "Elektron sayılarının eşit olması",
-        "Atom numaralarının eşit olması",
-        "Kütle numaralarının eşit olması"
-      ],
-      correct: 2,
-      explain: "Na⁺, Ne ve F⁻ taneciklerinin her birinde 10 elektron vardır; bunlara izoelektronik tanecikler denir."
-    },
-
-    {
-      kazanım: "KİM.9.1.7",
-      context: "İyonlaşma ve Elektron Dizilimi",
-      text: "Bir metal atomunun kararlı iyon oluştururken elektron vermesi aşağıdakilerden hangisini sağlar?",
-      options: [
-        "Daha kararsız bir elektron düzeni",
-        "Soy gaz elektron dizilimine ulaşma olasılığı",
-        "Proton sayısının azalması",
-        "Atom numarasının değişmesi",
-        "Çekirdeğin yok olması"
-      ],
-      correct: 1,
-      explain: "Ana grup metalleri elektron vererek kendilerine en yakın soy gazın kararlı elektron düzenine ulaşabilir."
-    },
-
-    {
-      kazanım: "KİM.9.1.8",
-      context: "Periyodik Özelliklerin Değişimi",
-      text: "Aynı grupta yukarıdan aşağıya doğru atom yarıçapının artmasının temel nedeni nedir?",
-      options: [
-        "Proton sayısının azalması",
-        "Elektron sayısının tamamen yok olması",
-        "Yeni enerji düzeylerinin eklenmesi",
-        "Çekirdek yükünün sıfırlanması",
-        "Elementlerin ametal olması"
-      ],
-      correct: 2,
-      explain: "Grupta aşağıya doğru yeni elektron katmanları eklenir ve atomun yarıçapı artar."
-    },
-
-    {
-      kazanım: "KİM.9.1.8",
-      context: "Periyotta Atom Yarıçapı",
-      text: "Aynı periyotta soldan sağa doğru atom yarıçapının genel olarak azalmasının nedeni nedir?",
-      options: [
-        "Elektronların tamamen yok olması",
-        "Proton sayısının artmasıyla etkin çekirdek çekiminin artması",
-        "Enerji düzeyi sayısının artması",
-        "Nötronların elektronları itmesi",
-        "Atomların kütlesinin azalması"
-      ],
-      correct: 1,
-      explain: "Aynı enerji düzeyine elektron eklenirken proton sayısı arttığı için çekirdek elektronları daha güçlü çeker."
-    },
-
-    {
-      kazanım: "KİM.9.1.8",
-      context: "İyonlaşma Enerjisi",
-      text: "Bir atomdan elektron koparmak için gereken enerji hangi büyüklükle ifade edilir?",
-      options: [
-        "Elektronegatiflik",
-        "Atom yarıçapı",
-        "İyonlaşma enerjisi",
-        "Kütle numarası",
-        "Elektron sayısı"
-      ],
-      correct: 2,
-      explain: "Gaz hâlindeki nötr bir atomdan elektron koparmak için gereken enerji iyonlaşma enerjisidir."
-    },
-
-    {
-      kazanım: "KİM.9.1.8",
-      context: "Elektronegatiflik",
-      text: "Elektronegatiflik neyi ifade eder?",
-      options: [
-        "Atomun nötron sayısını",
-        "Atomun kütlesini",
-        "Atomun bağ elektronlarını kendine çekme eğilimini",
-        "Atomun çekirdek çapını",
-        "Atomun protonlarını kaybetme hızını"
-      ],
-      correct: 2,
-      explain: "Elektronegatiflik, bir atomun kimyasal bağdaki ortak elektronları kendine çekme eğilimidir."
-    },
-
-    {
-      kazanım: "KİM.9.1.8",
-      context: "Florun Elektronegatifliği",
-      text: "Florun elektronegatifliğinin çok yüksek olması hangi özelliğini açıklar?",
-      options: [
-        "Bağ elektronlarını güçlü biçimde kendine çekmesini",
-        "En büyük atom yarıçapına sahip olmasını",
-        "Kolayca elektron vermesini",
-        "Soy gaz olmasını",
-        "Metalik özelliğinin çok yüksek olmasını"
-      ],
-      correct: 0,
-      explain: "Flor bağ elektronlarını kendine çekme eğilimi en yüksek elementlerden biridir."
-    },
-
-    {
-      kazanım: "KİM.9.1.8",
-      context: "Metalik Özellik",
-      text: "Periyodik tabloda metalik özellik genel olarak hangi yönde artar?",
-      options: [
-        "Sağ üst köşeye doğru",
-        "Sol alt köşeye doğru",
-        "Yalnızca sağa doğru",
-        "Yalnızca yukarı doğru",
-        "Tablonun merkezine doğru"
-      ],
-      correct: 1,
-      explain: "Metalik özellik genel olarak periyodik tablonun sol alt tarafına doğru artar."
-    },
-
-    {
-      kazanım: "KİM.9.1.8",
-      context: "Atom ve İyon Yarıçapı",
-      text: "Bir atom elektron kazanarak anyon hâline geldiğinde yarıçapının genellikle artmasının nedeni nedir?",
-      options: [
-        "Proton sayısının artması",
-        "Elektron sayısının artması ve elektronlar arasındaki itmenin güçlenmesi",
-        "Çekirdeğin kaybolması",
-        "Nötronların elektronlara dönüşmesi",
-        "Atom numarasının sıfırlanması"
-      ],
-      correct: 1,
-      explain: "Elektron sayısı arttığında elektron-elektron itmesi artar ve elektron bulutu genişleyebilir."
-    },
-
-    {
-      kazanım: "KİM.9.1.8",
-      context: "Katyon Yarıçapı",
-      text: "Bir atom elektron vererek katyon hâline geldiğinde atom yarıçapının genellikle küçülmesinin temel nedeni nedir?",
-      options: [
-        "Elektron sayısının azalması ve çekirdek çekiminin kalan elektronlar üzerindeki etkisinin artması",
-        "Proton sayısının sıfırlanması",
-        "Nötronların tamamen yok olması",
-        "Atomun başka elemente dönüşmesi",
-        "Elektronların kütlesinin artması"
-      ],
-      correct: 0,
-      explain: "Elektron kaybıyla elektron-elektron itmesi azalır ve çekirdeğin kalan elektronlar üzerindeki çekim etkisi göreli olarak artar."
-    },
-
-    {
-      kazanım: "KİM.9.1.8",
-      context: "İyonlaşma Enerjisindeki Sıçrama",
-      text: "Bir elementin ardışık iyonlaşma enerjilerinde belirgin bir sıçrama görülmesi ne hakkında bilgi verebilir?",
-      options: [
-        "Elementin nötron sayısı hakkında kesin bilgi verir",
-        "Elementin erime noktasını doğrudan verir",
-        "Değerlik elektronlarının sayısı hakkında fikir verebilir",
-        "Elementin rengini belirler",
-        "Elementin kütle numarasını doğrudan verir"
-      ],
-      correct: 2,
-      explain: "Büyük sıçramanın hangi elektron koparıldıktan sonra gerçekleştiği, değerlik elektronlarının sayısı hakkında fikir verebilir."
-    },
-
-    {
-      kazanım: "KİM.9.1.8",
-      context: "Aynı Gruptaki Elementler",
-      text: "Li, Na ve K elementlerinin aynı grupta bulunması aşağıdaki özelliklerden hangilerinin benzer olmasını bekletir?",
-      options: [
-        "Kimyasal davranışlarının ve değerlik elektron düzenlerinin",
-        "Atom yarıçaplarının tamamen aynı olmasını",
-        "Kütle numaralarının aynı olmasını",
-        "Nötron sayılarının aynı olmasını",
-        "Elektron katmanı sayılarının aynı olmasını"
-      ],
-      correct: 0,
-      explain: "Aynı gruptaki ana grup elementlerinin değerlik elektron düzenleri benzer olduğundan kimyasal özellikleri de benzerlik gösterir."
-    },
-
-    {
-      kazanım: "KİM.9.1.8",
-      context: "Periyodik Eğilimleri Yorumlama",
-      text: "Bir öğrenci periyodik tablodaki atom yarıçapı, iyonlaşma enerjisi ve elektronegatiflik eğilimlerini birlikte incelemek istiyor. En doğru yaklaşım hangisidir?",
-      options: [
-        "Her özelliği birbirinden tamamen bağımsız değerlendirmek",
-        "Yalnızca atom kütlesine bakmak",
-        "Elementin tablodaki konumunu ve elektron dizilimini birlikte değerlendirmek",
-        "Sadece elementin rengini dikkate almak",
-        "Yalnızca nötron sayısını karşılaştırmak"
-      ],
-      correct: 2,
-      explain: "Periyodik özellikleri yorumlarken elementin periyot, grup, elektron dizilimi ve etkin çekirdek yükü birlikte değerlendirilmelidir."
-    },
-
-    {
-      kazanım: "KİM.9.1.8",
-      context: "Periyodik Tabloda Karşılaştırma",
-      text: "Na ve Cl aynı periyotta bulunmaktadır. Bu iki element karşılaştırıldığında hangisinin atom yarıçapının daha büyük olması beklenir?",
-      options: [
-        "Cl, çünkü proton sayısı daha fazladır",
-        "Na, çünkü aynı periyotta solda bulunur ve etkin çekirdek çekimi daha düşüktür",
-        "İkisinin yarıçapı kesinlikle aynıdır",
-        "Cl, çünkü elektron sayısı daha azdır",
-        "Hiçbiri, çünkü atom yarıçapı periyodik bir özellik değildir"
-      ],
-      correct: 1,
-      explain: "Aynı periyotta soldan sağa doğru etkin çekirdek çekimi arttığı için atom yarıçapı genel olarak küçülür. Bu nedenle Na'nın yarıçapı Cl'den büyüktür."
-    },
-
-    {
-      kazanım: "KİM.9.1.8",
-      context: "Kimyasal Özelliklerin Kaynağı",
-      text: "Aynı gruptaki elementlerin benzer kimyasal özellik göstermesinin en önemli nedeni nedir?",
-      options: [
-        "Aynı kütle numarasına sahip olmaları",
-        "Aynı sayıda nötron taşımaları",
-        "Değerlik elektron sayılarının benzer olması",
-        "Atom yarıçaplarının eşit olması",
-        "Aynı renkte olmaları"
-      ],
-      correct: 2,
-      explain: "Ana grup elementlerinde aynı grupta bulunan elementlerin değerlik elektron düzenleri benzerdir ve bu durum kimyasal davranışlarını etkiler."
-    },
-
-    {
-      kazanım: "KİM.9.1.8",
-      context: "Periyodik Özelliklerin Birlikte Kullanılması",
-      text: "Bir elementin elektronu güçlü çektiği, atom yarıçapının küçük ve iyonlaşma enerjisinin yüksek olduğu biliniyor. Bu elementin periyodik tablodaki konumu için hangisi daha olasıdır?",
-      options: [
-        "Sol alt bölge",
-        "Sol üst bölge",
-        "Sağ üst bölge",
-        "Tablonun en alt kısmı",
-        "Yalnızca geçiş metalleri bölgesi"
-      ],
-      correct: 2,
-      explain: "Küçük atom yarıçapı, yüksek iyonlaşma enerjisi ve yüksek elektronegatiflik genel olarak periyodik tablonun sağ üst bölümünde belirgindir."
-    },
-
-    {
-      kazanım: "KİM.9.1.8",
-      context: "Periyodik Tabloyu Bir Harita Gibi Kullanmak",
-      text: "Bir elementin periyodik tablodaki konumundan hangi özellikler hakkında genel tahminlerde bulunulabilir?",
-      options: [
-        "Değerlik elektronları, atom yarıçapı, iyonlaşma enerjisi ve elektronegatiflik gibi özellikler",
-        "Elementin kesin erime noktası yalnızca konumdan",
-        "Elementin kesin yoğunluğu yalnızca konumdan",
-        "Elementin kesin kütle numarası",
-        "Elementin bütün fiziksel özellikleri hiçbir deney yapılmadan"
-      ],
-      correct: 0,
-      explain: "Periyodik tablo, elektron dizilimi ve periyodik eğilimlerden yararlanılarak birçok kimyasal özellik hakkında nitel tahmin yapılmasını sağlar."
-    }
-  ],
+ ],
+ guvenlik: [
+  {
+    context: "Laboratuvar Önlüğü",
+    kazanim: "KİM.9.1.7",
+    text: "Bir öğrenci laboratuvarda asit ve bazlarla deney yapacaktır. Aşağıdakilerden hangisi uygun bir güvenlik önlemidir?",
+    options: [
+      "Koruyucu gözlük ve önlük kullanmak",
+      "Kimyasalları çıplak elle taşımak",
+      "Deney sırasında yemek yemek",
+      "Kimyasalları koklayarak tanımak",
+      "Deney sırasında laboratuvar kapısını kilitlemek"
+    ],
+    correct: 0,
+    explain: "Kimyasallarla çalışırken gözlük, önlük ve gerektiğinde eldiven gibi kişisel koruyucu donanımlar kullanılmalıdır."
+  },
+  {
+    context: "Laboratuvarda Dökülen Kimyasal",
+    kazanim: "KİM.9.1.7",
+    text: "Bir öğrencinin kullandığı kimyasal maddenin bir miktarı laboratuvar tezgâhına dökülüyor. Öğrencinin ilk yapması gereken davranış hangisidir?",
+    options: [
+      "Dökülen maddeyi eliyle silmek",
+      "Maddeyi koklayarak tanımaya çalışmak",
+      "Durumu öğretmene veya sorumlu kişiye bildirmek",
+      "Üzerine başka bir kimyasal dökmek",
+      "Hiçbir şey olmamış gibi deneye devam etmek"
+    ],
+    correct: 2,
+    explain: "Kimyasal dökülmelerde öğrencinin kendi başına müdahale etmek yerine öğretmeni veya laboratuvar sorumlusunu bilgilendirmesi gerekir."
+  },
+  {
+    context: "Kırılan Cam Malzeme",
+    kazanim: "KİM.9.1.7",
+    text: "Laboratuvarda bir deney tüpü kırılıyor. Öğrencinin kırık cam parçalarıyla ilgili doğru davranışı hangisidir?",
+    options: [
+      "Cam parçalarını çıplak elle toplamak",
+      "Cam parçalarını uygun araçlarla toplamak ve sorumlu kişiye bildirmek",
+      "Camları normal çöp kutusuna atmak",
+      "Camları tezgâhın üzerinde bırakmak",
+      "Camları cebine koymak"
+    ],
+    correct: 1,
+    explain: "Kırık camlar çıplak elle tutulmamalı, uygun araçlarla toplanmalı ve cam atıkları için ayrılmış kaplara konulmalıdır."
+  },
+  {
+    context: "Kimyasal Etiketleri",
+    kazanim: "KİM.9.1.7",
+    text: "Bir öğrenci laboratuvarda kullanacağı kimyasalın şişesindeki etiketi okumadan maddeyi kullanmak istiyor. Bu davranış neden yanlıştır?",
+    options: [
+      "Etiketler yalnızca üretici firmanın reklamıdır",
+      "Etiketler sadece maddenin rengini gösterir",
+      "Etiketler deney süresini belirtir",
+      "Etiket, maddenin tehlikeleri ve güvenli kullanımı hakkında bilgi verebilir",
+      "Kimyasalların etiketlere ihtiyacı yoktur"
+    ],
+    correct: 3,
+    explain: "Kimyasal etiketleri maddenin adı, tehlike sembolleri ve güvenli kullanımına ilişkin önemli bilgiler içerir."
+  },
+  {
+    context: "Koruyucu Gözlük",
+    kazanim: "KİM.9.1.7",
+    text: "Bir öğrenci deney sırasında gözlük takmanın gereksiz olduğunu düşünüyor. Özellikle sıvı kimyasallarla çalışırken koruyucu gözlüğün temel amacı nedir?",
+    options: [
+      "Deneyin daha hızlı bitmesini sağlamak",
+      "Kimyasal sıçramalarına karşı gözleri korumak",
+      "Kimyasalın rengini değiştirmek",
+      "Görmeyi güçlendirmek",
+      "Kimyasalın buharlaşmasını önlemek"
+    ],
+    correct: 1,
+    explain: "Koruyucu gözlük, kimyasal sıçramaları ve bazı fiziksel tehlikelere karşı gözleri korur."
+  },
+  {
+    context: "Laboratuvarda Saçların Toplanması",
+    kazanim: "KİM.9.1.7",
+    text: "Uzun saçlı bir öğrencinin laboratuvar çalışması sırasında saçlarını toplaması neden önemlidir?",
+    options: [
+      "Saçların kimyasal tepkimeleri hızlandırmasını önlemek için",
+      "Saç renginin değişmesini önlemek için",
+      "Saçların deney sonucunu değiştirmesini önlemek için",
+      "Saçların kimyasal madde veya alevle temas etme riskini azaltmak için",
+      "Laboratuvarın daha güzel görünmesini sağlamak için"
+    ],
+    correct: 3,
+    explain: "Uzun saçların açık bırakılması kimyasal maddeler veya alevle temas riskini artırabilir."
+  },
+  {
+    context: "Laboratuvarda Yemek",
+    kazanim: "KİM.9.1.7",
+    text: "Bir öğrenci deney sırasında su şişesinden içmek istiyor. Laboratuvarda yiyecek ve içecek tüketilmemesinin temel nedeni nedir?",
+    options: [
+      "Deneylerin daha uzun sürmesi",
+      "Kimyasalların yiyecek veya içeceklere bulaşarak vücuda alınabilmesi",
+      "Su tüketiminin deneyleri bozması",
+      "Laboratuvarın sıcak olması",
+      "Yemeklerin kimyasal özellik göstermesi"
+    ],
+    correct: 1,
+    explain: "Kimyasal maddeler yiyecek ve içeceklere bulaşabilir ve fark edilmeden vücuda alınabilir."
+  },
+  {
+    context: "Kimyasal Maddeyi Koklama",
+    kazanim: "KİM.9.1.7",
+    text: "Bir öğrencinin kimyasal maddenin kokusunu doğrudan şişeden içine çekmesi neden tehlikelidir?",
+    options: [
+      "Kimyasalın rengi değişebilir",
+      "Madde katılaşabilir",
+      "Zararlı veya zehirli buharlar solunabilir",
+      "Şişe ağırlaşabilir",
+      "Kimyasalın sıcaklığı düşebilir"
+    ],
+    correct: 2,
+    explain: "Kimyasal buharların doğrudan solunması zehirlenme veya solunum yollarında tahrişe neden olabilir."
+  },
+  {
+    context: "Puar Kullanımı",
+    kazanim: "KİM.9.1.7",
+    text: "Laboratuvarda bir öğrenci pipetle sıvı çekmek için puar kullanıyor. Puar kullanımının temel amacı nedir?",
+    options: [
+      "Sıvının rengini değiştirmek",
+      "Pipeti ısıtmak",
+      "Kimyasalı karıştırmak",
+      "Pipeti temizlemek",
+      "Sıvının ağızla çekilmesini önlemek"
+    ],
+    correct: 4,
+    explain: "Puar, sıvıların pipetle güvenli şekilde çekilmesini sağlar ve kimyasalın ağız yoluyla alınmasını önler."
+  },
+  {
+    context: "Asit ve Bazların Karıştırılması",
+    kazanim: "KİM.9.1.7",
+    text: "Bir öğrenci güçlü bir asitle güçlü bir bazı kontrolsüz biçimde karıştırıyor. Bu işlem neden dikkatli yapılmalıdır?",
+    options: [
+      "Tepkime sırasında ısı açığa çıkabileceği için",
+      "Her zaman gaz oluştuğu için",
+      "Maddeler kesinlikle tepkimeye girmediği için",
+      "Sadece renk değişimi olduğu için",
+      "Karışım mutlaka donacağı için"
+    ],
+    correct: 0,
+    explain: "Asit-baz tepkimelerinde önemli miktarda ısı açığa çıkabilir. Bu nedenle kontrollü çalışılmalıdır."
+  },
+  {
+    context: "Asit Seyreltme",
+    kazanim: "KİM.9.1.7",
+    text: "Derişik bir asit suyla seyreltilirken neden asit suya yavaşça eklenmelidir?",
+    options: [
+      "Asidin rengini korumak için",
+      "Suyun kaynamasını engellemek için",
+      "Isı açığa çıkması nedeniyle sıçrama riskini azaltmak için",
+      "Asidin katılaşmasını sağlamak için",
+      "Asidin kokusunu azaltmak için"
+    ],
+    correct: 2,
+    explain: "Seyreltme sırasında önemli miktarda ısı açığa çıkabilir. Asidin suya yavaşça eklenmesi sıçrama riskini azaltır."
+  },
+  {
+    context: "Temizlik Ürünleri",
+    kazanim: "KİM.9.1.7",
+    text: "Evde kullanılan farklı temizlik ürünlerinin rastgele karıştırılmaması gerekir. Bunun temel nedeni nedir?",
+    options: [
+      "Hepsinin aynı renkte olması",
+      "Her zaman köpürmeleri",
+      "Temizlik etkilerinin azalması",
+      "Zehirli gaz veya tehlikeli maddeler oluşturabilecek tepkimeler gerçekleşebilmesi",
+      "Şişelerin büyümesi"
+    ],
+    correct: 3,
+    explain: "Bazı temizlik maddeleri karıştırıldığında sağlığa zararlı gazlar veya başka tehlikeli ürünler oluşabilir."
+  },
+  {
+    context: "Çamaşır Suyu ve Asit",
+    kazanim: "KİM.9.1.7",
+    text: "Çamaşır suyunun asitli bir temizlik maddesiyle karıştırılması neden özellikle tehlikelidir?",
+    options: [
+      "Suyun donmasına neden olduğu için",
+      "Zehirli klor gazı oluşabileceği için",
+      "Çamaşır suyunun rengini değiştirdiği için",
+      "Temizlik etkisini artırdığı için",
+      "Karışımın katılaşmasına neden olduğu için"
+    ],
+    correct: 1,
+    explain: "Hipoklorit içeren çamaşır suyunun asitlerle karıştırılması klor gazı oluşmasına neden olabilir."
+  },
+  {
+    context: "Yanıcı Maddeler",
+    kazanim: "KİM.9.1.7",
+    text: "Yanıcı bir kimyasalın açık alevin yanında tutulması neden uygun değildir?",
+    options: [
+      "Kimyasalın rengi değişeceği için",
+      "Şişe daha ağır olacağı için",
+      "Yanıcı maddenin tutuşma veya yangına neden olma riski bulunduğu için",
+      "Kimyasalın yoğunluğu azalacağı için",
+      "Etiket silineceği için"
+    ],
+    correct: 2,
+    explain: "Yanıcı maddeler ateş ve kıvılcım kaynaklarından uzak tutulmalıdır."
+  },
+  {
+    context: "Kimyasal Atık",
+    kazanim: "KİM.9.1.7",
+    text: "Bir deneyden sonra kalan kimyasal çözeltinin lavaboya dökülmesi neden her zaman uygun değildir?",
+    options: [
+      "Lavabo her zaman kırılacağı için",
+      "Kimyasal atıklar çevreye zarar verebilir ve uygun atık prosedürleriyle uzaklaştırılmalıdır",
+      "Çözelti mutlaka katılaşacağı için",
+      "Lavabo yalnızca su için tasarlanmıştır",
+      "Deney sonucu tekrar hesaplanacağı için"
+    ],
+    correct: 1,
+    explain: "Kimyasal atıklar türlerine uygun biçimde toplanmalı ve bertaraf edilmelidir."
+  },
+  {
+    context: "Tehlike Piktogramı",
+    kazanim: "KİM.9.1.7",
+    text: "Bir kimyasalın etiketinde alev sembolü bulunuyor. Bu sembol öncelikle neyi belirtir?",
+    options: [
+      "Madde radyoaktiftir",
+      "Madde yanıcıdır",
+      "Madde çevre dostudur",
+      "Madde basınçlı değildir",
+      "Madde yalnızca katı hâlde bulunur"
+    ],
+    correct: 1,
+    explain: "Alev piktogramı maddenin yanıcılık gibi yangın tehlikeleri taşıdığını gösterir."
+  },
+  {
+    context: "Kafatası ve Çapraz Kemikler",
+    kazanim: "KİM.9.1.7",
+    text: "Bir kimyasal etiketinde kafatası ve çapraz kemikler sembolü bulunuyor. Bu sembol neye karşı uyarır?",
+    options: [
+      "Akut toksisite gibi ciddi zehirlenme tehlikesine",
+      "Maddenin yanıcı olmadığına",
+      "Maddenin yalnızca çevreye zarar verdiğine",
+      "Maddenin radyoaktif olmadığına",
+      "Maddenin tamamen zararsız olduğuna"
+    ],
+    correct: 0,
+    explain: "Kafatası ve çapraz kemikler piktogramı akut toksisite gibi ciddi zehirlenme tehlikelerini ifade eder."
+  },
+  {
+    context: "Çevre İçin Tehlikeli Madde",
+    kazanim: "KİM.9.1.7",
+    text: "Bir kimyasalın etiketinde ölü balık ve ağaç sembolü bulunuyor. Bu sembol hangi tehlikeyi gösterir?",
+    options: [
+      "Patlama tehlikesini",
+      "Yanıcılığı",
+      "Çevreye, özellikle sucul canlılara zarar verme tehlikesini",
+      "Radyoaktifliği",
+      "Basınçlı gaz olduğunu"
+    ],
+    correct: 2,
+    explain: "Çevre sembolü özellikle sucul çevreye zararlı olabilecek maddeler için kullanılır."
+  },
+  {
+    context: "Patlayıcı Madde",
+    kazanim: "KİM.9.1.7",
+    text: "Etiketinde patlayan bomba sembolü bulunan bir maddeyle çalışırken temel tehlike nedir?",
+    options: [
+      "Maddenin suya dönüşmesi",
+      "Maddenin kesinlikle yanmaması",
+      "Maddenin renk değiştirmesi",
+      "Patlama tehlikesi",
+      "Maddenin donması"
+    ],
+    correct: 3,
+    explain: "Patlayan bomba piktogramı patlayıcı özellik taşıyan maddeler için kullanılır."
+  },
+  {
+    context: "Basınçlı Gaz Tüpü",
+    kazanim: "KİM.9.1.7",
+    text: "Bir gaz tüpünün yüksek sıcaklıkta bırakılması neden tehlikeli olabilir?",
+    options: [
+      "Gazın rengi değişeceği için",
+      "Basınç artışı ve tüpün zarar görmesi riski nedeniyle",
+      "Gazın mutlaka katılaşacağı için",
+      "Tüpün içindeki gazın suya dönüşeceği için",
+      "Etiketin büyüyeceği için"
+    ],
+    correct: 1,
+    explain: "Basınçlı gaz tüpleri ısı kaynaklarından uzak tutulmalıdır; sıcaklık artışı basıncı yükseltebilir."
+  },
+  {
+    context: "Laboratuvar Havalandırması",
+    kazanim: "KİM.9.1.7",
+    text: "Bazı kimyasal deneylerin çeker ocakta yapılmasının temel amacı nedir?",
+    options: [
+      "Deneyin rengini değiştirmek",
+      "Kimyasalın daha hızlı katılaşmasını sağlamak",
+      "Zararlı buhar ve gazların solunma riskini azaltmak",
+      "Deney tüplerini soğutmak",
+      "Elektrik tüketimini azaltmak"
+    ],
+    correct: 2,
+    explain: "Çeker ocak, oluşabilecek zararlı buhar ve gazların ortamdan uzaklaştırılmasına yardımcı olur."
+  },
+  {
+    context: "Isıtılan Deney Tüpü",
+    kazanim: "KİM.9.1.7",
+    text: "Bir öğrenci deney tüpündeki sıvıyı ısıtırken tüpün ağzını arkadaşına doğru tutuyor. Bu davranış neden tehlikelidir?",
+    options: [
+      "Sıvının rengi değişebilir",
+      "Tüpün daha hızlı soğumasına neden olur",
+      "Deney sonucu kesinlikle değişmez",
+      "Isınan madde sıçrayabilir veya gaz çıkışı gerçekleşebilir",
+      "Tüp daha ağır hâle gelir"
+    ],
+    correct: 3,
+    explain: "Isıtılan maddeler sıçrayabilir veya gaz oluşturabilir. Deney tüpünün ağzı hiçbir zaman kişiye doğru tutulmamalıdır."
+  },
+  {
+    context: "Deney Tüpünü Isıtma",
+    kazanim: "KİM.9.1.7",
+    text: "Bir deney tüpü doğrudan ve tek bir noktadan uzun süre ısıtılmak yerine neden hareket ettirilerek ısıtılabilir?",
+    options: [
+      "Tüpün rengini değiştirmek için",
+      "Isının daha dengeli dağılmasını sağlamak için",
+      "Kimyasalı katılaştırmak için",
+      "Tüpün hacmini artırmak için",
+      "Deneyi durdurmak için"
+    ],
+    correct: 1,
+    explain: "Deney tüpünün kontrollü biçimde hareket ettirilmesi ısının daha dengeli dağılmasına yardımcı olur."
+  },
+  {
+    context: "Elektrikli Laboratuvar Araçları",
+    kazanim: "KİM.9.1.7",
+    text: "Laboratuvarda elektrikli bir cihazın kablosunda hasar görülüyor. Öğrencinin doğru davranışı hangisidir?",
+    options: [
+      "Cihazı kullanmaya devam etmek",
+      "Kabloyu çıplak elle onarmak",
+      "Cihazı suyla temizlemek",
+      "Kabloyu bantla kapatıp kullanmak",
+      "Cihazı kullanmamak ve sorumlu kişiye bildirmek"
+    ],
+    correct: 4,
+    explain: "Hasarlı elektrikli cihazlar kullanılmamalı ve durum sorumlu kişiye bildirilmelidir."
+  },
+  {
+    context: "Kimyasalın Göze Sıçraması",
+    kazanim: "KİM.9.1.7",
+    text: "Bir kimyasal öğrencinin gözüne sıçrıyor. Laboratuvar güvenliği açısından en doğru ilk yaklaşım hangisidir?",
+    options: [
+      "Gözü ovuşturmak",
+      "Gözü kapatıp beklemek",
+      "Gözleri uygun göz yıkama sistemiyle bol suyla yıkamak ve hemen sorumlu kişiye haber vermek",
+      "Göze başka bir kimyasal damlatmak",
+      "Deneye devam etmek"
+    ],
+    correct: 2,
+    explain: "Kimyasal göz temasında gözler bol suyla yıkanmalı ve olay derhal sorumlu kişiye bildirilmelidir."
+  },
+  {
+    context: "Kimyasalın Cilde Teması",
+    kazanim: "KİM.9.1.7",
+    text: "Bir kimyasal madde öğrencinin cildine dökülüyor. En uygun davranış hangisidir?",
+    options: [
+      "Cildi hemen bol suyla yıkamak ve sorumlu kişiye haber vermek",
+      "Kimyasalı bezle daha fazla yaymak",
+      "Cildi kapatıp beklemek",
+      "Kimyasalı koklamak",
+      "Başka bir kimyasalla nötrleştirmeye çalışmak"
+    ],
+    correct: 0,
+    explain: "Cilt temasında uygun ilk yardım prosedürleri uygulanmalı, bölge bol suyla yıkanmalı ve sorumlu kişiye haber verilmelidir."
+  },
+  {
+    context: "Yanlışlıkla Kimyasal İçme",
+    kazanim: "KİM.9.1.7",
+    text: "Bir öğrenci yanlışlıkla laboratuvar kimyasalını ağzına alıyor. Güvenli yaklaşım hangisidir?",
+    options: [
+      "Kendi kendine başka bir kimyasal içmek",
+      "Durumu gizlemek",
+      "Hemen sorumlu kişiye haber vermek ve belirlenen acil durum prosedürünü uygulamak",
+      "Deneye devam etmek",
+      "Kimyasalı tekrar tadına bakmak"
+    ],
+    correct: 2,
+    explain: "Kimyasalın ağız yoluyla alınması ciddi bir durumdur. Derhal sorumlu kişiye haber verilmeli ve uygun acil durum prosedürü uygulanmalıdır."
+  },
+  {
+    context: "Laboratuvar Acil Durumu",
+    kazanim: "KİM.9.1.7",
+    text: "Laboratuvarda yangın çıktığında öğrencinin öncelikli davranışı ne olmalıdır?",
+    options: [
+      "Yangının fotoğrafını çekmek",
+      "Yangını tek başına büyütmeden söndürmeye çalışmak",
+      "Kimyasal şişelerini toplamaya başlamak",
+      "Güvenli biçimde ortamdan uzaklaşmak ve sorumlu kişiye haber vermek",
+      "Deneyi tamamlamak"
+    ],
+    correct: 3,
+    explain: "Acil durumda öncelik kişisel güvenliktir. Öğrenci güvenli biçimde ortamdan uzaklaşmalı ve sorumlu kişilere haber vermelidir."
+  },
+  {
+    context: "Kimyasal Depolama",
+    kazanim: "KİM.9.1.7",
+    text: "Kimyasalların laboratuvarda gelişigüzel aynı dolapta tutulması neden sakıncalıdır?",
+    options: [
+      "Şişelerin rengi değişebilir",
+      "Birbiriyle tepkimeye girebilecek maddeler temas edebilir",
+      "Kimyasalların tamamı donar",
+      "Etiketler otomatik olarak silinir",
+      "Laboratuvarın sıcaklığı düşer"
+    ],
+    correct: 1,
+    explain: "Uyumsuz kimyasalların birlikte depolanması tehlikeli tepkimelere yol açabilir."
+  },
+  {
+    context: "Asitlerin Saklanması",
+    kazanim: "KİM.9.1.7",
+    text: "Derişik asitlerin depolanmasında aşağıdakilerden hangisine dikkat edilmelidir?",
+    options: [
+      "Yanıcı maddelerle birlikte tutulmalıdır",
+      "Etiketsiz kaplara aktarılmalıdır",
+      "Uygun ve uyumlu depolama koşullarında, güvenli biçimde saklanmalıdır",
+      "Güneş altında bırakılmalıdır",
+      "Kapakları açık tutulmalıdır"
+    ],
+    correct: 2,
+    explain: "Asitler özelliklerine ve uyumluluklarına göre uygun koşullarda depolanmalıdır."
+  },
+  {
+    context: "Etiketsiz Şişe",
+    kazanim: "KİM.9.1.7",
+    text: "Laboratuvarda içeriği bilinmeyen etiketsiz bir şişe bulunuyor. Öğrencinin doğru davranışı hangisidir?",
+    options: [
+      "Koklayarak tanımak",
+      "Tadına bakmak",
+      "Başka bir şişeye aktarmak",
+      "Öğretmene veya laboratuvar sorumlusuna bildirmek ve kendiliğinden kullanmamak",
+      "Lavaboya dökmek"
+    ],
+    correct: 3,
+    explain: "İçeriği bilinmeyen kimyasallar kullanılmamalı, koklanmamalı veya tadılmamalıdır."
+  },
+  {
+    context: "Kimyasalı Başka Kaba Aktarma",
+    kazanim: "KİM.9.1.7",
+    text: "Bir öğrenci kimyasalı orijinal etiketini taşımayan başka bir kaba aktarıyor. Bu uygulamanın temel sakıncası nedir?",
+    options: [
+      "Kimyasalın kütlesi artar",
+      "Kimyasalın rengi değişir",
+      "Kabın içindeki maddenin kimliği ve tehlikeleri karışabilir",
+      "Kimyasal kesinlikle buharlaşmaz",
+      "Deney daha hızlı gerçekleşir"
+    ],
+    correct: 2,
+    explain: "Kimyasallar başka kaba aktarılacaksa kap uygun şekilde etiketlenmelidir. Aksi durumda madde yanlış tanınabilir."
+  },
+  {
+    context: "Kimyasal Maddeyle Çalışma",
+    kazanim: "KİM.9.1.7",
+    text: "Bir öğrenci deney sırasında kimyasalın özelliklerini bilmediğini fark ediyor. En doğru yaklaşım hangisidir?",
+    options: [
+      "Rastgele kullanmak",
+      "Tadına bakmak",
+      "Koklamak",
+      "Daha fazla miktarda kullanmak",
+      "Güvenlik bilgi ve etiketlerini incelemek ve sorumlu kişiye danışmak"
+    ],
+    correct: 4,
+    explain: "Kimyasalın özellikleri ve tehlikeleri bilinmeden çalışma yapılmamalıdır."
+  },
+  {
+    context: "Laboratuvar Düzeni",
+    kazanim: "KİM.9.1.7",
+    text: "Deney sırasında tezgâhın üzerinde gereksiz çok sayıda malzeme bulunması neden risklidir?",
+    options: [
+      "Deney daha güzel görünür",
+      "Kimyasalların rengi değişir",
+      "Çalışma alanı daralır ve devrilme, dökülme veya karışıklık riski artar",
+      "Maddelerin atom numarası değişir",
+      "Laboratuvarın sıcaklığı artar"
+    ],
+    correct: 2,
+    explain: "Düzenli bir çalışma alanı kazaları ve kimyasal dökülmelerini önlemeye yardımcı olur."
+  },
+  {
+    context: "Laboratuvarda Koşmak",
+    kazanim: "KİM.9.1.7",
+    text: "Laboratuvarda koşmak neden güvenlik açısından uygun değildir?",
+    options: [
+      "Kimyasalların atom yapısını değiştirir",
+      "Düşme, cam malzeme kırılması ve kimyasal dökülmesi riskini artırır",
+      "Deneylerin tamamını hızlandırır",
+      "Elektron sayısını değiştirir",
+      "Laboratuvarı soğutur"
+    ],
+    correct: 1,
+    explain: "Laboratuvarda kontrollü hareket etmek kazaları önlemek açısından önemlidir."
+  },
+  {
+    context: "Laboratuvar Güvenlik Kuralları",
+    kazanim: "KİM.9.1.7",
+    text: "Bir öğrenci deney yönergesini okumadan çalışmaya başlıyor. Bunun doğurabileceği temel sorun nedir?",
+    options: [
+      "Maddelerin atom numarası değişir",
+      "Deney mutlaka başarılı olur",
+      "Kimyasal maddelerin rengi kaybolur",
+      "Yanlış uygulama ve güvenlik riskleri ortaya çıkabilir",
+      "Laboratuvar otomatik olarak kapanır"
+    ],
+    correct: 3,
+    explain: "Deney yönergesinin okunması hem doğru uygulama hem de güvenlik açısından gereklidir."
+  },
+  {
+    context: "Kişisel Koruyucu Donanım",
+    kazanim: "KİM.9.1.7",
+    text: "Aşağıdakilerden hangisi kişisel koruyucu donanımlardan biridir?",
+    options: [
+      "Deney tüpü",
+      "Beher",
+      "Koruyucu gözlük",
+      "Spatül",
+      "Mezür"
+    ],
+    correct: 2,
+    explain: "Koruyucu gözlük, kişiyi kimyasal ve fiziksel tehlikelere karşı korumaya yardımcı olan kişisel koruyucu donanımdır."
+  },
+  {
+    context: "Eldiven Kullanımı",
+    kazanim: "KİM.9.1.7",
+    text: "Kimyasal maddelerle çalışırken uygun eldiven kullanılmasının amacı nedir?",
+    options: [
+      "Ellerin kimyasal maddelerle doğrudan temasını azaltmak",
+      "Deneyin süresini uzatmak",
+      "Kimyasalın sıcaklığını artırmak",
+      "Maddenin rengini değiştirmek",
+      "Elektronların hareketini durdurmak"
+    ],
+    correct: 0,
+    explain: "Uygun eldiven, kimyasal maddelerin ciltle temas etme riskini azaltır."
+  },
+  {
+    context: "Eldivenle Telefon Kullanmak",
+    kazanim: "KİM.9.1.7",
+    text: "Bir öğrenci laboratuvarda kimyasal maddeyle çalıştıktan sonra eldivenlerini çıkarmadan telefonuna dokunuyor. Bu davranış neden sakıncalıdır?",
+    options: [
+      "Telefonun ekranı daha parlak olur",
+      "Eldiven üzerindeki kimyasal kalıntılar başka yüzeylere taşınabilir",
+      "Telefonun pili kesinlikle biter",
+      "Kimyasalın atom numarası değişir",
+      "Eldivenler kendiliğinden temizlenir"
+    ],
+    correct: 1,
+    explain: "Kimyasal bulaşmış eldivenlerle farklı yüzeylere dokunmak çapraz bulaşmaya neden olabilir."
+  },
+  {
+    context: "Deney Sonrası Eller",
+    kazanim: "KİM.9.1.7",
+    text: "Laboratuvar çalışması bittikten sonra ellerin yıkanmasının temel nedeni nedir?",
+    options: [
+      "Kimyasalların tamamen yok olması için her zaman yeterlidir",
+      "Deney sonucunu değiştirmek için",
+      "Eller üzerinde kalabilecek kimyasal kalıntıları uzaklaştırmak için",
+      "Ellerin sıcaklığını artırmak için",
+      "Kimyasalın rengini değiştirmek için"
+    ],
+    correct: 2,
+    explain: "Çalışma sonrasında ellerin uygun şekilde yıkanması kimyasal kalıntıların vücuda taşınmasını azaltır."
+  },
+  {
+    context: "Kimyasal Güvenlik Bilgisi",
+    kazanim: "KİM.9.1.7",
+    text: "Bir kimyasalın sağlık, yangın ve depolama tehlikeleri hakkında ayrıntılı bilgiye ihtiyaç duyan öğrenci öncelikle hangi kaynağa başvurmalıdır?",
+    options: [
+      "Kimyasalın rengine",
+      "Arkadaşının tahminine",
+      "Şişenin boyutuna",
+      "Güvenlik Bilgi Formu (GBF/SDS) ve ürün etiketine",
+      "Maddenin kokusuna"
+    ],
+    correct: 3,
+    explain: "Güvenlik Bilgi Formu ve etiketler kimyasalın tehlikeleri, güvenli kullanımı ve acil durumları hakkında bilgi sağlar."
+  },
+  {
+    context: "Güvenlik Piktogramlarını Okumak",
+    kazanim: "KİM.9.1.7",
+    text: "Kimyasal güvenlik piktogramlarının kullanılmasının temel amacı nedir?",
+    options: [
+      "Maddeleri daha renkli göstermek",
+      "Tehlikeleri hızlı ve anlaşılır biçimde belirtmek",
+      "Kimyasalın fiyatını göstermek",
+      "Üretici firmanın logosunu göstermek",
+      "Maddenin atom numarasını göstermek"
+    ],
+    correct: 1,
+    explain: "Piktogramlar kimyasal tehlikelerin hızlı ve standart biçimde anlaşılmasına yardımcı olur."
+  },
+  {
+    context: "Bilinmeyen Gaz",
+    kazanim: "KİM.9.1.7",
+    text: "Bir deney sırasında beklenmeyen bir gaz oluşuyor. Öğrencinin gazı tanımak için doğrudan koklaması neden uygun değildir?",
+    options: [
+      "Gazların tamamı kokusuzdur",
+      "Gazın sıcaklığı değişir",
+      "Gaz zehirli veya tahriş edici olabilir",
+      "Gazın rengi değişir",
+      "Gaz mutlaka patlar"
+    ],
+    correct: 2,
+    explain: "Bilinmeyen gazlar doğrudan solunmamalıdır. Zararlı veya zehirli olabilirler."
+  },
+  {
+    context: "Güvenlik ve Sorumluluk",
+    kazanim: "KİM.9.1.7",
+    text: "Bir öğrenci arkadaşının laboratuvarda güvenlik kuralını ihlal ettiğini görüyor. En uygun davranış hangisidir?",
+    options: [
+      "Durumu görmezden gelmek",
+      "Kural ihlalini teşvik etmek",
+      "Fotoğraf çekmek",
+      "Güvenli davranması konusunda uyarmak ve gerekirse öğretmene bildirmek",
+      "Kendisi de aynı davranışı yapmak"
+    ],
+    correct: 3,
+    explain: "Laboratuvar güvenliği yalnızca bireysel değil, ortak bir sorumluluktur."
+  },
+  {
+    context: "Kimyasal Maddelerin Taşınması",
+    kazanim: "KİM.9.1.7",
+    text: "Bir öğrenci laboratuvarda birden fazla kimyasal şişesini aynı anda taşımaya çalışıyor. En güvenli yaklaşım hangisidir?",
+    options: [
+      "Hepsini üst üste koyarak taşımak",
+      "Şişeleri dengeli ve güvenli şekilde, gerektiğinde uygun taşıma kabı kullanarak taşımak",
+      "Şişeleri kapaksız taşımak",
+      "Şişeleri sallayarak taşımak",
+      "Kimyasalları etiketsiz kaba aktarmak"
+    ],
+    correct: 1,
+    explain: "Kimyasallar taşınırken devrilme ve kırılma riskini azaltacak uygun taşıma yöntemleri kullanılmalıdır."
+  },
+  {
+    context: "Deney Sonrası Temizlik",
+    kazanim: "KİM.9.1.7",
+    text: "Deney tamamlandıktan sonra çalışma alanının temizlenmesi neden önemlidir?",
+    options: [
+      "Kimyasal maddelerin çevreye yayılmasını ve sonraki çalışmalarda kazaları azaltmak için",
+      "Deney sonucunu değiştirmek için",
+      "Cam malzemeleri renklendirmek için",
+      "Atomların hareketini durdurmak için",
+      "Kimyasalları daha güçlü hâle getirmek için"
+    ],
+    correct: 0,
+    explain: "Deney sonrası temizlik, kimyasal kalıntıların ve olası tehlikelerin sonraki çalışmalara taşınmasını önlemeye yardımcı olur."
+  },
+  {
+    context: "Güvenlik Kuralının Nedeni",
+    kazanim: "KİM.9.1.7",
+    text: "Laboratuvar güvenlik kurallarının yalnızca deney sırasında değil, deney öncesinde de okunması neden önemlidir?",
+    options: [
+      "Kurallar yalnızca öğretmen için gereklidir",
+      "Deneyin sonucunu önceden değiştirmek için",
+      "Tehlikeleri önceden fark ederek uygun önlemleri almak için",
+      "Kimyasalların miktarını artırmak için",
+      "Deney süresini kesinlikle uzatmak için"
+    ],
+    correct: 2,
+    explain: "Riskleri önceden bilmek uygun kişisel koruyucu donanımı ve çalışma yöntemini seçmeye yardımcı olur."
+  },
+  {
+    context: "Kimya ve Güvenlik",
+    kazanim: "KİM.9.1.7",
+    text: "Kimya laboratuvarında güvenlik kurallarına uymanın temel amacı aşağıdakilerden hangisidir?",
+    options: [
+      "Deneyleri daha karmaşık hâle getirmek",
+      "Kimyasalları daha pahalı hâle getirmek",
+      "Sadece deney sonucunu doğru çıkarmak",
+      "İnsan sağlığını, çevreyi ve laboratuvar malzemelerini korumak",
+      "Kimyasal tepkimeleri tamamen durdurmak"
+    ],
+    correct: 3,
+    explain: "Laboratuvar güvenliğinin temel amacı insan sağlığını, çevreyi ve laboratuvarın güvenli işleyişini korumaktır."
+  }
+ ],
+ teori: [
+  {
+    kazanim: "KİM.9.1.5",
+    context: "Altın Yaprak Deneyinin Şaşırtan Sonucu",
+    text: "Bir deneyde, ince bir altın yaprağa gönderilen pozitif yüklü alfa parçacıklarının büyük çoğunluğu sapmadan doğrudan geçerken, çok küçük bir kısmı büyük açılarla geri sekiyor. Bu gözlem, o döneme kadar kabul gören 'pozitif yükün atom içinde eşit dağıldığı' modelini neden geçersiz kılmıştır?",
+    options: [
+      "Çünkü hiçbir parçacık sapmamalıydı",
+      "Çünkü altın yaprak deneyleri sadece metallerde yapılabilir",
+      "Çünkü alfa parçacıkları negatif yüklüdür",
+      "Çünkü pozitif yük eşit dağılmış olsaydı hiçbir parçacık büyük açıyla geri sekmemeliydi; geri sekme, yoğun ve küçük bir pozitif bölgenin (çekirdeğin) varlığına işaret eder",
+      "Çünkü deney sonucu tamamen rastgeledir ve model üzerinde bir etkisi yoktur"
+    ],
+    correct: 3,
+    explain: "Alfa parçacıklarının büyük açılarla sapması, atomda küçük ve yoğun pozitif yüklü bir çekirdeğin bulunduğunu göstermiştir."
+  },
+  {
+    kazanim: "KİM.9.1.5",
+    context: "Bir Atomun Işık Yayması",
+    text: "Bir gaz deşarj tüpündeki atomlar dışarıdan enerji aldıktan sonra belirli renklerde ışık yayıyor. Bohr atom teorisine göre bu ışık yayma olayı nasıl gerçekleşir?",
+    options: [
+      "Elektronların çekirdeğe düşmesiyle",
+      "Uyarılmış elektronların daha yüksek enerji seviyesinden düşük enerji seviyesine geçerken enerji farkını ışık olarak yaymasıyla",
+      "Protonların yer değiştirmesiyle",
+      "Nötronların parçalanmasıyla",
+      "Atomun tamamen iyonlaşmasıyla"
+    ],
+    correct: 1,
+    explain: "Elektron üst enerji seviyesinden alt enerji seviyesine geçerken iki seviye arasındaki enerji farkını foton olarak yayar."
+  },
+  {
+    kazanim: "KİM.9.1.5",
+    context: "Bohr Modelinin Sınırı",
+    text: "Bohr atom modeli hidrojen atomunun çizgi spektrumunu başarıyla açıklarken çok elektronlu atomlarda aynı başarıyı gösterememiştir. Bunun temel nedeni aşağıdakilerden hangisidir?",
+    options: [
+      "Bohr modelinin yalnızca gazları açıklaması",
+      "Protonların çok elektronlu atomlarda bulunmaması",
+      "Nötronların Bohr modelinde fazla olması",
+      "Atom çekirdeğinin çok elektronlu atomlarda kaybolması",
+      "Elektron-elektron etkileşimlerinin ve daha karmaşık enerji düzeylerinin modeli yetersiz bırakması"
+    ],
+    correct: 4,
+    explain: "Çok elektronlu atomlarda elektronlar birbirleriyle etkileşir ve enerji düzeyleri hidrojen atomundan daha karmaşık hâle gelir."
+  },
+  {
+    kazanim: "KİM.9.1.5",
+    context: "Bilimsel Modellerin Değişimi",
+    text: "Dalton, Thomson, Rutherford, Bohr ve modern atom modelleri incelendiğinde bilimsel bilginin doğası hakkında hangi sonuca ulaşılabilir?",
+    options: [
+      "Bilimsel modeller yeni kanıtlarla geliştirilebilir",
+      "İlk ortaya atılan model her zaman doğrudur",
+      "Atom modeli hiçbir zaman değişmez",
+      "Deneysel kanıtların bilimsel modeller üzerinde etkisi yoktur",
+      "Bilimsel modeller yalnızca kişisel görüşlere dayanır"
+    ],
+    correct: 0,
+    explain: "Bilimsel modeller mevcut kanıtları açıklamak için geliştirilir ve yeni deneysel kanıtlarla değiştirilebilir."
+  },
+  {
+    kazanim: "KİM.9.1.5",
+    context: "Rutherford'un Çekirdek Modeli",
+    text: "Rutherford modeline göre atomun büyük kısmının boşluklu yapı göstermesinin temel kanıtı nedir?",
+    options: [
+      "Protonların çok hafif olması",
+      "Elektronların çekirdekte bulunması",
+      "Alfa parçacıklarının büyük çoğunluğunun altın yapraktan sapmadan geçmesi",
+      "Nötronların keşfedilmemiş olması",
+      "Atomların yalnızca gaz hâlinde bulunması"
+    ],
+    correct: 2,
+    explain: "Alfa parçacıklarının çoğunun sapmadan geçmesi atomun büyük kısmının boşluklu olduğunu göstermiştir."
+  },
+  {
+    kazanim: "KİM.9.1.5",
+    context: "Çekirdeğin Keşfi",
+    text: "Rutherford deneyinde çok az sayıdaki alfa parçacığının büyük açılarla sapması hangi sonuca götürmüştür?",
+    options: [
+      "Elektronların çok ağır olduğuna",
+      "Atomun tamamen dolu olduğuna",
+      "Nötronların negatif yüklü olduğuna",
+      "Pozitif yük ve kütlenin atomun çok küçük bir bölgesinde yoğunlaştığına",
+      "Atomlarda proton bulunmadığına"
+    ],
+    correct: 3,
+    explain: "Büyük açılı sapmalar, pozitif yük ve kütlenin küçük ve yoğun bir çekirdekte toplandığını göstermiştir."
+  },
+  {
+    kazanim: "KİM.9.1.5",
+    context: "Thomson Modeli",
+    text: "Thomson atom modelinde pozitif yük ve elektronların atom içerisinde nasıl dağıldığı kabul edilmiştir?",
+    options: [
+      "Pozitif yük merkezde, elektronlar çekirdekte",
+      "Pozitif yük atomun her tarafına yayılmış, elektronlar bu yapı içerisinde dağılmıştır",
+      "Elektronlar yalnızca belirli enerji düzeylerinde bulunur",
+      "Atom tamamen boşluktan oluşur",
+      "Nötronlar pozitif yükü dengeler"
+    ],
+    correct: 1,
+    explain: "Thomson modelinde pozitif yük atom hacmine yayılmış, elektronlar bu pozitif yapı içerisinde gömülü kabul edilmiştir."
+  },
+  {
+    kazanim: "KİM.9.1.5",
+    context: "Bohr'un Katmanlı Modeli",
+    text: "Bohr modelinin Rutherford modeline getirdiği temel yenilik aşağıdakilerden hangisidir?",
+    options: [
+      "Elektronların çekirdekte bulunduğunu ileri sürmesi",
+      "Protonları keşfetmesi",
+      "Nötronların varlığını açıklaması",
+      "Atomun tamamen boş olduğunu söylemesi",
+      "Elektronların belirli enerji düzeylerinde bulunabileceğini ileri sürmesi"
+    ],
+    correct: 4,
+    explain: "Bohr, elektronların belirli enerji düzeylerinde bulunabileceğini ve düzeyler arasında enerji alışverişi yapabileceğini öne sürmüştür."
+  },
+  {
+    kazanim: "KİM.9.1.5",
+    context: "Hidrojen Spektrumu",
+    text: "Hidrojen atomunun belirli dalga boylarında ışık yayması Bohr modelinde nasıl açıklanır?",
+    options: [
+      "Elektronların sürekli enerji yaymasıyla",
+      "Protonların titreşmesiyle",
+      "Elektronların belirli enerji düzeyleri arasında geçiş yapmasıyla",
+      "Nötronların ışık yaymasıyla",
+      "Çekirdeğin parçalanmasıyla"
+    ],
+    correct: 2,
+    explain: "Elektronlar belirli enerji düzeyleri arasında geçiş yaparken belirli enerjiye sahip fotonlar yayar."
+  },
+  {
+    kazanim: "KİM.9.1.5",
+    context: "Enerji Soğurulması",
+    text: "Bir elektron bulunduğu enerji düzeyinden daha yüksek bir enerji düzeyine geçiyorsa atom hangi olayı gerçekleştirmiştir?",
+    options: [
+      "Enerji soğurmuştur",
+      "Enerji yaymıştır",
+      "Proton kaybetmiştir",
+      "Nötron kazanmıştır",
+      "Çekirdek parçalanmıştır"
+    ],
+    correct: 0,
+    explain: "Elektron üst enerji düzeyine çıkmak için dışarıdan enerji soğurur."
+  },
+  {
+    kazanim: "KİM.9.1.5",
+    context: "Enerji Yayılması",
+    text: "Uyarılmış bir elektron daha düşük enerji düzeyine dönerken ne olur?",
+    options: [
+      "Atom mutlaka iyonlaşır",
+      "Elektron yok olur",
+      "Proton sayısı azalır",
+      "Enerji farkına karşılık gelen bir foton yayılır",
+      "Nötron sayısı artar"
+    ],
+    correct: 3,
+    explain: "Elektron daha düşük enerji seviyesine geçerken iki seviye arasındaki enerji farkı foton olarak yayılır."
+  },
+  {
+    kazanim: "KİM.9.1.5",
+    context: "Atom Modellerinin Sıralanması",
+    text: "Aşağıdaki atom modellerinden hangisi tarihsel gelişim açısından doğru sırayı verir?",
+    options: [
+      "Bohr → Dalton → Rutherford → Thomson",
+      "Dalton → Thomson → Rutherford → Bohr",
+      "Rutherford → Dalton → Bohr → Thomson",
+      "Thomson → Dalton → Bohr → Rutherford",
+      "Dalton → Rutherford → Thomson → Bohr"
+    ],
+    correct: 1,
+    explain: "Atom modeli tarihsel olarak Dalton, Thomson, Rutherford ve Bohr modelleri şeklinde gelişmiştir."
+  },
+  {
+    kazanim: "KİM.9.1.5",
+    context: "Dalton Modeli",
+    text: "Dalton atom modelinin temel varsayımlarından biri aşağıdakilerden hangisidir?",
+    options: [
+      "Atomlar bölünemez ve içi dolu kürelerdir",
+      "Elektronlar enerji düzeylerinde bulunur",
+      "Atomun merkezinde yoğun çekirdek vardır",
+      "Elektronların kesin konumu belirlenemez",
+      "Atomlar tamamen boşluktan oluşur"
+    ],
+    correct: 0,
+    explain: "Dalton atomu bölünemez, içi dolu ve küresel tanecikler olarak kabul etmiştir."
+  },
+  {
+    kazanim: "KİM.9.1.5",
+    context: "Atomun Bölünebilirliği",
+    text: "Elektronun keşfi Dalton'un hangi düşüncesinin değiştirilmesine neden olmuştur?",
+    options: [
+      "Elementlerin farklı özelliklere sahip olması",
+      "Bileşiklerin oluşması",
+      "Atomun bölünemez ve iç yapısı olmayan bir tanecik olduğu düşüncesi",
+      "Kimyasal tepkimelerin gerçekleşmesi",
+      "Maddenin korunması"
+    ],
+    correct: 2,
+    explain: "Elektronun keşfi atomun daha küçük parçacıklardan oluştuğunu göstermiş ve Dalton'un bölünemez atom görüşünü değiştirmiştir."
+  },
+  {
+    kazanim: "KİM.9.1.5",
+    context: "Modern Atom Modeli",
+    text: "Modern atom modelinde elektronların çekirdek çevresindeki konumu nasıl ifade edilir?",
+    options: [
+      "Kesin dairesel yörüngelerle",
+      "Çekirdeğin içinde",
+      "Tek bir sabit noktada",
+      "Belirli bir yolda hareket eden parçacıklar olarak",
+      "Bulunma olasılıklarının yüksek olduğu orbitallerle"
+    ],
+    correct: 4,
+    explain: "Modern atom modelinde elektronların kesin yörüngelerinden değil, bulunma olasılıklarının yüksek olduğu orbitallerden söz edilir."
+  },
+  {
+    kazanim: "KİM.9.1.6",
+    context: "Orbital Kavramı",
+    text: "Orbital kavramı için en doğru tanım aşağıdakilerden hangisidir?",
+    options: [
+      "Elektronun izlediği kesin yol",
+      "Elektronun bulunma olasılığının yüksek olduğu üç boyutlu bölge",
+      "Protonların hareket ettiği yörünge",
+      "Çekirdeğin tamamı",
+      "Bir atomun tamamı"
+    ],
+    correct: 1,
+    explain: "Orbital, elektronun bulunma olasılığının yüksek olduğu üç boyutlu bölgedir."
+  },
+  {
+    kazanim: "KİM.9.1.6",
+    context: "s Orbitali",
+    text: "Bir s alt kabuğunda kaç orbital bulunur?",
+    options: ["1", "2", "3", "5", "7"],
+    correct: 0,
+    explain: "s alt kabuğunda yalnızca bir orbital bulunur."
+  },
+  {
+    kazanim: "KİM.9.1.6",
+    context: "p Orbitalleri",
+    text: "Bir p alt kabuğunda kaç orbital bulunur?",
+    options: ["1", "2", "3", "5", "7"],
+    correct: 2,
+    explain: "p alt kabuğunda üç orbital bulunur."
+  },
+  {
+    kazanim: "KİM.9.1.6",
+    context: "d Orbitalleri",
+    text: "Bir d alt kabuğunda toplam kaç orbital bulunur?",
+    options: ["1", "2", "3", "5", "7"],
+    correct: 3,
+    explain: "d alt kabuğunda beş orbital bulunur."
+  },
+  {
+    kazanim: "KİM.9.1.6",
+    context: "f Orbitalleri",
+    text: "Bir f alt kabuğunda toplam kaç orbital bulunur?",
+    options: ["1", "3", "5", "6", "7"],
+    correct: 4,
+    explain: "f alt kabuğunda yedi orbital bulunur."
+  },
+  {
+    kazanim: "KİM.9.1.6",
+    context: "Orbital Kapasitesi",
+    text: "Bir orbitalde bulunabilecek maksimum elektron sayısı kaçtır?",
+    options: ["1", "2", "4", "6", "8"],
+    correct: 1,
+    explain: "Pauli dışlama ilkesine göre bir orbital en fazla iki elektron içerir."
+  },
+  {
+    kazanim: "KİM.9.1.6",
+    context: "Alt Kabuk Kapasiteleri",
+    text: "p alt kabuğunun maksimum elektron kapasitesi kaçtır?",
+    options: ["2", "4", "6", "8", "10"],
+    correct: 2,
+    explain: "p alt kabuğunda üç orbital vardır ve her orbital iki elektron aldığı için kapasite 6'dır."
+  },
+  {
+    kazanim: "KİM.9.1.6",
+    context: "Enerji Düzeyleri",
+    text: "Bir ana enerji düzeyinde bulunan alt kabukların türleri hangi kuantum sayısıyla ilişkilidir?",
+    options: [
+      "Baş kuantum sayısı",
+      "Spin kuantum sayısı",
+      "Manyetik kuantum sayısı",
+      "Kütle numarası",
+      "Atom numarası"
+    ],
+    correct: 0,
+    explain: "Ana enerji düzeyi baş kuantum sayısı n ile ifade edilir."
+  },
+  {
+    kazanim: "KİM.9.1.6",
+    context: "Orbital ve Yörünge Farkı",
+    text: "Bohr modelindeki yörünge kavramı ile modern atom modelindeki orbital kavramı arasındaki temel fark nedir?",
+    options: [
+      "İkisi tamamen aynıdır",
+      "Orbital çekirdeğin içinde bulunur",
+      "Yörünge elektronun kesin yolunu, orbital ise bulunma olasılığının yüksek olduğu bölgeyi ifade eder",
+      "Yörünge yalnızca protonlar için kullanılır",
+      "Orbital yalnızca nötronları açıklar"
+    ],
+    correct: 2,
+    explain: "Modern model elektronun kesin bir yolunu değil, bulunma olasılığının yüksek olduğu bölgeyi tanımlar."
+  },
+  {
+    kazanim: "KİM.9.1.6",
+    context: "Enerji ve Elektron",
+    text: "Bir atomdaki elektronun enerjisi arttığında elektron genel olarak hangi duruma geçer?",
+    options: [
+      "Çekirdeğe yaklaşır ve enerji kaybeder",
+      "Daha yüksek enerjili bir düzeye geçebilir",
+      "Protona dönüşür",
+      "Nötronu parçalar",
+      "Atom numarasını değiştirir"
+    ],
+    correct: 1,
+    explain: "Elektron enerji aldığında daha yüksek enerjili bir düzeye geçebilir."
+  },
+  {
+    kazanim: "KİM.9.1.6",
+    context: "Elektron Dizilimi",
+    text: "Bir atomun elektron dizilimini oluştururken elektronların öncelikle hangi orbitallere yerleşmesi beklenir?",
+    options: [
+      "En yüksek enerjili orbitallere",
+      "Rastgele orbitallere",
+      "Düşük enerjili orbitallere",
+      "Yalnızca d orbitallerine",
+      "Yalnızca f orbitallerine"
+    ],
+    correct: 2,
+    explain: "Aufbau ilkesine göre elektronlar temel hâlde düşük enerjili orbitallerden başlayarak yerleşir."
+  },
+  {
+    kazanim: "KİM.9.1.7",
+    context: "Periyodik Tablo ve Elektron Dizilimi",
+    text: "Bir elementin elektron diziliminin son kısmı 3s² 3p⁵ şeklindedir. Bu elementin değerlik elektron sayısı kaçtır?",
+    options: ["2", "5", "6", "7", "8"],
+    correct: 3,
+    explain: "En dış enerji düzeyindeki elektronlar 3s² + 3p⁵ = 7 elektrondur."
+  },
+  {
+    kazanim: "KİM.9.1.7",
+    context: "Periyot Belirleme",
+    text: "Elektron dizilimi 1s² 2s² 2p⁶ 3s¹ olan nötr atom hangi periyottadır?",
+    options: ["1", "2", "3", "4", "5"],
+    correct: 2,
+    explain: "Dizilimdeki en büyük baş kuantum sayısı 3 olduğundan atom 3. periyottadır."
+  },
+  {
+    kazanim: "KİM.9.1.7",
+    context: "Grup Belirleme",
+    text: "Elektron dizilimi 1s² 2s² 2p⁶ 3s² 3p⁵ olan element hangi gruptadır?",
+    options: ["1A", "2A", "5A", "7A", "8A"],
+    correct: 3,
+    explain: "En dış enerji düzeyinde 7 elektron bulunduğu için element 7A grubundadır."
+  },
+  {
+    kazanim: "KİM.9.1.7",
+    context: "Soy Gaz Kararlılığı",
+    text: "Elektron dizilimi 1s² 2s² 2p⁶ olan bir atomun kimyasal olarak görece kararlı olmasının temel nedeni nedir?",
+    options: [
+      "Çekirdeğinde proton bulunmaması",
+      "Elektronlarının tamamının çekirdekte olması",
+      "En dış enerji düzeyinin dolu olması",
+      "Atom numarasının sıfır olması",
+      "Nötronlarının bulunmaması"
+    ],
+    correct: 2,
+    explain: "Neonun en dış enerji düzeyi 8 elektronla doludur ve bu durum kararlı elektron düzeni sağlar."
+  },
+  {
+    kazanim: "KİM.9.1.7",
+    context: "Değerlik Elektronları",
+    text: "Bir elementin değerlik elektron sayısının belirlenmesi neden önemlidir?",
+    options: [
+      "Elementin proton kütlesini belirler",
+      "Kimyasal bağ oluşturma ve tepkime eğilimi hakkında bilgi verir",
+      "Nötron sayısını doğrudan belirler",
+      "Elementin rengini kesin olarak belirler",
+      "Atomun çapını tek başına belirler"
+    ],
+    correct: 1,
+    explain: "Değerlik elektronları elementin bağ oluşturma ve kimyasal tepkime davranışında önemli rol oynar."
+  },
+  {
+    kazanim: "KİM.9.1.7",
+    context: "İyon Oluşumu",
+    text: "Sodyum atomunun Na⁺ iyonu oluşturmasının temel nedeni aşağıdakilerden hangisidir?",
+    options: [
+      "Bir elektron vererek daha kararlı elektron dizilimine ulaşması",
+      "Bir proton kazanması",
+      "Bir nötron kaybetmesi",
+      "İki elektron kazanması",
+      "Çekirdeğinin parçalanması"
+    ],
+    correct: 0,
+    explain: "Na atomu bir elektron vererek Ne ile aynı kararlı elektron dizilimine ulaşır."
+  },
+  {
+    kazanim: "KİM.9.1.7",
+    context: "İyon ve Elektron Sayısı",
+    text: "17 protonlu nötr bir atom bir elektron kazanırsa oluşan taneciğin elektron sayısı kaç olur?",
+    options: ["16", "17", "18", "19", "34"],
+    correct: 2,
+    explain: "Nötr atomda 17 elektron vardır. Bir elektron kazanırsa elektron sayısı 18 olur."
+  },
+  {
+    kazanim: "KİM.9.1.7",
+    context: "İzoelektronik Tanecikler",
+    text: "Na⁺, Ne ve F⁻ taneciklerinin ortak özelliği aşağıdakilerden hangisidir?",
+    options: [
+      "Proton sayılarının eşit olması",
+      "Nötron sayılarının eşit olması",
+      "Elektron sayılarının eşit olması",
+      "Atom numaralarının eşit olması",
+      "Kütle numaralarının eşit olması"
+    ],
+    correct: 2,
+    explain: "Na⁺, Ne ve F⁻ taneciklerinin her birinde 10 elektron vardır; bunlara izoelektronik tanecikler denir."
+  },
+  {
+    kazanim: "KİM.9.1.7",
+    context: "İyonlaşma ve Elektron Dizilimi",
+    text: "Bir metal atomunun kararlı iyon oluştururken elektron vermesi aşağıdakilerden hangisini sağlar?",
+    options: [
+      "Daha kararsız bir elektron düzeni",
+      "Soy gaz elektron dizilimine ulaşma olasılığı",
+      "Proton sayısının azalması",
+      "Atom numarasının değişmesi",
+      "Çekirdeğin yok olması"
+    ],
+    correct: 1,
+    explain: "Ana grup metalleri elektron vererek kendilerine en yakın soy gazın kararlı elektron düzenine ulaşabilir."
+  },
+  {
+    kazanim: "KİM.9.1.8",
+    context: "Periyodik Özelliklerin Değişimi",
+    text: "Aynı grupta yukarıdan aşağıya doğru atom yarıçapının artmasının temel nedeni nedir?",
+    options: [
+      "Proton sayısının azalması",
+      "Elektron sayısının tamamen yok olması",
+      "Yeni enerji düzeylerinin eklenmesi",
+      "Çekirdek yükünün sıfırlanması",
+      "Elementlerin ametal olması"
+    ],
+    correct: 2,
+    explain: "Grupta aşağıya doğru yeni elektron katmanları eklenir ve atomun yarıçapı artar."
+  },
+  {
+    kazanim: "KİM.9.1.8",
+    context: "Periyotta Atom Yarıçapı",
+    text: "Aynı periyotta soldan sağa doğru atom yarıçapının genel olarak azalmasının nedeni nedir?",
+    options: [
+      "Elektronların tamamen yok olması",
+      "Proton sayısının artmasıyla etkin çekirdek çekiminin artması",
+      "Enerji düzeyi sayısının artması",
+      "Nötronların elektronları itmesi",
+      "Atomların kütlesinin azalması"
+    ],
+    correct: 1,
+    explain: "Aynı enerji düzeyine elektron eklenirken proton sayısı arttığı için çekirdek elektronları daha güçlü çeker."
+  },
+  {
+    kazanim: "KİM.9.1.8",
+    context: "İyonlaşma Enerjisi",
+    text: "Bir atomdan elektron koparmak için gereken enerji hangi büyüklükle ifade edilir?",
+    options: ["Elektronegatiflik", "Atom yarıçapı", "İyonlaşma enerjisi", "Kütle numarası", "Elektron sayısı"],
+    correct: 2,
+    explain: "Gaz hâlindeki nötr bir atomdan elektron koparmak için gereken enerji iyonlaşma enerjisidir."
+  },
+  {
+    kazanim: "KİM.9.1.8",
+    context: "Elektronegatiflik",
+    text: "Elektronegatiflik neyi ifade eder?",
+    options: [
+      "Atomun nötron sayısını",
+      "Atomun kütlesini",
+      "Atomun bağ elektronlarını kendine çekme eğilimini",
+      "Atomun çekirdek çapını",
+      "Atomun protonlarını kaybetme hızını"
+    ],
+    correct: 2,
+    explain: "Elektronegatiflik, bir atomun kimyasal bağdaki ortak elektronları kendine çekme eğilimidir."
+  },
+  {
+    kazanim: "KİM.9.1.8",
+    context: "Florun Elektronegatifliği",
+    text: "Florun elektronegatifliğinin çok yüksek olması hangi özelliğini açıklar?",
+    options: [
+      "Bağ elektronlarını güçlü biçimde kendine çekmesini",
+      "En büyük atom yarıçapına sahip olmasını",
+      "Kolayca elektron vermesini",
+      "Soy gaz olmasını",
+      "Metalik özelliğinin çok yüksek olmasını"
+    ],
+    correct: 0,
+    explain: "Flor bağ elektronlarını kendine çekme eğilimi en yüksek elementlerden biridir."
+  },
+  {
+    kazanim: "KİM.9.1.8",
+    context: "Metalik Özellik",
+    text: "Periyodik tabloda metalik özellik genel olarak hangi yönde artar?",
+    options: ["Sağ üst köşeye doğru", "Sol alt köşeye doğru", "Yalnızca sağa doğru", "Yalnızca yukarı doğru", "Tablonun merkezine doğru"],
+    correct: 1,
+    explain: "Metalik özellik genel olarak periyodik tablonun sol alt tarafına doğru artar."
+  },
+  {
+    kazanim: "KİM.9.1.8",
+    context: "Atom ve İyon Yarıçapı",
+    text: "Bir atom elektron kazanarak anyon hâline geldiğinde yarıçapının genellikle artmasının nedeni nedir?",
+    options: [
+      "Proton sayısının artması",
+      "Elektron sayısının artması ve elektronlar arasındaki itmenin güçlenmesi",
+      "Çekirdeğin kaybolması",
+      "Nötronların elektronlara dönüşmesi",
+      "Atom numarasının sıfırlanması"
+    ],
+    correct: 1,
+    explain: "Elektron sayısı arttığında elektron-elektron itmesi artar ve elektron bulutu genişleyebilir."
+  },
+  {
+    kazanim: "KİM.9.1.8",
+    context: "Katyon Yarıçapı",
+    text: "Bir atom elektron vererek katyon hâline geldiğinde atom yarıçapının genellikle küçülmesinin temel nedeni nedir?",
+    options: [
+      "Elektron sayısının azalması ve çekirdek çekiminin kalan elektronlar üzerindeki etkisinin artması",
+      "Proton sayısının sıfırlanması",
+      "Nötronların tamamen yok olması",
+      "Atomun başka elemente dönüşmesi",
+      "Elektronların kütlesinin artması"
+    ],
+    correct: 0,
+    explain: "Elektron kaybıyla elektron-elektron itmesi azalır ve çekirdeğin kalan elektronlar üzerindeki çekim etkisi göreli olarak artar."
+  },
+  {
+    kazanim: "KİM.9.1.8",
+    context: "İyonlaşma Enerjisindeki Sıçrama",
+    text: "Bir elementin ardışık iyonlaşma enerjilerinde belirgin bir sıçrama görülmesi ne hakkında bilgi verebilir?",
+    options: [
+      "Elementin nötron sayısı hakkında kesin bilgi verir",
+      "Elementin erime noktasını doğrudan verir",
+      "Değerlik elektronlarının sayısı hakkında fikir verebilir",
+      "Elementin rengini belirler",
+      "Elementin kütle numarasını doğrudan verir"
+    ],
+    correct: 2,
+    explain: "Büyük sıçramanın hangi elektron koparıldıktan sonra gerçekleştiği, değerlik elektronlarının sayısı hakkında fikir verebilir."
+  },
+  {
+    kazanim: "KİM.9.1.8",
+    context: "Aynı Gruptaki Elementler",
+    text: "Li, Na ve K elementlerinin aynı grupta bulunması aşağıdaki özelliklerden hangilerinin benzer olmasını bekletir?",
+    options: [
+      "Kimyasal davranışlarının ve değerlik elektron düzenlerinin",
+      "Atom yarıçaplarının tamamen aynı olmasını",
+      "Kütle numaralarının aynı olmasını",
+      "Nötron sayılarının aynı olmasını",
+      "Elektron katmanı sayılarının aynı olmasını"
+    ],
+    correct: 0,
+    explain: "Aynı gruptaki ana grup elementlerinin değerlik elektron düzenleri benzer olduğundan kimyasal özellikleri de benzerlik gösterir."
+  },
+  {
+    kazanim: "KİM.9.1.8",
+    context: "Periyodik Eğilimleri Yorumlama",
+    text: "Bir öğrenci periyodik tablodaki atom yarıçapı, iyonlaşma enerjisi ve elektronegatiflik eğilimlerini birlikte incelemek istiyor. En doğru yaklaşım hangisidir?",
+    options: [
+      "Her özelliği birbirinden tamamen bağımsız değerlendirmek",
+      "Yalnızca atom kütlesine bakmak",
+      "Elementin tablodaki konumunu ve elektron dizilimini birlikte değerlendirmek",
+      "Sadece elementin rengini dikkate almak",
+      "Yalnızca nötron sayısını karşılaştırmak"
+    ],
+    correct: 2,
+    explain: "Periyodik özellikleri yorumlarken elementin periyot, grup, elektron dizilimi ve etkin çekirdek yükü birlikte değerlendirilmelidir."
+  },
+  {
+    kazanim: "KİM.9.1.8",
+    context: "Periyodik Tabloda Karşılaştırma",
+    text: "Na ve Cl aynı periyotta bulunmaktadır. Bu iki element karşılaştırıldığında hangisinin atom yarıçapının daha büyük olması beklenir?",
+    options: [
+      "Cl, çünkü proton sayısı daha fazladır",
+      "Na, çünkü aynı periyotta solda bulunur ve etkin çekirdek çekimi daha düşüktür",
+      "İkisinin yarıçapı kesinlikle aynıdır",
+      "Cl, çünkü elektron sayısı daha azdır",
+      "Hiçbiri, çünkü atom yarıçapı periyodik bir özellik değildir"
+    ],
+    correct: 1,
+    explain: "Aynı periyotta soldan sağa doğru etkin çekirdek çekimi arttığı için atom yarıçapı genel olarak küçülür. Bu nedenle Na'nın yarıçapı Cl'den büyüktür."
+  },
+  {
+    kazanim: "KİM.9.1.8",
+    context: "Kimyasal Özelliklerin Kaynağı",
+    text: "Aynı gruptaki elementlerin benzer kimyasal özellik göstermesinin en önemli nedeni nedir?",
+    options: [
+      "Aynı kütle numarasına sahip olmaları",
+      "Aynı sayıda nötron taşımaları",
+      "Değerlik elektron sayılarının benzer olması",
+      "Atom yarıçaplarının eşit olması",
+      "Aynı renkte olmaları"
+    ],
+    correct: 2,
+    explain: "Ana grup elementlerinde aynı grupta bulunan elementlerin değerlik elektron düzenleri benzerdir ve bu durum kimyasal davranışlarını etkiler."
+  },
+  {
+    kazanim: "KİM.9.1.8",
+    context: "Periyodik Özelliklerin Birlikte Kullanılması",
+    text: "Bir elementin elektronu güçlü çektiği, atom yarıçapının küçük ve iyonlaşma enerjisinin yüksek olduğu biliniyor. Bu elementin periyodik tablodaki konumu için hangisi daha olasıdır?",
+    options: ["Sol alt bölge", "Sol üst bölge", "Sağ üst bölge", "Tablonun en alt kısmı", "Yalnızca geçiş metalleri bölgesi"],
+    correct: 2,
+    explain: "Küçük atom yarıçapı, yüksek iyonlaşma enerjisi ve yüksek elektronegatiflik genel olarak periyodik tablonun sağ üst bölümünde belirgindir."
+  },
+  {
+    kazanim: "KİM.9.1.8",
+    context: "Periyodik Tabloyu Bir Harita Gibi Kullanmak",
+    text: "Bir elementin periyodik tablodaki konumundan hangi özellikler hakkında genel tahminlerde bulunulabilir?",
+    options: [
+      "Değerlik elektronları, atom yarıçapı, iyonlaşma enerjisi ve elektronegatiflik gibi özellikler",
+      "Elementin kesin erime noktası yalnızca konumdan",
+      "Elementin kesin yoğunluğu yalnızca konumdan",
+      "Elementin kesin kütle numarası",
+      "Elementin bütün fiziksel özellikleri hiçbir deney yapılmadan"
+    ],
+    correct: 0,
+    explain: "Periyodik tablo, elektron dizilimi ve periyodik eğilimlerden yararlanılarak birçok kimyasal özellik hakkında nitel tahmin yapılmasını sağlar."
+  }
+ ],
   orbital: [
 
   // =====================================================
@@ -4819,7 +4537,7 @@ const QUIZ = {
   }
 
 ],
- yerBulma: [
+ yerbulma: [
 
   /* =====================================================
      1 — ATOMDA ELEKTRONUN BULUNMA OLASILIĞI
@@ -5641,7 +5359,7 @@ const QUIZ = {
     explain: "Orbital, elektronun bulunma olasılığının yüksek olduğu bölgedir; olasılık dağılımı ile elektronun konumu hakkında bilgi edinilebilir."
   }
 
-]
+],
  ozellikler: [
 
   /* =====================================================
@@ -6621,4 +6339,3 @@ const QUIZ = {
     }
   ]
 };
-window.QUIZ = QUIZ;
