@@ -6621,5 +6621,4 @@ const QUIZ = {
     }
   ]
 };
-
 window.QUIZ = QUIZ;
