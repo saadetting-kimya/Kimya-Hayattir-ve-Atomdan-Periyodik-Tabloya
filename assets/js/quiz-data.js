@@ -4818,7 +4818,7 @@ export const QUIZ = {
     explain: "En dış enerji düzeyinde 3s² + 3p³ = 5 elektron bulunur."
   }
 
-]
+],
  yerBulma: [
 
   /* =====================================================
