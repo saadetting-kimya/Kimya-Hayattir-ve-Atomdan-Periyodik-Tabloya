@@ -6618,6 +6618,6 @@ export const QUIZ = {
     ],
     correct: 0,
     explain: "Metallerin düşük iyonlaşma enerjisi elektron vermelerini kolaylaştırırken ametallerin yüksek elektronegatifliği elektron çekmelerini destekler."
-  }
-
-]
+    }
+  ]
+};
