@@ -3421,7 +3421,7 @@ export const QUIZ = {
 
   {
     id: "orbital-001",
-    kazanim: "Orbital kavramını ve orbital türlerini açıklar.",
+    kazanim: "KİM.9.1.6 — Orbital kavramını ve orbital türlerini açıklar.",
     konu: "Orbital kavramı",
     difficulty: "kolay",
     context: "Bir öğrenci atomdaki elektronların çekirdek çevresindeki dağılımını inceliyor.",
@@ -3439,7 +3439,7 @@ export const QUIZ = {
 
   {
     id: "orbital-002",
-    kazanim: "Orbital kavramını ve orbital türlerini açıklar.",
+    kazanim: "KİM.9.1.6 — Orbital kavramını ve orbital türlerini açıklar.",
     konu: "Orbital kavramı",
     difficulty: "kolay",
     context: "Bir öğretmen elektronların atom içindeki konumunu anlatıyor.",
@@ -3457,7 +3457,7 @@ export const QUIZ = {
 
   {
     id: "orbital-003",
-    kazanim: "Orbital kavramını ve orbital türlerini açıklar.",
+    kazanim: "KİM.9.1.6 — Orbital kavramını ve orbital türlerini açıklar.",
     konu: "s orbitali",
     difficulty: "kolay",
     context: "Bir atomun s alt kabuğu inceleniyor.",
@@ -3475,7 +3475,7 @@ export const QUIZ = {
 
   {
     id: "orbital-004",
-    kazanim: "Orbital kavramını ve orbital türlerini açıklar.",
+    kazanim: "KİM.9.1.6 — Orbital kavramını ve orbital türlerini açıklar.",
     konu: "p orbitali",
     difficulty: "kolay",
     context: "Bir atomun p alt kabuğu inceleniyor.",
@@ -3493,7 +3493,7 @@ export const QUIZ = {
 
   {
     id: "orbital-005",
-    kazanim: "Orbital kavramını ve orbital türlerini açıklar.",
+    kazanim: "KİM.9.1.6 — Orbital kavramını ve orbital türlerini açıklar.",
     konu: "d orbitali",
     difficulty: "kolay",
     context: "Bir öğrenci d alt kabuğunun yapısını araştırıyor.",
@@ -3511,7 +3511,7 @@ export const QUIZ = {
 
   {
     id: "orbital-006",
-    kazanim: "Orbital kavramını ve orbital türlerini açıklar.",
+    kazanim: "KİM.9.1.6 — Orbital kavramını ve orbital türlerini açıklar.",
     konu: "f orbitali",
     difficulty: "kolay",
     context: "Elektronların f alt kabuğundaki dağılımı inceleniyor.",
@@ -3529,7 +3529,7 @@ export const QUIZ = {
 
   {
     id: "orbital-007",
-    kazanim: "Orbital kavramını ve orbital türlerini açıklar.",
+    kazanim: "KİM.9.1.6 — Orbital kavramını ve orbital türlerini açıklar.",
     konu: "Orbital şekilleri",
     difficulty: "orta",
     context: "Bir öğrenci orbital şekillerini karşılaştırıyor.",
@@ -3547,7 +3547,7 @@ export const QUIZ = {
 
   {
     id: "orbital-008",
-    kazanim: "Orbital kavramını ve orbital türlerini açıklar.",
+    kazanim: "KİM.9.1.6 — Orbital kavramını ve orbital türlerini açıklar.",
     konu: "p orbitalinin şekli",
     difficulty: "orta",
     context: "Bir modelde p orbitalleri gösteriliyor.",
@@ -3565,7 +3565,7 @@ export const QUIZ = {
 
   {
     id: "orbital-009",
-    kazanim: "Orbital kavramını ve orbital türlerini açıklar.",
+    kazanim: "KİM.9.1.6 — Orbital kavramını ve orbital türlerini açıklar.",
     konu: "Orbital sayısı",
     difficulty: "orta",
     context: "Bir öğrenci farklı alt kabukların orbital sayılarını karşılaştırıyor.",
@@ -3583,7 +3583,7 @@ export const QUIZ = {
 
   {
     id: "orbital-010",
-    kazanim: "Orbital kavramını ve orbital türlerini açıklar.",
+    kazanim: "KİM.9.1.6 — Orbital kavramını ve orbital türlerini açıklar.",
     konu: "Orbital-alt kabuk ilişkisi",
     difficulty: "orta",
     context: "Bir öğretmen alt kabuk ile orbital arasındaki ilişkiyi sorguluyor.",
@@ -3607,7 +3607,7 @@ export const QUIZ = {
 
   {
     id: "orbital-011",
-    kazanim: "Orbitallerin elektron kapasitesini belirler.",
+    kazanim: "KİM.9.1.6 — Orbitallerin elektron kapasitesini belirler.",
     konu: "Orbital elektron kapasitesi",
     difficulty: "kolay",
     context: "Bir öğrenci tek bir orbitalin kapasitesini araştırıyor.",
@@ -3625,7 +3625,7 @@ export const QUIZ = {
 
   {
     id: "orbital-012",
-    kazanim: "Orbitallerin elektron kapasitesini belirler.",
+    kazanim: "KİM.9.1.6 — Orbitallerin elektron kapasitesini belirler.",
     konu: "s alt kabuğunun kapasitesi",
     difficulty: "kolay",
     context: "s alt kabuğunun elektron kapasitesi hesaplanıyor.",
@@ -3643,7 +3643,7 @@ export const QUIZ = {
 
   {
     id: "orbital-013",
-    kazanim: "Orbitallerin elektron kapasitesini belirler.",
+    kazanim: "KİM.9.1.6 — Orbitallerin elektron kapasitesini belirler.",
     konu: "p alt kabuğunun kapasitesi",
     difficulty: "kolay",
     context: "p alt kabuğunun kapasitesi hesaplanıyor.",
@@ -3661,7 +3661,7 @@ export const QUIZ = {
 
   {
     id: "orbital-014",
-    kazanim: "Orbitallerin elektron kapasitesini belirler.",
+    kazanim: "KİM.9.1.6 — Orbitallerin elektron kapasitesini belirler.",
     konu: "d alt kabuğunun kapasitesi",
     difficulty: "kolay",
     context: "d alt kabuğundaki elektron kapasitesi inceleniyor.",
@@ -3679,7 +3679,7 @@ export const QUIZ = {
 
   {
     id: "orbital-015",
-    kazanim: "Orbitallerin elektron kapasitesini belirler.",
+    kazanim: "KİM.9.1.6 — Orbitallerin elektron kapasitesini belirler.",
     konu: "f alt kabuğunun kapasitesi",
     difficulty: "kolay",
     context: "f alt kabuğunun elektron kapasitesi hesaplanıyor.",
@@ -3697,7 +3697,7 @@ export const QUIZ = {
 
   {
     id: "orbital-016",
-    kazanim: "Orbitallerin elektron kapasitesini belirler.",
+    kazanim: "KİM.9.1.6 — Orbitallerin elektron kapasitesini belirler.",
     konu: "Orbital kapasitesi",
     difficulty: "orta",
     context: "Bir öğrenci 4p alt kabuğunun kapasitesini hesaplıyor.",
@@ -3715,7 +3715,7 @@ export const QUIZ = {
 
   {
     id: "orbital-017",
-    kazanim: "Orbitallerin elektron kapasitesini belirler.",
+    kazanim: "KİM.9.1.6 — Orbitallerin elektron kapasitesini belirler.",
     konu: "Alt kabuk kapasitesi",
     difficulty: "orta",
     context: "Bir atomun 3d alt kabuğu inceleniyor.",
@@ -3733,7 +3733,7 @@ export const QUIZ = {
 
   {
     id: "orbital-018",
-    kazanim: "Orbitallerin elektron kapasitesini belirler.",
+    kazanim: "KİM.9.1.6 — Orbitallerin elektron kapasitesini belirler.",
     konu: "Toplam elektron kapasitesi",
     difficulty: "zor",
     context: "Bir öğrenci bir alt kabuktaki orbitallerin tamamını elektronlarla dolduruyor.",
@@ -3757,7 +3757,7 @@ export const QUIZ = {
 
   {
     id: "orbital-019",
-    kazanim: "Elektronların orbitallere yerleşiminde Aufbau ilkesini uygular.",
+    kazanim: "KİM.9.1.6 — Elektronların orbitallere yerleşiminde Aufbau ilkesini uygular.",
     konu: "Aufbau ilkesi",
     difficulty: "kolay",
     context: "Bir öğrenci atomun temel hâl elektron dizilimini oluşturuyor.",
@@ -3775,7 +3775,7 @@ export const QUIZ = {
 
   {
     id: "orbital-020",
-    kazanim: "Elektronların orbitallere yerleşiminde Aufbau ilkesini uygular.",
+    kazanim: "KİM.9.1.6 — Elektronların orbitallere yerleşiminde Aufbau ilkesini uygular.",
     konu: "Enerji sırası",
     difficulty: "kolay",
     context: "Elektronların temel hâlde yerleşim sırası inceleniyor.",
@@ -3793,7 +3793,7 @@ export const QUIZ = {
 
   {
     id: "orbital-021",
-    kazanim: "Elektronların orbitallere yerleşiminde Aufbau ilkesini uygular.",
+    kazanim: "KİM.9.1.6 — Elektronların orbitallere yerleşiminde Aufbau ilkesini uygular.",
     konu: "Orbital enerji sırası",
     difficulty: "orta",
     context: "Bir öğrenci 3s ve 3p orbitallerini karşılaştırıyor.",
@@ -3811,7 +3811,7 @@ export const QUIZ = {
 
   {
     id: "orbital-022",
-    kazanim: "Elektronların orbitallere yerleşiminde Aufbau ilkesini uygular.",
+    kazanim: "KİM.9.1.6 — Elektronların orbitallere yerleşiminde Aufbau ilkesini uygular.",
     konu: "Orbital enerji sırası",
     difficulty: "orta",
     context: "Elektron dizilimi hazırlanırken 4s ve 3d orbitalleri karşılaştırılıyor.",
@@ -3829,7 +3829,7 @@ export const QUIZ = {
 
   {
     id: "orbital-023",
-    kazanim: "Elektronların orbitallere yerleşiminde Aufbau ilkesini uygular.",
+    kazanim: "KİM.9.1.6 — Elektronların orbitallere yerleşiminde Aufbau ilkesini uygular.",
     konu: "Enerji sıralaması",
     difficulty: "orta",
     context: "Bir elektron dizilimi oluşturuluyor.",
@@ -3847,7 +3847,7 @@ export const QUIZ = {
 
   {
     id: "orbital-024",
-    kazanim: "Elektronların orbitallere yerleşiminde Aufbau ilkesini uygular.",
+    kazanim: "KİM.9.1.6 — Elektronların orbitallere yerleşiminde Aufbau ilkesini uygular.",
     konu: "Elektron yerleşim sırası",
     difficulty: "orta",
     context: "Bir atomun elektronları enerji düzeylerine yerleştiriliyor.",
@@ -3865,7 +3865,7 @@ export const QUIZ = {
 
   {
     id: "orbital-025",
-    kazanim: "Elektronların orbitallere yerleşiminde Aufbau ilkesini uygular.",
+    kazanim: "KİM.9.1.6 — Elektronların orbitallere yerleşiminde Aufbau ilkesini uygular.",
     konu: "Elektron yerleşim sırası",
     difficulty: "zor",
     context: "Bir öğrenci elektronların yerleşim sırasını aşağıdaki gibi yazıyor: 1s, 2s, 2p, 3s, 3p, 3d.",
@@ -3883,7 +3883,7 @@ export const QUIZ = {
 
   {
     id: "orbital-026",
-    kazanim: "Elektronların orbitallere yerleşiminde Aufbau ilkesini uygular.",
+    kazanim: "KİM.9.1.6 — Elektronların orbitallere yerleşiminde Aufbau ilkesini uygular.",
     konu: "Elektron dizilimi",
     difficulty: "orta",
     context: "10 elektrona sahip bir atomun elektronları yerleştiriliyor.",
@@ -3901,7 +3901,7 @@ export const QUIZ = {
 
   {
     id: "orbital-027",
-    kazanim: "Elektronların orbitallere yerleşiminde Aufbau ilkesini uygular.",
+    kazanim: "KİM.9.1.6 — Elektronların orbitallere yerleşiminde Aufbau ilkesini uygular.",
     konu: "Elektron dizilimi",
     difficulty: "zor",
     context: "Bir atomun elektron dizilimi 1s² 2s² 2p⁶ 3s¹ şeklindedir.",
@@ -3919,7 +3919,7 @@ export const QUIZ = {
 
   {
     id: "orbital-028",
-    kazanim: "Elektronların orbitallere yerleşiminde Aufbau ilkesini uygular.",
+    kazanim: "KİM.9.1.6 — Elektronların orbitallere yerleşiminde Aufbau ilkesini uygular.",
     konu: "Aufbau uygulaması",
     difficulty: "zor",
     context: "Bir öğrenci elektronları önce yüksek enerjili orbitallere yerleştiriyor.",
@@ -3943,7 +3943,7 @@ export const QUIZ = {
 
   {
     id: "orbital-029",
-    kazanim: "Elektronların orbitallere yerleşiminde Pauli dışlama ilkesini uygular.",
+    kazanim: "KİM.9.1.6 — Elektronların orbitallere yerleşiminde Pauli dışlama ilkesini uygular.",
     konu: "Pauli ilkesi",
     difficulty: "kolay",
     context: "Bir orbitalde iki elektron bulunuyor.",
@@ -3961,7 +3961,7 @@ export const QUIZ = {
 
   {
     id: "orbital-030",
-    kazanim: "Elektronların orbitallere yerleşiminde Pauli dışlama ilkesini uygular.",
+    kazanim: "KİM.9.1.6 — Elektronların orbitallere yerleşiminde Pauli dışlama ilkesini uygular.",
     konu: "Pauli ilkesi",
     difficulty: "kolay",
     context: "Bir öğrenci tek bir orbital kutusuna üç elektron yerleştiriyor.",
@@ -3979,7 +3979,7 @@ export const QUIZ = {
 
   {
     id: "orbital-031",
-    kazanim: "Elektronların orbitallere yerleşiminde Pauli dışlama ilkesini uygular.",
+    kazanim: "KİM.9.1.6 — Elektronların orbitallere yerleşiminde Pauli dışlama ilkesini uygular.",
     konu: "Orbital şeması",
     difficulty: "orta",
     context: "Bir orbital kutusunda iki elektron aynı yönlü oklarla gösteriliyor.",
@@ -3997,7 +3997,7 @@ export const QUIZ = {
 
   {
     id: "orbital-032",
-    kazanim: "Elektronların orbitallere yerleşiminde Pauli dışlama ilkesini uygular.",
+    kazanim: "KİM.9.1.6 — Elektronların orbitallere yerleşiminde Pauli dışlama ilkesini uygular.",
     konu: "Pauli ilkesi",
     difficulty: "orta",
     context: "Bir öğretmen öğrencilerden doğru orbital gösterimini seçmelerini istiyor.",
@@ -4015,7 +4015,7 @@ export const QUIZ = {
 
   {
     id: "orbital-033",
-    kazanim: "Elektronların orbitallere yerleşiminde Pauli dışlama ilkesini uygular.",
+    kazanim: "KİM.9.1.6 — Elektronların orbitallere yerleşiminde Pauli dışlama ilkesini uygular.",
     konu: "Orbital kapasitesi",
     difficulty: "kolay",
     context: "2s orbitali inceleniyor.",
@@ -4033,7 +4033,7 @@ export const QUIZ = {
 
   {
     id: "orbital-034",
-    kazanim: "Elektronların orbitallere yerleşiminde Pauli dışlama ilkesini uygular.",
+    kazanim: "KİM.9.1.6 — Elektronların orbitallere yerleşiminde Pauli dışlama ilkesini uygular.",
     konu: "Pauli ilkesi",
     difficulty: "orta",
     context: "Bir öğrenci Pauli ilkesini açıklıyor.",
@@ -4051,7 +4051,7 @@ export const QUIZ = {
 
   {
     id: "orbital-035",
-    kazanim: "Elektronların orbitallere yerleşiminde Pauli dışlama ilkesini uygular.",
+    kazanim: "KİM.9.1.6 — Elektronların orbitallere yerleşiminde Pauli dışlama ilkesini uygular.",
     konu: "Orbital şeması analizi",
     difficulty: "zor",
     context: "Bir öğrenci bir orbital için ↑↓ gösterimini, başka bir orbital için ↑↑ gösterimini kullanıyor.",
@@ -4069,7 +4069,7 @@ export const QUIZ = {
 
   {
     id: "orbital-036",
-    kazanim: "Elektronların orbitallere yerleşiminde Pauli dışlama ilkesini uygular.",
+    kazanim: "KİM.9.1.6 — Elektronların orbitallere yerleşiminde Pauli dışlama ilkesini uygular.",
     konu: "Pauli ve orbital",
     difficulty: "zor",
     context: "Bir atomun orbital şemasında bir kutuda üç ok, başka bir kutuda iki zıt yönlü ok gösterilmiştir.",
@@ -4093,7 +4093,7 @@ export const QUIZ = {
 
   {
     id: "orbital-037",
-    kazanim: "Elektronların eş enerjili orbitallere yerleşiminde Hund kuralını uygular.",
+    kazanim: "KİM.9.1.6 — Elektronların eş enerjili orbitallere yerleşiminde Hund kuralını uygular.",
     konu: "Hund kuralı",
     difficulty: "kolay",
     context: "2p alt kabuğuna üç elektron yerleştiriliyor.",
@@ -4111,7 +4111,7 @@ export const QUIZ = {
 
   {
     id: "orbital-038",
-    kazanim: "Elektronların eş enerjili orbitallere yerleşiminde Hund kuralını uygular.",
+    kazanim: "KİM.9.1.6 — Elektronların eş enerjili orbitallere yerleşiminde Hund kuralını uygular.",
     konu: "Hund kuralı",
     difficulty: "kolay",
     context: "Bir öğretmen eş enerjili orbitallere elektronların yerleşimini açıklıyor.",
@@ -4129,7 +4129,7 @@ export const QUIZ = {
 
   {
     id: "orbital-039",
-    kazanim: "Elektronların eş enerjili orbitallere yerleşiminde Hund kuralını uygular.",
+    kazanim: "KİM.9.1.6 — Elektronların eş enerjili orbitallere yerleşiminde Hund kuralını uygular.",
     konu: "2p² orbital şeması",
     difficulty: "orta",
     context: "2p² elektron dizilimi için orbital şeması çiziliyor.",
@@ -4147,7 +4147,7 @@ export const QUIZ = {
 
   {
     id: "orbital-040",
-    kazanim: "Elektronların eş enerjili orbitallere yerleşiminde Hund kuralını uygular.",
+    kazanim: "KİM.9.1.6 — Elektronların eş enerjili orbitallere yerleşiminde Hund kuralını uygular.",
     konu: "2p³ orbital şeması",
     difficulty: "orta",
     context: "2p³ elektron dizilimi inceleniyor.",
@@ -4165,7 +4165,7 @@ export const QUIZ = {
 
   {
     id: "orbital-041",
-    kazanim: "Elektronların eş enerjili orbitallere yerleşiminde Hund kuralını uygular.",
+    kazanim: "KİM.9.1.6 — Elektronların eş enerjili orbitallere yerleşiminde Hund kuralını uygular.",
     konu: "2p⁴ orbital şeması",
     difficulty: "orta",
     context: "2p⁴ için orbital şeması hazırlanıyor.",
@@ -4183,7 +4183,7 @@ export const QUIZ = {
 
   {
     id: "orbital-042",
-    kazanim: "Elektronların eş enerjili orbitallere yerleşiminde Hund kuralını uygular.",
+    kazanim: "KİM.9.1.6 — Elektronların eş enerjili orbitallere yerleşiminde Hund kuralını uygular.",
     konu: "Hund kuralı analizi",
     difficulty: "zor",
     context: "Bir öğrenci 3p³ için ↑↓, ↑, boş şeklinde bir şema çiziyor.",
@@ -4201,7 +4201,7 @@ export const QUIZ = {
 
   {
     id: "orbital-043",
-    kazanim: "Elektronların eş enerjili orbitallere yerleşiminde Hund kuralını uygular.",
+    kazanim: "KİM.9.1.6 — Elektronların eş enerjili orbitallere yerleşiminde Hund kuralını uygular.",
     konu: "Eş enerjili orbitaller",
     difficulty: "zor",
     context: "Bir alt kabukta eş enerjili üç orbital bulunmaktadır.",
@@ -4219,7 +4219,7 @@ export const QUIZ = {
 
   {
     id: "orbital-044",
-    kazanim: "Elektronların eş enerjili orbitallere yerleşiminde Hund kuralını uygular.",
+    kazanim: "KİM.9.1.6 — Elektronların eş enerjili orbitallere yerleşiminde Hund kuralını uygular.",
     konu: "Hund-Pauli birlikte",
     difficulty: "zor",
     context: "Bir p alt kabuğuna elektronlar yerleştiriliyor.",
@@ -4243,7 +4243,7 @@ export const QUIZ = {
 
   {
     id: "orbital-045",
-    kazanim: "Atomların elektron dizilimlerini ve orbital şemalarını oluşturur.",
+    kazanim: "KİM.9.1.6 — Atomların elektron dizilimlerini ve orbital şemalarını oluşturur.",
     konu: "Elektron dizilimi",
     difficulty: "kolay",
     context: "Atom numarası 6 olan karbon atomu inceleniyor.",
@@ -4261,7 +4261,7 @@ export const QUIZ = {
 
   {
     id: "orbital-046",
-    kazanim: "Atomların elektron dizilimlerini ve orbital şemalarını oluşturur.",
+    kazanim: "KİM.9.1.6 — Atomların elektron dizilimlerini ve orbital şemalarını oluşturur.",
     konu: "Elektron dizilimi",
     difficulty: "kolay",
     context: "Atom numarası 7 olan azot atomu inceleniyor.",
@@ -4279,7 +4279,7 @@ export const QUIZ = {
 
   {
     id: "orbital-047",
-    kazanim: "Atomların elektron dizilimlerini ve orbital şemalarını oluşturur.",
+    kazanim: "KİM.9.1.6 — Atomların elektron dizilimlerini ve orbital şemalarını oluşturur.",
     konu: "Elektron dizilimi",
     difficulty: "kolay",
     context: "Atom numarası 8 olan oksijen atomu inceleniyor.",
@@ -4297,7 +4297,7 @@ export const QUIZ = {
 
   {
     id: "orbital-048",
-    kazanim: "Atomların elektron dizilimlerini ve orbital şemalarını oluşturur.",
+    kazanim: "KİM.9.1.6 — Atomların elektron dizilimlerini ve orbital şemalarını oluşturur.",
     konu: "Elektron dizilimi",
     difficulty: "orta",
     context: "Atom numarası 10 olan neon atomu inceleniyor.",
@@ -4315,7 +4315,7 @@ export const QUIZ = {
 
   {
     id: "orbital-049",
-    kazanim: "Atomların elektron dizilimlerini ve orbital şemalarını oluşturur.",
+    kazanim: "KİM.9.1.6 — Atomların elektron dizilimlerini ve orbital şemalarını oluşturur.",
     konu: "Elektron dizilimi",
     difficulty: "orta",
     context: "Atom numarası 11 olan sodyum atomu inceleniyor.",
@@ -4333,7 +4333,7 @@ export const QUIZ = {
 
   {
     id: "orbital-050",
-    kazanim: "Atomların elektron dizilimlerini ve orbital şemalarını oluşturur.",
+    kazanim: "KİM.9.1.6 — Atomların elektron dizilimlerini ve orbital şemalarını oluşturur.",
     konu: "Elektron dizilimi",
     difficulty: "orta",
     context: "Atom numarası 12 olan magnezyum atomu inceleniyor.",
@@ -4351,7 +4351,7 @@ export const QUIZ = {
 
   {
     id: "orbital-051",
-    kazanim: "Atomların elektron dizilimlerini ve orbital şemalarını oluşturur.",
+    kazanim: "KİM.9.1.6 — Atomların elektron dizilimlerini ve orbital şemalarını oluşturur.",
     konu: "Elektron dizilimi",
     difficulty: "orta",
     context: "Atom numarası 13 olan alüminyum atomu inceleniyor.",
@@ -4369,7 +4369,7 @@ export const QUIZ = {
 
   {
     id: "orbital-052",
-    kazanim: "Atomların elektron dizilimlerini ve orbital şemalarını oluşturur.",
+    kazanim: "KİM.9.1.6 — Atomların elektron dizilimlerini ve orbital şemalarını oluşturur.",
     konu: "Elektron dizilimi",
     difficulty: "orta",
     context: "Atom numarası 15 olan fosfor atomu inceleniyor.",
@@ -4387,7 +4387,7 @@ export const QUIZ = {
 
   {
     id: "orbital-053",
-    kazanim: "Atomların elektron dizilimlerini ve orbital şemalarını oluşturur.",
+    kazanim: "KİM.9.1.6 — Atomların elektron dizilimlerini ve orbital şemalarını oluşturur.",
     konu: "Orbital şeması",
     difficulty: "zor",
     context: "Karbon atomunun 2p² elektronları için orbital şeması hazırlanıyor.",
@@ -4405,7 +4405,7 @@ export const QUIZ = {
 
   {
     id: "orbital-054",
-    kazanim: "Atomların elektron dizilimlerini ve orbital şemalarını oluşturur.",
+    kazanim: "KİM.9.1.6 — Atomların elektron dizilimlerini ve orbital şemalarını oluşturur.",
     konu: "Orbital şeması",
     difficulty: "zor",
     context: "Oksijen atomunun 2p⁴ elektronları için orbital şeması hazırlanıyor.",
@@ -4430,7 +4430,7 @@ export const QUIZ = {
 
   {
     id: "orbital-055",
-    kazanim: "Elektron diziliminden elektron sayısını ve atom numarasını belirler.",
+    kazanim: "KİM.9.1.6 — Elektron diziliminden elektron sayısını ve atom numarasını belirler.",
     konu: "Elektron sayısı",
     difficulty: "kolay",
     context: "Nötr bir atomun elektron dizilimi 1s² 2s² 2p⁶ şeklindedir.",
@@ -4448,7 +4448,7 @@ export const QUIZ = {
 
   {
     id: "orbital-056",
-    kazanim: "Elektron diziliminden elektron sayısını ve atom numarasını belirler.",
+    kazanim: "KİM.9.1.6 — Elektron diziliminden elektron sayısını ve atom numarasını belirler.",
     konu: "Elektron sayısı",
     difficulty: "orta",
     context: "Nötr bir atomun elektron dizilimi 1s² 2s² 2p⁶ 3s¹ şeklindedir.",
@@ -4466,7 +4466,7 @@ export const QUIZ = {
 
   {
     id: "orbital-057",
-    kazanim: "Elektron diziliminden elektron sayısını ve atom numarasını belirler.",
+    kazanim: "KİM.9.1.6 — Elektron diziliminden elektron sayısını ve atom numarasını belirler.",
     konu: "Elektron sayısı",
     difficulty: "orta",
     context: "Bir nötr atomun elektron dizilimi 1s² 2s² 2p⁶ 3s² şeklindedir.",
@@ -4484,7 +4484,7 @@ export const QUIZ = {
 
   {
     id: "orbital-058",
-    kazanim: "Atomların değerlik elektron sayılarını elektron dizilimlerinden belirler.",
+    kazanim: "KİM.9.1.6 — Atomların değerlik elektron sayılarını elektron dizilimlerinden belirler.",
     konu: "Değerlik elektronları",
     difficulty: "orta",
     context: "Sodyum atomunun elektron dizilimi 1s² 2s² 2p⁶ 3s¹ şeklindedir.",
@@ -4502,7 +4502,7 @@ export const QUIZ = {
 
   {
     id: "orbital-059",
-    kazanim: "Atomların değerlik elektron sayılarını elektron dizilimlerinden belirler.",
+    kazanim: "KİM.9.1.6 — Atomların değerlik elektron sayılarını elektron dizilimlerinden belirler.",
     konu: "Değerlik elektronları",
     difficulty: "orta",
     context: "Klor atomunun elektron dizilimi 1s² 2s² 2p⁶ 3s² 3p⁵ şeklindedir.",
@@ -4520,7 +4520,7 @@ export const QUIZ = {
 
   {
     id: "orbital-060",
-    kazanim: "Atomların değerlik elektron sayılarını elektron dizilimlerinden belirler.",
+    kazanim: "KİM.9.1.6 — Atomların değerlik elektron sayılarını elektron dizilimlerinden belirler.",
     konu: "Değerlik elektronları",
     difficulty: "zor",
     context: "Bir atomun elektron dizilimi 1s² 2s² 2p⁶ 3s² 3p³ şeklindedir.",
@@ -4546,7 +4546,7 @@ export const QUIZ = {
      ===================================================== */
 
   {
-    kazanim: "Elektronun atomdaki konumunu olasılık üzerinden açıklar.",
+    kazanim: "KİM.9.1.7 — Elektronun atomdaki konumunu olasılık üzerinden açıklar.",
     context: "Bir öğrenci elektronun atom içerisindeki konumunu incelemektedir.",
     text: "Elektronun atomdaki yerini belirlemek için aşağıdakilerden hangisi daha uygundur?",
     options: [
@@ -4561,7 +4561,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Elektronun atomdaki konumunu olasılık üzerinden açıklar.",
+    kazanim: "KİM.9.1.7 — Elektronun atomdaki konumunu olasılık üzerinden açıklar.",
     context: "Bir öğretmen elektronun atomdaki konumunu anlatıyor.",
     text: "Elektronun belirli bir anda kesin olarak nerede bulunduğunu söylemek neden mümkün değildir?",
     options: [
@@ -4576,7 +4576,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Elektronun bulunma olasılığının yüksek olduğu bölgeleri yorumlar.",
+    kazanim: "KİM.9.1.7 — Elektronun bulunma olasılığının yüksek olduğu bölgeleri yorumlar.",
     context: "Bir atom modeli üzerinde bazı bölgeler farklı yoğunluklarda gösterilmiştir.",
     text: "Elektron bulutu üzerindeki daha yoğun bölgeler neyi gösterir?",
     options: [
@@ -4591,7 +4591,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Elektronun bulunma olasılığının yüksek olduğu bölgeleri yorumlar.",
+    kazanim: "KİM.9.1.7 — Elektronun bulunma olasılığının yüksek olduğu bölgeleri yorumlar.",
     context: "Bir öğrenci elektron bulutu modelini inceliyor.",
     text: "Elektron bulutu modeli aşağıdakilerden hangisini ifade eder?",
     options: [
@@ -4606,7 +4606,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Elektronun bulunma olasılığını yorumlar.",
+    kazanim: "KİM.9.1.7 — Elektronun bulunma olasılığını yorumlar.",
     context: "Bir bölgede elektron bulunma olasılığı %80, başka bir bölgede %20 olarak hesaplanmıştır.",
     text: "Elektron hangi bölgede bulunmaya daha yatkındır?",
     options: [
@@ -4626,7 +4626,7 @@ export const QUIZ = {
      ===================================================== */
 
   {
-    kazanim: "Yörünge ve orbital kavramlarını ayırt eder.",
+    kazanim: "KİM.9.1.7 — Yörünge ve orbital kavramlarını ayırt eder.",
     context: "Bir öğrenci Bohr atom modeli ile modern atom modelini karşılaştırıyor.",
     text: "Bohr atom modelindeki yörünge kavramı ile modern atom modelindeki orbital arasındaki temel fark nedir?",
     options: [
@@ -4641,7 +4641,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Yörünge ve orbital kavramlarını ayırt eder.",
+    kazanim: "KİM.9.1.7 — Yörünge ve orbital kavramlarını ayırt eder.",
     context: "Bir öğretmen öğrencilerine iki farklı atom modelini gösteriyor.",
     text: "Aşağıdakilerden hangisi orbital kavramının doğru tanımıdır?",
     options: [
@@ -4656,7 +4656,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Yörünge ve orbital kavramlarını ayırt eder.",
+    kazanim: "KİM.9.1.7 — Yörünge ve orbital kavramlarını ayırt eder.",
     context: "Bir öğrenci 'elektron çekirdeğin etrafında belirli bir çizgide döner' ifadesini kullanıyor.",
     text: "Bu ifade hangi atom modeliyle daha çok ilişkilidir?",
     options: [
@@ -4671,7 +4671,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Yörünge ve orbital kavramlarını ayırt eder.",
+    kazanim: "KİM.9.1.7 — Yörünge ve orbital kavramlarını ayırt eder.",
     context: "Bir öğrenci orbital ile yörüngeyi aynı anlamda kullanıyor.",
     text: "Aşağıdakilerden hangisi bu iki kavramın aynı olmadığını gösterir?",
     options: [
@@ -4686,7 +4686,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Yörünge ve orbital kavramlarını ayırt eder.",
+    kazanim: "KİM.9.1.7 — Yörünge ve orbital kavramlarını ayırt eder.",
     context: "Bir atom modeli hazırlanırken elektron için çizgi yerine elektron bulutu kullanılmıştır.",
     text: "Elektronun çizgi şeklinde kesin bir yol yerine elektron bulutuyla gösterilmesinin nedeni nedir?",
     options: [
@@ -4707,7 +4707,7 @@ export const QUIZ = {
      ===================================================== */
 
   {
-    kazanim: "Heisenberg belirsizlik ilkesini açıklar.",
+    kazanim: "KİM.9.1.7 — Heisenberg belirsizlik ilkesini açıklar.",
     context: "Bir öğrenci elektronun konumunu ve momentumunu aynı anda kesin olarak belirlemek istiyor.",
     text: "Heisenberg belirsizlik ilkesine göre aşağıdakilerden hangisi doğrudur?",
     options: [
@@ -4722,7 +4722,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Heisenberg belirsizlik ilkesini açıklar.",
+    kazanim: "KİM.9.1.7 — Heisenberg belirsizlik ilkesini açıklar.",
     context: "Bir deneyde elektronun konumu çok hassas biçimde belirlenmeye çalışılıyor.",
     text: "Elektronun konumu daha hassas belirlendiğinde hangi büyüklüğün belirsizliği artar?",
     options: [
@@ -4737,7 +4737,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Heisenberg belirsizlik ilkesini açıklar.",
+    kazanim: "KİM.9.1.7 — Heisenberg belirsizlik ilkesini açıklar.",
     context: "Bir öğrenci elektronun hareketini inceliyor.",
     text: "Elektron için 'hem kesin konumunu hem de kesin momentumunu aynı anda biliyorum' diyen bir öğrencinin ifadesi neden yanlıştır?",
     options: [
@@ -4752,7 +4752,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Heisenberg belirsizlik ilkesini açıklar.",
+    kazanim: "KİM.9.1.7 — Heisenberg belirsizlik ilkesini açıklar.",
     context: "Bir elektronun konumu hakkında çok hassas ölçüm yapılmaktadır.",
     text: "Konum belirsizliğinin azaltılması aşağıdakilerden hangisine yol açar?",
     options: [
@@ -4767,7 +4767,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Heisenberg belirsizlik ilkesini yorumlar.",
+    kazanim: "KİM.9.1.7 — Heisenberg belirsizlik ilkesini yorumlar.",
     context: "Bir öğrenci elektron için 'çekirdeğin çevresinde şu çizgiyi takip eder' şeklinde bir model çizmiştir.",
     text: "Modern atom modeline göre bu çizimin temel sorunu nedir?",
     options: [
@@ -4787,7 +4787,7 @@ export const QUIZ = {
      ===================================================== */
 
   {
-    kazanim: "Elektron bulutu modelini yorumlar.",
+    kazanim: "KİM.9.1.7 — Elektron bulutu modelini yorumlar.",
     context: "Bir atom modeli üç boyutlu elektron yoğunluğu şeklinde gösteriliyor.",
     text: "Elektron bulutu üzerindeki yoğunluk neyi temsil eder?",
     options: [
@@ -4802,7 +4802,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Elektron bulutu modelini yorumlar.",
+    kazanim: "KİM.9.1.7 — Elektron bulutu modelini yorumlar.",
     context: "Bir elektron bulutu modelinde çekirdeğe yakın bölgelerin daha yoğun olduğu görülüyor.",
     text: "Bu durum nasıl yorumlanmalıdır?",
     options: [
@@ -4817,7 +4817,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Elektron bulutu modelini yorumlar.",
+    kazanim: "KİM.9.1.7 — Elektron bulutu modelini yorumlar.",
     context: "İki farklı atom modeli karşılaştırılıyor. Birinde elektron çizgi üzerinde, diğerinde bulut şeklinde gösterilmiş.",
     text: "Modern atom modelini temsil eden hangisidir?",
     options: [
@@ -4832,7 +4832,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Elektron bulutu modelini yorumlar.",
+    kazanim: "KİM.9.1.7 — Elektron bulutu modelini yorumlar.",
     context: "Bir bölgede elektron yoğunluğu çok azdır.",
     text: "Bu bölge için aşağıdakilerden hangisi söylenebilir?",
     options: [
@@ -4847,7 +4847,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Elektron bulutu modelini yorumlar.",
+    kazanim: "KİM.9.1.7 — Elektron bulutu modelini yorumlar.",
     context: "Bir elektron bulutu görselinde farklı renk yoğunlukları kullanılmıştır.",
     text: "Bu renk yoğunlukları genellikle neyi göstermektedir?",
     options: [
@@ -4868,7 +4868,7 @@ export const QUIZ = {
      ===================================================== */
 
   {
-    kazanim: "Orbitalin uzaysal bölge anlamını açıklar.",
+    kazanim: "KİM.9.1.7 — Orbitalin uzaysal bölge anlamını açıklar.",
     context: "Bir atomun elektronlarının uzaydaki dağılımı inceleniyor.",
     text: "Orbital kavramı aşağıdakilerden hangisini ifade eder?",
     options: [
@@ -4883,7 +4883,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Orbitalin uzaysal bölge anlamını açıklar.",
+    kazanim: "KİM.9.1.7 — Orbitalin uzaysal bölge anlamını açıklar.",
     context: "Bir öğrenci orbitalin bir 'yol' olduğunu düşünüyor.",
     text: "Orbitalin yol olarak tanımlanmamasının temel nedeni nedir?",
     options: [
@@ -4898,7 +4898,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Orbitalin uzaysal bölge anlamını açıklar.",
+    kazanim: "KİM.9.1.7 — Orbitalin uzaysal bölge anlamını açıklar.",
     context: "Bir orbital modeli üç boyutlu olarak çizilmiştir.",
     text: "Orbitalin üç boyutlu olarak gösterilmesinin nedeni nedir?",
     options: [
@@ -4913,7 +4913,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Orbitalin uzaysal bölge anlamını açıklar.",
+    kazanim: "KİM.9.1.7 — Orbitalin uzaysal bölge anlamını açıklar.",
     context: "Bir öğrenci 'elektron kesinlikle orbitalin merkezindedir' diyor.",
     text: "Bu ifade neden doğru değildir?",
     options: [
@@ -4928,7 +4928,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Orbitalin uzaysal bölge anlamını açıklar.",
+    kazanim: "KİM.9.1.7 — Orbitalin uzaysal bölge anlamını açıklar.",
     context: "Bir orbitalin sınırları bilgisayar modeliyle çiziliyor.",
     text: "Orbitalin çizilen sınırı için en doğru yorum hangisidir?",
     options: [
@@ -4949,7 +4949,7 @@ export const QUIZ = {
      ===================================================== */
 
   {
-    kazanim: "Orbital ve elektron sayısı ilişkisini kurar.",
+    kazanim: "KİM.9.1.7 — Orbital ve elektron sayısı ilişkisini kurar.",
     context: "Bir orbitalin elektron kapasitesi inceleniyor.",
     text: "Bir orbitalde en fazla kaç elektron bulunabilir?",
     options: [
@@ -4964,7 +4964,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Orbital ve elektron sayısı ilişkisini kurar.",
+    kazanim: "KİM.9.1.7 — Orbital ve elektron sayısı ilişkisini kurar.",
     context: "Bir orbital kutusunda iki elektron bulunmaktadır.",
     text: "Bu orbitalin tamamen dolu olduğu söylenebilir mi?",
     options: [
@@ -4979,7 +4979,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Orbital ve elektron sayısı ilişkisini kurar.",
+    kazanim: "KİM.9.1.7 — Orbital ve elektron sayısı ilişkisini kurar.",
     context: "Bir p alt kabuğu inceleniyor.",
     text: "p alt kabuğunda bulunan üç orbital toplam kaç elektron alabilir?",
     options: [
@@ -4994,7 +4994,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Orbital ve elektron sayısı ilişkisini kurar.",
+    kazanim: "KİM.9.1.7 — Orbital ve elektron sayısı ilişkisini kurar.",
     context: "Bir s alt kabuğunda tek orbital bulunuyor.",
     text: "Bu orbital tamamen dolduğunda kaç elektron içerir?",
     options: [
@@ -5009,7 +5009,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Orbital ve elektron sayısı ilişkisini kurar.",
+    kazanim: "KİM.9.1.7 — Orbital ve elektron sayısı ilişkisini kurar.",
     context: "Bir atomun bir alt kabuğunda beş orbital olduğu biliniyor.",
     text: "Bu alt kabuğunun maksimum elektron kapasitesi kaçtır?",
     options: [
@@ -5030,7 +5030,7 @@ export const QUIZ = {
      ===================================================== */
 
   {
-    kazanim: "Orbital şemalarını yorumlar.",
+    kazanim: "KİM.9.1.7 — Orbital şemalarını yorumlar.",
     context: "Bir orbital kutusu ↑↓ şeklinde gösterilmiştir.",
     text: "Bu gösterim neyi ifade eder?",
     options: [
@@ -5045,7 +5045,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Orbital şemalarını yorumlar.",
+    kazanim: "KİM.9.1.7 — Orbital şemalarını yorumlar.",
     context: "Bir orbital kutusu yalnızca ↑ oku ile gösterilmiştir.",
     text: "Bu gösterim neyi ifade eder?",
     options: [
@@ -5060,7 +5060,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Orbital şemalarını yorumlar.",
+    kazanim: "KİM.9.1.7 — Orbital şemalarını yorumlar.",
     context: "Bir orbital kutusunda elektron bulunmadığı görülüyor.",
     text: "Boş bir orbital kutusu neyi gösterir?",
     options: [
@@ -5075,7 +5075,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Orbital şemalarını yorumlar.",
+    kazanim: "KİM.9.1.7 — Orbital şemalarını yorumlar.",
     context: "Bir p alt kabuğu ↑ ↑ ↑ şeklinde gösterilmiştir.",
     text: "Bu gösterimde kaç elektron vardır?",
     options: [
@@ -5090,7 +5090,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Orbital şemalarını yorumlar.",
+    kazanim: "KİM.9.1.7 — Orbital şemalarını yorumlar.",
     context: "Bir p alt kabuğu ↑↓ ↑ ↑ şeklinde gösterilmiştir.",
     text: "Bu gösterimde toplam kaç elektron bulunur?",
     options: [
@@ -5112,7 +5112,7 @@ export const QUIZ = {
      ===================================================== */
 
   {
-    kazanim: "Elektronun konumunu enerji düzeyi, alt kabuk ve orbital ile ilişkilendirir.",
+    kazanim: "KİM.9.1.7 — Elektronun konumunu enerji düzeyi, alt kabuk ve orbital ile ilişkilendirir.",
     context: "Bir elektronun atom içerisindeki konumu ifade ediliyor.",
     text: "Elektronun atomdaki konumunu tanımlamada aşağıdakilerden hangisi kullanılabilir?",
     options: [
@@ -5127,7 +5127,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Elektronun konumunu enerji düzeyi, alt kabuk ve orbital ile ilişkilendirir.",
+    kazanim: "KİM.9.1.7 — Elektronun konumunu enerji düzeyi, alt kabuk ve orbital ile ilişkilendirir.",
     context: "Bir öğrenci elektronun '3p' olarak gösterildiğini görüyor.",
     text: "3p ifadesindeki '3' neyi belirtir?",
     options: [
@@ -5142,7 +5142,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Elektronun konumunu enerji düzeyi, alt kabuk ve orbital ile ilişkilendirir.",
+    kazanim: "KİM.9.1.7 — Elektronun konumunu enerji düzeyi, alt kabuk ve orbital ile ilişkilendirir.",
     context: "Bir öğrenci 3p ifadesini inceliyor.",
     text: "3p ifadesindeki 'p' neyi belirtir?",
     options: [
@@ -5157,7 +5157,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Elektronun konumunu enerji düzeyi, alt kabuk ve orbital ile ilişkilendirir.",
+    kazanim: "KİM.9.1.7 — Elektronun konumunu enerji düzeyi, alt kabuk ve orbital ile ilişkilendirir.",
     context: "Bir elektronun 2p alt kabuğunda bulunduğu belirtiliyor.",
     text: "Bu elektron hangi ana enerji düzeyindedir?",
     options: [
@@ -5172,7 +5172,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Elektronun konumunu enerji düzeyi, alt kabuk ve orbital ile ilişkilendirir.",
+    kazanim: "KİM.9.1.7 — Elektronun konumunu enerji düzeyi, alt kabuk ve orbital ile ilişkilendirir.",
     context: "Bir elektronun 4s alt kabuğunda bulunduğu belirtiliyor.",
     text: "Bu elektron hangi ana enerji düzeyindedir?",
     options: [
@@ -5191,7 +5191,7 @@ export const QUIZ = {
      ===================================================== */
 
   {
-    kazanim: "Elektronun konumunu enerji düzeyi, alt kabuk ve orbital ile ilişkilendirir.",
+    kazanim: "KİM.9.1.7 — Elektronun konumunu enerji düzeyi, alt kabuk ve orbital ile ilişkilendirir.",
     context: "Bir atomun elektron dizilimi 1s² 2s² 2p⁶ şeklindedir.",
     text: "Bu atomdaki elektronların bulunduğu en yüksek ana enerji düzeyi hangisidir?",
     options: [
@@ -5206,7 +5206,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Elektronun konumunu enerji düzeyi, alt kabuk ve orbital ile ilişkilendirir.",
+    kazanim: "KİM.9.1.7 — Elektronun konumunu enerji düzeyi, alt kabuk ve orbital ile ilişkilendirir.",
     context: "Bir atomun elektron dizilimi 1s² 2s² 2p⁶ 3s¹ şeklindedir.",
     text: "Son elektron hangi ana enerji düzeyindedir?",
     options: [
@@ -5221,7 +5221,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Elektronun konumunu enerji düzeyi, alt kabuk ve orbital ile ilişkilendirir.",
+    kazanim: "KİM.9.1.7 — Elektronun konumunu enerji düzeyi, alt kabuk ve orbital ile ilişkilendirir.",
     context: "Bir atomun elektron dizilimi 1s² 2s² 2p⁶ 3s² 3p³ şeklindedir.",
     text: "Son elektron hangi alt kabuktadır?",
     options: [
@@ -5236,7 +5236,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Elektronun konumunu enerji düzeyi, alt kabuk ve orbital ile ilişkilendirir.",
+    kazanim: "KİM.9.1.7 — Elektronun konumunu enerji düzeyi, alt kabuk ve orbital ile ilişkilendirir.",
     context: "Bir elektronun 2p alt kabuğunda bulunduğu biliniyor.",
     text: "Bu elektronun bulunduğu alt kabukta kaç orbital vardır?",
     options: [
@@ -5251,7 +5251,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Elektronun konumunu enerji düzeyi, alt kabuk ve orbital ile ilişkilendirir.",
+    kazanim: "KİM.9.1.7 — Elektronun konumunu enerji düzeyi, alt kabuk ve orbital ile ilişkilendirir.",
     context: "Bir elektronun 3d alt kabuğunda bulunduğu biliniyor.",
     text: "3d alt kabuğunda kaç orbital bulunur?",
     options: [
@@ -5266,7 +5266,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Elektronun konumunu enerji düzeyi, alt kabuk ve orbital ile ilişkilendirir.",
+    kazanim: "KİM.9.1.7 — Elektronun konumunu enerji düzeyi, alt kabuk ve orbital ile ilişkilendirir.",
     context: "Bir elektronun 4f alt kabuğunda bulunduğu belirtiliyor.",
     text: "4f alt kabuğunun maksimum elektron kapasitesi kaçtır?",
     options: [
@@ -5285,7 +5285,7 @@ export const QUIZ = {
      ===================================================== */
 
   {
-    kazanim: "Elektronun konumuna ilişkin modelleri karşılaştırır.",
+    kazanim: "KİM.9.1.7 — Elektronun konumuna ilişkin modelleri karşılaştırır.",
     context: "Bir öğrenci 'Elektron çekirdeğin etrafında sabit bir daire üzerinde hareket eder.' diyor.",
     text: "Bu öğrencinin görüşü modern atom modeline göre nasıl değerlendirilmelidir?",
     options: [
@@ -5300,7 +5300,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Elektronun konumuna ilişkin modelleri karşılaştırır.",
+    kazanim: "KİM.9.1.7 — Elektronun konumuna ilişkin modelleri karşılaştırır.",
     context: "Bir öğrenci elektronun yerini belirlemek için atom çevresinde bir çizgi çizmiştir.",
     text: "Bu çizim hangi kavramın yanlış anlaşılmasına örnektir?",
     options: [
@@ -5315,7 +5315,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Elektronun konumuna ilişkin modelleri karşılaştırır.",
+    kazanim: "KİM.9.1.7 — Elektronun konumuna ilişkin modelleri karşılaştırır.",
     context: "İki öğrenci elektronun atomdaki konumunu tartışıyor. Birinci öğrenci 'Kesin olarak burada' derken ikinci öğrenci 'Burada bulunma olasılığı daha yüksek' diyor.",
     text: "Modern atom modeline uygun ifade hangisidir?",
     options: [
@@ -5330,7 +5330,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Elektronun konumuna ilişkin modelleri karşılaştırır.",
+    kazanim: "KİM.9.1.7 — Elektronun konumuna ilişkin modelleri karşılaştırır.",
     context: "Bir atom modelinde elektronun bulunabileceği bölgeler yoğunlukla gösteriliyor.",
     text: "Bu modelin temel amacı nedir?",
     options: [
@@ -5345,7 +5345,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Elektronun konumuna ilişkin modelleri karşılaştırır.",
+    kazanim: "KİM.9.1.7 — Elektronun konumuna ilişkin modelleri karşılaştırır.",
     context: "Bir öğrenci orbitalin içinde elektronun herhangi bir noktada bulunabileceğini söylüyor.",
     text: "Bu ifade aşağıdakilerden hangisiyle en iyi tamamlanır?",
     options: [
@@ -5367,7 +5367,7 @@ export const QUIZ = {
      ===================================================== */
 
   {
-    kazanim: "Atom yarıçapının gruptaki değişimini açıklar",
+    kazanim: "KİM.9.1.8 — Atom yarıçapının gruptaki değişimini açıklar",
     konu: "Grupta atom yarıçapı",
     context: "Aynı Grupta Büyüyen Atomlar",
     text: "Lityum (Li), sodyum (Na) ve potasyum (K) aynı grupta yer alır. Grupta aşağı doğru inildikçe atom yarıçapının artmasının temel nedeni nedir?",
@@ -5383,7 +5383,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Atom yarıçapının periyottaki değişimini açıklar",
+    kazanim: "KİM.9.1.8 — Atom yarıçapının periyottaki değişimini açıklar",
     konu: "Periyotta atom yarıçapı",
     context: "Aynı Periyotta Küçülen Atomlar",
     text: "Üçüncü periyotta Na'dan Cl'ye doğru gidildikçe atom yarıçapının küçülmesinin temel nedeni nedir?",
@@ -5399,7 +5399,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Atom yarıçaplarını karşılaştırır",
+    kazanim: "KİM.9.1.8 — Atom yarıçaplarını karşılaştırır",
     konu: "Aynı periyotta yarıçap karşılaştırması",
     context: "Sodyum ve Magnezyum",
     text: "Na ve Mg aynı periyotta bulunmaktadır. Buna göre hangisinin atom yarıçapı daha büyüktür?",
@@ -5415,7 +5415,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Atom yarıçaplarını karşılaştırır",
+    kazanim: "KİM.9.1.8 — Atom yarıçaplarını karşılaştırır",
     konu: "Aynı grupta yarıçap karşılaştırması",
     context: "Li, Na ve K Atomları",
     text: "Li, Na ve K'nin atom yarıçaplarının doğru sıralaması hangisidir?",
@@ -5431,7 +5431,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Atom yarıçapını etkin çekirdek yükü ile ilişkilendirir",
+    kazanim: "KİM.9.1.8 — Atom yarıçapını etkin çekirdek yükü ile ilişkilendirir",
     konu: "Etkin çekirdek çekimi",
     context: "Çekirdeğin Elektronları Çekmesi",
     text: "Aynı periyotta soldan sağa gidildikçe atom yarıçapının küçülmesini açıklayan temel etken hangisidir?",
@@ -5447,7 +5447,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Atom yarıçaplarını periyodik konuma göre sıralar",
+    kazanim: "KİM.9.1.8 — Atom yarıçaplarını periyodik konuma göre sıralar",
     konu: "Periyodik yarıçap sıralaması",
     context: "Periyodik Tabloda Karşılaştırma",
     text: "Aşağıdaki elementlerden hangisinin atom yarıçapı en büyüktür?",
@@ -5463,7 +5463,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Atom yarıçapının periyodik değişimini yorumlar",
+    kazanim: "KİM.9.1.8 — Atom yarıçapının periyodik değişimini yorumlar",
     konu: "Periyodik eğilim",
     context: "Periyodik Tabloda Hareket",
     text: "Atom yarıçapı genel olarak hangi yönde artar?",
@@ -5483,7 +5483,7 @@ export const QUIZ = {
      ===================================================== */
 
   {
-    kazanim: "İyon yarıçapının oluşum nedenini açıklar",
+    kazanim: "KİM.9.1.8 — İyon yarıçapının oluşum nedenini açıklar",
     konu: "Anyon oluşumu",
     context: "Bir İyonun Boyutu Neden Değişir?",
     text: "Nötr Cl atomu elektron alarak Cl⁻ iyonuna dönüştüğünde yarıçapının artmasının temel nedeni nedir?",
@@ -5499,7 +5499,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Katyon ve anyon yarıçaplarını karşılaştırır",
+    kazanim: "KİM.9.1.8 — Katyon ve anyon yarıçaplarını karşılaştırır",
     konu: "Katyon yarıçapı",
     context: "Sodyum İyonu",
     text: "Na atomu bir elektron vererek Na⁺ iyonuna dönüştüğünde yarıçapı neden küçülür?",
@@ -5515,7 +5515,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Katyon ve anyonları atom yarıçapıyla karşılaştırır",
+    kazanim: "KİM.9.1.8 — Katyon ve anyonları atom yarıçapıyla karşılaştırır",
     konu: "İyon yarıçapı",
     context: "Atom ve İyon",
     text: "Aşağıdaki karşılaştırmalardan hangisi doğrudur?",
@@ -5531,7 +5531,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "İyon yarıçaplarını karşılaştırır",
+    kazanim: "KİM.9.1.8 — İyon yarıçaplarını karşılaştırır",
     konu: "Anyon yarıçapı",
     context: "Flor Atomunun İyonlaşması",
     text: "F atomu F⁻ iyonuna dönüştüğünde yarıçapı nasıl değişir?",
@@ -5547,7 +5547,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "İzoelektronik taneciklerin yarıçaplarını karşılaştırır",
+    kazanim: "KİM.9.1.8 — İzoelektronik taneciklerin yarıçaplarını karşılaştırır",
     konu: "İzoelektronik türler",
     context: "Aynı Elektron Sayısına Sahip İyonlar",
     text: "Na⁺, Mg²⁺ ve F⁻ iyonlarının elektron sayıları aynıdır. Bunlar arasında yarıçapı en küçük olan hangisidir?",
@@ -5563,7 +5563,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "İzoelektronik türlerin yarıçaplarını sıralar",
+    kazanim: "KİM.9.1.8 — İzoelektronik türlerin yarıçaplarını sıralar",
     konu: "İzoelektronik yarıçap sıralaması",
     context: "Elektron Sayıları Aynı",
     text: "O²⁻, F⁻, Na⁺ ve Mg²⁺ iyonlarının elektron sayıları eşittir. Büyükten küçüğe doğru sıralama hangisidir?",
@@ -5583,7 +5583,7 @@ export const QUIZ = {
      ===================================================== */
 
   {
-    kazanim: "İyonlaşma enerjisini tanımlar",
+    kazanim: "KİM.9.1.8 — İyonlaşma enerjisini tanımlar",
     konu: "İyonlaşma enerjisi",
     context: "Elektron Koparmak",
     text: "İyonlaşma enerjisi genel olarak neyi ifade eder?",
@@ -5599,7 +5599,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "İyonlaşma enerjisinin periyottaki değişimini açıklar",
+    kazanim: "KİM.9.1.8 — İyonlaşma enerjisinin periyottaki değişimini açıklar",
     konu: "Periyotta iyonlaşma enerjisi",
     context: "Periyotta Elektron Koparmak",
     text: "Genel olarak bir periyotta soldan sağa gidildikçe iyonlaşma enerjisi neden artar?",
@@ -5615,7 +5615,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "İyonlaşma enerjisinin gruptaki değişimini açıklar",
+    kazanim: "KİM.9.1.8 — İyonlaşma enerjisinin gruptaki değişimini açıklar",
     konu: "Grupta iyonlaşma enerjisi",
     context: "Grupta Elektron Koparmak",
     text: "Bir grupta aşağı doğru gidildikçe iyonlaşma enerjisinin genel olarak azalmasının nedeni nedir?",
@@ -5631,7 +5631,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "İyonlaşma enerjilerini karşılaştırır",
+    kazanim: "KİM.9.1.8 — İyonlaşma enerjilerini karşılaştırır",
     konu: "İyonlaşma enerjisi karşılaştırması",
     context: "Na ve Cl",
     text: "Na ve Cl aynı periyotta olduğuna göre genel olarak hangisinin birinci iyonlaşma enerjisi daha büyüktür?",
@@ -5647,7 +5647,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Ardışık iyonlaşma enerjilerini yorumlar",
+    kazanim: "KİM.9.1.8 — Ardışık iyonlaşma enerjilerini yorumlar",
     konu: "İyonlaşma enerjisi sıçraması",
     context: "İkinci Elektronu Koparmak Neden Zor?",
     text: "Bir elementte ikinci iyonlaşma enerjisinden üçüncü iyonlaşma enerjisine geçerken çok büyük bir sıçrama görülüyor. Bu durum en çok neyi gösterir?",
@@ -5663,7 +5663,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Ardışık iyonlaşma enerjilerinden değerlik elektron sayısını belirler",
+    kazanim: "KİM.9.1.8 — Ardışık iyonlaşma enerjilerinden değerlik elektron sayısını belirler",
     konu: "İyonlaşma enerjisi sıçraması",
     context: "Bir Elementin İyonlaşma Enerjileri",
     text: "Bir elementin birinci ve ikinci iyonlaşma enerjileri birbirine yakınken üçüncü iyonlaşma enerjisi çok büyükse elementin değerlik elektron sayısı yaklaşık kaçtır?",
@@ -5679,7 +5679,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "İyonlaşma enerjisini atom yarıçapıyla ilişkilendirir",
+    kazanim: "KİM.9.1.8 — İyonlaşma enerjisini atom yarıçapıyla ilişkilendirir",
     konu: "Yarıçap ve iyonlaşma enerjisi",
     context: "İki Atomun Elektronları",
     text: "Atom yarıçapı küçük olan bir atomun iyonlaşma enerjisinin genellikle daha büyük olmasının nedeni nedir?",
@@ -5695,7 +5695,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Soy gazların iyonlaşma enerjisini yorumlar",
+    kazanim: "KİM.9.1.8 — Soy gazların iyonlaşma enerjisini yorumlar",
     konu: "Kararlı elektron dizilimi",
     context: "Soy Gazlar",
     text: "Soy gazların iyonlaşma enerjilerinin genel olarak yüksek olmasının temel nedeni nedir?",
@@ -5715,7 +5715,7 @@ export const QUIZ = {
      ===================================================== */
 
   {
-    kazanim: "Elektronegatifliği tanımlar",
+    kazanim: "KİM.9.1.8 — Elektronegatifliği tanımlar",
     konu: "Elektronegatiflik",
     context: "Flor'un Bağ Kurma Gücü",
     text: "Elektronegatiflik neyi ifade eder?",
@@ -5731,7 +5731,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Elektronegatifliğin periyottaki değişimini açıklar",
+    kazanim: "KİM.9.1.8 — Elektronegatifliğin periyottaki değişimini açıklar",
     konu: "Periyotta elektronegatiflik",
     context: "Bağ Elektronlarını Çekmek",
     text: "Genel olarak bir periyotta soldan sağa gidildikçe elektronegatiflik neden artar?",
@@ -5747,7 +5747,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Elektronegatifliğin gruptaki değişimini açıklar",
+    kazanim: "KİM.9.1.8 — Elektronegatifliğin gruptaki değişimini açıklar",
     konu: "Grupta elektronegatiflik",
     context: "Halojenler",
     text: "F, Cl ve Br arasında genel olarak elektronegatifliği en yüksek olan hangisidir?",
@@ -5763,7 +5763,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Elektronegatiflik değerlerini karşılaştırır",
+    kazanim: "KİM.9.1.8 — Elektronegatiflik değerlerini karşılaştırır",
     konu: "Elektronegatiflik sıralaması",
     context: "Na ve Cl",
     text: "Na ve Cl karşılaştırıldığında hangisinin elektronegatifliği daha yüksektir?",
@@ -5779,7 +5779,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Elektronegatiflik ile bağ polaritesini ilişkilendirir",
+    kazanim: "KİM.9.1.8 — Elektronegatiflik ile bağ polaritesini ilişkilendirir",
     konu: "Bağ polaritesi",
     context: "H-Cl Bağı",
     text: "HCl molekülündeki bağın polar olmasının temel nedeni nedir?",
@@ -5795,7 +5795,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Elektronegatiflik farkını bağ türüyle ilişkilendirir",
+    kazanim: "KİM.9.1.8 — Elektronegatiflik farkını bağ türüyle ilişkilendirir",
     konu: "İyonik bağ",
     context: "NaCl Oluşumu",
     text: "NaCl oluşumunda Na ile Cl arasındaki elektronegatiflik farkının büyük olması hangi durumu kolaylaştırır?",
@@ -5815,7 +5815,7 @@ export const QUIZ = {
      ===================================================== */
 
   {
-    kazanim: "Elektron ilgisini tanımlar",
+    kazanim: "KİM.9.1.8 — Elektron ilgisini tanımlar",
     konu: "Elektron ilgisi",
     context: "Atom Elektron Alıyor",
     text: "Elektron ilgisi genel olarak hangi olayla ilişkilidir?",
@@ -5831,7 +5831,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Elektron ilgisinin periyodik değişimini yorumlar",
+    kazanim: "KİM.9.1.8 — Elektron ilgisinin periyodik değişimini yorumlar",
     konu: "Elektron alma eğilimi",
     context: "Halojenlerin Elektron Alma Eğilimi",
     text: "Halojenlerin elektron alma eğilimlerinin yüksek olmasının temel nedeni nedir?",
@@ -5847,7 +5847,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Elektron ilgisini değerlik elektron sayısıyla ilişkilendirir",
+    kazanim: "KİM.9.1.8 — Elektron ilgisini değerlik elektron sayısıyla ilişkilendirir",
     konu: "Kararlı elektron dizilimi",
     context: "Bir Elektron Daha",
     text: "7 değerlik elektronuna sahip bir atomun bir elektron alma eğiliminin yüksek olmasının nedeni nedir?",
@@ -5867,7 +5867,7 @@ export const QUIZ = {
      ===================================================== */
 
   {
-    kazanim: "Periyodik özellikler arasındaki ilişkiyi yorumlar",
+    kazanim: "KİM.9.1.8 — Periyodik özellikler arasındaki ilişkiyi yorumlar",
     konu: "Atom yarıçapı ve elektronegatiflik",
     context: "Küçük Atom, Güçlü Çekim",
     text: "Atom yarıçapı küçüldükçe elektronegatifliğin genel olarak artmasının nedeni nedir?",
@@ -5883,7 +5883,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Periyodik özellikler arasındaki ilişkiyi yorumlar",
+    kazanim: "KİM.9.1.8 — Periyodik özellikler arasındaki ilişkiyi yorumlar",
     konu: "Atom yarıçapı ve iyonlaşma enerjisi",
     context: "Elektronu Tutmak",
     text: "Aşağıdaki genel ilişkilerden hangisi doğrudur?",
@@ -5899,7 +5899,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Periyodik özelliklerin yönünü belirler",
+    kazanim: "KİM.9.1.8 — Periyodik özelliklerin yönünü belirler",
     konu: "Genel periyodik eğilim",
     context: "Periyodik Tabloda Yönler",
     text: "Aşağıdaki özelliklerden hangisi genel olarak periyodik tabloda sağa ve yukarı doğru artar?",
@@ -5915,7 +5915,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Periyodik özelliklerin yönünü belirler",
+    kazanim: "KİM.9.1.8 — Periyodik özelliklerin yönünü belirler",
     konu: "Metalik karakter",
     context: "Metal ve Ametal Eğilimi",
     text: "Metalik karakter periyodik tabloda genel olarak hangi yönde artar?",
@@ -5931,7 +5931,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Metalik karakteri atom yarıçapı ve iyonlaşma enerjisiyle ilişkilendirir",
+    kazanim: "KİM.9.1.8 — Metalik karakteri atom yarıçapı ve iyonlaşma enerjisiyle ilişkilendirir",
     konu: "Metalik karakter",
     context: "Elektron Vermeye Yatkınlık",
     text: "Metalik karakteri yüksek olan bir atom için aşağıdakilerden hangisi genellikle doğrudur?",
@@ -5947,7 +5947,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Ametal karakteri periyodik özelliklerle ilişkilendirir",
+    kazanim: "KİM.9.1.8 — Ametal karakteri periyodik özelliklerle ilişkilendirir",
     konu: "Ametal karakter",
     context: "Elektron Alma Eğilimi",
     text: "Ametal karakteri yüksek olan elementler için aşağıdakilerden hangisi daha olasıdır?",
@@ -5963,7 +5963,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Periyodik özellikleri birlikte kullanarak elementleri karşılaştırır",
+    kazanim: "KİM.9.1.8 — Periyodik özellikleri birlikte kullanarak elementleri karşılaştırır",
     konu: "Element karşılaştırması",
     context: "Na ve Cl'nin Özellikleri",
     text: "Na ve Cl aynı periyotta olduğuna göre aşağıdakilerden hangisi genel olarak doğrudur?",
@@ -5979,7 +5979,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Periyodik özellikleri birlikte kullanarak elementleri karşılaştırır",
+    kazanim: "KİM.9.1.8 — Periyodik özellikleri birlikte kullanarak elementleri karşılaştırır",
     konu: "Li ve F karşılaştırması",
     context: "Periyodun İki Ucu",
     text: "Li ve F aynı periyotta bulunmaktadır. Buna göre aşağıdakilerden hangisi doğrudur?",
@@ -5995,7 +5995,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Periyodik özellikleri birlikte kullanarak elementleri karşılaştırır",
+    kazanim: "KİM.9.1.8 — Periyodik özellikleri birlikte kullanarak elementleri karşılaştırır",
     konu: "K ve F karşılaştırması",
     context: "Periyodik Tabloda Uzak İki Element",
     text: "K ve F için aşağıdakilerden hangisi genel olarak doğrudur?",
@@ -6011,7 +6011,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Periyodik özellikleri yorumlayarak elementin konumunu tahmin eder",
+    kazanim: "KİM.9.1.8 — Periyodik özellikleri yorumlayarak elementin konumunu tahmin eder",
     konu: "Periyodik özelliklerden konum belirleme",
     context: "Bilinmeyen Element",
     text: "Bir elementin atom yarıçapı büyük, iyonlaşma enerjisi düşük ve metalik karakteri yüksekse periyodik tablonun hangi bölgesinde bulunması beklenir?",
@@ -6031,7 +6031,7 @@ export const QUIZ = {
      ===================================================== */
 
   {
-    kazanim: "Periyodik özelliklerdeki değişimi nedenleriyle açıklar",
+    kazanim: "KİM.9.1.8 — Periyodik özelliklerdeki değişimi nedenleriyle açıklar",
     konu: "Çekirdek yükü",
     context: "Proton Sayısı Artıyor",
     text: "Aynı periyotta proton sayısı arttıkça atom yarıçapının küçülmesinin temel nedeni nedir?",
@@ -6047,7 +6047,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Periyodik özelliklerdeki değişimi nedenleriyle açıklar",
+    kazanim: "KİM.9.1.8 — Periyodik özelliklerdeki değişimi nedenleriyle açıklar",
     konu: "Perdeleme etkisi",
     context: "İç Katman Elektronları",
     text: "Atomda iç katmanlardaki elektronların dış katmandaki elektronların çekirdek tarafından çekilmesini azaltmasına ne ad verilir?",
@@ -6063,7 +6063,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Perdeleme etkisini atom yarıçapıyla ilişkilendirir",
+    kazanim: "KİM.9.1.8 — Perdeleme etkisini atom yarıçapıyla ilişkilendirir",
     konu: "Perdeleme ve yarıçap",
     context: "Yeni Bir Katman",
     text: "Bir grupta aşağı doğru gidildikçe yeni enerji seviyelerinin eklenmesi aşağıdaki özelliklerden hangisini doğrudan etkiler?",
@@ -6079,7 +6079,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Etkin çekirdek yükünün periyodik özelliklere etkisini yorumlar",
+    kazanim: "KİM.9.1.8 — Etkin çekirdek yükünün periyodik özelliklere etkisini yorumlar",
     konu: "Etkin çekirdek yükü",
     context: "Çekim Gücü Artıyor",
     text: "Aynı periyotta etkin çekirdek yükünün artması aşağıdakilerden hangisine katkı sağlar?",
@@ -6095,7 +6095,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Periyodik özellikleri nicel veriler üzerinden yorumlar",
+    kazanim: "KİM.9.1.8 — Periyodik özellikleri nicel veriler üzerinden yorumlar",
     konu: "İyonlaşma enerjisi verileri",
     context: "Enerji Değerleri",
     text: "Bir elementin ardışık iyonlaşma enerjileri 500, 4600, 6900 kJ/mol şeklindedir. Büyük sıçrama hangi iki değer arasındadır?",
@@ -6111,7 +6111,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "İyonlaşma enerjisi verilerinden değerlik elektron sayısını belirler",
+    kazanim: "KİM.9.1.8 — İyonlaşma enerjisi verilerinden değerlik elektron sayısını belirler",
     konu: "Ardışık iyonlaşma enerjileri",
     context: "Büyük Sıçrama",
     text: "Bir elementin iyonlaşma enerjileri 600, 1200, 7300, 9500 kJ/mol şeklindedir. Bu elementin değerlik elektron sayısı yaklaşık kaçtır?",
@@ -6127,7 +6127,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Periyodik özelliklerden elementin metal-ametal karakterini tahmin eder",
+    kazanim: "KİM.9.1.8 — Periyodik özelliklerden elementin metal-ametal karakterini tahmin eder",
     konu: "Metal-ametal ayrımı",
     context: "Bilinmeyen X Elementi",
     text: "X elementinin atom yarıçapı büyük, iyonlaşma enerjisi düşük ve elektronegatifliği düşükse X için hangi özellik daha olasıdır?",
@@ -6143,7 +6143,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Periyodik özellikleri karşılaştırmalı olarak yorumlar",
+    kazanim: "KİM.9.1.8 — Periyodik özellikleri karşılaştırmalı olarak yorumlar",
     konu: "Özelliklerin birlikte değişimi",
     context: "Üç Element",
     text: "X, Y ve Z aynı periyotta soldan sağa doğru sıralanmıştır. Buna göre aşağıdakilerden hangisi genel olarak doğrudur?",
@@ -6159,7 +6159,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Periyodik özellikleri karşılaştırmalı olarak yorumlar",
+    kazanim: "KİM.9.1.8 — Periyodik özellikleri karşılaştırmalı olarak yorumlar",
     konu: "Grupta özellik değişimi",
     context: "Bir Grup İçindeki Elementler",
     text: "A, B ve C aynı grupta olup A en üstte, C en alttadır. Hangisi genel olarak doğrudur?",
@@ -6179,7 +6179,7 @@ export const QUIZ = {
      ===================================================== */
 
   {
-    kazanim: "İzoelektronik türlerde proton sayısının yarıçapa etkisini yorumlar",
+    kazanim: "KİM.9.1.8 — İzoelektronik türlerde proton sayısının yarıçapa etkisini yorumlar",
     konu: "İzoelektronik iyonlar",
     context: "Dört İyon Karşılaştırılıyor",
     text: "N³⁻, O²⁻, F⁻ ve Na⁺ türlerinin elektron sayıları aynıdır. Hangisinin yarıçapı en küçüktür?",
@@ -6195,7 +6195,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "İyon ve atom yarıçaplarını birlikte karşılaştırır",
+    kazanim: "KİM.9.1.8 — İyon ve atom yarıçaplarını birlikte karşılaştırır",
     konu: "Katyon-anyon karşılaştırması",
     context: "Na⁺ ve F⁻",
     text: "Na⁺ ve F⁻ iyonlarının elektron sayıları eşittir. Buna göre hangisinin yarıçapı daha büyüktür?",
@@ -6211,7 +6211,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Elektronegatiflik farkından bağ karakterini tahmin eder",
+    kazanim: "KİM.9.1.8 — Elektronegatiflik farkından bağ karakterini tahmin eder",
     konu: "Bağ karakteri",
     context: "İki Atomun Elektronegatiflikleri",
     text: "İki atom arasındaki elektronegatiflik farkı arttıkça bağın iyonik karakteri için genel olarak ne söylenebilir?",
@@ -6227,7 +6227,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Periyodik özellikleri kullanarak bağ elektronlarının davranışını tahmin eder",
+    kazanim: "KİM.9.1.8 — Periyodik özellikleri kullanarak bağ elektronlarının davranışını tahmin eder",
     konu: "Elektronegatiflik ve elektron çekimi",
     context: "Bağ Elektronlarının Yolculuğu",
     text: "A ve B atomlarından B'nin elektronegatifliği daha büyükse A-B bağındaki ortak elektronların bulunma olasılığı hangi atoma daha yakındır?",
@@ -6243,7 +6243,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Periyodik özellikleri kullanarak elementleri sınıflandırır",
+    kazanim: "KİM.9.1.8 — Periyodik özellikleri kullanarak elementleri sınıflandırır",
     konu: "Metal-ametal karakteri",
     context: "X Elementinin Özellikleri",
     text: "X elementinin iyonlaşma enerjisi düşük, atom yarıçapı büyük ve elektronegatifliği düşükse X'in metal olma olasılığı neden yüksektir?",
@@ -6259,7 +6259,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Periyodik özellikleri kullanarak elementin konumunu tahmin eder",
+    kazanim: "KİM.9.1.8 — Periyodik özellikleri kullanarak elementin konumunu tahmin eder",
     konu: "Periyodik tablo konumu",
     context: "Bilinmeyen Elementin Konumu",
     text: "Bir elementin elektronegatifliği çok yüksek, atom yarıçapı küçük ve iyonlaşma enerjisi yüksekse bu elementin periyodik tablonun hangi bölgesinde bulunması beklenir?",
@@ -6275,7 +6275,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Periyodik özellikleri birlikte değerlendirir",
+    kazanim: "KİM.9.1.8 — Periyodik özellikleri birlikte değerlendirir",
     konu: "Genel eğilimlerin karşılaştırılması",
     context: "Periyodik Tabloda Dört Özellik",
     text: "Aşağıdaki özelliklerden hangilerinin genel olarak aynı yönde arttığı söylenebilir?",
@@ -6291,7 +6291,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Periyodik özelliklerdeki istisnai değişimleri yorumlar",
+    kazanim: "KİM.9.1.8 — Periyodik özelliklerdeki istisnai değişimleri yorumlar",
     konu: "İyonlaşma enerjisi istisnaları",
     context: "Beklenmeyen İyonlaşma Enerjisi",
     text: "Bir periyotta genel eğilime rağmen ardışık iki element arasında iyonlaşma enerjisinde küçük bir düşüş görülmesi aşağıdakilerden hangisiyle açıklanabilir?",
@@ -6307,7 +6307,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Periyodik özelliklerin nedenlerini açıklar",
+    kazanim: "KİM.9.1.8 — Periyodik özelliklerin nedenlerini açıklar",
     konu: "Perdeleme ve çekim",
     context: "Dış Elektronun Hissettiği Çekim",
     text: "Bir atomda iç katman elektronlarının sayısı arttığında dış elektronların çekirdek tarafından hissedilen çekiminde ne olabilir?",
@@ -6323,7 +6323,7 @@ export const QUIZ = {
   },
 
   {
-    kazanim: "Periyodik özellikleri günlük ve kimyasal bağlamlarda yorumlar",
+    kazanim: "KİM.9.1.8 — Periyodik özellikleri günlük ve kimyasal bağlamlarda yorumlar",
     konu: "Periyodik özelliklerin uygulaması",
     context: "Bir Bileşiğin Oluşumu",
     text: "Bir metal ile bir ametal arasında bileşik oluşurken metalin elektron verme, ametalin elektron alma eğiliminin yüksek olması hangi periyodik özelliklerle ilişkilidir?",
