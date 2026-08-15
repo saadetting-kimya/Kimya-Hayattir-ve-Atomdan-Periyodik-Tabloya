@@ -531,6 +531,49 @@ function registerAnswer(
 
 
 /* =========================================================
+   OTURUM İÇİ ÖĞRENME VERİSİ
+   ---------------------------------------------------------
+   Bu veri yalnızca öğrencinin bu quiz oturumunda gerçekten
+   cevapladığı soruları içerir. Soru havuzundaki çözülmemiş
+   sorular ve önceki oturumlar anlık rapora dahil edilmez.
+   ========================================================= */
+
+function registerSessionAnswer(
+  sessionLearning,
+  question,
+  isCorrect
+) {
+
+  const kazanim =
+    question.kazanim ||
+    "Kazanım belirtilmemiş";
+
+  if (!sessionLearning[kazanim]) {
+
+    sessionLearning[kazanim] = {
+      kazanim,
+      attempts: 0,
+      correct: 0,
+      wrong: 0
+    };
+
+  }
+
+  const data =
+    sessionLearning[kazanim];
+
+  data.attempts++;
+
+  if (isCorrect) {
+    data.correct++;
+  } else {
+    data.wrong++;
+  }
+
+}
+
+
+/* =========================================================
    KAZANIM BAŞARI DURUMU
    ========================================================= */
 
@@ -1035,58 +1078,49 @@ function selectInitialQuestions(
    ========================================================= */
 
 function createLearningReport(
-  moduleQuestions
+  sessionLearning = {}
 ) {
 
-  const learning =
-    readLearning();
+  return Object.values(
+    sessionLearning
+  )
+    .filter(
+      item =>
+        item &&
+        item.attempts > 0
+    )
+    .map(
+      item => {
 
-  const kazanims =
-    [
-      ...new Set(
-        moduleQuestions
-          .map(
-            q => q.kazanim
-          )
-          .filter(Boolean)
-      )
-    ];
+        const percentage =
+          Math.round(
+            (
+              item.correct /
+              item.attempts
+            ) * 100
+          );
 
+        let status;
 
-  return kazanims.map(
-    kazanim => {
+        if (percentage >= 80) {
+          status = "Ulaştı";
+        } else if (percentage >= 60) {
+          status = "Gelişiyor";
+        } else {
+          status = "Desteğe ihtiyaç var";
+        }
 
-      const data =
-        learning[kazanim];
+        return {
+          kazanim: item.kazanim,
+          attempts: item.attempts,
+          correct: item.correct,
+          wrong: item.wrong,
+          percentage,
+          status
+        };
 
-      const mastery =
-        getMastery(
-          kazanim
-        );
-
-      return {
-
-        kazanim,
-
-        attempts:
-          data?.attempts || 0,
-
-        correct:
-          data?.correct || 0,
-
-        wrong:
-          data?.wrong || 0,
-
-        percentage:
-          mastery.percentage,
-
-        status:
-          mastery.status
-
-      };
-
-    }
-  );
+      }
+    );
 
 }
 
@@ -1097,137 +1131,86 @@ function createLearningReport(
 
 function renderLearningReport(
   container,
-  moduleQuestions
+  sessionLearning
 ) {
 
   if (!container) {
     return;
   }
 
-
   const report =
     createLearningReport(
-      moduleQuestions
+      sessionLearning
     );
 
-
-  if (
-    report.length === 0
-  ) {
-
+  if (report.length === 0) {
+    container.innerHTML = "";
     return;
-
   }
-
 
   const statusClass =
     status => {
 
-      if (
-        status ===
-        "Ulaştı"
-      ) {
-
+      if (status === "Ulaştı") {
         return "mastery-good";
-
       }
 
-      if (
-        status ===
-        "Gelişiyor"
-      ) {
-
+      if (status === "Gelişiyor") {
         return "mastery-mid";
-
       }
 
-      if (
-        status ===
-        "Desteğe ihtiyaç var"
-      ) {
-
-        return "mastery-low";
-
-      }
-
-      return "mastery-new";
+      return "mastery-low";
 
     };
-
 
   const rows =
     report.map(
       item => `
-
-        <div class="learning-row">
-
-          <div class="learning-row-top">
-
-            <strong>
-              ${escapeHTML(
-                item.kazanim
-              )}
-            </strong>
-
-            <span class="${statusClass(
-              item.status
-            )}">
-              ${escapeHTML(
-                item.status
-              )}
+        <tr>
+          <td style="padding:10px 12px;border-bottom:1px solid rgba(120,120,160,.18);font-weight:700;vertical-align:top;">
+            ${escapeHTML(item.kazanim)}
+          </td>
+          <td style="padding:10px 12px;border-bottom:1px solid rgba(120,120,160,.18);text-align:center;white-space:nowrap;">
+            ${item.correct}/${item.attempts}
+          </td>
+          <td style="padding:10px 12px;border-bottom:1px solid rgba(120,120,160,.18);text-align:center;white-space:nowrap;">
+            ${item.percentage}%
+          </td>
+          <td style="padding:10px 12px;border-bottom:1px solid rgba(120,120,160,.18);white-space:nowrap;">
+            <span class="${statusClass(item.status)}">
+              ${escapeHTML(item.status)}
             </span>
-
-          </div>
-
-          <div class="learning-progress">
-
-            <div
-              class="learning-progress-fill"
-              style="width:${Math.min(
-                100,
-                item.percentage
-              )}%"
-            ></div>
-
-          </div>
-
-          <div class="learning-meta">
-
-            <span>
-              ${item.percentage}%
-            </span>
-
-            <span>
-              ${item.correct}/${item.attempts}
-              doğru
-            </span>
-
-          </div>
-
-        </div>
-
+          </td>
+        </tr>
       `
     ).join("");
 
-
   container.innerHTML = `
-
-    <section class="learning-report">
-
-      <div class="learning-report-title">
+    <section class="learning-report" style="margin-top:14px;">
+      <div class="learning-report-title" style="font-weight:800;margin-bottom:4px;">
         🎯 Kazanım Öğrenme Profili
       </div>
 
-      <div class="learning-report-subtitle">
-        Cevapların kazanım bazında analiz ediliyor.
+      <div class="learning-report-subtitle" style="margin-bottom:10px;opacity:.78;">
+        Yalnızca bu oturumda cevapladığın sorular analiz ediliyor.
       </div>
 
-      <div class="learning-rows">
-        ${rows}
+      <div style="overflow-x:auto;">
+        <table class="learning-table" style="width:100%;border-collapse:collapse;min-width:620px;background:rgba(255,255,255,.02);border:1px solid rgba(120,120,160,.18);border-radius:12px;overflow:hidden;">
+          <thead>
+            <tr>
+              <th style="padding:10px 12px;text-align:left;border-bottom:1px solid rgba(120,120,160,.28);">Kazanım</th>
+              <th style="padding:10px 12px;text-align:center;border-bottom:1px solid rgba(120,120,160,.28);">Doğru / Deneme</th>
+              <th style="padding:10px 12px;text-align:center;border-bottom:1px solid rgba(120,120,160,.28);">Başarı</th>
+              <th style="padding:10px 12px;text-align:left;border-bottom:1px solid rgba(120,120,160,.28);">Durum</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${rows}
+          </tbody>
+        </table>
       </div>
-
     </section>
-
   `;
 
 }
@@ -1238,23 +1221,17 @@ function renderLearningReport(
    ========================================================= */
 
 function generateLearningComment(
-  moduleQuestions
+  sessionLearning
 ) {
 
   const report =
     createLearningReport(
-      moduleQuestions
+      sessionLearning
     );
 
-
-  if (
-    report.length === 0
-  ) {
-
+  if (report.length === 0) {
     return "";
-
   }
-
 
   const weak =
     report.filter(
@@ -1263,14 +1240,12 @@ function generateLearningComment(
         "Desteğe ihtiyaç var"
     );
 
-
   const developing =
     report.filter(
       item =>
         item.status ===
         "Gelişiyor"
     );
-
 
   const strong =
     report.filter(
@@ -1279,66 +1254,41 @@ function generateLearningComment(
         "Ulaştı"
     );
 
-
-  if (
-    weak.length > 0
-  ) {
+  if (weak.length > 0) {
 
     return `
       <strong>Öğrenme analizi:</strong>
-      ${escapeHTML(
-        weak[0].kazanim
-      )}
-      kazanımında daha fazla
-      pekiştirmeye ihtiyaç var.
-      Yanlış cevapların ardından
-      aynı kazanımdan benzer sorular
-      sunuldu.
+      Bu oturumdaki cevaplarına göre
+      ${escapeHTML(weak[0].kazanim)}
+      kazanımında daha fazla pekiştirmeye ihtiyaç var.
+      Yanlış cevap verdiğinde aynı kazanımdan benzer soru sunuluyor.
     `;
 
   }
 
-
-  if (
-    developing.length > 0
-  ) {
+  if (developing.length > 0) {
 
     return `
       <strong>Öğrenme analizi:</strong>
-      Kazanımların önemli bir bölümünde
-      gelişim gösteriyorsun.
-      ${escapeHTML(
-        developing[0].kazanim
-      )}
-      kazanımında biraz daha
-      pratik yapman öğrenmeyi
-      güçlendirebilir.
+      Bu oturumdaki cevaplarına göre
+      ${escapeHTML(developing[0].kazanim)}
+      kazanımında gelişim gösteriyorsun; biraz daha pratik yararlı olabilir.
     `;
 
   }
 
-
-  if (
-    strong.length ===
-    report.length
-  ) {
+  if (strong.length === report.length) {
 
     return `
       <strong>Öğrenme analizi:</strong>
-      Ölçülen kazanımlarda
-      yeterliğe ulaştın.
-      Benzer sorularda da başarını
-      koruyabiliyorsun.
+      Bu oturumda ölçülen kazanımlarda başarılı bir performans gösterdin.
     `;
 
   }
-
 
   return `
     <strong>Öğrenme analizi:</strong>
-    Öğrenme sürecin devam ediyor.
-    Farklı kazanımlardaki performansın
-    izleniyor.
+    Bu oturumda cevapladığın sorulara göre öğrenme sürecin izleniyor.
   `;
 
 }
@@ -1450,6 +1400,8 @@ export function renderQuiz(
     totalAttempts: 0,
 
     remediationCount: 0,
+
+    sessionLearning: {},
 
     completedPositions:
       new Set(),
@@ -1599,7 +1551,7 @@ export function renderQuiz(
 
     renderLearningReport(
       reportContainer,
-      questions
+      state.sessionLearning
     );
 
   }
@@ -1633,7 +1585,7 @@ export function renderQuiz(
 
     const comment =
       generateLearningComment(
-        questions
+        state.sessionLearning
       );
 
 
@@ -2006,112 +1958,48 @@ export function renderQuiz(
               moduleKey
             );
 
+            registerSessionAnswer(
+              state.sessionLearning,
+              question,
+              isCorrect
+            );
 
             state.totalAttempts++;
 
 
-            if (
-              isCorrect
-            ) {
+            /* ---------------------------------------------
+               DOĞRU
+               --------------------------------------------- */
 
-              if (
-  isCorrect
-) {
-
-  if (
-    !isRemediation &&
-    !state.completedPositions.has(
-      position
-    )
-  ) {
-
-    state.correct++;
-
-  }
-
-
-  feedbackEl.classList.add(
-    "show",
-    "ok"
-  );
-
-
-  feedbackEl.innerHTML = `
-
-    <div>
-
-      ✓ Doğru!
-
-    </div>
-
-
-    <div
-      class="q-explain"
-    >
-
-      ${escapeHTML(
-        question.explain ||
-        ""
-      )}
-
-    </div>
-
-  `;
-
-
-  /*
-   * Temel soru tamamlandı.
-   */
-
-  if (
-    !isRemediation &&
-    !state.completedPositions.has(
-      position
-    )
-  ) {
-
-    state.completedPositions.add(
-      position
-    );
-
-    state.answered++;
-
-  }
-
-}
-
+            if (isCorrect) {
 
               feedbackEl.classList.add(
                 "show",
                 "ok"
               );
 
-
               feedbackEl.innerHTML = `
 
                 <div>
-
                   ✓ Doğru!
-
                 </div>
-
 
                 <div
                   class="q-explain"
                 >
-
                   ${escapeHTML(
                     question.explain ||
                     ""
                   )}
-
                 </div>
 
               `;
 
-
               /*
-               * Temel soru tamamlandı.
+               * Yalnızca temel sorular
+               * modül puanına eklenir.
+               * Pekiştirme soruları ana 5 soruluk
+               * skoru değiştirmez.
                */
 
               if (
@@ -2121,6 +2009,8 @@ export function renderQuiz(
                 )
               ) {
 
+                state.correct++;
+
                 state.completedPositions.add(
                   position
                 );
@@ -2128,12 +2018,6 @@ export function renderQuiz(
                 state.answered++;
 
               }
-
-
-              /*
-               * Pekiştirme sorusu da
-               * kendi içinde tamamlanmıştır.
-               */
 
             }
 
