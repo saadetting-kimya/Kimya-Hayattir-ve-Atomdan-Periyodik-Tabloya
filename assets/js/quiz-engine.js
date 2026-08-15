@@ -75,6 +75,206 @@ function escapeHTML(value) {
 
 
 /* =========================================================
+   VERİ TABLOSU / GRAFİK RENDER (sorulardaki table/chart alanları)
+   ========================================================= */
+
+function renderDataTable(table) {
+
+  if (!table || !Array.isArray(table.headers) || !Array.isArray(table.rows)) {
+    return "";
+  }
+
+  const theadCells = table.headers
+    .map(h => `<th class="qtable-th">${escapeHTML(h)}</th>`)
+    .join("");
+
+  const bodyRows = table.rows
+    .map(row => {
+      const cells = row
+        .map(cell => `<td class="qtable-td">${escapeHTML(cell)}</td>`)
+        .join("");
+      return `<tr>${cells}</tr>`;
+    })
+    .join("");
+
+  const caption = table.caption
+    ? `<div class="qtable-caption">${escapeHTML(table.caption)}</div>`
+    : "";
+
+  return `
+    <div class="qtable-wrap">
+      ${caption}
+      <table class="qtable">
+        <thead><tr>${theadCells}</tr></thead>
+        <tbody>${bodyRows}</tbody>
+      </table>
+    </div>
+  `;
+}
+
+function renderBarChart(chart) {
+
+  const labels = Array.isArray(chart.labels) ? chart.labels : [];
+  const values = Array.isArray(chart.values) ? chart.values.map(Number) : [];
+  if (labels.length === 0 || values.length === 0) return "";
+
+  const W = 480, H = 240;
+  const padL = 40, padR = 20, padT = 30, padB = 46;
+  const plotW = W - padL - padR;
+  const plotH = H - padT - padB;
+  const maxVal = Math.max(...values, 0) * 1.15 || 1;
+  const barGap = 14;
+  const barW = (plotW - barGap * (values.length - 1)) / values.length;
+
+  const bars = values
+    .map((v, i) => {
+      const barH = Math.max((v / maxVal) * plotH, 1);
+      const x = padL + i * (barW + barGap);
+      const y = padT + plotH - barH;
+      const label = escapeHTML(labels[i] ?? "");
+      return `
+        <rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${barW.toFixed(1)}" height="${barH.toFixed(1)}" fill="var(--gas)" opacity="0.85" rx="3"></rect>
+        <text x="${(x + barW / 2).toFixed(1)}" y="${(y - 6).toFixed(1)}" text-anchor="middle" font-size="11" fill="currentColor">${escapeHTML(String(v))}</text>
+        <text x="${(x + barW / 2).toFixed(1)}" y="${(padT + plotH + 16).toFixed(1)}" text-anchor="middle" font-size="10.5" fill="currentColor">${label}</text>
+      `;
+    })
+    .join("");
+
+  const title = chart.title
+    ? `<text x="${(W / 2).toFixed(1)}" y="16" text-anchor="middle" font-size="12" font-weight="600" fill="currentColor">${escapeHTML(chart.title)}</text>`
+    : "";
+
+  return `
+    <div class="qchart-wrap">
+      <svg class="qchart-svg" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
+        ${title}
+        <line x1="${padL}" y1="${padT + plotH}" x2="${padL + plotW}" y2="${padT + plotH}" stroke="currentColor" stroke-opacity="0.35"></line>
+        ${bars}
+      </svg>
+    </div>
+  `;
+}
+
+function renderLineChart(chart) {
+
+  const labels = Array.isArray(chart.labels) ? chart.labels : [];
+  const values = Array.isArray(chart.values) ? chart.values.map(Number) : [];
+  if (labels.length === 0 || values.length === 0) return "";
+
+  const W = 480, H = 240;
+  const padL = 44, padR = 20, padT = 30, padB = 46;
+  const plotW = W - padL - padR;
+  const plotH = H - padT - padB;
+  const minVal = Math.min(...values);
+  const maxVal = Math.max(...values);
+  const range = (maxVal - minVal) || 1;
+  const step = values.length > 1 ? plotW / (values.length - 1) : 0;
+
+  const points = values.map((v, i) => {
+    const x = padL + i * step;
+    const y = padT + plotH - ((v - minVal) / range) * plotH;
+    return { x, y, v, label: labels[i] };
+  });
+
+  const polyline = points.map(p => `${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(" ");
+
+  const dots = points
+    .map(p => `
+      <circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="3.5" fill="var(--gas)"></circle>
+      <text x="${p.x.toFixed(1)}" y="${(p.y - 10).toFixed(1)}" text-anchor="middle" font-size="10.5" fill="currentColor">${escapeHTML(String(p.v))}</text>
+      <text x="${p.x.toFixed(1)}" y="${(padT + plotH + 16).toFixed(1)}" text-anchor="middle" font-size="10.5" fill="currentColor">${escapeHTML(String(p.label ?? ""))}</text>
+    `)
+    .join("");
+
+  const title = chart.title
+    ? `<text x="${(W / 2).toFixed(1)}" y="16" text-anchor="middle" font-size="12" font-weight="600" fill="currentColor">${escapeHTML(chart.title)}</text>`
+    : "";
+
+  return `
+    <div class="qchart-wrap">
+      <svg class="qchart-svg" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
+        ${title}
+        <line x1="${padL}" y1="${padT + plotH}" x2="${padL + plotW}" y2="${padT + plotH}" stroke="currentColor" stroke-opacity="0.35"></line>
+        <polyline points="${polyline}" fill="none" stroke="var(--gas)" stroke-width="2.5"></polyline>
+        ${dots}
+      </svg>
+    </div>
+  `;
+}
+
+function renderPhScale(chart) {
+
+  const W = 480;
+  const padL = 30, padR = 30;
+  const plotW = W - padL - padR;
+  const barY = 44, barH = 22;
+
+  const points = Array.isArray(chart.points) && chart.points.length > 0
+    ? chart.points
+    : (typeof chart.value === "number" ? [{ value: chart.value, label: chart.label }] : []);
+
+  if (points.length === 0) return "";
+
+  const tiers = points.length > 1 ? 2 : 1;
+  const H = 60 + tiers * 26 + barH + 20;
+
+  const stops = `
+    <linearGradient id="phGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e53935"></stop>
+      <stop offset="50%" stop-color="#8bc34a"></stop>
+      <stop offset="100%" stop-color="#8e24aa"></stop>
+    </linearGradient>
+  `;
+
+  const markers = points
+    .map((p, i) => {
+      const x = padL + (Math.max(0, Math.min(14, p.value)) / 14) * plotW;
+      const tier = i % tiers;
+      const labelY = barY + barH + 18 + tier * 22;
+      const nearRight = x > padL + plotW - 60;
+      const nearLeft = x < padL + 60;
+      const anchor = nearRight ? "end" : nearLeft ? "start" : "middle";
+      const dx = nearRight ? -4 : nearLeft ? 4 : 0;
+      return `
+        <polygon points="${x.toFixed(1)},${(barY - 4).toFixed(1)} ${(x - 6).toFixed(1)},${(barY - 14).toFixed(1)} ${(x + 6).toFixed(1)},${(barY - 14).toFixed(1)}" fill="currentColor"></polygon>
+        <line x1="${x.toFixed(1)}" y1="${(barY + barH).toFixed(1)}" x2="${x.toFixed(1)}" y2="${labelY.toFixed(1)}" stroke="currentColor" stroke-opacity="0.4"></line>
+        <text x="${(x + dx).toFixed(1)}" y="${(labelY + 12).toFixed(1)}" text-anchor="${anchor}" font-size="10.5" fill="currentColor">${escapeHTML(String(p.label ?? ("pH " + p.value)))}</text>
+      `;
+    })
+    .join("");
+
+  const title = chart.title
+    ? `<text x="${(W / 2).toFixed(1)}" y="16" text-anchor="middle" font-size="12" font-weight="600" fill="currentColor">${escapeHTML(chart.title)}</text>`
+    : "";
+
+  return `
+    <div class="qchart-wrap">
+      <svg class="qchart-svg" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
+        <defs>${stops}</defs>
+        ${title}
+        <rect x="${padL}" y="${barY}" width="${plotW}" height="${barH}" fill="url(#phGrad)" rx="4"></rect>
+        <text x="${padL}" y="${(barY - 18).toFixed(1)}" font-size="9.5" fill="currentColor">0</text>
+        <text x="${(padL + plotW / 2).toFixed(1)}" y="${(barY - 18).toFixed(1)}" text-anchor="middle" font-size="9.5" fill="currentColor">7</text>
+        <text x="${(padL + plotW).toFixed(1)}" y="${(barY - 18).toFixed(1)}" text-anchor="end" font-size="9.5" fill="currentColor">14</text>
+        ${markers}
+      </svg>
+    </div>
+  `;
+}
+
+function renderChart(chart) {
+
+  if (!chart || !chart.type) return "";
+
+  if (chart.type === "bar") return renderBarChart(chart);
+  if (chart.type === "line") return renderLineChart(chart);
+  if (chart.type === "ph") return renderPhScale(chart);
+
+  return "";
+}
+
+
+/* =========================================================
    KARIŞTIRMA
    ========================================================= */
 
@@ -1832,6 +2032,10 @@ export function renderQuiz(
           `
           : ""
       }
+
+      ${renderDataTable(question.table)}
+
+      ${renderChart(question.chart)}
 
 
       <div class="qtext">

@@ -272,6 +272,22 @@ input[type=range]::-moz-range-thumb{
 .qcard .qn{ font-family:var(--mono); font-size:12px; color:var(--ink-faint); font-weight:700; }
 .qcard .qctx{ font-size:13px; color:var(--gas-dark); font-weight:700; background:rgba(109,91,255,.1); padding:2px 9px; border-radius:999px; }
 .qcard .qtext{ font-size:15.5px; color:var(--ink); font-weight:600; margin-bottom:12px; }
+.qcard .qcontext{
+  font-size:13.5px; color:var(--ink-soft); background:rgba(109,91,255,.05);
+  border-left:3px solid var(--gas); border-radius:0 8px 8px 0; padding:10px 14px; margin-bottom:12px;
+}
+.qtable-wrap{ margin-bottom:14px; overflow-x:auto; }
+.qtable-caption{ font-size:12px; color:var(--ink-faint); margin-bottom:6px; }
+.qtable{ width:100%; border-collapse:collapse; font-size:13px; }
+.qtable-th{
+  text-align:left; padding:7px 10px; background:rgba(109,91,255,.08); color:var(--ink);
+  font-weight:700; border:1px solid var(--line); white-space:nowrap;
+}
+.qtable-td{ padding:7px 10px; border:1px solid var(--line); color:var(--ink-soft); }
+.qchart-wrap{
+  background:var(--bg); border:1px solid var(--line); border-radius:10px; padding:10px 12px; margin-bottom:14px;
+}
+.qchart-svg{ width:100%; height:auto; color:var(--ink); display:block; }
 .qopts{ display:grid; gap:8px; }
 .qopt{
   display:flex; gap:10px; align-items:flex-start; padding:10px 12px; border-radius:10px;
