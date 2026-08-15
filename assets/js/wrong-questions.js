@@ -25,7 +25,7 @@ function readErrors() {
 
 async function loadQuestionPool() {
   try {
-    const module = await import("./quiz-data.js?v=1");
+    const module = await import("./quiz-data.js?v=2");
     return module.QUIZ || {};
   } catch (err) {
     console.error("Soru havuzu yüklenemedi:", err);
