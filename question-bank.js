@@ -10,7 +10,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-001",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Orbital",
       difficulty: "kolay",
       type: "kavram",
@@ -28,7 +28,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-002",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Orbital kapasitesi",
       difficulty: "kolay",
       type: "kavram",
@@ -46,7 +46,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-003",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Orbital türleri",
       difficulty: "kolay",
       type: "kavram",
@@ -64,7 +64,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-004",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Orbital kapasitesi",
       difficulty: "kolay",
       type: "yorum",
@@ -82,7 +82,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-005",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Alt kabuklar",
       difficulty: "kolay",
       type: "kavram",
@@ -100,7 +100,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-006",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Pauli",
       difficulty: "orta",
       type: "yorum",
@@ -118,7 +118,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-007",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Hund",
       difficulty: "orta",
       type: "yorum",
@@ -136,7 +136,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-008",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Hund",
       difficulty: "orta",
       type: "uygulama",
@@ -154,7 +154,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-009",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Aufbau",
       difficulty: "orta",
       type: "uygulama",
@@ -172,7 +172,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-010",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Orbital enerji sırası",
       difficulty: "orta",
       type: "uygulama",
@@ -190,7 +190,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-011",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Elektron dizilimi",
       difficulty: "kolay",
       type: "uygulama",
@@ -208,7 +208,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-012",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Elektron dizilimi",
       difficulty: "kolay",
       type: "uygulama",
@@ -226,7 +226,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-013",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Elektron dizilimi",
       difficulty: "kolay",
       type: "uygulama",
@@ -244,7 +244,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-014",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Elektron dizilimi",
       difficulty: "orta",
       type: "uygulama",
@@ -262,7 +262,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-015",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Eşleşmemiş elektron",
       difficulty: "orta",
       type: "yorum",
@@ -280,7 +280,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-016",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Eşleşmemiş elektron",
       difficulty: "orta",
       type: "yorum",
@@ -298,7 +298,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-017",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Değerlik elektronu",
       difficulty: "kolay",
       type: "uygulama",
@@ -316,7 +316,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-018",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Soy gaz gösterimi",
       difficulty: "orta",
       type: "uygulama",
@@ -334,7 +334,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-019",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Elektron dizilimi",
       difficulty: "orta",
       type: "uygulama",
@@ -352,7 +352,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-020",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Elektron dizilimi",
       difficulty: "orta",
       type: "yorum",
@@ -370,7 +370,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-021",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Orbital enerji",
       difficulty: "orta",
       type: "karşılaştırma",
@@ -388,7 +388,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-022",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Aufbau",
       difficulty: "orta",
       type: "hata analizi",
@@ -406,7 +406,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-023",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Hund",
       difficulty: "orta",
       type: "hata analizi",
@@ -424,7 +424,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-024",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Pauli",
       difficulty: "orta",
       type: "hata analizi",
@@ -442,7 +442,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-025",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Elektron sayısı",
       difficulty: "kolay",
       type: "uygulama",
@@ -460,7 +460,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-026",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "İyon ve elektron dizilimi",
       difficulty: "orta",
       type: "uygulama",
@@ -478,7 +478,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-027",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "İyon ve elektron dizilimi",
       difficulty: "orta",
       type: "uygulama",
@@ -496,7 +496,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-028",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "İzoelektronik",
       difficulty: "orta",
       type: "karşılaştırma",
@@ -514,7 +514,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-029",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "İzoelektronik",
       difficulty: "orta",
       type: "karşılaştırma",
@@ -532,7 +532,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-030",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Orbital kapasitesi",
       difficulty: "kolay",
       type: "yorum",
@@ -550,7 +550,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-031",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Alt kabuk kapasitesi",
       difficulty: "kolay",
       type: "yorum",
@@ -568,7 +568,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-032",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Alt kabuk kapasitesi",
       difficulty: "kolay",
       type: "yorum",
@@ -586,7 +586,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-033",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Orbital sayısı",
       difficulty: "orta",
       type: "yorum",
@@ -604,7 +604,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-034",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Elektron dizilimi",
       difficulty: "orta",
       type: "uygulama",
@@ -622,7 +622,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-035",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Elektron dizilimi",
       difficulty: "orta",
       type: "uygulama",
@@ -640,7 +640,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-036",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Elektron dizilimi",
       difficulty: "orta",
       type: "hata analizi",
@@ -658,7 +658,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-037",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Eşleşmemiş elektron",
       difficulty: "orta",
       type: "uygulama",
@@ -676,7 +676,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-038",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Eşleşmemiş elektron",
       difficulty: "orta",
       type: "uygulama",
@@ -694,7 +694,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-039",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Eşleşmemiş elektron",
       difficulty: "zor",
       type: "yorum",
@@ -712,7 +712,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-040",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Değerlik elektronları",
       difficulty: "orta",
       type: "uygulama",
@@ -730,7 +730,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-041",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Soy gaz gösterimi",
       difficulty: "orta",
       type: "uygulama",
@@ -748,7 +748,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-042",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Soy gaz gösterimi",
       difficulty: "orta",
       type: "uygulama",
@@ -766,7 +766,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-043",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Orbital enerji",
       difficulty: "zor",
       type: "yorum",
@@ -784,7 +784,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-044",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Bağlam",
       difficulty: "zor",
       type: "bağlam",
@@ -802,7 +802,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-045",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Bağlam",
       difficulty: "zor",
       type: "bağlam",
@@ -820,7 +820,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-046",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Elektron dizilimi",
       difficulty: "zor",
       type: "akıl yürütme",
@@ -838,7 +838,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-047",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Elektron dizilimi",
       difficulty: "zor",
       type: "akıl yürütme",
@@ -856,7 +856,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-048",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Hata analizi",
       difficulty: "zor",
       type: "hata analizi",
@@ -874,7 +874,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-049",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Bütünleştirme",
       difficulty: "zor",
       type: "bağlam",
@@ -892,7 +892,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-050",
-      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
+      kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
       konu: "Bütünleştirme",
       difficulty: "zor",
       type: "bağlam",
