@@ -2014,7 +2014,71 @@ export function renderQuiz(
               isCorrect
             ) {
 
-              state.correct++;
+              if (
+  isCorrect
+) {
+
+  if (
+    !isRemediation &&
+    !state.completedPositions.has(
+      position
+    )
+  ) {
+
+    state.correct++;
+
+  }
+
+
+  feedbackEl.classList.add(
+    "show",
+    "ok"
+  );
+
+
+  feedbackEl.innerHTML = `
+
+    <div>
+
+      ✓ Doğru!
+
+    </div>
+
+
+    <div
+      class="q-explain"
+    >
+
+      ${escapeHTML(
+        question.explain ||
+        ""
+      )}
+
+    </div>
+
+  `;
+
+
+  /*
+   * Temel soru tamamlandı.
+   */
+
+  if (
+    !isRemediation &&
+    !state.completedPositions.has(
+      position
+    )
+  ) {
+
+    state.completedPositions.add(
+      position
+    );
+
+    state.answered++;
+
+  }
+
+}
 
 
               feedbackEl.classList.add(
