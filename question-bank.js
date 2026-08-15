@@ -10,7 +10,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-001",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Orbital",
       difficulty: "kolay",
       type: "kavram",
@@ -28,7 +28,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-002",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Orbital kapasitesi",
       difficulty: "kolay",
       type: "kavram",
@@ -46,7 +46,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-003",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Orbital türleri",
       difficulty: "kolay",
       type: "kavram",
@@ -64,7 +64,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-004",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Orbital kapasitesi",
       difficulty: "kolay",
       type: "yorum",
@@ -82,7 +82,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-005",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Alt kabuklar",
       difficulty: "kolay",
       type: "kavram",
@@ -100,7 +100,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-006",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Pauli",
       difficulty: "orta",
       type: "yorum",
@@ -118,7 +118,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-007",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Hund",
       difficulty: "orta",
       type: "yorum",
@@ -136,7 +136,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-008",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Hund",
       difficulty: "orta",
       type: "uygulama",
@@ -144,17 +144,17 @@ export const QUESTION_BANK = {
       options: [
         "↑↓  ↑↓  —",
         "↑↓  ↑  ↑",
-        "↑  ↑  ↑↓",
+        "↑  ↑  ↑",
         "↑↓  —  ↑↓",
         "↑↓  ↓  ↑"
       ],
       correct: 1,
-      explain: "2p⁴ için üç p orbitali önce birer paralel spinli elektron alır; dördüncü elektron bu orbitallerden birinde eşleşir."
+      explain: "2p⁴ için üç p orbitali önce birer paralel spinli elektron alır; dördüncü elektron bu orbitallerden birinde eşleşir. (\"↑ ↑ ↑\" seçeneği yalnızca 3 elektron gösterdiği için yanlıştır, elektron sayısı eksiktir.)"
     },
 
     {
       id: "K916-009",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Aufbau",
       difficulty: "orta",
       type: "uygulama",
@@ -172,7 +172,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-010",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Orbital enerji sırası",
       difficulty: "orta",
       type: "uygulama",
@@ -190,7 +190,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-011",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Elektron dizilimi",
       difficulty: "kolay",
       type: "uygulama",
@@ -208,7 +208,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-012",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Elektron dizilimi",
       difficulty: "kolay",
       type: "uygulama",
@@ -226,7 +226,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-013",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Elektron dizilimi",
       difficulty: "kolay",
       type: "uygulama",
@@ -244,7 +244,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-014",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Elektron dizilimi",
       difficulty: "orta",
       type: "uygulama",
@@ -262,7 +262,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-015",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Eşleşmemiş elektron",
       difficulty: "orta",
       type: "yorum",
@@ -280,7 +280,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-016",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Eşleşmemiş elektron",
       difficulty: "orta",
       type: "yorum",
@@ -298,7 +298,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-017",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Değerlik elektronu",
       difficulty: "kolay",
       type: "uygulama",
@@ -316,7 +316,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-018",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Soy gaz gösterimi",
       difficulty: "orta",
       type: "uygulama",
@@ -334,7 +334,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-019",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Elektron dizilimi",
       difficulty: "orta",
       type: "uygulama",
@@ -352,7 +352,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-020",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Elektron dizilimi",
       difficulty: "orta",
       type: "yorum",
@@ -370,7 +370,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-021",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Orbital enerji",
       difficulty: "orta",
       type: "karşılaştırma",
@@ -388,7 +388,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-022",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Aufbau",
       difficulty: "orta",
       type: "hata analizi",
@@ -406,7 +406,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-023",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Hund",
       difficulty: "orta",
       type: "hata analizi",
@@ -424,7 +424,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-024",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Pauli",
       difficulty: "orta",
       type: "hata analizi",
@@ -442,7 +442,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-025",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Elektron sayısı",
       difficulty: "kolay",
       type: "uygulama",
@@ -460,7 +460,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-026",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "İyon ve elektron dizilimi",
       difficulty: "orta",
       type: "uygulama",
@@ -478,7 +478,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-027",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "İyon ve elektron dizilimi",
       difficulty: "orta",
       type: "uygulama",
@@ -496,7 +496,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-028",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "İzoelektronik",
       difficulty: "orta",
       type: "karşılaştırma",
@@ -514,25 +514,25 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-029",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "İzoelektronik",
       difficulty: "orta",
       type: "karşılaştırma",
       text: "Aşağıdaki taneciklerden hangisi Ar atomu ile aynı elektron sayısına sahiptir?",
       options: [
         "K",
-        "K⁺",
+        "Mg²⁺",
         "Cl⁻",
         "Ca⁺",
         "S"
       ],
       correct: 2,
-      explain: "Ar 18 elektrona sahiptir. Cl⁻ de 17 + 1 = 18 elektrona sahiptir."
+      explain: "Ar 18 elektrona sahiptir. Cl⁻ de 17 + 1 = 18 elektrona sahiptir. (Mg²⁺: 12 − 2 = 10, Ca⁺: 20 − 1 = 19, K: 19, S: 16 elektron.)"
     },
 
     {
       id: "K916-030",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Orbital kapasitesi",
       difficulty: "kolay",
       type: "yorum",
@@ -550,7 +550,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-031",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Alt kabuk kapasitesi",
       difficulty: "kolay",
       type: "yorum",
@@ -568,7 +568,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-032",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Alt kabuk kapasitesi",
       difficulty: "kolay",
       type: "yorum",
@@ -586,7 +586,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-033",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Orbital sayısı",
       difficulty: "orta",
       type: "yorum",
@@ -604,7 +604,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-034",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Elektron dizilimi",
       difficulty: "orta",
       type: "uygulama",
@@ -622,7 +622,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-035",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Elektron dizilimi",
       difficulty: "orta",
       type: "uygulama",
@@ -640,7 +640,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-036",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Elektron dizilimi",
       difficulty: "orta",
       type: "hata analizi",
@@ -658,7 +658,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-037",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Eşleşmemiş elektron",
       difficulty: "orta",
       type: "uygulama",
@@ -676,7 +676,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-038",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Eşleşmemiş elektron",
       difficulty: "orta",
       type: "uygulama",
@@ -694,7 +694,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-039",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Eşleşmemiş elektron",
       difficulty: "zor",
       type: "yorum",
@@ -712,7 +712,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-040",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Değerlik elektronları",
       difficulty: "orta",
       type: "uygulama",
@@ -730,7 +730,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-041",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Soy gaz gösterimi",
       difficulty: "orta",
       type: "uygulama",
@@ -748,7 +748,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-042",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Soy gaz gösterimi",
       difficulty: "orta",
       type: "uygulama",
@@ -766,7 +766,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-043",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Orbital enerji",
       difficulty: "zor",
       type: "yorum",
@@ -784,7 +784,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-044",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Bağlam",
       difficulty: "zor",
       type: "bağlam",
@@ -802,7 +802,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-045",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Bağlam",
       difficulty: "zor",
       type: "bağlam",
@@ -820,7 +820,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-046",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Elektron dizilimi",
       difficulty: "zor",
       type: "akıl yürütme",
@@ -838,7 +838,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-047",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Elektron dizilimi",
       difficulty: "zor",
       type: "akıl yürütme",
@@ -856,7 +856,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-048",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Hata analizi",
       difficulty: "zor",
       type: "hata analizi",
@@ -874,7 +874,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-049",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Bütünleştirme",
       difficulty: "zor",
       type: "bağlam",
@@ -892,7 +892,7 @@ export const QUESTION_BANK = {
 
     {
       id: "K916-050",
-      kazanım: "KİM.9.1.6",
+      kazanim: "KİM.9.1.5 — Elektronların atom orbitallerine yerleşimine ilişkin tümevarımsal akıl yürütebilme",
       konu: "Bütünleştirme",
       difficulty: "zor",
       type: "bağlam",
