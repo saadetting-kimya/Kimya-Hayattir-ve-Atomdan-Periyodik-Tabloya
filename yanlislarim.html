@@ -45,7 +45,78 @@ href="assets/css/style.css?v=1" />
 </main>
 
 <div id="footer-root"></div>
+<!-- =====================================================
+     ÖĞRENCİ PDF ANALİZ RAPORU
+     ===================================================== -->
 
+<section class="student-report-panel">
+
+  <div class="student-report-head">
+    <div>
+      <h2>📊 Öğrenci Analiz Raporu</h2>
+      <p>
+        Çözdüğün sorular, kazanım başarıların ve yanlışların
+        öğretmen için renkli bir rapora dönüştürülür.
+      </p>
+    </div>
+  </div>
+
+  <div class="student-report-form">
+
+    <div class="report-field">
+      <label for="reportStudentName">
+        Öğrenci Adı Soyadı
+      </label>
+
+      <input
+        id="reportStudentName"
+        type="text"
+        placeholder="Ad Soyad"
+      >
+    </div>
+
+    <div class="report-field">
+      <label for="reportStudentClass">
+        Sınıf / Şube
+      </label>
+
+      <input
+        id="reportStudentClass"
+        type="text"
+        placeholder="9/A"
+      >
+    </div>
+
+    <div class="report-field">
+      <label for="reportStudentNo">
+        Öğrenci No
+      </label>
+
+      <input
+        id="reportStudentNo"
+        type="text"
+        placeholder="123"
+      >
+    </div>
+
+  </div>
+
+  <button
+    id="createPdfReportBtn"
+    class="btn pdf-report-btn"
+    type="button"
+  >
+    🖨️ PDF Raporu Oluştur
+  </button>
+
+</section>
+
+
+<!-- Yazdırılırken kullanılacak gizli alan -->
+<div
+  id="studentPrintReport"
+  class="student-print-report"
+></div>
 <script type="module">
 
   import {
