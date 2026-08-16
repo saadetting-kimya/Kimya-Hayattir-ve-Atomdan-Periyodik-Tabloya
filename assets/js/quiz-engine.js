@@ -2963,3 +2963,14 @@ export function bindJournal(
   );
 
 }
+
+export {
+  escapeHTML,
+  renderDataTable,
+  renderChart,
+  renderOrbitalBoxes,
+  renderCircleCompare,
+  renderPeriodicHighlight,
+  renderGHSPictograms,
+  renderObjectIcons
+};
