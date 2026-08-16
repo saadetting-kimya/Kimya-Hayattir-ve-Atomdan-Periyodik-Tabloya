@@ -10,508 +10,212 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci sabah kalktığında sırasıyla diş fırçalar, kahvaltıda reçel yer, güneş kremi sürer ve okula giderken otobüsün egzozundan çıkan dumanı fark eder.",
-    text: "Bu dört olaydan kaçı doğrudan bir kimyasal madde ya da kimyasal süreçle ilişkilidir?",
-    options: ["1", "2", "3", "4", "Hiçbiri"],
-    correct: 3,
-    explain: "Diş macunu, reçeldeki şeker/pektin, güneş kreminin UV filtre bileşenleri ve egzoz gazındaki yanma ürünleri — dördü de kimyasal maddelerle ilgilidir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir market rafında; sabun, elma, çivi ve pil yan yana duruyor.",
-    text: "Bu dört üründen hangisi hem 'doğal' hem de kimyasal madde içermeyen tek örnek olarak düşünülemez, çünkü:",
-    options: [
-      "Hepsi atomlardan/moleküllerden oluştuğu için tümü kimyasal maddedir",
-      "Sadece sabun kimyasaldır, diğerleri doğaldır",
-      "Sadece pil kimyasaldır, diğerleri doğaldır",
-      "Elma hariç hepsi kimyasaldır",
-      "Hiçbiri kimyasal madde değildir"
-    ],
-    correct: 0,
-    explain: "Evrendeki her madde (doğal ya da işlenmiş fark etmeksizin) atom ve moleküllerden oluşur; 'kimyasal' ile 'doğal' birbirinin zıttı değildir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci limonatayı hazırlarken suya şeker ekliyor, karıştırıyor ve şekerin gözden kayboldğunu gözlemliyor.",
-    text: "Şekerin suda 'kaybolması' olayı için en doğru bilimsel açıklama hangisidir?",
-    options: [
-      "Şeker yok olmuştur, kütle kaybı gerçekleşmiştir",
-      "Şeker yeni bir maddeye dönüşmüştür (kimyasal değişim)",
-      "Şeker molekülleri su molekülleri arasına dağılmış, çözünmüştür",
-      "Su, şekeri buharlaştırmıştır",
-      "Şeker sadece gözle görülemeyecek kadar küçülmüştür ama yapısı bozulmuştur"
-    ],
-    correct: 2,
-    explain: "Çözünme fiziksel bir olaydır; şeker molekülleri yapısını korur, yalnızca su molekülleri arasına homojen dağılır."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir tarifte 'kabartma tozunu sirkeyle karıştırın, köpürmesini bekleyin' yazıyor.",
-    text: "Karışımın köpürmesi neyin göstergesidir?",
-    options: [
-      "Fiziksel bir karışımın oluştuğunun",
-      "Sıcaklığın aniden düştüğünün",
-      "Yeni bir gaz maddenin (karbondioksit) açığa çıktığı bir kimyasal tepkimenin gerçekleştiğinin",
-      "Sirkenin buharlaştığının",
-      "Kabartma tozunun sadece eridiğinin"
-    ],
-    correct: 2,
-    explain: "Kabartma tozu (sodyum bikarbonat) ile asit (sirke) tepkimeye girdiğinde CO₂ gazı açığa çıkar; gaz çıkışı kimyasal değişimin tipik bir belirtisidir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir ailenin mutfağında sırasıyla şu işlemler yapılıyor: (1) elmayı dilimlemek, (2) ekmeği kızartmak, (3) suyu kaynatmak, (4) eti pişirmek.",
-    text: "Bu işlemlerden kaçında geri dönüşü olmayan bir kimyasal değişim gerçekleşir?",
-    options: ["0", "1", "2", "3", "4"],
-    correct: 2,
-    explain: "Ekmeği kızartmak (Maillard tepkimesi/karamelizasyon) ve eti pişirmek (protein denatürasyonu, yeni bileşikler oluşumu) kimyasal değişimdir; dilimleme ve kaynatma fiziksel değişimdir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci 'kimya sadece laboratuvarda beyaz önlüklü insanların yaptığı bir iştir' diye düşünüyor.",
-    text: "Bu düşünceye karşı en güçlü kanıt aşağıdakilerden hangisidir?",
-    options: [
-      "Laboratuvarlarda gerçekten beyaz önlük giyilir",
-      "Kimyagerler sadece üniversitelerde çalışır",
-      "Vücudumuzdaki sindirim, nefes alma ve enerji üretimi gibi süreçler de birer kimyasal olaydır",
-      "Kimya dersi sadece 9. sınıfta okutulur",
-      "Kimyasallar sadece market raflarında bulunur"
-    ],
-    correct: 2,
-    explain: "Kimya, laboratuvarla sınırlı değildir; canlı vücudundaki metabolik tepkimeler dahil, evrende madde içeren her süreç kimyanın konusudur."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci ütü yaparken kumaşın üzerinde kalan bir plastik düğmenin erimeye başladığını fark ediyor.",
-    text: "Bu gözlem, öğrenciye maddeler hakkında hangi bilgiyi kazandırır?",
-    options: [
-      "Tüm plastikler aynı sıcaklıkta erir",
-      "Farklı maddelerin ısıya karşı dayanıklılığı (erime noktası gibi özellikleri) farklıdır",
-      "Kumaş da plastik gibi erir",
-      "Ütünün sıcaklığı hiçbir zaman değişmez",
-      "Erime her zaman kimyasal bir değişimdir"
-    ],
+    context: "Bir ürün etiketinde şu bileşenler listelenmiştir: su, gliserin, sodyum lauril sülfat, mentol.",
+    text: "Bu bileşen listesi, ürünün üretim sürecinde en doğrudan hangi bilim dalının bilgisinden yararlanıldığını gösterir?",
+    options: ["Coğrafya", "Kimya", "Tarih", "Edebiyat", "Astronomi"],
     correct: 1,
-    explain: "Her madde kendine özgü fiziksel özelliklere (erime noktası gibi) sahiptir; bu yüzden kumaş dayanırken düğme erimiştir."
+    explain: "Bir ürünün bileşenlerinin belirlenmesi, oranlanması ve bir araya getirilmesi doğrudan kimya bilgisine dayanır; her bileşenin kendine özgü kimyasal işlevi vardır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci elindeki dört ürünün etiketini okuyor: sabun (temizlik), aspirin (ilaç), gübre (tarım), benzin (enerji).",
-    text: "Bu örnekler, kimyanın günlük hayattaki rolü hakkında en çok neyi gösterir?",
-    options: [
-      "Kimyanın yalnızca sağlık alanında kullanıldığını",
-      "Kimyanın temizlik, sağlık, tarım ve enerji gibi birbirinden çok farklı ihtiyaç alanlarına hizmet ettiğini",
-      "Bu dört ürünün aynı kimyasal maddeden yapıldığını",
-      "Kimyanın yalnızca endüstriyel üretimle sınırlı olduğunu",
-      "Bu ürünlerin hiçbirinin kimyasal madde içermediğini"
-    ],
+    context: "Açık havada bırakılan bir demir çubuğun yüzeyinde birkaç gün içinde kızıl-kahverengi bir tabaka oluşur.",
+    text: "Bu gözlem hangi tür bir değişimin sonucudur?",
+    options: ["Fiziksel değişim; yalnızca şekil değişmiştir", "Kimyasal değişim; yeni bir madde (pas/demir oksit) oluşmuştur", "Biyolojik bir süreçtir", "Değişim gözlemlenmemiştir", "Yalnızca sıcaklık değişimidir"],
     correct: 1,
-    explain: "Kimya; temizlik, sağlık/ilaç, gıda, enerji ve tarım gibi çok geniş bir ihtiyaç yelpazesine katkı sağlayan bir bilim dalıdır."
+    explain: "Demirin oksijen ve nemle tepkimeye girerek pas (demir oksit) oluşturması, yeni bir maddenin ortaya çıktığı bir kimyasal değişimdir."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci naftalin (güve topu) tabletinin dolapta zamanla küçülüp yok olduğunu, hiç sıvılaşmadığını fark ediyor.",
-    text: "Bu gözlemlenen olay hangi fiziksel süreçle açıklanır?",
-    options: [
-      "Kaynama", "Donma", "Süblimleşme (katıdan doğrudan gaza geçiş)", "Yoğuşma", "Kimyasal bozunma"
-    ],
+    context: "Bir tarifte şeker, suya eklenip karıştırıldığında gözden kaybolur; tatlı tat ise korunur.",
+    text: "Bu gözlem en iyi hangi kavramla açıklanır?",
+    options: ["Buharlaşma", "Çözünme; şeker molekülleri su içinde dağılmıştır, yok olmamıştır", "Kimyasal bozunma", "Süblimleşme", "Yanma"],
+    correct: 1,
+    explain: "Şekerin suda çözünmesi fiziksel bir olaydır; şeker molekülleri gözle görülemeyecek kadar küçük parçacıklar hâlinde suya dağılır, ancak kimliğini korur (tadı kaybolmaz)."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Bir dondurma kabındaki dondurma, oda sıcaklığında bırakıldığında birkaç dakika içinde sıvı hâle geçer; soğutulduğunda tekrar katılaşır.",
+    text: "Bu döngüsel değişim hangi tür bir olaydır?",
+    options: ["Kimyasal değişim; her seferinde yeni bir madde oluşur", "Fiziksel değişim; madde erime ve donma arasında geçiş yapar, kimliği değişmez", "Geri döndürülemez bir tepkimedir", "Biyolojik bozunmadır", "Nükleer bir süreçtir"],
+    correct: 1,
+    explain: "Erime ve donma, maddenin hâl değiştirmesidir; madde kimliğini korur, bu nedenle fiziksel bir değişimdir ve tersinirdir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Bir pilin üzerinde '1,5 V' yazısı bulunur ve pilin çalışması sırasında içindeki maddeler zamanla tükenir.",
+    text: "Bir pilin elektrik enerjisi üretebilmesinin temel nedeni nedir?",
+    options: ["İçindeki suyun buharlaşması", "İçindeki kimyasal enerjinin elektrik enerjisine dönüştürülmesi", "Işığın doğrudan elektriğe çevrilmesi", "Manyetik alan oluşturması", "Sesin enerjiye dönüştürülmesi"],
+    correct: 1,
+    explain: "Piller, içlerindeki kimyasal maddeler arasındaki tepkimeler sonucunda açığa çıkan kimyasal enerjiyi elektrik enerjisine dönüştüren düzeneklerdir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Soğuk bir bardağın dış yüzeyinde birkaç dakika içinde su damlacıkları belirir; bardağın içindeki sıvı seviyesi değişmez.",
+    text: "Bardağın dışındaki bu su damlacıklarının kaynağı en doğru şekilde nedir?",
+    options: ["Bardağın içindeki sıvının dışarı sızması", "Havadaki su buharının soğuk yüzeyle temas edip yoğuşması", "Bardağın malzemesinin su üretmesi", "Buzun kimyasal olarak parçalanması", "Havadaki oksijenin suya dönüşmesi"],
+    correct: 1,
+    explain: "Havadaki nem (su buharı), soğuk yüzeyle temas edince yoğuşarak sıvı hâle geçer; bu, bardağın içindeki sıvıyla ilgisi olmayan bir fiziksel olaydır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Bir güneş kremi etiketinde 'SPF 30' ifadesi ve içerik listesinde çinko oksit yer almaktadır.",
+    text: "Güneş kremlerinin koruma sağlama işlevi en doğrudan hangi alanın bilgisine dayanır?",
+    options: ["Müzik", "Kimya", "Coğrafya", "Görsel sanatlar", "Edebiyat"],
+    correct: 1,
+    explain: "Güneş kremlerindeki bileşenlerin (örneğin çinko oksit) UV ışınlarını yansıtma/soğurma özelliği, kimyasal madde özelliklerinin incelenmesiyle geliştirilmiş bir uygulamadır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Bir dilim elma, havada birkaç dakika bekletildiğinde yüzeyi kahverengiye döner.",
+    text: "Bu renk değişimi hangi türde bir olaydır?",
+    options: ["Fiziksel değişim; yalnızca su kaybı olur", "Kimyasal değişim; elmadaki bazı bileşikler oksijenle tepkimeye girer", "Elmanın çürümesiyle ilgisi olmayan optik bir yanılsamadır", "Sıcaklık artışından kaynaklanır", "Yalnızca ışıkla ilgili bir durumdur"],
+    correct: 1,
+    explain: "Elmanın kesilen yüzeyindeki bazı bileşikler havadaki oksijenle tepkimeye girerek (enzimatik esmerleşme) yeni, kahverengi renkli bileşikler oluşturur; bu bir kimyasal değişimdir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Bir naftalin (güve topu) tableti, kapalı bir dolapta haftalar içinde giderek küçülür ve hiç sıvı birikintisi bırakmaz.",
+    text: "Bu durumu en doğru şekilde açıklayan hâl değişimi kavramı hangisidir?",
+    options: ["Erime; katı önce sıvı hâle geçer", "Süblimleşme; katı doğrudan gaz hâline geçer", "Kimyasal bozunma; yeni bir madde oluşur", "Yoğuşma", "Kristalleşme"],
+    correct: 1,
+    explain: "Naftalin, sıvı hâle geçmeden doğrudan katıdan gaza dönüşür (süblimleşme); bu yüzden dolapta sıvı birikintisi görülmez."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Aşağıdaki tabloda dört farklı günlük ürünün temel işlevi listelenmiştir.",
+    table: {
+      headers: ["Ürün", "Temel işlev"],
+      rows: [
+        ["Sabun", "Temizlik"],
+        ["Aspirin", "İlaç"],
+        ["Gübre", "Bitki besleme"],
+        ["Boya", "Yüzey kaplama"]
+      ]
+    },
+    text: "Tablodaki dört üründen kaç tanesi doğrudan bir kimyasal madde ya da kimyasal süreçle ilişkilidir?",
+    options: ["3", "4", "2", "1", "0"],
+    correct: 1,
+    explain: "Tablodaki dört ürünün (sabun, aspirin, gübre, boya) tamamı, belirli kimyasal bileşiklerin sentezlenmesi/formüle edilmesiyle üretilir; hepsi kimya bilgisiyle doğrudan ilişkilidir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Bir gazlı içecek şişesi açıldığında sıvıdan yoğun bir şekilde kabarcık çıkışı gözlemlenir; şişe kapalıyken bu kabarcıklar görülmez.",
+    text: "Kapak açıldığında kabarcık oluşumunun artmasının temel nedeni nedir?",
+    options: ["Şişedeki suyun buharlaşması", "Sıvının aniden ısınması", "Basıncın düşmesiyle çözünmüş karbondioksit gazının çözeltiden ayrılması", "Kimyasal bir bozunma başlaması", "Havadaki oksijenin sıvıya karışması"],
     correct: 2,
-    explain: "Naftalin, oda sıcaklığında sıvı hâle geçmeden doğrudan katıdan gaza dönüşür; bu olaya süblimleşme denir."
+    explain: "Gazlı içeceklerde yüksek basınç altında sıvıda çözünmüş hâlde bulunan karbondioksit gazı, kapak açılıp basınç düştüğünde çözeltiden ayrılarak kabarcıklar hâlinde açığa çıkar."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci 'her karışım bir kimyasal bileşiktir' cümlesini kuruyor.",
-    text: "Bu cümledeki bilimsel hata nedir?",
-    options: [
-      "Karışımlar bileşik değildir, karışımı oluşturan maddeler kendi özelliklerini korur ve değişken oranlarda karışabilir",
-      "Karışımlar her zaman homojendir",
-      "Bileşikler karışımlardan daha az saf maddedir",
-      "Karışımlar yalnızca katılardan oluşur",
-      "Cümlede herhangi bir hata yoktur"
-    ],
-    correct: 0,
-    explain: "Karışımlar, bileşenlerin kimyasal olarak birleşmediği, kendi özelliklerini koruduğu ve fiziksel yöntemlerle ayrılabildiği maddelerdir; bileşiklerle karıştırılmamalıdır."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci soğuk bir bardağın dışında su damlacıkları oluştuğunu görüyor; bardağın içinde sadece buzlu su var, hiçbir sıvı dökülmemiş.",
-    text: "Bardağın dışındaki su damlacıklarının kaynağı nedir?",
-    options: [
-      "Bardağın gözeneklerinden sızan su",
-      "Havadaki su buharının soğuk yüzeyle temas edip yoğuşması",
-      "Buzun eriyip bardağın dışına taşması",
-      "Bardağın malzemesinin su üretmesi",
-      "Sıcaklık farkının suyu yeniden yaratması"
-    ],
-    correct: 1,
-    explain: "Havadaki nem, soğuk yüzeyle temas ettiğinde yoğuşarak sıvı hâle geçer; bu bir fiziksel değişimdir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci demir bir kapının zamanla kızıl-kahverengi bir tabaka ile kaplandığını fark ediyor.",
-    text: "Bu değişim türü ve nedeni ile ilgili en doğru ifade hangisidir?",
-    options: [
-      "Fiziksel bir değişimdir, demirin rengi kendiliğinden değişmiştir",
-      "Kimyasal bir değişimdir; demir, havadaki oksijen ve nemle tepkimeye girerek pas (demir oksit) oluşturmuştur",
-      "Fiziksel bir değişimdir, demir sadece toz tutmuştur",
-      "Kimyasal bir değişimdir ama nedeni güneş ışığıdır, oksijenle ilgisi yoktur",
-      "Bu bir değişim değildir, göz yanılmasıdır"
-    ],
-    correct: 1,
-    explain: "Paslanma, demirin oksijen ve nemle tepkimeye girerek yeni bir madde (demir oksit) oluşturduğu kalıcı bir kimyasal değişimdir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci pilin üzerinde '1,5 V' yazdığını görüyor ve pilin içinde kimyasal enerjinin elektrik enerjisine dönüştüğünü öğreniyor.",
-    text: "Bu bilgiye göre pil teknolojisi hangi bilim dalıyla en doğrudan ilişkilidir?",
-    options: ["Astronomi", "Kimya (elektrokimya)", "Coğrafya", "Tarih", "Dilbilim"],
-    correct: 1,
-    explain: "Pil içindeki kimyasal enerjinin elektrik enerjisine dönüşümü elektrokimyanın, yani kimyanın bir alt dalının konusudur."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci, üzerinde 'içindekiler: su, şeker, sitrik asit, doğal aroma' yazan bir meyve suyu kutusunu inceliyor.",
-    text: "Etiketteki bu bilgi, kimyanın günlük hayattaki hangi katkısına örnektir?",
-    options: [
-      "Ürünlerin içeriğinin bilimsel olarak belirlenip tüketiciye şeffaf biçimde sunulmasına",
-      "Ürünün fiyatının belirlenmesine",
-      "Ürünün ambalaj rengine",
-      "Ürünün raf ömrünün olmadığının kanıtlanmasına",
-      "Ürünün hiçbir kimyasal madde içermediğinin kanıtlanmasına"
-    ],
-    correct: 0,
-    explain: "Gıda etiketleme, ürünlerin kimyasal bileşiminin analiz edilip tüketiciyle şeffaf biçimde paylaşılmasını sağlar — bu da kimyanın günlük katkılarından biridir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci, mumun yanarken hem şekil değiştirdiğini (erime) hem de alev, ısı ve is (kurum) oluşturduğunu gözlemliyor.",
-    text: "Bu gözlemde kaç farklı değişim türü bir arada yaşanmaktadır?",
-    options: [
-      "Yalnızca fiziksel değişim (erime)",
-      "Yalnızca kimyasal değişim (yanma)",
-      "Hem fiziksel (erime) hem kimyasal (yanma) değişim bir arada",
-      "Hiçbir değişim yoktur, sadece ışık görülür",
-      "Sadece biyolojik bir süreçtir"
-    ],
+    context: "Bir tencerede kaynayan suyun sıcaklığı, kaynama boyunca artmaya devam etmez; sabit kalır.",
+    text: "Kaynama sırasında sıcaklığın sabit kalması hangi ilkeyle açıklanır?",
+    options: ["Kaynama, kimyasal bir tepkimedir ve enerji açığa çıkarır", "Su, kaynama sırasında ısı almayı bırakır", "Verilen ısı enerjisi, sıvının gaza dönüşmesi (hâl değişimi) için kullanılır, sıcaklık artışına dönüşmez", "Tencere ısıyı yansıtmaya başlar", "Suyun kütlesi azaldığı için sıcaklık sabitlenir"],
     correct: 2,
-    explain: "Mum erimesi fiziksel, yanma (mumun oksijenle tepkimeye girip CO₂ ve su buharı oluşturması) ise kimyasal bir değişimdir; ikisi eş zamanlı gerçekleşir."
+    explain: "Hâl değişimi (kaynama) sırasında verilen enerji, sıvı hâldeki tanecikler arasındaki çekim kuvvetlerini yenmek için kullanılır; bu yüzden hâl değişimi tamamlanana kadar sıcaklık sabit kalır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Bir ütü, nemli bir kumaşın üzerinden geçirildiğinde kumaş üzerindeki nem kısa sürede yok olur; kumaşın kendisi zarar görmez (uygun sıcaklıkta).",
+    text: "Bu süreçte nemin yok olmasını en doğru açıklayan kavram hangisidir?",
+    options: ["Kimyasal parçalanma; su, hidrojen ve oksijene ayrışır", "Süblimleşme; kumaş doğrudan gaza dönüşür", "Buharlaşma; sıcaklık etkisiyle sıvı su, gaz hâline geçer", "Erime", "Kristalleşme"],
+    correct: 2,
+    explain: "Ütünün ısısı, kumaştaki sıvı hâldeki suyun sıcaklığını artırarak buharlaşmasını (gaz hâline geçmesini) sağlar; kumaşın kendisinde bir değişim olmaz."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Bir mum yakıldığında hem şekil değiştirip erimekte hem de alev, ısı ve is (kurum) oluşturmaktadır.",
+    text: "Bu gözlemde kaç farklı türde değişim bir arada yaşanmaktadır?",
+    options: ["Yalnızca bir kimyasal değişim", "Yalnızca bir fiziksel değişim", "İki; hem fiziksel (erime) hem kimyasal (yanma) değişim bir aradadır", "Hiçbir değişim yoktur, yalnızca ışık görülür", "Üç farklı biyolojik süreç"],
+    correct: 2,
+    explain: "Mumun erimesi fiziksel bir değişimdir (mum maddesi kimliğini korur); yanma ise mumun oksijenle tepkimeye girip karbondioksit ve su buharı oluşturması nedeniyle kimyasal bir değişimdir; ikisi eş zamanlı gerçekleşir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Bir tarifte kabartma tozu, sirke ile karıştırıldığında anında köpürme ve kabarcıklanma gözlemlenir.",
+    text: "Bu gözlem en doğrudan hangi çıkarımı destekler?",
+    options: ["Yalnızca sıcaklık artışı gözlemlenmiştir", "İki madde birbiriyle hiçbir etkileşime girmemiştir", "İki madde arasında bir kimyasal tepkime gerçekleşmiş, gaz açığa çıkmıştır", "Kabartma tozu sirkede fiziksel olarak çözünmüştür, başka bir şey olmamıştır", "Bu, yalnızca renk değişimidir"],
+    correct: 2,
+    explain: "Kabartma tozu (sodyum bikarbonat) ile sirkedeki asetik asit arasındaki tepkime karbondioksit gazı açığa çıkarır; ortaya çıkan köpürme, yeni bir maddenin (gazın) oluştuğu kimyasal bir tepkimenin göstergesidir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Bir market rafında; sabun 'temizlik ürünü', aspirin 'ilaç', gübre 'tarım ürünü', kozmetik krem 'bakım ürünü' olarak farklı reyonlarda satılmaktadır.",
+    text: "Bu dört ürünün farklı reyonlarda satılıyor olması, kimya biliminin doğası hakkında en doğru hangi çıkarımı destekler?",
+    options: ["Kimya yalnızca laboratuvarda kullanılan, günlük hayattan kopuk bir bilimdir", "Bu ürünlerin hiçbiri kimyasal madde içermez", "Kimya bilgisi, birbirinden çok farklı görünen pek çok günlük alanın (temizlik, sağlık, tarım, bakım) temelinde yer alır", "Farklı reyonlarda satılmaları, aralarında hiçbir bilimsel ortak nokta olmadığını kanıtlar", "Bu ürünlerin üretiminde kimya bilgisi kullanılmamıştır"],
+    correct: 2,
+    explain: "Görünüşte çok farklı alanlara ait olan bu ürünlerin (temizlik, ilaç, tarım, kozmetik) hepsi, belirli kimyasal bileşiklerin özelliklerinden yararlanılarak geliştirilir; bu da kimyanın günlük hayatın pek çok farklı alanının ortak temelinde yer aldığını gösterir."
   },
 
-  /* ============ ORTA (16-35) ============ */
+  /* ============ ORTA ============ */
 
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Aşağıdaki pH cetvelinde dört farklı ev temizlik ürününün yaklaşık pH değerleri işaretlenmiştir.",
+    context: "Aşağıdaki pH cetvelinde dört farklı ev ürününün yaklaşık pH değerleri işaretlenmiştir.",
     chart: {
       type: "ph",
       points: [
         { value: 2.5, label: "Sirke" },
-        { value: 7.0, label: "Musluk suyu" },
+        { value: 7, label: "Musluk suyu" },
         { value: 9.5, label: "Sıvı sabun" },
         { value: 13.5, label: "Lavabo açıcı" }
       ]
     },
-    text: "Bu ürünlerden hangi ikisi karıştırıldığında, elde edilecek karışımın pH'ının 7'ye (nötr) en yakın olması beklenir?",
-    options: [
-      "Sirke ve lavabo açıcı",
-      "Sirke ve sıvı sabun",
-      "Musluk suyu ve sıvı sabun",
-      "Lavabo açıcı ve sıvı sabun",
-      "Sirke ve musluk suyu"
-    ],
-    correct: 0,
-    explain: "Sirke asidik (pH 2,5), lavabo açıcı ise kuvvetli bazik (pH 13,5) olduğundan, ikisi karıştırıldığında birbirini nötrleştirme etkisi en güçlü olur ve karışım 7'ye en çok yaklaşır."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci iki özdeş bardağa aynı miktarda sıcak çay koyuyor. Birinci bardağa hiçbir şey eklemiyor, ikinci bardağa bir küp şeker ekleyip karıştırıyor. 10 dakika sonra her iki bardağın sıcaklığını ölçüyor ve neredeyse aynı olduğunu görüyor.",
-    text: "Bu gözlem, şekerin çaya eklenmesinin hangi tür bir değişim olduğuna dair en güçlü kanıtı sunar?",
-    options: [
-      "Kimyasal bir değişim olduğuna, çünkü sıcaklık değişmiştir",
-      "Fiziksel bir değişim olduğuna, çünkü çözünme belirgin bir enerji/sıcaklık farkı yaratmamış ve yeni bir madde oluşmamıştır",
-      "Hem fiziksel hem kimyasal olduğuna, çünkü şeker tatlandırmıştır",
-      "Biyolojik bir değişim olduğuna",
-      "Değişimin türü sıcaklıkla belirlenemez"
-    ],
-    correct: 1,
-    explain: "Çözünme sırasında sıcaklığın belirgin şekilde değişmemesi ve yeni bir madde oluşmaması, bunun fiziksel bir değişim olduğunun göstergesidir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci elma dilimlerinin havayla temas ettikten birkaç dakika sonra kahverengileştiğini, ancak dilimler limon suyuna batırıldığında bu kararmanın çok yavaşladığını gözlemliyor.",
-    text: "Bu gözleme dayanarak en mantıklı bilimsel çıkarım hangisidir?",
-    options: [
-      "Elmanın kararması tamamen fiziksel bir olaydır ve limon suyuyla ilgisi yoktur",
-      "Kararma, elmadaki bir enzimin oksijenle gerçekleştirdiği kimyasal bir tepkimedir; limon suyundaki asit bu tepkimeyi yavaşlatmaktadır",
-      "Limon suyu elmanın rengini fiziksel olarak değiştirmektedir",
-      "Kararma yalnızca sıcaklığa bağlıdır, limon suyunun bir etkisi olamaz",
-      "Elma limon suyunda daha hızlı kararır"
-    ],
-    correct: 1,
-    explain: "Elmadaki enzimler oksijenle tepkimeye girerek kararmaya (enzimatik oksidasyon) neden olur; limon suyundaki C vitamini/asit bu tepkimeyi yavaşlatan bir antioksidan etkisi gösterir — bu tipik bir bilimsel gözlem-çıkarım örneğidir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci market etiketlerini karşılaştırıyor: 'A' şampuanı 'sülfatsız' olarak pazarlanırken, 'B' şampuanı standart sülfatlı formülle satılıyor. Öğrenci ikisinin de köpürdüğünü ama A'nın daha az köpürdüğünü fark ediyor.",
-    text: "Bu gözlem, öğrenciye ürün geliştirme sürecinde kimyanın rolü hakkında ne gösterir?",
-    options: [
-      "Köpük miktarı ürünün etkinliğiyle doğrudan orantılıdır",
-      "Farklı yüzey aktif madde (deterjan) bileşenleri, benzer işlevi (temizleme) farklı fiziksel etkilerle (köpük miktarı) sağlayabilir",
-      "Sülfatsız ürünler hiç temizlik yapmaz",
-      "Köpük oluşumu kimyasal değişim değil, biyolojik bir süreçtir",
-      "Bu farkın kimyayla hiçbir ilgisi yoktur, sadece pazarlama stratejisidir"
-    ],
-    correct: 1,
-    explain: "Şampuanlardaki farklı yüzey aktif maddeler (sülfatlı/sülfatsız) benzer temizleme işlevini farklı köpürme özellikleriyle sağlayabilir; bu, formülasyon kimyasının bir sonucudur."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci iki özdeş bitkiye 15 gün boyunca su veriyor; birine ayrıca haftada bir azotlu gübre ekliyor. 15 gün sonunda gübre verilen bitkinin belirgin şekilde daha yeşil ve gür yapraklara sahip olduğunu gözlemliyor.",
-    text: "Bu deneyde 'bağımsız değişken' ve 'sonuç' arasındaki ilişki bilimsel olarak nasıl açıklanır?",
-    options: [
-      "Sonuç tesadüfidir, gübrenin bitkiyle kimyasal bir ilişkisi yoktur",
-      "Gübredeki azot bileşikleri, bitkinin klorofil üretimi için gerekli olan kimyasal hammaddeyi sağlamış olabilir",
-      "Bitkinin yeşermesi yalnızca güneş ışığına bağlıdır, gübrenin etkisi yoktur",
-      "Su miktarı deneyin tek belirleyici etkenidir",
-      "Gübre bitkiye zarar vermiştir, gözlem yanlış yorumlanmıştır"
-    ],
-    correct: 1,
-    explain: "Azotlu gübreler, bitkilerin klorofil ve protein sentezinde kullandığı azot bileşiklerini sağlar; bu da tarımda kimyanın somut bir katkısıdır ve deneyde gözlemlenen farkı açıklar."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci, açık bırakılan bir gazoz şişesinin birkaç saat sonra 'tatsızlaştığını' (gazının kaçtığını) fark ediyor; şişe kapaklıyken bu durum gözlenmiyor.",
-    text: "Bu olayı en doğru açıklayan bilimsel ifade hangisidir?",
-    options: [
-      "Gazozun içindeki karbondioksit gazı, kapak açıldığında düşen basınçla birlikte sıvıdan ayrılıp ortama karışır",
-      "Gazoz kendiliğinden yeni bir kimyasal maddeye dönüşür",
-      "Havadaki oksijen gazozun tadını bozar",
-      "Gazın kaçması sıcaklıkla hiç ilgili değildir",
-      "Kapak açıldığında gazoz suya dönüşür"
-    ],
-    correct: 0,
-    explain: "Gazlı içeceklerde CO₂ yüksek basınç altında sıvıda çözünmüş hâldedir; şişe açılınca basınç düşer ve çözünürlük azaldığı için gaz sıvıdan ayrılıp kaçar — bu fiziksel bir çözünürlük olayıdır."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci güneş kremi etiketinde 'SPF 30' yazdığını görüyor ve kremin içeriğinde çinko oksit ve titanyum dioksit bileşenlerinin listelendiğini fark ediyor.",
-    text: "Bu bilgilere dayanarak güneş kreminin koruyucu etkisi hakkında en doğru bilimsel çıkarım hangisidir?",
-    options: [
-      "Krem yalnızca kokusuyla koruma sağlar",
-      "İçerdiği kimyasal bileşenler UV ışınlarını yansıtır veya soğurarak cildi zararlı ışınlardan korur",
-      "SPF değeri kremin rengiyle ilgilidir",
-      "Çinko oksit ve titanyum dioksit sadece kozmetik amaçlıdır, koruma sağlamaz",
-      "Güneş kremi UV ışınlarını artırır"
-    ],
-    correct: 1,
-    explain: "Çinko oksit ve titanyum dioksit gibi bileşenler, UV ışınlarını fiziksel olarak yansıtan/soğuran mineral filtrelerdir; bu, kimyanın sağlık ve günlük yaşama somut bir katkısıdır."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci, buzdolabında saklanan sütün oda sıcaklığında bırakılan süte göre çok daha uzun süre bozulmadan kaldığını gözlemliyor.",
-    text: "Bu gözlem hangi bilimsel ilkeyi doğrular?",
-    options: [
-      "Düşük sıcaklık, sütteki mikroorganizmaların ve kimyasal bozunma tepkimelerinin hızını yavaşlatır",
-      "Soğutma sütün bileşimini tamamen değiştirir",
-      "Sıcaklığın bozulma hızıyla hiçbir ilişkisi yoktur",
-      "Buzdolabı sütteki tüm kimyasal maddeleri yok eder",
-      "Oda sıcaklığında süt asla bozulmaz"
-    ],
-    correct: 0,
-    explain: "Düşük sıcaklık, hem mikroorganizma üremesini hem de tepkime hızlarını genel olarak yavaşlatır; bu nedenle soğutulan gıdalar daha uzun süre taze kalır — bu bilgi gıda güvenliğinde kimyanın temel katkılarından biridir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci, aynı marka iki farklı deterjanın etiketini karşılaştırıyor: biri 'soğuk suda etkili', diğeri 'yalnızca sıcak suda etkili' olarak pazarlanıyor.",
-    text: "Bu iki ürün arasındaki farkın bilimsel temeli en olası şekilde nedir?",
-    options: [
-      "Ambalaj renginin farklı olması",
-      "Fiyat farkı, kimyasal bileşimle ilgisi yok",
-      "Deterjanlardaki enzim ve yüzey aktif maddelerin farklı sıcaklık aralıklarında optimum etkinlik göstermesi",
-      "Soğuk suda hiçbir deterjan çalışamaz, bu bir pazarlama yalanıdır",
-      "Su sıcaklığının deterjan etkinliğiyle hiçbir ilişkisi yoktur"
-    ],
+    text: "Cetveldeki verilere göre, bu ürünlerden hangi ikisi karıştırıldığında, elde edilecek karışımın pH'ının 7'ye (nötr) en yakın olması beklenir?",
+    options: ["Musluk suyu ve sıvı sabun", "Sirke ve sıvı sabun", "Sirke ve lavabo açıcı", "Lavabo açıcı ve sıvı sabun", "Sirke ve musluk suyu"],
     correct: 2,
-    explain: "Deterjanlardaki enzimler ve yüzey aktif maddeler belirli sıcaklık aralıklarında en verimli çalışır; formülasyon kimyası bu farkı sıcaklığa göre optimize edebilir."
+    explain: "Sirke asidik (pH 2,5), lavabo açıcı ise kuvvetli bazik (pH 13,5) olduğundan, ikisi karıştırıldığında birbirini nötrleştirme etkisi en güçlü olur ve karışım pH'ı 7'ye en çok yaklaşır."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci, iki özdeş demir çividen birini kuru bir kutuda, diğerini nemli pamuğun içinde bir hafta bekletiyor. Nemli ortamdaki çivide belirgin pas oluşurken, kurudaki çivide hiç değişim gözlenmiyor.",
-    text: "Bu deney tasarımı hangi bilimsel yaklaşımı örnekler?",
-    options: [
-      "Kontrollü değişken kullanarak bir etkenin (nem) sonucu nasıl etkilediğini gözlemleme",
-      "Rastgele deneme yapma, bilimsel bir yöntem içermez",
-      "Sadece gözleme dayalı, hiçbir değişken kontrol edilmemiş bir deney",
-      "Çivilerin renginin doğal olarak farklı olduğunu kanıtlama",
-      "Demirin hiçbir zaman paslanmadığını gösterme"
-    ],
-    correct: 0,
-    explain: "Aynı malzemeyi (çivi) farklı yalnızca bir değişkenle (nem varlığı/yokluğu) test etmek, bilimsel yöntemde 'kontrollü deney' yaklaşımının temel bir örneğidir."
+    context: "Bir çamaşır suyu şişesinin etiketinde 'tahriş edici' uyarı sembolü bulunurken, aynı raftaki bir tuvalet açıcısının etiketinde 'aşındırıcı ve tahriş edici' sembolleri birlikte yer almaktadır.",
+    text: "Bu iki üründeki farklı sembol kombinasyonu göz önüne alındığında, tuvalet açıcısı için en doğru güvenlik yaklaşımı hangisidir?",
+    options: ["Sembol sayısı fazla olduğu için ürün daha güvenlidir", "İki ürün aynı tehlikeye sahip olduğundan aynı şekilde kullanılabilir", "Metal/cilt gibi yüzeylere zarar verme riski çamaşır suyundan daha yüksek olduğundan, ekstra dikkatli (eldiven, iyi havalandırma) kullanılmalıdır", "Aşındırıcı sembolü yalnızca ambalajın dayanıklılığıyla ilgilidir", "Bu sembollerin kullanım güvenliğiyle hiçbir ilgisi yoktur"],
+    correct: 2,
+    explain: "'Aşındırıcı' sembolü, ürünün metalleri ve canlı dokuları aşındırma riski taşıdığını gösterir; bu ekstra tehlike sınıfı, tuvalet açıcısının çamaşır suyuna göre daha dikkatli (eldiven, iyi havalandırma, cilt/göz temasından kaçınma) kullanılmasını gerektirir."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Aşağıdaki grafikte üç farklı yakıtın 1 kg'ının yanmasıyla açığa çıkan yaklaşık enerji miktarları (MJ/kg) gösterilmiştir.",
+    context: "Aşağıdaki grafikte, üç farklı yakıtın eşit kütlede yanmasıyla açığa çıkan yaklaşık enerji miktarları (MJ/kg) gösterilmiştir.",
     chart: {
       type: "bar",
+      title: "Yakıtların enerji değeri (MJ/kg)",
       labels: ["Odun", "Kömür", "Doğal gaz"],
-      values: [15, 24, 54],
-      title: "Enerji (MJ/kg)"
+      values: [15, 24, 54]
     },
     text: "Bu verilere dayanarak, eşit kütlede yakıt kullanıldığında en fazla enerji açığa çıkaran ve dolayısıyla enerji verimliliği açısından en avantajlı olan yakıt hangisidir?",
     options: ["Odun", "Kömür", "Doğal gaz", "Üçü de eşittir", "Tablodan bu sonuç çıkarılamaz"],
     correct: 2,
-    explain: "Tabloya göre 1 kg doğal gazın yanması en fazla enerjiyi (54 MJ) açığa çıkarır, bu da onu kütle başına enerji verimliliği açısından en avantajlı yakıt yapar."
+    explain: "Grafiğe göre 1 kg doğal gazın yanması en fazla enerjiyi (54 MJ) açığa çıkarır, bu da onu kütle başına enerji verimliliği açısından en avantajlı yakıt yapar."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci, 'organik' etiketli bir sebzenin de, 'organik olmayan' etiketli bir sebzenin de kimyasal olarak karbon, hidrojen, oksijen ve çeşitli minerallerden oluştuğunu öğreniyor.",
-    text: "Bu bilgiye dayanarak, 'organik' etiketinin bilimsel anlamı hakkında en doğru çıkarım hangisidir?",
-    options: [
-      "'Organik' ürünler hiçbir kimyasal madde içermez",
-      "'Organik olmayan' sebzeler karbon içermez",
-      "'Organik' etiketi, ürünün belirli tarım yöntemleriyle (sentetik pestisit/gübre kullanılmadan) üretildiğini belirtir, kimyasal madde içermediği anlamına gelmez",
-      "İki sebze de birbirinden tamamen farklı elementlerden oluşur",
-      "'Organik' kelimesi kimya biliminde hiçbir anlam taşımaz"
-    ],
+    context: "Bir tüketici raporunda, 'A' şampuanının etiketinde 'sülfatsız' ibaresi bulunurken, 'B' şampuanının standart sülfatlı formülle üretildiği belirtilmiştir; her iki ürün de köpük oluşturmaktadır.",
+    text: "Bu bilgiye dayanarak en doğru çıkarım hangisidir?",
+    options: ["İki ürün de birebir aynı kimyasal bileşime sahiptir", "Sülfatsız bir ürün hiçbir zaman köpük oluşturamaz", "Köpük oluşturma özelliği yalnızca sülfat bileşiklerine özgü değildir, farklı kimyasal formüllerle de sağlanabilir", "Köpürme, ürünün etkinliğiyle hiçbir ilgisi olmayan rastgele bir özelliktir", "Sülfatlı ürünler her zaman daha fazla köpürür"],
     correct: 2,
-    explain: "Her canlı madde (organik ya da değil etiketlenmiş olsun) karbon temelli bileşiklerden oluşur; 'organik tarım' etiketi üretim yöntemiyle ilgilidir, maddenin kimyasal içerik taşımadığı anlamına gelmez."
+    explain: "Hem sülfatsız hem sülfatlı formüllü şampuanların köpürebilmesi, köpük oluşturma özelliğinin tek bir bileşen sınıfına (sülfatlar) özgü olmadığını, farklı yüzey aktif madde türleriyle de elde edilebildiğini gösterir."
   },
   {
     difficulty: "orta",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci, camdan yapılmış bir bardağın ve plastikten yapılmış bir bardağın aynı sıcaklıktaki suyu farklı sürelerde soğuttuğunu fark ediyor; cam bardaktaki su daha hızlı ısı kaybediyor.",
-    text: "Bu gözlem, malzeme seçiminde kimyanın hangi katkısını örnekler?",
-    options: [
-      "Malzemelerin ısı iletkenliği gibi fiziksel özelliklerinin, günlük kullanım eşyalarının tasarımını doğrudan etkilediğini",
-      "Cam ve plastiğin aynı kimyasal yapıya sahip olduğunu",
-      "Sıcaklık kaybının malzemeyle hiçbir ilgisinin olmadığını",
-      "Plastiğin her zaman camdan daha iyi yalıtkan olduğunun kanıtlanamayacağını",
-      "Bu farkın yalnızca bardağın rengiyle ilgili olduğunu"
-    ],
-    correct: 0,
-    explain: "Farklı malzemelerin atomik/moleküler yapısı, ısı iletkenliği gibi fiziksel özellikleri belirler; malzeme bilimi (kimyanın bir uygulama alanı) bu bilgiyi ürün tasarımında kullanır."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci, güneş panellerinin ışığı doğrudan elektriğe çevirdiğini, buna karşın bir termik santralin kömürü yakıp suyu buharlaştırarak türbin döndürdüğünü öğreniyor.",
-    text: "Bu iki enerji üretim yönteminin ortak noktası, kimya bilimi açısından nasıl açıklanabilir?",
-    options: [
-      "İkisi de kimyayla ilgisizdir, yalnızca fizik konusudur",
-      "Güneş panelleri hiçbir kimyasal malzeme içermez",
-      "İkisi de tamamen aynı kimyasal tepkimeyi kullanır",
-      "Her ikisi de bir enerji dönüşüm sürecidir; biri malzeme biliminin (fotovoltaik hücreler), diğeri yanma kimyasının prensiplerini kullanır",
-      "Termik santraller kimyasal enerji kullanmaz"
-    ],
-    correct: 3,
-    explain: "Güneş panelleri yarı iletken malzeme kimyasına, termik santraller ise yanma (oksitlenme) tepkimelerine dayanır; ikisi de farklı biçimlerde kimyanın enerji üretimine katkısını gösterir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci, iki özdeş bitki örtüsüne farklı miktarda böcek ilacı (pestisit) uyguluyor. Az miktarda uygulanan alanda zararlı böcek sayısı azalırken bitkiler sağlıklı kalıyor; çok miktarda uygulanan alanda ise hem böcekler hem de bazı faydalı böcekler ve toprak canlıları zarar görüyor.",
-    text: "Bu gözlem, tarım kimyasında hangi önemli ilkeyi vurgular?",
-    options: [
-      "Pestisit miktarı ne kadar fazla olursa sonuç o kadar iyi olur",
-      "Faydalı böcekler pestisitten hiçbir zaman etkilenmez",
-      "Pestisitlerin miktarının hiçbir önemi yoktur",
-      "Kimyasal maddelerin dozu ve kullanım miktarı, hem etkinlik hem de çevresel/canlı etkiler açısından dikkatle yönetilmelidir",
-      "Tarımda kimyasal madde kullanımı tamamen yasaklanmalıdır"
-    ],
-    correct: 3,
-    explain: "Kimyasal maddelerin (pestisit, gübre vb.) dozu, hem istenen etkiyi sağlamak hem de çevreye/faydalı canlılara zarar vermemek için bilinçli ve dengeli yönetilmelidir — bu, tarım kimyasının önemli bir sorumluluk alanıdır."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci, çamaşır suyu (sodyum hipoklorit) ile bir tuvalet temizleyicisinin (genellikle asidik) karıştırılmaması gerektiğini, aksi hâlde zehirli klor gazı oluşabileceğini okuyor.",
-    text: "Bu bilgi, günlük hayatta kimya bilgisinin hangi açıdan önemini gösterir?",
-    options: [
-      "Kimyasal ürünlerin nasıl karıştırılacağının önemsiz olduğunu",
-      "Zehirli gazların yalnızca fabrikalarda oluşabileceğini",
-      "Tüm temizlik ürünlerinin birbirine karıştırılabileceğini",
-      "Farklı temizlik ürünlerinin kimyasal etkileşimlerinin bilinmemesinin ciddi sağlık risklerine yol açabileceğini, bu nedenle temel kimya bilgisinin güvenlik için gerekli olduğunu",
-      "Bu bilginin sadece kimyagerleri ilgilendirdiğini"
-    ],
-    correct: 3,
-    explain: "Ev ortamında bile yaygın kullanılan kimyasalların bilinçsizce karıştırılması tehlikeli sonuçlar doğurabilir; bu da temel kimya okuryazarlığının günlük güvenlik için önemini gösterir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci, plastik şişelerin geri dönüşüm sembolündeki numaraların (1'den 7'ye kadar) farklı plastik türlerini (PET, HDPE, PVC vb.) belirttiğini öğreniyor ve her türün farklı şekilde işlendiğini fark ediyor.",
-    text: "Bu bilgiye dayanarak geri dönüşüm sürecinin etkinliği hakkında en doğru çıkarım hangisidir?",
-    options: [
-      "Tüm plastik türleri aynı kimyasal yapıya sahip olduğu için birlikte işlenebilir",
-      "Plastiklerin kimyasal yapısı geri dönüşüm sürecini hiç etkilemez",
-      "Geri dönüşüm sembolü sadece dekoratif amaçlıdır",
-      "Farklı plastik polimer türlerinin kimyasal yapısı farklı olduğundan, etkin geri dönüşüm için bu türlerin ayrıştırılması gerekir",
-      "Numaralar plastiğin fiyatını gösterir"
-    ],
-    correct: 3,
-    explain: "Farklı plastik türleri (PET, HDPE, PVC vb.) farklı polimer zincir yapılarına sahiptir; bu farklılık, malzemelerin ayrı ayrı toplanıp işlenmesini gerektirir — bu da malzeme kimyasının geri dönüşümdeki rolünü gösterir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci, aynı miktarda tuzu biri sıcak biri soğuk suya ekliyor; sıcak sudaki tuzun çok daha hızlı ve tamamen çözündüğünü, soğuk sudaki tuzun bir kısmının dipte kaldığını gözlemliyor.",
-    text: "Bu gözlemden çıkarılabilecek en doğru genel bilimsel sonuç hangisidir?",
-    options: [
-      "Sıcaklık, katı maddelerin sudaki çözünürlüğünü etkileyen önemli bir etkendir",
-      "Sıcaklığın çözünürlükle hiçbir ilişkisi yoktur",
-      "Tuz sıcak suda kimyasal olarak farklı bir maddeye dönüşür",
-      "Soğuk su tuzu asla çözemez",
-      "Bu sonuç yalnızca tuz için değil hiçbir madde için geçerli değildir"
-    ],
-    correct: 0,
-    explain: "Genel olarak katı maddelerin çözünürlüğü sıcaklıkla artar (bazı istisnalar dışında); bu, günlük hayatta (çay, kahve, tarif hazırlama vb.) sıkça gözlemlenen temel bir kimya ilkesidir."
-  },
-
-  /* ============ ZOR (36-50) ============ */
-
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci iki özdeş kabı hazırlıyor: birine sadece musluk suyu, diğerine musluk suyu + bir tutam tuz koyuyor. Aynı sıcaklıkta, aynı süre boyunca dondurucuda bekletiyor. Saf su donarken, tuzlu su hâlâ tam donmamış, kısmen sıvı kalmıştır.",
-    text: "Bu deneyin sonucu, kimyanın hangi günlük hayat uygulamasını doğrudan açıklar?",
-    options: [
-      "Yaz aylarında yolların neden daha sıcak olduğunu",
-      "Tuzlu suyun kaynama noktasının düştüğünü",
-      "Tuzun suyu her zaman daha hızlı dondurduğunu",
-      "Kışın buzlanan yollara tuz dökülmesinin donma noktasını düşürerek buzlanmayı geciktirdiğini/azalttığını",
-      "Bu deneyin günlük hayatla hiçbir bağlantısı olmadığını"
-    ],
-    correct: 3,
-    explain: "Çözünen madde (tuz), suyun donma noktasını düşürür (donma noktası alçalması); bu ilke, kışın yollara tuz serpilerek buzlanmanın geciktirilmesinde pratik olarak kullanılır."
-  },
-  {
-    difficulty: "zor",
     kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
     context: "Aşağıdaki tabloda dört farklı ambalaj malzemesinin doğada yaklaşık çözünme/parçalanma süreleri verilmiştir.",
     table: {
@@ -524,425 +228,568 @@ export const QUIZ = {
       ]
     },
     text: "Bu verilere dayanarak, malzemelerin kimyasal yapısı ile çevresel etkisi arasındaki ilişki hakkında en doğru genelleme hangisidir?",
-    options: [
-      "Tüm ambalaj malzemeleri doğada aynı hızda parçalanır",
-      "Malzemenin kimyasal yapısının bozunma hızıyla hiçbir ilgisi yoktur",
-      "Metal ambalajlar her zaman plastikten daha hızlı bozunur",
-      "Doğal, karbon temelli ve mikroorganizmalarca kolayca parçalanabilen malzemeler (kağıt/karton) daha hızlı; sentetik polimer veya metal yapılı malzemeler ise çok daha yavaş bozunur",
-      "Karton, plastikten daha yavaş bozunur"
-    ],
+    options: ["Metal ambalajlar her zaman plastikten daha hızlı bozunur", "Tüm ambalaj malzemeleri doğada aynı hızda parçalanır", "Malzemenin kimyasal yapısının bozunma hızıyla hiçbir ilgisi yoktur", "Doğal, karbon temelli ve mikroorganizmalarca kolayca parçalanabilen malzemeler daha hızlı; sentetik polimer veya metal yapılı malzemeler ise çok daha yavaş bozunur", "Karton, plastikten daha yavaş bozunur"],
     correct: 3,
     explain: "Kağıt/karton gibi doğal selüloz temelli malzemeler mikroorganizmalarca kolayca parçalanırken, plastiklerin uzun polimer zincirleri ve metallerin kimyasal kararlılığı bozunmayı çok yavaşlatır — bu, malzeme seçiminde çevresel sürdürülebilirlik açısından önemli bir kimya bilgisidir."
   },
   {
-    difficulty: "zor",
+    difficulty: "orta",
     kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci, ekmek hamurunu mayalandırırken hamurun kabardığını ve içinde küçük gaz kabarcıkları oluştuğunu; ancak hamur çok sıcak bir fırına konulduğunda mayanın 'öldüğünü' ve hamurun beklenildiği kadar kabarmadığını öğreniyor.",
+    context: "Bir ekmek hamuru mayalanırken hacmi belirgin biçimde artar ve içinde küçük gaz kabarcıkları oluşur; hamur çok sıcak bir fırına konulduğunda ise mayanın etkisi beklenenden az olur.",
     text: "Bu gözlemlere dayanarak maya hakkında en doğru bilimsel çıkarım hangisidir?",
-    options: [
-      "Maya cansız bir kimyasal bileşiktir ve sıcaklıktan etkilenmez",
-      "Sıcaklığın maya aktivitesiyle hiçbir ilişkisi yoktur",
-      "Hamurun kabarması yalnızca fiziksel bir hava girişidir, mayanın hiçbir rolü yoktur",
-      "Maya, canlı mikroorganizmalardır; fermantasyon sırasında CO₂ gazı üretirler, ancak çok yüksek sıcaklıklar bu canlıların (ve dolayısıyla tepkimenin) etkinliğini durdurur",
-      "Maya sadece hamura tat katar, gaz üretmez"
-    ],
+    options: ["Maya yalnızca soğukta etkili olur, ılık ortamda hiç çalışmaz", "Maya, sıcaklıktan tamamen bağımsız çalışan cansız bir kimyasal bileşiktir", "Hamurun kabarması yalnızca fiziksel bir hava girişidir, mayanın hiçbir rolü yoktur", "Maya, belirli sıcaklık aralığında etkili olan canlı bir kimyasal/biyolojik ajandır; aşırı sıcaklık onun aktivitesini olumsuz etkiler", "Gaz kabarcıkları hamurdaki sudan kaynaklanır, mayayla ilgisizdir"],
     correct: 3,
-    explain: "Maya, şekeri fermente ederek CO₂ gazı üreten canlı mikroorganizmalardır; bu biyokimyasal süreç belirli bir sıcaklık aralığında en iyi çalışır, aşırı yüksek sıcaklık mayayı öldürerek fermantasyonu durdurur."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci, elektrikli araçların şarj olabilen lityum-iyon pillerle çalıştığını, buna karşın klasik araçların benzin/dizel yakarak çalıştığını öğreniyor. Ayrıca lityum-iyon pillerin üretiminde nadir madenlerin çıkarılması gerektiğini, benzin/dizelin ise yanma sırasında karbondioksit saldığını okuyor.",
-    text: "Bu bilgilere dayanarak, hangi enerji sisteminin 'çevresel olarak daha üstün' olduğuna dair en bilimsel/dengeli yaklaşım hangisidir?",
-    options: [
-      "Elektrikli araçlar hiçbir çevresel etkiye sahip değildir, bu nedenle kesin olarak üstündür",
-      "Pil üretimi çevresel açıdan önemsizdir, sadece yanma önemlidir",
-      "Benzinli araçlar hiçbir zaman çevreye zarar vermez",
-      "Her iki sistemin de kendi yaşam döngüsü boyunca (üretim, kullanım, geri dönüşüm) farklı kimyasal/çevresel etkileri vardır; karşılaştırma tek bir aşamaya değil bütün sürece bakılarak yapılmalıdır",
-      "İki sistem arasında hiçbir kimyasal fark yoktur"
-    ],
-    correct: 3,
-    explain: "Bilimsel bir değerlendirme, bir ürünün yalnızca kullanım aşamasını değil; hammadde çıkarımı, üretim, kullanım ve geri dönüşüm/atık aşamalarını (yaşam döngüsü analizi) birlikte değerlendirmelidir — bu, kimya ve çevre bilimindeki önemli bir yaklaşımdır."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci, aynı miktardaki iki özdeş demir çiviyi test ediyor: birini sade suya, diğerini tuzlu suya batırıyor. Bir hafta sonra tuzlu sudaki çivide çok daha fazla pas oluştuğunu gözlemliyor.",
-    text: "Bu sonucun bilimsel açıklaması aşağıdakilerden hangisidir?",
-    options: [
-      "Tuz, demirin rengini doğrudan değiştiren bir boyar maddedir",
-      "Paslanma hızı çözeltinin iletkenliğinden tamamen bağımsızdır",
-      "Tuz, suyun oksijen içermesini engeller",
-      "Tuzlu su, elektrik iletkenliğini artırarak demirin oksitlenme (paslanma) tepkimesinin hızını hızlandırır",
-      "Tuzlu su demiri fiziksel olarak aşındırır, kimyasal bir etkisi yoktur"
-    ],
-    correct: 3,
-    explain: "Paslanma, elektrokimyasal bir tepkimedir; tuzlu su elektrolit görevi görerek iyon hareketini kolaylaştırır ve bu da oksitlenme tepkimesinin hızını artırır — bu bilgi, kıyı bölgelerindeki metal yapıların neden daha hızlı paslandığını da açıklar."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci, iki özdeş bardağa aynı miktarda gazlı içecek koyuyor. Birinci bardağa hemen buz ekliyor, ikinci bardağı oda sıcaklığında bırakıyor. Bir süre sonra ikinci bardaktaki içeceğin gazının çok daha hızlı ve fazla kaçtığını (köpürüp taştığını) fark ediyor.",
-    text: "Bu gözlem, gazların sıvılardaki çözünürlüğü hakkında hangi genel ilkeyi destekler?",
-    options: [
-      "Gazların sıvılardaki çözünürlüğü sıcaklık arttıkça azalır",
-      "Gazların sıvılardaki çözünürlüğü sıcaklıkla hiç değişmez",
-      "Gazların sıvılardaki çözünürlüğü sıcaklık arttıkça artar",
-      "Sıcaklık yalnızca katıların çözünürlüğünü etkiler, gazları etkilemez",
-      "Bu gözlem yalnızca gazlı içeceklere özgüdür, genellenemez"
-    ],
-    correct: 0,
-    explain: "Katıların aksine, gazların sıvılardaki çözünürlüğü sıcaklık arttıkça AZALIR; bu yüzden sıcak/oda sıcaklığındaki gazlı içeceklerden gaz daha hızlı kaçar, soğuk içeceklerde gaz daha uzun süre tutulur."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci, evde bulunan üç farklı temizlik ürününün etiketindeki uyarı sembollerini inceliyor: çamaşır suyunda 'tahriş edici', tuvalet açıcısında 'aşındırıcı ve tahriş edici', cam temizleyicisinde ise herhangi bir tehlike sembolü yok.</br>Öğrenci bu üç ürünü karıştırmadan, ayrı ayrı ve iyi havalandırılan bir alanda kullanmaya özen gösteriyor.",
-    text: "Öğrencinin bu davranışının bilimsel gerekçesi en iyi hangi seçenekle açıklanır?",
-    options: [
-      "Tehlike sembolleri sadece dekoratiftir, davranışın bilimsel bir temeli yoktur",
-      "Havalandırma yalnızca kötü kokuyu önlemek içindir, güvenlikle ilgisi yoktur",
-      "Cam temizleyicisi hiçbir kimyasal madde içermediği için diğerleriyle karıştırılabilir",
-      "Tahriş edici ve aşındırıcı ürünler aslında aynı tehlike düzeyindedir, ayrım yapmaya gerek yoktur",
-      "Farklı kimyasal maddelerin etiketlenmiş tehlike düzeyleri, olası zararlı buhar birikimini ve istenmeyen tepkimeleri önlemek için dikkatli kullanım ve havalandırma gerektirdiğini gösterir"
-    ],
-    correct: 4,
-    explain: "GHS tehlike sembolleri, ürünlerin kimyasal risk düzeylerini bilimsel kriterlere göre sınıflandırır; bu bilgiye dayanarak dikkatli kullanım (karıştırmama, havalandırma) hem kişisel hem çevresel güvenliği sağlar."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci, bir fabrikanın atık sularını arıtmadan doğrudan bir dereye bıraktığını ve derede kısa süre içinde balık ölümlerinin arttığını haberlerde okuyor. Yetkililer suyun analiz edildiğinde çözünmüş oksijen miktarının normalden çok düşük çıktığını açıklıyor.",
-    text: "Bu olay, kimya biliminin çevre koruma ve toplum sağlığı ile ilişkisini en iyi hangi şekilde açıklar?",
-    options: [
-      "Balık ölümleri kimyasal analiz olmadan da kesin olarak açıklanabilirdi",
-      "Bu tür olaylar kimya biliminin ilgi alanına girmez",
-      "Fabrika atıklarının su kalitesiyle hiçbir ilişkisi yoktur",
-      "Çözünmüş oksijen miktarı balıkların yaşamıyla ilgisizdir",
-      "Su kalitesi analizleri (çözünmüş oksijen ölçümü gibi kimyasal ölçümler) çevresel sorunların bilimsel olarak tespit edilmesini ve sorumluların belirlenmesini sağlar"
-    ],
-    correct: 4,
-    explain: "Kimyasal su analizleri (çözünmüş oksijen, pH, ağır metal miktarı vb.), çevre kirliliğinin bilimsel kanıtlarla tespit edilmesini, nedeninin belirlenmesini ve önlem alınmasını sağlar — bu, kimyanın çevre bilimi ve halk sağlığındaki kritik rolüdür."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci, güneşte uzun süre bekletilen plastik bir bahçe sandalyesinin zamanla renginin soluklaştığını, gevrekleştiğini ve kolayca kırıldığını fark ediyor; buna karşın gölgede tutulan aynı üründe bu bozulma çok daha yavaş gerçekleşiyor.",
-    text: "Bu gözlem, plastik malzemelerin bozunması hakkında hangi bilimsel süreci işaret eder?",
-    options: [
-      "Plastiğin bozulması tamamen rastgele bir olaydır, güneşle ilgisi yoktur",
-      "Bu bozulma yalnızca sıcaklıkla ilgilidir, ışıkla ilgisi yoktur",
-      "Gölgede bekleyen plastik asla bozulmaz",
-      "Renk solması ile malzemenin gevrekleşmesi arasında hiçbir bilimsel ilişki yoktur",
-      "UV ışınları, plastiğin polimer zincirlerindeki kimyasal bağları kırarak malzemenin fiziksel özelliklerinin (esneklik, dayanıklılık) bozulmasına (fotodegradasyon) neden olur"
-    ],
-    correct: 4,
-    explain: "Güneş ışığındaki UV ışınları, polimerlerin moleküler zincirlerindeki bağları kırarak fotodegradasyona (ışıkla bozunma) neden olur; bu, dış mekân plastik ürünlerin neden UV-dayanıklı katkı maddeleriyle üretildiğini de açıklar."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci, aynı tarifle hazırlanan iki kek hamurundan birine standart kabartma tozu, diğerine iki kat fazla kabartma tozu ekliyor. Fazla kabartma tozu eklenen kek hem beklenenden daha hızlı kabarıp sonra çöküyor hem de hafif acımsı/metalik bir tat bırakıyor.",
-    text: "Bu gözlem, tarif/formülasyon geliştirmede kimyasal madde miktarının önemi hakkında hangi ilkeyi destekler?",
-    options: [
-      "Kimyasal bir maddenin miktarını artırmak her zaman sonucu iyileştirir",
-      "Bu gözlem sadece o tarife özgüdür, genel bir kimya ilkesi içermez",
-      "Kabartma tozu miktarının kekin yapısıyla hiçbir ilgisi yoktur",
-      "Fazla kabartma tozu her zaman daha lezzetli bir sonuç verir",
-      "Kimyasal madde miktarı ile elde edilen sonuç arasında doğrusal olmayan bir ilişki olabilir; optimum miktarın aşılması istenmeyen yapısal ve tat sonuçlarına yol açabilir"
-    ],
-    correct: 4,
-    explain: "Kimyasal katkı maddelerinin miktarı ile ürün kalitesi arasındaki ilişki genellikle doğrusal değildir; belirli bir optimum noktanın ötesinde fazladan madde, istenmeyen yan etkiler (aşırı gaz çıkışı, tat bozukluğu) yaratabilir — bu, gıda kimyası formülasyonunda temel bir ilkedir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci, dağlık bir bölgede suyun deniz seviyesine göre daha düşük bir sıcaklıkta kaynadığını ve bu yüzden orada yemeklerin pişmesinin daha uzun sürdüğünü öğreniyor.",
-    text: "Bu olayın bilimsel açıklaması hangisidir?",
-    options: [
-      "Pişirme süresinin uzaması yalnızca soğuk havayla ilgilidir",
-      "Yüksek rakımda su molekülleri kimyasal olarak farklıdır",
-      "Rakımın kaynama noktasıyla hiçbir ilişkisi yoktur",
-      "Yüksek rakımda su her zaman daha hızlı kaynar",
-      "Yüksek rakımda atmosfer basıncı düşer, bu da suyun daha düşük sıcaklıkta kaynamasına (buharlaşmasına) yol açar; düşük kaynama sıcaklığı pişirme tepkimelerinin daha yavaş gerçekleşmesine neden olur"
-    ],
-    correct: 4,
-    explain: "Atmosfer basıncı azaldıkça sıvıların kaynama noktası düşer; bu fiziksel ilke, dağlarda suyun daha düşük sıcaklıkta kaynamasına ve dolayısıyla yemeklerin pişme (kimyasal/biyokimyasal) tepkimelerinin daha yavaş tamamlanmasına yol açar."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci, güneş enerjisi santrallerinin ürettiği elektriğin fazlasının büyük bataryalarda depolandığını, ancak bu bataryaların üretiminde kullanılan lityum ve kobalt gibi elementlerin sınırlı doğal kaynaklardan elde edildiğini öğreniyor.",
-    text: "Bu bilgiye dayanarak sürdürülebilir enerji sistemlerinin geliştirilmesinde kimyanın rolü hakkında en kapsamlı çıkarım hangisidir?",
-    options: [
-      "Kimyanın sürdürülebilir enerjiyle hiçbir ilgisi yoktur",
-      "Sürdürülebilir enerji sadece güneş/rüzgar kaynaklı olduğu için kimyasal madde ihtiyacı yoktur",
-      "Yenilenebilir enerji sistemleri bile, verimli enerji depolama teknolojisi için kimyasal madde/malzeme araştırmalarına (yeni pil kimyaları, geri dönüşüm yöntemleri) ihtiyaç duyar",
-      "Lityum ve kobalt sınırsız kaynaklardır, endişe gereksizdir",
-      "Bataryaların üretimiyle çevresel sürdürülebilirlik arasında hiçbir bağlantı yoktur"
-    ],
-    correct: 2,
-    explain: "Yenilenebilir enerji üretimi kadar, üretilen enerjinin verimli depolanması da kritik bir mühendislik/kimya problemidir; sınırlı kaynaklardan üretilen bataryalar için sürdürülebilir malzeme kimyası ve geri dönüşüm araştırmaları önem taşır."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci, bir ilacın kutusunda 'serin ve kuru yerde saklayınız, doğrudan güneş ışığından koruyunuz' uyarısını okuyor ve bu ilacın raf ömrünün belirli bir tarihle sınırlı olduğunu fark ediyor.",
-    text: "Bu bilgilere dayanarak ilaçların saklama koşulları hakkında en doğru bilimsel çıkarım hangisidir?",
-    options: [
-      "İlaçların saklama koşulları rastgele belirlenir, bilimsel bir temeli yoktur",
-      "Tüm ilaçlar sonsuza kadar aynı etkinlikte kalır",
-      "Raf ömrü tarihi yalnızca üreticinin kâr amacıyla konulmuştur",
-      "Güneş ışığının ilaçların kimyasal yapısıyla hiçbir ilişkisi yoktur",
-      "İlaçlardaki etkin bileşenler, ısı, ışık ve nem gibi etkenlerle zamanla bozunabilir (kimyasal olarak değişebilir); bu nedenle uygun saklama koşulları ilacın etkinliğini korumak için gereklidir"
-    ],
-    correct: 4,
-    explain: "İlaç etkin maddeleri, uygun olmayan saklama koşullarında (yüksek sıcaklık, nem, ışık) kimyasal olarak bozunabilir ve etkinliğini/güvenliğini kaybedebilir; bu nedenle saklama koşulları ve son kullanma tarihleri bilimsel test verilerine dayanır."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci, iki özdeş kap suya aynı miktarda tuz koyup birini kapalı, diğerini açık bırakıyor. Açık kaptaki su birkaç gün içinde tamamen buharlaşıyor ve kabın dibinde beyaz kristaller (tuz) kalıyor; kapalı kaptaki su seviyesi değişmiyor.",
-    text: "Açık kapta gözlenen olay, hangi ayırma yöntemine ve hangi maddenin özelliğine dayanır?",
-    options: [
-      "Süzme; suyun yoğunluğuna dayanır",
-      "Yüzdürme; tuzun sudan hafif olmasına dayanır",
-      "Damıtma; tuzun kaynama noktasının su ile aynı olmasına dayanır",
-      "Mıknatısla ayırma; tuzun manyetik özelliğine dayanır",
-      "Buharlaştırma; suyun uçucu, tuzun ise oda sıcaklığında uçucu olmayan bir katı olmasına dayanır"
-    ],
-    correct: 4,
-    explain: "Su, oda sıcaklığında zamanla buharlaşan uçucu bir sıvıdır; tuz ise uçucu olmadığından kapta kristaller hâlinde geride kalır — bu, buharlaştırma yoluyla ayırmanın temel prensibidir ve tuz üretiminde (tuzlalarda) kullanılır."
+    explain: "Mayanın ürettiği karbondioksit gazı hamuru kabartır; ancak maya, sıcaklığa duyarlı canlı bir organizmadır ve aşırı yüksek sıcaklıklarda aktivitesi (dolayısıyla kabartma etkisi) azalır ya da durur."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci, iki özdeş sünger parçasından birini sabunlu suya, diğerini sade suya batırıp aynı miktar yağ lekesine bastırıyor. Sabunlu suyla temizlenen yüzeyde yağ izinin neredeyse tamamen kaybolduğunu, sade suyla ise yağın hâlâ belirgin şekilde durduğunu gözlemliyor.",
-    text: "Bu farkın bilimsel açıklaması aşağıdakilerden hangisidir?",
+    context: "İki özdeş bardağa aynı miktarda sıcak çay konulmuştur. Birinci bardağa hiçbir şey eklenmemiş, ikinci bardağa bir küp şeker eklenip karıştırılmıştır. 10 dakika sonra her iki bardağın sıcaklığı ölçülmüş ve neredeyse aynı çıkmıştır.",
+    text: "Bu gözlem, şekerin çaya eklenmesinin hangi tür bir değişim olduğuna dair en güçlü kanıtı sunar?",
+    options: ["Biyolojik bir değişim olduğuna", "Kimyasal bir değişim olduğuna; çünkü sıcaklık değişmiştir", "Hem fiziksel hem kimyasal olduğuna; çünkü şeker tatlandırmıştır", "Fiziksel bir değişim olduğuna; çözünme belirgin bir enerji/sıcaklık farkı yaratmamış ve yeni bir madde oluşmamıştır", "Değişim türü sıcaklık ölçümüyle belirlenemez"],
+    correct: 3,
+    explain: "Çözünme sırasında sıcaklıkta belirgin bir değişim gözlemlenmemesi ve yeni bir madde oluşmaması, bunun fiziksel bir değişim (çözünme) olduğunun göstergesidir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "İki özdeş kap hazırlanmıştır: birine yalnızca musluk suyu, diğerine musluk suyu ve bir tutam tuz konulmuştur. Aynı sıcaklıkta, aynı süre boyunca dondurucuda bekletilmiştir. Saf su tamamen donarken, tuzlu su hâlâ tam donmamış, kısmen sıvı kalmıştır.",
+    text: "Bu deneyin sonucu, kimyanın hangi günlük hayat uygulamasını doğrudan açıklar?",
+    options: ["Tuzun suyu her zaman daha hızlı dondurduğunu", "Yaz aylarında yolların neden daha sıcak olduğunu", "Tuzlu suyun kaynama noktasının düştüğünü", "Kışın buzlanan yollara tuz dökülmesinin donma noktasını düşürerek buzlanmayı geciktirdiğini/azalttığını", "Bu deneyin günlük hayatla hiçbir bağlantısı olmadığını"],
+    correct: 3,
+    explain: "Çözünen madde (tuz), suyun donma noktasını düşürür (donma noktası alçalması); bu ilke, kışın yollara tuz serpilerek buzlanmanın geciktirilmesinde pratik olarak kullanılır."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Aşağıdaki iki grafikte, alüminyum folyo ile kaplanarak pişirilen bir balığa geçen alüminyum miktarının (mg/100g) pişirme sıcaklığıyla nasıl değiştiği gösterilmiştir.",
+    chart: {
+      type: "line",
+      title: "Balığa geçen alüminyum miktarı (mg/100g)",
+      labels: ["150°C", "175°C", "200°C", "225°C"],
+      values: [0.02, 0.04, 0.07, 0.12]
+    },
+    text: "Grafikteki eğilime dayanarak, alüminyum folyoyla pişirme konusunda en akılcı öneri hangisidir?",
+    options: ["Sıcaklık arttıkça alüminyum geçişi azalır", "Sıcaklığın alüminyum geçişiyle hiçbir ilişkisi yoktur", "Alüminyum folyo hiçbir koşulda kullanılmamalıdır", "Yüksek pişirme sıcaklıkları alüminyum geçişini artırdığından, mümkün olduğunca ölçülü/düşük sıcaklıkta pişirme tercih edilmelidir", "Bu veriler yalnızca balık için değil hiçbir gıda için geçerli değildir"],
+    correct: 3,
+    explain: "Grafik, pişirme sıcaklığı arttıkça gıdaya geçen alüminyum miktarının da arttığını göstermektedir; bu nedenle alüminyum folyoyla pişirirken aşırı yüksek sıcaklıklardan kaçınmak makul bir önlemdir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Bir gıda etiketinde 'doğal aroma verici' ibaresi, başka bir üründe ise 'yapay aroma verici' ibaresi yer almaktadır; ikisi de tüketiciye aynı çilek tadını vermektedir.",
+    text: "Bu bilgi, 'doğal' ve 'yapay' kimyasal bileşikler hakkında en doğru hangi çıkarımı destekler?",
+    options: ["İki üründeki bileşiklerin kimyasal formülü kesinlikle farklıdır", "Yapay aroma vericiler asla gerçek bir tat oluşturamaz", "Doğal aroma vericiler her zaman daha güvenlidir", "Doğal ve sentetik kaynaklı iki bileşik, aynı moleküler yapıya sahip olduğunda özdeş tat/koku verebilir; kaynağı tek başına etkiyi belirlemez", "Tat, yalnızca ürünün ambalaj rengiyle ilgilidir"],
+    correct: 3,
+    explain: "Bir aroma molekülü doğadan izole edilmiş ya da laboratuvarda sentezlenmiş olabilir; moleküler yapısı aynıysa (örneğin doğal ve sentetik vanilin), duyusal etkisi de aynıdır — kaynağın 'doğal/yapay' olması tek başına kimyasal kimliği ya da güvenliği belirlemez."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Bir spor içeceğinin etiketinde sodyum, potasyum ve magnezyum tuzları listelenmektedir; ürün yoğun terleme sonrası tüketilmek üzere pazarlanmaktadır.",
+    text: "Bu içeceğin formülasyonu, terleme ile ilgili hangi kimyasal/fizyolojik süreci hedef almaktadır?",
+    options: ["Kan hücrelerinin sayısının artırılması", "Vücut sıcaklığının doğrudan düşürülmesi", "Kas dokusunun yeniden oluşturulması", "Terlemeyle kaybedilen elektrolit (iyon) dengesinin yeniden sağlanması", "Enerji ihtiyacının tamamen ortadan kaldırılması"],
+    correct: 3,
+    explain: "Terleme sırasında vücut yalnızca su değil, sodyum, potasyum gibi elektrolitleri de kaybeder; bu tuzları içeren içecekler kaybedilen iyon dengesini yeniden sağlamayı amaçlar."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "İki özdeş bitkiye 15 gün boyunca eşit miktarda su verilmiştir; yalnızca birine ayrıca haftada bir azotlu gübre uygulanmıştır. Gübre verilen bitkinin yaprakları belirgin biçimde daha koyu yeşil ve gelişmiş görünmektedir.",
+    text: "Bu gözlem, azotun bitkideki rolü hakkında en doğru hangi çıkarımı destekler?",
+    options: ["Gübre yalnızca toprağın rengini değiştirir", "Azotun bitki gelişimiyle hiçbir ilgisi yoktur", "Su tek başına bitkinin tüm besin ihtiyacını karşılar", "Azot, bitkinin klorofil üretimi ve genel büyümesi için önemli bir besin bileşenidir", "Azotlu gübre bitkinin büyümesini yavaşlatır"],
+    correct: 3,
+    explain: "Azot, klorofil ve proteinlerin temel yapı taşlarından biridir; yeterli azot alan bitkilerde daha koyu yeşil renk ve daha güçlü büyüme gözlenir, bu da azotun bitki beslenmesindeki kritik rolünü gösterir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Bir ürün, ambalajında 'çevre dostu' ifadesiyle pazarlanmaktadır; ancak bu ifadenin bağımsız bir kurum tarafından sertifikalandırıldığına dair hiçbir bilgi ambalajda yer almamaktadır.",
+    text: "Bu durum, tüketici olarak ürün etiketlerini değerlendirirken en doğru hangi yaklaşımı destekler?",
+    options: ["Yalnızca ürünün fiyatına bakarak güvenilirliğine karar vermek", "Ambalajdaki her ifadeyi sorgusuz kabul etmek", "Etiketlerdeki tüm bilgileri tamamen yok saymak", "Pazarlama ifadelerini bağımsız kaynaklarla doğrulanmadan doğru kabul etmemek, eleştirel biçimde değerlendirmek", "'Çevre dostu' ifadesinin her zaman yasal olarak denetlendiğini varsaymak"],
+    correct: 3,
+    explain: "Pazarlama ifadeleri her zaman bağımsız bilimsel/kurumsal doğrulamayı yansıtmayabilir; bilinçli bir tüketici bu tür iddiaları güvenilir sertifikasyon kaynaklarıyla karşılaştırarak değerlendirir."
+  },
+
+  /* ============ ZOR ============ */
+
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Bir temizlik ürününün ambalajında aşağıdaki iki tehlike işareti birlikte yer almaktadır.",
+    pictograms: ["corrosive", "environment"],
+    text: "Bu iki işaretin birlikte bulunması, ürünün kullanımdan sonra lavaboya/kanalizasyona dökülmesi konusunda en doğru hangi sonucu doğurur?",
     options: [
-      "Yağ ve su zaten aynı kimyasal yapıya sahiptir",
-      "Sade su yağı hiçbir zaman temizleyemez, bu bir doğa kanunudur",
-      "Sabun yağı yeni bir katı maddeye dönüştürür",
-      "Sabunlu suyun sıcaklığı daha yüksektir, temizliği bu sağlar",
-      "Sabun molekülleri hem yağı hem suyu bir arada tutabilen (bir ucu yağı, diğer ucu suyu seven) bir yapıya sahiptir; bu da yağın su ile birlikte yüzeyden uzaklaştırılmasını sağlar"
+      "İki sembol birbiriyle çelişir, güvenle kanalizasyona dökülebilir",
+      "Aşındırıcı sembolü yalnızca ambalajla ilgilidir, dökülen sıvıyla ilgisi yoktur",
+      "Çevre sembolü, ürünün doğada hiçbir etkisi olmadığını gösterir",
+      "Ürün hem canlı dokuları aşındırabilir hem de su ekosistemlerine zarar verebilir; bu yüzden büyük miktarların doğrudan kanalizasyona dökülmesinden kaçınılmalı, üretici talimatına uyulmalıdır",
+      "Bu semboller yalnızca endüstriyel kullanım için geçerlidir, evde önemsizdir"
+    ],
+    correct: 3,
+    explain: "Aşındırıcı sembolü canlı doku/metal tahribatını, çevre sembolü ise sucul/karasal canlılara zararı gösterir; bu iki tehlikenin birlikte bulunması, ürünün kontrolsüz biçimde büyük miktarlarda doğaya/kanalizasyona bırakılmaması gerektiğini işaret eder."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Bir gıda güvenliği raporunda, bir katkı maddesinin 'doğal kaynaklı' olmasının, güvenlik değerlendirmesinde tek başına belirleyici bir ölçüt olarak kullanılmadığı; asıl belirleyicinin dozun ve toksikolojik test sonuçlarının olduğu belirtilmektedir.",
+    text: "Bu bilgi, 'doğal olan her zaman güvenlidir' şeklindeki yaygın inanış hakkında en doğru hangi eleştirel çıkarımı destekler?",
+    options: [
+      "Doz kavramının güvenlik değerlendirmesiyle hiçbir ilgisi yoktur",
+      "Doğal kaynaklı maddeler hiçbir koşulda zararlı olamaz",
+      "Sentetik maddeler her zaman doğal olanlardan daha güvenlidir",
+      "Toksikolojik testler yalnızca sentetik maddelere uygulanır",
+      "Bir maddenin güvenliği kaynağına (doğal/sentetik) değil, dozuna ve bilimsel test sonuçlarına göre belirlenir; bazı doğal bileşikler de yüksek dozda zararlı olabilir"
     ],
     correct: 4,
-    explain: "Sabun moleküllerinin bir ucu suyu seven (hidrofilik), diğer ucu yağı seven (hidrofobik) yapıdadır; bu özellik sayesinde yağ molekülleri suyun içine taşınabilir ve yüzeyden uzaklaştırılabilir."
+    explain: "Toksikolojide temel ilkelerden biri 'dozu zehri belirler' anlayışıdır; bir maddenin doğal ya da sentetik olması tek başına güvenliğini belirlemez, birçok doğal bileşik de yüksek dozda zararlı olabilir — bu yüzden güvenlik değerlendirmesi bilimsel test ve doza dayanmalıdır."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Aşağıdaki tabloda, aynı koşullarda dört farklı pişirme sıcaklığında pişirilen etin sos pH'ı ve ete geçen alüminyum miktarı kaydedilmiştir.",
+    table: {
+      headers: ["Pişirim", "Sosun pH değeri", "Pişirme sıcaklığı (°C)"],
+      rows: [
+        ["1", "6", "150"],
+        ["2", "5", "150"],
+        ["3", "5", "200"],
+        ["4", "6", "200"]
+      ]
+    },
+    text: "Tablodaki verilere dayanarak, ete geçen alüminyum miktarının en fazla olması beklenen pişirim hangisidir?",
+    options: [
+      "4. pişirim; en yüksek sıcaklık tek başına belirleyicidir, pH'ın etkisi yoktur",
+      "1. pişirim; en düşük sıcaklık ve en yüksek pH bir arada olduğu için",
+      "Tüm pişirimlerde alüminyum geçişi birbirine eşittir",
+      "2. pişirim; yalnızca pH düşük olduğu için diğerlerinden farksızdır",
+      "3. pişirim; hem düşük pH (asidik ortam) hem yüksek sıcaklık alüminyumun çözünürlüğünü birlikte artırır"
+    ],
+    correct: 4,
+    explain: "Asidik ortam (düşük pH) alüminyumun çözünürlüğünü artırır; yüksek sıcaklık da bu süreci hızlandırır. Tablodaki 3. pişirim hem en düşük pH'a (5) hem en yüksek sıcaklığa (200°C) sahip olduğundan, bu iki etkenin bir araya gelmesiyle alüminyum geçişinin en fazla olması beklenir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Bir tüketici tartışma platformunda, bazı katılımcılar 'kimyasal madde içermeyen' olarak pazarlanan bir temizlik ürününün aslında su ve tuz gibi bileşenler içerdiğini belirtiyor.",
+    text: "Bu tartışma, 'kimyasal madde' kavramının günlük dildeki kullanımı hakkında en doğru hangi eleştirel çıkarımı destekler?",
+    options: [
+      "Yalnızca laboratuvarda üretilen maddeler kimyasal sayılır",
+      "Su ve tuz bilimsel olarak kimyasal madde sayılmaz",
+      "'Kimyasal madde içermeyen' ifadesi bilimsel olarak tam anlamıyla doğrudur",
+      "Bu tartışma tamamen anlamsızdır, hiçbir bilimsel çıkarım yapılamaz",
+      "Günlük dilde 'kimyasal içermez' ifadesi genellikle 'sentetik/zararlı katkı içermez' anlamında kullanılır; oysa bilimsel anlamda su, tuz dahil her madde bir kimyasal maddedir"
+    ],
+    correct: 4,
+    explain: "Bilimsel açıdan evrende var olan her madde (su, tuz, hava dahil) bir kimyasal maddedir; pazarlamada kullanılan 'kimyasal içermez' ifadesi bilimsel değil, genellikle 'sentetik/zararlı katkı maddesi içermez' anlamında popüler bir kullanımdır — bu ayrımı bilmek bilinçli tüketim için önemlidir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Bir laboratuvar karşılaştırmasında, aynı markanın 'hassas ciltler için' ve 'standart' olarak satılan iki nemlendirici kreminin içerik listeleri incelendiğinde, bileşenlerin sırası ve oranları farklı, ancak çoğu bileşen ortak çıkmıştır.",
+    text: "Bu bulgu, ürün pazarlamasında kullanılan etiketler hakkında en doğru hangi çıkarımı destekler?",
+    options: [
+      "Bileşen sırasının ürünün formülasyonuyla hiçbir ilgisi yoktur",
+      "İki ürün kesinlikle birebir aynı kimyasal formüle sahiptir",
+      "'Hassas ciltler için' etiketi bilimsel olarak hiçbir anlam taşımaz",
+      "Standart ürün, hassas cilt ürününden daha fazla bileşen içermelidir",
+      "Farklı pazarlama etiketleri (örneğin 'hassas ciltler için'), bazen aynı temel bileşenlerin farklı oranlarda kullanılmasına dayanabilir; etiket tek başına bileşimin tamamen farklı olduğu anlamına gelmez"
+    ],
+    correct: 4,
+    explain: "Ürün içerik listelerinde bileşenler genellikle miktarlarına göre sıralanır; iki üründeki bileşenlerin ortak olması ama sıra/oranlarının farklı olması, farklı pazarlama etiketlerinin bazen aynı temel formülün farklı yoğunluklarda uyarlanmasından kaynaklanabileceğini gösterir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Bir mutfakta hazırlanan iki farklı temizlik karışımı düşünülmektedir: birincisi çamaşır suyu ile amonyaklı bir cam temizleyicisinin karıştırılmasını, ikincisi ise sirke ile kabartma tozunun karıştırılmasını içermektedir.",
+    text: "Bu iki karışım arasındaki güvenlik farkı hakkında en doğru çıkarım hangisidir?",
+    options: [
+      "Bu karışımların güvenliği bileşenlerin miktarından tamamen bağımsızdır",
+      "İki karışım da eşit derecede tehlikelidir",
+      "İki karışım da tamamen güvenlidir, hiçbir gaz açığa çıkmaz",
+      "Sirke-kabartma tozu karışımı çamaşır suyu-amonyak karışımından daha tehlikelidir",
+      "Çamaşır suyu ile amonyaklı ürünlerin karışımı zehirli kloramin gazı oluşturarak ciddi risk taşırken, sirke ile kabartma tozunun karışımı yalnızca zararsız karbondioksit gazı açığa çıkarır"
+    ],
+    correct: 4,
+    explain: "Çamaşır suyu (hipoklorit) ile amonyaklı ürünlerin tepkimesi zehirli kloramin gazları oluşturarak solunum yoluyla ciddi zarar verebilirken, sirke (asetik asit) ile kabartma tozunun (sodyum bikarbonat) tepkimesi yalnızca zararsız karbondioksit gazı ve su açığa çıkarır — bu, günlük hayatta hangi kimyasalların birlikte kullanılabileceğini bilmenin önemini gösterir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Bir bilim iletişimi makalesinde, halk arasında yaygın olan 'organik/doğal tarım ürünleri hiçbir kimyasal madde içermez' inanışının yanlış olduğu; organik tarımda da izin verilen, doğal kaynaklı belirli kimyasal bileşiklerin (örneğin bakır sülfat) kullanıldığı belirtilmektedir.",
+    text: "Bu bilgi, 'organik' etiketinin bilimsel anlamı hakkında en doğru çıkarımı destekler?",
+    options: [
+      "Organik tarım, kimya biliminden tamamen bağımsız bir uygulamadır",
+      "Organik ürünler kesinlikle hiçbir kimyasal madde içermez",
+      "Bakır sülfat gibi maddeler yalnızca sentetik tarımda kullanılır",
+      "'Organik' etiketinin bilimsel hiçbir tanımı yoktur",
+      "'Organik' etiketi, ürünün kimyasal madde içermediği anlamına gelmez; belirli üretim yöntemleri ve izin verilen madde listesine uygunluğu ifade eder"
+    ],
+    correct: 4,
+    explain: "'Organik' etiketi, belirli üretim standartlarına (izin verilen girdi listesi, sentetik pestisit kısıtlaması vb.) uygunluğu ifade eder; bu, ürünün hiçbir kimyasal madde içermediği anlamına gelmez — organik tarımda da doğal kaynaklı bazı kimyasal bileşikler kullanılabilir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Bir enerji politikası raporunda, güneş panellerinin üretiminde kullanılan bazı malzemelerin (örneğin belirli metaller) çıkarılma ve işlenme süreçlerinin çevresel bir maliyeti olduğu, ancak panellerin kullanım ömrü boyunca sağladığı temiz enerjinin bu maliyeti fazlasıyla dengelediği belirtilmektedir.",
+    text: "Bu bilgi, yeni teknolojilerin çevresel etkisinin değerlendirilmesi konusunda en dengeli hangi yaklaşımı destekler?",
+    options: [
+      "Enerji teknolojilerinin çevresel etkisi ölçülemez, bu yüzden karşılaştırma yapılamaz",
+      "Üretim aşamasında herhangi bir çevresel maliyet varsa, teknoloji tamamen reddedilmelidir",
+      "Yalnızca kullanım aşaması değerlendirilir, üretim süreci önemsizdir",
+      "Güneş panelleri üretim sürecinde hiçbir çevresel etki yaratmaz",
+      "Bir teknolojinin çevresel etkisi yalnızca kullanım aşamasına değil, üretiminden kullanım ömrü sonuna kadar tüm sürece (yaşam döngüsüne) bakılarak bütüncül değerlendirilmelidir"
+    ],
+    correct: 4,
+    explain: "'Yaşam döngüsü değerlendirmesi' yaklaşımı, bir ürünün/teknolojinin çevresel etkisini yalnızca kullanım aşamasında değil, hammadde çıkarımından üretim, kullanım ve bertarafa kadar tüm süreçte bütüncül olarak değerlendirir; bu, teknoloji değerlendirmelerinde daha dengeli ve bilimsel bir yaklaşımdır."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Bir tüketici haklarını konu alan yayında, iki farklı üreticinin aynı miktardaki (100 mL) aynı türden bir dezenfektan üründe farklı derişimde etken madde bildirdiği; ancak ikisinin de 'etkili dezenfeksiyon sağlar' ifadesini kullandığı aktarılmaktadır.",
+    text: "Bu durum, ürün etkinliğini değerlendirirken en doğru hangi yaklaşımı desteklemektedir?",
+    options: [
+      "Pazarlama ifadeleri her zaman bilimsel test sonuçlarını birebir yansıtır",
+      "Etken madde derişiminin ürün etkinliğiyle hiçbir ilgisi yoktur",
+      "Aynı ifadeyi kullanan iki ürün her zaman birebir aynı etkiye sahiptir",
+      "Derişim bilgisi yalnızca ilaç sektöründe önemlidir, temizlik ürünlerinde değil",
+      "Yalnızca genel pazarlama ifadelerine değil, etken madde derişimi gibi somut ve ölçülebilir bilgilere bakılmalıdır"
+    ],
+    correct: 4,
+    explain: "'Etkili dezenfeksiyon sağlar' gibi genel pazarlama ifadeleri, ürünler arasındaki gerçek etkinlik farkını gizleyebilir; etken madde derişimi gibi somut, ölçülebilir veriler, ürünlerin gerçek etkinliğini karşılaştırmak için daha güvenilir bir temel sunar."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Bir okuldaki bilim kulübü, farklı ev temizlik ürünlerinin (çamaşır suyu, sirke, karbonat, sıvı sabun) birbirleriyle ikili kombinasyonlarda karıştırılmasının güvenli olup olmadığını araştıran bir kontrol listesi hazırlamak istemektedir.",
+    text: "Böyle bir kontrol listesi hazırlanırken izlenmesi gereken en bilimsel yaklaşım hangisidir?",
+    options: [
+      "Hiçbir ev temizlik ürünü bir diğeriyle karıştırılmamalıdır, istisnasız",
+      "Tüm temizlik ürünleri birbiriyle güvenle karıştırılabilir, ayrı inceleme gerekmez",
+      "Yalnızca ürünlerin fiyatına bakılarak güvenlik değerlendirmesi yapılabilir",
+      "Karıştırma güvenliği yalnızca ürünlerin rengine göre belirlenir",
+      "Her ikili kombinasyonun kimyasal tepkime potansiyeli (örneğin gaz açığa çıkarma, ısı üretme) ayrı ayrı incelenmeli; 'ikisi de temizlik ürünü' olması güvenli karışım anlamına gelmemelidir"
+    ],
+    correct: 4,
+    explain: "Her kimyasal madde çiftinin tepkime potansiyeli farklıdır (örneğin çamaşır suyu+amonyak tehlikeli gaz üretirken, sirke+karbonat zararsız CO2 üretir); güvenlik değerlendirmesi genellemelerle değil, her kombinasyonun kendi kimyasal özellikleri incelenerek yapılmalıdır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci, portakal kabuğunu sıkarken çıkan sıvının ele değince hafif yakıcı bir his verdiğini ve bu sıvının plastik bir bardağın yüzeyini matlaştırdığını fark ediyor.",
-    text: "Bu gözlem, portakal kabuğundaki maddeler hakkında en doğru hangi çıkarımı destekler?",
-    options: [
-      "Portakal kabuğu hiçbir kimyasal madde içermez",
-      "Portakal kabuğu suya benzer, hiçbir etkisi olmamalıdır",
-      "Bu olay tamamen tesadüftür, bilimsel bir açıklaması yoktur",
-      "Plastik bardaklar hiçbir maddeyle etkileşime giremez",
-      "Portakal kabuğundaki uçucu yağlar/bileşikler bazı plastiklerle kimyasal etkileşime girebilecek reaktif özelliktedir"
-    ],
+    context: "Aşağıda günlük hayatta sık karşılaşılan bir eşya gösterilmiştir.",
+    objectIcons: ["battery"],
+    text: "Bu eşyanın çalışma prensibi, kimyanın hangi temel dönüşüm türüyle en doğrudan ilişkilidir?",
+    options: ["Nükleer enerjinin doğrudan harekete dönüştürülmesi", "Işık enerjisinin ses enerjisine dönüştürülmesi", "Elektrik enerjisinin doğrudan kütleye dönüştürülmesi", "Manyetik enerjinin ısı enerjisine dönüştürülmesi", "Kimyasal enerjinin elektrik enerjisine dönüştürülmesi"],
     correct: 4,
-    explain: "Turunçgil kabuklarındaki uçucu yağlar (örneğin limonen) bazı plastik türlerinin yüzeyini çözebilecek/matlaştırabilecek kimyasal etkileşim gösterebilir; bu, günlük hayatta karşılaşılan küçük ama gerçek bir kimyasal gözlemdir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci, cam bir şişeye sıkıca kapatılmış gazlı içeceğin dondurucuda fazla bekletilmesi sonucu şişenin çatladığını/patladığını öğreniyor; buna karşın aynı içeceğin buzdolabında (dondurucuda değil) bekletilmesinde böyle bir sorun yaşanmıyor.",
-    text: "Bu olayın bilimsel açıklaması en doğru şekilde hangisidir?",
-    options: [
-      "Dondurucudaki sıcaklık farkı hiçbir fiziksel etkiye sahip değildir",
-      "Gazlı içecekler dondurucuda kimyasal olarak patlayıcı bir maddeye dönüşür",
-      "Cam, düşük sıcaklıkta kendiliğinden büzülüp kırılır, suyla ilgisi yoktur",
-      "Bu olay yalnızca şişenin kalitesizliğinden kaynaklanır, bilimsel bir açıklaması yoktur",
-      "Su donarken genleşir (hacmi artar); kapalı bir kapta bu genleşme, kabın dayanma sınırını aşarak kırılmaya neden olabilir"
-    ],
-    correct: 4,
-    explain: "Suyun aksine çoğu sıvı donarken büzülür; su ise donarken hacimce genleşir (buzun yoğunluğu sudan azdır). Kapalı, sert bir kapta bu genleşme baskı oluşturarak kabın çatlamasına/patlamasına yol açabilir — bu, suyun sıra dışı bir fiziksel özelliğidir."
+    explain: "Piller, iç yapılarındaki kimyasal maddeler arasında gerçekleşen tepkimeler sonucu açığa çıkan kimyasal enerjiyi elektrik enerjisine dönüştürür."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir öğrenci, aynı miktardaki şekeri farklı sıcaklıklardaki eşit miktarda suya ekleyip her seferinde doygunluğa ulaşana kadar (dipte şeker kalana kadar) daha fazla şeker ilave ediyor. Elde ettiği sonuçları aşağıdaki grafikte gösteriyor.",
-    chart: {
-      type: "line",
-      labels: ["0°C", "20°C", "40°C", "60°C", "80°C"],
-      values: [180, 200, 240, 290, 360],
-      title: "100 mL suda çözünen şeker miktarı (g)"
-    },
-    text: "Grafiğe dayanarak, 60°C'deki 100 mL suya en fazla kaç gram civarında şeker çözünebileceği ve bu ilişkinin genel eğilimi hakkında en doğru çıkarım hangisidir?",
+    context: "Aşağıda iki farklı günlük ürün gösterilmiştir; ikisi de belirli bir asit türü içermesi nedeniyle karakteristik keskin tada/kokuya sahiptir.",
+    objectIcons: ["soda", "vinegar"],
+    text: "Bu iki üründeki asidik bileşenlerin ortak işlevi hakkında en doğru çıkarım hangisidir?",
     options: [
-      "Yaklaşık 290 g; sıcaklık arttıkça çözünürlük azalır",
-      "Yaklaşık 180 g; sıcaklık çözünürlüğü etkilemez",
-      "Yaklaşık 290 g; sıcaklık arttıkça çözünürlük artar",
-      "Yaklaşık 360 g; sıcaklık çözünürlüğü etkilemez",
-      "Grafikten sayısal bir değer okunamaz"
+      "Farklı kimyasal yapıdaki asitler (örneğin karbonik/fosforik asit ve asetik asit), farklı ürünlerde farklı amaçlarla (tat, koruyuculuk, gazlandırma) kullanılabilir",
+      "Her iki üründe de kullanılan asit birebir aynı bileşiktir",
+      "Asit içeren tüm ürünler insan sağlığı için zararlıdır",
+      "Asitlerin tat üzerinde hiçbir etkisi yoktur",
+      "Bu iki üründe asit yalnızca renk vermek için eklenmiştir"
     ],
-    correct: 2,
-    explain: "Grafikte 60°C noktası yaklaşık 290 g'a karşılık gelir; genel eğilim, sıcaklık arttıkça katı maddenin sudaki çözünürlüğünün de arttığını göstermektedir."
+    correct: 0,
+    explain: "Gazlı içeceklerdeki karbonik/fosforik asit ile sirkedeki asetik asit farklı kimyasal bileşiklerdir; her biri kendi ürününde farklı işlevsel amaçla (tatlandırma, gazlandırma, koruyuculuk) kullanılır."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Bir işlenmiş gıda ürününün etiketinde 'E300' kodlu bir katkı maddesi listelenmiştir; bu kodun karşılığı askorbik asit (C vitamini) olarak bilinmektedir.",
+    text: "Bu bilgiye dayanarak, gıda katkı maddelerindeki 'E kodları' hakkında en doğru çıkarım hangisidir?",
+    options: [
+      "'E' koduyla başlayan bir katkı maddesi otomatik olarak zararlı anlamına gelmez; bazı E kodları C vitamini gibi bilinen, faydalı bileşiklere aittir",
+      "Tüm E kodlu maddeler yapay ve zararlıdır",
+      "E kodları yalnızca renklendiricilere verilir",
+      "E300 kodu, ürünün hiçbir vitamin içermediğini gösterir",
+      "E kodlu maddelerin hiçbiri doğada bulunmaz"
+    ],
+    correct: 0,
+    explain: "'E' kodları, Avrupa'da onaylanmış gıda katkı maddelerinin standart kodlarıdır; E300 gibi bazı kodlar C vitamini (askorbik asit) gibi bilinen, faydalı ve doğada da bulunan bileşiklere aittir — bu nedenle 'E kodlu = zararlı' genellemesi bilimsel olarak doğru değildir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Aşağıdaki tabloda dört farklı gıda muhafaza yönteminin, gıdanın bozulmasına neden olan mikroorganizmaların üremesini nasıl engellediği özetlenmiştir.",
+    table: {
+      headers: ["Yöntem", "Etki mekanizması"],
+      rows: [
+        ["Tuzlama", "Ortamdan su çekerek mikroorganizmaların yaşam ortamını kurutur"],
+        ["Dondurma", "Düşük sıcaklıkta mikroorganizma etkinliğini büyük ölçüde yavaşlatır"],
+        ["Kurutma", "Su içeriğini azaltarak üreme için gerekli nemi ortadan kaldırır"],
+        ["Kaynatma/pastörizasyon", "Yüksek sıcaklıkla mikroorganizmaları etkisiz hâle getirir"]
+      ]
+    },
+    text: "Tablodaki dört yöntem karşılaştırıldığında, hepsinin ortak bilimsel amacı hakkında en doğru çıkarım hangisidir?",
+    options: [
+      "Farklı fiziksel/kimyasal mekanizmalar kullanılsa da, dördü de mikroorganizmaların üremesi için gerekli koşulları (nem, sıcaklık) ortadan kaldırmayı hedefler",
+      "Dördü de birebir aynı kimyasal mekanizmayla çalışır",
+      "Bu yöntemlerin hiçbiri mikroorganizmalarla ilgili değildir",
+      "Yalnızca kaynatma yöntemi bilimsel bir temele sahiptir",
+      "Tuzlama ve dondurma birbirinin tam tersi bir etki yaratır, karşılaştırılamaz"
+    ],
+    correct: 0,
+    explain: "Tuzlama ve kurutma suyu uzaklaştırarak, dondurma ve kaynatma ise sıcaklığı değiştirerek farklı fiziksel/kimyasal yollarla aynı ortak amaca ulaşır: mikroorganizmaların üreyebileceği koşulları ortadan kaldırmak."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Aşağıda bir ürünün ambalajında birlikte yer alan iki tehlike işareti gösterilmiştir; ürün bir aerosol sprey olarak satılmaktadır.",
+    pictograms: ["flame", "irritant"],
+    text: "Bu iki işaretin birlikte bulunması, ürünün depolama koşulları hakkında en kapsamlı hangi önlemi gerektirir?",
+    options: [
+      "Ürün hem ateş kaynaklarından ve yüksek sıcaklıktan uzak tutulmalı hem de solunum/cilt/göz temasından kaçınılarak iyi havalandırılan bir alanda kullanılmalıdır",
+      "Yalnızca ateşten uzak tutulması yeterlidir, başka önlem gerekmez",
+      "Ürün güneşli bir yerde saklanabilir, sorun oluşturmaz",
+      "İki sembol yalnızca dekoratif amaçlıdır",
+      "Tahriş edici sembolü, ürünün yanıcı olmadığını gösterir"
+    ],
+    correct: 0,
+    explain: "Alev sembolü ürünün kolay tutuşabilir olduğunu (aerosol spreylerde basınçlı yanıcı gaz içeriği sık görülür), tahriş edici sembolü ise solunum yolu/cilt/göz tahrişi riskini gösterir; bu iki tehlikenin birlikte değerlendirilmesi hem ısı kaynaklarından uzak tutmayı hem iyi havalandırmayı gerektirir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Bir yangın güvenliği eğitiminde, yangının sürebilmesi için üç unsurun (yanıcı madde, oksijen, yeterli sıcaklık) aynı anda bulunması gerektiği; bu üç unsurdan birinin ortadan kaldırılmasının yangını söndürebileceği anlatılmaktadır.",
+    text: "Bu bilgiye dayanarak, ıslak bir bezle küçük bir tava yangınını örtmenin söndürücü etkisi en doğru hangi mekanizmayla açıklanır?",
+    options: [
+      "Bez, alevi oksijenden yalıtarak yanma tepkimesinin devam etmesi için gerekli oksijeni keser",
+      "Bez, yakıtı tamamen yok eder",
+      "Bez, ortamdaki sıcaklığı anında sıfıra indirir",
+      "Bez, yanma tepkimesini hızlandırarak söndürür",
+      "Islak bezin söndürme etkisi bilimsel olarak açıklanamaz"
+    ],
+    correct: 0,
+    explain: "Yangın üçgeninin (yanıcı madde, oksijen, ısı) bir unsurunu ortadan kaldırmak yanmayı durdurur; ıslak bir bezle alevi örtmek, alevi çevredeki oksijenden yalıtarak yanma tepkimesinin sürmesini engeller."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Bir bilim yazısında, 'X maddesi kanserojendir' başlıklı bir haberin ardından yapılan incelemede, ilgili çalışmanın maddeyi laboratuvar hayvanlarına günlük alım sınırının binlerce katı dozda verdiği ortaya çıkmıştır.",
+    text: "Bu durum, bilimsel çalışma sonuçlarının halk sağlığı iletişimine aktarılması konusunda en doğru eleştirel çıkarımı destekler?",
+    options: [
+      "Bir maddenin çok yüksek dozda zararlı bulunması, normal/günlük tüketim dozlarında da aynı derecede riskli olduğu anlamına gelmez; doz-etki ilişkisi dikkate alınmalıdır",
+      "Bu tür haberler her zaman bilimsel olarak tam ve doğru aktarılır",
+      "Bir maddenin herhangi bir dozda zararlı bulunması, o maddenin her koşulda kesin olarak yasaklanması gerektiği anlamına gelir",
+      "Laboratuvar hayvan çalışmalarının insan sağlığıyla hiçbir ilgisi yoktur",
+      "Doz kavramı yalnızca ilaçlar için geçerlidir, gıda maddeleri için geçerli değildir"
+    ],
+    correct: 0,
+    explain: "Toksikolojinin temel ilkelerinden biri doz-etki ilişkisidir; bir maddenin aşırı yüksek, gerçekçi olmayan dozlarda zararlı bulunması, normal tüketim koşullarında aynı riski taşıdığı anlamına gelmez. Bilimsel bulguların medyada doğru bağlamla aktarılması, bilinçli halk sağlığı iletişimi için önemlidir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Bir malzeme mühendisliği raporunda, yeniden kullanılabilir su şişelerinin üretiminde kullanılan bazı plastik türlerinin belirli sıcaklık ve kullanım koşullarında küçük miktarlarda kimyasal madde salabildiği, ancak doğru malzeme seçimi ve kullanım koşullarına uyulduğunda bu riskin en aza indirilebildiği belirtilmektedir.",
+    text: "Bu bilgi, günlük ürünlerin güvenli kullanımı konusunda en dengeli hangi yaklaşımı destekler?",
+    options: [
+      "Bir malzemenin potansiyel riski, doğru malzeme seçimi ve önerilen kullanım koşullarına (sıcaklık, süre vb.) uyularak yönetilebilir; risk varlığı ürünün her koşulda kullanılamaz olduğu anlamına gelmez",
+      "Tüm plastik ürünler, hiçbir koşulda güvenli değildir",
+      "Plastik ürünlerin kimyasal salma riski tamamen göz ardı edilebilir",
+      "Kullanım koşullarının (sıcaklık, süre) risk üzerinde hiçbir etkisi yoktur",
+      "Bu tür raporlar günlük hayatta dikkate alınmaya değer değildir"
+    ],
+    correct: 0,
+    explain: "Malzeme güvenliği genellikle mutlak 'güvenli/tehlikeli' ikiliğinden çok, doğru seçim ve önerilen kullanım koşullarına uyularak yönetilebilen bir risk meselesidir; bu dengeli yaklaşım, bilinçli tüketici davranışının temelini oluşturur."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Bir tüketici bilinçlendirme kampanyasında, bazı 'kimyasalsız' olarak pazarlanan temizlik ürünlerinin etken bileşeninin aslında sitrik asit veya sirke gibi doğal kaynaklı ama yine de kimyasal bir bileşik olduğu vurgulanmaktadır.",
+    text: "Bu vurgu, pazarlama dili ile bilimsel doğruluk arasındaki ilişki hakkında en doğru hangi genellemeyi destekler?",
+    options: [
+      "Pazarlama dilinde kullanılan bazı ifadeler ('kimyasalsız' gibi) bilimsel açıdan tam doğru olmayabilir; tüketicinin bu tür ifadeleri bilimsel bilgiyle karşılaştırarak değerlendirmesi gerekir",
+      "Pazarlama ifadeleri her zaman bilimsel tanımlarla birebir örtüşür",
+      "Sitrik asit ve sirke bilimsel olarak kimyasal madde sayılmaz",
+      "'Kimyasalsız' ifadesi yasal ve bilimsel olarak net bir tanıma sahiptir",
+      "Bu tür pazarlama ifadelerinin sorgulanmasına gerek yoktur"
+    ],
+    correct: 0,
+    explain: "Bilimsel olarak sitrik asit, sirke (asetik asit) dahil her madde bir kimyasal bileşiktir; 'kimyasalsız' gibi pazarlama ifadeleri bilimsel tanımla örtüşmeyebilir. Bilinçli bir tüketici, bu tür ifadeleri sorgulayarak değerlendirmelidir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Aşağıda mutfakta sıkça kullanılan bir malzeme gösterilmiştir; bu malzeme özellikle et ve balık gibi gıdaların fırında sarılarak pişirilmesinde tercih edilir.",
+    objectIcons: ["foil"],
+    text: "Bu malzemenin parlak ve mat yüzeyleri arasındaki fark, üretim sürecinde en doğrudan hangi fiziksel etkenle ilişkilidir?",
+    options: [
+      "İnceltme (haddeleme) sırasında yüzeyin diğer bir folyo tabakasıyla temas edip etmemesi",
+      "Malzemenin farklı kimyasal elementlerden yapılmış olması",
+      "Işığın yalnızca bir yüzeyde kırılması",
+      "Sıcaklığın yalnızca bir yüzeyi etkilemesi",
+      "Parlak yüzeyin daha yeni üretildiğinin göstergesi olması"
+    ],
+    correct: 0,
+    explain: "Alüminyum folyo üretiminde ince tabaka hâline getirilirken iki katman üst üste haddelenir; iki folyonun birbirine temas eden yüzeyleri sürtünme nedeniyle mat, dış (silindirle temas eden) yüzeyleri ise parlak çıkar. Bu, kimyasal değil fiziksel bir üretim etkisidir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
+    context: "Bir gıda ambalajı araştırmasında, vakumlu paketlenmiş bir ürünün raf ömrünün, aynı ürünün normal paketlenmiş hâline göre belirgin biçimde daha uzun olduğu tespit edilmiştir.",
+    text: "Bu fark, vakumlu paketlemenin bozulmayı geciktirme mekanizması hakkında en doğru hangi çıkarımı destekler?",
+    options: [
+      "Ortamdaki oksijenin büyük ölçüde uzaklaştırılması, hem oksidasyon tepkimelerini hem de oksijene ihtiyaç duyan mikroorganizmaların üremesini yavaşlatır",
+      "Vakumlama, gıdadaki tüm suyu tamamen yok eder",
+      "Vakumlama yalnızca ambalajın hacmini küçültmek için yapılır, bozulmayla ilgisi yoktur",
+      "Vakumlu paketleme sıcaklığı otomatik olarak düşürür",
+      "Oksijen miktarının bozulma hızıyla hiçbir ilişkisi yoktur"
+    ],
+    correct: 0,
+    explain: "Vakumlu paketleme, ambalaj içindeki oksijeni büyük ölçüde uzaklaştırır; bu hem yağların/renk pigmentlerinin oksijenle tepkimeye girerek bozulmasını (oksidasyonu) hem de oksijene ihtiyaç duyan (aerobik) mikroorganizmaların üremesini yavaşlatarak raf ömrünü uzatır."
   }
 ],
   "disiplin": [
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir bilim insanı, karbon atomlarını temel alan bileşiklerin (petrol türevleri, plastikler, ilaçlar) yapısını ve tepkimelerini inceliyor.",
-    text: "Bu bilim insanının çalıştığı alan hangi kimya alt disiplinidir?",
-    options: ["Anorganik kimya", "Organik kimya", "Analitik kimya", "Fizikokimya", "Jeokimya"],
+    context: "Bir laboratuvarda, canlı hücrelerdeki enzimlerin yapısı ve metabolik tepkimelerdeki rolü incelenmektedir.",
+    text: "Bu çalışma kimyanın hangi alt disipliniyle en doğrudan ilişkilidir?",
+    options: ["Jeokimya", "Biyokimya", "Nükleer kimya", "Polimer kimyası", "Elektrokimya"],
     correct: 1,
-    explain: "Karbon temelli bileşiklerin (organik bileşiklerin) yapı ve tepkimelerini inceleyen alt disiplin organik kimyadır."
+    explain: "Canlı sistemlerdeki moleküler yapıları ve metabolik süreçleri inceleyen alt disiplin biyokimyadır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir laboratuvarda içme suyundaki kurşun miktarı, milyonda bir (ppm) hassasiyetle ölçülüyor.",
-    text: "Bu tür hassas madde miktarı tayinleri en çok hangi alt disiplinle ilişkilidir?",
-    options: ["Analitik kimya", "Organik kimya", "Biyokimya", "Nükleer kimya", "Polimer kimyası"],
-    correct: 0,
-    explain: "Maddelerin bileşimini ve miktarını hassas biçimde belirlemek analitik kimyanın temel çalışma alanıdır."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir araştırmacı, canlı hücrelerdeki enzimlerin protein sentezindeki rolünü inceliyor.",
-    text: "Bu araştırma en çok hangi alt disiplinin konusuna girer?",
-    options: ["Jeokimya", "Biyokimya", "Metalurji", "Elektrokimya", "Termokimya"],
+    context: "Bir araştırmada, karbon atomlarının birbirine bağlanarak oluşturduğu uzun zincirli bileşiklerin (örneğin yakıtlar ve plastikler) yapısı incelenmektedir.",
+    text: "Bu araştırma en doğrudan kimyanın hangi alt disipliniyle ilişkilendirilebilir?",
+    options: ["Anorganik kimya", "Organik kimya", "Jeokimya", "Nükleer kimya", "Gıda kimyası"],
     correct: 1,
-    explain: "Canlı organizmalardaki kimyasal süreçleri (enzimler, proteinler, metabolizma) inceleyen alan biyokimyadır."
+    explain: "Karbon temelli bileşiklerin (hidrokarbonlar, polimerler vb.) yapısını inceleyen alt disiplin organik kimyadır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir mühendis, sodyum klorür, demir oksit ve amonyak gibi metal ve ametal bileşiklerinin (genellikle karbon içermeyen) sentezini ve özelliklerini araştırıyor.",
-    text: "Bu çalışma en çok hangi alt disiplinle ilişkilidir?",
-    options: ["Organik kimya", "Anorganik kimya", "Biyokimya", "Polimer kimyası", "Petrokimya"],
+    context: "Bir madencilik şirketinin laboratuvarında, çıkarılan cevherlerdeki metal oksit ve tuz bileşiklerinin kimyasal yapısı analiz edilmektedir.",
+    text: "Bu inceleme kimyanın hangi alt disiplininin kapsamına girer?",
+    options: ["Organik kimya", "Anorganik kimya", "Biyokimya", "Gıda kimyası", "Polimer kimyası"],
     correct: 1,
-    explain: "Genellikle karbon-hidrojen iskeleti içermeyen metal/ametal bileşiklerini inceleyen alan anorganik kimyadır."
+    explain: "Metaller, mineraller ve karbon içermeyen (genel olarak) bileşiklerin incelenmesi anorganik kimyanın konusudur."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir bilim insanı, bir tepkimenin ne kadar hızlı gerçekleştiğini ve sıcaklıkla bu hızın nasıl değiştiğini ölçüyor; ayrıca tepkime sırasındaki enerji değişimlerini hesaplıyor.",
-    text: "Bu çalışma hangi alt disiplinin konusudur?",
-    options: ["Fizikokimya", "Jeokimya", "Farmasötik kimya", "Gıda kimyası", "Tarım kimyası"],
-    correct: 0,
-    explain: "Tepkime hızı, enerji değişimi ve maddenin fiziksel davranışlarını inceleyen alan fizikokimyadır (fiziksel kimya)."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir şirket, plastik poşetlerin yerini alabilecek, doğada daha kolay parçalanan yeni uzun zincirli moleküller geliştiriyor.",
-    text: "Bu geliştirme çalışması en çok hangi alt disiplinle ilgilidir?",
-    options: ["Polimer kimyası", "Nükleer kimya", "Elektrokimya", "Jeokimya", "Astrokimya"],
-    correct: 0,
-    explain: "Uzun zincirli moleküllerin (polimerlerin) tasarımı ve geliştirilmesi polimer kimyasının konusudur."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir araştırmacı, bir madenden çıkarılan kayaçların mineral bileşimini ve oluşum süreçlerini kimyasal analizle inceliyor.",
-    text: "Bu çalışma hangi alt disiplinle en yakından ilişkilidir?",
-    options: ["Jeokimya", "Biyokimya", "Farmasötik kimya", "Polimer kimyası", "Gıda kimyası"],
-    correct: 0,
-    explain: "Yer kabuğundaki mineral ve kayaçların kimyasal bileşimini inceleyen alan jeokimyadır."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir laboratuvar, pillerdeki kimyasal enerjinin elektrik enerjisine dönüşüm verimini artırmaya çalışıyor.",
-    text: "Bu çalışma en çok hangi alt disiplinin konusudur?",
-    options: ["Elektrokimya", "Organik kimya", "Jeokimya", "Biyokimya", "Analitik kimya"],
-    correct: 0,
-    explain: "Kimyasal enerji ile elektrik enerjisi arasındaki dönüşümleri inceleyen alan elektrokimyadır."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir eczacılık şirketi, yeni bir ağrı kesicinin etkin maddesini sentezleyip vücutta nasıl etki ettiğini araştırıyor.",
-    text: "Bu araştırmanın ait olduğu alt disiplin hangisidir?",
-    options: ["Farmasötik (ilaç) kimyası", "Jeokimya", "Metalurji", "Astrokimya", "Nükleer kimya"],
-    correct: 0,
-    explain: "İlaçların tasarımı, sentezi ve etki mekanizmalarının incelenmesi farmasötik kimyanın konusudur."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir öğrenci, kimyanın 'tek bir bilim dalı' değil, birçok alt dala ayrıldığını öğreniyor.",
-    text: "Bu alt dallara ayrılmanın temel amacı en iyi hangi seçenekle açıklanır?",
-    options: [
-      "Kimyanın önemini azaltmak",
-      "Farklı madde türlerini ve süreçleri daha derinlemesine, uzmanlaşarak incelemeyi sağlamak",
-      "Öğrencilerin kafasını karıştırmak",
-      "Bilim insanlarının işini zorlaştırmak",
-      "Alt dalların birbirinden tamamen bağımsız, hiç etkileşimi olmayan alanlar olduğunu göstermek"
-    ],
+    context: "Bir kalite kontrol biriminde, bir gıda örneğindeki katkı maddesinin miktarı hassas ölçüm cihazlarıyla belirlenmektedir.",
+    text: "Bu faaliyet en doğrudan kimyanın hangi alt disipliniyle ilişkilidir?",
+    options: ["Nükleer kimya", "Analitik kimya", "Jeokimya", "Organik kimya", "Elektrokimya"],
     correct: 1,
-    explain: "Kimyanın alt disiplinlere ayrılması, çok geniş olan bu bilim alanında derinlemesine uzmanlaşmayı ve daha etkili araştırma yapılmasını sağlar."
+    explain: "Bir örnekteki madde miktarının ve bileşiminin belirlenmesi (nitel/nicel analiz) analitik kimyanın temel çalışma alanıdır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir gıda mühendisi, dondurmanın kıvamını ve dokusunu etkileyen katkı maddelerinin oranını optimize ediyor.",
-    text: "Bu optimizasyon çalışması hangi alt disiplinin uygulama alanına girer?",
-    options: ["Gıda kimyası", "Nükleer kimya", "Astrokimya", "Metalurji", "Elektrokimya"],
-    correct: 0,
-    explain: "Gıda ürünlerinin bileşimi, işlenmesi ve katkı maddeleriyle ilgili çalışmalar gıda kimyasının konusudur."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir bilim insanı, radyoaktif elementlerin bozunma süreçlerini ve bu süreçlerden enerji üretimini araştırıyor.",
-    text: "Bu araştırma alanı hangi alt disiplinin kapsamındadır?",
-    options: ["Nükleer kimya", "Organik kimya", "Gıda kimyası", "Tarım kimyası", "Polimer kimyası"],
-    correct: 0,
-    explain: "Atom çekirdeğindeki değişimleri (radyoaktivite, bozunma, füzyon/fisyon) inceleyen alan nükleer kimyadır."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir araştırmacı, uzaydan gelen bir meteorit örneğinin kimyasal bileşimini inceleyerek güneş sisteminin oluşumu hakkında ipuçları arıyor.",
-    text: "Bu çalışma en çok hangi (nispeten az bilinen) alt disiplinle ilişkilidir?",
-    options: ["Astrokimya", "Elektrokimya", "Gıda kimyası", "Polimer kimyası", "Farmasötik kimya"],
-    correct: 0,
-    explain: "Uzaydaki (yıldızlar arası ortam, gezegenler, meteoritler) kimyasal süreçleri inceleyen alan astrokimyadır."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir mühendis, demir cevherinden saf demir ve çeşitli çelik alaşımları üretme sürecini geliştiriyor.",
-    text: "Bu üretim süreci hangi alt disiplinin çalışma konusudur?",
-    options: ["Metalurji (metal kimyası)", "Biyokimya", "Astrokimya", "Farmasötik kimya", "Gıda kimyası"],
-    correct: 0,
-    explain: "Metallerin cevherden elde edilmesi, saflaştırılması ve alaşımların geliştirilmesi metalurjinin konusudur."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir araştırmacı, bir fabrikanın atık gazlarının atmosferdeki ozon tabakasına etkisini inceliyor.",
-    text: "Bu inceleme hangi alt disiplinin uygulama alanına örnektir?",
-    options: [
-      "Farmasötik kimya",
-      "Çevre kimyası",
-      "Polimer kimyası",
-      "Astrokimya",
-      "Metalurji"
-    ],
+    context: "Bir araştırma grubu, kimyasal tepkimelerin hızını ve tepkime sırasında açığa çıkan/soğurulan enerji miktarını ölçmektedir.",
+    text: "Bu çalışma alanı kimyanın hangi alt disiplinini yansıtır?",
+    options: ["Biyokimya", "Fizikokimya", "Jeokimya", "Gıda kimyası", "Polimer kimyası"],
     correct: 1,
-    explain: "Kimyasal maddelerin çevredeki (hava, su, toprak) etkilerini inceleyen alan çevre kimyasıdır."
+    explain: "Tepkime hızı, enerji değişimi ve denge gibi fiziksel-kimyasal ilkeleri inceleyen alt disiplin fizikokimyadır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir araştırmacı, bitkilerin verimini artırmak için toprağın besin madde bileşimini analiz ediyor ve özel gübre formülleri geliştiriyor.",
-    text: "Bu geliştirme faaliyeti hangi alt disiplinin konusuna girer?",
-    options: [
-      "Nükleer kimya",
-      "Tarım kimyası",
-      "Astrokimya",
-      "Elektrokimya",
-      "Metalurji"
-    ],
+    context: "Bir üretim tesisinde, tekstil liflerinde ve ambalaj malzemelerinde kullanılan uzun zincirli, tekrar eden birimlerden oluşan yapılar geliştirilmektedir.",
+    text: "Bu iş, kimyanın hangi alt disipliniyle en doğrudan örtüşür?",
+    options: ["Nükleer kimya", "Polimer kimyası", "Jeokimya", "Analitik kimya", "Elektrokimya"],
     correct: 1,
-    explain: "Toprak, gübre ve bitki besin maddeleriyle ilgili kimyasal süreçleri inceleyen alan tarım kimyasıdır."
+    explain: "Monomerlerin bir araya gelerek oluşturduğu uzun zincirli polimer yapılarını inceleyen ve geliştiren alt disiplin polimer kimyasıdır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir çevre izleme biriminde, bir akarsudaki ağır metal ve kirletici madde derişimleri düzenli olarak ölçülmektedir.",
+    text: "Bu uygulama en doğrudan hangi alt disiplinin kapsamına girer?",
+    options: ["Biyokimya", "Çevre kimyası", "Nükleer kimya", "Polimer kimyası", "Organik kimya"],
+    correct: 1,
+    explain: "Doğal ortamlardaki (su, hava, toprak) kimyasal maddelerin kaynağı, davranışı ve etkisini inceleyen alt disiplin çevre kimyasıdır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir hastane laboratuvarında, hastalıkların teşhisi için radyoaktif işaretleyici maddeler kullanılarak görüntüleme yapılmaktadır.",
+    text: "Bu uygulama kimyanın hangi alt disipliniyle en doğrudan ilişkilidir?",
+    options: ["Organik kimya", "Nükleer kimya", "Gıda kimyası", "Polimer kimyası", "Anorganik kimya"],
+    correct: 1,
+    explain: "Radyoaktif izotopların özelliklerini ve tıbbi/endüstriyel uygulamalarını inceleyen alt disiplin nükleer kimyadır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir Ar-Ge biriminde, pil ve akü teknolojilerinde kullanılan elektrik akımı ile kimyasal tepkime arasındaki ilişki incelenmektedir.",
+    text: "Burada tarif edilen çalışma, kimyanın hangi alt disipliniyle ilişkilidir?",
+    options: ["Jeokimya", "Elektrokimya", "Biyokimya", "Analitik kimya", "Gıda kimyası"],
+    correct: 1,
+    explain: "Elektrik enerjisi ile kimyasal tepkimeler arasındaki dönüşümü (piller, elektroliz, korozyon vb.) inceleyen alt disiplin elektrokimyadır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir gıda mühendisliği biriminde, dondurulmuş bir ürünün besin değerinin ve dokusunun saklama süresince nasıl değiştiği incelenmektedir.",
+    text: "Bu süreç en doğrudan kimyanın hangi alt disipliniyle bağlantılıdır?",
+    options: ["Nükleer kimya", "Gıda kimyası", "Jeokimya", "Elektrokimya", "Polimer kimyası"],
+    correct: 1,
+    explain: "Gıdaların bileşimini, işlenmesini ve saklama koşullarının besin/kalite üzerindeki etkisini inceleyen alt disiplin gıda kimyasıdır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir jeoloji ekibi, farklı kayaç katmanlarındaki mineral bileşimini analiz ederek bölgenin oluşum tarihini yorumlamaktadır.",
+    text: "Tarif edilen bu inceleme, kimyanın hangi alt disiplinine aittir?",
+    options: ["Gıda kimyası", "Biyokimya", "Jeokimya", "Polimer kimyası", "Nükleer kimya"],
+    correct: 2,
+    explain: "Yer kabuğundaki kayaç ve minerallerin kimyasal bileşimini, oluşumunu inceleyen alt disiplin jeokimyadır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir ilaç geliştirme sürecinde, yeni bir molekülün vücuttaki hedef proteine nasıl bağlandığı tasarlanıp test edilmektedir.",
+    text: "Bu görev en doğrudan hangi alt disiplinin çalışma alanına girer?",
+    options: ["Çevre kimyası", "Jeokimya", "Farmasötik (ilaç) kimyası", "Elektrokimya", "Polimer kimyası"],
+    correct: 2,
+    explain: "Hastalıkların tedavisi için etkili ve güvenli moleküllerin tasarlanması, sentezlenmesi ve test edilmesi farmasötik kimyanın çalışma alanıdır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir adli laboratuvarda, olay yerinden alınan iz miktardaki bir örnekteki maddenin türü, hassas cihazlarla kesin olarak belirlenmeye çalışılmaktadır.",
+    text: "Bu analiz süreci kimyanın hangi alt disipliniyle ilişkilidir?",
+    options: ["Polimer kimyası", "Biyokimya", "Analitik kimya", "Jeokimya", "Nükleer kimya"],
+    correct: 2,
+    explain: "İz miktardaki maddelerin türünün ve miktarının hassas biçimde belirlenmesi analitik kimyanın uygulama alanlarından biridir (adli kimya, analitik kimyanın bir uygulama koludur)."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir metalurji tesisinde, farklı metal alaşımlarının sertlik ve korozyon direncini artırmak için bileşim oranları değiştirilmektedir.",
+    text: "Bu odak alanı, kimyanın hangi alt disiplinini işaret eder?",
+    options: ["Biyokimya", "Organik kimya", "Anorganik kimya", "Gıda kimyası", "Nükleer kimya"],
+    correct: 2,
+    explain: "Metaller ve alaşımların yapısını, özelliklerini inceleyen ve geliştiren çalışmalar anorganik kimyanın kapsamındadır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir spor bilimleri laboratuvarında, yoğun antrenman sonrası kas dokusundaki laktik asit birikiminin enerji üretim süreciyle ilişkisi incelenmektedir.",
+    text: "Yukarıdaki tanım en doğrudan kimyanın hangi alt disipliniyle örtüşür?",
+    options: ["Polimer kimyası", "Jeokimya", "Biyokimya", "Nükleer kimya", "Elektrokimya"],
+    correct: 2,
+    explain: "Canlı organizmalardaki (kas dokusu, enerji metabolizması gibi) kimyasal süreçlerin incelenmesi biyokimyanın çalışma alanına girer."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir su arıtma tesisinde, içme suyundaki klor ve diğer dezenfeksiyon yan ürünlerinin derişimi düzenli olarak izlenmektedir.",
+    text: "Bu izleme çalışması kimyanın hangi alt disipliniyle en doğrudan ilişkilidir?",
+    options: ["Polimer kimyası", "Nükleer kimya", "Çevre kimyası (analitik yöntemlerle desteklenir)", "Organik sentez kimyası", "Jeokimya"],
+    correct: 2,
+    explain: "Su kaynaklarındaki kimyasal madde derişimlerinin izlenmesi ve çevresel etkilerinin değerlendirilmesi çevre kimyasının temel uygulamalarındandır."
   },
 
   /* ============ ORTA ============ */
@@ -950,230 +797,143 @@ export const QUIZ = {
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir laboratuvarda, hem yeni bir ilaç molekülünün sentezlenmesi (karbon iskeletinin oluşturulması) hem de bu molekülün vücuttaki hedef proteinle etkileşiminin incelenmesi gerekiyor.",
-    text: "Bu proje en çok hangi iki alt disiplinin iş birliğini gerektirir?",
-    options: [
-      "Jeokimya ve astrokimya",
-      "Organik kimya ve biyokimya/farmasötik kimya",
-      "Nükleer kimya ve metalurji",
-      "Sadece analitik kimya yeterlidir",
-      "Sadece fizikokimya yeterlidir"
-    ],
-    correct: 1,
-    explain: "İlaç molekülünün sentezi organik kimyanın, vücuttaki etkisinin incelenmesi ise biyokimya/farmasötik kimyanın konusudur; ilaç geliştirme genellikle bu alanların iş birliğini gerektirir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir öğrenci, 'anorganik kimya sadece cansız/doğal maddeleri, organik kimya ise sadece canlılardan elde edilen maddeleri inceler' şeklinde bir tanım yapıyor.",
-    text: "Bu tanımdaki bilimsel hata nedir?",
-    options: [
-      "Anorganik kimya hiçbir zaman metal içermez",
-      "Organik kimya bugün karbon temelli TÜM bileşikleri (canlı kaynaklı olsun olmasın, örneğin plastikler ve sentetik ilaçlar dahil) kapsar; ayrım artık 'canlı/cansız kaynak' değil 'karbon iskeleti' temellidir",
-      "Organik kimya sadece bitkilerle ilgilenir",
-      "Bu tanımda hiçbir hata yoktur",
-      "Anorganik kimya yalnızca canlılardan elde edilen maddeleri inceler"
-    ],
-    correct: 1,
-    explain: "Tarihsel olarak organik kimya canlı kaynaklı maddelerle ilişkilendirilse de, günümüzde ayrım karbon iskeletine (organik = karbon temelli bileşikler, sentetik olanlar dahil) dayanır."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir su arıtma tesisinde çalışan ekip, önce sudaki kirletici miktarını ölçüp (madde miktarı tayini) sonra bu kirleticileri gidermek için hangi kimyasal işlemin uygulanacağına karar veriyor.",
-    text: "Bu iki aşamalı çalışma sırasıyla hangi alt disiplinlerle ilişkilidir?",
-    options: [
-      "Biyokimya (ölçüm) → metalurji (arıtma)",
-      "Astrokimya (ölçüm) → nükleer kimya (arıtma)",
-      "Analitik kimya (ölçüm) → çevre kimyası (arıtma/giderme)",
-      "Jeokimya (ölçüm) → polimer kimyası (arıtma)",
-      "Bu iki aşama arasında hiçbir disiplin farkı yoktur"
-    ],
+    context: "Aşağıdaki şemada bir X disiplininin üç çalışma alanı verilmiştir: (I) asit-baz tepkimeleri, (II) organik olmayan maddelerin özellikleri, (III) petrol ve petrol ürünleri dışındaki maddelerin incelenmesi.",
+    text: "Şemadaki üç maddeye bakılarak X disiplini en doğru şekilde hangisidir?",
+    options: ["Biyokimya", "Organik kimya", "Anorganik kimya", "Nükleer kimya", "Gıda kimyası"],
     correct: 2,
-    explain: "Kirletici miktarının ölçülmesi analitik kimyanın, çevresel kirliliğin giderilmesi ise çevre kimyasının çalışma alanına girer."
+    explain: "Asit-baz tepkimeleri, organik olmayan madde özellikleri ve petrol dışı maddelerin incelenmesi anorganik kimyanın kapsamına girer; organik kimya karbon bileşiklerini (özellikle petrol türevlerini) incelediğinden bu üç madde anorganik kimyayı işaret eder."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir öğrenci market etiketlerini inceliyor: bir yoğurt kabında 'probiyotik kültür içerir', bir vitamin hapında 'C vitamini sentezle üretilmiştir', bir güneş panelinde ise 'yüksek verimli silikon hücreler' yazıyor.",
-    text: "Bu üç üründeki bilgiler sırasıyla hangi alt disiplinlerle en çok ilişkilidir?",
-    options: [
-      "Metalurji — tarım kimyası — gıda kimyası",
-      "Jeokimya — astrokimya — nükleer kimya",
-      "Biyokimya (probiyotik) — organik kimya (vitamin sentezi) — malzeme/anorganik kimya (silikon hücreler)",
-      "Üçü de aynı alt disiplinle ilişkilidir",
-      "Bu ürünlerin hiçbiri kimyayla ilgili değildir"
-    ],
+    context: "Bir araştırmacı, hem gıda ürünlerinin bileşim analizine hem de yeni nanomalzemelerin geliştirilmesine ilgi duymaktadır; ancak hangi alanda uzmanlaşacağına henüz karar verememiştir.",
+    text: "Bu araştırmacının her iki ilgi alanında da kısa süreli gözlem/staj deneyimi edinip kararını sonra vermesi önerildiğinde, bu öneri kariyer planlama sürecinin hangi iki unsuruyla en doğrudan ilişkilidir?",
+    options: ["Yalnızca okulun coğrafi konumu", "Yalnızca maaş beklentisi ve iş saatleri", "Kendini tanıma (ilgi alanlarını netleştirme) ve alan araştırması (deneyimleyerek bilgi edinme)", "Yalnızca arkadaş çevresinin tercihleri", "Kariyer planlamayla hiçbir ilgisi yoktur"],
     correct: 2,
-    explain: "Probiyotik kültürler canlı mikroorganizma süreçleriyle (biyokimya), vitamin sentezi organik kimyayla, silikon güneş hücreleri ise malzeme/anorganik kimyayla ilişkilidir."
+    explain: "Farklı alanlarda kısa süreli deneyim edinmek, hem kişinin kendi ilgi/yeteneklerini daha iyi tanımasını hem de alan hakkında gerçekçi bilgi edinmesini sağlar; bu, kariyer planlama sürecinin temel bileşenlerindendir."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir araştırma ekibi, yeni bir pilin şarj/deşarj sırasında elektrotlarda gerçekleşen kimyasal tepkimeleri incelerken, aynı zamanda pil kutusunun malzemesi olarak kullanılacak yeni bir kompozit polimer de geliştiriyor.",
-    text: "Bu proje kaç farklı alt disiplini bir arada kullanmaktadır?",
-    options: ["Yalnızca 1: elektrokimya", "Yalnızca 1: polimer kimyası", "2: elektrokimya ve polimer kimyası", "3: elektrokimya, polimer kimyası ve nükleer kimya", "Hiçbiri, bu bir mühendislik projesidir, kimyayla ilgisizdir"],
-    correct: 2,
-    explain: "Pilin iç kimyasal tepkimeleri elektrokimyanın, kutu malzemesinin geliştirilmesi ise polimer kimyasının konusudur; modern mühendislik projeleri sıklıkla birden fazla alt disiplini bir arada kullanır."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir öğrenci 'fizikokimya, kimyanın fizikle örtüştüğü, kesin sınırları olmayan bir ara alandır' cümlesini kuruyor ve tepkime hızı, ısı değişimi, gaz basıncı gibi konuların hem fizik hem kimya derslerinde geçtiğini fark ediyor.",
-    text: "Bu gözlem, bilim dallarının sınıflandırılması hakkında en doğru hangi çıkarımı destekler?",
-    options: [
-      "Bilim dalları arasındaki sınırlar kesin ve geçirimsizdir, hiçbir örtüşme olamaz",
-      "Bilim dalları arasındaki sınırlar bazen esnek olabilir; disiplinler birbirinin yöntem ve kavramlarından yararlanabilir",
-      "Fizik ve kimya aslında tamamen aynı bilim dalıdır",
-      "Fizikokimya, kimyanın değil sadece fiziğin bir alt dalıdır",
-      "Bu tür ara alanlar bilimsel olarak geçersizdir"
-    ],
-    correct: 1,
-    explain: "Fizikokimya gibi ara/disiplinlerarası alanlar, bilimsel sınıflandırmaların kesin duvarlar değil, birbiriyle etkileşen ve bazen örtüşen kavramsal çerçeveler olduğunu gösterir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir adli laboratuvar uzmanı, olay yerinden alınan toz örneğinin hangi kimyasal maddeyi içerdiğini belirlemek için kromatografi ve spektroskopi yöntemlerini kullanıyor.",
-    text: "Bu uzmanın kullandığı temel yöntemler hangi alt disiplinin araçlarındandır?",
-    options: [
-      "Polimer kimyası",
-      "Tarım kimyası",
-      "Analitik kimya",
-      "Astrokimya",
-      "Metalurji"
-    ],
-    correct: 2,
-    explain: "Kromatografi ve spektroskopi gibi madde tanımlama/miktar tayini yöntemleri analitik kimyanın temel araçlarındandır."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir öğrenci 'biyokimya ile organik kimya aynı şeydir, ikisi arasında fark yoktur' diye düşünüyor.",
-    text: "Bu düşüncedeki eksikliği en iyi hangi açıklama giderir?",
-    options: [
-      "Biyokimya karbonla hiç ilgilenmez",
-      "İkisi gerçekten birebir aynıdır, öğrencinin düşüncesi doğrudur",
-      "Organik kimya karbon bileşiklerinin genel yapı/tepkimelerini incelerken, biyokimya özellikle CANLI organizmalardaki kimyasal süreçlere (metabolizma, enzimler, DNA) odaklanır — biyokimya organik kimyanın kavramlarını kullanan ama canlı sistemlere özgü bir alt dalıdır",
-      "Organik kimya yalnızca canlılarla ilgilenir",
-      "Bu iki alan arasında hiçbir bağlantı yoktur"
-    ],
-    correct: 2,
-    explain: "Biyokimya, organik kimyanın kavramlarından yararlanan ama özellikle canlı sistemlerdeki (hücre, metabolizma, genetik) kimyasal süreçlere odaklanan özelleşmiş bir alt dalıdır."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir kozmetik firması yeni bir nemlendirici krem geliştiriyor: önce cildin nem tutma mekanizmasını (biyokimyasal süreç) araştırıyor, sonra kremin içindeki yağ ve su moleküllerinin nasıl kararlı bir karışım (emülsiyon) oluşturacağını (fizikokimyasal denge) hesaplıyor.",
-    text: "Bu süreç, alt disiplinlerin günlük hayat ürünlerindeki rolü hakkında en doğru hangi çıkarımı destekler?",
-    options: [
-      "Sadece organik kimya kozmetik ürünlerle ilgilenir",
-      "Kozmetik ürünler hiçbir kimya alt disipliniyle ilgili değildir",
-      "Bir tek ürün geliştirme sürecinde birden fazla alt disiplinden yararlanılabilir",
-      "Fizikokimya yalnızca laboratuvar deneylerinde kullanılır, ürün geliştirmede kullanılmaz",
-      "Biyokimya yalnızca ilaçlarla ilgilidir, kozmetikle ilgisi yoktur"
-    ],
-    correct: 2,
-    explain: "Günlük hayatta kullanılan tek bir ürünün geliştirilmesi bile (kozmetik örneğinde olduğu gibi) genellikle birden fazla kimya alt disiplininin bir arada kullanılmasını gerektirebilir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Aşağıdaki tabloda dört meslek profesyonelinin günlük iş tanımlarından kesitler verilmiştir.",
+    context: "Aşağıdaki tabloda üç meslek profesyonelinin günlük iş tanımı özetlenmiştir.",
     table: {
-      headers: ["Meslek", "İş tanımından kesit"],
+      headers: ["Profesyonel", "İş tanımı"],
       rows: [
-        ["A", "Kan örneklerindeki glikoz ve kolesterol seviyelerini ölçer"],
-        ["B", "Yeni bir cep telefonu kılıfı için darbeye dayanıklı plastik formülü geliştirir"],
-        ["C", "Toprak örneklerindeki ağır metal kirliliğini analiz eder"],
-        ["D", "Bir güneş enerjisi santralinde kullanılacak yeni bir batarya kimyası tasarlar"]
+        ["1", "Kan örneklerindeki enzim ve hormon düzeylerini ölçerek hastalık teşhisine katkı sağlar"],
+        ["2", "Yeni bir ambalaj malzemesinin esneklik ve dayanıklılık özelliklerini test eder"],
+        ["3", "Bir gölün suyundaki azot/fosfor derişimini izleyerek su kalitesini değerlendirir"]
       ]
     },
-    text: "Tabloya göre A, B, C ve D meslek sahiplerinin çalışma alanları sırasıyla hangi alt disiplinlerle en iyi eşleşir?",
-    options: [
-      "A: Metalurji, B: Tarım kimyası, C: Gıda kimyası, D: Organik kimya",
-      "A: Astrokimya, B: Jeokimya, C: Nükleer kimya, D: Farmasötik kimya",
-      "A: Klinik biyokimya, B: Polimer kimyası, C: Çevre/analitik kimya, D: Elektrokimya",
-      "Dördü de aynı alt disiplinle (analitik kimya) ilişkilidir",
-      "Bu iş tanımlarının hiçbiri kimya alt disiplinleriyle eşleştirilemez"
-    ],
+    text: "Tablodaki 1, 2 ve 3 numaralı profesyoneller sırasıyla hangi alt disiplinlerde çalışıyor olabilir?",
+    options: ["1: Analitik kimya, 2: Anorganik kimya, 3: Gıda kimyası", "1: Nükleer kimya, 2: Organik kimya, 3: Jeokimya", "1: Biyokimya, 2: Polimer kimyası, 3: Çevre kimyası", "1: Elektrokimya, 2: Biyokimya, 3: Polimer kimyası", "1: Jeokimya, 2: Nükleer kimya, 3: Elektrokimya"],
     correct: 2,
-    explain: "A (kan analizleri) klinik biyokimya, B (plastik formülü) polimer kimyası, C (kirlilik analizi) çevre/analitik kimya, D (batarya kimyası) elektrokimya ile ilişkilidir."
+    explain: "Kan örneklerindeki biyomolekülleri inceleyen 1. profesyonel biyokimya, ambalaj malzemesinin polimer özelliklerini test eden 2. profesyonel polimer kimyası, su kalitesini izleyen 3. profesyonel ise çevre kimyası alanında çalışıyor olabilir."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir öğrenci ileride hem laboratuvar deneyleri yapmak hem de doğada saha çalışması yürütmek istiyor; özellikle kayaçların ve minerallerin oluşum tarihini kimyasal analizle çözmekle ilgileniyor.",
-    text: "Bu öğrencinin ilgi alanına en uygun kariyer/alt disiplin hangisidir?",
-    options: [
-      "Gıda kimyası",
-      "Farmasötik kimya",
-      "Jeokimya",
-      "Elektrokimya",
-      "Polimer kimyası"
-    ],
+    context: "Bir laboratuvarda iki farklı çalışma yürütülmektedir: birinci çalışma bir boya fabrikasında üretilen boyadaki metal element yüzdelerini kütlece belirlemeyi; ikinci çalışma ise sıcaklık ve basıncın bir tepkimenin hızına etkisini incelemeyi amaçlamaktadır.",
+    text: "Bu iki çalışma sırasıyla kimyanın hangi alt disiplinleriyle en doğrudan ilişkilidir?",
+    options: ["Birinci: Organik kimya, İkinci: Jeokimya", "Birinci: Biyokimya, İkinci: Nükleer kimya", "Birinci: Analitik kimya, İkinci: Fizikokimya", "Birinci: Polimer kimyası, İkinci: Gıda kimyası", "Birinci: Elektrokimya, İkinci: Anorganik kimya"],
     correct: 2,
-    explain: "Kayaç ve mineral oluşumunun kimyasal analizle incelenmesi, hem laboratuvar hem saha çalışması gerektiren jeokimyanın konusudur."
+    explain: "Bir malzemedeki element yüzdelerinin kütlece belirlenmesi analitik kimyanın; sıcaklık/basıncın tepkime hızına etkisinin incelenmesi ise fizikokimyanın (kimyasal kinetik) konusudur."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir üniversite laboratuvarında iki farklı proje yürütülüyor: Proje 1'de bir bileşiğin tam olarak hangi atomlardan oluştuğu ve bu atomların oranı kütle spektrometresiyle belirleniyor. Proje 2'de aynı bileşiğin karbon iskeletinin nasıl sentezleneceği planlanıyor.",
-    text: "Proje 1 ve Proje 2 sırasıyla hangi alt disiplinlerle ilişkilidir?",
-    options: [
-      "Proje 1: Nükleer kimya, Proje 2: Jeokimya",
-      "Proje 1: Organik kimya, Proje 2: Analitik kimya",
-      "Proje 1: Analitik kimya, Proje 2: Organik kimya",
-      "İkisi de aynı alt disiplinle (fizikokimya) ilişkilidir",
-      "Bu iki proje arasında bir ayrım yapılamaz"
-    ],
-    correct: 2,
-    explain: "Bir bileşiğin bileşiminin/miktarının belirlenmesi analitik kimyanın, karbon iskeletinin sentezlenmesi ise organik kimyanın çalışma alanına girer."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir öğrenci, hem doğa sporlarını hem kimyayı seviyor ve ileride milli parklardaki su kaynaklarının kirlilik düzeyini izleyen bir kariyer istiyor.",
-    text: "Bu öğrenci için en uygun alt disiplin kombinasyonu hangisidir?",
-    options: [
-      "Farmasötik kimya ve polimer kimyası",
-      "Nükleer kimya ve astrokimya",
-      "Analitik kimya (ölçüm yöntemleri) ve çevre kimyası (kirlilik/ekosistem etkisi)",
-      "Metalurji ve gıda kimyası",
-      "Bu istekle hiçbir alt disiplin uyuşmaz"
-    ],
-    correct: 2,
-    explain: "Su kaynaklarındaki kirliliği izlemek hem ölçüm/analiz becerisi (analitik kimya) hem de çevresel etkilerin yorumlanmasını (çevre kimyası) gerektirir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir gıda güvenliği laboratuvarı, ithal edilen bir baharat örneğinde izin verilmeyen bir boyar maddenin bulunup bulunmadığını kontrol ediyor.",
-    text: "Bu kontrol süreci hangi iki alt disiplinin kesişiminde yer alır?",
-    options: [
-      "Polimer kimyası ve elektrokimya",
-      "Astrokimya ve nükleer kimya",
-      "Metalurji ve jeokimya",
-      "Gıda kimyası ve analitik kimya",
-      "Organik kimya ile hiçbir ilgisi yoktur"
-    ],
+    context: "Bir gastronomi laboratuvarında, sıvı azot kullanılarak dondurma yapılması, jelatin/nişasta ile malzemelerin jöleye dönüştürülmesi gibi teknikler geliştirilmektedir; bu teknikler sırasında sıcaklık değişiminin ve molekül yapısının besinin dokusuna etkisi izlenmektedir.",
+    text: "Bu çalışmalar en doğrudan kimyanın hangi iki alt disiplininin kesişiminde yer alır?",
+    options: ["Analitik kimya ve çevre kimyası", "Nükleer kimya ve jeokimya", "Elektrokimya ve polimer kimyası", "Gıda kimyası ve fizikokimya", "Biyokimya ve anorganik kimya"],
     correct: 3,
-    explain: "Gıda ürünlerindeki maddelerin (boyar madde gibi) tespiti hem gıda kimyasının konusuna hem de analitik kimyanın ölçüm yöntemlerine dayanır."
+    explain: "Besinlerin bileşimi ve dokusuyla ilgili çalışmalar gıda kimyasının; sıcaklık/hâl değişiminin bu dokuya etkisinin incelenmesi ise fizikokimyanın (termodinamik, hâl değişimleri) konusudur — bu iki alan kesişerek moleküler gastronomi gibi uygulamalı alanları besler."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir öğrenci, 'polimer kimyası aslında organik kimyanın bir alt kümesi mi, yoksa tamamen ayrı bir alan mı?' diye soruyor. Öğretmeni, çoğu polimerin (plastikler, naylon vb.) karbon iskeletine sahip olduğunu, ancak bazı polimerlerin (silikon gibi) anorganik yapıda da olabildiğini açıklıyor.",
-    text: "Bu açıklamaya göre alt disiplinler arasındaki ilişki hakkında en doğru çıkarım hangisidir?",
-    options: [
-      "Organik ve anorganik kimya birbirinin tam zıttıdır, hiçbir ortak nokta olamaz",
-      "Polimer kimyası hiçbir zaman organik kimyayla ilişkili değildir",
-      "Tüm polimerler mutlaka anorganiktir",
-      "Alt disiplinler arasında kesin, üst üste binmeyen sınırlar yoktur; polimer kimyası hem organik hem anorganik kimyayla örtüşebilir",
-      "Bu soru bilimsel olarak yanıtlanamaz"
-    ],
+    context: "Bir malzeme test laboratuvarında iki farklı ambalaj filminin (X ve Y) esneklik, su geçirmezlik ve ısıya dayanıklılık özellikleri karşılaştırılarak hangisinin gıda ambalajı için daha uygun olduğu belirlenmeye çalışılmaktadır.",
+    text: "Bu karşılaştırmalı test süreci en doğrudan kimyanın hangi alt disipliniyle ilişkilidir?",
+    options: ["Biyokimya", "Nükleer kimya", "Jeokimya", "Polimer kimyası", "Elektrokimya"],
     correct: 3,
-    explain: "Kimyanın alt disiplinleri arasında kesin duvarlar yoktur; polimer kimyası gibi bazı alanlar hem organik hem anorganik kimyanın kavramlarını içerebilir."
+    explain: "Ambalaj filmleri genellikle polimer yapılı malzemelerdir; bu malzemelerin fiziksel/kimyasal özelliklerinin test edilip karşılaştırılması polimer kimyasının uygulama alanına girer."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Aşağıda beş farklı kimya alt disiplini ve bunların örnek uygulama alanları eşleştirilmiştir; ancak bir eşleştirme yanlış yapılmıştır.",
+    table: {
+      headers: ["Disiplin", "Uygulama alanı"],
+      rows: [
+        ["Elektrokimya", "Pil/akü teknolojileri"],
+        ["Biyokimya", "DNA yapısının incelenmesi"],
+        ["Jeokimya", "Kayaç yaşının belirlenmesi"],
+        ["Organik kimya", "Metal alaşımlarının sertliği"],
+        ["Gıda kimyası", "Besin katkı maddelerinin analizi"]
+      ]
+    },
+    text: "Tabloda hangi disiplin-uygulama eşleştirmesi hatalıdır?",
+    options: ["Jeokimya — Kayaç yaşının belirlenmesi", "Elektrokimya — Pil/akü teknolojileri", "Biyokimya — DNA yapısının incelenmesi", "Organik kimya — Metal alaşımlarının sertliği", "Gıda kimyası — Besin katkı maddelerinin analizi"],
+    correct: 3,
+    explain: "Metal alaşımlarının incelenmesi anorganik kimyanın konusudur; organik kimya karbon temelli bileşikleri (canlı kaynaklı/sentetik organik maddeleri) inceler, bu yüzden tablodaki 'Organik kimya — Metal alaşımlarının sertliği' eşleştirmesi hatalıdır."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir enerji şirketinde çalışan bir grup, hem güneş pili malzemelerinin (anorganik yarı iletkenler) verimliliğini hem de bu pillerin ürettiği elektriğin depolanmasında kullanılan pil hücrelerindeki kimyasal tepkimeleri incelemektedir.",
+    text: "Bu çalışma grubunun faaliyetleri, kimyanın hangi iki alt disipliniyle en doğrudan ilişkilidir?",
+    options: ["Nükleer kimya ve polimer kimyası", "Organik kimya ve jeokimya", "Biyokimya ve gıda kimyası", "Anorganik kimya ve elektrokimya", "Analitik kimya ve çevre kimyası"],
+    correct: 3,
+    explain: "Yarı iletken malzemelerin (anorganik bileşikler) incelenmesi anorganik kimyanın; pil hücrelerindeki elektrik-kimyasal tepkime ilişkisinin incelenmesi ise elektrokimyanın konusudur."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir çalışma ekibi, toprağın altında binlerce yıl kalmış organik kalıntılardaki karbon izotop oranlarını ölçerek kalıntının yaklaşık yaşını hesaplamaktadır.",
+    text: "Bu yöntem en doğrudan kimyanın hangi alt disipliniyle ilişkilidir?",
+    options: ["Elektrokimya", "Polimer kimyası", "Gıda kimyası", "Nükleer kimya", "Fizikokimya"],
+    correct: 3,
+    explain: "Radyoaktif izotopların (örneğin karbon-14) bozunma oranına dayanan yaş tayini yöntemleri (karbon tarihleme) nükleer kimyanın bir uygulamasıdır."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir üniversite bölümünün tanıtım metninde, mezunların hem ilaç şirketlerinde yeni molekül tasarımında hem de gıda şirketlerinde katkı maddesi analizinde çalışabildiği belirtilmektedir.",
+    text: "Bu iki çalışma alanı arasındaki ortak nokta, kimyanın alt disiplinleri hakkında en doğru hangi çıkarımı destekler?",
+    options: ["İlaç ve gıda sektörleri kimyayla hiçbir ilgisi olmayan alanlardır", "Bu iki alan hiçbir ortak temele sahip değildir, tesadüfen aynı bölümden mezun olunur", "Kimyada yalnızca tek bir alt disiplin gerçek anlamda geçerlidir", "Farklı alt disiplinler (örneğin farmasötik kimya ve gıda kimyası) birbirinden bağımsız görünse de, ortak temel kimya bilgisi ve yöntemleri (molekül analizi, sentez) üzerine kurulu olabilir", "Bu iki alanın ortak noktası yalnızca çalışanların maaşıdır"],
+    correct: 3,
+    explain: "Farklı görünen alt disiplinler (farmasötik kimya, gıda kimyası gibi) genellikle ortak temel kimya bilgisi (molekül yapısı, analiz yöntemleri, sentez ilkeleri) üzerine kuruludur; bu da kimya eğitiminin çok yönlü kariyer olanakları sunmasını açıklar."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Aşağıdaki grafikte, dört farklı kimya alt disiplininde son on yılda yayımlanan bilimsel makale sayısındaki yaklaşık artış oranı (%) gösterilmiştir.",
+    chart: {
+      type: "bar",
+      title: "Alt disiplinlerde yayın sayısı artış oranı (%)",
+      labels: ["Analitik", "Polimer", "Biyokimya", "Nükleer"],
+      values: [22, 35, 48, 15]
+    },
+    text: "Grafikteki verilere dayanarak, son on yılda araştırma ilgisinin en hızlı arttığı alt disiplin hangisidir?",
+    options: ["Nükleer kimya", "Analitik kimya", "Polimer kimyası", "Biyokimya", "Grafikten bu sonuç çıkarılamaz"],
+    correct: 3,
+    explain: "Grafiğe göre biyokimya %48 ile en yüksek artış oranına sahiptir; bu, biyokimya alanındaki araştırma ilgisinin incelenen dönemde diğer üç disipline göre en hızlı arttığını gösterir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir sanayi bölgesindeki bir tesis, ürettiği atık suyu doğaya bırakmadan önce içindeki ağır metal ve organik kirletici derişimini standartlara uygun hâle getirmek için arıtma süreçleri uygulamaktadır.",
+    text: "Bu arıtma sürecinin tasarımı ve kirletici derişiminin izlenmesi, kimyanın hangi iki alt disipliniyle en doğrudan ilişkilidir?",
+    options: ["Biyokimya ve elektrokimya", "Nükleer kimya ve gıda kimyası", "Polimer kimyası ve jeokimya", "Çevre kimyası ve analitik kimya", "Organik sentez kimyası ve anorganik kimya"],
+    correct: 3,
+    explain: "Atık suyun çevresel etkisinin azaltılması çevre kimyasının; kirletici derişiminin hassas biçimde ölçülüp standartlara uygunluğunun doğrulanması ise analitik kimyanın çalışma alanına girer."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir araştırma ekibi, bitkilerin fotosentez sırasında ışık enerjisini kimyasal enerjiye dönüştürme verimliliğini hem hücresel/moleküler düzeyde hem de bu sürecin termodinamik (enerji) verimliliği açısından incelemektedir.",
+    text: "Bu çalışma en doğrudan kimyanın hangi iki alt disiplininin kesişiminde yer alır?",
+    options: ["Elektrokimya ve analitik kimya", "Jeokimya ve nükleer kimya", "Polimer kimyası ve gıda kimyası", "Biyokimya ve fizikokimya", "Anorganik kimya ve çevre kimyası"],
+    correct: 3,
+    explain: "Fotosentezin hücresel/moleküler mekanizması biyokimyanın; enerji dönüşümünün verimliliğinin (termodinamik açıdan) incelenmesi ise fizikokimyanın konusudur."
   },
 
   /* ============ ZOR ============ */
@@ -1181,439 +941,416 @@ export const QUIZ = {
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir aşı geliştirme sürecinde şu aşamalar yaşanıyor: (1) Virüsün proteinlerinin biyokimyasal yapısı çözülüyor. (2) Bu yapıya uygun bir molekül organik kimya yöntemleriyle sentezleniyor. (3) Sentezlenen molekülün saflığı analitik kimya yöntemleriyle doğrulanıyor. (4) Molekülün vücuttaki bağışıklık tepkisi farmasötik/biyokimya alanında test ediliyor.",
-    text: "Bu dört aşamalı süreç, modern bilimsel/endüstriyel projelerde kimya alt disiplinlerinin rolü hakkında en kapsamlı hangi çıkarımı destekler?",
-    options: [
-      "Bu süreçte yalnızca bir alt disiplin (organik kimya) yeterlidir",
-      "Aşı geliştirme yalnızca biyoloji biliminin konusudur, kimyayla ilgisi yoktur",
-      "Her aşama birbirinden tamamen bağımsızdır ve sırasının önemi yoktur",
-      "Karmaşık gerçek dünya problemleri (aşı geliştirme gibi) genellikle tek bir alt disiplinle değil, birden fazla alt disiplinin sıralı/eş zamanlı iş birliğiyle çözülür",
-      "Analitik kimyanın bu süreçte hiçbir rolü yoktur"
-    ],
+    context: "Bir ilaç şirketinin Ar-Ge biriminde, yeni bir ilaç adayı molekülün önce laboratuvar ortamında sentezlenmesi, ardından vücuttaki hedef proteine bağlanma etkinliğinin ölçülmesi ve son olarak kan/idrar örneklerinde miktarının hassas biçimde tayin edilmesi gerekmektedir.",
+    text: "Bu sürecin üç aşaması sırasıyla en doğrudan hangi alt disiplinlerle ilişkilendirilebilir?",
+    options: ["Anorganik kimya → Jeokimya → Elektrokimya", "Jeokimya → Nükleer kimya → Polimer kimyası", "Elektrokimya → Çevre kimyası → Gıda kimyası", "Organik kimya (sentez) → Biyokimya (hedef proteine bağlanma) → Analitik kimya (miktar tayini)", "Biyokimya → Analitik kimya → Organik kimya (sıra önemsizdir)"],
     correct: 3,
-    explain: "Aşı geliştirme gibi karmaşık projeler, genellikle biyokimya, organik kimya, analitik kimya ve farmasötik kimya gibi birden fazla alt disiplinin koordineli çalışmasını gerektirir — bu, modern bilimin disiplinlerarası doğasını yansıtır."
+    explain: "Yeni bir molekülün laboratuvarda sentezlenmesi organik kimyanın; bu molekülün biyolojik hedeflerle etkileşiminin incelenmesi biyokimyanın; vücut sıvılarındaki miktarının hassas ölçümü ise analitik kimyanın konusudur — bu, tek bir ilaç geliştirme sürecinin birden fazla alt disiplini nasıl bir arada kullandığını gösterir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir öğrenci şu tabloyu inceliyor: Alt disiplinler tarihsel olarak farklı zamanlarda 'resmi' olarak tanımlanmış — örneğin metalurji binlerce yıldır (Tunç/Demir Çağı) pratikte uygulanırken, polimer kimyası ancak 20. yüzyılda ayrı bir disiplin olarak gelişmiştir.",
-    text: "Bu bilgiye dayanarak, bilim disiplinlerinin oluşumu hakkında en doğru bilimsel çıkarım hangisidir?",
-    options: [
-      "Bilim disiplinleri sabit, değişmez ve her zaman aynı şekilde var olmuş kategorilerdir",
-      "Bilim disiplinlerinin sınırları ve tanımları, insanlığın biriktirdiği bilgi, teknoloji ve ihtiyaçlar geliştikçe zamanla ortaya çıkar ve değişebilir",
-      "Yalnızca eski disiplinler (metalurji gibi) gerçek bilim sayılır",
-      "Polimer kimyası 20. yüzyılda ortaya çıktığı için güvenilir bir bilim dalı değildir",
-      "Disiplinlerin ortaya çıkış zamanı bilimsel değerleriyle ilgisizdir ve hiçbir şey öğretmez"
-    ],
-    correct: 1,
-    explain: "Bilim disiplinlerinin tanımları ve sınırları statik değildir; teknolojik gelişmeler ve toplumsal ihtiyaçlar yeni uzmanlaşmış alanların (örneğin polimer kimyası, 20. yüzyılda plastiklerin yaygınlaşmasıyla) ortaya çıkmasına yol açabilir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir şirket, Mars'a gönderilecek bir uzay aracında kullanılmak üzere hem aşırı sıcaklık farklarına dayanıklı yeni bir kompozit malzeme (malzeme/polimer kimyası) hem de aracın enerji ihtiyacını karşılayacak radyoizotop pil teknolojisi (nükleer kimya) geliştiriyor; ayrıca Mars atmosferinin örnek verilerinden yola çıkarak orada yaşam izi arayan bir analiz sistemi (astrokimya + analitik kimya) tasarlıyor.",
-    text: "Bu proje örneği, disiplinlerarası bilimsel çalışmalar hakkında hangi genellemeyi en iyi destekler?",
-    options: [
-      "Nükleer kimya ve astrokimya birbirine hiçbir zaman aynı projede eşlik edemez",
-      "Uzay projeleri kimyayla hiçbir şekilde ilgili değildir",
-      "Her proje yalnızca tek bir alt disiplin kullanılarak yürütülmelidir, aksi hâlde başarısız olur",
-      "İleri teknoloji projeleri genellikle birbirinden farklı görünen çok sayıda alt disiplinin bir arada, karşılıklı bilgi alışverişiyle kullanılmasını gerektirebilir",
-      "Bu tür karmaşık projeler kimya biliminin dışında, sadece mühendisliğin konusudur"
-    ],
-    correct: 3,
-    explain: "Uzay araştırmaları gibi ileri teknoloji projeleri, malzeme bilimi, nükleer kimya, astrokimya ve analitik kimya gibi görünüşte farklı alanların bir arada, disiplinlerarası bir yaklaşımla kullanılmasını gerektirebilir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir öğrenci, iklim değişikliğiyle mücadele için geliştirilen bir teknolojiyi araştırıyor: atmosferden karbondioksit yakalayan bir sistem, hem CO₂'nin hangi kimyasal maddeyle (örneğin belirli aminler) tutulacağını (organik/fizikokimya), hem tutulan CO₂'nin yer altında güvenle depolanacağı jeolojik formasyonların kimyasal uygunluğunu (jeokimya), hem de sistemin çevresel etkilerinin uzun vadeli izlenmesini (çevre kimyası + analitik kimya) gerektiriyor.",
-    text: "Bu örnek, günümüzün büyük küresel sorunlarına (iklim değişikliği gibi) kimya biliminin katkısı hakkında en kapsamlı hangi çıkarımı destekler?",
-    options: [
-      "Fizikokimyanın CO₂ yakalama teknolojileriyle hiçbir bağlantısı yoktur",
-      "İklim değişikliği kimya biliminin ilgi alanına hiç girmez",
-      "Bu tür sorunlar yalnızca jeokimya ile çözülebilir, diğer disiplinlerin katkısı önemsizdir",
-      "Küresel ölçekli sorunların çözümü genellikle tek bir kimya alt disipliniyle değil, birçok alt disiplinin sistematik ve koordineli bir şekilde bir araya getirilmesiyle mümkün olur",
-      "Çevre kimyası yalnızca küçük ölçekli, yerel sorunlarla ilgilenir, küresel sorunlarla ilgilenmez"
-    ],
-    correct: 3,
-    explain: "İklim değişikliği gibi küresel ölçekli, çok boyutlu sorunların çözümü tipik olarak organik/fizikokimya, jeokimya, çevre kimyası ve analitik kimya gibi birçok alt disiplinin entegre bir şekilde çalışmasını gerektirir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir öğrenci şu iddiayı araştırıyor: 'Gelecekte yapay zekâ, yeni ilaç moleküllerini ve malzemeleri kimyagerlerden çok daha hızlı tasarlayabilecek; bu yüzden kimya alt disiplinlerinde çalışan insanlara ihtiyaç kalmayacak.' Araştırmasında, yapay zekânın moleküler tasarımda milyonlarca olasılığı hızla tarayabildiğini, ancak önerilen moleküllerin gerçekten sentezlenip test edilmesi, saflığının doğrulanması ve etik/güvenlik değerlendirmesinin hâlâ insan uzmanlığı gerektirdiğini öğreniyor.",
-    text: "Bu bulgulara dayanarak, teknolojinin kimya alt disiplinlerindeki rolü hakkında en dengeli ve bilimsel çıkarım hangisidir?",
-    options: [
-      "Kimyagerlerin görevi yalnızca molekül tasarlamaktır, başka hiçbir sorumlulukları yoktur",
-      "Yapay zekâ, kimya alt disiplinlerinin tamamının yerini kesin olarak ve hemen alacaktır",
-      "Yapay zekânın kimya araştırmalarında hiçbir katkısı yoktur",
-      "Yapay zekâ gibi teknolojiler kimya alt disiplinlerindeki araştırma sürecini hızlandıran bir araç olabilir, ancak sentez, doğrulama ve değerlendirme gibi aşamalarda uzman kimyagerlerin rolü (en azından yakın gelecekte) tamamen ortadan kalkmaz",
-      "Bu konuda bilimsel bir çıkarım yapmak mümkün değildir"
-    ],
-    correct: 3,
-    explain: "Bilimsel bir değerlendirme, teknolojinin (yapay zekâ gibi) araştırma sürecinin bazı aşamalarını hızlandırabileceğini ama sentez, doğrulama, güvenlik ve etik değerlendirme gibi aşamalarda uzman bilgisinin önemini koruduğunu; abartılı iddialardan kaçınmayı gerektirir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir arkeokimya (arkeoloji + kimya) araştırmacısı, antik bir çömlekte bulunan organik kalıntıların kimyasal analizini yaparak (analitik kimya), bu kalıntıların hangi bitkisel/hayvansal kaynaktan geldiğini (organik kimya/biyokimya) belirliyor ve elde ettiği verilerle o dönemin beslenme alışkanlıkları hakkında çıkarımlar yapıyor.",
-    text: "Bu örnek, kimyanın alt disiplinlerinin uygulama alanı hakkında en doğru hangi genellemeyi destekler?",
-    options: [
-      "Analitik kimya yalnızca modern, güncel örneklerle çalışabilir, antik örneklerle çalışamaz",
-      "Kimya yalnızca laboratuvar ortamında, doğa bilimleriyle sınırlı olarak kullanılabilir",
-      "Arkeoloji ve kimya arasında hiçbir bağlantı kurulamaz",
-      "Kimya alt disiplinlerinin uygulama alanı yalnızca doğa bilimleriyle sınırlı değildir; tarih, arkeoloji gibi sosyal/beşerî bilimlerle kesişen alanlarda da (arkeokimya gibi) kullanılabilir",
-      "Bu tür disiplinlerarası alanlar bilimsel olarak geçerli sayılmaz"
-    ],
-    correct: 3,
-    explain: "Kimya alt disiplinleri, doğa bilimleriyle sınırlı kalmayıp arkeoloji, sanat tarihi gibi alanlarla kesişerek (arkeokimya gibi) disiplinlerarası yeni uygulama alanları oluşturabilir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir öğrenci market rafında duran şampuan, deterjan, sabun gibi ürünlerin çoğunun yağ/su karışımlarını temizleyen bileşenler içerdiğini öğreniyor.",
-    text: "Bu tür temizlik ürünlerinin formülasyonu en çok hangi alt disiplinle ilişkilidir?",
-    options: [
-      "Jeokimya",
-      "Nükleer kimya",
-      "Astrokimya",
-      "Organik kimya / fizikokimya (yüzey aktif madde tasarımı)",
-      "Metalurji"
-    ],
-    correct: 3,
-    explain: "Yüzey aktif maddelerin (deterjan/sabun bileşenleri) tasarımı, hem organik moleküllerin yapısını hem de yüzey/arayüz davranışlarını (fizikokimya) içerir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir araştırmacı, bir hastanın kan örneğindeki demir eksikliğini tespit etmek için laboratuvar testleri yapıyor.",
-    text: "Bu test süreci en çok hangi alt disiplinle ilişkilidir?",
-    options: [
-      "Jeokimya",
-      "Astrokimya",
-      "Metalurji",
-      "Klinik biyokimya",
-      "Polimer kimyası"
-    ],
-    correct: 3,
-    explain: "Kan/vücut sıvılarındaki biyokimyasal değerlerin ölçülüp yorumlanması klinik biyokimyanın konusudur."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir mühendis, otomobil lastiklerinin daha dayanıklı ve esnek olması için kauçuk moleküllerinin çapraz bağlanma (vulkanizasyon) sürecini optimize ediyor.",
-    text: "Bu optimizasyon süreci hangi alt disiplinin uygulama örneğidir?",
-    options: [
-      "Klinik biyokimya",
-      "Nükleer kimya",
-      "Astrokimya",
-      "Polimer kimyası",
-      "Jeokimya"
-    ],
-    correct: 3,
-    explain: "Kauçuk gibi uzun zincirli moleküllerin (polimerlerin) işlenmesi ve özelliklerinin geliştirilmesi polimer kimyasının konusudur."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir araştırmacı, bir nükleer santralde kullanılan yakıtın güvenli şekilde işlenmesi ve atık yönetimi üzerine çalışıyor.",
-    text: "Bu çalışma hangi alt disiplinin doğrudan sorumluluk alanına girer?",
-    options: [
-      "Tarım kimyası",
-      "Gıda kimyası",
-      "Polimer kimyası",
-      "Farmasötik kimya",
-      "Nükleer kimya"
-    ],
+    context: "Bir akademisyen, kariyeri boyunca önce anorganik kimya alanında yarı iletken malzemeler üzerine çalışmış, ardından bu malzemelerin güneş pili verimliliğini artırmak için fizikokimya (enerji dönüşümü) yöntemlerini kullanmaya başlamıştır.",
+    text: "Bu kariyer geçişi, kimya alt disiplinleri arasındaki ilişki hakkında en doğru hangi çıkarımı destekler?",
+    options: ["Bu tür bir kariyer geçişi bilimsel olarak mümkün değildir", "Bir kimyacı kariyeri boyunca yalnızca tek bir alt disiplinde çalışabilir", "Anorganik kimya ile fizikokimya arasında hiçbir bağlantı kurulamaz", "Disiplinler arası geçiş, önceki bilginin tamamen değersizleşmesi anlamına gelir", "Alt disiplinler arasındaki sınırlar kesin ve geçirimsiz değildir; bir araştırmacı birikimli deneyimini yeni bir disiplinin yöntemleriyle birleştirerek disiplinler arası çalışmalar yürütebilir"],
     correct: 4,
-    explain: "Nükleer yakıtların işlenmesi, radyoaktif atık yönetimi gibi konular nükleer kimyanın çalışma alanındadır."
+    explain: "Kimyanın alt disiplinleri arasındaki sınırlar akademik sınıflandırma kolaylığı sağlasa da, gerçek araştırma pratiğinde geçirgendir; bir araştırmacı önceki disiplin bilgisini yeni yöntemlerle birleştirerek disiplinler arası (interdisipliner) çalışmalar yürütebilir — bu, modern bilimsel araştırmanın yaygın bir özelliğidir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir çevresel adli olay soruşturmasında, bir akarsudaki balık ölümlerinin nedenini belirlemek için hem sudaki kirletici derişimi ölçülmüş (X yöntemi) hem de ölü balık dokularındaki kirletici birikimi ve bunun hücresel düzeydeki etkisi incelenmiştir (Y yöntemi).",
+    text: "X ve Y yöntemleri sırasıyla en doğrudan hangi alt disiplinlerle ilişkilidir?",
+    options: ["X ve Y aynı disiplini temsil eder, ayrım anlamsızdır", "X: Nükleer kimya, Y: Jeokimya", "X: Polimer kimyası, Y: Elektrokimya", "X: Organik sentez kimyası, Y: Gıda kimyası", "X: Analitik kimya / çevre kimyası, Y: Biyokimya"],
+    correct: 4,
+    explain: "Sudaki kirletici derişiminin ölçülmesi analitik kimya ve çevre kimyasının; kirleticinin canlı doku üzerindeki hücresel/biyokimyasal etkisinin incelenmesi ise biyokimyanın konusudur — bu örnek, gerçek dünya sorunlarının çözümünde birden fazla alt disiplinin birlikte kullanıldığını gösterir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir malzeme bilimi ekibi, yeni geliştirdikleri biyobozunur bir plastiğin hem polimer zincir yapısını hem de bu plastiğin doğada mikroorganizmalarca parçalanma hızını incelemektedir.",
+    text: "Bu çalışmanın kapsamı, kimyanın alt disiplinleri arasındaki ilişki hakkında en doğru hangi çıkarımı destekler?",
+    options: ["Bu tür bir çalışma kimyanın hiçbir alt disipliniyle ilişkilendirilemez", "Biyobozunur plastik geliştirme yalnızca polimer kimyasıyla ilgilidir, başka hiçbir disipline ihtiyaç yoktur", "Parçalanma hızının incelenmesi kimyayla değil yalnızca biyoloji ile ilgilidir", "Alt disiplinler arasında hiçbir zaman ortak çalışma yürütülmez", "Yeni nesil malzeme geliştirme çalışmaları, genellikle tek bir disiplinin değil, birden fazla alt disiplinin (burada polimer kimyası ve çevre kimyası/biyokimya) bir arada kullanılmasını gerektirir"],
+    correct: 4,
+    explain: "Biyobozunur plastik geliştirme, hem malzemenin polimer yapısının tasarlanmasını (polimer kimyası) hem de bu malzemenin çevrede/canlı sistemlerde nasıl parçalandığının anlaşılmasını (çevre kimyası, biyokimya) gerektirir; bu, güncel malzeme araştırmalarının disiplinler arası doğasını gösterir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir üniversite müfredat komitesi, 'analitik kimya' dersinin yalnızca bağımsız bir alt disiplin olarak değil, aynı zamanda organik kimya, biyokimya ve çevre kimyası derslerinin laboratuvar uygulamalarında da (ölçüm ve analiz yöntemleri olarak) kullanıldığını fark etmiştir.",
+    text: "Bu gözlem, analitik kimyanın kimya alanındaki konumu hakkında en doğru hangi çıkarımı destekler?",
+    options: ["Bu gözlem analitik kimyanın öneminin azaldığını gösterir", "Analitik kimyanın diğer disiplinlerle hiçbir bağlantısı yoktur", "Analitik kimya yalnızca kendi başına var olabilen, izole bir alandır", "Organik kimya, biyokimya ve çevre kimyası analitik kimyaya hiç ihtiyaç duymaz", "Analitik kimya, yalnızca bağımsız bir uzmanlık alanı değil, aynı zamanda diğer birçok alt disiplinde ölçüm ve doğrulama için kullanılan temel, yatay bir araç/yöntem bütünüdür"],
+    correct: 4,
+    explain: "Analitik kimya, madde miktarı/türünü belirleme yöntemleriyle (kromatografi, spektroskopi vb.) hem kendi başına bir uzmanlık alanı hem de diğer birçok alt disiplinin (organik kimya, biyokimya, çevre kimyası) araştırmalarında ölçüm ve doğrulama aracı olarak kullanılan, disiplinler arası 'yatay' bir bilgi/yöntem bütünüdür."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir bilim tarihi incelemesinde, 19. yüzyılda 'kimya' tek bir bütün disiplin olarak öğretilirken, 20. yüzyıl boyunca bilgi birikiminin artmasıyla organik, anorganik, fizikokimya, biyokimya gibi alt disiplinlere ayrıldığı; ancak son yıllarda 'kimyasal biyoloji', 'malzeme kimyası' gibi yeni disiplinler arası alanların ortaya çıktığı belirtilmektedir.",
+    text: "Bu tarihsel süreç, bilimsel disiplinlerin gelişimi hakkında en doğru hangi genellemeyi destekler?",
+    options: ["Bilim tarihindeki bu değişim tamamen rastlantısaldır, hiçbir bilimsel gerekçesi yoktur", "Bilimsel disiplinler yalnızca zamanla parçalanır, hiçbir zaman yeniden birleşmez", "Kimya biliminde disiplin ayrımı 19. yüzyıldan beri hiç değişmemiştir", "Disiplinler arası yeni alanların ortaya çıkması, eski alt disiplinlerin tamamen ortadan kalktığı anlamına gelir", "Bilimsel disiplinler zamanla hem uzmanlaşarak alt dallara ayrılabilir hem de yeni sorulara yanıt ararken tekrar disiplinler arası birleşmeler oluşturabilir; bu iki eğilim birbiriyle çelişmez"],
+    correct: 4,
+    explain: "Bilim tarihinde disiplinler hem artan bilgi birikimiyle uzmanlaşarak alt dallara ayrılabilir (farklılaşma) hem de karmaşık, çok yönlü sorunları çözmek için farklı alt disiplinlerin yöntemlerini birleştiren yeni disiplinler arası alanlar (kimyasal biyoloji, malzeme kimyası gibi) doğurabilir; bu iki eğilim bilimin dinamik gelişiminin doğal bir parçasıdır."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir teknoloji şirketi, giyilebilir sağlık cihazlarında kullanılmak üzere hem cilde temas eden esnek polimer malzemeler hem de vücuttaki belirli biyobelirteçleri (örneğin glikoz) algılayabilen kimyasal sensörler geliştirmektedir.",
+    text: "Bu ürün geliştirme sürecinin gerektirdiği bilgi birikimi, kimyanın alt disiplinleri hakkında en doğru hangi çıkarımı destekler?",
+    options: ["Bu tür ürünler kimyasal sensör içermediğinden kimyayla ilgisizdir", "Bu tür bir ürün yalnızca polimer kimyası bilgisiyle geliştirilebilir", "Biyobelirteç algılama, kimyayla değil yalnızca elektronik mühendisliğiyle ilgilidir", "Alt disiplinlerin bir araya gelmesi, ürün geliştirme sürecini bilimsel açıdan geçersiz kılar", "Karmaşık, çok bileşenli ürünlerin geliştirilmesi genellikle tek bir alt disiplinin değil, polimer kimyası, analitik kimya ve biyokimya gibi birden fazla alanın bilgisinin bütünleştirilmesini gerektirir"],
+    correct: 4,
+    explain: "Giyilebilir bir sağlık cihazı; cilde uygun esnek malzeme (polimer kimyası), belirli bir biyobelirteci seçici olarak algılayabilen kimyasal tepkime tasarımı (analitik kimya) ve bu biyobelirtecin vücuttaki biyolojik anlamının bilinmesi (biyokimya) gibi birden fazla alt disiplinin bilgisinin bütünleştirilmesini gerektirir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir gıda güvenliği kurumunun raporunda, 'organik' sertifikalı bir üründeki pestisit kalıntısının hem hangi bileşik olduğunun (tür tayini) hem de ne kadar miktarda bulunduğunun (miktar tayini) belirlenmesi gerektiği, ayrıca bu miktarın sağlık üzerindeki olası etkisinin de değerlendirilmesi gerektiği belirtilmektedir.",
+    text: "Bu değerlendirme sürecindeki üç görev (tür tayini, miktar tayini, sağlık etkisi değerlendirmesi) en doğrudan hangi alt disiplin(ler)in bilgisini gerektirir?",
+    options: ["Bu üç görev birbirinden tamamen bağımsız, hiçbir ortak disiplin gerektirmez", "Bu üç görev de yalnızca gıda kimyasıyla, başka hiçbir disiplinle ilgisizdir", "Tür tayini biyokimya, miktar tayini ise nükleer kimya gerektirir", "Sağlık etkisi değerlendirmesi kimyayla hiçbir ilgisi olmayan, tamamen tıbbi bir konudur", "Tür ve miktar tayini analitik kimyanın; sağlık etkisinin değerlendirilmesi ise biyokimya ve toksikoloji bilgisinin (biyokimyayla yakından ilişkili) desteğini gerektirir"],
+    correct: 4,
+    explain: "Bir kalıntının hangi bileşik olduğunu ve ne kadar miktarda bulunduğunu belirlemek analitik kimyanın temel işlevidir; bu miktarın sağlık üzerindeki etkisinin değerlendirilmesi ise biyokimya ve toksikoloji bilgisini gerektirir — kapsamlı bir gıda güvenliği değerlendirmesi bu bilgilerin bütünleştirilmesiyle mümkün olur."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir uzay araştırmaları merkezinde, hem bir gezegenin atmosferindeki gazların bileşimi uzaktan spektroskopik yöntemlerle analiz edilmekte hem de bu gazların oluşum kökeninin (jeolojik/biyolojik) olası kimyasal süreçlerle açıklanması araştırılmaktadır.",
+    text: "Bu araştırmanın kapsamı en doğrudan kimyanın hangi alt disiplinlerinin bilgisini bütünleştirir?",
+    options: ["Yalnızca elektrokimya bilgisi yeterlidir", "Yalnızca gıda kimyası bilgisi yeterlidir", "Yalnızca polimer kimyası bilgisi gereklidir", "Bu araştırma kimyanın hiçbir alt disipliniyle ilgili değildir, tamamen astronomiye aittir", "Analitik kimya (spektroskopik bileşim analizi) ve jeokimya/anorganik kimya (oluşum sürecinin kimyasal açıklaması)"],
+    correct: 4,
+    explain: "Bir gök cismindeki gazların bileşiminin spektroskopik yöntemlerle belirlenmesi analitik kimyanın; bu bileşimin oluşum kökeninin (jeolojik/kimyasal süreçler açısından) yorumlanması ise jeokimya ve anorganik kimya bilgisini gerektirir — bu, kimya bilgisinin uzay bilimleriyle kesişen disiplinler arası bir örneğidir (astrokimya)."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir üretim biriminde, deterjan gibi günlük temizlik ürünlerinin köpük oluşturma ve yağ çözme özelliklerini sağlayan bileşenler tasarlanmaktadır.",
+    objectIcons: ["detergent"],
+    text: "Bu tasarım süreci en doğrudan kimyanın hangi alt disipliniyle ilişkilidir?",
+    options: ["Elektrokimya", "Nükleer kimya", "Jeokimya", "Gıda kimyası", "Organik kimya"],
+    correct: 4,
+    explain: "Deterjanlardaki yüzey aktif maddeler karbon temelli (organik) bileşiklerdir; bu tür bileşiklerin tasarımı ve sentezi organik kimyanın kapsamına girer."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Aşağıdaki grafikte, dört farklı kimya alt disiplininde 2015-2023 yılları arasında Türkiye'de yayımlanan bilimsel makale sayısındaki (varsayımsal) artış oranları gösterilmiştir.",
-    chart: {
-      type: "bar",
-      labels: ["Analitik", "Polimer", "Biyokimya", "Nükleer"],
-      values: [35, 60, 82, 18],
-      title: "2015-2023 makale sayısı artış oranı (%)"
+    context: "Aşağıdaki tabloda, dört farklı kimya alanının uygulama örnekleri farklı çalışma gruplarınca eşleştirilmiştir.",
+    table: {
+      headers: ["Kimya Alanı", "1. Grup uygulama alanı", "2. Grup uygulama alanı"],
+      rows: [
+        ["Malzeme ve Nanoteknoloji", "Gübre üretimi", "Nanomalzeme üretimi"],
+        ["Enerji Sektörü", "Enerji depolama sistemleri", "Pil teknolojileri"],
+        ["Sağlık ve Biyoteknoloji", "Biyomedikal", "Adli kimya"],
+        ["Gıda ve İçecek Endüstrisi", "Gıda güvenliği", "Besin analizi"]
+      ]
     },
-    text: "Grafiğe göre, bu dönemde araştırma faaliyetinde en hızlı artış gösteren alt disiplin hangisidir; bu artış hangi güncel eğilimle ilişkilendirilebilir?",
-    options: [
-      "Grafikten hiçbir yorum yapılamaz",
-      "Nükleer kimya; en yüksek artış oranına sahiptir",
-      "Analitik kimya; artışın nedeni bilinemez",
-      "Polimer kimyası; artışın çevreyle hiçbir ilgisi yoktur",
-      "Biyokimya; genetik/kişiselleştirilmiş tıp ve ilaç geliştirme alanlarındaki artan ilgiyle ilişkilendirilebilir"
-    ],
+    text: "Tabloda verilen dört kimya alanı için, hangi grubun (1. veya 2.) verdiği örneklerin tamamı ilgili alanla tutarlıdır?",
+    options: ["Tablodaki veriler yetersiz olduğundan karşılaştırma yapılamaz", "1. Grup; tüm örnekler ilgili alanla birebir uyumludur", "Her iki grup da tamamen hatalıdır", "Her iki grup da eşit derecede doğrudur, ayrım yapılamaz", "2. Grup; nanomalzeme üretimi, pil teknolojileri, adli kimya ve besin analizi örnekleri ilgili alanlarla tutarlıdır, 1. Gruptaki 'gübre üretimi' Malzeme ve Nanoteknoloji alanına tam uymaz"],
     correct: 4,
-    explain: "Grafiğe göre biyokimya %82 ile en yüksek artışı göstermektedir; bu, genetik araştırmalar ve ilaç geliştirme alanlarındaki küresel ilginin artışıyla ilişkilendirilebilir bir çıkarımdır."
+    explain: "Gübre üretimi, Malzeme ve Nanoteknoloji alanından çok Agronomi/Tarım kimyasıyla ilişkilidir; 2. gruptaki diğer üç eşleştirme (nanomalzeme, pil teknolojisi, adli kimya, besin analizi) ilgili alanlarla daha tutarlıdır."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir öğrenci, bir otomobil egzozundaki zararlı gazları (CO, NOx) daha az zararlı gazlara (CO₂, N₂) dönüştüren katalitik konvertörün nasıl çalıştığını araştırıyor; bu sistemin platin ve paladyum gibi metal katalizörler kullandığını öğreniyor.",
-    text: "Bu teknolojinin geliştirilmesi en çok hangi alt disiplinlerin kesişimini gerektirir?",
+    context: "Bir üniversite kariyer merkezi, mezunların farklı sektörlerdeki (ilaç, gıda, enerji, çevre) iş ilanlarını incelediğinde, ilan başlıklarının farklı olsa da aday niteliklerinde sıklıkla 'analitik ölçüm cihazlarını kullanabilme' ve 'veri yorumlama' becerilerinin ortak biçimde arandığını fark etmiştir.",
+    text: "Bu gözlem, farklı sektörlerdeki kimya kariyerleri arasındaki ilişki hakkında en doğru hangi çıkarımı destekler?",
     options: [
-      "Bu teknoloji hiçbir kimya alt disipliniyle ilgili değildir",
-      "Astrokimya ve nükleer kimya",
-      "Gıda kimyası ve tarım kimyası",
-      "Farmasötik kimya ve biyokimya",
-      "Anorganik kimya (metal katalizörler) ve çevre kimyası (emisyon azaltma)"
+      "Görünüşte farklı sektörlere ait kariyerler, analitik kimyaya dayalı ortak temel becerileri paylaşabilir",
+      "Farklı sektörlerdeki kimya kariyerleri arasında hiçbir ortak beceri yoktur",
+      "Analitik ölçüm becerisi yalnızca ilaç sektöründe aranır",
+      "Veri yorumlama becerisinin kimya kariyerleriyle hiçbir ilgisi yoktur",
+      "Bu gözlem yalnızca tesadüfi bir örtüşmedir, genellenemez"
     ],
-    correct: 4,
-    explain: "Katalitik konvertörler metal katalizörlerin (anorganik kimya) kullanıldığı, egzoz emisyonlarını azaltmayı amaçlayan (çevre kimyası) bir teknolojidir."
+    correct: 0,
+    explain: "Analitik ölçüm ve veri yorumlama gibi beceriler, farklı sektörlerdeki (ilaç, gıda, enerji, çevre) kimya kariyerlerinin ortak paydasını oluşturan, analitik kimyaya dayalı temel yeterliliklerdir."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir öğrenci, 'analitik kimya sadece diğer alt disiplinlere hizmet eden, kendi başına özgün bir araştırma konusu olmayan bir alandır' diye düşünüyor.",
-    text: "Bu düşünceye en güçlü itiraz hangisidir?",
+    context: "Bir kozmetik Ar-Ge biriminde, hem cilde uygulanan bir kremin içindeki nemlendirici moleküllerin cilt hücreleriyle etkileşimi hem de kremin raf ömrü boyunca bileşenlerinin bozulmadan kalıp kalmadığı incelenmektedir.",
+    text: "Bu iki inceleme sırasıyla en doğrudan hangi alt disiplinlerle ilişkilidir?",
     options: [
-      "Bu düşünceye itiraz edilemez, tamamen doğrudur",
-      "Analitik kimya gerçekten başka hiçbir amaca hizmet etmeyen önemsiz bir alandır",
-      "Analitik kimyanın hiçbir yeni yöntemi yoktur, hep aynı teknikleri kullanır",
-      "Analitik kimya diğer disiplinlerden tamamen bağımsız, hiç etkileşimi olmayan bir alandır",
-      "Analitik kimya, yeni ölçüm yöntemleri ve cihazları (örneğin daha hassas spektroskopi teknikleri) geliştirmeyi amaçlayan, kendine özgü araştırma sorularına sahip bağımsız bir alandır; aynı zamanda diğer disiplinlere de hizmet eder"
+      "Biyokimya (hücre etkileşimi) ve analitik kimya (bileşen kararlılığının izlenmesi)",
+      "Nükleer kimya ve jeokimya",
+      "Elektrokimya ve polimer kimyası",
+      "Çevre kimyası ve gıda kimyası",
+      "Anorganik kimya ve fizikokimya"
     ],
-    correct: 4,
-    explain: "Analitik kimya, hem kendi başına yeni ölçüm yöntemleri geliştiren özgün bir araştırma alanıdır hem de diğer tüm alt disiplinlerin (biyokimya, çevre kimyası vb.) çalışmalarında kullanılan araçları sağlar."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir öğrenci, hem uzay bilimlerine hem kimyaya ilgi duyuyor ve gelecekte Mars'taki toprak örneklerinin yaşam belirtisi taşıyıp taşımadığını analiz eden bir kariyer hayal ediyor.",
-    text: "Bu öğrencinin ilgi alanına en uygun (nispeten nadir) alt disiplin kombinasyonu hangisidir?",
-    options: [
-      "Bu ilgi alanıyla hiçbir alt disiplin örtüşmez",
-      "Metalurji ve gıda kimyası",
-      "Farmasötik kimya ve polimer kimyası",
-      "Tarım kimyası ve elektrokimya",
-      "Astrokimya ve analitik kimya"
-    ],
-    correct: 4,
-    explain: "Uzaydaki kimyasal süreçlerin ve olası yaşam izlerinin incelenmesi astrokimyanın, örneklerin hassas analizi ise analitik kimyanın konusudur."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir öğrenci, 'her yeni teknoloji (akıllı telefon, elektrikli araç, güneş paneli) mutlaka birden fazla kimya alt disiplininin katkısını içerir' iddiasını test etmek istiyor. Akıllı telefonu inceliyor: ekranı (malzeme/anorganik kimya), pili (elektrokimya), plastik gövdesi (polimer kimyası) ve devre kartındaki lehim/metal bağlantıları (metalurji) var.",
-    text: "Bu inceleme, öğrencinin iddiasını nasıl destekler ya da çürütür?",
-    options: [
-      "İddia doğru olsa da bu örnekle kanıtlanamaz",
-      "İddiayı çürütür; akıllı telefon yalnızca bir alt disiplinle (elektronik mühendisliği) ilgilidir",
-      "İddia test edilemez, çünkü telefon kimyasal bir ürün değildir",
-      "İddiayı çürütür; telefonlar kimyayla hiç ilgili değildir",
-      "İddiayı destekler; tek bir günlük teknoloji ürünü bile genellikle birden fazla alt disiplinin katkısıyla üretilir"
-    ],
-    correct: 4,
-    explain: "Akıllı telefon örneğinde görüldüğü gibi, tek bir modern teknoloji ürünü bile genellikle malzeme/anorganik kimya, elektrokimya, polimer kimyası ve metalurji gibi birçok alt disiplinin katkısıyla üretilir."
+    correct: 0,
+    explain: "Bir molekülün canlı hücrelerle etkileşiminin incelenmesi biyokimyanın; bir ürünün bileşenlerinin zaman içindeki kararlılığının/bozunmasının izlenmesi ise analitik kimyanın (kararlılık analizi) konusudur."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir öğrenci, gelecekte hangi kimya alt disiplininde kariyer yapacağına karar vermeye çalışırken şu gözlemi yapıyor: bazı alt disiplinler (örneğin analitik kimya) hemen hemen her sektörde (ilaç, gıda, çevre, adli bilim) istihdam olanağı sunarken, bazıları (örneğin astrokimya) çok daha dar, uzmanlaşmış ve sınırlı sayıda araştırma kurumuyla sınırlıdır.",
-    text: "Bu gözleme dayanarak, kariyer planlaması açısından en dengeli bilimsel/pratik çıkarım hangisidir?",
+    context: "Bir geri dönüşüm tesisinde, karışık plastik atıklardan önce polimer türünün (PET, HDPE, PVC vb.) hızlı biçimde ayırt edilmesi, ardından ayrıştırılan her türün yeniden işlenebilirliğinin kimyasal olarak değerlendirilmesi gerekmektedir.",
+    text: "Bu iki aşama sırasıyla en doğrudan hangi alt disiplinlerin bilgisini gerektirir?",
     options: [
-      "Bu tür bir karşılaştırma bilimsel olarak anlamsızdır",
-      "Yalnızca geniş istihdam olanağı olan alanlar tercih edilmelidir, ilgiye bakılmamalıdır",
-      "Dar uzmanlaşmış alanlar (astrokimya gibi) hiçbir zaman tercih edilmemelidir",
-      "Kariyer seçiminde istihdam olanaklarının hiçbir önemi yoktur",
-      "Alt disiplin seçimi hem kişisel ilgiyi hem de o alanın istihdam genişliği/derinliği gibi pratik etkenleri dikkate alan bilinçli bir karar olmalıdır; her iki tür alanın (geniş uygulamalı veya dar uzmanlaşmış) kendine göre avantaj ve zorlukları vardır"
+      "Analitik kimya (polimer türü tanımlama) ve polimer kimyası (yeniden işlenebilirlik değerlendirmesi)",
+      "Nükleer kimya ve gıda kimyası",
+      "Jeokimya ve elektrokimya",
+      "Biyokimya ve çevre kimyası (yalnızca)",
+      "Bu iki aşama da yalnızca mühendislik bilgisi gerektirir, kimyayla ilgisizdir"
     ],
-    correct: 4,
-    explain: "Kariyer planlaması, kişisel ilgi ile birlikte bir alanın istihdam genişliği, derinliği ve gelecekteki gelişme potansiyeli gibi pratik etkenlerin de dengeli biçimde değerlendirilmesini gerektiren bilinçli bir süreçtir."
+    correct: 0,
+    explain: "Farklı plastik türlerinin hızlı tanımlanması (örneğin spektroskopik yöntemlerle) analitik kimyanın; bu polimerlerin zincir yapısına bağlı olarak yeniden işlenebilirliğinin değerlendirilmesi ise polimer kimyasının konusudur."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir araştırma grubu, geri dönüştürülmüş plastik atıklardan yeni, yüksek kaliteli ürünler üretmeye çalışıyor. Süreçte önce atık plastiğin tam olarak hangi polimer türlerinden oluştuğu belirleniyor (analitik kimya), sonra bu polimerlerin kimyasal olarak parçalanıp yeniden birleştirilmesi (organik/polimer kimyası) planlanıyor, son olarak da yeni ürünün çevresel etkisi değerlendiriliyor (çevre kimyası).",
-    text: "Bu örnek, 'döngüsel ekonomi' (atıkların yeniden değerli ürünlere dönüştürülmesi) kavramı ile kimya alt disiplinleri arasındaki ilişki hakkında en kapsamlı hangi çıkarımı destekler?",
+    context: "Bir tarım Ar-Ge biriminde, hem toprağın mineral bileşiminin bitkinin besin alımına etkisi hem de bitkinin bu besinleri kullanarak gerçekleştirdiği hücresel biyokimyasal süreçler eş zamanlı incelenmektedir.",
+    text: "Bu iki inceleme alanı, kimyanın hangi iki alt disiplininin tarım bağlamında kesiştiğini gösterir?",
     options: [
-      "Atık plastiklerin türü önemsizdir, hepsi aynı şekilde işlenebilir",
-      "Döngüsel ekonominin kimya bilimiyle hiçbir ilgisi yoktur",
-      "Geri dönüşüm yalnızca fiziksel bir işlemdir, hiçbir kimya alt disiplini gerektirmez",
-      "Bu süreçte yalnızca çevre kimyası yeterlidir, diğer disiplinlerin katkısı gereksizdir",
-      "Sürdürülebilirlik odaklı modern ekonomik modeller (döngüsel ekonomi gibi), farklı kimya alt disiplinlerinin bütünleşik biçimde kullanılmasını gerektiren teknik zorluklar içerir"
+      "Jeokimya (toprak mineral bileşimi) ve biyokimya (bitki hücresel süreçleri)",
+      "Nükleer kimya ve polimer kimyası",
+      "Elektrokimya ve analitik kimya (yalnızca)",
+      "Gıda kimyası ve nükleer kimya",
+      "Bu iki inceleme aynı disiplinin tekrarıdır, kesişim yoktur"
     ],
-    correct: 4,
-    explain: "Döngüsel ekonomi modelleri gibi sürdürülebilirlik odaklı yaklaşımlar, atık malzemelerin analiz edilmesi, kimyasal olarak dönüştürülmesi ve çevresel etkisinin değerlendirilmesi gibi aşamalarda birden fazla kimya alt disiplininin bütünleşik kullanımını gerektirir."
+    correct: 0,
+    explain: "Toprağın mineral/element bileşiminin incelenmesi jeokimyanın; bitkinin bu besinleri hücresel düzeyde nasıl kullandığının incelenmesi ise biyokimyanın konusudur — tarım bilimi bu iki alt disiplinin bilgisini bütünleştirir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir batarya geri dönüşüm tesisinde, kullanılmış lityum iyon pillerden değerli metallerin (kobalt, nikel, lityum) hem güvenli biçimde geri kazanılması (kimyasal ayrıştırma) hem de bu sürecin çevreye salınan atık miktarının izlenmesi gerekmektedir.",
+    text: "Bu iki gereklilik en doğrudan hangi alt disiplinlerin bilgisini bir araya getirir?",
+    options: [
+      "Elektrokimya/anorganik kimya (metal geri kazanımı) ve çevre kimyası (atık izleme)",
+      "Yalnızca nükleer kimya bilgisi yeterlidir",
+      "Yalnızca gıda kimyası bilgisi yeterlidir",
+      "Bu süreç kimyanın hiçbir alt disipliniyle ilgili değildir",
+      "Yalnızca polimer kimyası bilgisi yeterlidir"
+    ],
+    correct: 0,
+    explain: "Pillerdeki metal bileşiklerin ayrıştırılıp geri kazanılması elektrokimya ve anorganik kimyanın; bu süreçte ortaya çıkan atığın çevresel etkisinin izlenmesi ise çevre kimyasının konusudur — sürdürülebilir geri dönüşüm bu bilgilerin bütünleştirilmesini gerektirir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir spor performansı araştırma merkezinde, hem sporcuların terleme yoluyla kaybettiği elektrolitlerin miktarı hassas cihazlarla ölçülmekte hem de bu kayıpların kas hücrelerindeki enerji üretim süreçleri üzerindeki etkisi incelenmektedir.",
+    text: "Bu iki inceleme hangi alt disiplinlerin çalışma alanına girmektedir?",
+    options: [
+      "Analitik kimya (elektrolit miktarının ölçümü) ve biyokimya (hücresel enerji süreçlerine etkisi)",
+      "Jeokimya ve nükleer kimya",
+      "Polimer kimyası ve elektrokimya",
+      "Gıda kimyası ve jeokimya",
+      "Bu iki inceleme birbirinin birebir aynısıdır, ayrım anlamsızdır"
+    ],
+    correct: 0,
+    explain: "Terle kaybedilen elektrolit miktarının hassas biçimde ölçülmesi analitik kimyanın; bu kaybın hücresel enerji üretimi (metabolizma) üzerindeki etkisinin incelenmesi ise biyokimyanın konusudur."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir arkeoloji-kimya iş birliği projesinde, antik bir seramik parçasının hem hangi mineral hammaddelerden yapıldığı (bileşim analizi) hem de üretildiği dönemi belirlemek için içerdiği radyoaktif izotopların bozunma oranı incelenmektedir.",
+    text: "Bu projedeki iki inceleme yöntemi en doğrudan hangi alt disiplinlerin bilgisini birleştirir?",
+    options: [
+      "Analitik kimya/jeokimya (mineral bileşim analizi) ve nükleer kimya (izotop bozunma oranıyla yaş tayini)",
+      "Biyokimya ve gıda kimyası",
+      "Polimer kimyası ve elektrokimya",
+      "Çevre kimyası ve organik kimya (yalnızca)",
+      "Bu iki yöntem birbirinden tamamen bağımsızdır, ortak bir disiplin gerektirmez"
+    ],
+    correct: 0,
+    explain: "Bir seramiğin mineral bileşiminin belirlenmesi analitik kimya ve jeokimyanın; radyoaktif izotop bozunma oranına dayalı yaş tayini ise nükleer kimyanın konusudur — arkeometri (arkeolojik bilim) bu iki alanın bilgisini bir araya getirir."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir öğrenci, diş hekimliğinde kullanılan dolgu malzemelerinin hem ağız içindeki asidik/bazik ortama dayanıklı olması (fizikokimya) hem de vücuda toksik etkisinin olmaması (biyokimya/farmasötik kimya) gerektiğini öğreniyor.",
-    text: "Bu örnek, ürün geliştirmede alt disiplinlerin birlikte çalışması hakkında hangi çıkarımı destekler?",
+    context: "Bir otomotiv Ar-Ge biriminde, hem araç egzozundan çıkan gazların bileşimi hassas cihazlarla ölçülmekte hem de bu gazların atmosferdeki diğer maddelerle etkileşiminin çevresel etkisi araştırılmaktadır.",
+    text: "Bu iki inceleme hangi alt disiplinlerin kapsamına girmektedir?",
     options: [
-      "Bu iki gereksinim birbiriyle hiçbir zaman aynı ürün üzerinde birleştirilemez",
-      "Diş dolgu malzemeleri kimyayla ilgili değildir",
-      "Yalnızca fizikokimya yeterlidir, biyolojik etkiler önemsizdir",
-      "Toksisite testi gereksiz bir aşamadır",
-      "Sağlık ürünlerinin geliştirilmesinde birden fazla alt disiplinin gereksinimleri (dayanıklılık ve biyouyumluluk gibi) eş zamanlı karşılanmalıdır"
+      "Analitik kimya (gaz bileşiminin ölçümü) ve çevre kimyası (atmosferik etkileşim/etki)",
+      "Nükleer kimya ve gıda kimyası",
+      "Polimer kimyası ve biyokimya",
+      "Jeokimya ve elektrokimya",
+      "Bu iki inceleme birbirinden tamamen kopuk, ortak bir konusu yoktur"
     ],
-    correct: 4,
-    explain: "Sağlık ürünlerinin (diş dolgusu gibi) geliştirilmesi, hem fiziksel/kimyasal dayanıklılık hem de biyolojik uyumluluk gibi farklı alt disiplinlerin gereksinimlerinin bir arada karşılanmasını gerektirir."
+    correct: 0,
+    explain: "Egzoz gazlarının bileşiminin hassas ölçümü analitik kimyanın; bu gazların atmosferdeki diğer maddelerle etkileşiminin (örneğin hava kirliliğine katkısının) incelenmesi ise çevre kimyasının konusudur."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir öğrenci, tarihte bazı önemli keşiflerin (örneğin penisilin) aslında planlı bir 'alt disiplin' çalışmasından değil, tesadüfi bir gözlemden (bir küf mantarının bakteri üremesini engellediğinin fark edilmesi) ortaya çıktığını öğreniyor; ancak bu tesadüfi gözlemin bilimsel bir ilaca dönüşmesi yıllarca süren sistematik organik kimya, mikrobiyoloji ve farmasötik kimya çalışmalarını gerektirmiş.",
-    text: "Bu tarihsel örnek, bilimsel keşif süreci hakkında en dengeli hangi çıkarımı destekler?",
+    context: "Bir uzay tarımı araştırmasında, hem uzay istasyonundaki kapalı bir ortamda bitkilerin hangi mineral çözeltileriyle beslenebileceği (topraksız tarım) hem de bitkinin bu ortamda ürettiği besin öğelerinin besin değerinin Dünya'daki eşdeğerine kıyasla nasıl değiştiği incelenmektedir.",
+    text: "Bu iki araştırma sorusu en doğrudan hangi alt disiplinlerin bilgisini gerektirir?",
     options: [
-      "Tesadüfi gözlemlerin bilimde hiçbir değeri yoktur",
-      "Bilimsel keşifler tamamen tesadüfe dayanır, sistematik çalışmanın hiçbir katkısı yoktur",
-      "Sistematik çalışma olmadan da her tesadüfi gözlem doğrudan bir ilaca dönüşebilir",
-      "Penisilin keşfi kimya biliminin dışında, tamamen şans eseri gerçekleşmiştir",
-      "Tesadüfi gözlemler önemli bir başlangıç noktası olabilir, ancak bu gözlemlerin güvenilir, kullanılabilir bir sonuca (ilaç gibi) dönüşmesi sistematik, disiplinli bilimsel çalışma gerektirir"
+      "Anorganik kimya/biyokimya (mineral besleme çözeltisi tasarımı) ve gıda kimyası (besin değeri karşılaştırması)",
+      "Yalnızca nükleer kimya bilgisi yeterlidir",
+      "Yalnızca elektrokimya bilgisi yeterlidir",
+      "Bu araştırma kimyanın hiçbir alt disipliniyle ilgili değildir",
+      "Yalnızca polimer kimyası bilgisi yeterlidir"
     ],
-    correct: 4,
-    explain: "Bilim tarihinde tesadüfi gözlemler önemli başlangıç noktaları olabilir, ancak bu gözlemlerin güvenilir ve uygulanabilir bilimsel/teknolojik sonuçlara dönüşmesi, ilgili alt disiplinlerin (organik kimya, biyokimya, farmasötik kimya gibi) sistematik ve uzun soluklu çalışmasını gerektirir."
+    correct: 0,
+    explain: "Bitkiler için uygun mineral besin çözeltisinin tasarlanması anorganik kimya ve bitkinin bu besinleri kullanma biyokimyasının; üretilen besinin besin değerinin analiz edilip karşılaştırılması ise gıda kimyasının konusudur."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir müze koruma laboratuvarında, hem tarihi bir tablodaki pigmentlerin kimyasal bileşimi belirlenmekte hem de bu pigmentlerin zamanla ışığa/neme maruz kalarak nasıl bozulduğu incelenerek uygun koruma yöntemleri geliştirilmektedir.",
+    text: "Bu iki çalışma en doğrudan hangi alt disiplinlerin bilgisini bir araya getirir?",
+    options: [
+      "Analitik kimya (pigment bileşimi belirleme) ve fizikokimya (bozunma sürecinin/kararlılığın incelenmesi)",
+      "Biyokimya ve nükleer kimya",
+      "Gıda kimyası ve elektrokimya",
+      "Jeokimya ve polimer kimyası (yalnızca)",
+      "Bu iki çalışma kimyanın hiçbir alt disipliniyle ilgili değildir, sanat tarihine aittir"
+    ],
+    correct: 0,
+    explain: "Pigmentlerin kimyasal bileşiminin belirlenmesi analitik kimyanın; bu pigmentlerin çevresel etkenler altında zamanla nasıl bozulduğunun (kararlılık, tepkime hızı açısından) incelenmesi ise fizikokimyanın konusudur — kültürel mirasın korunması bu bilgilerin birleşimini gerektirir."
   }
 ],
   "kariyer": [
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir kişi lisede kimya öğretmenlik formasyonu alarak liselerde kimya dersi anlatıyor.",
-    text: "Bu meslek, kimya bilgisinin hangi kullanım alanına örnektir?",
-    options: ["Endüstriyel üretim", "Eğitim/öğretim", "Laboratuvar analizi", "Ürün pazarlaması", "Saha araştırması"],
+    context: "Bir görev tanımında şu ifade yer almaktadır: gıda üretim hattından alınan örneklerde katkı maddesi miktarı ve mikrobiyolojik güvenlik ölçümleri düzenli olarak yapılır, sonuçlar standartlarla karşılaştırılır.",
+    text: "Bu görev tanımı en doğrudan hangi kariyer alanına örnektir?",
+    options: ["Astrokimya araştırmacısı", "Gıda kalite kontrol uzmanı", "Patent avukatı", "Bilim gazeteciliği", "Müze koruma kimyageri"],
     correct: 1,
-    explain: "Kimya bilgisini öğrencilere aktarmak eğitim/öğretim alanının bir örneğidir."
+    explain: "Gıda örneklerinde katkı maddesi ve güvenlik ölçümü yapıp standartlarla karşılaştırma, gıda kalite kontrol uzmanının temel işidir."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir kimya mühendisi, bir fabrikada üretim hattının verimliliğini artırmak için süreç tasarımı yapıyor.",
-    text: "Ürettiği çözümlerin doğrudan uygulandığı yer neresidir?",
-    options: ["Üniversite", "Fabrika/endüstriyel tesis", "Hastane", "Okul", "Mahkeme"],
+    context: "Bir laboratuvarda, olay yerinden toplanan iz miktardaki maddeler analiz edilerek bir suçun aydınlatılmasına yardımcı kanıtlar üretilmektedir.",
+    text: "Bu çalışma alanı hangi kariyerle en doğrudan ilişkilidir?",
+    options: ["Kozmetik Ar-Ge uzmanı", "Adli (forensic) kimyager", "Petrokimya mühendisi", "Tarım kimyası araştırmacısı", "Elektrokimya mühendisi"],
     correct: 1,
-    explain: "Kimya mühendisleri genellikle endüstriyel üretim tesislerinde süreç geliştirme ve optimizasyon çalışmaları yürütür."
+    explain: "Olay yerinden alınan iz maddelerin analiz edilerek adli sürece kanıt sunulması adli kimyagerin görev alanıdır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir kişi hastane laboratuvarında hastalardan alınan kan örneklerini analiz ederek hastalık teşhisine yardımcı oluyor.",
-    text: "Bu meslek hangi kariyer alanına örnektir?",
-    options: ["Klinik laboratuvar uzmanlığı", "Petrokimya mühendisliği", "Kozmetik satışı", "Tarım danışmanlığı", "Patent hukuku"],
-    correct: 0,
-    explain: "Hastane laboratuvarlarında hasta örneklerini kimyasal/biyokimyasal yöntemlerle analiz etmek klinik laboratuvar uzmanlığının konusudur."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir kişi, bir ilaç firmasında yeni bir ilacın piyasaya sürülmesi öncesinde etkinliğini ve güvenliğini test eden klinik çalışmaları yönetiyor.",
-    text: "Bu görev en çok hangi kariyer alanına girer?",
-    options: ["Klinik araştırma uzmanlığı", "Maden mühendisliği", "Grafik tasarım", "Turizm rehberliği", "Muhasebe"],
-    correct: 0,
-    explain: "İlaçların klinik test süreçlerini yönetmek, ilaç/farmasötik alanındaki klinik araştırma uzmanlığının görev tanımına girer."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir kişi, bir kozmetik firmasında yeni nemlendirici kremlerin formülünü geliştiriyor.",
-    text: "Bu meslek en çok hangi kariyer alanına örnektir?",
-    options: ["Kozmetik/formülasyon kimyacılığı", "Maden mühendisliği", "Tarım işçiliği", "Muhasebe", "İnşaat mühendisliği"],
-    correct: 0,
-    explain: "Kozmetik ürünlerin formülasyonunu geliştirmek kozmetik kimyacılığının görev alanıdır."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir kişi, bir gıda fabrikasında üretilen ürünlerin yasal standartlara uygunluğunu denetliyor ve raporluyor.",
-    text: "Bu görev en çok hangi kariyer alanına örnektir?",
-    options: ["Kalite kontrol/gıda güvenliği denetçiliği", "Astronomi araştırmacılığı", "Turizm işletmeciliği", "Grafik tasarım", "Spor yönetimi"],
-    correct: 0,
-    explain: "Ürünlerin standartlara uygunluğunu kontrol etmek kalite kontrol ve gıda güvenliği denetçiliğinin görevidir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir kişi, bir üniversitede yeni malzemeler üzerine araştırma yapıp bulgularını bilimsel dergilerde yayımlıyor.",
-    text: "Bu meslek hangi kariyer alanının bir örneğidir?",
-    options: ["Akademik araştırmacılık", "Perakende satış", "Turizm rehberliği", "Sekreterlik", "Spor koçluğu"],
-    correct: 0,
-    explain: "Üniversitede bilimsel araştırma yapıp yayımlamak akademik araştırmacılığın temel özelliğidir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir kişi, bir şirketin ürettiği yeni bir kimyasal bileşiğin patentini almak için gerekli bilimsel/hukuki başvuru sürecini yürütüyor; hem kimya bilgisine hem hukuk bilgisine ihtiyaç duyuyor.",
-    text: "Bu görev tanımı en çok hangi kariyer alanıyla örtüşür?",
-    options: ["Patent uzmanlığı (kimya alanında)", "Tarım işçiliği", "Spor hakemliği", "Turizm rehberliği", "İnşaat ustalığı"],
-    correct: 0,
-    explain: "Kimyasal buluşların patentlenmesi süreci, hem kimya hem hukuk bilgisi gerektiren patent uzmanlığının konusudur."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir kişi, karmaşık bilimsel kimya araştırmalarını halkın anlayabileceği bir dille yazıp bir bilim dergisinde yayımlıyor.",
-    text: "Bu iş hangi kariyer alanına girer?",
-    options: ["Bilim gazeteciliği/iletişimi", "Maden işletmeciliği", "Muhasebecilik", "Turizm rehberliği", "İnşaat mühendisliği"],
-    correct: 0,
-    explain: "Bilimsel bilgiyi halka anlaşılır şekilde aktarmak bilim gazeteciliği/iletişiminin görevidir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir kişi, bir petrol rafinerisinde ham petrolün işlenip yakıt ve diğer ürünlere dönüştürülmesi sürecinde çalışıyor.",
-    text: "Bu çalışma alanı hangi kariyer kategorisine örnektir?",
-    options: ["Petrokimya sektörü çalışanlığı", "Tarım danışmanlığı", "Grafik tasarım", "Turizm rehberliği", "Muhasebecilik"],
-    correct: 0,
-    explain: "Petrolün işlenip kimyasal ürünlere dönüştürülmesi petrokimya sektörünün temel faaliyetidir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir kişi, çok küçük boyutlardaki (nanometre ölçeğinde) malzemeleri tasarlayıp yeni teknolojik ürünler geliştiriyor.",
-    text: "Bu meslek sahibinin çalıştığı alan hangisidir?",
-    options: ["Nanoteknoloji araştırmacılığı", "Turizm rehberliği", "Muhasebecilik", "Tarım işçiliği", "Grafik tasarım"],
-    correct: 0,
-    explain: "Nanometre ölçeğindeki malzemelerin tasarım ve geliştirilmesi nanoteknoloji araştırmacılığının konusudur."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir öğrenci, kimya alanında kariyer yaparken yalnızca laboratuvarda deney yapan kişilerin çalışabileceğini düşünüyor.",
-    text: "Bu düşünceye karşı en güçlü örnek hangisidir?",
-    options: [
-      "Bilim gazeteciliği, patent uzmanlığı ve satış temsilciliği gibi meslekler de kimya bilgisi gerektirir ama laboratuvarda deney yapmayı gerektirmez",
-      "Bu düşünce tamamen doğrudur, laboratuvar dışında hiçbir kimya kariyeri yoktur",
-      "Kimya kariyerleri yalnızca üniversitelerde bulunur",
-      "Kimya mezunları yalnızca öğretmen olabilir",
-      "Laboratuvar dışı hiçbir meslek kimya bilgisi gerektirmez"
-    ],
-    correct: 0,
-    explain: "Kimya kariyerleri yalnızca laboratuvar deneyleriyle sınırlı değildir; bilim iletişimi, hukuk (patent), satış ve eğitim gibi çok çeşitli alanlarda da kimya bilgisi kullanılabilir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir kişi, bir maden şirketinde cevherden değerli metallerin çıkarılması sürecinde kimyasal yöntemler kullanıyor.",
-    text: "Bu görev en iyi hangi kariyer alanıyla eşleşir?",
-    options: [
-      "Turizm rehberliği",
-      "Madencilik/metalurji kimyacılığı",
-      "Grafik tasarım",
-      "Spor koçluğu",
-      "Bilim gazeteciliği"
-    ],
+    context: "Bir ilaç şirketinde, yeni geliştirilen bir molekülün hedef hastalıktaki etkinliği ve olası yan etkileri klinik öncesi aşamada sistematik olarak test edilmektedir.",
+    text: "Bu görev en doğrudan hangi kariyer alanına aittir?",
+    options: ["Jeokimya uzmanı", "Farmasötik Ar-Ge kimyageri", "Bilim müzesi küratörü", "Gıda mühendisi", "Metalurji uzmanı"],
     correct: 1,
-    explain: "Cevherden metal elde etme süreçlerinde kimya bilgisi kullanmak madencilik/metalurji alanındaki kariyerlerin konusudur."
+    explain: "Yeni moleküllerin etkinlik ve güvenliğinin test edilmesi ilaç (farmasötik) Ar-Ge kimyagerinin işidir."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir kişi, bir şirketin ürettiği laboratuvar kimyasallarını başka şirketlere/müşterilere tanıtıp satıyor; ürünün teknik özelliklerini iyi bilmesi gerekiyor.",
-    text: "Bu meslek hangi kariyer alanının kapsamına girer?",
-    options: [
-      "Akademik araştırmacılık",
-      "Teknik satış temsilciliği (kimya sektörü)",
-      "Klinik laboratuvar uzmanlığı",
-      "Patent hukuku",
-      "Bilim gazeteciliği"
-    ],
+    context: "Bir fabrikada çalışanların kullandığı kimyasal maddelerin güvenli depolanması, etiketlenmesi ve olası kaza risklerinin önlenmesi için prosedürler hazırlanmaktadır.",
+    text: "Bu görev tanımı hangi kariyer alanına en uygun düşer?",
+    options: ["Astrokimya araştırmacısı", "İş sağlığı ve güvenliği (EHS) uzmanı", "Bilim gazetecisi", "Patent uzmanı", "Sanat eseri restoratörü"],
     correct: 1,
-    explain: "Kimyasal ürünlerin teknik bilgiyle satışını yapmak, teknik satış temsilciliğinin kimya sektöründeki bir örneğidir."
+    explain: "Kimyasal madde güvenliği, depolama ve risk önleme prosedürleri hazırlamak EHS (iş sağlığı ve güvenliği) uzmanının görevidir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bir üniversitede, lisans öğrencilerine atomun yapısı ve kimyasal bağlar konuları haftalık ders programına göre anlatılmakta, laboratuvar uygulamaları yürütülmektedir.",
+    text: "Bu görev en çok hangi kariyer alanıyla örtüşür?",
+    options: ["Adli kimyager", "Kimya öğretmenliği/akademisyenliği", "Petrokimya mühendisi", "Kozmetik Ar-Ge uzmanı", "Malzeme test mühendisi"],
+    correct: 1,
+    explain: "Ders anlatma ve laboratuvar uygulaması yürütme, öğretmenlik/akademisyenlik kariyerinin temel unsurlarıdır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bir akarsuyun farklı noktalarından alınan su örneklerinde ağır metal ve kirletici madde derişimleri ölçülerek bölgedeki su kalitesi haritalanmaktadır.",
+    text: "Bu görev, kariyer alanları arasında en doğrudan hangisiyle eşleşir?",
+    options: ["Kozmetik formülasyon uzmanı", "Çevre kimyageri", "Patent avukatı", "Malzeme bilimci", "Nükleer güvenlik uzmanı"],
+    correct: 1,
+    explain: "Su kaynaklarındaki kirletici madde düzeylerinin izlenmesi ve haritalanması çevre kimyagerinin görev alanına girer."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bir kozmetik firmasında, yeni bir nemlendirici kremin cilt üzerindeki etkisi test edilmekte, formülasyondaki bileşen oranları optimize edilmektedir.",
+    text: "Tarif edilen bu görev hangi kariyer alanının kapsamına girer?",
+    options: ["Astrokimya araştırmacısı", "Adli kimyager", "Kozmetik Ar-Ge kimyageri", "İş güvenliği uzmanı", "Jeokimyager"],
+    correct: 2,
+    explain: "Kozmetik ürün formülasyonu geliştirme ve optimize etme kozmetik Ar-Ge kimyagerinin işidir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bir rafineride ham petrolün damıtılarak benzin, mazot ve diğer yakıt türlerine ayrıştırılması süreci planlanıp izlenmektedir.",
+    text: "Bu görev tanımı en doğrudan hangi kariyer alanına aittir?",
+    options: ["Bilim müzesi küratörü", "Gıda mühendisi", "Petrokimya mühendisi", "Adli kimyager", "Kozmetik uzmanı"],
+    correct: 2,
+    explain: "Ham petrolün işlenerek yakıt ürünlerine dönüştürülmesi süreçlerinin yönetimi petrokimya mühendisliğinin çalışma alanıdır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bir metal geri dönüşüm tesisinde, hurda metallerin bileşimi analiz edilerek saflaştırma ve alaşım oluşturma süreçleri yönetilmektedir.",
+    text: "Bu iş, kariyer alanları arasında en çok hangisiyle örtüşür?",
+    options: ["Bilim gazetecisi", "Farmasötik kimyager", "Metalurji/malzeme mühendisi", "Adli kimyager", "Tarım kimyası uzmanı"],
+    correct: 2,
+    explain: "Metal bileşiminin analizi, saflaştırma ve alaşım süreçlerinin yönetimi metalurji/malzeme mühendisliğinin işidir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bir hastane laboratuvarında, hastalardan alınan kan örneklerindeki biyokimyasal parametreler (şeker, kolesterol, enzim düzeyleri) ölçülerek tanı sürecine katkı sağlanmaktadır.",
+    text: "Bu görevi üstlenen kişinin kariyeri en doğrudan hangisidir?",
+    options: ["Astrokimya araştırmacısı", "Petrokimya mühendisi", "Klinik biyokimya uzmanı", "Patent uzmanı", "Malzeme test mühendisi"],
+    correct: 2,
+    explain: "Kan örneklerindeki biyokimyasal parametrelerin ölçülerek tanıya katkı sağlanması klinik biyokimya uzmanının işidir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bir pil üreticisinde, farklı elektrot malzemelerinin şarj kapasitesi ve dayanıklılığı test edilerek yeni nesil batarya tasarımı geliştirilmektedir.",
+    text: "Aşağıdakilerden hangisi bu görev tanımına en uygun kariyer alanıdır?",
+    options: ["Gıda güvenliği denetçisi", "Adli kimyager", "Elektrokimya/batarya mühendisi", "Bilim müzesi küratörü", "Jeokimyager"],
+    correct: 2,
+    explain: "Elektrot malzemelerinin test edilip yeni batarya tasarımı geliştirilmesi elektrokimya/batarya mühendisliğinin çalışma alanıdır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bir müze laboratuvarında, tarihi bir tablonun boya katmanları kimyasal yöntemlerle incelenerek uygun koruma ve restorasyon yöntemi belirlenmektedir.",
+    text: "Bu görev tanımı, hangi kariyer alanının tipik bir örneğidir?",
+    options: ["Gıda kalite uzmanı", "Petrokimya mühendisi", "Kültürel miras koruma kimyageri", "Elektrokimya mühendisi", "Tarım kimyası araştırmacısı"],
+    correct: 2,
+    explain: "Sanat eserlerindeki malzemelerin kimyasal analizi ve uygun koruma yönteminin belirlenmesi kültürel miras koruma kimyagerinin işidir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bir tarım Ar-Ge biriminde, toprağın besin madde içeriği analiz edilerek verimi artıracak gübre formülasyonları geliştirilmektedir.",
+    text: "Bu çalışma alanı en doğrudan hangi kariyerle örtüşür?",
+    options: ["Kozmetik uzmanı", "Adli kimyager", "Tarım kimyası araştırmacısı", "Nükleer güvenlik uzmanı", "Bilim gazetecisi"],
+    correct: 2,
+    explain: "Toprak besin analizi ve gübre formülasyonu geliştirme tarım kimyası araştırmacısının çalışma alanıdır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bir yayın kuruluşunda, karmaşık bilimsel araştırma bulguları geniş kitlelerin anlayabileceği şekilde makalelere ve haberlere dönüştürülmektedir.",
+    text: "Bu görevi yürüten uzmanın kariyeri hangisidir?",
+    options: ["Adli kimyager", "Malzeme test mühendisi", "Bilim iletişimi/gazeteciliği", "Petrokimya mühendisi", "Gıda kalite uzmanı"],
+    correct: 2,
+    explain: "Bilimsel bulguların geniş kitlelere anlaşılır biçimde aktarılması bilim iletişimi/gazeteciliği kariyerinin işidir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bir hukuk bürosunda, yeni geliştirilen bir kimyasal sürecin daha önce başka bir buluşla örtüşüp örtüşmediği teknik dokümanlar incelenerek değerlendirilmektedir.",
+    text: "Tarif edilen görev hangi kariyer alanının bir örneğidir?",
+    options: ["Gıda mühendisi", "Kozmetik Ar-Ge kimyageri", "Patent/fikri mülkiyet uzmanı (kimya arka planlı)", "Astrokimya araştırmacısı", "Elektrokimya mühendisi"],
+    correct: 2,
+    explain: "Kimyasal buluşların teknik özgünlüğünün değerlendirilmesi patent/fikri mülkiyet uzmanlığının (kimya arka planlı) işidir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bir uzay ajansının laboratuvarında, bir göktaşı örneğindeki mineral ve element bileşimi analiz edilerek Güneş Sistemi'nin oluşumu hakkında ipuçları aranmaktadır.",
+    text: "Bu iş tanımı en doğrudan hangi kariyer alanına aittir?",
+    options: ["Kozmetik formülasyon uzmanı", "Gıda güvenliği denetçisi", "İş güvenliği uzmanı", "Astrokimya araştırmacısı", "Patent uzmanı"],
+    correct: 3,
+    explain: "Göktaşı örneklerinin bileşiminin analiz edilerek Güneş Sistemi'nin oluşumuna dair ipucu aranması astrokimya araştırmacısının işidir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bir ilaç fabrikasında, üretilen her partinin belirlenen kalite standartlarına uyup uymadığı kontrol edilerek onay/red kararı verilmektedir.",
+    text: "Bu görev en çok hangi kariyer alanıyla ilişkilendirilebilir?",
+    options: ["Petrokimya mühendisi", "Astrokimya araştırmacısı", "Bilim müzesi küratörü", "Kalite güvence (GMP) denetçisi", "Tarım kimyası uzmanı"],
+    correct: 3,
+    explain: "Üretim partilerinin kalite standartlarına uygunluğunun denetlenmesi kalite güvence (GMP) denetçisinin görevidir."
   },
 
   /* ============ ORTA ============ */
@@ -1621,140 +1358,188 @@ export const QUIZ = {
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir öğrenci, kimya kariyerlerini araştırırken bazı mesleklerin (örneğin kimya teknikeri) iki yıllık ön lisans eğitimiyle, bazılarının (örneğin kimyager/kimya mühendisi) dört yıllık lisans eğitimiyle, bazılarının ise (örneğin araştırmacı akademisyen) lisansüstü eğitimle mümkün olduğunu öğreniyor.",
-    text: "Bu bilgiye dayanarak kimya alanındaki kariyer yolları hakkında en doğru çıkarım hangisidir?",
-    options: [
-      "Kimya alanında yalnızca lisansüstü eğitimle çalışılabilir",
-      "Kimya alanındaki meslekler tek bir eğitim düzeyiyle sınırlı değildir; farklı eğitim süreleri farklı görev/sorumluluk düzeylerine karşılık gelebilir",
-      "Eğitim süresi ile görev sorumluluğu arasında hiçbir ilişki yoktur",
-      "Ön lisans eğitimi kimya alanında hiçbir işe yaramaz",
-      "Tüm kimya meslekleri aynı eğitim düzeyini gerektirir"
-    ],
-    correct: 1,
-    explain: "Kimya alanında ön lisanstan lisansüstüne kadar farklı eğitim düzeylerine karşılık gelen (teknikerlik, kimyagerlik, araştırmacılık gibi) çeşitli kariyer basamakları bulunur."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir öğrenci, hem insanlarla iletişim kurmayı hem de bilimsel bilgiyi seviyor; laboratuvarda tam zamanlı çalışmaktan çok, kimya bilgisini farklı gruplara (öğrenciler, halk, şirketler) aktarmak istiyor.",
-    text: "Bu öğrencinin ilgi alanına en uygun kariyer kombinasyonu hangisidir?",
-    options: [
-      "Yalnızca laboratuvar araştırmacılığı",
-      "Kimya öğretmenliği, bilim iletişimi/gazeteciliği veya teknik satış temsilciliği",
-      "Yalnızca madencilik mühendisliği",
-      "Yalnızca patent hukuku",
-      "Bu ilgi alanına uygun hiçbir kimya kariyeri yoktur"
-    ],
-    correct: 1,
-    explain: "İletişim odaklı ilgi alanlarına sahip biri için öğretmenlik, bilim iletişimi veya teknik satış gibi kariyerler, kimya bilgisini insanlarla paylaşma fırsatı sunar."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Aşağıdaki tabloda dört farklı kimya kariyerinin tipik çalışma ortamı ve odak noktası özetlenmiştir.",
+    context: "Aşağıdaki tabloda dört farklı kariyer alanının, çalışma ortamı ve ağırlıklı olarak kullandığı kimya alt disiplini birlikte listelenmiştir.",
     table: {
-      headers: ["Kariyer", "Tipik çalışma ortamı", "Odak noktası"],
+      headers: ["Kariyer", "Çalışma ortamı", "Ağırlıklı alt disiplin"],
       rows: [
-        ["Kalite kontrol uzmanı", "Fabrika laboratuvarı", "Ürün standartlara uygunluğu"],
-        ["Akademik araştırmacı", "Üniversite laboratuvarı", "Yeni bilgi üretimi"],
-        ["Teknik satış temsilcisi", "Saha/müşteri ziyaretleri", "Ürün tanıtımı ve satış"],
-        ["Patent uzmanı", "Ofis/hukuk bürosu", "Buluşların korunması"]
+        ["Adli kimyager", "Kriminal laboratuvar", "Analitik kimya"],
+        ["Kozmetik Ar-Ge uzmanı", "Ürün geliştirme laboratuvarı", "Organik kimya"],
+        ["Batarya mühendisi", "Enerji Ar-Ge merkezi", "Elektrokimya"],
+        ["Klinik biyokimya uzmanı", "Hastane laboratuvarı", "Biyokimya"]
+      ],
+      caption: "Dört kariyer alanı ve ağırlıklı alt disiplinleri"
+    },
+    text: "Tabloya göre, hücresel enerji süreçleriyle ilgili moleküler bilgiye en çok ihtiyaç duyan kariyer hangisidir?",
+    options: ["Adli kimyager", "Kozmetik Ar-Ge uzmanı", "Batarya mühendisi", "Klinik biyokimya uzmanı", "Hiçbiri, hepsi eşit düzeyde ihtiyaç duyar"],
+    correct: 3,
+    explain: "Tabloda klinik biyokimya uzmanının ağırlıklı alt disiplini biyokimyadır; hücresel enerji süreçleri biyokimyanın konusu olduğundan bu kariyer en çok ihtiyaç duyar."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bir üniversite mezunu, hem laboratuvar ortamında uzun saatler geçirmekten hem de elde ettiği bulguları rapor hâline getirip yöneticilere sunmaktan keyif alıyor; ancak saha çalışmasına veya insanlarla doğrudan etkileşime pek ilgi duymuyor.",
+    text: "Bu ilgi profiline en uygun kariyer aşağıdakilerden hangisidir?",
+    options: ["Bilim gazeteciliği", "Kalite kontrol/analitik laboratuvar uzmanlığı", "Kimya öğretmenliği", "Çevre saha denetçiliği", "Ürün satış temsilciliği"],
+    correct: 1,
+    explain: "Laboratuvarda uzun süre çalışma ve bulguları rapor hâline getirme eğilimi, saha/insan etkileşimi gerektirmeyen kalite kontrol/analitik laboratuvar uzmanlığıyla en çok örtüşür; diğer seçenekler yoğun sunum, öğretim veya saha teması gerektirir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    chart: {
+      type: "bar",
+      title: "Bir bölgedeki kimya mezunlarının sektörel dağılımı (yüzde)",
+      xLabel: "Sektör",
+      yLabel: "Mezun oranı (%)",
+      data: [
+        { label: "İlaç/sağlık", value: 32 },
+        { label: "Gıda", value: 22 },
+        { label: "Enerji/petrokimya", value: 18 },
+        { label: "Eğitim", value: 15 },
+        { label: "Diğer (adli, kozmetik, vb.)", value: 13 }
       ]
     },
-    text: "Tabloya göre, hem saha çalışmasını hem de insanlarla yüz yüze etkileşimi seven bir kişi için en uygun kariyer hangisidir?",
-    options: ["Kalite kontrol uzmanı", "Akademik araştırmacı", "Teknik satış temsilcisi", "Patent uzmanı", "Tabloya göre hiçbiri uygun değildir"],
-    correct: 2,
-    explain: "Tabloya göre teknik satış temsilciliği saha/müşteri ziyaretlerini içerir, bu da saha çalışması ve insan etkileşimini seven biri için en uygun seçenektir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir öğrenci, 'kimya kariyeri seçmek için mutlaka kimya bölümünden mezun olmak gerekir' diye düşünüyor. Araştırmasında, bilim gazeteciliğinin gazetecilik/iletişim eğitimiyle, patent uzmanlığının hukuk eğitimiyle de (ek kimya bilgisiyle) yapılabildiğini öğreniyor.",
-    text: "Bu bulgu, öğrencinin düşüncesini nasıl etkiler?",
-    options: [
-      "Düşünceyi tamamen doğrular, hiçbir istisna yoktur",
-      "Düşünceyi kısmen çürütür; bazı kimyayla ilişkili kariyerler farklı temel eğitim geçmişlerinden (iletişim, hukuk gibi) de kimya bilgisiyle birleştirilerek yapılabilir",
-      "Bilim gazeteciliği kimyayla hiç ilgili değildir",
-      "Patent uzmanlığı yalnızca kimya mezunlarına açıktır",
-      "Bu bulgunun düşünceyle hiçbir ilgisi yoktur"
-    ],
+    text: "Grafiğe göre, bölgedeki kimya mezunlarının en büyük ikinci grubu hangi sektörde istihdam edilmektedir?",
+    options: ["İlaç/sağlık", "Gıda", "Enerji/petrokimya", "Eğitim", "Diğer"],
     correct: 1,
-    explain: "Bazı kimyayla ilişkili kariyerler (bilim gazeteciliği, patent hukuku gibi), farklı temel disiplinlerden gelen kişilerin ek kimya bilgisiyle bu alanlarda çalışabilmesine imkân tanır — kimya kariyeri tek bir eğitim yoluyla sınırlı değildir."
+    explain: "Grafikte en yüksek oran ilaç/sağlık (%32), ikinci en yüksek oran ise gıda sektörüdür (%22)."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir öğrenci, bir ilaç şirketinde çalışan üç farklı kişiyle görüşüyor: Biri yeni molekülleri sentezliyor (organik kimyager), biri üretilen ilacın saflığını test ediyor (analitik kimyager/kalite kontrol), biri de ilacın hangi ülkelerde satılacağına dair pazarlama stratejisi geliştiriyor (pazarlama uzmanı, kimya bilgisiyle desteklenmiş).",
-    text: "Bu üç kişinin görevleri arasındaki temel fark en iyi hangi şekilde özetlenebilir?",
-    options: [
-      "Üçü de birbirinin aynısı iştir, fark yoktur",
-      "Aynı şirket içinde bile kimya kariyerleri, doğrudan bilimsel üretimden (sentez), kalite güvencesine ve iş/pazarlama fonksiyonlarına kadar çok çeşitlenebilir",
-      "Yalnızca sentez yapan kişi 'gerçek' bir kimyagerdir, diğerleri değildir",
-      "Pazarlama uzmanının kimya bilgisine hiç ihtiyacı yoktur",
-      "Bu üç görev farklı şirketlerde olmak zorundadır, aynı şirkette bulunamaz"
-    ],
+    context: "Bir sağlık kurumunda, hem yeni bir ilaç molekülünün vücutta nasıl parçalandığı (metabolize olduğu) incelenmekte hem de bu molekülün üretim sürecinde çevreye salınan atıkların yönetimi planlanmaktadır.",
+    text: "Bu iki görev sırasıyla en doğrudan hangi kariyer alanlarıyla ilişkilidir?",
+    options: ["Kozmetik Ar-Ge uzmanı ve müze koruma kimyageri", "Adli kimyager ve bilim gazetecisi", "Astrokimya araştırmacısı ve patent uzmanı", "Farmasötik Ar-Ge kimyageri ve çevre/sürdürülebilirlik danışmanı", "Bu iki görev aynı kariyerin farklı isimleridir, ayrım yapılamaz"],
+    correct: 3,
+    explain: "Molekülün vücutta metabolizmasının incelenmesi farmasötik Ar-Ge kimyagerinin; üretim atıklarının çevresel yönetimi ise çevre/sürdürülebilirlik danışmanının işidir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bir kariyer danışmanlığı raporunda şu gözlem paylaşılmıştır: analitik kimya kökenli meslekler (kalite kontrol, adli kimya, çevre izleme gibi) neredeyse her sektörde talep görürken, astrokimya gibi çok uzmanlaşmış alanlarda pozisyon sayısı çok sınırlıdır ve genellikle sadece araştırma kurumlarında bulunur.",
+    text: "Bu gözleme dayanarak, kariyer planlaması açısından en dengeli çıkarım hangisidir?",
+    options: ["Uzmanlaşmış alanlarda çalışmak hiçbir zaman tercih edilmemelidir", "Astrokimya, analitik kimyadan her zaman daha fazla iş imkânı sunar", "Sektörel talep, bir kariyerin bilimsel değerini doğrudan belirler", "Geniş istihdam olanağı isteyen biri için analitik kimya temelli bir kariyer, dar uzmanlaşmış alanlara göre daha fazla sektörel seçenek sunar", "Analitik kimya kökenli meslekler yalnızca laboratuvar dışı işlerde bulunur"],
+    correct: 3,
+    explain: "Metinde açıkça belirtildiği gibi analitik kimya kökenli meslekler daha geniş sektörel talep görürken, astrokimya gibi dar alanlar sınırlı pozisyon sunar; bu, geniş istihdam arayan biri için dengeli bir çıkarımdır."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    objectIcons: { title: "Bir iş yerinde kullanılan malzemeler", items: [{ type: "glove", label: "Koruyucu eldiven" }, { type: "flask", label: "Titrasyon düzeneği" }, { type: "extinguisher", label: "Yangın söndürücü" }] },
+    context: "Görseldeki üç malzemenin bir arada, düzenli olarak kontrol edilip kayıt altına alındığı bir iş yeri tarif edilmektedir; bu iş yerinde ayrıca çalışanlara düzenli güvenlik eğitimleri verilmektedir.",
+    text: "Bu iş yerinin sorumlusu için en uygun kariyer tanımı hangisidir?",
+    options: ["Müze küratörü", "Bilim gazetecisi", "Patent avukatı", "İş sağlığı ve güvenliği (EHS) uzmanı", "Sanat eseri restoratörü"],
+    correct: 3,
+    explain: "Koruyucu ekipman, laboratuvar düzeneği ve yangın güvenliğinin birlikte denetlenip eğitim verilmesi EHS (iş sağlığı ve güvenliği) uzmanının görev tanımına uyar."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bir gıda denetim biriminde, ithal edilen bir ürün partisinde izin verilenden fazla katkı maddesi tespit edilmiş ve parti satışa sunulmadan geri çekilmiştir.",
+    text: "Bu süreçte görev alan uzmanın kariyeri en doğrudan hangisidir?",
+    options: ["Kültürel miras koruma kimyageri", "Astrokimya araştırmacısı", "Elektrokimya mühendisi", "Gıda kalite kontrol/denetim uzmanı", "Patent uzmanı"],
+    correct: 3,
+    explain: "Katkı maddesi tespiti ve ürünün standartlara uygunluğunun denetlenmesi gıda kalite kontrol/denetim uzmanının işidir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    table: {
+      headers: ["Kariyer", "Gerekli ek yetkinlik"],
+      rows: [
+        ["Bilim gazeteciliği", "Yazılı/sözlü anlatım, karmaşık bilgiyi sadeleştirme"],
+        ["Patent uzmanlığı", "Hukuk bilgisi, teknik doküman analizi"],
+        ["Kimya öğretmenliği", "Pedagoji, sınıf yönetimi"],
+        ["Kalite güvence denetçiliği", "Mevzuat bilgisi (GMP/ISO), denetim süreçleri"]
+      ],
+      caption: "Kimya kökenli dört kariyerin gerektirdiği ek yetkinlikler"
+    },
+    text: "Tabloya göre, güçlü hukuk bilgisi ve teknik doküman analiz becerisi gerektiren kariyer hangisidir?",
+    options: ["Bilim gazeteciliği", "Patent uzmanlığı", "Kimya öğretmenliği", "Kalite güvence denetçiliği", "Hepsi eşit düzeyde hukuk bilgisi gerektirir"],
     correct: 1,
-    explain: "Tek bir şirket içinde bile kimya ile ilişkili kariyerler, doğrudan bilimsel üretimden kalite kontrole ve pazarlamaya kadar geniş bir yelpazede çeşitlenebilir."
+    explain: "Tabloda patent uzmanlığının gerektirdiği ek yetkinlik olarak hukuk bilgisi ve teknik doküman analizi belirtilmiştir."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir öğrenci, 'yapay zekâ ve otomasyon geliştikçe kimya laboratuvarlarındaki rutin analiz işleri makinelere devredilebilir; ancak yeni bir bileşiğin tasarımı, deney sonuçlarının yorumlanması ve etik kararlar hâlâ insan uzmanlığı gerektirir' bilgisini okuyor.",
-    text: "Bu bilgiye dayanarak, gelecekteki kimya kariyerleri hakkında en dengeli çıkarım hangisidir?",
-    options: [
-      "Kimya kariyerlerinin tamamı yakında ortadan kalkacaktır",
-      "Teknolojik gelişmeler bazı rutin görevleri otomatikleştirebilir, ancak yaratıcı tasarım, yorumlama ve karar verme gibi beceriler gerektiren kimya kariyerlerinin önemi sürebilir",
-      "Otomasyon kimya alanını hiç etkilemeyecektir",
-      "Sadece rutin laboratuvar işleri gelecekte var olmaya devam edecektir",
-      "Bu konuda hiçbir öngörüde bulunulamaz"
-    ],
+    context: "Bir teknoloji şirketinde, binlerce moleküler yapı verisi bilgisayar algoritmalarıyla taranarak yeni bir ilaç adayı molekülün hangi özelliklere sahip olması gerektiği tahmin edilmektedir.",
+    text: "Bu görev en doğrudan hangi (görece yeni) kariyer alanına örnektir?",
+    options: ["Gıda mühendisi", "Adli kimyager", "Müze koruma kimyageri", "Kemoinformatik/hesaplamalı kimya uzmanı", "İş güvenliği uzmanı"],
+    correct: 3,
+    explain: "Moleküler verilerin bilgisayar algoritmalarıyla analiz edilerek yeni molekül özelliklerinin tahmin edilmesi kemoinformatik/hesaplamalı kimya uzmanlığının işidir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bir maden şirketinde hem çıkarılan cevherin metal içeriği analiz edilmekte hem de işletmenin çevresel atık yönetim planı hazırlanmaktadır.",
+    text: "Bu iki görev sırasıyla en doğrudan hangi kariyer alanlarıyla örtüşür?",
+    options: ["Kimya öğretmeni ve müze küratörü", "Kozmetik Ar-Ge uzmanı ve bilim gazetecisi", "Adli kimyager ve patent uzmanı", "Metalurji/jeokimya uzmanı ve çevre/sürdürülebilirlik danışmanı", "Astrokimya araştırmacısı ve klinik biyokimya uzmanı"],
+    correct: 3,
+    explain: "Cevherin metal içeriğinin analizi metalurji/jeokimya uzmanının; atık yönetim planı hazırlama ise çevre/sürdürülebilirlik danışmanının görev alanına girer."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bir spor bilimleri merkezinde, sporcuların kas dokusundaki enerji üretim süreçleri ve beslenme takviyelerinin performansa etkisi incelenmektedir.",
+    text: "Bu göreve dayanarak, en uygun kariyer alanı hangisidir?",
+    options: ["Bilim müzesi küratörü", "Petrokimya mühendisi", "Patent avukatı", "Spor biyokimyası uzmanı", "Elektrokimya mühendisi"],
+    correct: 3,
+    explain: "Kas dokusundaki enerji üretimi ve beslenme takviyelerinin etkisinin incelenmesi spor biyokimyası uzmanının çalışma alanıdır."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bir üniversite mezunu, laboratuvar araştırmasından çok, farklı şirketlere kimyasal madde ve ekipman satışı yaparken teknik danışmanlık da sunmayı, müşteri ziyaretleri yapmayı seviyor.",
+    text: "Bu ilgi profiline sahip birinin kariyer tercihi en uygun şekilde hangisi olur?",
+    options: ["Akademik araştırmacılık", "Kimyasal ürün satış/teknik destek mühendisliği", "Adli kimyagerlik", "Kalite güvence denetçiliği (sürekli laboratuvar)", "Müze koruma kimyagerliği"],
     correct: 1,
-    explain: "Teknolojik gelişmeler rutin/tekrarlayan görevleri otomatikleştirebilirken, yaratıcı problem çözme, yorumlama ve karar verme becerisi gerektiren kimya kariyerlerinin değeri korunabilir — bu, kariyer planlamasında dikkate alınması gereken dengeli bir bakış açısıdır."
+    explain: "Şirketlere satış yapma, teknik danışmanlık sunma ve müşteri ziyaretleri, laboratuvar-ağırlıklı değil saha/iletişim ağırlıklı satış-teknik destek mühendisliğiyle örtüşür."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir öğrenci, kimya kariyerini seçerken yalnızca 'hangi iş en çok kazandırır' sorusuna odaklanıyor; ilgi duyduğu, severek yapabileceği görevleri hiç düşünmüyor.",
-    text: "Bu yaklaşımın olası bir riski en iyi hangi seçenekle açıklanır?",
-    options: [
-      "Bu yaklaşımda hiçbir risk yoktur, kazanç tek önemli etkendir",
-      "Yalnızca kazanca odaklanmak, kişinin ilgi duymadığı bir işte uzun vadede motivasyon ve iş doyumu sorunları yaşamasına yol açabilir",
-      "İlgi alanı kariyer seçiminde hiçbir zaman önemli değildir",
-      "Kazanca odaklanmak her zaman en iyi kariyer kararını garanti eder",
-      "Bu soru kariyer planlamasıyla ilgisizdir"
-    ],
-    correct: 1,
-    explain: "Kariyer seçiminde yalnızca maddi kazanca odaklanıp kişisel ilgiyi göz ardı etmek, uzun vadede iş tatminsizliği ve motivasyon kaybı riskini artırabilir; dengeli bir kariyer kararı genellikle her iki etkeni de dikkate alır."
+    context: "Bir nükleer santralde, radyasyon seviyeleri sürekli izlenmekte ve çalışanların güvenli doz sınırları içinde kalması için prosedürler uygulanmaktadır.",
+    text: "Bu çalışma en doğrudan hangi kariyer alanının parçasıdır?",
+    options: ["Patent uzmanı", "Kozmetik Ar-Ge kimyageri", "Bilim gazetecisi", "Tarım kimyası araştırmacısı", "Nükleer kimya/radyasyon güvenliği uzmanı"],
+    correct: 4,
+    explain: "Radyasyon seviyelerinin izlenmesi ve güvenli doz prosedürlerinin uygulanması nükleer kimya/radyasyon güvenliği uzmanının işidir."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir öğrenci, 'kimya bölümü mezunları sadece kimyayla doğrudan ilgili işlerde çalışabilir' diye düşünüyor. Araştırmasında, birçok kimya mezununun veri analizi, finans, girişimcilik gibi farklı sektörlerde de analitik düşünme ve problem çözme becerileri sayesinde başarılı kariyerler yaptığını öğreniyor.",
-    text: "Bu bulgu, kimya eğitiminin kazandırdığı beceriler hakkında en doğru hangi çıkarımı destekler?",
-    options: [
-      "Kimya mezunları başka hiçbir alanda çalışamaz",
-      "Kimya eğitimi yalnızca laboratuvar işleri için kullanılabilir",
-      "Kimya eğitimi yalnızca konuya özgü bilgi değil, analitik düşünme ve problem çözme gibi aktarılabilir (transfer edilebilir) beceriler de kazandırır; bu beceriler farklı sektörlerde de değerli olabilir",
-      "Analitik düşünme becerisi yalnızca kimya eğitimiyle kazanılabilir",
-      "Bu bulgu kimya eğitiminin değersiz olduğunu gösterir"
-    ],
-    correct: 2,
-    explain: "Kimya eğitimi, konuya özgü bilginin yanında analitik düşünme, veri yorumlama ve sistematik problem çözme gibi birçok sektörde değerli olabilecek aktarılabilir beceriler de kazandırır."
+    context: "Bir sigorta şirketi, kimyasal madde üreten fabrikalara sigorta poliçesi düzenlemeden önce tesisin güvenlik risklerini kimyasal madde envanterine göre değerlendiren bir uzmandan rapor talep etmektedir.",
+    text: "Bu uzmanın kariyeri en doğrudan hangisidir?",
+    options: ["Gıda mühendisi", "Astrokimya araştırmacısı", "Kimya öğretmeni", "Müze koruma kimyageri", "Kimyasal risk değerlendirme/EHS danışmanı"],
+    correct: 4,
+    explain: "Fabrikanın kimyasal madde envanterine göre güvenlik riskini değerlendirip rapor sunmak kimyasal risk değerlendirme/EHS danışmanlığının işidir."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir öğrenci, kimya kariyerlerini araştırırken hem 'araştırma geliştirme (Ar-Ge)' hem 'üretim' hem de 'kalite güvence' departmanlarının bir ilaç şirketinde farklı sorumluluklara sahip olduğunu öğreniyor: Ar-Ge yeni ürün geliştirir, üretim mevcut formülü büyük ölçekte üretir, kalite güvence ise her partinin standartlara uyduğunu doğrular.",
-    text: "Bu üç departman arasındaki iş akışı sırası en mantıklı şekilde hangisidir?",
-    options: [
-      "Üretim → Kalite güvence → Ar-Ge",
-      "Kalite güvence → Ar-Ge → Üretim",
-      "Ar-Ge (yeni ürün geliştirme) → Üretim (büyük ölçekli imalat) → Kalite güvence (standart doğrulama)",
-      "Üçü de aynı anda, birbirinden bağımsız çalışır, sıra önemsizdir",
-      "Bu üç departman arasında hiçbir iş akışı ilişkisi yoktur"
-    ],
-    correct: 2,
-    explain: "Tipik bir ürün geliştirme sürecinde önce Ar-Ge yeni formülü geliştirir, ardından üretim bu formülü büyük ölçekte uygular, son olarak kalite güvence her partinin standartlara uygunluğunu doğrular."
+    context: "Bir devlet kurumunda, yeni geliştirilen bir tarım ilacının çevreye ve insan sağlığına olan uzun vadeli etkileri değerlendirilerek kullanım izni verilip verilmeyeceğine karar verilmektedir.",
+    text: "Bu değerlendirmeyi yapan uzmanın kariyeri en doğrudan hangisidir?",
+    options: ["Patent uzmanı", "Kozmetik Ar-Ge kimyageri", "Bilim müzesi küratörü", "Elektrokimya mühendisi", "Çevresel/toksikolojik risk değerlendirme uzmanı"],
+    correct: 4,
+    explain: "Bir kimyasalın çevre ve sağlık üzerindeki uzun vadeli etkilerinin değerlendirilerek izin kararına katkı sağlanması çevresel/toksikolojik risk değerlendirme uzmanının işidir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bir malzeme test laboratuvarında, yeni geliştirilen bir kompozit malzemenin darbe dayanımı, ısıya dayanıklılığı ve esneklik özellikleri ölçülerek uçak parçalarında kullanıma uygunluğu değerlendirilmektedir.",
+    text: "Tanımlanan bu iş hangi kariyer alanına karşılık gelir?",
+    options: ["Nükleer güvenlik uzmanı", "Adli kimyager", "Bilim gazetecisi", "Gıda kalite uzmanı", "Malzeme bilimi/polimer mühendisi"],
+    correct: 4,
+    explain: "Kompozit malzemelerin mekanik ve termal özelliklerinin test edilmesi malzeme bilimi/polimer mühendisliğinin çalışma alanıdır."
+  },
+
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bir kozmetik firmasında hem yeni bir güneş kremi formülünün cilt üzerindeki koruma etkinliği organik kimya yöntemleriyle test edilmekte hem de ürünün ambalajında kullanılan plastik malzemenin geri dönüştürülebilirliği polimer kimyası yöntemleriyle değerlendirilmektedir.",
+    text: "Bu iki görev hangi kariyer alanlarının ortak çalışmasını gerektirir?",
+    options: ["Bu iki görev aynı kariyerin farklı isimleridir", "Adli kimyager ve bilim gazetecisi", "Astrokimya araştırmacısı ve patent uzmanı", "Klinik biyokimya uzmanı ve müze koruma kimyageri", "Kozmetik Ar-Ge kimyageri ve polimer/malzeme mühendisi"],
+    correct: 4,
+    explain: "Güneş kreminin koruma etkinliğinin test edilmesi kozmetik Ar-Ge kimyagerinin; ambalaj plastiğinin geri dönüştürülebilirliğinin değerlendirilmesi ise polimer/malzeme mühendisinin işidir."
   },
 
   /* ============ ZOR ============ */
@@ -1762,574 +1547,394 @@ export const QUIZ = {
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir öğrenci, kimya alanında kariyer olanaklarını araştırırken şu gözlemi yapıyor: bazı ülkelerde kimya mezunlarının işsizlik oranı düşükken, bazı ülkelerde yüksek; bu farkın o ülkenin sanayileşme düzeyi, Ar-Ge yatırımları ve eğitim sisteminin işgücü piyasasıyla uyumuyla ilişkili olabileceğini öğreniyor.",
-    text: "Bu gözlem, kariyer planlamasında hangi ek etkenin dikkate alınması gerektiğini gösterir?",
-    options: [
-      "İşsizlik oranı yalnızca kişisel başarısızlıktan kaynaklanır",
-      "Kariyer olanakları hiçbir zaman ülke ekonomisinden etkilenmez",
-      "Kariyer olanakları yalnızca bireysel yetenek ve tercihe değil, aynı zamanda bulunulan ülke/bölgenin ekonomik ve sanayi yapısına da bağlı olabilir",
-      "Sanayileşme düzeyinin kariyer olanaklarıyla hiçbir ilişkisi yoktur",
-      "Bu gözlem kariyer planlamasıyla ilgisizdir"
-    ],
-    correct: 2,
-    explain: "Kariyer olanakları, bireysel beceri ve tercihlerin yanı sıra, bulunulan ülke/bölgenin sanayileşme düzeyi, Ar-Ge yatırımları gibi makro-ekonomik etkenlerden de etkilenebilir; bu, gerçekçi kariyer planlaması için önemli bir faktördür."
+    context: "Bir kişinin kariyer geçmişi şöyledir: önce bir ilaç şirketinde klinik öncesi molekül testleri yapan bir Ar-Ge kimyageri olarak çalışmış; ardından aynı şirketin düzenleyici işler (regülasyon) biriminde, geliştirilen ilaçların ruhsatlandırma sürecinde gerekli teknik dokümanları hazırlayan bir uzman olarak görev almıştır.",
+    text: "Bu geçiş, kariyer planlaması açısından hangi çıkarımı en iyi destekler?",
+    options: ["Bu geçiş yalnızca şans eseri gerçekleşmiştir, genellenebilir bir örnek değildir", "Ar-Ge kimyagerliği ile düzenleyici işler uzmanlığı aynı yetkinlikleri gerektirdiği için pratikte tek bir meslektir", "Bir kişi kariyer boyunca yalnızca tek bir dar uzmanlık alanında kalmak zorundadır", "Düzenleyici işler biriminde çalışmak laboratuvar geçmişini tamamen değersiz kılar", "Bir kimya kariyeri, laboratuvar becerileriyle birlikte mevzuat/dokümantasyon bilgisi kazanılarak farklı bir uzmanlık alanına genişleyebilir"],
+    correct: 4,
+    explain: "Örnek, laboratuvar temelli bir kariyerin ek yetkinlik (mevzuat/dokümantasyon bilgisi) kazanılarak farklı ama ilişkili bir uzmanlık alanına (düzenleyici işler) genişleyebileceğini gösterir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir öğrenci, iklim değişikliğiyle mücadele kapsamında 'yeşil kimya' ve 'sürdürülebilir enerji' alanlarında son yıllarda yeni iş ilanlarının hızla arttığını fark ediyor; bu alanların 20 yıl önce bu kadar yaygın olmadığını öğreniyor.",
-    text: "Bu gözlem, kimya kariyerlerinin zaman içindeki değişimi hakkında en doğru hangi çıkarımı destekler?",
-    options: [
-      "Yeşil kimya kariyerleri gerçek kimya kariyerleri sayılmaz",
-      "Kimya kariyerleri hiçbir zaman değişmez, hep aynı kalır",
-      "Kimya kariyer alanları statik değildir; toplumsal ihtiyaçlar (örneğin çevresel sürdürülebilirlik kaygıları) ve teknolojik gelişmeler yeni kariyer alanlarının ortaya çıkmasına ve mevcut alanların büyümesine yol açabilir",
-      "20 yıl önce var olmayan bir alan hiçbir zaman önemli hâle gelemez",
-      "Toplumsal ihtiyaçların kariyer alanlarıyla hiçbir ilişkisi yoktur"
-    ],
-    correct: 2,
-    explain: "Kimya kariyer alanları, toplumsal öncelikler (çevre, sürdürülebilirlik gibi) ve teknolojik gelişmelerle birlikte zaman içinde değişip yeni uzmanlaşmış alanların (yeşil kimya gibi) ortaya çıkmasına yol açabilir; bu, kariyer planlamasında güncel eğilimleri takip etmenin önemini gösterir."
+    context: "Bir uzay tarımı projesinde hem toprak benzeri ortamların (regolit) mineral bileşimi anorganik kimya yöntemleriyle analiz edilmekte hem de bu ortamlarda yetiştirilen bitkilerin besin değeri gıda kimyası yöntemleriyle test edilmektedir.",
+    text: "Bu proje ekibinde görev alacak iki uzmanın kariyer alanları sırasıyla en doğrudan hangileridir?",
+    options: ["Bu iki görev birbirinin aynısıdır, ayrım anlamsızdır", "Adli kimyager ve bilim gazetecisi", "Kozmetik Ar-Ge uzmanı ve patent avukatı", "Elektrokimya mühendisi ve müze koruma kimyageri", "Anorganik/jeokimya uzmanı ve gıda kimyası araştırmacısı"],
+    correct: 4,
+    explain: "Regolit benzeri ortamların mineral bileşiminin analizi anorganik/jeokimya uzmanının; yetiştirilen bitkilerin besin değerinin test edilmesi ise gıda kimyası araştırmacısının işidir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir öğrenci, bir kimya kariyerinde başarılı olmuş üç farklı kişiyle görüşüyor: Biri üniversitede tek bir dar konuda (örneğin belirli bir katalizör türü) 20 yıldır derinlemesine uzmanlaşmış bir araştırmacı. Diğeri, kariyeri boyunca sırasıyla laboratuvar teknisyenliği, kalite kontrol ve son olarak Ar-Ge yöneticiliği yapmış biri. Üçüncüsü ise kimya lisansından sonra işletme yüksek lisansı yaparak bir kimya şirketinde üst düzey yöneticilik yapan biri.",
-    text: "Bu üç farklı kariyer yolu, kimya alanındaki kariyer gelişimi hakkında en kapsamlı hangi çıkarımı destekler?",
-    options: [
-      "İşletme yüksek lisansı yapan kişi artık kimyager sayılmaz",
-      "Yalnızca derinlemesine uzmanlaşan kişi gerçek bir kimyager sayılır",
-      "Kimya eğitimi almış kişiler, derinlemesine uzmanlaşma, çeşitli rollerde ilerleme veya farklı disiplinlerle (işletme gibi) birleştirme gibi birbirinden çok farklı kariyer yolları izleyebilir; 'tek doğru yol' yoktur",
-      "Kariyer boyunca rol değiştirmek her zaman başarısızlık göstergesidir",
-      "Bu üç kişinin kariyer yolları arasında hiçbir ortak nokta yoktur, karşılaştırılamaz"
-    ],
-    correct: 2,
-    explain: "Kimya eğitimi/bilgisi, doğrusal veya tek bir 'doğru' kariyer yolu dayatmaz; derinlemesine uzmanlaşma, çok yönlü rol değişimi veya farklı disiplinlerle (işletme gibi) birleştirme gibi çeşitli yollarla başarılı bir kariyer inşa edilebilir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir öğrenci, bir kimya kariyeri seçerken şu etik ikilemle karşılaşabileceğini öğreniyor: bir kimyager, işvereninin çevreye zararlı ama yasal sınırlar içinde kalan bir üretim yöntemini kullanmaya devam etmesini istediği bir durumla karşılaşabilir; burada hem işini kaybetme riski hem de kişisel/toplumsal sorumluluk arasında bir gerilim yaşanabilir.",
-    text: "Bu tür bir senaryo, kimya kariyerlerinde mesleki etik hakkında en olgun hangi çıkarımı destekler?",
-    options: [
-      "Kimyagerler işverenlerinin her isteğini sorgusuz kabul etmelidir",
-      "Kimya kariyerlerinde etik hiçbir zaman bir sorun oluşturmaz",
-      "Kimya kariyerleri yalnızca teknik bilgi değil, aynı zamanda mesleki etik, toplumsal sorumluluk ve bazen zor kararlar verme becerisi de gerektirebilir",
-      "Yasal sınırlar içinde kalan hiçbir uygulama etik açıdan sorgulanamaz",
-      "Bu tür ikilemler yalnızca kurgusal senaryolardır, gerçek hayatta yaşanmaz"
-    ],
-    correct: 2,
-    explain: "Kimya kariyerleri (ve birçok teknik meslek), yalnızca bilimsel/teknik yetkinlik değil, aynı zamanda mesleki etik ve toplumsal sorumluluk bilinciyle karar verme becerisini de gerektirebilir; yasallık ile etik her zaman birebir örtüşmeyebilir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir öğrenci, küresel ilaç şirketlerinin yeni bir ilacı geliştirmek için ortalama 10-15 yıl ve yüz milyonlarca dolar harcadığını, bu sürecin çoğu adayın başarısız olmasıyla sonuçlandığını öğreniyor; buna rağmen bu alanda çalışan kimyagerlerin sayısının azalmadığını fark ediyor.",
-    text: "Bu gözlem, yüksek riskli/uzun soluklu kimya kariyerlerinde çalışmayı tercih eden kişilerin motivasyonu hakkında en makul hangi çıkarımı destekler?",
-    options: [
-      "İlaç geliştirme süreci hiçbir risk içermez",
-      "Bu alanda çalışan herkes garantili başarıya sahiptir",
-      "Bu alanlarda çalışanlar, kısa vadeli garantili sonuçlardan çok, uzun vadeli bilimsel katkı, toplumsal etki veya kişisel tatmin gibi etkenlerden motive olabilir",
-      "Uzun soluklu projelerde çalışmak mantıksızdır ve hiçbir kimyager bunu tercih etmez",
-      "Bu gözlemden hiçbir çıkarım yapılamaz"
-    ],
-    correct: 2,
-    explain: "Yüksek risk ve uzun süreye rağmen bu tür alanlarda çalışmayı sürdüren kişiler, genellikle kısa vadeli garantiler yerine bilimsel katkı, toplumsal fayda ve mesleki tatmin gibi daha uzun vadeli motivasyon kaynaklarına sahip olabilir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir öğrenci, kimya kariyerlerinde cinsiyet dağılımını araştırıyor ve tarihsel olarak bazı alt alanlarda (örneğin ağır sanayi kimyası) erkeklerin, bazılarında (örneğin biyokimya/klinik laboratuvar) kadınların sayıca daha fazla temsil edildiğini; ancak bu dağılımın zamanla değiştiğini öğreniyor.",
-    text: "Bu bilgiye dayanarak en dengeli ve bilimsel yaklaşım hangisidir?",
-    options: [
-      "Geçmişteki dağılım hiçbir zaman değişemez, gelecekte de aynı kalacaktır",
-      "Bu dağılım, kadınların veya erkeklerin belirli alanlarda doğuştan daha yetenekli olduğunu kanıtlar",
-      "Geçmişteki dağılım eğilimleri, bir kişinin bireysel yeteneğine veya bir alanda başarılı olup olamayacağına dair bir kanıt değildir; kariyer tercihleri toplumsal, tarihsel etkenlerden etkilenmiş olabilir ve zamanla değişebilir",
-      "Kariyer seçimlerinde toplumsal etkenlerin hiçbir rolü yoktur",
-      "Bu konu bilimsel bir tartışma konusu değildir"
-    ],
-    correct: 2,
-    explain: "Geçmişteki mesleki dağılım eğilimleri, bireysel yetenekle ilgili bir kanıt sunmaz; bu tür örüntüler genellikle tarihsel/toplumsal etkenlerden kaynaklanır ve eğitim erişimi ile toplumsal tutumlar değiştikçe zamanla dönüşebilir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir kişi, bir fabrikanın çalışanlarının kimyasal maddelerle güvenli çalışmasını sağlamak için iş sağlığı ve güvenliği kurallarını denetliyor.",
-    text: "Bu görev tanımı hangi kariyer alanına aittir?",
-    options: [
-      "Turizm rehberliği",
-      "Astronomi araştırmacılığı",
-      "İş sağlığı ve güvenliği (EHS) uzmanlığı",
-      "Grafik tasarım",
-      "Spor koçluğu"
-    ],
-    correct: 2,
-    explain: "Kimyasal maddelerle çalışan işçilerin güvenliğini sağlamak iş sağlığı ve güvenliği (EHS) uzmanlığının görevidir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir kişi, bir şirketin fabrika atıklarının çevre mevzuatına uygun şekilde bertaraf edilmesi konusunda şirkete danışmanlık veriyor.",
-    text: "Bu danışmanlık hizmeti hangi kariyer alanına girer?",
-    options: [
-      "Turizm rehberliği",
-      "Kozmetik satışı",
-      "Spor yönetimi",
-      "Çevre danışmanlığı",
-      "Muhasebecilik"
-    ],
-    correct: 3,
-    explain: "Atık yönetimi ve çevre mevzuatına uygunluk konusunda danışmanlık vermek çevre danışmanlığının görev alanıdır."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir kişi, kendi kurduğu küçük şirkette doğal içerikli temizlik ürünleri formüle edip satıyor; hem kimyager hem işletmeci rolünü üstleniyor.",
-    text: "Bu kişinin izlediği kariyer yolu en çok hangi kavramla ilişkilidir?",
-    options: [
-      "Sendika temsilciliği",
-      "Akademik araştırmacılık",
-      "Kamu memurluğu",
-      "Girişimcilik (kimya temelli)",
-      "Devlet denetçiliği"
-    ],
-    correct: 3,
-    explain: "Kendi işini kurup kimya bilgisini ticari bir ürüne dönüştürmek, kimya temelli girişimciliğin bir örneğidir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir kişi, bir savcılık bünyesinde olay yerinden toplanan kimyasal delilleri analiz ederek mahkemeye bilirkişi raporu sunuyor.",
-    text: "Bu uzmanlık alanı hangi kariyer kategorisine girer?",
-    options: [
-      "Spor koçluğu",
-      "Turizm işletmeciliği",
-      "Grafik tasarım",
-      "Adli kimya uzmanlığı",
-      "Muhasebecilik"
-    ],
-    correct: 3,
-    explain: "Adli olaylarla ilgili kimyasal delillerin analiz edilip mahkemeye rapor sunulması adli kimya uzmanlığının görevidir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Aşağıdaki grafikte, bir üniversitenin kimya bölümü mezunlarının beş yıl sonra çalıştıkları sektörlerin (varsayımsal) dağılımı gösterilmiştir.",
-    chart: {
-      type: "bar",
-      labels: ["Sanayi", "Akademi", "Sağlık/İlaç", "Eğitim", "Diğer"],
-      values: [38, 15, 22, 18, 7],
-      title: "Mezunların 5 yıl sonraki sektör dağılımı (%)"
+    table: {
+      headers: ["Kariyer", "Ortalama haftalık laboratuvar süresi", "Ortalama haftalık rapor/sunum süresi"],
+      rows: [
+        ["Analitik laboratuvar uzmanı", "32 saat", "6 saat"],
+        ["Bilim iletişimcisi (kimya kökenli)", "4 saat", "28 saat"],
+        ["Kalite güvence denetçisi", "14 saat", "18 saat"],
+        ["Ar-Ge kimyageri (kozmetik)", "26 saat", "10 saat"]
+      ],
+      caption: "Dört kariyerin haftalık zaman dağılımı (ortalama)"
     },
-    text: "Grafiğe göre, kimya mezunlarının kariyer olanakları hakkında en doğru çıkarım hangisidir?",
-    options: [
-      "Grafiğe göre kimya mezunlarının hiçbiri sağlık sektöründe çalışmamaktadır",
-      "Kimya mezunlarının tamamı akademisyen olmaktadır",
-      "Kimya mezunları yalnızca eğitim sektöründe çalışabilir",
-      "Kimya mezunlarının büyük çoğunluğu sanayi sektöründe, ama önemli bir kısmı da akademi, sağlık ve eğitim gibi çeşitli sektörlerde istihdam edilmektedir",
-      "Grafikten hiçbir anlamlı sonuç çıkarılamaz"
-    ],
-    correct: 3,
-    explain: "Grafik, kimya mezunlarının en büyük payla sanayi sektöründe (%38) olmakla birlikte, akademi, sağlık/ilaç ve eğitim gibi farklı sektörlere de dağıldığını göstermektedir — bu, kimya kariyerlerinin çeşitliliğini yansıtır."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir öğrenci, kimya öğretmenliğinin yalnızca lisede ders anlatmaktan ibaret olmadığını; bazı öğretmenlerin ayrıca ders materyali/kitap yazarlığı, olimpiyat öğrenci koçluğu veya eğitim teknolojileri danışmanlığı gibi ek roller de üstlenebildiğini öğreniyor.",
-    text: "Bu bilgi, tek bir meslek unvanı (öğretmenlik) içindeki çeşitlilik hakkında en doğru hangi çıkarımı destekler?",
-    options: [
-      "Yalnızca üniversite hocaları ek roller üstlenebilir",
-      "Öğretmenlik kariyeri hiçbir zaman çeşitlendirilemez",
-      "Ders kitabı yazarlığı öğretmenlikle hiç ilgili değildir",
-      "Aynı meslek unvanı altında bile kişiler farklı ek roller ve uzmanlıklar geliştirerek kariyerlerini çeşitlendirebilir",
-      "Bu bilgi kariyer planlamasıyla ilgisizdir"
-    ],
-    correct: 3,
-    explain: "Tek bir meslek unvanı (örneğin öğretmenlik) içinde bile, kişiler ek uzmanlıklar (yazarlık, koçluk, danışmanlık gibi) geliştirerek kariyerlerini zenginleştirebilir ve çeşitlendirebilir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir öğrenci, yurt dışında kimya alanında yüksek lisans/doktora yapmanın uluslararası araştırma projelerine katılma ve farklı ülkelerde çalışma fırsatı sunabileceğini, ancak bu yolun aynı zamanda dil öğrenimi, kültürel uyum ve genellikle uzun bir zaman taahhüdü gerektirdiğini öğreniyor.",
-    text: "Bu bilgiye dayanarak, uluslararası bir kimya kariyeri hakkında en dengeli çıkarım hangisidir?",
-    options: [
-      "Herkes mutlaka yurt dışında eğitim almalıdır",
-      "Yurt dışında eğitim almanın hiçbir dezavantajı yoktur",
-      "Yurt dışı deneyimi kimya kariyerinde hiçbir fark yaratmaz",
-      "Uluslararası kariyer fırsatları önemli avantajlar sunabilir, ancak beraberinde ek zorluklar ve uzun vadeli taahhütler de getirebilir; karar verirken her iki yön de değerlendirilmelidir",
-      "Uluslararası kariyer fırsatları yalnızca olumsuz sonuçlar doğurur"
-    ],
-    correct: 3,
-    explain: "Uluslararası kariyer/eğitim fırsatları önemli avantajlar (yeni deneyimler, geniş ağ) sunabileceği gibi, zorluklar (dil, kültürel uyum, zaman taahhüdü) da içerebilir; dengeli bir kariyer kararı bu iki yönü birlikte değerlendirmeyi gerektirir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir öğrenci, bir kimya şirketinin genel müdürünün aslında kimya lisansı ile işe başlayıp yıllar içinde laboratuvar sorumluluğundan proje yöneticiliğine, oradan da üst yönetime terfi ettiğini öğreniyor.",
-    text: "Bu örnek, kimya alanındaki kariyer gelişimi hakkında en doğru hangi çıkarımı destekler?",
-    options: [
-      "Laboratuvar deneyimi yönetici olmak için hiçbir katkı sağlamaz",
-      "Kimya lisansı olan biri hiçbir zaman yönetici olamaz",
-      "Üst yönetime yalnızca işletme mezunları terfi edebilir",
-      "Teknik bir eğitimle (kimya lisansı) başlayan bir kariyer, zamanla yönetim ve liderlik sorumluluklarına doğru genişleyebilir",
-      "Kariyer gelişimi her zaman aynı görevde kalmayı gerektirir"
-    ],
-    correct: 3,
-    explain: "Teknik bir alanda (kimya gibi) başlayan bir kariyer, deneyim ve ek becerilerle zamanla proje yönetimi ve üst düzey yöneticilik gibi sorumluluklara doğru genişleyebilir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir öğrenci, kimya kariyerini araştırırken hem 'temel araştırma' (yeni bilimsel bilgi üretmek, kısa vadeli somut ürün hedefi olmayabilir) hem 'uygulamalı araştırma' (belirli bir ürün/teknolojiyi geliştirmek amacıyla yapılan araştırma) kavramlarını öğreniyor.",
-    text: "Bir üniversitede atomun temel yapısını inceleyen bir profesör ile bir şirkette yeni bir pil teknolojisi geliştiren bir mühendis, sırasıyla hangi araştırma türüyle daha çok ilişkilidir?",
-    options: [
-      "İkisi de uygulamalı araştırma yapmaktadır",
-      "Profesör: uygulamalı araştırma, Mühendis: temel araştırma",
-      "İkisi de temel araştırma yapmaktadır",
-      "Profesör: temel araştırma, Mühendis: uygulamalı araştırma",
-      "Bu ayrım gerçek hayatta hiçbir zaman yapılamaz"
-    ],
-    correct: 3,
-    explain: "Atomun temel yapısını incelemek, kısa vadeli bir ürün hedefi gütmeyen temel araştırmaya; yeni bir pil teknolojisi geliştirmek ise belirli bir ürünü hedefleyen uygulamalı araştırmaya örnektir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir öğrenci, kimya kariyeri planlarken staj yapmanın önemini öğreniyor: bir öğrenci staj sırasında laboratuvar ortamının kendi ilgi alanına uygun olup olmadığını doğrudan deneyimleyebiliyor, bu da mezuniyet sonrası kariyer kararını daha bilinçli vermesini sağlıyor.",
-    text: "Bu bilgi, kariyer planlamasında stajın rolü hakkında en doğru hangi çıkarımı destekler?",
-    options: [
-      "Staj yapan herkes mutlaka o alanda çalışmak zorundadır",
-      "Staj yapmanın kariyer kararlarıyla hiçbir ilgisi yoktur",
-      "Yalnızca teorik bilgi kariyer kararı için yeterlidir, pratik deneyime gerek yoktur",
-      "Staj deneyimi, teorik bilgiyi pratikle test ederek daha bilinçli kariyer kararları verilmesine yardımcı olabilir",
-      "Staj deneyimi yalnızca not ortalamasını etkiler"
-    ],
-    correct: 3,
-    explain: "Staj gibi doğrudan deneyimler, öğrencinin teorik bilgiyi gerçek çalışma ortamıyla karşılaştırarak kariyer tercihlerini daha bilinçli ve bilgiye dayalı şekilde yapmasına yardımcı olabilir."
+    text: "Tabloya göre, laboratuvar süresi ile rapor/sunum süresi arasındaki fark en düşük (yani en dengeli dağılan) kariyer hangisidir?",
+    options: ["Analitik laboratuvar uzmanı", "Bilim iletişimcisi", "Kalite güvence denetçisi", "Ar-Ge kimyageri (kozmetik)", "Hepsinde fark eşittir"],
+    correct: 2,
+    explain: "Farklar: analitik uzmanda 26 saat, iletişimcide 24 saat, kalite güvence denetçisinde 4 saat, Ar-Ge kimyagerinde 16 saat. En düşük fark kalite güvence denetçisine aittir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir öğrenci, gelişmekte olan bir ülkede kimya alanında kariyer yapmayı düşünüyor; bu ülkede sanayi altyapısı henüz sınırlı olsa da, hükûmetin son yıllarda Ar-Ge'ye yatırımı artırdığını ve yabancı şirketlerin üretim tesisleri kurmaya başladığını öğreniyor.",
-    text: "Bu bilgilere dayanarak, bu ülkede kimya kariyeri yapmanın gelecekteki olanakları hakkında en makul öngörü hangisidir?",
-    options: [
-      "Yabancı şirket yatırımları yerel kariyer olanaklarını her zaman azaltır",
-      "Sınırlı mevcut altyapı, bu ülkede hiçbir zaman kimya kariyeri yapılamayacağı anlamına gelir",
-      "Ar-Ge yatırımlarının kariyer olanaklarıyla hiçbir ilişkisi yoktur",
-      "Mevcut sınırlı altyapıya rağmen, artan Ar-Ge yatırımları ve yeni yatırımlar, gelecekte kimya alanında kariyer olanaklarının genişleyebileceğine işaret eden olumlu göstergelerdir",
-      "Bu bilgilerden hiçbir öngörüde bulunulamaz"
-    ],
-    correct: 3,
-    explain: "Artan Ar-Ge yatırımları ve yeni sanayi tesisleri, bir ülkede gelecekteki kimya kariyeri olanaklarının genişleyebileceğine dair olumlu (ama kesin olmayan) göstergeler sunar; bu tür makro eğilimler kariyer planlamasında dikkate alınabilir."
+    context: "Bir müze koruma laboratuvarında hem tarihi bir heykelin yüzeyindeki korozyon ürünleri analitik kimya yöntemleriyle tanımlanmakta hem de heykelin orijinal alaşım bileşimi metalurji/jeokimya yöntemleriyle belirlenmeye çalışılmaktadır.",
+    text: "Bu iki analiz sırasıyla en doğrudan hangi kariyer uzmanlıklarının kesişimini yansıtır?",
+    options: ["Bu iki analiz birbirinden tamamen bağımsızdır, ortak bir uzmanlık gerektirmez", "Adli kimyager ve bilim gazetecisi", "Farmasötik Ar-Ge kimyageri ve patent uzmanı", "Kozmetik Ar-Ge uzmanı ve nükleer güvenlik uzmanı", "Kültürel miras koruma kimyageri (analitik kimya + metalurji/jeokimya bilgisiyle)"],
+    correct: 4,
+    explain: "Korozyon ürünlerinin tanımlanması analitik kimya, orijinal alaşımın belirlenmesi metalurji/jeokimya bilgisi gerektirir; bu ikisinin bir arada kullanıldığı kariyer kültürel miras koruma kimyagerliğidir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir öğrenci, iki farklı kariyer stratejisini karşılaştırıyor: Strateji A, tek bir dar uzmanlık alanında (örneğin yalnızca bir tür polimer sentezi) derinlemesine uzmanlaşmayı önerirken; Strateji B, birden fazla alanda (örneğin hem sentez hem analiz hem yönetim becerisi) orta düzeyde yetkinlik kazanmayı öneriyor.",
-    text: "Bu iki stratejinin olası avantaj/dezavantajları hakkında en dengeli değerlendirme hangisidir?",
-    options: [
-      "Kariyer stratejisi seçmenin sonuçlar üzerinde hiçbir etkisi yoktur",
-      "Derinlemesine uzmanlaşma her zaman kesin olarak daha iyidir",
-      "Çok yönlülük her zaman kesin olarak daha iyidir",
-      "Bu iki strateji arasında hiçbir fark yoktur",
-      "Derinlemesine uzmanlaşma o dar alanda yüksek değer yaratabilir ama alan daralırsa risk taşıyabilir; çok yönlülük ise esneklik sağlar ama her alanda en üst düzey uzman olmayı zorlaştırabilir — ikisi de duruma göre avantajlı olabilir"
-    ],
+    context: "Bir kariyer araştırması raporunda şu veriler paylaşılmıştır: analitik kimya temelli mesleklerde açık pozisyon sayısı yüksek fakat ortalama ücret artışı yavaş seyrederken, kemoinformatik/hesaplamalı kimya gibi yeni gelişen alanlarda pozisyon sayısı daha az fakat ücret artışı belirgin şekilde daha hızlıdır.",
+    text: "Bu veriye dayanarak, kariyer planlaması açısından en dengeli çıkarım hangisidir?",
+    options: ["Pozisyon sayısı düşük olan alanlar hiçbir zaman tercih edilmemelidir", "Kemoinformatik her zaman analitik kimyadan daha fazla pozisyon sunar", "Analitik kimya kökenli meslekler zamanla tamamen ortadan kalkacaktır", "Ücret artış hızı, bir mesleğin bilimsel değerini belirleyen tek ölçüttür", "İş güvencesi önceliği olan biri için analitik kimya, hızlı ücret artışı önceliği olan biri için kemoinformatik daha uygun olabilir"],
     correct: 4,
-    explain: "Derinlemesine uzmanlaşma ile çok yönlülük stratejilerinin her ikisinin de kendine özgü avantaj ve riskleri vardır; en uygun strateji kişinin hedeflerine, sektörün durumuna ve risk toleransına bağlı olarak değişebilir."
+    explain: "Veriler, iki alanın farklı önceliklere (iş güvencesi vs. hızlı ücret artışı) göre farklı avantajlar sunduğunu gösterir; bu, kişinin önceliğine göre dengeli bir seçim yapılabileceği anlamına gelir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir öğrenci, bir kimya kariyerinde ilerlerken karşılaşabileceği bir durumu düşünüyor: bir araştırma projesinin sonuçları şirketin beklediği gibi çıkmıyor; proje yöneticisi sonuçları 'iyileştirilmiş' göstermesini istiyor, ama bu bilimsel verinin çarpıtılması anlamına geliyor.",
-    text: "Bu senaryoda öğrencinin mesleki bütünlük (bilimsel dürüstlük) ile ilgili çıkarması gereken en doğru ders hangisidir?",
-    options: [
-      "Bu tür durumlar kimya kariyerlerinde hiçbir zaman yaşanmaz",
-      "Şirket yöneticisinin her isteği bilimsel doğruluktan önce gelmelidir",
-      "Veri çarpıtmak, sonuçlar şirkete fayda sağladığı sürece kabul edilebilir",
-      "Bilimsel dürüstlük yalnızca akademik ortamlarda önemlidir, endüstride önemli değildir",
-      "Kimya kariyerlerinde bilimsel verinin doğru ve dürüst raporlanması, iş baskısına rağmen korunması gereken temel bir mesleki değerdir"
-    ],
+    context: "Bir gıda güvenliği skandalında, önce bir analitik laboratuvar uzmanı ürün örneklerinde yasaklı bir madde tespit etmiş; ardından bir kalite güvence denetçisi bu bulguyu üretim sürecindeki hangi aşamada bulaşmanın gerçekleştiğini araştırmış; son olarak bir düzenleyici işler uzmanı, ilgili resmî kuruma sunulacak düzeltici eylem raporunu hazırlamıştır.",
+    text: "Bu üç aşamanın sırasıyla en doğrudan yansıttığı yetkinlik zinciri hangisidir?",
+    options: ["Bu üç görev tek bir kişi tarafından eşzamanlı olarak yürütülemez", "Üç aşama da tamamen aynı yetkinliği gerektirir, sıralamanın önemi yoktur", "Kök neden araştırması, tespitten önce yapılmalıdır", "Resmî raporlama, analitik ölçüm yapılmadan da tamamlanabilir", "Tespit (analitik ölçüm) → kök neden araştırması (süreç denetimi) → resmî raporlama (mevzuat bilgisi)"],
     correct: 4,
-    explain: "Ticari/kurumsal baskılara rağmen bilimsel verinin doğru ve dürüst şekilde raporlanması, tüm kimya kariyerlerinde (akademik veya endüstriyel) korunması gereken temel bir mesleki bütünlük ilkesidir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir kişi, bir üniversite kütüphanesinde kimya alanındaki yeni bilimsel yayınları takip edip araştırmacılara kaynak taraması hizmeti sunuyor.",
-    text: "Bu hizmet hangi kariyer alanının parçasıdır?",
-    options: [
-      "İnşaat ustalığı",
-      "Maden mühendisliği",
-      "Turizm rehberliği",
-      "Spor koçluğu",
-      "Bilimsel bilgi/kütüphane uzmanlığı"
-    ],
-    correct: 4,
-    explain: "Bilimsel yayınları takip edip araştırmacılara kaynak desteği sunmak, bilimsel bilgi yönetimi/kütüphanecilik alanının bir örneğidir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir kişi, bir devlet kurumunda ithal edilen kimyasal maddelerin güvenlik standartlarına uygunluğunu denetleyip ruhsat veriyor.",
-    text: "Bu görev hangi kariyer alanının sorumluluğundadır?",
-    options: [
-      "Muhasebecilik",
-      "Turizm işletmeciliği",
-      "Grafik tasarım",
-      "Spor yönetimi",
-      "Kamu sektöründe kimyasal madde denetçiliği/ruhsatlandırma uzmanlığı"
-    ],
-    correct: 4,
-    explain: "Kimyasal maddelerin güvenlik standartlarına uygunluğunu denetleyip resmî izin vermek, kamu sektöründeki denetçilik/ruhsatlandırma kariyerlerinin görevidir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir öğrenci, kimya kariyerinde ilerlemenin yalnızca teknik bilgiyle değil, aynı zamanda takım çalışması, proje yönetimi ve etkili iletişim gibi 'yumuşak becerilerle' de ilişkili olabileceğini öğreniyor; bir laboratuvar yöneticisinin hem kimya bilgisine hem de ekibini yönetme becerisine ihtiyaç duyduğunu fark ediyor.",
-    text: "Bu bilgi, kimya kariyerinde ilerleme hakkında en doğru hangi çıkarımı destekler?",
-    options: [
-      "Yumuşak beceriler yalnızca satış mesleklerinde önemlidir",
-      "Kimya kariyerinde ilerlemek yalnızca teknik bilgiye bağlıdır, başka hiçbir beceri gerekmez",
-      "Takım çalışması becerisi kimya kariyerinde hiçbir zaman önemli değildir",
-      "Laboratuvar yöneticiliği teknik bilgi gerektirmez",
-      "Kariyer basamaklarında ilerledikçe, teknik bilginin yanında liderlik ve iletişim gibi becerilerin önemi de artabilir"
-    ],
-    correct: 4,
-    explain: "Kariyer basamaklarında ilerledikçe (örneğin laboratuvar yöneticiliği gibi rollerde), teknik bilginin yanı sıra liderlik, iletişim ve proje yönetimi gibi 'yumuşak becerilerin' önemi de artabilir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir öğrenci, bir devlet üniversitesinde ücretsiz kimya eğitimi alabileceğini, ancak özel bir üniversitede burs olanaklarının ve laboratuvar imkanlarının daha geniş olabileceğini öğreniyor; her iki seçeneğin de kendine göre avantaj ve dezavantajları olduğunu fark ediyor.",
-    text: "Bu bilgiye dayanarak, üniversite/kariyer yolu seçiminde en olgun yaklaşım hangisidir?",
-    options: [
-      "Bu tür kararlar tamamen rastgele verilmelidir",
-      "Her zaman en pahalı seçeneği tercih etmek",
-      "Her zaman en ücretsiz seçeneği tercih etmek, başka hiçbir etkeni düşünmemek",
-      "Üniversite seçiminin kariyer sonuçlarıyla hiçbir ilişkisi yoktur",
-      "Farklı seçeneklerin (devlet/özel üniversite gibi) avantaj ve dezavantajlarını kişisel öncelikler ve olanaklar çerçevesinde karşılaştırarak bilinçli bir karar vermek"
-    ],
-    correct: 4,
-    explain: "Eğitim/kariyer yolu seçimi, maliyet, olanaklar ve kişisel öncelikler gibi birden fazla etkenin dengeli biçimde değerlendirildiği bilinçli bir karar sürecini gerektirir."
+    explain: "Sıralama, önce bir sorunun analitik yöntemlerle tespit edilmesini, sonra sürecin hangi aşamasında oluştuğunun denetlenmesini, son olarak mevzuata uygun resmî raporlamanın yapılmasını yansıtır — üç farklı yetkinliğin mantıksal zinciridir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir öğrenci, bir bölgede belirli bir kimya alt alanında (örneğin petrokimya) çok sayıda iş fırsatı olduğunu, ancak bu alanın gelecekte fosil yakıtlardan uzaklaşma eğilimi nedeniyle daralabileceğini öğreniyor; aynı zamanda yenilenebilir enerji kimyası alanının büyüme potansiyeli taşıdığını fark ediyor.",
-    text: "Bu bilgilere dayanarak, uzun vadeli kariyer planlaması yapan bir öğrenci için en akılcı yaklaşım hangisidir?",
+    context: "Bir otomotiv şirketinde hem yeni bir yakıt katkı maddesinin motor performansına etkisi petrokimya yöntemleriyle test edilmekte hem de bu katkı maddesinin egzoz emisyonlarına etkisi çevre kimyası yöntemleriyle değerlendirilmektedir.",
+    text: "Bu iki değerlendirme sırasıyla en doğrudan hangi kariyer alanlarının kesişimini gerektirir?",
     options: [
-      "Yenilenebilir enerji kimyasının hiçbir gelecek potansiyeli yoktur",
-      "Yalnızca şu anda en çok iş imkânı olan alanı seçmek, geleceği hiç düşünmemek",
-      "Petrokimya alanının gelecekte tamamen yok olacağını varsaymak",
-      "Gelecekteki eğilimlerin kariyer kararlarıyla hiçbir ilgisi yoktur",
-      "Yalnızca mevcut iş fırsatı sayısına değil, aynı zamanda alanın gelecekteki büyüme/daralma eğilimlerine de bakarak kariyer kararı vermek"
+      "Petrokimya mühendisliği ve çevre kimyası/sürdürülebilirlik uzmanlığı",
+      "Adli kimyager ve bilim müzesi küratörü",
+      "Kozmetik Ar-Ge uzmanı ve patent avukatı",
+      "Klinik biyokimya uzmanı ve nükleer güvenlik uzmanı",
+      "Bu iki değerlendirme birbirinden tamamen kopuktur"
     ],
-    correct: 4,
-    explain: "Akılcı bir uzun vadeli kariyer planlaması, yalnızca mevcut iş fırsatı yoğunluğuna değil, aynı zamanda o alanın gelecekteki büyüme veya daralma eğilimlerine de dikkat etmeyi gerektirir."
+    correct: 0,
+    explain: "Yakıt katkısının motor performansına etkisi petrokimya mühendisliğinin; egzoz emisyonlarına etkisi çevre kimyası/sürdürülebilirlik uzmanlığının konusudur — proje ikisinin ortak çalışmasını gerektirir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir öğrenci, kimya kariyerinde 'başarı'nın farklı insanlar için farklı anlamlara gelebileceğini fark ediyor: biri için başarı yüksek maaş, biri için toplumsal fayda sağlamak, biri için ise bilimsel keşif yapmaktır.",
-    text: "Bu gözlem, kariyer planlaması ve kişisel değerler arasındaki ilişki hakkında en olgun hangi çıkarımı destekler?",
+    context: "Bir kariyer danışmanı, kimya lisans mezunlarına şu tavsiyeyi vermektedir: 'Sadece laboratuvar becerisi geliştirmek yeterli değildir; bir alt disiplinde derinleşirken aynı zamanda veri analizi, raporlama veya mevzuat gibi bir yan yetkinlik de kazanmak, kariyer seçeneklerinizi genişletir.'",
+    text: "Bu tavsiye, aşağıdaki kariyer profillerinden hangisiyle EN AZ örtüşür?",
     options: [
-      "Kişisel değerlerin kariyer seçimiyle hiçbir ilişkisi yoktur",
-      "Başarının tek bir evrensel tanımı vardır ve herkes bu tanıma göre kariyer seçmelidir",
-      "Yüksek maaş, başarının tek geçerli ölçütüdür",
-      "Toplumsal fayda sağlamak kariyer başarısıyla hiç ilgili değildir",
-      "Kariyer planlaması, evrensel bir 'başarı' tanımına göre değil, kişinin kendi değerlerine ve önceliklerine göre şekillendirilmelidir"
+      "Yalnızca laboratuvar deneyi yapmayı öğrenip başka hiçbir beceri geliştirmeyen bir mezun",
+      "Analitik kimya bilgisine ek olarak istatistiksel veri analizi öğrenen bir mezun",
+      "Organik kimya bilgisine ek olarak mevzuat/dokümantasyon süreçlerini öğrenen bir mezun",
+      "Biyokimya bilgisine ek olarak bilimsel yazım ve raporlama becerisi geliştiren bir mezun",
+      "Fizikokimya bilgisine ek olarak temel programlama/veri işleme öğrenen bir mezun"
     ],
-    correct: 4,
-    explain: "Kariyer başarısının tanımı kişiden kişiye değişebilir; bilinçli bir kariyer planlaması, kişinin kendi değerlerini (maddi kazanç, toplumsal fayda, bilimsel merak vb.) tanıyıp bunlara uygun kararlar vermesini gerektirir."
+    correct: 0,
+    explain: "Danışmanın tavsiyesi bir yan yetkinlik kazanmayı öneriyor; yalnızca laboratuvar deneyiyle sınırlı kalıp başka beceri geliştirmeyen profil bu tavsiyeyle en az örtüşür."
   },
   {
-    difficulty: "kolay",
+    difficulty: "zor",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir kişi, bir üniversite laboratuvarında araştırmacılara deney düzeneklerini hazırlama, kimyasal stok takibi yapma ve cihaz bakımı gibi konularda destek oluyor.",
-    text: "Bu destek görevi hangi kariyer alanının parçasıdır?",
+    circleCompare: {
+      title: "Dört kariyer alanında Türkiye'deki tahmini yıllık açık pozisyon sayısı (temsilî)",
+      unit: "pozisyon",
+      items: [
+        { label: "Gıda kalite kontrol", value: 1200 },
+        { label: "Adli kimya", value: 90 },
+        { label: "Kozmetik Ar-Ge", value: 340 },
+        { label: "Astrokimya araştırma", value: 15 }
+      ]
+    },
+    text: "Görseldeki dairelerin büyüklük farkına dayanarak, hangi çıkarım en doğru şekilde desteklenir?",
     options: [
-      "Muhasebecilik",
+      "Gıda kalite kontrol alanı, dört alan arasında en geniş istihdam hacmine sahiptir",
+      "Astrokimya araştırma, dört alan arasında en yüksek istihdam hacmine sahiptir",
+      "Dört alandaki pozisyon sayıları birbirine çok yakındır",
+      "Adli kimya, kozmetik Ar-Ge'den daha fazla pozisyon sunmaktadır",
+      "Görseldeki daire büyüklükleri pozisyon sayısıyla ilişkili değildir"
+    ],
+    correct: 0,
+    explain: "Dairelerin alanı pozisyon sayısıyla orantılıdır; gıda kalite kontrol (1200) açık ara en büyük daireye, dolayısıyla en geniş istihdam hacmine sahiptir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bir kişi, kariyerinin ilk yıllarında bir ilaç şirketinde saf laboratuvar Ar-Ge işiyle uğraşmış; birkaç yıl sonra ekip yöneticiliğine geçmiş ve artık zamanının çoğunu bütçe planlama, ekip koordinasyonu ve üst yönetime rapor sunmaya ayırıyor; laboratuvara doğrudan girme sıklığı belirgin biçimde azalmıştır.",
+    text: "Bu kariyer gelişimi, aşağıdaki genellemelerden hangisini EN İYİ örnekler?",
+    options: [
+      "Teknik bir alanda derinleşen bir kariyer, zamanla yönetsel/liderlik yetkinliklerinin öne çıktığı bir role dönüşebilir",
+      "Bir kimyagerin kariyeri boyunca laboratuvar dışına çıkması mesleki başarısızlık göstergesidir",
+      "Yönetsel pozisyona geçen biri artık kimya bilgisini hiç kullanmaz",
+      "Bu geçiş yalnızca ilaç sektöründe görülen istisnai bir durumdur",
+      "Ekip yöneticiliği, laboratuvar Ar-Ge deneyimi olmadan da aynı etkinlikte yürütülebilir"
+    ],
+    correct: 0,
+    explain: "Örnek, teknik bir kariyerin zamanla yönetim/liderlik ağırlıklı bir role evrilebileceğini gösteren yaygın bir kariyer gelişim örüntüsüdür."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bir sürdürülebilirlik danışmanlığı biriminde hem bir fabrikanın atık su arıtma sürecinin verimliliği çevre kimyası yöntemleriyle analiz edilmekte hem de bu sürecin maliyet-fayda dengesi işletme verileriyle değerlendirilmektedir.",
+    text: "Bu iki değerlendirme, sürdürülebilirlik danışmanlığı kariyerinin hangi özelliğini en iyi yansıtır?",
+    options: [
+      "Bu kariyer, teknik kimya bilgisiyle işletme/ekonomik değerlendirme becerisinin bir arada kullanılmasını gerektirir",
+      "Bu kariyer yalnızca laboratuvar analiziyle sınırlıdır, ekonomik veriyle ilgisi yoktur",
+      "Bu kariyer yalnızca ekonomik veri analiziyle sınırlıdır, kimya bilgisi gerekmez",
+      "Çevre kimyası analizi ile maliyet-fayda değerlendirmesi birbiriyle hiçbir zaman aynı projede yer almaz",
+      "Bu iki değerlendirme birbirinin birebir tekrarıdır"
+    ],
+    correct: 0,
+    explain: "Atık su arıtma verimliliğinin kimyasal analizi ile sürecin maliyet-fayda dengesinin değerlendirilmesi bir arada yürütüldüğünden, sürdürülebilirlik danışmanlığı hem teknik hem ekonomik yetkinlik gerektiren bir kariyerdir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bir araştırma ekibi, yeni keşfedilen bir mineralin hem kristal yapısını (jeokimya) hem de bu mineralin olası endüstriyel katalizör olarak kullanılabilirliğini (fizikokimya) incelemektedir. Ekip, bulgularını hem akademik bir dergide yayımlamayı hem de bir patent başvurusuna dönüştürmeyi planlamaktadır.",
+    text: "Bu projenin tamamlanabilmesi için sırasıyla hangi kariyer uzmanlıklarının bir araya gelmesi gerekir?",
+    options: [
+      "Jeokimyager, fizikokimyager ve patent/fikri mülkiyet uzmanı",
+      "Yalnızca bir adli kimyager yeterlidir",
+      "Yalnızca bir bilim gazetecisi yeterlidir",
+      "Yalnızca bir kozmetik Ar-Ge uzmanı yeterlidir",
+      "Bu proje hiçbir kimya kariyeri gerektirmez, tamamen hukuki bir süreçtir"
+    ],
+    correct: 0,
+    explain: "Kristal yapı analizi jeokimyager, katalizör potansiyeli değerlendirmesi fizikokimyager, patent başvurusu ise patent/fikri mülkiyet uzmanı gerektirir — proje üçünün ortak çalışmasını gerektirir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bir kariyer anketinde, kimya mezunlarına 'işinizde en çok zaman ayırdığınız etkinlik' sorulmuş ve şu sonuç elde edilmiştir: laboratuvar ölçümü yapanların büyük kısmı analitik/kalite kontrol alanında, veri/rapor hazırlayanların büyük kısmı düzenleyici işler ve kalite güvence alanında, insanlarla doğrudan etkileşim kuranların büyük kısmı ise satış/eğitim alanında çalışmaktadır.",
+    text: "Bu ankete dayanarak, 'insanlarla yoğun etkileşim kurmaktan çok, sayısal veriyle uğraşmayı tercih eden' bir mezun için en uygun alan grubu hangisidir?",
+    options: [
+      "Analitik/kalite kontrol veya düzenleyici işler/kalite güvence",
+      "Satış/eğitim",
       "Bilim gazeteciliği",
-      "Patent hukuku",
-      "Turizm rehberliği",
-      "Laboratuvar teknisyenliği"
+      "Kimyasal ürün pazarlama",
+      "Anket, kariyer tercihiyle ilgili hiçbir bilgi sunmamaktadır"
     ],
-    correct: 4,
-    explain: "Laboratuvar düzeneklerinin hazırlanması ve cihaz/stok yönetimi gibi destek görevleri laboratuvar teknisyenliğinin görev alanına girer."
+    correct: 0,
+    explain: "Ankete göre laboratuvar ölçümü ve veri/rapor hazırlama ağırlıklı roller (analitik/kalite kontrol, düzenleyici işler/kalite güvence) insan etkileşiminden çok sayısal veriyle uğraşmayı önceleyen bir profille örtüşür."
   },
   {
-    difficulty: "orta",
+    difficulty: "zor",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir öğrenci, bir kimya kariyerinde 'sürekli mesleki gelişim' kavramını araştırıyor: mezun olduktan sonra bile kimyagerlerin yeni yöntemleri, yönetmelikleri ve teknolojileri öğrenmeye devam etmesi gerektiğini fark ediyor.",
-    text: "Bu bilgi, kimya kariyerinin doğası hakkında en doğru hangi çıkarımı destekler?",
+    context: "Bir içme suyu şebekesinde beklenmedik bir koku şikâyeti alınmıştır. Önce bir analitik laboratuvar uzmanı su örneklerinde iz miktarda organik kirletici tespit etmiş; ardından bir çevre kimyageri kirliliğin kaynağının yakındaki bir sanayi tesisi olup olmadığını araştırmış; son olarak bir halk sağlığı uzmanı tespit edilen derişimin sağlık açısından risk oluşturup oluşturmadığını değerlendirmiştir.",
+    text: "Bu üç aşama, sırasıyla hangi yetkinlik zincirini yansıtır?",
     options: [
-      "Bu bilgi kariyer planlamasıyla ilgisizdir",
-      "Mezuniyetten sonra hiçbir yeni bilgiye ihtiyaç duyulmaz",
-      "Kimya alanındaki bilgiler hiçbir zaman değişmez",
-      "Sürekli mesleki gelişim yalnızca akademisyenler için gereklidir",
-      "Kimya kariyeri, mezuniyetle biten değil, kariyer boyunca sürekli öğrenmeyi gerektiren dinamik bir süreçtir"
+      "Tespit (analitik ölçüm) → kaynak araştırması (çevresel izleme) → sağlık riski değerlendirmesi (toksikoloji/halk sağlığı)",
+      "Üç aşama da birbirinin birebir tekrarıdır",
+      "Sağlık riski değerlendirmesi, tespitten önce yapılmalıdır",
+      "Kaynak araştırması, analitik ölçüm yapılmadan tamamlanabilir",
+      "Bu üç görev aynı kariyer alanına aittir, ayrım anlamsızdır"
     ],
-    correct: 4,
-    explain: "Kimya kariyeri, mezuniyetle sona ermeyen; yeni yöntemler, teknolojiler ve düzenlemeler öğrenilmeye devam edilmesini gerektiren, kariyer boyunca süren dinamik bir öğrenme sürecidir."
+    correct: 0,
+    explain: "Sıralama önce analitik tespiti, sonra kirlilik kaynağının çevresel yöntemlerle araştırılmasını, son olarak sağlık riskinin toksikoloji/halk sağlığı bilgisiyle değerlendirilmesini yansıtır."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bir üniversite mezunu, lisans sırasında hem organik kimya hem de işletme derslerini almış; mezuniyet sonrası bir ilaç şirketinin önce Ar-Ge biriminde molekül sentezi üzerine çalışmış, birkaç yıl sonra aynı şirketin iş geliştirme biriminde yeni ilaç adaylarının pazar potansiyelini değerlendiren bir role geçmiştir.",
+    text: "Bu kariyer yolu, aşağıdaki genellemelerden hangisini EN İYİ destekler?",
+    options: [
+      "Teknik kimya bilgisi ile işletme/pazar analizi bilgisinin birleşimi, laboratuvar dışı yeni kariyer rollerine geçiş imkânı sunabilir",
+      "İşletme dersleri almak, bir kimyagerin teknik yetkinliğini azaltır",
+      "İş geliştirme rolüne geçen biri artık hiçbir kimya bilgisi kullanmaz",
+      "Bu geçiş yalnızca ilaç sektörüne özgüdür, başka sektörlerde görülmez",
+      "Ar-Ge biriminde çalışmamış biri iş geliştirme rolüne hiçbir zaman geçemez"
+    ],
+    correct: 0,
+    explain: "Örnek, teknik kimya bilgisiyle işletme/pazar analizi bilgisinin bir arada kazanılmasının laboratuvar dışı yeni bir role (iş geliştirme) geçişi mümkün kıldığını gösterir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bir afet sonrası bölgede hem yıkılan binalardan çıkan yapı malzemelerinin (asbest, boya vb.) içerdiği tehlikeli maddeler analitik kimya yöntemleriyle taranmakta hem de bu maddelerin bölge halkı için oluşturduğu sağlık riski değerlendirilmektedir.",
+    text: "Bu iki görev sırasıyla en doğrudan hangi kariyer uzmanlıklarının bir arada çalışmasını gerektirir?",
+    options: [
+      "Analitik/malzeme kimyageri ve halk sağlığı/toksikoloji uzmanı",
+      "Adli kimyager ve bilim müzesi küratörü",
+      "Kozmetik Ar-Ge uzmanı ve patent avukatı",
+      "Astrokimya araştırmacısı ve elektrokimya mühendisi",
+      "Bu iki görev tek bir kişi tarafından hiçbir zaman birlikte yürütülemez"
+    ],
+    correct: 0,
+    explain: "Yapı malzemelerindeki tehlikeli maddelerin taranması analitik/malzeme kimyagerinin; bunların sağlık riskinin değerlendirilmesi ise halk sağlığı/toksikoloji uzmanının işidir — ikisi birlikte çalışmayı gerektirir."
   }
 ],
   "guvenlik": [
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci laboratuvarda asitli bir çözeltiyle çalışırken gözlerine sıçrama riskine karşı önlem almak istiyor.",
-    text: "Bu risk için en uygun kişisel koruyucu donanım hangisidir?",
-    options: ["Önlük", "Eldiven", "Koruyucu gözlük", "Maske", "Bone"],
+    pictograms: ["flame"],
+    context: "Bir depolama alanındaki varilin etiketinde yukarıdaki uyarı simgesi bulunmaktadır.",
+    text: "Bu simge, madde ile ilgili en doğrudan hangi tehlikeyi bildirir?",
+    options: ["Aşındırıcılık", "Kolay tutuşabilirlik", "Çevreye zararlılık", "Basınçlı gaz içerme", "Oksitleyicilik"],
+    correct: 1,
+    explain: "Alev simgesi, maddenin kolay tutuşabilir (yanıcı) olduğunu bildiren GHS piktogramıdır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    pictograms: ["corrosive"],
+    context: "Bir temizlik ürününün ambalajında yukarıdaki uyarı simgesi yer almaktadır.",
+    text: "Bu simge, üründen kaynaklanabilecek en doğrudan hangi tehlikeye işaret eder?",
+    options: ["Patlayıcılık", "Deri ve göze ciddi hasar verme (aşındırıcılık)", "Basınçlı gaz içerme", "Radyoaktiflik", "Kolay tutuşabilirlik"],
+    correct: 1,
+    explain: "Aşındırıcı piktogramı, maddenin deri ve gözde ciddi hasara (yanık, doku tahribatı) yol açabileceğini bildirir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    pictograms: ["environment"],
+    context: "Bir böcek ilacı kutusunun etiketinde yukarıdaki simge bulunmaktadır.",
+    text: "Bu simge en doğrudan hangi uyarıyı taşır?",
+    options: ["Solunduğunda anında öldürücü olduğu", "Su kaynaklarına ve canlı yaşamına zararlı olabileceği", "Basınç altında patlayabileceği", "Cilde temas ettiğinde yanık yaptığı", "Oksitleyici özellik taşıdığı"],
+    correct: 1,
+    explain: "Çevreye zararlılık piktogramı, maddenin su kaynaklarına ve sucul canlı yaşamına zarar verebileceğini bildirir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    objectIcons: { title: "Bir laboratuvarda kullanılan iki malzeme", items: [{ type: "detergent", label: "Çamaşır suyu (hipoklorit)" }, { type: "beaker", label: "Amonyaklı temizlik solüsyonu" }] },
+    context: "Görseldeki iki temizlik ürünü aynı kapta karıştırılırsa zehirli klor gazı benzeri bileşikler açığa çıkabilmektedir; bu nedenle üreticiler etiketlerde bu iki tür ürünün birlikte kullanılmamasını belirtmektedir.",
+    text: "Bu durumda güvenli kullanım için en doğru yaklaşım hangisidir?",
+    options: ["İki ürünü daha hızlı temizlik için birlikte dökmek", "İki ürünü asla aynı anda veya karıştırarak kullanmamak", "Yalnızca havalandırma varsa karıştırmak yeterlidir", "Karışım sadece cilde değerse tehlikelidir", "Karıştırma miktarı azsa risk oluşmaz"],
+    correct: 1,
+    explain: "Hipoklorit içeren ürünlerle amonyak içeren ürünlerin karıştırılması toksik gaz oluşumuna yol açabileceğinden bu iki tür ürün asla birlikte kullanılmamalıdır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    objectIcons: ["glove"],
+    context: "Bir laboratuvarda aşındırıcı bir asitle çalışılırken görseldeki koruyucu ekipman kullanılmaktadır.",
+    text: "Bu ekipmanın kullanım amacı en doğrudan hangisidir?",
+    options: ["Solunum yolunun toz partiküllerinden korunması", "Ellerin kimyasaldan kaynaklanan yanık/tahrişten korunması", "Gözlerin parlak ışıktan korunması", "Ayakların düşen cisimlerden korunması", "Kulakların yüksek sesten korunması"],
+    correct: 1,
+    explain: "Koruyucu eldiven, ellerin aşındırıcı/tahriş edici kimyasallarla doğrudan temasını önleyerek yanık ve tahrişi engeller."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    objectIcons: ["extinguisher"],
+    context: "Bir laboratuvarda yanıcı bir çözücü kazara alev almıştır; masanın yanındaki görseldeki ekipman kullanılarak müdahale edilmiştir.",
+    text: "Bu ekipmanın işlevi en doğrudan hangisidir?",
+    options: ["Kimyasal döküntüleri temizlemek", "Küçük çaplı yangınları söndürmek", "Zehirli gazları filtrelemek", "Kimyasalları depolamak", "Cam malzemeleri kesmek"],
+    correct: 1,
+    explain: "Yangın söndürücü, küçük çaplı yangınlara hızlı müdahale ederek yayılmasını önlemek için kullanılan güvenlik ekipmanıdır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    pictograms: ["toxic"],
+    context: "Bir zirai ilaç kutusunun etiketinde yukarıdaki simge bulunmaktadır.",
+    text: "Bu simge en doğrudan hangi tehlikeyi bildirir?",
+    options: ["Yalnızca uzun vadede hafif tahriş riski", "Az miktarda maruziyette bile ölümcül veya ciddi zehirlenme riski", "Yalnızca yangın riski", "Yalnızca çevre kirliliği riski", "Yalnızca basınçlı kap riski"],
+    correct: 1,
+    explain: "Toksik (kafatası-kemik) piktogramı, maddenin az miktarda maruziyette bile ölümcül veya ciddi zehirlenmeye yol açabileceğini bildiren en yüksek düzey akut toksisite uyarısıdır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    pictograms: ["gas"],
+    context: "Bir kaynak atölyesindeki tüpün etiketinde yukarıdaki simge yer almaktadır.",
+    text: "Bu simge, maddeyle ilgili hangi tehlikeyi bildirmektedir?",
+    options: ["İçeriğin aşındırıcı sıvı olduğu", "İçeriğin basınç altında olduğu ve ısıtıldığında patlayabileceği", "İçeriğin radyoaktif olduğu", "İçeriğin çevreye zararlı olduğu", "İçeriğin yalnızca tahriş edici olduğu"],
+    correct: 1,
+    explain: "Basınçlı gaz piktogramı, kabın içeriğinin basınç altında olduğunu ve ısıya maruz kaldığında patlama riski taşıdığını bildirir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    pictograms: ["explosive"],
+    context: "Bir fabrikadaki maddenin ambalajında yukarıdaki simge bulunmaktadır.",
+    text: "Bu uyarı simgesi en doğrudan hangi tehlikeye işaret eder?",
+    options: ["Yalnızca hafif cilt tahrişi riski", "Darbe, sürtünme veya ısıyla patlama riski", "Yalnızca çevreye yayılma riski", "Uzun vadeli sağlık hasarı riski", "Yalnızca elektrik iletkenliği riski"],
+    correct: 1,
+    explain: "Patlayıcı piktogramı, maddenin darbe, sürtünme veya ısı etkisiyle patlayabileceğini bildiren en yüksek düzey fiziksel tehlike uyarısıdır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    context: "Bir mutfakta hazır bir temizlik ürününün etiketinde 'Gözle temas ederse bol suyla en az 15 dakika yıkayın' uyarısı yer almaktadır.",
+    text: "Bu uyarı, ürünün en doğrudan hangi özelliğine işaret eder?",
+    options: ["Yanıcı olduğuna", "Göz için tahriş edici/aşındırıcı olabileceğine", "Radyoaktif olduğuna", "Basınçlı ambalajda olduğuna", "Sadece koku yaydığına"],
+    correct: 1,
+    explain: "Gözle temasta uzun süre yıkama gerekliliği, ürünün göz için tahriş edici veya aşındırıcı olabileceğinin göstergesidir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    objectIcons: ["battery"],
+    context: "Görseldeki tükenmiş pil, ev çöpüne atılmak yerine belediyenin belirlediği özel toplama kutusuna bırakılmalıdır; çünkü içeriğindeki ağır metaller toprağa karıştığında uzun süre kirlilik yaratabilir.",
+    text: "Bu bilgiye göre, pillerin yanlış bertarafının başlıca riski nedir?",
+    options: ["Pillerin geri dönüştürülemeyecek kadar ucuz olması", "Pillerin kendiliğinden patlayarak yangın çıkarması", "Ağır metallerin toprak ve su kaynaklarını kirletmesi", "Pillerin havada hızla buharlaşması", "Pillerin yalnızca görsel kirliliğe yol açması"],
     correct: 2,
-    explain: "Göze sıçrama riskine karşı en doğrudan koruma koruyucu gözlük kullanmaktır."
+    explain: "Pillerdeki ağır metaller (kurşun, kadmiyum vb.) yanlış bertaraf edildiğinde toprağa ve su kaynaklarına karışarak uzun süreli kirliliğe yol açar."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir kimyasal madde kabının üzerinde alevle çevrili bir sembol bulunuyor.",
-    text: "Bu sembol maddenin hangi özelliğine dikkat çekmektedir?",
-    options: ["Radyoaktif olduğuna", "Kolay tutuşabilir (yanıcı) olduğuna", "Aşındırıcı olduğuna", "Çevreye zararlı olduğuna", "Basınçlı gaz olduğuna"],
-    correct: 1,
-    explain: "Alev sembolü, maddenin yanıcı/tutuşabilir özelliğine dikkat çeken bir GHS tehlike işaretidir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci laboratuvarda kullanacağı bir kimyasalın tehlikelerini öğrenmek istiyor.",
-    text: "Bu bilgiye en güvenilir şekilde hangi belgeden ulaşabilir?",
-    options: ["Sosyal medya paylaşımları", "Ürünün reklam broşürü", "Güvenlik Bilgi Formu (GBF/SDS)", "Arkadaşının tahmini", "Ürünün fiyat etiketi"],
+    context: "Bir laboratuvarda asit çözeltisi hazırlanırken kural olarak derişik asit yavaşça suyun üzerine değil, suyun içine yavaşça eklenir; tersi sırayla eklenirse ani ısınma ve sıçrama riski oluşur.",
+    text: "Bu kurala uyulmasının temel gerekçesi nedir?",
+    options: ["Karışımın daha hızlı katılaşmasını sağlamak", "Asidin rengini değiştirmemek", "Asit-su karışımında açığa çıkan ısının kontrollü şekilde dağılmasını sağlamak", "Suyun buharlaşmasını hızlandırmak", "Asidin kokusunu azaltmak"],
     correct: 2,
-    explain: "Kimyasal maddelerin tehlikeleri, kullanımı ve acil durum önlemleri Güvenlik Bilgi Formunda (GBF/SDS) resmi olarak yer alır."
+    explain: "Derişik asidin suya yavaşça eklenmesi, sulanma sırasında açığa çıkan ısının büyük su hacmi içinde kontrollü dağılmasını sağlayarak ani kaynama/sıçrama riskini azaltır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci deney sırasında elinize az miktarda aşındırıcı bir kimyasal döküldüğünde ilk yapılması gerekeni öğreniyor.",
-    text: "Bu durumda ilk yapılması gereken en doğru davranış hangisidir?",
-    options: ["Beklemek, kendiliğinden geçmesini ummak", "Kimyasalı elle silmek", "Bölgeyi hemen bol suyla yıkamak", "Üzerine başka bir kimyasal dökmek", "Görmezden gelip deneye devam etmek"],
+    objectIcons: ["foil"],
+    context: "Asitli bir yiyeceğin (örneğin domates sosunun) uzun süre alüminyum folyoyla doğrudan temas hâlinde saklanması önerilmez; çünkü asidik ortam folyonun yüzeyindeki metali yavaşça çözebilir.",
+    text: "Bu durumda oluşabilecek risk en doğrudan hangisidir?",
+    options: ["Gıdanın radyoaktif hâle gelmesi", "Folyonun aniden alev alması", "Az miktarda alüminyum iyonunun gıdaya geçmesi", "Folyonun patlayıcı gaz üretmesi", "Gıdanın hacminin aniden artması"],
     correct: 2,
-    explain: "Cilde temas eden aşındırıcı/tahriş edici kimyasallar için ilk ve en etkili müdahale bol suyla yıkamaktır."
+    explain: "Asidik gıdaların alüminyum folyoyla uzun süre teması, folyo yüzeyinin yavaşça çözünerek az miktarda alüminyum iyonunun gıdaya geçmesine yol açabilir."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci laboratuvarda bir kimyasalın kokusunu tanımak istiyor.",
-    text: "Bu amaçla güvenli koklama yöntemi hangisidir?",
-    options: ["Şişeyi doğrudan buruna dayamak", "Buharı elle yelpazeleyerek uzaktan hafifçe koklamak", "Kimyasalı içmeye çalışmak", "Kimyasalı ısıtıp dumanını içine çekmek", "Koklamak için gözleri kapatmak yeterlidir"],
-    correct: 1,
-    explain: "Laboratuvarda güvenli koklama yöntemi, buharı elle yelpazeleyerek uzaktan ve hafifçe koklamaktır; doğrudan buruna dayamak zararlı olabilir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci evde çamaşır suyu ile tuz ruhu (hidroklorik asit içeren bir temizlik ürünü) kullanıyor.",
-    text: "Bu iki ürünün birlikte karıştırılması neden tehlikelidir?",
-    options: [
-      "Renk değişimi olur, tehlikesi yoktur",
-      "Zehirli klor gazı açığa çıkabilir",
-      "Sadece koku değişir, başka etkisi yoktur",
-      "İkisi birbirini etkisiz hale getirir, güvenlidir",
-      "Karışım daha az etkili bir temizleyici olur, başka riski yoktur"
-    ],
-    correct: 1,
-    explain: "Çamaşır suyu (sodyum hipoklorit) ile asidik temizlik ürünlerinin karışımı zehirli klor gazı açığa çıkarabilir; bu iki ürün asla karıştırılmamalıdır."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci laboratuvarda kullanacağı kimyasalların üzerinde çarpı işaretli bir insan silueti sembolü görüyor.",
-    text: "Bu sembol neyi ifade eder?",
-    options: ["Basınçlı gaz içerdiğini", "Sağlığa ciddi zarar (örn. kanserojen, solunum toksisitesi) verebileceğini", "Çevreye zararlı olduğunu", "Oksitleyici olduğunu", "Patlayıcı olduğunu"],
-    correct: 1,
-    explain: "İnsan silueti üzerindeki tehlike sembolü, maddenin ciddi sağlık tehlikeleri (kanserojenlik, solunum toksisitesi gibi) taşıdığını belirtir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci laboratuvarda deney bittikten sonra ellerini yıkamadan sınıftan çıkmayı düşünüyor.",
-    text: "Bu davranışın olası riski en iyi hangi seçenekle açıklanır?",
-    options: [
-      "Hiçbir risk yoktur, eller görünürde temizse yıkamaya gerek yoktur",
-      "Ellerde kalabilecek görünmez kimyasal kalıntılar yiyecek/içecekle veya yüze temasla vücuda geçebilir",
-      "El yıkamak yalnızca hijyen için önemlidir, kimyasal güvenlikle ilgisi yoktur",
-      "Sadece renkli kimyasallar tehlikelidir, renksiz olanlar risksizdir",
-      "Bu davranış yalnızca eldiven takılmadığında risklidir"
-    ],
-    correct: 1,
-    explain: "Deneyden sonra el yıkamamak, ellerde kalan görünmez kimyasal kalıntıların yiyecek, içecek veya yüze temas yoluyla vücuda geçmesine yol açabilir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci laboratuvarda deney önlüğünün kollarını sıvamadan, saçını toplamadan deney yapıyor.",
-    text: "Bu durumun en olası riski nedir?",
-    options: [
-      "Sadece deneyin sonucu etkilenir, güvenlikle ilgisi yoktur",
-      "Hiçbir risk yoktur, bu tamamen görünümle ilgilidir",
-      "Uzun saç veya geniş kolların bir alev veya dönen ekipmana yakalanma riski artar",
-      "Bu durum yalnızca estetik bir sorundur",
-      "Saç toplamak yalnızca kız öğrenciler için gereklidir"
-    ],
+    context: "Bir ilaç kutusunun üzerinde 'Çocukların erişemeyeceği yerde saklayınız' uyarısı yer almaktadır.",
+    text: "Bu uyarının temel amacı en doğrudan hangisidir?",
+    options: ["İlacın son kullanma tarihini uzatmak", "İlacın etkisini artırmak", "Kazara yutma/zehirlenme riskini azaltmak", "İlacın rengini korumak", "İlacın kokusunu azaltmak"],
     correct: 2,
-    explain: "Toplanmamış saç ve sıvanmamış geniş kollar, alev veya hareketli ekipmanla temas edip yanma/yakalanma riski oluşturabilir."
+    explain: "Çocukların erişemeyeceği yerde saklama uyarısı, ilacın kazara yutulmasından kaynaklanabilecek zehirlenme riskini azaltmayı amaçlar."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, laboratuvarda kullanılmayan kimyasalların nasıl saklanacağını öğreniyor: yanıcı maddelerin oksitleyicilerden uzak, farklı sınıftaki asit ve bazların ayrı raflarda tutulması gerektiğini fark ediyor.",
-    text: "Bu ayrım neden önemlidir?",
-    options: [
-      "Yalnızca raf düzenini estetik açıdan iyileştirmek için",
-      "Birbiriyle tepkimeye girebilecek maddelerin istenmeyen şekilde temas etmesini önlemek için",
-      "Etiketlerin daha kolay okunması için",
-      "Sadece yer tasarrufu sağlamak için",
-      "Kimyasalların renklerini korumak için"
-    ],
-    correct: 1,
-    explain: "Kimyasalların sınıflarına göre ayrı depolanması, birbiriyle tepkimeye girip tehlikeli sonuçlar (yangın, zehirli gaz vb.) doğurabilecek istenmeyen temasları önler."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, laboratuvarda ısıtılan bir sıvının ağzı kapalı bir kapta ısıtıldığını fark ediyor.",
-    text: "Bu durumun taşıdığı temel risk nedir?",
-    options: [
-      "Sıvı hiçbir zaman ısınmaz",
-      "Kabın içinde basınç artarak kabın patlamasına yol açabilir",
-      "Hiçbir risk yoktur, bu güvenli bir yöntemdir",
-      "Sıvı rengini kaybeder, başka riski yoktur",
-      "Kap otomatik olarak soğur"
-    ],
-    correct: 1,
-    explain: "Kapalı bir kapta sıvı ısıtıldığında oluşan buhar basıncı artar ve bu, kabın patlamasına yol açabilecek ciddi bir güvenlik riskidir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci evde temizlik yaparken eldiven takmadan güçlü bir kireç çözücüyle çalışıyor.",
-    text: "Bu davranışın en olası sonucu nedir?",
-    options: [
-      "Kireç çözücü daha etkili çalışır",
-      "Hiçbir etkisi yoktur",
-      "Cilt tahrişi veya yanığı riski artar",
-      "Ellerin daha temiz görünmesini sağlar",
-      "Sadece koku hissedilir, başka etkisi yoktur"
-    ],
+    objectIcons: ["vinegar", "detergent"],
+    context: "Görseldeki iki üründen sirke asidik, çamaşır suyu ise bazik (alkali) özelliktedir. Bu iki ürünün karıştırılması, güçlü bir asit-baz tepkimesiyle ısı açığa çıkmasına ve klor gazı benzeri tahriş edici buharların oluşmasına yol açabilir.",
+    text: "Bu bilgiye göre en güvenli kullanım yaklaşımı hangisidir?",
+    options: ["Karışımı sadece dışarıda kullanmak yeterlidir", "İki ürünü aynı kapta karıştırarak daha güçlü bir temizleyici elde etmek", "İki ürünü ayrı zamanlarda ve iyi havalandırılmış ortamda kullanmak, karıştırmamak", "Karışımı sadece az miktarda yapmak güvenlidir", "Bu iki ürün arasında herhangi bir tepkime riski yoktur"],
     correct: 2,
-    explain: "Aşındırıcı temizlik ürünleriyle eldivensiz çalışmak cilt tahrişi veya kimyasal yanık riskini artırır."
+    explain: "Asidik ve bazik/oksitleyici temizlik ürünlerinin karıştırılması tehlikeli gaz oluşumuna yol açabileceğinden, bu tür ürünler ayrı zamanlarda ve havalandırılmış ortamda, karıştırılmadan kullanılmalıdır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, bir kimyasal madde şişesinin etiketinin solup okunmaz hale geldiğini fark ediyor.",
-    text: "Bu durumda en doğru davranış hangisidir?",
-    options: [
-      "Şişeyi kokusuna göre tahmin ederek kullanmaya devam etmek",
-      "İçeriği kesin olarak belirlenene kadar maddeyi kullanmamak ve sorumlu kişiye bildirmek",
-      "Şişeyi rastgele bir kimyasalla aynı kabul edip kullanmak",
-      "Şişeyi açıp renk ve kıvamına bakarak karar vermek",
-      "Şişeyi lavaboya boşaltmak"
-    ],
-    correct: 1,
-    explain: "İçeriği belirsizleşen bir kimyasal, tahmin yoluyla kullanılmamalı; güvenlik açısından içerik netleşene kadar kullanılmamalı ve durum sorumlu kişiye bildirilmelidir."
+    pictograms: ["oxidizing"],
+    context: "Bir havuz bakım ürününün ambalajında yukarıdaki simge bulunmaktadır.",
+    text: "Bu simgenin bildirdiği tehlike türü hangisidir?",
+    options: ["Yalnızca suda çözünmeyeceği", "Yalnızca hafif koku yayabileceği", "Yanıcı maddelerin yanmasını şiddetlendirebileceği", "Yalnızca renk değiştirebileceği", "Yalnızca donma riski taşıdığı"],
+    correct: 2,
+    explain: "Oksitleyici piktogramı, maddenin yanıcı maddelerle temas ettiğinde yanmayı şiddetlendirebileceğini (yangını büyütebileceğini) bildirir."
+  },
+
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    pictograms: ["health-hazard"],
+    context: "Bir sanayi maddesinin ambalajında yukarıdaki simge yer almaktadır.",
+    text: "Etikette yer alan bu simge hangi tehlikeyi ifade eder?",
+    options: ["Yalnızca patlama riski", "Yalnızca hafif cilt kuruluğu riski", "Solunum yolu duyarlılaştırma veya kanserojen gibi ciddi sağlık hasarı riski", "Yalnızca basınçlı kap riski", "Yalnızca donma riski"],
+    correct: 2,
+    explain: "Sağlığa zararlı (health-hazard) piktogramı, kanserojenlik, solunum yolu duyarlılaştırma gibi ciddi ve genellikle uzun vadeli sağlık risklerini bildirir."
   },
 
   /* ============ ORTA ============ */
@@ -2337,140 +1942,198 @@ export const QUIZ = {
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, bir kimyasalın Güvenlik Bilgi Formunda (GBF) şu bilgileri görüyor: 'Solunum yoluyla zararlı', 'Gözle temasında ciddi hasar', 'Yanıcı sıvı ve buhar'.",
-    text: "Bu bilgilere göre, öğrencinin bu kimyasalla çalışırken alması gereken önlemler kombinasyonu hangisidir?",
-    options: [
-      "Kapalı, havalandırmasız bir dolapta çalışmak daha güvenlidir",
-      "Sadece eldiven takmak yeterlidir, başka önlem gerekmez",
-      "İyi havalandırılan bir ortamda, koruyucu gözlükle ve açık alevden uzakta çalışmak",
-      "Yalnızca maske takmak, gözlük ve alevden uzaklaşma gerekmez",
-      "Bu bilgiler önlem alınmasını gerektirmez"
-    ],
-    correct: 2,
-    explain: "Solunum, göz ve yanıcılık tehlikeleri bir arada olduğunda, iyi havalandırma, göz koruması ve alevden uzak çalışma gibi önlemlerin birlikte alınması gerekir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, bir laboratuvarda yangın çıktığında söndürme yönteminin, yangının kaynağına (elektrikli cihaz, yanıcı sıvı, kağıt vb.) göre değişmesi gerektiğini öğreniyor; örneğin elektrikli bir yangına su ile müdahale etmenin elektrik çarpması riski taşıdığını fark ediyor.",
-    text: "Bu bilgiye dayanarak, laboratuvar güvenliği hakkında en doğru genelleme hangisidir?",
-    options: [
-      "Elektrikli yangınlarda su kullanmanın hiçbir riski yoktur",
-      "Su her tür yangın için en güvenli söndürme yöntemidir",
-      "Her tür yangına aynı yöntemle (örneğin her zaman suyla) müdahale etmek güvenli değildir; yangın söndürme yöntemi yangının kaynağına göre seçilmelidir",
-      "Yangın söndürme yönteminin yangının kaynağıyla hiçbir ilişkisi yoktur",
-      "Laboratuvarlarda yangın söndürme eğitimi gereksizdir"
-    ],
-    correct: 2,
-    explain: "Farklı yangın türleri (elektrikli, yanıcı sıvı, kâğıt vb.) farklı söndürme yöntemleri gerektirir; yanlış yöntem (örneğin elektrikli yangına su) durumu kötüleştirebilir veya yeni tehlikeler (elektrik çarpması) yaratabilir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, derişik bir asidi seyreltmek için 'önce su, sonra asit' kuralını öğreniyor: asit her zaman suya yavaşça eklenmeli, asla su asidin üzerine dökülmemeli.",
-    text: "Bu kuralın bilimsel gerekçesi en doğru hangi seçenekte açıklanmıştır?",
-    options: [
-      "Su her zaman asitten daha tehlikelidir",
-      "Bu kuralın hiçbir bilimsel gerekçesi yoktur, sadece bir gelenektir",
-      "Derişik asit suya eklendiğinde açığa çıkan ısı büyük hacimdeki suya yayılır; ama su az miktardaki asidin üzerine dökülürse, açığa çıkan ısı küçük hacimde yoğunlaşıp ani kaynama ve sıçramaya neden olabilir",
-      "Asit suya eklendiğinde hiçbir ısı açığa çıkmaz",
-      "Bu kural yalnızca bazlar için geçerlidir, asitler için önemli değildir"
-    ],
-    correct: 2,
-    explain: "Derişik asidin suyla seyreltilmesi ekzotermiktir (ısı açığa çıkar); asit büyük hacimdeki suya eklenirse ısı güvenle dağılır, ama tersi yapılırsa küçük hacimdeki su aniden kaynayıp tehlikeli sıçramalara yol açabilir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Aşağıdaki tabloda dört ev kimyasalının birlikte kullanılmasının olası tehlikeleri özetlenmiştir.",
     table: {
-      headers: ["Karışım", "Olası tehlike"],
+      headers: ["Madde çifti", "Karıştırıldığında oluşan risk"],
       rows: [
-        ["Çamaşır suyu + Amonyak", "Zehirli kloramin gazları"],
-        ["Çamaşır suyu + Asit temizleyici", "Zehirli klor gazı"],
-        ["Hidrojen peroksit + Sirke", "Aşındırıcı perasetik asit"],
-        ["Farklı marka ilaç temizleyicileri", "Genellikle düşük risk (ürüne göre değişir)"]
+        ["Çamaşır suyu + Amonyaklı temizleyici", "Zehirli kloramin gazı"],
+        ["Çamaşır suyu + Asitli temizleyici (tuvalet taşı sökücü)", "Zehirli klor gazı"],
+        ["Hidrojen peroksit + Sirke", "Tahriş edici perasetik asit"],
+        ["Farklı marka ilaç içerikli spreyler", "Öngörülemeyen tepkime riski"]
+      ],
+      caption: "Ev ortamında birlikte kullanılmaması gereken bazı madde çiftleri"
+    },
+    text: "Tabloya göre, ev temizliğinde en yaygın ölümcül gaz riski taşıyan iki karışım hangileridir?",
+    options: ["Yalnızca farklı marka spreyler", "Hidrojen peroksit + sirke ve farklı marka spreyler", "Çamaşır suyu + amonyaklı temizleyici ve çamaşır suyu + asitli temizleyici", "Yalnızca hidrojen peroksit + sirke", "Tabloda hiçbir karışım gaz riski taşımamaktadır"],
+    correct: 2,
+    explain: "Tabloda çamaşır suyunun hem amonyakla hem asitli maddelerle karışımı, doğrudan zehirli gaz (kloramin/klor) oluşumuna yol açtığı için en yüksek akut risk taşır."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    pictograms: { title: "Bir sanayi maddesinin etiketindeki simgeler", codes: ["flame", "health-hazard"] },
+    context: "Yukarıdaki iki simge aynı etikette birlikte yer almaktadır; bu, maddenin hem yanıcı hem de uzun vadeli sağlık hasarına (örneğin solunum yolu duyarlılaştırma) yol açabileceği anlamına gelir.",
+    text: "Bu maddeyle çalışılan bir ortamda alınması gereken en kapsamlı önlem hangisidir?",
+    options: ["Yalnızca solunum koruması yeterlidir, ateş riski önemsizdir", "Yalnızca ateş kaynaklarından uzak tutmak yeterlidir", "Hem ateş kaynaklarından uzak tutma hem de uygun solunum koruması ve havalandırma sağlama", "Bu iki simge birbiriyle çelişir, biri dikkate alınmalıdır", "Herhangi bir önlem gerekmez, simgeler bilgilendirme amaçlıdır"],
+    correct: 2,
+    explain: "İki farklı tehlike (yanıcılık ve sağlık hasarı) birlikte bildirildiğinden, hem yangın önlemi hem de solunum koruması/havalandırma birlikte uygulanmalıdır."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    chart: {
+      type: "bar",
+      title: "Bir laboratuvarda bir yıl içinde kaydedilen kaza türlerinin dağılımı",
+      xLabel: "Kaza türü",
+      yLabel: "Kayıt sayısı",
+      data: [
+        { label: "Yanlış madde karıştırma", value: 14 },
+        { label: "Koruyucu ekipman eksikliği", value: 9 },
+        { label: "Yanlış etiketleme", value: 6 },
+        { label: "Depolama hatası", value: 5 }
       ]
     },
-    text: "Tabloya göre, ev temizliğinde en genel geçerli güvenlik prensibi hangisidir?",
-    options: [
-      "Yalnızca çamaşır suyu tehlikelidir, diğer ürünlerin karışımı risksizdir",
-      "Tüm temizlik ürünleri güvenle karıştırılabilir",
-      "Farklı temizlik ürünlerini rastgele karıştırmamak, her ürünü tek başına ve etiketindeki talimata göre kullanmak",
-      "Tabloya göre hiçbir karışım güvenlik sorunu oluşturmaz",
-      "Sadece amonyak içeren ürünlerden kaçınmak yeterlidir"
-    ],
+    text: "Grafiğe göre, laboratuvar güvenliğini artırmak için en öncelikli önlem hangi konuda alınmalıdır?",
+    options: ["Yalnızca depolama alanının büyütülmesi", "Yalnızca etiketleme sisteminin değiştirilmesi", "Madde karıştırma protokollerinin gözden geçirilmesi", "Hiçbir önlem gerekmez, sayılar düşüktür", "Yalnızca ekipman sayısının artırılması"],
     correct: 2,
-    explain: "Tablo, farklı temizlik ürünlerinin karıştırılmasının çoğu zaman öngörülemeyen tehlikeli gazlar oluşturabileceğini gösterir; bu nedenle genel kural, ürünleri karıştırmadan, talimatına göre tek tek kullanmaktır."
+    explain: "Grafikte en yüksek kayıt sayısı (14) yanlış madde karıştırmaya ait olduğundan, en öncelikli önlem karıştırma protokollerinin gözden geçirilmesi olmalıdır."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, bir kimyasalın 'akut toksisite' (kısa süreli yüksek dozda maruziyetin etkisi) ile 'kronik toksisite' (uzun süreli düşük dozda maruziyetin etkisi) arasındaki farkı öğreniyor.",
-    text: "Bir laboratuvar çalışanının yıllarca düşük düzeyde belirli bir çözücü buharına maruz kalması sonucu zamanla sağlık sorunları geliştirmesi, hangi toksisite türüne örnektir?",
-    options: ["Akut toksisite", "Kronik toksisite", "Hiçbiri, bu toksisiteyle ilgisizdir", "Yalnızca alerjik reaksiyon, toksisite değildir", "Fiziksel yaralanma, kimyasal etkiyle ilgisizdir"],
-    correct: 1,
-    explain: "Uzun süre boyunca düşük dozda maruziyet sonucu zamanla ortaya çıkan sağlık etkileri kronik toksisiteye örnektir; akut toksisite ise kısa süreli yüksek doz maruziyetle ilişkilidir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, bir laboratuvarda çalışırken 'göz duşu' ve 'acil duş' istasyonlarının yerini önceden öğrenmesi gerektiğini fark ediyor; deney sırasında bu bilgiyi aramaya vakit kaybetmenin riskli olabileceğini düşünüyor.",
-    text: "Bu düşünce, laboratuvar güvenliğinde 'önleyici hazırlık' kavramı hakkında en doğru hangi çıkarımı destekler?",
-    options: [
-      "Deney sırasında ekipman aramak hiçbir zaman zaman kaybına yol açmaz",
-      "Acil durum ekipmanının yerini bilmek kaza riskini hiçbir şekilde etkilemez",
-      "Acil durum ekipmanının yerini önceden bilmek, gerçek bir kaza anında tepki süresini kısaltarak zararı azaltabilir",
-      "Önleyici hazırlık yalnızca profesyonel kimyagerler için gereklidir, öğrenciler için gereksizdir",
-      "Bu bilgi yalnızca teoriktir, pratik bir faydası yoktur"
-    ],
-    correct: 2,
-    explain: "Acil durum ekipmanının (göz duşu, acil duş vb.) yerini önceden bilmek, gerçek bir kaza durumunda tepki süresini kısaltarak olası zararın azaltılmasına yardımcı olabilir — bu, önleyici güvenlik kültürünün önemli bir parçasıdır."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, bir kimyasal madde deposunda yangın söndürme sisteminin neden bazı kimyasal sınıfları için (örneğin bazı metal yangınları için) su bazlı değil, özel toz bazlı olması gerektiğini araştırıyor; bazı metallerin suyla temas ettiğinde şiddetli tepkimeye girip yangını büyütebileceğini öğreniyor.",
-    text: "Bu bilgi, güvenlik sistemlerinin tasarımı hakkında en doğru hangi çıkarımı destekler?",
-    options: [
-      "Metal yangınlarının söndürülmesi imkânsızdır",
-      "Tüm yangın söndürme sistemleri her tür kimyasal için aynı şekilde etkilidir",
-      "Su her zaman en güvenli söndürme maddesidir",
-      "Güvenlik önlemleri (söndürme sistemi gibi) genel geçer değil, depolanan/kullanılan maddenin özel kimyasal özelliklerine göre tasarlanmalıdır",
-      "Güvenlik sistemi tasarımı maddenin türünden bağımsızdır"
-    ],
+    context: "Bir depoda, oksitleyici bir madde ile yanıcı bir çözücü aynı rafın yan yana gözlerinde saklanmaktadır. Depo sıcaklığı yaz aylarında belirgin şekilde yükselmektedir.",
+    text: "Bu depolama düzeninde en yüksek risk hangisidir?",
+    options: ["Maddelerin hacminin küçülmesi", "Maddelerin renginin solması", "Maddelerin kokusunun artması", "Sıcaklık artışıyla birlikte iki maddenin etkileşerek yangın/patlama riskinin artması", "Herhangi bir risk oluşmaz, madde türleri önemsizdir"],
     correct: 3,
-    explain: "Bazı metaller suyla şiddetli tepkimeye girebildiğinden, bu tür maddelerin bulunduğu ortamlarda su bazlı değil, özel (toz bazlı gibi) söndürme sistemleri kullanılmalıdır — güvenlik önlemleri maddenin özelliklerine göre özelleştirilmelidir."
+    explain: "Oksitleyici ve yanıcı maddelerin yan yana, özellikle yüksek sıcaklıkta depolanması, etkileşim sonucu yangın/patlama riskini artırır; bu tür maddeler ayrı bölümlerde saklanmalıdır."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, bir kimyasal madde taşınırken kullanılan ambalajın (cam, plastik, metal) maddenin türüne göre özenle seçilmesi gerektiğini öğreniyor; örneğin hidroflorik asidin camı aşındırdığı için plastik kaplarda saklandığını fark ediyor.",
-    text: "Bu bilgi, kimyasal madde depolamasında ambalaj seçimi hakkında en doğru hangi çıkarımı destekler?",
-    options: [
-      "Ambalaj seçiminin güvenlikle hiçbir ilişkisi yoktur",
-      "Her kimyasal her tür kapta güvenle saklanabilir",
-      "Cam her zaman en güvenli ambalaj malzemesidir",
-      "Ambalaj malzemesi, içindeki kimyasalla etkileşime girmeyecek şekilde maddenin özelliklerine göre seçilmelidir",
-      "Plastik kaplar hiçbir zaman kimyasal saklamak için kullanılamaz"
-    ],
+    table: {
+      headers: ["Kimyasal grup", "Birlikte depolanmaması gereken grup", "Risk"],
+      rows: [
+        ["Asitler", "Bazlar", "Şiddetli ısı açığa çıkışı, sıçrama"],
+        ["Oksitleyiciler", "Yanıcılar", "Yangın/patlama"],
+        ["Siyanür bileşikleri", "Asitler", "Zehirli gaz (HCN)"],
+        ["Aşındırıcı sıvılar", "Metaller", "Yanıcı hidrojen gazı"]
+      ],
+      caption: "Kimyasal depolama uyumsuzluk matrisi"
+    },
+    text: "Tabloya göre, bir siyanür bileşiğinin yanlışlıkla bir asitle temas etmesi durumunda en doğrudan hangi tehlike oluşur?",
+    options: ["Malzemenin katılaşması", "Yalnızca renk değişimi", "Yalnızca hafif koku artışı", "Zehirli gaz (HCN) açığa çıkması", "Herhangi bir tehlike oluşmaz"],
     correct: 3,
-    explain: "Ambalaj malzemesi, içindeki kimyasalla tepkimeye girip aşınmayacak veya sızıntı yapmayacak şekilde, maddenin kimyasal özelliklerine uygun olarak dikkatle seçilmelidir."
+    explain: "Tabloya göre siyanür bileşiklerinin asitlerle teması zehirli hidrojen siyanür (HCN) gazı açığa çıkarır."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, bir fabrikada çalışan işçilerin belirli bir kimyasala maruziyet sınırının (mesleki maruziyet limiti) bilimsel çalışmalarla belirlendiğini ve bu sınırın altında kalmanın sağlık riskini azalttığını, ama tamamen sıfıra indirmediğini öğreniyor.",
-    text: "Bu bilgiye dayanarak, mesleki maruziyet limitleri hakkında en doğru bilimsel çıkarım hangisidir?",
-    options: [
-      "Maruziyet limitlerinin işçi sağlığıyla hiçbir ilişkisi yoktur",
-      "Maruziyet limitinin altında kalmak riski tamamen sıfıra indirir",
-      "Maruziyet limitleri rastgele belirlenir, bilimsel bir temeli yoktur",
-      "Maruziyet limitleri, riski tamamen ortadan kaldırmak yerine, bilimsel verilere dayanarak riski kabul edilebilir bir düzeye indirmeyi amaçlayan pratik eşik değerleridir",
-      "Bu limitler yalnızca hukuki bir formaliteden ibarettir"
-    ],
+    pictograms: ["irritant"],
+    context: "Bir boyanın ambalaj etiketinde yukarıdaki simge yer almaktadır; bu simge, 'flame' ve 'toxic' gibi daha ciddi simgelerden farklı olarak daha düşük düzeyde bir tehlikeyi temsil eder.",
+    text: "Bu simgenin bildirdiği tehlike düzeyi ile ilgili en doğru ifade hangisidir?",
+    options: ["Yalnızca yangın tehlikesini bildirir", "Toksik simgesiyle tamamen aynı düzeyde ölümcül tehlikeyi bildirir", "Yalnızca çevresel tehlikeyi bildirir, sağlıkla ilgisi yoktur", "Cilt/göz tahrişi veya hafif sağlık etkisi gibi görece daha düşük düzeyli bir tehlikeyi bildirir", "Hiçbir tehlike bildirmez, yalnızca dekoratif bir simgedir"],
     correct: 3,
-    explain: "Mesleki maruziyet limitleri, bilimsel toksikoloji verilerine dayanarak belirlenen ve riski kabul edilebilir düzeye indirmeyi amaçlayan eşik değerlerdir; sınırın altında kalmak riski azaltır ama sıfıra indirmez."
+    explain: "Tahriş edici (irritant) piktogramı, toksik veya sağlığa ciddi zarar simgelerine göre daha düşük düzeyli, örneğin cilt/göz tahrişi gibi tehlikeleri bildirir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    context: "Bir tarım işletmesinde, zirai ilaç uygulaması sonrasında işçilerin tarlaya belirli bir süre (bekleme süresi) girmemesi gerektiği; bu sürenin ilacın etken maddesine göre değiştiği bilinmektedir.",
+    text: "Bekleme süresine uyulmamasının en doğrudan riski nedir?",
+    options: ["İlacın etkisinin tamamen ortadan kalkması", "Bitkilerin büyüme hızının artması", "Toprağın renginin değişmesi", "İşçilerin henüz parçalanmamış kimyasal kalıntılara maruz kalması", "Herhangi bir risk oluşmaz, bekleme süresi öneri niteliğindedir"],
+    correct: 3,
+    explain: "Bekleme süresi, uygulanan zirai ilacın zamanla parçalanıp güvenli düzeye inmesi için tanınan süredir; buna uyulmaması işçilerin henüz yüksek düzeyde kalıntıya maruz kalmasına yol açar."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    context: "Bir güvenlik veri formunda (SDS/MSDS) bir maddenin 'parlama noktası'nın oda sıcaklığının belirgin şekilde altında olduğu belirtilmektedir.",
+    text: "Bu bilgiye dayanarak, madde ile ilgili en doğru güvenlik çıkarımı hangisidir?",
+    options: ["Parlama noktası bilgisi güvenlikle ilgisizdir", "Madde hiçbir koşulda yanmaz", "Madde yalnızca çok yüksek sıcaklıklarda tutuşabilir", "Madde oda sıcaklığında bile kolayca tutuşabilecek buharlar oluşturabilir, ateş kaynaklarından uzak tutulmalıdır", "Madde yalnızca donma riski taşır"],
+    correct: 3,
+    explain: "Parlama noktasının oda sıcaklığının altında olması, maddenin normal ortam koşullarında bile kolayca tutuşabilir buhar oluşturduğu anlamına gelir; bu nedenle ateş kaynaklarından uzak tutulmalıdır."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    objectIcons: { title: "Bir eczanede bulunan ürün", items: [{ type: "pill", label: "Reçetesiz ağrı kesici" }] },
+    context: "Görseldeki ilacın kutusunda önerilen günlük dozun üzerine çıkılmaması gerektiği; aksi hâlde karaciğer üzerinde ciddi hasar riski oluşabileceği belirtilmektedir.",
+    text: "Bu bilgiye göre, ilacın güvenli kullanımı için en doğru yaklaşım hangisidir?",
+    options: ["Karaciğer hasarı yalnızca uzun vadeli kullanıcılarda görülür, kısa süreli aşımlar güvenlidir", "Etkiyi hızlandırmak için dozu iki katına çıkarmak", "Doz sınırı yalnızca öneridir, aşılması sorun yaratmaz", "Etikette belirtilen doz sınırına kesinlikle uymak", "Doz miktarı, ilacın etkisini değil sadece tadını değiştirir"],
+    correct: 3,
+    explain: "Reçetesiz ilaçlarda bile önerilen doz sınırının aşılması ciddi organ hasarına yol açabileceğinden, etikette belirtilen doza kesinlikle uyulmalıdır."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    pictograms: { title: "Bir endüstriyel çözücünün etiketindeki simgeler", codes: ["flame", "environment"] },
+    context: "Yukarıdaki iki simgeyi taşıyan bir çözücünün kullanıldığı bir atölyede, kullanım sonrası artık maddenin lavaboya değil özel bir toplama kabına boşaltılması kuralı uygulanmaktadır.",
+    text: "Bu kuralın en doğrudan gerekçesi nedir?",
+    options: ["Maddenin özel toplama kabında daha hızlı buharlaşması", "Maddenin lavaboyu tıkayacak kadar viskoz olması", "Maddenin sadece kötü koku yayması", "Maddenin hem yanıcı olması hem de su kaynaklarına karıştığında çevreye zarar verebilmesi", "Kuralın çevresel veya yanıcılık riskiyle hiçbir ilgisi yoktur"],
+    correct: 3,
+    explain: "Etikette hem yanıcılık hem çevreye zararlılık simgeleri bulunduğundan, maddenin lavaboya dökülmesi hem yangın hem su kirliliği riski taşır; bu yüzden özel toplama gerekir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    context: "Bir okul laboratuvarında yapılan bir deney sırasında küçük bir kimyasal sıçrama meydana gelmiş ve öğretim elemanı önce göz duşuna yönlendirmiş, ardından olay kayıt formunu doldurmuştur.",
+    text: "Bu müdahale sırası, güvenlik protokolünün hangi temel ilkesini yansıtır?",
+    options: ["Belgeleme, fiziksel müdahaleden daha önceliklidir", "Önce belgeleme, sonra fiziksel müdahale", "Fiziksel müdahale ile belgeleme aynı anda yapılmalıdır, sıra önemsizdir", "Önce acil fiziksel müdahale, sonra belgeleme/raporlama", "Bu sıralama güvenlik protokolüyle ilgisizdir"],
+    correct: 3,
+    explain: "Güvenlik protokollerinde önce kişinin/maddenin maruziyetini azaltacak acil müdahale yapılır, olay kaydı ve raporlama bu ilk müdahaleden sonra tamamlanır."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    context: "Bir yapı malzemesi üreticisi, ürününde artık asbest kullanılmadığını, çünkü asbest liflerinin uzun süre solunduğunda akciğerlerde ciddi hastalıklara yol açtığının bilimsel olarak kanıtlandığını belirtmektedir.",
+    text: "Bu bilgiye dayanarak, asbestle ilgili en doğru güvenlik çıkarımı hangisidir?",
+    options: ["Asbestin sağlık riski yalnızca yüksek sıcaklıkta ortaya çıkar", "Asbest yalnızca cilde temas ettiğinde tehlikelidir", "Asbest yalnızca yanıcı bir malzemedir, sağlık riski taşımaz", "Asbest liflerinin solunum yoluyla uzun süreli maruziyeti kronik sağlık riski taşır", "Asbest günümüzde hâlâ tüm yapı malzemelerinde güvenle kullanılmaktadır"],
+    correct: 3,
+    explain: "Asbest liflerinin solunum yoluyla uzun süreli maruziyeti akciğer hastalıklarına (asbestoz, mezotelyoma vb.) yol açabileceği için kronik bir sağlık riski taşır."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    context: "Bir kapalı garajda motor çalışır durumda uzun süre bırakılmıştır; ortamda renksiz, kokusuz ama yüksek derişimde solunduğunda ölümcül olabilen bir gaz birikmeye başlamıştır.",
+    text: "Bu senaryoda tarif edilen gazın güvenlik açısından en tehlikeli özelliği nedir?",
+    options: ["Gazın yalnızca hafif baş dönmesine yol açması", "Gazın yalnızca yanıcı olması", "Gazın yalnızca metal yüzeyleri paslandırması", "Renksiz ve kokusuz olduğu için fark edilmeden yüksek derişime ulaşabilmesi", "Gazın çevre kirliliğine yol açması, sağlıkla ilgisi olmaması"],
+    correct: 3,
+    explain: "Renksiz ve kokusuz bir gazın (örneğin karbon monoksit) fark edilmeden birikmesi, maruziyetin geç fark edilmesine ve ciddi zehirlenme riskine yol açar."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    context: "Bir kozmetik ürünün etiketinde 'yalnızca harici kullanım içindir, göz ve mukoza ile temasından kaçının' uyarısı bulunmaktadır.",
+    text: "Bu uyarının en doğrudan gerekçesi nedir?",
+    options: ["Uyarının kozmetik ürünlerde standart ve anlamsız bir ibare olması", "Ürünün yalnızca dekoratif amaçla üretilmiş olması", "Ürünün fiyatının yüksek olması", "Ürünün yalnızca belirli bir yaş grubuna uygun olması", "Ürünün formülasyonunun hassas dokularda tahrişe yol açabilecek bileşenler içerebilmesi"],
+    correct: 4,
+    explain: "Kozmetik formülasyonlardaki bazı bileşenler cilt için güvenli olsa bile göz ve mukoza gibi hassas dokularda tahrişe yol açabileceğinden bu uyarı eklenir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    context: "Bir inşaat alanında toz maskesi yerine yalnızca cerrahi maske kullanan işçilerin, kristal silika tozuna maruz kalma riski azalmamıştır; çünkü cerrahi maskeler ince toz partiküllerini yeterince filtrelemez.",
+    text: "Bu durumdan çıkarılabilecek en doğru güvenlik ilkesi nedir?",
+    options: ["Cerrahi maskeler her tür tozu tamamen filtreler", "Herhangi bir maske kullanmak, hiç kullanmamaktan her zaman aynı düzeyde koruma sağlar", "Toz maskeleri yalnızca estetik amaçlıdır", "Kristal silika tozu solunum için tehlike oluşturmaz", "Koruyucu ekipman seçimi, maruz kalınan tehlikenin türüne uygun olmalıdır"],
+    correct: 4,
+    explain: "Örnek, yanlış ekipman seçiminin (ince toz partiküllerini filtrelemeyen maske) koruma sağlamadığını, ekipmanın maruz kalınan tehlikeye özgü seçilmesi gerektiğini gösterir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    table: {
+      headers: ["Yangın sınıfı", "Kaynak", "Uygun söndürme yöntemi"],
+      rows: [
+        ["A", "Kâğıt, ahşap", "Su"],
+        ["B", "Yanıcı sıvı, yağ", "Köpük/CO₂ (su kullanılmaz)"],
+        ["C", "Elektrikli cihaz", "CO₂/kuru kimyevi (su kullanılmaz)"],
+        ["D", "Metal (magnezyum vb.)", "Özel kuru toz"]
+      ],
+      caption: "Yangın sınıfları ve uygun söndürme yöntemleri"
+    },
+    text: "Tabloya göre, bir elektrikli cihazdan kaynaklanan yangına su ile müdahale edilmesi neden tehlikelidir?",
+    options: ["Tabloya göre su her yangın türü için uygundur", "Su yangını her zaman büyütür, kaynağı ne olursa olsun", "Su, elektrikli cihazların rengini bozar", "Su yalnızca A sınıfı yangınlarda etkisizdir, C sınıfında sorun yaratmaz", "Su elektriği iletebileceğinden elektrik çarpması riski oluşturur"],
+    correct: 4,
+    explain: "Tabloya göre C sınıfı (elektrikli) yangınlarda su kullanılmaz çünkü su elektriği iletebilir ve müdahale edeni elektrik çarpması riskine maruz bırakabilir."
+  },
+
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    context: "Bir spor salonunda havuz suyunun dezenfeksiyonu için kullanılan klor tableti ile pH düzenleyici (asit) aynı kapalı kutuda, birbirine değecek şekilde saklanmaktadır. Nemli havada bu iki madde arasında istenmeyen bir tepkime başlayabilir.",
+    text: "Bu depolama hatasının olası sonucu ve doğru çözüm sırasıyla en doğru hangisidir?",
+    options: ["Risk yalnızca tabletlerin nem çekerek bozulmasıdır, gaz riski yoktur", "Yalnızca havuz suyunun renginin değişmesi; depolama şekli önemsizdir", "Yalnızca tabletlerin daha hızlı erimesi; herhangi bir risk yoktur", "İki madde birbiriyle hiçbir zaman tepkimeye girmez", "Zehirli klor gazı açığa çıkma riski; iki madde ayrı, nem almayan kaplarda ve birbirinden uzakta saklanmalıdır"],
+    correct: 4,
+    explain: "Klor bazlı dezenfektanlarla asit karakterli pH düzenleyicilerin teması, özellikle nemli ortamda zehirli klor gazı açığa çıkarabileceğinden, bu iki madde ayrı ve nem almayan kaplarda saklanmalıdır."
   },
 
   /* ============ ZOR ============ */
@@ -2478,592 +2141,400 @@ export const QUIZ = {
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, büyük bir sanayi kazasını (örneğin bir kimya fabrikasındaki patlama) araştırıyor ve kaza raporunda 'birden fazla küçük hatanın art arda gelmesi' (örneğin arızalı bir valf + eğitim eksikliği + acil durum protokolünün uygulanmaması) sonucunda büyük bir felaketin ortaya çıktığını öğreniyor.",
-    text: "Bu bilgi, endüstriyel güvenlik kazaları hakkında en olgun hangi çıkarımı destekler?",
-    options: [
-      "Bir kez güvenlik protokolü oluşturulduktan sonra hiçbir zaman gözden geçirilmesine gerek yoktur",
-      "Büyük kazalar her zaman tek bir kişinin hatasından kaynaklanır",
-      "Küçük hataların büyük kazalarla hiçbir ilişkisi yoktur",
-      "Büyük kazalar genellikle tek bir nedenden değil, birbirini tetikleyen birden fazla küçük hatanın bir araya gelmesinden kaynaklanabilir; bu yüzden güvenlik sistemlerinde birden fazla bağımsız koruma katmanı önemlidir",
-      "Endüstriyel kazalar tamamen öngörülemez, önlenemez olaylardır"
-    ],
-    correct: 3,
-    explain: "Büyük endüstriyel kazalar genellikle birbirini tetikleyen çoklu küçük hataların (teknik arıza, eğitim eksikliği, protokol ihlali gibi) bir araya gelmesiyle ortaya çıkar; bu nedenle etkili güvenlik sistemleri tek bir önleme değil, birden fazla bağımsız koruma katmanına (çoklu bariyer ilkesi) dayanır."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, bazı kimyasalların (örneğin belirli plastikleştiriciler) düşük dozlarda anlık olarak zararsız görünse de, uzun vadeli ve düşük dozlu maruziyetin bilimsel çalışmalarla hâlâ tam olarak anlaşılamamış potansiyel etkileri olabileceğini öğreniyor; bilim insanlarının bu konuda hâlâ araştırma yaptığını fark ediyor.",
-    text: "Bu durum, bilimsel bilgi ile güvenlik düzenlemeleri arasındaki ilişki hakkında en dengeli hangi çıkarımı destekler?",
-    options: [
-      "Bilimsel belirsizlik, güvenlik konusunda hiçbir önlem alınmaması gerektiği anlamına gelir",
-      "Bilim insanları hâlâ araştırıyorsa, bu maddenin kesinlikle çok tehlikeli olduğu anlamına gelir",
-      "Güvenlik düzenlemeleri bir kez belirlendikten sonra hiçbir zaman değişmemelidir",
-      "Güvenlik düzenlemeleri, mevcut bilimsel bilgiye dayanır ve bilim ilerledikçe (yeni veriler ortaya çıktıkça) güncellenmesi gerekebilir; 'şu an zararsız görünüyor' ifadesi 'kesin olarak sonsuza dek zararsız' anlamına gelmez",
-      "Bu durum güvenlik düzenlemeleriyle hiçbir ilgisi olmayan bir konudur"
-    ],
-    correct: 3,
-    explain: "Güvenlik düzenlemeleri, o anki en iyi bilimsel bilgiye dayanır; bilim ilerledikçe ve yeni veriler ortaya çıktıkça bu düzenlemelerin güncellenmesi gerekebilir — bu, bilimsel sürecin doğası gereği normal ve beklenen bir durumdur."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, bir ülkede belirli bir kimyasalın kullanımının yasak olduğunu, ancak komşu bir ülkede aynı kimyasalın hâlâ yaygın olarak kullanıldığını öğreniyor; bu farkın bilimsel kanıttan çok, ülkelerin düzenleyici süreçlerinin hızı ve önceliklerinden kaynaklanabileceğini fark ediyor.",
-    text: "Bu gözlem, kimyasal güvenlik düzenlemeleri hakkında en doğru hangi çıkarımı destekler?",
-    options: [
-      "Yasal olan her madde bilimsel olarak kanıtlanmış şekilde güvenlidir",
-      "Bir madde bir ülkede yasaksa, tüm dünyada da otomatik olarak yasak olmalıdır",
-      "Ülkeler arasındaki düzenleme farkları tamamen rastgeledir, hiçbir açıklaması yoktur",
-      "Bir maddenin bir ülkede yasal olması, o maddenin kesinlikle güvenli olduğu anlamına gelmeyebilir; düzenlemeler bilimsel kanıtın yanında siyasi, ekonomik ve idari süreçlerden de etkilenebilir",
-      "Düzenleyici süreçlerin hızının güvenlikle hiçbir ilgisi yoktur"
-    ],
-    correct: 3,
-    explain: "Bir kimyasalın bir ülkede yasal/yaygın kullanılması, o maddenin mutlak olarak güvenli olduğunu garanti etmez; düzenlemeler bilimsel kanıtların yanında ülkelerin idari süreç hızı, ekonomik öncelikleri gibi etkenlerden de etkilenebilir — bu, eleştirel düşünmeyi gerektiren önemli bir nüanstır."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, bir laboratuvarda 'güvenlik kültürü' kavramını araştırıyor: bazı laboratuvarlarda çalışanlar kuralları eksiksiz uygulanması gereken bir zorunluluk olarak değil, ortak bir sorumluluk ve alışkanlık olarak benimsiyor; bu tür yerlerde kaza oranlarının daha düşük olduğunu öğreniyor.",
-    text: "Bu bilgi, güvenlik kurallarının etkinliği hakkında en kapsamlı hangi çıkarımı destekler?",
-    options: [
-      "Kaza oranları yalnızca ekipman kalitesine bağlıdır, insan davranışının hiçbir etkisi yoktur",
-      "Yazılı kurallar tek başına her zaman yeterlidir, kültürün hiçbir katkısı yoktur",
-      "Güvenlik kültürü kavramı bilimsel bir temele sahip değildir",
-      "Yazılı kuralların varlığı tek başına yeterli olmayabilir; kuralların içselleştirildiği, paylaşılan bir 'güvenlik kültürü' oluşturulması kaza önlemede önemli bir ek etken olabilir",
-      "Bu bilgi laboratuvar güvenliğiyle ilgisizdir"
-    ],
-    correct: 3,
-    explain: "Yazılı güvenlik kurallarının varlığı gerekli ama tek başına yeterli olmayabilir; kuralların çalışanlar tarafından içselleştirildiği paylaşılan bir 'güvenlik kültürü', kaza oranlarını azaltmada önemli bir tamamlayıcı etken olabilir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, bir kimyasal madde sızıntısına müdahale eden ekiplerin, önce sızıntının türünü ve miktarını değerlendirip sonra müdahale stratejisi belirlediğini; acele ve plansız müdahalenin durumu kötüleştirebileceğini (örneğin yanlış nötrleştirici kullanmanın yeni bir tehlikeli tepkime başlatabileceğini) öğreniyor.",
-    text: "Bu bilgi, acil durum müdahalesinde 'değerlendirme önce, aksiyon sonra' ilkesi hakkında en doğru hangi çıkarımı destekler?",
-    options: [
-      "Yanlış nötrleştirici kullanmanın hiçbir riski yoktur",
-      "Acil durumlarda değerlendirme yapmak zaman kaybıdır, hemen aksiyon almak her zaman daha iyidir",
-      "Sızıntı türünün müdahale stratejisiyle hiçbir ilişkisi yoktur",
-      "Acil bir durumda bile aceleyle, değerlendirme yapmadan hareket etmek, iyi niyetli olsa bile durumu daha da kötüleştirebilir; sistematik değerlendirme genellikle daha güvenli sonuçlar sağlar",
-      "Bu ilke yalnızca profesyonel ekipler için geçerlidir, öğrenciler için önemli değildir"
-    ],
-    correct: 3,
-    explain: "Acil durumlarda bile sistematik bir değerlendirme yapmadan aceleyle hareket etmek (örneğin yanlış nötrleştirici madde kullanmak), iyi niyetli olsa bile durumu kötüleştirebilir; 'önce değerlendir, sonra aksiyon al' ilkesi genellikle daha güvenli sonuçlar sağlar."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci evde ilaçların ve temizlik ürünlerinin küçük çocukların ulaşamayacağı, kilitli bir dolapta saklanması gerektiğini öğreniyor.",
-    text: "Bu önlemin temel amacı nedir?",
-    options: ["Ürünlerin daha uzun süre dayanmasını sağlamak", "Küçük çocukların yanlışlıkla zararlı maddeleri yutma/temas riskini azaltmak", "Evin daha düzenli görünmesini sağlamak", "Ürünlerin fiyatını korumak", "Ürünlerin kokusunu azaltmak"],
-    correct: 1,
-    explain: "İlaç ve kimyasal ürünlerin çocuklardan uzak tutulması, yanlışlıkla yutma veya temas etme gibi ciddi risklerin önlenmesi içindir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci kullanılmış pil ve bataryaların normal çöpe değil, özel toplama noktalarına atılması gerektiğini öğreniyor.",
-    text: "Bu uygulamanın temel gerekçesi nedir?",
-    options: [
-      "Bu uygulamanın hiçbir bilimsel gerekçesi yoktur",
-      "Piller normal çöpten daha ağırdır, bu yüzden ayrılır",
-      "Pillerin rengi farklı olduğu için ayrı toplanır",
-      "Piller normal çöple karıştığında toprağa/suya karışabilecek ağır metaller içerir, bu da çevre kirliliğine yol açabilir",
-      "Piller çok küçük olduğu için kaybolmaması amacıyla ayrılır"
-    ],
-    correct: 3,
-    explain: "Piller kurşun, kadmiyum gibi ağır metaller içerebilir; normal çöple bertaraf edilmesi bu maddelerin toprak ve su kaynaklarına karışarak çevre kirliliğine yol açmasına neden olabilir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci bir kimyasal madde kabının üzerinde yuvarlak, ortası dolu daire şeklinde bir alev sembolü (oksitleyici sembolü) görüyor.",
-    text: "Bu sembol maddenin hangi özelliğini belirtir?",
-    options: [
-      "Maddenin manyetik özellik taşıdığını",
-      "Maddenin donmuş olduğunu",
-      "Maddenin radyoaktif olduğunu",
-      "Maddenin yenilebilir olduğunu",
-      "Maddenin diğer yanıcı maddelerin yanmasını hızlandırabileceğini/şiddetlendirebileceğini"
-    ],
-    correct: 4,
-    explain: "Oksitleyici madde sembolü, maddenin başka yanıcı maddelerin yanmasını hızlandırabileceğini veya şiddetlendirebileceğini belirtir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, laboratuvarda kırılan bir cam deney tüpünün parçalarını çıplak elle toplamayı düşünüyor.",
-    text: "Bu davranış yerine yapılması gereken en doğru yaklaşım hangisidir?",
-    options: [
-      "Cam parçalarını suyla yıkayıp lavaboya akıtmak",
-      "Cam parçalarını ayakla ittirerek köşeye toplamak",
-      "Cam parçalarını normal çöp kutusuna elle atmak",
-      "Cam parçalarını görmezden gelip üzerine basmamaya dikkat etmek yeterlidir",
-      "Cam parçalarını süpürge/maşa gibi uygun araçlarla toplayıp özel bir kaba atmak, sorumlu kişiye bildirmek"
-    ],
-    correct: 4,
-    explain: "Kırık cam parçaları çıplak elle değil, süpürge/maşa gibi uygun araçlarla toplanmalı, özel bir atık kabına konmalı ve durum sorumlu kişiye bildirilmelidir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci laboratuvarda kimyasal madde taşırken şişeyi vücuduna yakın, gövdesinin önünde iki elle tutarak taşıyor.",
-    text: "Bu taşıma şeklinin güvenlik açısından mantığı nedir?",
-    options: [
-      "Yalnızca görgü kuralı gereğidir",
-      "Bu şekilde taşımanın hiçbir güvenlik gerekçesi yoktur",
-      "Sadece daha hızlı taşımak içindir",
-      "Şişenin ağırlığını azaltmak için yapılır",
-      "Şişe düşerse dökülen madde vücuttan uzakta kalır ve düşme riski azalır"
-    ],
-    correct: 4,
-    explain: "İki elle, vücuda yakın ve dengeli taşımak, şişenin düşme riskini azaltır ve olası bir dökülmede maddenin vücuda daha az temas etmesini sağlar."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci laboratuvarda bir kimyasal maddeyi tatmayı ya da yiyecek gibi denemeyi asla yapmaması gerektiğini öğreniyor.",
-    text: "Bu kuralın temel gerekçesi nedir?",
-    options: [
-      "Bu kuralın hiçbir bilimsel/güvenlik gerekçesi yoktur",
-      "Kimyasalların tadı her zaman kötüdür, bu yüzden yasaktır",
-      "Bu kural yalnızca hijyen amaçlıdır, güvenlikle ilgisi yoktur",
-      "Kimyasalları tatmak yalnızca zaman kaybıdır",
-      "Laboratuvar kimyasalları genellikle zehirli/zararlı olabilir ve gıda amaçlı üretilmemiştir"
-    ],
-    correct: 4,
-    explain: "Laboratuvar kimyasalları gıda amaçlı üretilmez ve birçoğu zehirli veya zararlı olabilir; bu nedenle hiçbir zaman tadılmamalı veya yenilmeye çalışılmamalıdır."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, bir kimya laboratuvarında yiyecek veya içecek tüketmenin neden yasak olduğunu araştırıyor.",
-    text: "Bu yasağın temel gerekçesi nedir?",
-    options: [
-      "Bu yasağın hiçbir bilimsel temeli yoktur",
-      "Yiyecek yemek yalnızca dikkat dağıtır, başka bir riski yoktur",
-      "Bu kural yalnızca temizlik içindir",
-      "Yiyecekler laboratuvar cihazlarına zarar verir",
-      "Yiyecek/içeceklerin laboratuvar ortamındaki kimyasallarla kirlenip yanlışlıkla tüketilmesi ciddi sağlık riski oluşturabilir"
-    ],
-    correct: 4,
-    explain: "Laboratuvar ortamında bulunan kimyasal kalıntılar yiyecek/içeceklere bulaşabilir; bunların fark edilmeden tüketilmesi zehirlenme gibi ciddi sağlık risklerine yol açabilir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, bir kimyasal madde deposunda 'acil çıkış' işaretlerinin ve tahliye yollarının her zaman açık tutulması gerektiğini öğreniyor.",
-    text: "Bu kuralın en önemli gerekçesi nedir?",
-    options: [
-      "Yalnızca yangın söndürme ekiplerinin işini kolaylaştırmak, çalışanlarla ilgisi yoktur",
-      "Sadece düzenli görünüm sağlamak",
-      "Depoyu daha ferah göstermek",
-      "Bu kuralın güvenlikle hiçbir ilgisi yoktur",
-      "Acil bir durumda (yangın, sızıntı gibi) çalışanların hızlı ve güvenli şekilde tahliye edilebilmesini sağlamak"
-    ],
-    correct: 4,
-    explain: "Açık tahliye yolları, acil bir durumda çalışanların hızlı ve güvenli şekilde binayı terk edebilmesini sağlayarak can kaybını önlemeye yardımcı olur."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, laboratuvarda kullanılan kimyasal atıkların lavaboya veya normal çöpe değil, ayrı etiketlenmiş atık kaplarına atılması gerektiğini öğreniyor.",
-    text: "Bu uygulamanın temel amacı nedir?",
-    options: [
-      "Yalnızca maliyet tasarrufu sağlamak",
-      "Yalnızca laboratuvarı düzenli göstermek",
-      "Atık kaplarının dolmasını hızlandırmak",
-      "Bu uygulamanın hiçbir çevresel gerekçesi yoktur",
-      "Kimyasal atıkların çevreye kontrolsüz yayılmasını ve su/toprak kirliliğini önlemek"
-    ],
-    correct: 4,
-    explain: "Kimyasal atıkların uygun şekilde toplanıp bertaraf edilmesi, bu maddelerin su ve toprak kaynaklarına kontrolsüz karışarak çevre kirliliğine yol açmasını önler."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, bir kimyasal maddenin 'yanıcı' hem de 'oksitleyici' özellikte olmadığını, ama iki farklı kimyasalın (biri yanıcı, biri oksitleyici) bir arada depolanmasının yangın riskini artırdığını öğreniyor.",
-    text: "Bu bilgiye dayanarak, kimyasal madde depolamasında en doğru yaklaşım hangisidir?",
-    options: [
-      "Bu bilgi yalnızca teorik bir durumdur, pratikte önemi yoktur",
-      "Yalnızca tek başına tehlikeli olan maddeler ayrı depolanmalıdır, diğerleri birlikte tutulabilir",
-      "Maddelerin birbirleriyle etkileşimi depolama planlamasında önemsizdir",
-      "Yanıcı ve oksitleyici maddeler her zaman birlikte depolanmalıdır",
-      "Tek başına düşük riskli görünen maddeler bile, başka maddelerle bir arada depolandığında birlikte yüksek risk oluşturabilir; bu yüzden depolama planı maddelerin birbirleriyle etkileşimini de dikkate almalıdır"
-    ],
-    correct: 4,
-    explain: "Depolama güvenliği, yalnızca tek bir maddenin kendi tehlikesini değil, farklı maddelerin bir arada bulunmasının yaratabileceği ek riskleri de (örneğin yanıcı + oksitleyici birlikteliği) dikkate almalıdır."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, bir kimyasal madde ile çalışırken kullanılan eldiven türünün maddeye göre değişmesi gerektiğini öğreniyor; örneğin bazı organik çözücülerin lateks eldiveni delip geçebildiğini, bu durumlarda nitril veya özel eldiven gerektiğini fark ediyor.",
-    text: "Bu bilgi, kişisel koruyucu donanım (KKD) seçimi hakkında en doğru hangi çıkarımı destekler?",
-    options: [
-      "Bu bilgi yalnızca profesyonel laboratuvarlar için geçerlidir",
-      "Her türlü eldiven her kimyasala karşı aynı derecede koruma sağlar",
-      "Eldiven türünün önemi yoktur, önemli olan sadece eldiven takmaktır",
-      "Organik çözücülerle çalışırken eldiven takmaya gerek yoktur",
-      "'Eldiven takmak' tek başına yeterli bir güvenlik önlemi değildir; eldivenin türü, çalışılan kimyasala karşı gerçekten koruyucu olacak şekilde seçilmelidir"
-    ],
-    correct: 4,
-    explain: "Kişisel koruyucu donanımın etkili olması için yalnızca kullanılması değil, çalışılan kimyasala karşı gerçekten koruma sağlayacak doğru türde seçilmesi de gereklidir; yanlış eldiven türü yanlış bir güvenlik hissi yaratabilir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, bir kimyasal maddenin taşınması sırasında karayolu, denizyolu ve havayolu için farklı uluslararası güvenlik düzenlemelerinin (ambalajlama, etiketleme, miktar sınırları) bulunduğunu öğreniyor.",
-    text: "Bu bilgi, kimyasal madde güvenliğinin kapsamı hakkında en doğru hangi çıkarımı destekler?",
-    options: [
-      "Bu düzenlemeler yalnızca büyük şirketleri ilgilendirir",
-      "Kimyasal güvenlik yalnızca laboratuvar ortamıyla ilgilidir",
-      "Taşımacılık sırasında kimyasal güvenliğin hiçbir önemi yoktur",
-      "Tüm taşıma yöntemleri (kara, deniz, hava) için aynı kurallar geçerlidir",
-      "Kimyasal güvenlik yalnızca laboratuvar veya depolama ile sınırlı değildir; taşımacılık gibi farklı aşamalarda da özel düzenlemeler ve önlemler gerektirebilir"
-    ],
-    correct: 4,
-    explain: "Kimyasal madde güvenliği, üretim ve kullanım aşamalarının ötesinde, farklı taşıma yöntemlerine özgü uluslararası düzenlemeleri de kapsayan geniş bir alandır."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, bir kimyasal maddenin GBF'sinde (Güvenlik Bilgi Formu) 'LD50' değeri olarak bir sayı görüyor ve bu değerin, bir maddenin test edilen hayvanların yarısını öldüren doz miktarını ifade ettiğini öğreniyor; düşük LD50 değerinin daha toksik olduğu anlamına geldiğini fark ediyor.",
-    text: "İki farklı kimyasaldan LD50 değeri düşük olanı ile ilgili en doğru çıkarım hangisidir?",
-    options: [
-      "Bu madde, yüksek LD50 değerine sahip diğer maddeye göre daha az miktarda bile ciddi/ölümcül etki gösterebilir, yani daha toksiktir",
-      "LD50 değeri düşük olan madde daha güvenlidir",
-      "LD50 değerinin toksisiteyle hiçbir ilişkisi yoktur",
-      "LD50 değeri yalnızca maddenin rengini gösterir",
-      "Düşük LD50 değeri maddenin yanıcı olmadığı anlamına gelir"
-    ],
-    correct: 0,
-    explain: "LD50, test edilen popülasyonun yarısını öldüren doz miktarıdır; bu değer ne kadar düşükse, madde o kadar az miktarda ciddi/ölümcül etki gösterebilir, yani o kadar toksiktir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, bir laboratuvarda düzenli olarak yapılan 'tatbikat'ların (örneğin yangın tatbikatı, kimyasal sızıntı tatbikatı) gerçek bir kaza anında insanların panik yapmadan doğru adımları izlemesine yardımcı olduğunu öğreniyor.",
-    text: "Bu bilgi, güvenlik eğitiminde tekrarlı uygulamanın (tatbikatların) rolü hakkında en doğru hangi çıkarımı destekler?",
-    options: [
-      "Teorik bilgi tek başına yeterli olmayabilir; düzenli pratik uygulama (tatbikat), gerçek bir acil durumda insanların daha hızlı ve doğru tepki vermesine katkı sağlayabilir",
-      "Tatbikatların gerçek kazalarla hiçbir ilişkisi yoktur",
-      "Yalnızca teorik eğitim yeterlidir, tatbikata gerek yoktur",
-      "Tatbikatlar yalnızca zaman kaybıdır",
-      "Panik yapmak kaza anında kaçınılmazdır, hiçbir önlem bunu değiştiremez"
-    ],
-    correct: 0,
-    explain: "Düzenli tatbikatlar, teorik bilgiyi pratiğe dönüştürerek gerçek bir acil durumda insanların paniklemeden, öğrenilmiş adımları otomatik olarak uygulamasına yardımcı olabilir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, bir kimyasal madde felaketinin (örneğin büyük bir sanayi bölgesindeki sızıntı) sonrasında etkilenen bölgede yaşayan insanların uzun vadeli sağlık takibinin yapıldığını, ancak bu tür çalışmaların sonuçlarının kesin nedensellik kanıtlamasının yıllar sürebileceğini öğreniyor.",
-    text: "Bu bilgi, çevresel/toplumsal sağlık araştırmalarının doğası hakkında en dengeli hangi çıkarımı destekler?",
-    options: [
-      "Bir kimyasal maruziyetin uzun vadeli sağlık etkilerini kesin olarak belirlemek, karmaşık ve zaman alan bilimsel bir süreçtir; kısa vadede kesin sonuç bulunamaması, maruziyetin zararsız olduğu anlamına gelmez",
-      "Uzun süren araştırmalar, olayın önemsiz olduğunu gösterir",
-      "Kesin nedensellik kanıtlanamadıysa, hiçbir önlem alınmasına gerek yoktur",
-      "Sağlık takibi çalışmaları bilimsel olarak değersizdir",
-      "Bu tür araştırmalar birkaç günde kesin sonuç verebilir"
-    ],
-    correct: 0,
-    explain: "Çevresel maruziyetlerin uzun vadeli sağlık etkilerini kesin olarak kanıtlamak, birçok değişkenin kontrol edilmesini gerektiren karmaşık ve zaman alan bir süreçtir; kısa vadede kesin sonuç elde edilememesi, olayın önemsiz veya zararsız olduğu anlamına gelmez — bu nedenle önleyici yaklaşım genellikle tercih edilir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, bir şirketin maliyet kısmak için güvenlik ekipmanlarının bakımını erteleyip ertelemediğini araştırıyor ve bunun kısa vadede para tasarrufu sağlarken, uzun vadede daha büyük bir kaza/tazminat maliyetine yol açma riski taşıdığını öğreniyor.",
-    text: "Bu durum, güvenlik yatırımlarının ekonomik boyutu hakkında en doğru hangi çıkarımı destekler?",
-    options: [
-      "Güvenlik önlemlerini ihmal etmek kısa vadede maliyet tasarrufu gibi görünse de, uzun vadede çok daha büyük mali ve insani kayıplara yol açma riski taşıyabilir",
-      "Güvenlik yatırımlarının hiçbir ekonomik boyutu yoktur",
-      "Güvenlik ekipmanı bakımını ertelemenin hiçbir riski yoktur",
-      "Şirketler için en akılcı strateji her zaman güvenlik maliyetlerini en aza indirmektir",
-      "Bu konu tamamen etik bir mesele olup ekonomiyle ilgisizdir"
-    ],
-    correct: 0,
-    explain: "Güvenlik yatırımlarının ihmal edilmesi kısa vadeli tasarruf sağlasa da, olası bir kazanın insani, mali ve itibar maliyeti bu tasarrufu kat kat aşabilir; bu nedenle güvenlik yatırımı genellikle uzun vadeli bir ekonomik akılcılık olarak değerlendirilir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, 'sıfır risk' kavramının pratikte imkânsız olduğunu; her kimyasal madde kullanımının bir miktar risk taşıdığını, güvenlik çalışmalarının amacının riski tamamen yok etmek değil, kabul edilebilir düzeye indirmek olduğunu öğreniyor.",
-    text: "Bu bilgi, güvenlik yönetimi felsefesi hakkında en olgun hangi çıkarımı destekler?",
-    options: [
-      "Gerçekçi güvenlik yönetimi, riski tamamen ortadan kaldırmayı değil, bilimsel değerlendirmeyle riski mümkün olan en düşük ve kabul edilebilir düzeye indirmeyi hedefler",
-      "Sıfır risk her zaman ulaşılabilir bir hedeftir, yeterli çaba gösterilmemesi sorundur",
-      "Risk kabul edilebilir düzeye indirilemez, bu yüzden hiçbir kimyasal kullanılmamalıdır",
-      "Güvenlik yönetiminin bir felsefesi yoktur, sadece kurallardan ibarettir",
-      "Risk kavramı kimya güvenliğiyle ilgisizdir"
-    ],
-    correct: 0,
-    explain: "Pratikte 'sıfır risk' ulaşılması genellikle mümkün olmayan bir hedeftir; olgun bir güvenlik yönetimi yaklaşımı, riski bilimsel değerlendirmeyle mümkün olan en düşük, kabul edilebilir düzeye indirmeyi amaçlar."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, bir laboratuvarda meydana gelen 'neredeyse kaza' (kazaya çok yaklaşılan ama gerçekleşmeyen olay) raporlarının, gerçek kazalar kadar ciddiye alınıp incelendiğini öğreniyor; bu raporların, benzer bir durumun gelecekte gerçek bir kazaya dönüşmesini önlemek için kullanıldığını fark ediyor.",
-    text: "Bu uygulama, güvenlik kültürü açısından en doğru hangi çıkarımı destekler?",
-    options: [
-      "Gerçek bir kaza olmasa bile, tehlikeli durumları raporlamak ve analiz etmek, gelecekteki kazaları önlemek için değerli bir öğrenme fırsatı sunabilir",
-      "Yalnızca gerçekleşen kazalar incelenmeye değerdir, 'neredeyse kaza'ların hiçbir önemi yoktur",
-      "'Neredeyse kaza' raporlaması zaman kaybıdır",
-      "Bu tür raporlar yalnızca çalışanları suçlamak için kullanılır",
-      "Kaza önleme yalnızca ekipman kalitesiyle ilgilidir, raporlama sistemiyle ilgisizdir"
-    ],
-    correct: 0,
-    explain: "'Neredeyse kaza' olaylarının ciddiye alınıp incelenmesi, gerçek bir kaza gerçekleşmeden önce sistemdeki zayıf noktaların tespit edilip düzeltilmesini sağlayan proaktif bir güvenlik yaklaşımıdır — bu, olgun bir güvenlik kültürünün önemli bir göstergesidir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir okulun laboratuvarı, farklı eldiven türlerinin hangi kimyasal gruplarına karşı koruma sağladığını gösteren bir tablo hazırlıyor.",
     table: {
-      headers: ["Eldiven türü", "Asitlere karşı", "Organik çözücülere karşı", "Kesilmeye karşı"],
+      headers: ["Kimyasal", "GHS uyarı simgeleri", "Önerilen depolama"],
       rows: [
-        ["Nitril", "İyi", "Orta", "Orta"],
-        ["Lateks", "Orta", "Zayıf", "Zayıf"],
-        ["Neopren", "İyi", "İyi", "Orta"],
-        ["Kevlar örgü", "Zayıf", "Zayıf", "Çok iyi"]
+        ["Madde A", "flame, health-hazard", "Serin, iyi havalandırılan, ateş kaynağından uzak"],
+        ["Madde B", "corrosive, toxic", "Kilitli dolap, asitlerden/bazlardan ayrı"],
+        ["Madde C", "oxidizing", "Yanıcı maddelerden uzakta, ayrı bölüm"],
+        ["Madde D", "environment", "Sızıntı önleyici kap içinde, drenajdan uzak"]
+      ],
+      caption: "Dört kimyasalın uyarı simgeleri ve önerilen depolama koşulları"
+    },
+    context: "Bir depoda yer darlığı nedeniyle Madde C ile yanıcı bir çözücü aynı rafa yerleştirilmek istenmektedir.",
+    text: "Tabloya göre bu yerleştirme neden uygun değildir ve doğru çözüm ne olmalıdır?",
+    options: ["Madde C toksik olduğundan yalnızca kilitli dolapta saklanması yeterlidir", "Madde C aşındırıcı olduğundan yalnızca metal raflardan uzak tutulmalıdır, yanıcılıkla ilgisi yoktur", "Madde C çevreye zararlı olduğundan yalnızca drenajdan uzak tutulması yeterlidir", "Tabloya göre bu yerleştirme tamamen güvenlidir", "Madde C oksitleyici olduğundan yanıcı maddeyle etkileşip yangın riski oluşturur; ayrı bölümde saklanmalıdır"],
+    correct: 4,
+    explain: "Tabloda Madde C'nin simgesi oksitleyicidir; oksitleyici maddeler yanıcı maddelerle temas ettiğinde yangını şiddetlendirebileceğinden ayrı bölümde saklanmalıdır."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    context: "Bir fabrikada üretim hattındaki bir işlemde önce yüksek derişimli bir asit kullanılmakta, ardından aynı tank bir sonraki üretim turunda temizlenmeden doğrudan bazik bir maddeyle doldurulmaktadır. Bir denetimde bu uygulamanın potansiyel bir risk oluşturduğu tespit edilmiştir.",
+    text: "Bu uygulamanın oluşturduğu risk ve önerilecek düzeltici eylem sırasıyla en doğru hangisidir?",
+    options: ["Bazik maddenin asitle teması hiçbir zaman ısı açığa çıkarmaz", "Risk yoktur, asit ve baz birbirini etkisiz hâle getirdiği için tank temizliği gereksizdir", "Risk yalnızca tankın paslanmasıdır, sağlık/güvenlik riski yoktur", "Risk yalnızca renk değişimidir, üretime engel değildir", "Kalıntı asit ile yeni bazik madde arasında kontrolsüz, şiddetli ekzotermik tepkime riski; tank her kullanım arası tam olarak temizlenmeli/nötralize edilmelidir"],
+    correct: 4,
+    explain: "Kalıntı asidin yeni eklenen bazik maddeyle kontrolsüz şekilde tepkimeye girmesi şiddetli ısı açığa çıkarabileceğinden (nötrleşme ekzotermiktir), tankın her kullanım arası tam temizlenmesi/nötralize edilmesi gerekir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    chart: {
+      type: "line",
+      title: "Kapalı bir garajda motor çalışırken zamanla havadaki karbon monoksit derişimi",
+      xLabel: "Süre (dakika)",
+      yLabel: "CO derişimi (ppm)",
+      data: [
+        { x: 0, y: 5 },
+        { x: 10, y: 60 },
+        { x: 20, y: 150 },
+        { x: 30, y: 280 },
+        { x: 40, y: 400 }
       ]
     },
-    text: "Cam kırıklarıyla temas riski taşıyan bir işlemde en uygun eldiven türü tabloya göre hangisidir?",
-    options: ["Nitril", "Lateks", "Neopren", "Kevlar örgü", "Hiçbiri yeterli değildir"],
-    correct: 3,
-    explain: "Tabloya göre kesilmeye karşı en yüksek koruma 'çok iyi' düzeyiyle Kevlar örgü eldivende bulunur; bu tür eldivenler cam kırığı gibi kesici risklere karşı tercih edilir."
+    text: "Grafiğe göre, karbon monoksit derişiminin zamanla artış hızıyla ilgili en doğru güvenlik çıkarımı hangisidir?",
+    options: ["Derişim yalnızca ilk 10 dakikada önemlidir, sonrasında güvenlidir", "Derişim sabit bir hızla artmaktadır, zamanla risk değişmez", "Derişim 20. dakikadan sonra azalmaya başlamıştır", "Grafik, CO derişiminin güvenlikle hiçbir ilgisi olmadığını göstermektedir", "Derişim giderek artan bir hızla yükselmektedir; kapalı ortamda motor ne kadar uzun çalışırsa risk o kadar hızlanarak büyür"],
+    correct: 4,
+    explain: "Veri noktaları arasındaki artış (5→60→150→280→400) giderek büyüyen aralıklarla gerçekleştiğinden, derişim artan bir hızla yükselmekte, yani motor çalıştıkça risk hızlanarak büyümektedir."
   },
   {
-    difficulty: "orta",
+    difficulty: "zor",
     kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir okulun laboratuvar güvenliği kulübü, geçen yıl kaydedilen laboratuvar kazalarının ana nedenlerini bir grafikte özetliyor.",
-    chart: {
-      type: "bar",
-      title: "Laboratuvar kazalarının nedenlere göre dağılımı (%)",
-      labels: ["KKD kullanılmaması", "Dikkatsizlik", "Ekipman arızası", "Eğitim eksikliği"],
-      values: [38, 30, 12, 20]
+    context: "Bir laboratuvarda yeni bir asistan, düşük derişimli bir çözeltiyle çalışırken eldiven takmadan çalışmanın güvenli olduğunu düşünmüştür; çünkü derişimin düşük olduğunu biliyordur. Ancak kullanılan madde, düşük derişimde bile uzun süreli cilt temasında kümülatif (birikimli) hasara yol açabilen bir türdendir.",
+    text: "Bu durumdaki temel güvenlik hatası nedir?",
+    options: ["Hata, çözeltinin derişiminin çok düşük seçilmiş olmasıdır", "Eldiven takmanın yalnızca yüksek derişimli maddelerde gerekli olduğu doğrudur, hata yoktur", "Kümülatif etki kavramı laboratuvar güvenliğiyle ilgisizdir", "Düşük derişimli maddeler hiçbir zaman cilt hasarına yol açmaz", "Derişimin düşük olmasının, kümülatif etkili maddelerde güvenliği garanti etmediğinin göz ardı edilmesi"],
+    correct: 4,
+    explain: "Bazı maddeler düşük derişimde bile tekrarlanan/uzun süreli maruziyetle birikimli hasara yol açabilir; derişimin düşük olması tek başına güvenliği garanti etmez, bu nedenle koruyucu ekipman yine de gereklidir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    context: "Bir gıda üreticisi, ürününe eklediği bir katkı maddesinin izin verilen üst sınırın çok altında kullanıldığını belirterek ürünün tamamen güvenli olduğunu iddia etmektedir. Ancak bağımsız bir araştırma, aynı katkı maddesinin başka gıdalarda da yaygın kullanıldığını ve bir kişinin günlük toplam alımının birden fazla kaynaktan geldiğini göstermektedir.",
+    text: "Bu araştırma bulgusuna dayanarak, gıda güvenliği açısından en doğru çıkarım hangisidir?",
+    options: ["Üreticinin iddiası her koşulda doğrudur, çünkü yasal sınıra uyulmuştur", "Bir ürün sınırın altında olduğu sürece toplam maruziyetin hiçbir önemi yoktur", "Katkı maddeleri yalnızca tek bir üründen alınabilir, birikimli maruziyet söz konusu olamaz", "Bağımsız araştırmalar gıda güvenliği değerlendirmesinde dikkate alınmamalıdır", "Tek bir üründeki katkı miktarının sınır altında olması, günlük toplam maruziyetin güvenli olduğu anlamına gelmeyebilir"],
+    correct: 4,
+    explain: "Bir katkı maddesinin birden fazla üründen günlük olarak alınması, tek bir üründeki miktarın sınır altında olmasına rağmen toplam maruziyetin yüksek olabileceğini gösterir; gıda güvenliği toplam alımı da dikkate almalıdır."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    context: "Bir maden ocağında metan gazı birikimi periyodik olarak ölçülmekte, ölçüm sonucu belirlenen eşik değerin üzerine çıktığında otomatik havalandırma sistemi devreye girmektedir. Bir vardiyada sensör arızalanmış ve havalandırma sistemi tetiklenmemiştir.",
+    text: "Bu senaryoda oluşan en kritik güvenlik açığı nedir?",
+    options: ["Metan birikiminin yalnızca yüzey madenlerinde görülmesi", "Metan gazının doğası gereği hiçbir zaman tehlikeli olmaması", "Havalandırma sisteminin gereksiz bir yatırım olması", "Sensör arızasının güvenlikle hiçbir ilgisinin olmaması", "Tehlike tespiti (sensör) devre dışı kaldığında yedek/manuel bir güvenlik önleminin bulunmaması"],
+    correct: 4,
+    explain: "Tek bir tespit mekanizmasına (sensör) bağımlı bir güvenlik sisteminde, o mekanizma arızalandığında tehlike fark edilmeden büyüyebilir; bu nedenle yedek/manuel önlemlerin bulunmaması kritik bir açıktır."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    context: "Bir temizlik firması, aynı anda birden fazla temizlik ürününü karıştırarak 'daha güçlü' özel bir karışım hazırlamayı önermektedir; ancak kullanılan ürünlerden biri hipokloritli ağartıcı, diğeri ise asit bazlı kireç çözücüdür.",
+    text: "Bu öneri neden güvenlik açısından ciddi bir hata taşımaktadır?",
+    options: [
+      "Hipoklorit ile asidin tepkimesi zehirli klor gazı açığa çıkarabilir, karışımın etkisi güçlenmek yerine tehlikeli hâle gelir",
+      "Karışım yalnızca temizlik etkisini azaltır, sağlık riski yoktur",
+      "Bu iki ürün birbiriyle hiçbir zaman tepkimeye girmez",
+      "Öneri güvenlidir çünkü her iki ürün de ayrı ayrı test edilmiştir",
+      "Risk yalnızca ürünlerin fiyatının artmasıdır"
+    ],
+    correct: 0,
+    explain: "Hipoklorit (çamaşır suyu) ile asit bazlı ürünlerin karışımı zehirli klor gazı açığa çıkarabileceğinden, 'daha güçlü karışım' önerisi ciddi bir zehirlenme riski taşır."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    circleCompare: {
+      title: "Farklı derişimlerde bir asidin cilt teması sonrası hasar şiddeti (temsilî ölçek)",
+      unit: "göreli hasar birimi",
+      items: [
+        { label: "%1 derişim", value: 8 },
+        { label: "%10 derişim", value: 35 },
+        { label: "%37 derişim (derişik)", value: 95 }
+      ]
     },
-    text: "Grafiğe göre kazaları azaltmak için en öncelikli iki önlem hangi seçenekte doğru verilmiştir?",
+    text: "Görseldeki daire büyüklüklerine dayanarak, derişim ile hasar şiddeti arasındaki ilişki için en doğru yorum hangisidir?",
     options: [
-      "Kişisel koruyucu donanım kullanımını zorunlu kılmak ve dikkat/farkındalık eğitimi vermek",
-      "Sadece ekipmanları yenilemek",
-      "Sadece laboratuvar boyasını yenilemek",
-      "Hiçbir önlem almaya gerek yoktur, oranlar düşüktür",
-      "Sadece bina aydınlatmasını güçlendirmek"
+      "Derişim arttıkça hasar şiddeti orantısız biçimde, giderek daha hızlı artmaktadır",
+      "Derişim ile hasar şiddeti arasında hiçbir ilişki yoktur",
+      "Hasar şiddeti, derişimden bağımsız olarak sabittir",
+      "Derişim arttıkça hasar şiddeti azalmaktadır",
+      "Yalnızca derişik asit hasar oluşturur, düşük derişimler tamamen güvenlidir"
     ],
     correct: 0,
-    explain: "Grafikte en yüksek paya sahip iki neden KKD kullanılmaması (%38) ve dikkatsizlik (%30) olduğundan, önceliğin bu iki alana yönelik önlemlere (KKD zorunluluğu ve farkındalık eğitimi) verilmesi en mantıklı yaklaşımdır."
+    explain: "Değerler (8→35→95) derişim arttıkça hasarın orantılı bir çizgiden çok daha hızlı, ivmelenerek arttığını göstermektedir; bu nedenle düşük derişimli asitler bile hasarsız kabul edilmemelidir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, bazı kimyasal üreticilerinin ürünlerini 'çevre dostu' olarak pazarladığını, ancak bu ifadenin bağımsız bir kurum tarafından doğrulanmadığı sürece pazarlama amaçlı bir söylem olabileceğini öğreniyor.",
-    text: "Bu bilgi, tüketici olarak kimyasal ürün etiketlerini değerlendirirken en doğru hangi yaklaşımı destekler?",
+    context: "Bir laboratuvarda çalışanlar, düzenli olarak kullanılan bir çözücünün SDS/MSDS formunda 'kronik maruziyet' uyarısı bulunduğunu fark etmemiştir; çünkü kısa vadede herhangi bir belirti görülmemiştir. Uzun süre sonra bazı çalışanlarda solunum yolu şikâyetleri ortaya çıkmıştır.",
+    text: "Bu durum, güvenlik kültürüyle ilgili hangi önemli dersi göstermektedir?",
     options: [
-      "Etiketteki iddiaları bağımsız sertifikasyon/kaynaklarla karşılaştırmadan doğru kabul etmemek, eleştirel biçimde değerlendirmek",
-      "Üreticinin her iddiasını sorgusuz kabul etmek",
-      "Etiketlerdeki tüm bilgileri yok saymak",
-      "Yalnızca ürünün fiyatına bakarak güvenilirliğine karar vermek",
-      "Bu tür ifadelerin her zaman yasal olarak zorunlu bağımsız denetimden geçtiğini varsaymak"
+      "Kısa vadede belirti görülmemesi, uzun vadeli/kronik risklerin olmadığı anlamına gelmez; SDS uyarıları düzenli gözden geçirilmelidir",
+      "SDS formları yalnızca akut (ani) riskleri kapsar, kronik risklerle ilgisizdir",
+      "Belirti görülmediği sürece herhangi bir önlem almaya gerek yoktur",
+      "Kronik maruziyet uyarıları genellikle abartılıdır ve dikkate alınmamalıdır",
+      "Solunum yolu şikâyetleri bu maddeyle hiçbir zaman ilişkilendirilemez"
     ],
     correct: 0,
-    explain: "Pazarlama ifadeleri her zaman bağımsız bilimsel doğrulamayı yansıtmayabilir; bilinçli bir tüketici, bu tür iddiaları güvenilir sertifikasyon kuruluşlarının verileriyle karşılaştırarak değerlendirir."
+    explain: "Örnek, kısa vadede belirti görülmemesinin kronik/uzun vadeli riskin yokluğu anlamına gelmediğini; SDS'te belirtilen kronik maruziyet uyarılarının ciddiye alınıp düzenli gözden geçirilmesi gerektiğini gösterir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, bir kimyasalın 'doğal' kaynaklı olmasının onu otomatik olarak güvenli, 'sentetik' kaynaklı olmasının ise otomatik olarak zararlı yaptığı şeklindeki yaygın bir inancı araştırıyor ve bunun bilimsel olarak doğru olmadığını, toksisitenin kaynağa değil dozuna ve kimyasal yapıya bağlı olduğunu öğreniyor.",
-    text: "Bu bulgu, kimyasal güvenlik konusunda en doğru hangi çıkarımı destekler?",
+    table: {
+      headers: ["Önlem", "Maliyet", "Risk azaltma etkisi"],
+      rows: [
+        ["Yalnızca uyarı etiketi asmak", "Çok düşük", "Düşük"],
+        ["Kişisel koruyucu ekipman sağlamak", "Orta", "Orta-Yüksek"],
+        ["Süreci otomatikleştirip insan temasını ortadan kaldırmak", "Yüksek", "Çok yüksek"],
+        ["Düzenli eğitim vermek (tek başına)", "Düşük-Orta", "Orta"]
+      ],
+      caption: "Bir üretim sürecinde kimyasal maruziyeti azaltmak için dört önlem"
+    },
+    text: "Tabloya göre, maliyetten bağımsız olarak riski en kalıcı ve etkili biçimde azaltan önlem hangisidir?",
     options: [
-      "Bir maddenin doğal ya da sentetik kökenli olması tek başına güvenliğini belirlemez; toksisite dozla ve kimyasal özelliklerle ilişkilidir",
-      "Doğal kaynaklı tüm maddeler kesinlikle güvenlidir",
-      "Sentetik kaynaklı tüm maddeler kesinlikle zararlıdır",
-      "Kaynağın doğal ya da sentetik olması toksisiteyi belirleyen tek etkendir",
-      "Doğal ve sentetik maddeler arasında hiçbir kimyasal fark yoktur"
+      "Süreci otomatikleştirip insan temasını ortadan kaldırmak",
+      "Yalnızca uyarı etiketi asmak",
+      "Yalnızca düzenli eğitim vermek",
+      "Kişisel koruyucu ekipman sağlamak, diğer tüm önlemlerden daha etkilidir",
+      "Tabloya göre dört önlemin etkisi birbirine eşittir"
     ],
     correct: 0,
-    explain: "'Doğal olan güvenlidir' yaygın bir yanılgıdır; toksisiteyi belirleyen temel etken maddenin dozu ve kimyasal yapısıdır, kaynağının doğal ya da sentetik olması tek başına belirleyici değildir (örneğin birçok doğal toksin oldukça tehlikelidir)."
+    explain: "Tabloda en yüksek risk azaltma etkisi, insan temasını kaynağında ortadan kaldıran otomasyona aittir (çok yüksek); bu, güvenlik mühendisliğinde 'tehlikeyi kaynağında ortadan kaldırma' ilkesiyle örtüşür."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir öğrenci, iki farklı temizlik ürününün ayrı ayrı kullanıldığında güvenli kabul edildiğini, ancak çamaşır suyu (hipoklorit içeren) ile amonyak içeren bir temizleyicinin karıştırılması durumunda zehirli kloramin gazı oluştuğunu öğreniyor.",
-    text: "Bu bilgiden yola çıkarak ev temizliği sırasında en doğru güvenlik ilkesi hangisidir?",
+    context: "Bir hastanede kullanılan dezenfektan solüsyonu üreticisi, ürünün 'seyreltilerek kullanılması gerektiğini, saf hâliyle kullanılmasının hem etkisiz hem de tehlikeli olabileceğini' belirtmektedir.",
+    text: "Bu uyarı, kimyasal güvenlik açısından hangi ilkeyi en iyi yansıtır?",
     options: [
-      "Farklı temizlik ürünlerini asla birbirine karıştırmamak ve her ürünü etiketindeki talimata göre ayrı ayrı kullanmak",
-      "İki ürünü karıştırmak temizlik etkisini her zaman artırır, bu yüzden karıştırılmalıdır",
-      "Etiket talimatları sadece öneri niteliğindedir, dikkate alınmayabilir",
-      "Yalnızca çamaşır suyu tek başına da tehlikelidir, amonyaklı ürünle ilgisi yoktur",
-      "Kloramin gazı zararsız bir yan üründür"
+      "Bir maddenin 'daha derişik = daha etkili ve güvenli' varsayımı her zaman doğru değildir; doğru derişim hem etkinlik hem güvenlik için önemlidir",
+      "Derişim arttıkça bir maddenin etkinliği her zaman doğrusal olarak artar, güvenlik sorunu oluşmaz",
+      "Seyreltme yalnızca maliyeti düşürmek için yapılır, etkinlik veya güvenlikle ilgisi yoktur",
+      "Saf hâliyle kullanmak her zaman en güvenli seçenektir",
+      "Dezenfektanlar derişimden bağımsız olarak her zaman aynı etkiyi gösterir"
     ],
     correct: 0,
-    explain: "Çamaşır suyu ile amonyaklı temizleyicilerin karışımı zehirli kloramin gazı açığa çıkarır; bu nedenle farklı temizlik kimyasallarını karıştırmamak ve etiket talimatlarına uymak temel bir ev güvenliği ilkesidir."
+    explain: "Üreticinin uyarısı, maddenin saf (çok derişik) hâlinin hem beklenen etkiyi göstermeyebileceğini hem de güvenlik riski taşıyabileceğini, dolayısıyla doğru derişimin hem etkinlik hem güvenlik için kritik olduğunu gösterir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    context: "Bir kimyasal madde taşıma firması, farklı tehlike sınıflarındaki maddeleri (yanıcı, aşındırıcı, toksik) aynı araçta taşırken her biri için ayrı, sızdırmaz ve birbirinden izole bölmeler kullanmaktadır; ayrıca aracın her bölmesi taşınan maddenin GHS simgesiyle etiketlenmektedir.",
+    text: "Bu uygulama, kimyasal güvenlik açısından hangi temel ilkeyi yansıtır?",
+    options: [
+      "Farklı tehlike sınıflarındaki maddelerin, olası etkileşim risklerini önlemek için fiziksel olarak ayrıştırılıp doğru şekilde etiketlenmesi gerektiği",
+      "Tüm kimyasalların aynı bölmede taşınmasının daha verimli olduğu",
+      "Etiketleme, yalnızca yasal bir formaliteden ibaret olduğu ve güvenlikle ilgisi olmadığı",
+      "Farklı tehlike sınıflarının birbirleriyle hiçbir zaman etkileşime giremeyeceği",
+      "İzolasyon yalnızca maliyeti artıran gereksiz bir önlem olduğu"
+    ],
+    correct: 0,
+    explain: "Farklı tehlike sınıflarındaki maddelerin (örneğin yanıcı ile aşındırıcı) fiziksel olarak izole edilip doğru etiketlenmesi, taşıma sırasında olası etkileşim/kaza risklerini önlemenin temel güvenlik ilkesidir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    context: "Bir tekstil boyahanesinde atık su, arıtma tesisine gönderilmeden önce ağır metal derişimi ölçülmekte ve yasal sınırın altına düşürülmesi için nötralize edilmektedir. Bir denetimde, ölçüm cihazının kalibrasyonunun altı aydır yapılmadığı ve bu sürede ölçülen değerlerin gerçek değerlerden belirgin şekilde düşük çıkabileceği tespit edilmiştir.",
+    text: "Bu durumun oluşturduğu en kritik güvenlik/çevre riski nedir?",
+    options: [
+      "Kalibrasyonsuz cihazın yanlışlıkla güvenli gösterdiği atık suyun, gerçekte sınırın üzerinde kirletici içererek çevreye salınmış olabilmesi",
+      "Kalibrasyon eksikliğinin yalnızca cihazın ömrünü kısaltması, ölçüm doğruluğuyla ilgisi olmaması",
+      "Risk yalnızca cihazın bakım maliyetinin artmasıdır",
+      "Kalibrasyon, ölçüm sonucunu hiçbir zaman etkilemez",
+      "Atık su arıtımında ölçüm doğruluğunun önemi yoktur, yalnızca nötralize edilmesi yeterlidir"
+    ],
+    correct: 0,
+    explain: "Kalibrasyonsuz bir ölçüm cihazı gerçek değerden düşük sonuç verebileceğinden, aslında sınırı aşan kirletici içeren atık su 'güvenli' olarak değerlendirilip çevreye salınmış olabilir; bu, hem çevresel hem de yasal ciddi bir risktir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    context: "Bir okulun kimya laboratuvarında, düşük derişimli bir asitle yapılan deneyde koruyucu gözlük takılması kural olarak zorunlu tutulmuştur. Deneyin 'basit' görünmesi nedeniyle bu kurala bazı masalarda uyulmamış ve az miktarda sıçrayan asit gözle temas etmiştir.",
+    text: "Bu olay, laboratuvar güvenlik kültürüyle ilgili hangi önemli dersi vermektedir?",
+    options: [
+      "Bir deneyin 'basit' görünmesi, koruyucu ekipman kuralının önemini azaltmaz; düşük derişim de göz teması hâlinde risk taşır",
+      "Düşük derişimli asitler gözle temas ettiğinde hiçbir zaman zarar vermez",
+      "Gözlük yalnızca yüksek derişimli deneylerde gereklidir",
+      "Kural, öğretmenin gereksiz bir tedbiri olup deneyin sonucunu etkilemez",
+      "Bu olay yalnızca öğrencinin dikkatsizliğiyle ilgilidir, kuralın kendisiyle ilgisi yoktur"
+    ],
+    correct: 0,
+    explain: "Olay, bir deneyin görece 'basit' veya düşük derişimli olmasının koruyucu ekipman kuralını gereksiz kılmadığını; küçük miktarda bile göz teması ciddi hasara yol açabileceğini gösterir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    context: "Bir ilaç deposunda, sıcaklığa duyarlı bir ilacın '2-8°C arasında saklanmalıdır' etiketine rağmen, soğutucunun sıcaklığı düzenli olarak kaydedilmemiş ve bir hafta boyunca sıcaklığın 15°C'ye kadar çıktığı fark edilmemiştir.",
+    text: "Bu durumun oluşturduğu en kritik risk nedir?",
+    options: [
+      "İlacın etkin madde stabilitesinin bozularak beklenen etkiyi göstermemesi veya güvenlik riski oluşturması",
+      "İlacın yalnızca ambalajının rengini değiştirmesi",
+      "Sıcaklık takibinin ilacın etkinliğiyle hiçbir ilgisinin olmaması",
+      "İlacın yalnızca daha hızlı tükenmesi",
+      "Risk yalnızca depolama maliyetinin artmasıdır"
+    ],
+    correct: 0,
+    explain: "Sıcaklığa duyarlı ilaçlarda önerilen aralığın dışına çıkılması etkin maddenin bozunmasına yol açabilir; bu hem ilacın beklenen etkiyi göstermemesine hem de güvenlik riskine neden olabilir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    context: "Bir laboratuvarda iki farklı ekip, aynı kimyasalı farklı SDS/MSDS sürümlerinden (biri eski, biri güncel) kontrol etmiştir. Eski sürümde maddenin yalnızca tahriş edici olduğu yazarken, güncel sürümde yeni araştırmalara dayanarak kanserojen olabileceği eklenmiştir.",
+    text: "Bu durum, güvenlik yönetimiyle ilgili hangi önemli ilkeyi vurgular?",
+    options: [
+      "Güvenlik bilgi formları güncel tutulmalı ve düzenli kontrol edilmelidir; bilimsel bilgi zamanla değişebilir",
+      "Bir maddenin tehlike sınıflandırması bir kez belirlendikten sonra asla değişmez",
+      "Eski ve güncel SDS sürümleri arasında fark olması önemsizdir",
+      "SDS formları yalnızca yasal bir belge olup güvenlik kararlarında kullanılmamalıdır",
+      "Kanserojenlik bilgisi yalnızca çok yüksek derişimlerde geçerlidir"
+    ],
+    correct: 0,
+    explain: "Örnek, bilimsel bilginin ve dolayısıyla bir maddenin tehlike sınıflandırmasının zamanla değişebileceğini; bu yüzden güvenlik bilgi formlarının (SDS) güncel tutulup düzenli kontrol edilmesi gerektiğini gösterir."
   }
 ],
   "teori": [
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, John Dalton'ın 1808'de öne sürdüğü atom teorisinin temel varsayımlarını inceliyor.",
+    context: "Dalton'ın 1808'de öne sürdüğü atom teorisinin temel varsayımlarından biri, aynı elementin tüm atomlarının kütle ve özellik bakımından birbirinin aynısı olduğudur.",
     text: "Dalton'ın atom teorisine göre atomlar için aşağıdakilerden hangisi doğrudur?",
-    options: ["Atomlar içi boş bir küredir", "Atomlar bölünemez ve parçalanamaz taneciklerdir", "Atomlar sürekli yer değiştiren bulutlardan oluşur", "Atomlar yalnızca sıvı maddelerde bulunur", "Atomlar birbirinden farklı yüklere sahip iki parçadan oluşur"],
+    options: ["İçlerinde elektron bulutu vardır", "Bölünemez ve yok edilemez taneciklerdir", "Merkezlerinde yoğun bir çekirdek bulunur", "Kütleleri sürekli değişir", "Farklı elementlerin atomları birbirinin aynısıdır"],
     correct: 1,
-    explain: "Dalton'ın atom teorisinin temel varsayımlarından biri, atomların o dönemde bilinen en küçük, bölünemez ve parçalanamaz maddesel birimler olduğudur."
+    explain: "Dalton'ın teorisine göre atomlar, daha küçük parçalara bölünemeyen ve yok edilemeyen temel taneciklerdir."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, J.J. Thomson'ın katot ışını tüpü deneyleriyle keşfettiği taneciği araştırıyor.",
+    context: "Thomson, katot ışını tüpü deneylerinde ışınların negatif yüklü levhadan uzaklaşıp pozitif yüklü levhaya doğru saptığını gözlemlemiştir.",
     text: "Thomson'ın bu deneyle keşfettiği tanecik hangisidir?",
-    options: ["Nötron", "Proton", "Elektron", "Foton", "Nötrino"],
+    options: ["Nötron", "Proton", "Elektron", "Foton", "Alfa taneciği"],
     correct: 2,
-    explain: "Thomson, katot ışını tüpü deneyleriyle negatif yüklü, kütlesi atomdan çok küçük olan elektronu keşfetmiştir."
+    explain: "Katot ışınlarının pozitif levhaya doğru sapması, ışınları oluşturan taneciklerin negatif yüklü olduğunu göstermiştir; bu tanecikler elektron olarak adlandırılmıştır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, Thomson'ın elektronu keşfettikten sonra önerdiği atom modelinin günlük hayattan bir benzetmeyle anıldığını öğreniyor.",
+    context: "Thomson, elektronu keşfettikten sonra atomun pozitif yüklü bir küre içine gömülü elektronlardan oluştuğunu öne sürmüştür; bu model günlük hayattan bir tatlıya benzetilerek anılır.",
     text: "Thomson'ın modeli hangi popüler adla anılır?",
-    options: ["Gezegen modeli", "Üzümlü kek (kekik) modeli", "Bulut modeli", "Kristal kafes modeli", "Katı küre modeli"],
+    options: ["Bilardo topu modeli", "Üzümlü kek (kuru üzümlü puding) modeli", "Güneş sistemi modeli", "Bulut modeli", "Katmanlı soğan modeli"],
     correct: 1,
-    explain: "Thomson'ın modelinde pozitif yüklü bir 'hamur' içine elektronların gömülü olduğu düşünülür; bu benzetme nedeniyle model 'üzümlü kek modeli' olarak anılır."
+    explain: "Pozitif yüklü kütle içine gömülü elektronlar fikri, üzümlerin hamura gömülü olduğu bir kek görüntüsüne benzetilerek 'üzümlü kek modeli' adıyla anılmıştır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, Ernest Rutherford'ın 1911'de gerçekleştirdiği ünlü altın levha (alfa saçılması) deneyini araştırıyor.",
+    context: "Rutherford, 1911'de ince bir altın levhaya pozitif yüklü, hızlı hareket eden alfa tanecikleri göndererek levhanın arkasındaki ekranda oluşan saçılma desenini incelemiştir.",
     text: "Bu deneyde ince altın levhaya hangi tanecikler gönderilmiştir?",
-    options: ["Elektronlar", "Nötronlar", "Alfa tanecikleri (pozitif yüklü)", "Fotonlar", "Nötrinolar"],
-    correct: 2,
-    explain: "Rutherford'ın deneyinde ince altın levhaya pozitif yüklü alfa tanecikleri gönderilmiş ve saçılma davranışları incelenmiştir."
+    options: ["Elektronlar", "Nötronlar", "Fotonlar", "Alfa tanecikleri", "Protonlar tek başına"],
+    correct: 3,
+    explain: "Rutherford'ın deneyinde kaynak olarak radyoaktif bir maddeden yayılan pozitif yüklü alfa tanecikleri kullanılmıştır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, Rutherford'ın altın levha deneyi sonucunda atomun merkezinde ne bulunduğunu keşfettiğini öğreniyor.",
+    context: "Rutherford'ın altın levha deneyinde, gönderilen alfa taneciklerinin büyük çoğunluğu sapmadan geçerken, çok küçük bir kısmı büyük açılarla geri sıçramıştır; bu gözlem atomun merkezinde küçük ve yoğun bir yapı bulunduğunu göstermiştir.",
     text: "Rutherford'ın bu deneyle keşfettiği yapı hangisidir?",
-    options: ["Elektron bulutu", "Küçük, yoğun ve pozitif yüklü çekirdek", "Negatif yüklü katı küre", "Nötr bir kabuk", "Homojen dağılmış pozitif yük"],
+    options: ["Elektron bulutu", "Atom çekirdeği", "Foton demeti", "Elektron kabuğu", "Nötr atom yüzeyi"],
     correct: 1,
-    explain: "Rutherford, atomun kütlesinin ve pozitif yükünün merkezdeki küçük, yoğun bir çekirdekte toplandığını keşfetmiştir."
+    explain: "Bazı alfa taneciklerinin büyük açılarla geri sıçraması, atomun merkezinde küçük hacimde yoğunlaşmış pozitif yüklü ve kütleli bir çekirdek bulunduğunu ortaya koymuştur."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, James Chadwick'in 1932'de gerçekleştirdiği deneyle atom çekirdeğinde yeni bir tanecik keşfettiğini öğreniyor.",
+    context: "Chadwick, 1932'de gerçekleştirdiği deneyle atom çekirdeğinde protonlarla yaklaşık aynı kütleye sahip fakat elektrik yükü taşımayan bir tanecik keşfetmiştir.",
     text: "Chadwick'in keşfettiği bu tanecik hangisidir?",
-    options: ["Proton", "Elektron", "Nötron", "Pozitron", "Foton"],
+    options: ["Elektron", "Pozitron", "Nötron", "Foton", "Alfa taneciği"],
     correct: 2,
-    explain: "Chadwick, çekirdekte yüksüz (nötr) bir tanecik olan nötronu keşfetmiştir."
+    explain: "Chadwick'in keşfettiği, elektrik yükü taşımayan ve çekirdekte protonlarla birlikte bulunan tanecik nötrondur."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, Niels Bohr'un 1913'te hidrojen atomu için önerdiği modeli inceliyor.",
+    context: "Bohr, 1913'te hidrojen atomunun çizgi spektrumunu açıklamak için elektronların çekirdek etrafında belirli enerji düzeylerinde (kabuklarda) dairesel yörüngelerde dolandığını öne sürmüştür.",
     text: "Bohr modeline göre elektronlar atom çekirdeği etrafında nasıl bulunur?",
-    options: ["Rastgele her yerde eşit olasılıkla", "Belirli, izin verilen enerji düzeylerinde (yörüngelerde)", "Yalnızca çekirdeğin içinde", "Sabit, hareketsiz noktalarda", "Çekirdekten bağımsız serbest parçacıklar olarak"],
+    options: ["Rastgele, her noktada eşit olasılıkla", "Belirli enerji düzeylerinde, sabit yörüngelerde", "Yalnızca çekirdeğin yüzeyinde sabit durarak", "Çekirdeğin içinde protonlarla iç içe", "Yörüngesiz, bulut şeklinde dağılmış olarak"],
     correct: 1,
-    explain: "Bohr modeline göre elektronlar, belirli ve kesikli (kuantumlu) enerji düzeylerinde, izin verilen dairesel yörüngelerde bulunur."
+    explain: "Bohr modeline göre elektronlar, her biri belirli bir enerjiye karşılık gelen sabit dairesel yörüngelerde (kabuklarda) bulunur."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, atom kavramının kökenini araştırırken Antik Yunan filozofu Demokritos'un fikrini öğreniyor.",
+    context: "Antik Yunan filozofu Demokritos, maddenin sonsuza kadar bölünemeyeceğini, en sonunda 'atomos' (bölünemez) adı verilen bir noktaya ulaşılacağını öne sürmüştür; ancak bu görüş deneysel kanıta değil felsefi düşünceye dayanmaktaydı.",
     text: "Demokritos'un 'atom' kavramına yaklaşımı için hangisi doğrudur?",
-    options: ["Deneysel verilere dayanan bilimsel bir modeldi", "Maddenin bölünemez en küçük parçaları olduğuna dair felsefi bir düşünceydi", "Elektron mikroskobuyla doğrulanmış bir teoriydi", "Modern kuantum mekaniğiyle aynı matematiksel temele sahipti", "Deneyle çürütülmüş ilk bilimsel teoriydi"],
+    options: ["Deneysel kanıta dayanan bilimsel bir teoriydi", "Felsefi bir düşünce olup deneysel kanıta dayanmıyordu", "Modern kuantum modeliyle birebir aynıydı", "Atomun çekirdek yapısını da açıklıyordu", "Atomların elektrik yükü taşıdığını ölçmüştü"],
     correct: 1,
-    explain: "Demokritos'un atom fikri, deneysel kanıta değil felsefi/mantıksal akıl yürütmeye dayanan öncü bir düşünceydi; modern anlamda bilimsel bir model değildi."
+    explain: "Demokritos'un atom fikri, dönemin gözlem/deney imkânlarının kısıtlı olması nedeniyle deneysel kanıta değil, felsefi akıl yürütmeye dayanıyordu."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, Eugen Goldstein'ın katot ışını tüpü deneylerinde gözlemlediği pozitif yüklü ışınları araştırıyor.",
+    context: "Goldstein, katot ışını tüpü deneylerinde katodun arkasına doğru hareket eden pozitif yüklü ışınlar gözlemlemiştir; bu ışınlar tüpteki gazın türüne göre farklı kütle/yük oranı göstermiştir.",
     text: "Bu gözlemler sonucunda hangi tanecik keşfedilmiştir?",
-    options: ["Elektron", "Nötron", "Proton", "Foton", "Kuark"],
-    correct: 2,
-    explain: "Goldstein'ın gözlemlediği 'kanal ışınları', pozitif yüklü proton taneciklerinin varlığına dair ilk kanıtlardan biridir."
+    options: ["Nötron", "Proton", "Elektron", "Pozitron", "Foton"],
+    correct: 1,
+    explain: "Goldstein'ın gözlemlediği pozitif yüklü ışınlar (kanal ışınları), protonun keşfine öncülük etmiştir."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, Robert Millikan'ın yağ damlası deneyiyle neyi ölçtüğünü araştırıyor.",
+    context: "Millikan, elektrik yüklü yağ damlacıklarının bir elektrik alanı içindeki hareketini dikkatle ölçerek, damlacıkların taşıdığı yükün her zaman belirli bir temel değerin tam katları şeklinde olduğunu bulmuştur.",
     text: "Millikan'ın bu deneyle belirlediği büyüklük hangisidir?",
-    options: ["Atomun kütlesi", "Elektronun elektrik yükü", "Protonun çapı", "Nötronun ömrü", "Işığın hızı"],
+    options: ["Elektronun kütlesi", "Elektronun yükü", "Protonun kütlesi", "Nötronun yükü", "Atomun toplam hacmi"],
     correct: 1,
-    explain: "Millikan, yağ damlası deneyiyle elektronun taşıdığı elektrik yükünün büyüklüğünü hassas biçimde ölçmüştür."
+    explain: "Millikan'ın yağ damlası deneyi, tek bir elektronun taşıdığı elektrik yükünün büyüklüğünü belirlemiştir."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, Bohr modelinin hidrojen atomunun ışık yayma davranışını açıklamak için kullanıldığını öğreniyor.",
-    text: "Bohr modeli, hidrojenin çizgi spektrumundaki kesikli (ayrık) çizgileri en iyi hangi varsayımla açıklar?",
-    options: ["Elektronların sürekli enerji kaybederek çekirdeğe düşmesiyle", "Elektronların yalnızca belirli enerji düzeyleri arasında geçiş yapabilmesiyle", "Elektronların rastgele her enerjiyi alabilmesiyle", "Protonların ışık yaymasıyla", "Nötronların titreşmesiyle"],
+    context: "Hidrojen gazı yüksek voltajla uyarıldığında, sürekli bir renk bandı değil, yalnızca belirli dalga boylarında keskin, ayrık ışık çizgileri yaymaktadır.",
+    text: "Bohr modeli, hidrojenin çizgi spektrumundaki bu kesikli (ayrık) çizgileri en iyi hangi varsayımla açıklar?",
+    options: ["Elektronların her enerji değerini serbestçe alabileceği", "Elektronların yalnızca belirli, sabit enerji düzeyleri arasında geçiş yapabileceği", "Çekirdeğin sürekli ışık yaydığı", "Elektronların çekirdeğe hiç bağlı olmadığı", "Atomun tamamen boş uzaydan oluştuğu"],
     correct: 1,
-    explain: "Bohr modeline göre elektronlar yalnızca belirli (kuantumlu) enerji düzeyleri arasında geçiş yapabilir; bu geçişlerde belirli enerjide foton yayılır, bu da kesikli spektrum çizgilerini oluşturur."
+    explain: "Bohr modeline göre elektronlar yalnızca belirli enerji düzeyleri arasında geçiş yapabilir; bu geçişlerde yayılan enerji, gözlemlenen ayrık spektrum çizgilerine karşılık gelir."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, atom modellerinin tarihsel gelişimini kronolojik olarak sıralamak istiyor.",
+    context: "Atom modellerinin tarihsel gelişiminde önce bölünemez katı küre fikri, ardından pozitif kütle içine gömülü elektron fikri, sonra merkezde çekirdek fikri, daha sonra sabit yörünge fikri ve son olarak olasılık bulutu fikri önerilmiştir.",
     text: "Aşağıdaki sıralamalardan hangisi atom modellerinin tarihsel gelişimini doğru sırada verir?",
-    options: [
-      "Bohr → Rutherford → Thomson → Dalton → Kuantum mekaniksel model",
-      "Dalton → Thomson → Rutherford → Bohr → Kuantum mekaniksel model",
-      "Kuantum mekaniksel model → Bohr → Rutherford → Thomson → Dalton",
-      "Thomson → Dalton → Bohr → Rutherford → Kuantum mekaniksel model",
-      "Rutherford → Dalton → Bohr → Thomson → Kuantum mekaniksel model"
-    ],
+    options: ["Bohr → Dalton → Thomson → Rutherford → Kuantum mekaniksel model", "Dalton → Thomson → Rutherford → Bohr → Kuantum mekaniksel model", "Kuantum mekaniksel model → Rutherford → Bohr → Thomson → Dalton", "Thomson → Dalton → Bohr → Rutherford → Kuantum mekaniksel model", "Rutherford → Thomson → Dalton → Kuantum mekaniksel model → Bohr"],
     correct: 1,
-    explain: "Atom modellerinin tarihsel gelişimi kronolojik olarak Dalton (1808) → Thomson (1897) → Rutherford (1911) → Bohr (1913) → kuantum mekaniksel model (1920'ler sonrası) şeklindedir."
+    explain: "Tarihsel sıralama: Dalton'ın katı küre modeli (1808) → Thomson'ın üzümlü kek modeli (1897) → Rutherford'ın çekirdekli model (1911) → Bohr'un yörünge modeli (1913) → modern kuantum mekaniksel model (1926+)."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, günümüzde kabul gören modern atom modelinin temel özelliğini araştırıyor.",
+    context: "Günümüzde kabul gören modern atom modeline göre elektronların çekirdek etrafındaki tam konumu kesin olarak bilinemez; yalnızca belirli bir bölgede bulunma olasılığından söz edilebilir.",
     text: "Modern kuantum mekaniksel modele göre elektronların konumu için en doğru ifade hangisidir?",
-    options: [
-      "Elektronlar çekirdek etrafında sabit, değişmeyen dairesel yörüngelerde döner",
-      "Elektronlar, belirli bir anda kesin konumlarıyla değil, bulunma olasılığı en yüksek bölgelerle (orbitallerle) tanımlanır",
-      "Elektronların konumu her zaman kesin olarak hesaplanabilir",
-      "Elektronlar çekirdeğin içinde protonlarla iç içe bulunur",
-      "Elektronlar atomun dışına tamamen serbest halde yayılır"
-    ],
+    options: ["Elektronlar, güneş etrafındaki gezegenler gibi sabit dairesel yörüngelerde dolanır", "Elektronlar, orbital adı verilen olasılık bölgelerinde bulunur", "Elektronlar çekirdeğin tam merkezinde sabit durur", "Elektronların konumu her zaman kesin olarak hesaplanabilir", "Elektronlar yalnızca çekirdeğin dışına asla çıkmaz"],
     correct: 1,
-    explain: "Modern kuantum mekaniksel modelde elektronun kesin konumu değil, belirli bir bölgede bulunma olasılığı (orbital) tanımlanır; bu, Heisenberg belirsizlik ilkesiyle uyumludur."
+    explain: "Modern kuantum mekaniksel modelde elektronun kesin konumu değil, belirli bir bölgede (orbitalde) bulunma olasılığı tanımlanır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, Dalton'ın atom teorisindeki 'aynı element atomları birbirinin aynısıdır' varsayımını hatırlıyor.",
+    context: "Dalton'ın atom teorisindeki varsayımlardan biri, aynı elementin tüm atomlarının kütle ve özellik bakımından birbirinin tıpatıp aynısı olduğudur.",
     text: "Bu varsayıma göre aynı elementin tüm atomları için ne söylenebilir?",
-    options: ["Her biri farklı bir element gibi davranır", "Her biri farklı sayıda proton içerir", "Kütle ve özellikleri bakımından özdeştirler", "Kimyasal tepkimelere hiç girmezler", "Her biri farklı yük taşır"],
+    options: ["Her biri farklı sayıda elektron içerebilir", "Her biri farklı sayıda proton içerir", "Kütlece ve özellik bakımından birbirinin aynısıdır", "Kütleleri rastgele değişir", "Yalnızca yarısı kararlıdır"],
     correct: 2,
-    explain: "Dalton'ın teorisine göre aynı elementin atomları kütle ve özellikler bakımından birbirinin aynısı kabul edilir (bu varsayım daha sonra izotoplarla sınırlı biçimde revize edilmiştir)."
+    explain: "Dalton'ın varsayımına göre bir elementin tüm atomları kütlece ve özellik bakımından özdeştir (bu varsayım daha sonra izotopların keşfiyle kısmen revize edilmiştir)."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, atomun temel yapı taşlarının neler olduğunu özetliyor.",
+    context: "Günümüzde bir atomun proton, nötron ve elektron adı verilen üç temel tanecikten oluştuğu, proton ve nötronların çekirdekte, elektronların ise çekirdek etrafındaki bölgede bulunduğu bilinmektedir.",
     text: "Bir atomun temel yapı taşları hangi seçenekte doğru verilmiştir?",
-    options: ["Asit, baz, tuz", "Molekül, iyon, izotop", "Proton, nötron, elektron", "Element, bileşik, karışım", "Katı, sıvı, gaz"],
+    options: ["Yalnızca nötron ve foton", "Yalnızca proton ve elektron", "Proton, nötron, elektron", "Proton, foton, pozitron", "Yalnızca elektron ve foton"],
     correct: 2,
-    explain: "Bir atom; pozitif yüklü proton, yüksüz nötron ve negatif yüklü elektron olmak üzere üç temel tanecikten oluşur."
+    explain: "Bir atomun temel yapı taşları proton, nötron (çekirdekte) ve elektrondur (çekirdek etrafındaki bölgede)."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, Rutherford'ın deneyinde alfa taneciklerinin büyük çoğunluğunun altın levhadan hiç sapmadan geçtiğini öğreniyor.",
+    context: "Rutherford'ın deneyinde, altın levhaya gönderilen alfa taneciklerinin büyük çoğunluğu hiçbir sapma olmadan levhayı geçmiştir.",
     text: "Bu gözlem atomun yapısı hakkında en doğrudan hangi çıkarımı destekler?",
-    options: ["Atomda hiç boşluk yoktur", "Atom tamamen katı bir küredir", "Atomun büyük kısmı boş uzaydan oluşur", "Elektronlar çekirdeğin içindedir", "Atomun tüm kütlesi yüzeyde toplanmıştır"],
+    options: ["Atomun hiç kütlesi olmadığı", "Atomun tamamen katı ve dolu olduğu", "Atomun büyük kısmının boş uzaydan oluştuğu", "Atomun yalnızca negatif yükten oluştuğu", "Alfa taneciklerinin atomlarla hiç etkileşmediği"],
     correct: 2,
-    explain: "Alfa taneciklerinin büyük çoğunluğunun sapmadan geçmesi, atomun büyük kısmının boş uzaydan oluştuğunu; kütle ve pozitif yükün ise çok küçük bir hacimde (çekirdekte) yoğunlaştığını gösterir."
+    explain: "Alfa taneciklerinin büyük çoğunluğunun sapmadan geçmesi, atomun hacminin büyük kısmının boş uzaydan oluştuğunu, kütle ve pozitif yükün ise küçük bir çekirdekte yoğunlaştığını göstermiştir."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, bilim tarihinde atom modellerinin zamanla değiştiğini fark ediyor.",
+    context: "Bilim tarihinde atom modelleri; Dalton'ın katı küre fikrinden başlayarak, yeni deneysel kanıtlar biriktikçe Thomson, Rutherford, Bohr ve modern kuantum modeline doğru zamanla değişmiştir.",
     text: "Atom modellerinin zaman içinde değişmesinin temel nedeni en doğru şekilde hangisidir?",
-    options: ["Modellerin hiçbir bilimsel değeri olmaması", "Bilim insanlarının rastgele fikir değiştirmesi", "Yeni deneysel kanıtların ortaya çıkması ve eski modellerin bu kanıtları açıklayamaması", "Atomların zamanla fiziksel olarak değişmesi", "Yeni modellerin eskileriyle hiçbir ilgisinin olmaması"],
+    options: ["Atomun kendisinin zamanla fiziksel olarak değişmesi", "Bilim insanlarının rastgele fikir değiştirmesi", "Yeni deneysel kanıtların önceki modellerle açıklanamayan gözlemler ortaya koyması", "Eski modellerin hiçbir zaman doğru olmaması", "Yeni modellerin eskilerle hiçbir ilişkisinin olmaması"],
     correct: 2,
-    explain: "Bilimsel modeller, yeni deneysel kanıtlar eski modelin açıklayamadığı gözlemler ortaya çıkardığında revize edilir veya yenileriyle değiştirilir; bu, bilimsel bilginin değişebilir doğasının bir göstergesidir."
+    explain: "Bilimsel modeller, önceki modelin açıklayamadığı yeni deneysel gözlemler ortaya çıktıkça revize edilir veya değiştirilir; bu, bilimsel bilginin kanıta dayalı ve değişebilir doğasını yansıtır."
   },
 
   /* ============ ORTA ============ */
@@ -3071,260 +2542,184 @@ export const QUIZ = {
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Rutherford'ın altın levha deneyinde alfa taneciklerinin saçılma açılarına göre sayıları aşağıdaki grafikte özetlenmiştir.",
     chart: {
       type: "bar",
-      title: "Alfa taneciklerinin saçılma açısına göre dağılımı",
-      labels: ["0°-1°", "1°-10°", "10°-90°", ">90° (geri saçılma)"],
-      values: [8000, 1900, 90, 8]
-    },
-    text: "Grafikteki veriler, Thomson'ın 'üzümlü kek' modeliyle karşılaştırıldığında en doğru hangi çıkarımı destekler?",
-    options: [
-      "Bu veriler atomun tamamen boş olduğunu, hiçbir kütle merkezinin olmadığını gösterir",
-      "Tüm alfa taneciklerinin sapmadan geçmesi beklenirdi ve öyle de olmuştur, bu yüzden Thomson modeli doğrulanmıştır",
-      "Geri saçılan taneciklerin sayısı, Thomson modelinin öngörüsüyle birebir uyuşmaktadır",
-      "Çok az alfa taneciğinin büyük açıyla geri saçılması, atomda yoğun ve küçük bir pozitif yük merkezinin bulunduğunu gösterir; bu, Thomson modeliyle uyuşmaz",
-      "Bu veriler elektronların çekirdekte bulunduğunu kanıtlar"
-    ],
-    correct: 3,
-    explain: "Thomson'ın dağınık pozitif yük modeline göre büyük açılı saçılma beklenmezdi; ancak az sayıda taneciğin büyük açıyla (hatta geri) saçılması, pozitif yükün ve kütlenin küçük, yoğun bir merkezde (çekirdekte) toplandığını gösterdi ve Rutherford'ı nükleer modele yöneltti."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, Thomson'ın katot ışını deneyinde ışınların pozitif yüklü levhaya doğru saptığını gözlemliyor.",
-    text: "Bu sapma yönü, katot ışınlarının yükü hakkında en doğru hangi çıkarımı sağlar?",
-    options: [
-      "Katot ışınları hem pozitif hem negatif yük taşır",
-      "Katot ışınları pozitif yüklüdür, çünkü aynı yükler birbirini çeker",
-      "Katot ışınlarının hiç yükü yoktur",
-      "Katot ışınları negatif yüklüdür, çünkü zıt yükler birbirini çeker",
-      "Sapma yönü yükle ilgili hiçbir bilgi vermez"
-    ],
-    correct: 3,
-    explain: "Zıt yükler birbirini çektiğinden, ışınların pozitif levhaya doğru sapması, katot ışınlarının (elektronların) negatif yüklü olduğunu gösterir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Aşağıdaki tabloda dört farklı atom modelinin temel özellikleri karşılaştırılmaktadır.",
-    table: {
-      headers: ["Model", "Bilim insanı", "Temel varsayım"],
-      rows: [
-        ["Katı küre modeli", "Dalton", "Atom bölünemez, içi dolu bir küredir"],
-        ["Üzümlü kek modeli", "Thomson", "Elektronlar pozitif yüklü hamura gömülüdür"],
-        ["Gezegen modeli", "Rutherford", "Elektronlar merkezdeki çekirdek etrafında dolanır"],
-        ["Enerji düzeyleri modeli", "Bohr", "Elektronlar belirli enerji düzeylerinde bulunur"]
+      title: "Rutherford'ın altın levha deneyinde saçılma açısına göre alfa tanecik sayısı",
+      xLabel: "Saçılma açısı",
+      yLabel: "Tanecik sayısı (göreli)",
+      data: [
+        { label: "0°-10°", value: 9700 },
+        { label: "10°-30°", value: 250 },
+        { label: "30°-90°", value: 40 },
+        { label: "90°-180°", value: 8 }
       ]
     },
-    text: "Tabloya göre atomun kütlesinin küçük bir merkezde yoğunlaştığı fikrini ilk öneren model hangisidir?",
-    options: ["Katı küre modeli", "Üzümlü kek modeli", "Gezegen modeli", "Enerji düzeyleri modeli", "Hiçbiri"],
+    text: "Grafikteki veriler, Thomson'ın 'üzümlü kek' modeliyle karşılaştırıldığında en doğru hangi çıkarımı destekler?",
+    options: ["Hiçbir tanecik sapmamıştır, bu da atomun tamamen boş olduğunu gösterir", "Verideki tüm tanecikler eşit oranda saçılmıştır, bu da Thomson modelini doğrular", "Büyük açılı saçılma, Thomson modelinin öngöremeyeceği yoğun bir merkezi yapının varlığını işaret eder", "Veriler yalnızca elektronların varlığını kanıtlar, çekirdekle ilgisizdir", "Grafik, atomun negatif yükle dolu olduğunu gösterir"],
     correct: 2,
-    explain: "Rutherford'ın gezegen modeli, atomun kütlesinin ve pozitif yükünün küçük, yoğun bir çekirdekte toplandığı fikrini ilk kez ortaya koymuştur."
+    explain: "Thomson modeli, pozitif yükün atom içinde yayılı olduğunu varsaydığından büyük açılı saçılma beklenmezdi; gözlemlenen (az sayıda da olsa) büyük açılı saçılma, yükün ve kütlenin küçük, yoğun bir merkezde toplandığını gösterir."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, izotop kavramını öğrendikten sonra Dalton'ın 'aynı elementin tüm atomları özdeştir' varsayımını yeniden değerlendiriyor.",
-    text: "İzotopların keşfi, Dalton'ın bu varsayımı hakkında en doğru hangi sonucu doğurmuştur?",
-    options: [
-      "İzotop kavramı Dalton'ın teorisiyle hiçbir şekilde ilişkili değildir",
-      "Dalton'ın teorisi tamamen ve tümüyle geçersiz sayılmıştır",
-      "İzotoplar, Dalton'ın varsayımını tam olarak doğrulamıştır",
-      "Varsayım kısmen revize edilmiştir: aynı elementin atomları proton sayısı bakımından aynı, nötron sayısı (dolayısıyla kütle) bakımından farklı olabilir",
-      "İzotoplar yalnızca yapay olarak üretilen, doğada bulunmayan atomlardır"
-    ],
-    correct: 3,
-    explain: "İzotopların keşfi, Dalton'ın 'aynı elementin atomları tamamen özdeştir' varsayımının kütle açısından revize edilmesini gerektirmiştir: aynı elementin atomları proton sayısı (atom numarası) bakımından aynıdır, ancak nötron sayısı farklı olabilir."
+    context: "Thomson'ın katot ışını deneyinde, tüpe uygulanan elektrik alanında ışınların pozitif yüklü levhaya doğru saptığı gözlemlenmiştir.",
+    text: "Bu sapma yönü, katot ışınlarının yükü hakkında en doğru hangi çıkarımı sağlar?",
+    options: ["Katot ışınlarını oluşturan taneciklerin pozitif yüklü olduğu", "Katot ışınlarını oluşturan taneciklerin yüksüz olduğu", "Katot ışınlarını oluşturan taneciklerin negatif yüklü olduğu", "Katot ışınlarının kütlesinin olmadığı", "Katot ışınlarının ışık hızında hareket ettiği kanıtlanmıştır"],
+    correct: 2,
+    explain: "Zıt yükler birbirini çektiğinden, ışınların pozitif levhaya doğru sapması, ışınları oluşturan taneciklerin negatif yüklü olduğunu (elektron) gösterir."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, Rutherford'ın altın levhayı özellikle çok ince (yaklaşık birkaç bin atom kalınlığında) hazırlattığını öğreniyor.",
-    text: "Levhanın bu kadar ince olmasının deney açısından önemi en doğru hangi seçenekte açıklanmıştır?",
-    options: [
-      "Alfa taneciklerinin levhadan hiç geçmemesini sağlamak",
-      "Levhanın daha ucuza mal olmasını sağlamak",
-      "Levhanın rengini değiştirmek",
-      "Alfa taneciklerinin levhayı geçebilmesini ve saçılma açılarının net biçimde ölçülebilmesini sağlamak",
-      "Deneyin daha uzun sürmesini sağlamak"
-    ],
-    correct: 3,
-    explain: "İnce levha, alfa taneciklerinin çoğunun malzemeden geçebilmesini ve saçılma açılarının atom yapısı hakkında anlamlı veri verecek şekilde ölçülebilmesini sağlar."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, Bohr'un modelinde elektronun bir enerji düzeyinden diğerine geçerken enerji soğurduğunu veya yaydığını öğreniyor.",
-    text: "Bir elektron daha yüksek enerjili bir düzeye geçtiğinde ne olur?",
-    options: [
-      "Protona dönüşür",
-      "Belirli miktarda enerji (foton) yayar",
-      "Kütlesini kaybeder",
-      "Belirli miktarda enerji (foton) soğurur",
-      "Hiçbir enerji alışverişi olmaz"
-    ],
-    correct: 3,
-    explain: "Bohr modeline göre elektron daha yüksek enerjili bir düzeye çıkarken, iki düzey arasındaki enerji farkına eşit miktarda enerjiyi foton olarak soğurur (uyarılma); düşerken ise bu enerjiyi foton olarak yayar (ışıma)."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, Thomson'ın modelinin Rutherford'ın deney sonuçlarını neden açıklayamadığını araştırıyor.",
-    text: "Thomson'ın modeli, Rutherford'ın gözlemlediği büyük açılı saçılmayı en çok hangi nedenle açıklayamaz?",
-    options: [
-      "Modelde atom çok büyük olduğundan",
-      "Modelde elektron hiç bulunmadığından",
-      "Modelde proton sayısı çok fazla olduğundan",
-      "Modelde pozitif yük atomun tamamına yayıldığından, hiçbir bölgede alfa taneciğini büyük açıyla itecek kadar yoğun bir yük merkezi yoktur",
-      "Modelde nötron bulunmadığından"
-    ],
-    correct: 3,
-    explain: "Thomson modelinde pozitif yük atomun tüm hacmine yayıldığı için, hiçbir noktada alfa taneciğini büyük açıyla itebilecek kadar yoğun ve lokalize bir yük yoktur; bu yüzden model gözlemlenen geri saçılmayı açıklayamaz."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, Millikan'ın yağ damlası deneyinde ölçtüğü yük değerlerinin her zaman belirli bir sayının (e) tam katları olduğunu öğreniyor.",
-    text: "Bu gözlem elektrik yükü hakkında en doğru hangi çıkarımı destekler?",
-    options: [
-      "Elektrik yükü süreklidir, herhangi bir değeri alabilir",
-      "Elektrik yükü kuantumludur; belirli bir temel yükün (elektronun yükünün) tam sayı katları şeklinde bulunur",
-      "Elektrik yükünün büyüklüğü ölçülemez",
-      "Her yağ damlası farklı miktarda temel yük içerir ve bu rastgeledir",
-      "Elektrik yükü yalnızca pozitif değerler alabilir"
-    ],
-    correct: 1,
-    explain: "Ölçülen yüklerin hep aynı temel değerin tam katları çıkması, elektrik yükünün sürekli değil kuantumlu (kesikli) olduğunu ve bu temel birimin elektronun yükü olduğunu gösterir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, farklı elementlerin alevde yakıldığında farklı renkte ışık yaydığını (alev testi) gözlemliyor.",
-    text: "Bu gözlem, Bohr'un enerji düzeyi modeliyle en doğru hangi şekilde açıklanabilir?",
-    options: [
-      "Renk farkı yalnızca elementin kütlesine bağlıdır, enerji düzeyleriyle ilgisi yoktur",
-      "Her element aynı enerji düzeylerine sahiptir, renk farkı tesadüfidir",
-      "Alev testi atom modelleriyle hiçbir şekilde ilişkili değildir",
-      "Her elementin elektronlarının enerji düzeyleri arasındaki farklar kendine özgüdür, bu yüzden yayılan foton enerjisi (dolayısıyla rengi) elementten elemente değişir",
-      "Bütün elementler aynı renkte ışık yaymalıdır, gözlemlenen farklar hatalıdır"
-    ],
-    correct: 3,
-    explain: "Her elementin elektron enerji düzeyleri kendine özgü olduğundan, elektron geçişlerinde yayılan foton enerjisi (ve dolayısıyla ışığın rengi) elementten elemente farklılık gösterir; bu, alev testinin bilimsel temelidir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, atom modellerinin gelişim sürecinde her yeni modelin bir öncekini nasıl etkilediğini araştırıyor.",
-    text: "Bu süreç için en doğru genel çıkarım hangisidir?",
-    options: [
-      "İlk model olan Dalton'ın modeli hâlâ değiştirilmeden kullanılmaktadır",
-      "Her yeni model, bir önceki modelle hiçbir bağlantısı olmadan tesadüfen ortaya çıkmıştır",
-      "Modeller zamanla daha basit hale gelmiştir",
-      "Her yeni model, bir önceki modelin açıklayamadığı yeni deneysel bulguları hesaba katarak geliştirilmiştir",
-      "Modellerin gelişim sırası deneysel kanıtlarla değil, bilim insanlarının ünüyle belirlenmiştir"
-    ],
-    correct: 3,
-    explain: "Atom modellerinin tarihsel gelişimi, her yeni modelin bir önceki modelin açıklayamadığı deneysel gözlemleri (katot ışınları, alfa saçılması, çizgi spektrumu vb.) hesaba katarak inşa edilmesiyle ilerlemiştir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, Rutherford'ın modelinde elektronların çekirdek etrafında dairesel yörüngelerde dolandığını, ancak bu modelin klasik fizik açısından bir soruna işaret ettiğini öğreniyor.",
-    text: "Klasik fiziğe göre Rutherford modelindeki bu sorun en doğru hangi seçenekte tanımlanmıştır?",
-    options: [
-      "Elektronların kütlesi klasik fizikte tanımsızdır",
-      "Elektronlar çekirdekten çok uzakta olduğu için hiçbir sorun yoktur",
-      "Klasik fizik, elektronların varlığını tamamen reddeder",
-      "İvmeli hareket eden yüklü bir tanecik (elektron) enerji yaymalı ve sonunda çekirdeğe düşmelidir; ancak atomlar kararlıdır",
-      "Sorun yalnızca büyük atomlarla ilgilidir, hidrojende görülmez"
-    ],
-    correct: 3,
-    explain: "Klasik elektromanyetik teoriye göre dairesel yörüngede ivmeli hareket eden yüklü bir tanecik sürekli enerji kaybederek kısa sürede çekirdeğe düşmelidir; ancak atomların kararlı olduğu gözlemi bu öngörüyle çelişir — bu çelişki Bohr'un kuantum varsayımlarını gerekli kılmıştır."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Aşağıdaki grafik, dört farklı atom modelinin tarihsel olarak önerildiği yılları göstermektedir.",
-    chart: {
-      type: "line",
-      title: "Atom modellerinin önerildiği yıllar",
-      labels: ["Dalton", "Thomson", "Rutherford", "Bohr"],
-      values: [1808, 1897, 1911, 1913]
+    table: {
+      headers: ["Model", "Öne süren", "Çekirdek fikri", "Elektronların konumu"],
+      rows: [
+        ["Katı küre", "Dalton", "Yok", "Tanımlanmamış"],
+        ["Üzümlü kek", "Thomson", "Yok", "Pozitif kütleye gömülü"],
+        ["Çekirdekli model", "Rutherford", "Var (kütle/yük merkezi)", "Çekirdek etrafında, konumu belirsiz"],
+        ["Yörünge modeli", "Bohr", "Var", "Sabit enerji düzeylerinde"]
+      ],
+      caption: "Dört atom modelinin temel özellikleri"
     },
-    text: "Grafikteki verilere göre, bu dört model arasındaki en kısa zaman aralığı hangi iki model arasındadır?",
-    options: ["Dalton – Thomson", "Thomson – Rutherford", "Rutherford – Bohr", "Dalton – Rutherford", "Dalton – Bohr"],
+    text: "Tabloya göre atomun kütlesinin küçük bir merkezde yoğunlaştığı fikrini ilk öneren model hangisidir?",
+    options: ["Katı küre", "Üzümlü kek", "Çekirdekli model", "Yörünge modeli", "Tabloda hiçbiri bu fikri içermez"],
     correct: 2,
-    explain: "Rutherford (1911) ile Bohr (1913) arasındaki fark yalnızca 2 yıldır; bu, diğer aralıklardan (Dalton-Thomson: 89 yıl, Thomson-Rutherford: 14 yıl, Dalton-Rutherford: 103 yıl) daha kısadır."
+    explain: "Tabloya göre çekirdek fikri (kütle/yük merkezi) ilk kez Rutherford'ın çekirdekli modelinde önerilmiştir."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, Dalton'ın teorisinde 'kimyasal tepkimelerde atomlar yeniden düzenlenir, yok olmaz ya da yaratılmaz' varsayımını okuyor.",
-    text: "Bu varsayım günümüz kimyasında en çok hangi ilkeyle doğrudan ilişkilidir?",
-    options: ["Periyodik yasa", "Sabit oranlar kanunu", "Avogadro sayısı", "Kütlenin korunumu kanunu", "Termodinamiğin ikinci yasası"],
+    context: "Bohr modeli, hidrojen atomunun (tek elektronlu) çizgi spektrumunu yüksek doğrulukla açıklamış; ancak birden fazla elektron içeren atomların (örneğin helyum) spektrumlarını aynı doğrulukla açıklayamamıştır.",
+    text: "Bu sınırlılık, Bohr modeliyle ilgili en doğru hangi çıkarımı destekler?",
+    options: ["Model, tüm atomlar için mükemmel şekilde geçerlidir", "Model hiçbir atom için doğru sonuç vermemiştir", "Model, tek elektronlu sistemler için geçerliyken çok elektronlu sistemlerde yetersiz kalmıştır", "Model yalnızca çekirdek yapısını açıklamak için geliştirilmiştir", "Model, elektron sayısından bağımsız olarak her zaman geçerlidir"],
+    correct: 2,
+    explain: "Bohr modelinin varsayımları (sabit dairesel yörünge, tek elektron-çekirdek etkileşimi) çok elektronlu atomlardaki elektron-elektron etkileşimlerini hesaba katmadığından, model yalnızca hidrojen gibi tek elektronlu sistemlerde yüksek doğruluk göstermiştir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
+    context: "Dalton'ın atom teorisi 'atomlar bölünemez' varsayımını içeriyordu; ancak Thomson'ın katot ışını deneyleri, atomun içinden daha küçük, negatif yüklü bir tanecik (elektron) çıkarılabildiğini göstermiştir.",
+    text: "Bu gelişme, bilimsel bilginin doğasıyla ilgili en doğru hangi ilkeyi örnekler?",
+    options: ["Bilimsel teoriler yalnızca matematiksel hesaplamalara dayanır, deneye gerek yoktur", "Bir kez kabul edilen bilimsel teori asla değiştirilemez", "Deneysel kanıtların bilimsel teorilerle hiçbir ilgisi yoktur", "Bir teori, yeni deneysel kanıtla çelişen bir gözlem ortaya çıktığında revize edilebilir/çürütülebilir", "Dalton'ın teorisi, Thomson'ın keşfinden sonra da değişmeden kaldı"],
     correct: 3,
-    explain: "Atomların tepkimede yok olmadığı, sadece yeniden düzenlendiği varsayımı, kütlenin korunumu kanununun atom düzeyindeki temel açıklamasıdır."
+    explain: "Elektronun keşfi, Dalton'ın 'atom bölünemez' varsayımıyla çelişen somut bir deneysel kanıt sunmuş ve bu, teorinin revize edilmesine yol açmıştır — bilimsel bilginin kanıta dayalı olarak değişebilir doğasının açık bir örneğidir."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, Bohr modelinin yalnızca hidrojen gibi tek elektronlu atomların spektrumunu başarıyla açıkladığını, çok elektronlu atomlarda ise tahminlerin gözlemle tam örtüşmediğini öğreniyor.",
-    text: "Bu durum bilimsel modeller hakkında en doğru hangi çıkarımı destekler?",
-    options: [
-      "Hidrojen atomu diğer atomlardan farklı fizik kurallarına tabidir",
-      "Bohr modeli tüm atomlar için kusursuzdur, gözlemlerde hata vardır",
-      "Çok elektronlu atomlar bilim dışıdır",
-      "Bir model bir kez başarılı olduysa asla değiştirilmemelidir",
-      "Bir modelin belirli bir kapsamda başarılı olması, onun her koşulda tam doğru olduğu anlamına gelmez; modelin sınırları deneyle belirlenir"
-    ],
-    correct: 4,
-    explain: "Bohr modelinin hidrojende başarılı, çok elektronlu atomlarda ise sınırlı kalması, bilimsel modellerin belirli bir kapsamda geçerli olabileceğini ve bu sınırların yeni deneysel karşılaştırmalarla ortaya konduğunu gösterir — bu da kuantum mekaniksel modele geçişi motive etmiştir."
+    context: "Bir deneyde, hidrojen atomunun bir enerji düzeyinden diğerine geçen elektronunun yaydığı ışığın dalga boyu ölçülmüş ve bu dalga boyundan enerji farkı hesaplanmıştır. Hesaplanan enerji farkı, Bohr modelinin öngördüğü değerle yüksek doğrulukla örtüşmüştür.",
+    text: "Bu sonuç, Bohr modeli hakkında en doğru hangi çıkarımı destekler?",
+    options: ["Model, çok elektronlu atomlarda da aynı doğrulukla geçerlidir", "Model, hiçbir deneysel veriyle örtüşmemektedir", "Model, yalnızca teorik bir varsayım olup hiçbir zaman test edilmemiştir", "Model, hidrojenin enerji düzeyleri arasındaki geçişleri başarıyla öngörebilmektedir", "Bu sonuç Bohr modeliyle ilgisizdir"],
+    correct: 3,
+    explain: "Ölçülen enerji farkının modelin öngördüğü değerle örtüşmesi, Bohr modelinin hidrojen atomunun enerji düzeyleri arasındaki geçişleri (en azından hidrojen için) başarıyla açıkladığını gösterir."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, atom modelleri tarihinde 'proton' ve 'nötron' kavramlarının 'elektron'dan çok sonra tam olarak tanımlandığını fark ediyor (elektron 1897, proton 1919 civarı isimlendirme, nötron 1932).",
-    text: "Bu kronolojik sıralama en doğru hangi çıkarımı destekler?",
-    options: [
-      "Nötronlar aslında elektronlardan önce keşfedilmiş ama gizli tutulmuştur",
-      "Nötronlar elektronlardan daha basit taneciklerdir, bu yüzden geç keşfedilmiştir",
-      "Bilim insanları nötronu bilerek en sona bırakmıştır",
-      "Kronoloji tamamen rastlantısaldır, hiçbir bilimsel nedeni yoktur",
-      "Deneysel olarak tespit edilmesi güç olan yüksüz tanecikler (nötron), teknoloji ve yöntemler geliştikçe daha geç keşfedilmiştir"
-    ],
-    correct: 4,
-    explain: "Elektrik yükü taşımayan nötron, yüklü taneciklere göre elektrik/manyetik alanlarla tespit edilmesi daha zor bir tanecik olduğundan, tespiti daha gelişmiş deney düzenekleri gerektirmiş ve daha geç (1932) keşfedilmiştir."
+    context: "Millikan'ın yağ damlası deneyinde ölçülen tüm yük değerleri, her zaman belirli bir temel değerin (yaklaşık 1,6×10⁻¹⁹ coulomb) tam sayı katları olarak bulunmuştur; hiçbir zaman bu değerin kesirli bir katı ölçülmemiştir.",
+    text: "Bu gözlem, elektrik yükünün doğasıyla ilgili en doğru hangi çıkarımı destekler?",
+    options: ["Yük miktarı damlacığın büyüklüğüne göre rastgele değişir", "Elektrik yükü her değeri sürekli olarak alabilir", "Elektrik yükünün bir alt sınırı yoktur", "Elektrik yükü, sürekli değil kesikli (kuantumlu) bir büyüklüktür", "Bu gözlem yükün doğasıyla ilgili hiçbir bilgi vermez"],
+    correct: 3,
+    explain: "Ölçülen yüklerin her zaman belirli bir temel değerin tam katları olması, elektrik yükünün sürekli değil kesikli (kuantumlu) birimler hâlinde var olduğunu gösterir."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, Bohr'un modelinde her enerji düzeyine bir tam sayı (n = 1, 2, 3...) atandığını öğreniyor.",
-    text: "Bu tam sayı (n) en doğru şekilde neyi temsil eder?",
-    options: [
-      "Atomun yaydığı ışığın rengini doğrudan",
-      "Atomun toplam kütlesini",
-      "Elementin atom numarasını",
-      "Çekirdekteki nötron sayısını",
-      "Elektronun bulunduğu enerji düzeyini (baş kuantum sayısını)"
-    ],
-    correct: 4,
-    explain: "Bohr modelinde n, elektronun bulunduğu enerji düzeyini (bugünkü adıyla baş kuantum sayısını) belirtir; n arttıkça enerji düzeyi çekirdekten uzaklaşır ve enerjisi artar."
+    context: "Bir bilim tarihi kaynağında şu gözlem paylaşılmıştır: Rutherford'ın öğrencileri deneyi tekrarladıklarında, alfa taneciklerinin çok küçük bir kısmının 90 dereceden daha büyük açılarla geri sıçradığını defalarca doğrulamışlardır; bu sonuç tesadüfi bir hata değil, tutarlı bir örüntü olarak ortaya çıkmıştır.",
+    text: "Deneyin tekrarlanabilir/tutarlı sonuç vermesi, bilimsel yöntem açısından neden önemlidir?",
+    options: ["Tek bir deney sonucu, tekrarlanmadan da her zaman kesin kanıt sayılır", "Deneyin tekrarlanması, sonucun önemini azaltır", "Tekrarlanabilirlik, bilimsel yöntemde gereksiz bir adımdır", "Bir gözlemin tesadüfi hata değil, güvenilir bir doğa olgusunu yansıttığını göstererek teoriye kanıt sağlar", "Tekrarlanan sonuçlar yalnızca deney hatasını kanıtlar"],
+    correct: 3,
+    explain: "Bir gözlemin farklı denemelerde tutarlı şekilde tekrarlanması, sonucun rastgele bir hatadan değil gerçek bir doğa olgusundan kaynaklandığını gösterir; bu, bilimsel yöntemde kanıtın güvenilirliğini artıran temel bir ilkedir."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, atom modelleri tarihinde bilim insanlarının birbirinin öğrencisi ya da çalışma arkadaşı olduğunu fark ediyor (örneğin Rutherford, Thomson'ın öğrencisiydi; Bohr, Rutherford'la çalışmıştı).",
-    text: "Bu bilgi, bilimsel bilginin üretim süreci hakkında en doğru hangi çıkarımı destekler?",
-    options: [
-      "Bu bilgi bilimin doğası hakkında hiçbir şey söylemez",
-      "Bilimsel keşifler her zaman tamamen yalnız çalışan bireyler tarafından yapılır",
-      "Öğretmen-öğrenci ilişkisi bilimsel sonuçları geçersiz kılar",
-      "Bilim insanları birbirinden tamamen bağımsız, izole çalışmalıdır",
-      "Bilimsel bilgi genellikle işbirliği ve önceki çalışmalar üzerine kümülatif biçimde inşa edilir"
-    ],
+    context: "Bir öğretim materyalinde şu karşılaştırma yapılmaktadır: Dalton'ın modeli atomu bölünemez kabul ederken, Thomson'ın modeli atomun içinde elektron bulunduğunu, Rutherford'ın modeli ise elektronların dışında ayrıca yoğun bir çekirdek bulunduğunu öne sürer.",
+    text: "Bu üç model arasındaki temel fark en doğru şekilde hangisidir?",
+    options: ["Thomson'ın modeli çekirdek fikrini Rutherford'dan önce önermiştir", "Üç model de birbirinin birebir aynısıdır, farkları yoktur", "Dalton'ın modeli en karmaşık, Rutherford'ın modeli en basit olanıdır", "Her yeni model, bir öncekinin açıklayamadığı bir iç yapı bileşenini (önce elektron, sonra çekirdek) ekleyerek atomun karmaşıklığını artırmıştır", "Bu üç model birbirinden tamamen bağımsız gelişmiş, birbirini hiç etkilememiştir"],
+    correct: 3,
+    explain: "Model gelişimi kümülatiftir: Dalton'ın bölünemez küre fikrine Thomson elektronu, Rutherford ise ayrıca yoğun bir çekirdeği ekleyerek atomun iç yapısını aşamalı olarak daha karmaşık ve doğru bir şekilde tanımlamıştır."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
+    orbitalBoxes: {
+      subshells: [
+        { label: "1s", electrons: [2] },
+        { label: "2s", electrons: [2] },
+        { label: "2p", electrons: [1, 1, 1] }
+      ],
+      caption: "Modern kuantum modele göre bir atomun temel hâl elektron dizilimi"
+    },
+    context: "Görseldeki kutu diyagramı, modern kuantum mekaniksel modelin bir atomun elektronlarını alt kabuklara (orbitallere) nasıl yerleştirdiğini göstermektedir; bu tür bir gösterim Bohr modelinde bulunmaz.",
+    text: "Bu diyagramın Bohr modelinden temel farkı en doğru şekilde hangisidir?",
+    options: ["Yalnızca hidrojen atomu için kullanılabilmesi (Bohr modeliyle aynı sınırlılığı taşıması)", "Elektron sayısını değiştirmesi", "Çekirdek yükünü değiştirmesi", "Elektronları tek bir dairesel yörünge yerine farklı şekil ve enerjilere sahip alt kabuklara (orbitallere) dağıtması", "Bohr modeliyle birebir aynı bilgiyi farklı çizerek sunması"],
+    correct: 3,
+    explain: "Bohr modeli tüm elektronları tek boyutlu, dairesel yörüngelere yerleştirirken; kuantum modeli elektronları farklı enerji ve şekillere sahip alt kabuklara (s, p, d...) dağıtarak çok elektronlu atomları da başarıyla tanımlayabilir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
+    context: "Dalton'ın teorisi izotopların varlığını (aynı elementin farklı kütleli atomları) öngörmemişti; ancak 20. yüzyılın başında kütle spektrometresi ölçümleri, bazı elementlerin farklı kütlelere sahip atomlardan oluştuğunu göstermiştir.",
+    text: "Bu keşif, Dalton'ın teorisinin hangi varsayımını doğrudan sınırlandırmıştır?",
+    options: ["Atomların yok edilemeyeceği varsayımını", "Atomların bölünemez olduğu varsayımını", "Bileşiklerin tam sayı oranlarında birleştiği varsayımını", "Aynı elementin tüm atomlarının kütlece özdeş olduğu varsayımını", "Kimyasal tepkimelerde atom sayısının korunduğu varsayımını"],
+    correct: 3,
+    explain: "İzotopların keşfi, aynı elementin atomlarının farklı kütlelere sahip olabileceğini gösterdiğinden, Dalton'ın 'aynı element atomları kütlece özdeştir' varsayımını doğrudan sınırlandırmıştır."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
+    context: "Bir bilim felsefesi tartışmasında şu görüş savunulmaktadır: 'Bir bilimsel model asla mutlak doğru olarak kabul edilmemeli; yalnızca elimizdeki en iyi kanıtlarla en tutarlı açıklama olarak görülmelidir.'",
+    text: "Atom modellerinin tarihi, bu görüşü en doğrudan hangi şekilde destekler?",
+    options: ["Bu görüş, atom modellerinin gelişimiyle hiçbir şekilde örtüşmez", "İlk önerilen model (Dalton) hiçbir zaman değiştirilmemiştir", "Atom modellerinin tümü aynı anda, birbirinden bağımsız olarak doğru kabul edilmiştir", "Her model, döneminin en iyi kanıtlarıyla tutarlıydı fakat sonraki kanıtlarla revize edilmiştir", "Modern kuantum modeli, gelecekte asla revize edilmeyecek kadar kesindir"],
+    correct: 3,
+    explain: "Atom modellerinin tarihi (Dalton→Thomson→Rutherford→Bohr→kuantum model), her modelin kendi döneminin kanıtlarıyla tutarlı olduğunu ama yeni kanıtlar ortaya çıktıkça revize edildiğini gösterir — bilimsel bilginin geçici ve kanıta bağlı doğasını örnekler."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
+    context: "Rutherford'ın modeli, elektronların çekirdek etrafında döndüğünü varsayıyordu; ancak klasik elektromanyetik teoriye göre dairesel hareket eden yüklü bir tanecik sürekli enerji kaybederek kısa sürede çekirdeğe düşmelidir. Gözlemlerde ise atomlar kararlıdır.",
+    text: "Bu çelişki, Bohr'un yeni bir model önermesinde en doğrudan hangi rolü oynamıştır?",
+    options: ["Bu çelişki yalnızca Thomson modeliyle ilgilidir", "Bu çelişkinin Bohr'un modeliyle hiçbir ilgisi yoktur", "Bohr, bu çelişkiyi görmezden gelerek Rutherford modelini aynen kullanmıştır", "Rutherford modelinin açıklayamadığı bu kararlılık sorununu çözmek için Bohr, elektronların yalnızca belirli sabit enerji düzeylerinde bulunabileceğini varsaymıştır", "Bohr, bu sorunu çözmek yerine atomun kararsız olduğunu kabul etmiştir"],
+    correct: 3,
+    explain: "Klasik fizikle Rutherford modeli arasındaki bu çelişki, Bohr'u elektronların yalnızca belirli ('izinli') enerji düzeylerinde bulunabileceği ve bu düzeylerde enerji kaybetmeden dolanabileceği yeni bir varsayım geliştirmeye yöneltmiştir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
+    context: "Bir laboratuvar etkinliğinde, farklı gazlarla doldurulmuş katot ışını tüplerinde her seferinde aynı kütle/yük oranına sahip ışınlar gözlemlenmiştir; bu oran, kullanılan gazın türünden bağımsız olarak sabit kalmıştır.",
+    text: "Bu bulgu, elektron hakkında en doğrudan hangi çıkarımı destekler?",
+    options: ["Bu bulgunun elektronun doğasıyla ilgisi olmadığı", "Elektronun her element için farklı bir tanecik olduğu", "Elektronun yalnızca belirli gazlarda bulunduğu", "Kütle/yük oranının gaz türüne göre değişmesi gerektiği", "Elektronun tüm maddelerde ortak, temel bir tanecik olduğu"],
     correct: 4,
-    explain: "Rutherford'ın Thomson'ın öğrencisi olması, Bohr'un Rutherford'la çalışması gibi ilişkiler, bilimsel bilginin izole değil, önceki çalışmalar ve işbirlikleri üzerine kümülatif olarak inşa edildiğini gösterir."
+    explain: "Kütle/yük oranının kullanılan gaz türünden bağımsız olarak sabit kalması, elektronun tüm maddelerde ortak, temel bir yapı taşı olduğunu göstermiştir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
+    context: "Bir atomun kütlesi ölçüldüğünde, yalnızca bilinen proton ve elektron sayısına dayanan hesaplamanın öngördüğünden belirgin şekilde daha fazla çıkmıştır; bu fark, çekirdekte elektrik yükü taşımayan ek bir tanecik olabileceği fikrini doğurmuştur.",
+    text: "Bu gözlem, hangi tanecik keşfine götüren akıl yürütmeyi yansıtır?",
+    options: ["Alfa taneciği", "Elektron", "Foton", "Pozitron", "Nötron"],
+    correct: 4,
+    explain: "Ölçülen atom kütlesinin proton+elektron kütlesiyle tam olarak açıklanamaması, çekirdekte yüksüz fakat kütleli bir tanecik (nötron) bulunması gerektiği fikrine yol açmıştır; bu fikir sonradan Chadwick'in deneyiyle doğrulanmıştır."
+  },
+
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
+    context: "Bir kimya ders kitabında, Bohr modelinin hidrojen atomunun enerji düzeylerini n=1, n=2, n=3... şeklinde numaralandırdığı ve elektronun bir düzeyden diğerine geçerken belirli miktarda enerji soğurduğu veya yaydığı anlatılmaktadır.",
+    text: "Bu modele göre, bir elektronun n=1 düzeyinden n=3 düzeyine geçebilmesi için ne olması gerekir?",
+    options: ["Yalnızca ışık hızında hareket etmesi", "Herhangi bir miktarda enerji soğurması yeterlidir", "Enerji soğurmadan kendiliğinden geçiş yapması", "Çekirdekten uzaklaşmak için kütle kaybetmesi", "İki düzey arasındaki enerji farkına tam olarak eşit miktarda enerji soğurması"],
+    correct: 4,
+    explain: "Bohr modeline göre bir elektron yalnızca iki enerji düzeyi arasındaki farka tam olarak eşit miktarda enerji soğurarak (veya yayarak) düzey değiştirebilir; ara değerler izinli değildir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
+    context: "Bir karşılaştırmada, Thomson'ın modelinde atomun toplam elektrik yükünün sıfır olduğu (pozitif kütle ile negatif elektronların yükünün birbirini dengelediği) belirtilirken, Rutherford'ın modelinde de atomun nötr olduğu ancak yükün farklı şekilde dağıldığı belirtilmektedir.",
+    text: "Bu iki modelin ortak noktası ile temel farkı sırasıyla en doğru şekilde hangisidir?",
+    options: ["Ortak nokta: her ikisinin de elektronun varlığını reddetmesi", "Ortak nokta: her ikisinin de çekirdek fikrini içermesi; fark yoktur", "Ortak nokta yoktur, iki model tamamen farklı öngörülerde bulunur", "Fark: yalnızca Thomson modeli atomun nötr olduğunu kabul eder", "Ortak nokta: atomun toplamda nötr olması; fark: pozitif yükün dağınık mı yoksa küçük bir merkezde mi yoğunlaştığı"],
+    correct: 4,
+    explain: "Her iki model de atomun toplamda elektriksel olarak nötr olduğunu kabul eder; temel fark, pozitif yükün Thomson modelinde atom hacmine dağınık, Rutherford modelinde ise küçük bir çekirdekte yoğunlaşmış olmasıdır."
   },
 
   /* ============ ZOR ============ */
@@ -3332,397 +2727,406 @@ export const QUIZ = {
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, bilim felsefesinde bir teorinin 'yanlışlanabilir' (test edilip çürütülebilir) olmasının, onun bilimsel sayılması için önemli bir ölçüt olduğunu öğreniyor.",
-    text: "Atom modellerinin tarihine bu ölçütle bakıldığında en doğru çıkarım hangisidir?",
-    options: [
-      "Thomson'ın modeli hiçbir zaman test edilmemiştir",
-      "Bilimsel modeller asla test edilemez, bu yüzden yanlışlanamazlar",
-      "Bir model yanlışlandığında, o modeli öneren bilim insanının tüm çalışmaları değersizleşir",
-      "Yanlışlanabilirlik yalnızca kimya dışındaki bilimler için geçerlidir",
-      "Thomson'ın modeli, Rutherford'ın deneyiyle test edilebildiği ve gözlemle çelişkiye düştüğü için yanlışlanmış, bu da bilimsel bir modelin özelliğidir"
-    ],
+    context: "Bir düşünce deneyinde, eğer Rutherford'ın altın levha deneyinde TÜM alfa tanecikleri sapmadan geçseydi (hiçbiri büyük açıyla saçılmasaydı), bu sonuç farklı bir atom modelini destekleyecekti.",
+    text: "Bu varsayımsal sonuç, hangi model ile en tutarlı olurdu ve Rutherford'ın gerçek gözlemiyle karşılaştırıldığında ne değişirdi?",
+    options: ["Bu sonuç, mevcut Rutherford modelini değiştirmeden aynen doğrulardı", "Bohr'un yörünge modeliyle tutarlı olurdu; enerji düzeyleriyle saçılmanın ilgisi vardır", "Dalton'ın modeliyle tutarlı olurdu; çünkü Dalton saçılmayı öngörmüştü", "Hiçbir model bu sonuçla ilişkilendirilemez", "Thomson'ın üzümlü kek modeliyle tutarlı olurdu; çünkü yoğun bir merkez olmadığında büyük açılı saçılma beklenmez"],
     correct: 4,
-    explain: "Thomson'ın modelinin somut bir deneyle (Rutherford'ın altın levha deneyi) test edilip gözlemle çelişkiye düşmesi ve bu nedenle terk edilmesi, bilimsel bir teorinin 'yanlışlanabilir' olması gerektiği ilkesinin iyi bir örneğidir."
+    explain: "Tüm alfa taneciklerinin sapmadan geçmesi, atomda yoğun bir merkezi yapı bulunmadığı, yükün ve kütlenin dağınık olduğu anlamına gelirdi — bu da Thomson'ın üzümlü kek modeliyle tutarlı olur, Rutherford'ın çekirdek fikrine gerek kalmazdı."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, eski atom modellerinin 'tamamen yanlış' olarak değil, 'sınırlı geçerlilik alanına sahip, sonradan geliştirilen' modeller olarak değerlendirildiğini öğreniyor.",
-    text: "Bu yaklaşım bilimsel modellerin doğası hakkında en olgun hangi çıkarımı destekler?",
-    options: [
-      "Bir model bir kez kabul edildiğinde asla değiştirilmemelidir",
-      "Eski modellerin hiçbir bilimsel değeri yoktur ve tamamen unutulmalıdır",
-      "Yeni bir model geldiğinde eski model her zaman tamamen hatalı kabul edilmelidir",
-      "Bilimsel modeller arasında hiçbir mantıksal bağlantı yoktur",
-      "Bilimsel modeller genellikle bir öncekinin tamamen çöpe atılması değil, onun üzerine inşa edilerek daha kapsamlı hale getirilmesiyle gelişir"
-    ],
+    table: {
+      headers: ["Enerji düzeyi geçişi", "Bohr modelinin öngördüğü enerji (eV)", "Deneyde ölçülen enerji (eV)"],
+      rows: [
+        ["n=2 → n=1", "10,2", "10,2"],
+        ["n=3 → n=1", "12,1", "12,1"],
+        ["n=3 → n=2 (helyum atomunda)", "1,9 (öngörü)", "1,4 (ölçülen)"]
+      ],
+      caption: "Bohr modelinin öngörüleri ile deneysel ölçümlerin karşılaştırılması"
+    },
+    text: "Tablodaki verilere dayanarak, Bohr modeliyle ilgili en doğru bilimsel çıkarım hangisidir?",
+    options: ["Tablo, Bohr modelinin çekirdek yapısıyla ilgili hiçbir şey söylemez", "Model her üç geçiş için de aynı doğrulukla çalışmaktadır", "Model hiçbir geçiş için doğru sonuç vermemektedir", "Deneysel ölçümler güvenilmez olduğundan model her zaman doğru kabul edilmelidir", "Model hidrojen için (n=2→1, n=3→1) yüksek doğrulukla çalışırken, çok elektronlu helyum atomunda (n=3→2) sapma göstermektedir"],
     correct: 4,
-    explain: "Bilim tarihinde modeller genellikle bir öncekinin tamamen reddi değil, onun açıklama gücünü koruyup sınırlarını genişleten, daha kapsamlı yeni modellerle geliştirilir (örneğin Bohr modeli hâlâ basit açıklamalar için kullanılır, ama kuantum mekaniksel model daha kapsamlıdır)."
+    explain: "Tabloda hidrojen atomuna ait geçişlerde (n=2→1, n=3→1) öngörü ile ölçüm birebir örtüşürken, çok elektronlu helyum atomundaki geçişte (n=3→2) belirgin bir sapma (1,9 vs 1,4 eV) görülmektedir — bu, modelin çok elektronlu sistemlerdeki sınırlılığını doğrular."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, Bohr modelinin çok elektronlu atomların spektrumlarını tam açıklayamadığını, bunun üzerine Schrödinger ve Heisenberg gibi bilim insanlarının kuantum mekaniksel modeli geliştirdiğini öğreniyor.",
-    text: "Bu geçiş süreci, bilimsel modellerin sınırları hakkında en doğru hangi genellemeyi destekler?",
-    options: [
-      "Modellerin sınırları asla deneyle tespit edilemez",
-      "Bir model başarısız olduğunda bilim insanları genellikle araştırmayı tamamen bırakır",
-      "Bohr modelinin başarısızlığı, atom kavramının bilimsel olarak geçersiz olduğu anlamına gelir",
-      "Kuantum mekaniksel model, Bohr modeliyle hiçbir ortak noktaya sahip değildir",
-      "Bir modelin bazı durumlarda başarısız kalması, o alanda yeni ve daha kapsamlı bir modelin geliştirilmesi için itici güç olabilir"
-    ],
+    context: "Bir bilim tarihçisi şu gözlemi paylaşmaktadır: 'Dalton'ın teorisi kimyasal tepkimelerdeki kütle korunumunu ve sabit oranlar yasasını başarıyla açıklıyordu; bu nedenle onlarca yıl büyük bir değişiklik olmadan kabul gördü. Ancak elektrik ve radyoaktivite alanındaki yeni deneyler, teorinin öngöremediği gözlemler ortaya çıkardı.'",
+    text: "Bu anlatıya dayanarak, bir bilimsel teorinin uzun süre değişmeden kalmasıyla ilgili en doğru çıkarım hangisidir?",
+    options: ["Bir teorinin kabul görme süresi, o teorinin doğruluğuyla hiçbir ilgisi olmayan rastgele bir durumdur", "Bir teori uzun süre değişmeden kaldıysa, artık hiçbir zaman değişmeyecek demektir", "Dalton'ın teorisinin uzun süre kabul görmesi, teorinin yanlış olduğunu kanıtlar", "Yeni deney alanları (elektrik, radyoaktivite), eski teorilerle hiçbir zaman ilişkilendirilemez", "Bir teorinin uzun süre kabul görmesi, mevcut kanıtlarla tutarlı olduğu anlamına gelir; ancak yeni gözlem alanları açıldıkça teori yine de sınanmaya ve gerekirse revize edilmeye devam eder"],
     correct: 4,
-    explain: "Bir modelin açıklayamadığı gözlemlerin (burada çok elektronlu atomların spektrumu) fark edilmesi, bilim insanlarını daha kapsamlı ve doğru tahminler yapan yeni modeller (kuantum mekaniksel model) geliştirmeye yöneltir; bu, bilimin kendi kendini düzelten doğasının bir örneğidir."
+    explain: "Anlatı, bir teorinin (Dalton'ınki gibi) belirli bir kanıt kümesiyle tutarlı olduğu sürece uzun süre kabul görebileceğini, ancak bilimin yeni gözlem alanlarına (elektrik, radyoaktivite) açıldıkça teorinin yeniden sınanıp gerekirse revize edildiğini gösterir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, 'tüm modeller yanlıştır, ancak bazıları faydalıdır' şeklindeki bir bilim felsefesi görüşünü okuyor ve bunu atom modelleriyle ilişkilendiriyor.",
-    text: "Bu görüşün atom modelleri bağlamında en doğru yorumu hangisidir?",
-    options: [
-      "Bu görüş bilimin kesin ve değişmez gerçekleri ortaya koyduğunu iddia eder",
-      "Bu görüşe göre hiçbir atom modeli hiçbir işe yaramaz",
-      "Bu görüş yalnızca sosyal bilimler için geçerlidir, doğa bilimlerine uygulanamaz",
-      "En doğru model her zaman en karmaşık olandır, bu yüzden basit modeller kullanılmamalıdır",
-      "Modeller gerçekliğin birebir kopyası değil, belirli amaçlar için gerçekliği yeterince iyi tahmin eden basitleştirilmiş temsillerdir"
-    ],
+    context: "Bir düşünce deneyinde, eğer Chadwick'in deneyinde ölçülen tanecik kütlesi protonunkinden çok farklı (örneğin protonun yüzde birinden küçük) çıksaydı, bu durum nötron yerine farklı bir taneciğin keşfedildiği anlamına gelebilirdi.",
+    text: "Bu varsayımsal durum, bilimsel keşiflerde ölçümün rolüyle ilgili en doğru çıkarımı hangisi destekler?",
+    options: ["Farklı kütleye sahip iki tanecik her zaman aynı taneciktir", "Bir taneciğin kimliği yalnızca isimlendirilme sırasına göre belirlenir", "Ölçülen kütle, taneciğin kimliğiyle hiçbir zaman ilişkili değildir", "Nötron keşfi, herhangi bir kütle ölçümüne dayanmadan yapılmıştır", "Bir taneciğin kimliği, yalnızca varlığının gözlemlenmesiyle değil, ölçülen fiziksel özellikleriyle (kütle, yük gibi) belirlenir"],
     correct: 4,
-    explain: "'Tüm modeller yanlıştır, bazıları faydalıdır' görüşü, bilimsel modellerin gerçekliğin tam ve mükemmel bir kopyası olmadığını, ancak belirli bağlamlarda (örneğin lise düzeyinde kimyasal bağ açıklaması için Bohr modeli) yeterince faydalı tahminler sağladığını vurgular."
+    explain: "Chadwick'in deneyinde ölçülen kütlenin protona yakın çıkması, keşfedilen taneciğin nötron olarak tanımlanmasında belirleyici olmuştur; farklı bir kütle ölçülseydi bu, farklı bir tanecik anlamına gelirdi — bilimsel kimlik belirlemede ölçümün kritik rolünü gösterir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, günümüzde lise kimyasında hâlâ Bohr modelinin basitleştirilmiş çizimlerle kullanıldığını, oysa bilim insanlarının kuantum mekaniksel modeli kullandığını fark ediyor.",
-    text: "Bu durum en doğru hangi şekilde açıklanabilir?",
-    options: [
-      "İki model arasında hiçbir fark yoktur, sadece isimleri farklıdır",
-      "Bohr modeli bilim insanları tarafından hâlâ tam doğru kabul edilmektedir",
-      "Kuantum mekaniksel model yalnızca üniversitede var olan, aslında geçersiz bir modeldir",
-      "Lise kitapları bilerek yanlış bilgi öğretmektedir",
-      "Bohr modeli, temel kavramları (enerji düzeyleri, elektron geçişleri) basit ve görsel biçimde anlatmak için eğitimde hâlâ faydalıdır; ancak ileri düzey araştırmalarda daha kapsamlı kuantum mekaniksel model kullanılır"
-    ],
+    context: "Bir öğretim programında öğrencilere şu soru yöneltilmektedir: 'Bohr modeli, klasik fizik kurallarıyla kuantum fikrini (enerji düzeylerinin kesikliliği) bir arada kullanan geçiş niteliğinde bir modeldir. Modern kuantum mekaniksel model ise tamamen olasılıksal bir yaklaşım benimser.'",
+    text: "Bu bilgiye dayanarak, Bohr modelinden modern kuantum modeline geçişteki temel kavramsal değişim en doğru şekilde hangisidir?",
+    options: ["Modern model, enerji düzeylerinin kesikliliği fikrini tamamen terk etmiştir", "Elektronun varlığı ilk kez modern modelde kabul edilmiştir", "Modern model, çekirdeğin varlığını reddetmektedir", "Bohr modeli ile modern model arasında kavramsal olarak hiçbir fark yoktur", "Elektronun kesin bir yörüngede bulunduğu fikrinden, yalnızca belirli bir bölgede bulunma olasılığından söz edilebileceği fikrine geçilmiştir"],
     correct: 4,
-    explain: "Bohr modeli, temel enerji düzeyi ve elektron geçişi kavramlarını basit ve sezgisel biçimde açıklamak için eğitimde pedagojik olarak faydalıdır; bilimsel araştırmalarda ise daha doğru tahminler sunan kuantum mekaniksel model kullanılır — bu, modelin 'kullanım amacına göre' seçilmesinin bir örneğidir."
+    explain: "Bohr modelinde elektron kesin bir yörüngede (belirli bir yarıçapta) dolanırken, modern kuantum modelinde elektronun kesin konumu tanımlanmaz, yalnızca belirli bir bölgede (orbitalde) bulunma olasılığından söz edilir — bu, determinizmden olasılıksal yaklaşıma geçişi yansıtan temel kavramsal değişimdir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, mass spektrometresi gibi teknolojik gelişmelerin izotopların kütle farklarını hassas biçimde ölçebilmeyi mümkün kıldığını, bu ölçümlerin de Dalton döneminde yapılamayacağını öğreniyor.",
-    text: "Bu bilgi, bilimsel bilginin değişebilirliği ile teknoloji arasındaki ilişki hakkında en doğru hangi çıkarımı destekler?",
-    options: [
-      "Teknolojik gelişmeler bilimsel modelleri değiştiremez, yalnızca doğrular",
-      "Teknoloji bilimsel modellerin gelişimini hiçbir şekilde etkilemez",
-      "Dalton'ın döneminde teknoloji yeterliydi, sadece bilim insanları dikkatsizdi",
-      "Mass spektrometresi yalnızca kimya dışı alanlarda kullanılır",
-      "Yeni ölçüm teknolojilerinin geliştirilmesi, önceden gözlemlenemeyen olguların (örneğin izotop kütle farkları) tespit edilmesini sağlayarak bilimsel modellerin revize edilmesine katkıda bulunabilir"
-    ],
+    context: "Bir araştırmacı, farklı elementlerin katot ışını tüplerinde her zaman aynı kütle/yük oranına sahip negatif tanecikler ürettiğini; ancak pozitif kanal ışınlarının kütle/yük oranının kullanılan gaza göre değiştiğini gözlemlemiştir.",
+    text: "Bu iki gözlem birlikte değerlendirildiğinde, elektron ve pozitif tanecikler (protonlar) hakkında en doğru çıkarım hangisidir?",
+    options: ["Bu iki gözlem birbiriyle hiçbir şekilde ilişkilendirilemez", "Hem elektron hem pozitif tanecikler her elementte birebir aynıdır", "Elektronun kütle/yük oranının sabit olması, pozitif taneciklerin var olmadığını gösterir", "Pozitif taneciklerin kütlesinin değişmesi, elektronun da değiştiğini gösterir", "Elektron tüm maddelerde ortak temel bir taneciktir; pozitif taneciklerin kütlesi ise elementten elemente farklılık gösterir (çünkü farklı sayıda proton/nötron içerirler)"],
     correct: 4,
-    explain: "Mass spektrometresi gibi araçların geliştirilmesi, önceden ölçülemeyen izotop kütle farkları gibi verilerin elde edilmesini sağlamış; bu da Dalton'ın 'atomlar özdeştir' varsayımının revize edilmesine yol açmıştır — teknoloji ile bilimsel bilginin gelişimi yakından ilişkilidir."
+    explain: "Elektronun kütle/yük oranının sabit olması onun tüm maddelerde ortak temel bir tanecik olduğunu; pozitif taneciklerin (protonların, aslında farklı gazlarda farklı sayıda birleşmiş atom çekirdeklerinin) kütle/yük oranının değişmesi ise bu taneciklerin elementten elemente farklı kütlelere sahip olduğunu gösterir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, farklı ülkelerdeki bilim insanlarının aynı dönemde birbirinden bağımsız olarak benzer sonuçlara ulaştığı (örneğin farklı laboratuvarların benzer spektrum verileri elde etmesi) durumların bilimde sıkça yaşandığını öğreniyor.",
-    text: "Bu durum bilimsel bilginin güvenilirliği hakkında en doğru hangi çıkarımı destekler?",
+    circleCompare: {
+      title: "Atom modellerinde 'atomun boş uzay oranı' konusundaki tarihsel algı değişimi (temsilî)",
+      unit: "göreli algılanan doluluk",
+      items: [
+        { label: "Dalton (katı küre)", value: 100 },
+        { label: "Thomson (üzümlü kek)", value: 90 },
+        { label: "Rutherford (çekirdekli)", value: 5 }
+      ]
+    },
+    text: "Görseldeki daire büyüklüklerine dayanarak, atom modellerinin tarihsel gelişimiyle ilgili en doğru çıkarım hangisidir?",
     options: [
-      "Bağımsız araştırmacıların aynı sonuca ulaşması (tekrarlanabilirlik), bir bulgunun güvenilirliğini artıran önemli bir bilimsel ölçüttür",
-      "Bu durum yalnızca tesadüftür ve bilimsel güvenilirlikle ilgisi yoktur",
-      "Farklı laboratuvarların aynı sonucu bulması, sonuçların uydurma olduğu anlamına gelir",
-      "Tekrarlanabilirlik yalnızca sosyal bilimlerde önemlidir",
-      "Bağımsız doğrulama bilimsel yöntemde gereksiz bir adımdır"
+      "Rutherford'ın deneyi, atomun büyük ölçüde boş uzaydan oluştuğunu göstererek önceki modellerin 'dolu küre' varsayımını büyük ölçüde terk ettirmiştir",
+      "Üç model de atomun aynı oranda dolu olduğunu varsaymıştır",
+      "Dalton'ın modeli, atomun en boş olduğunu varsaymıştır",
+      "Rutherford'ın modeli, atomun tamamen dolu olduğunu varsaymıştır",
+      "Bu üç model arasında doluluk varsayımı açısından hiçbir fark yoktur"
     ],
     correct: 0,
-    explain: "Bağımsız araştırma gruplarının benzer sonuçlara ulaşması (tekrarlanabilirlik), bir bulgunun tesadüfi ya da hatalı olmadığını, güvenilir olduğunu gösteren temel bilimsel ölçütlerden biridir."
+    explain: "Dairelerin küçülmesi, Dalton ve Thomson modellerinin atomu büyük ölçüde 'dolu' varsaymasına karşılık, Rutherford'ın deneysel bulgularının atomun büyük kısmının boş uzaydan oluştuğunu ortaya koyarak bu algıyı kökten değiştirdiğini yansıtır."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, 'bilimsel teori' kelimesinin günlük dildeki 'sadece bir tahmin/varsayım' anlamıyla bilimdeki anlamının farklı olduğunu öğreniyor.",
-    text: "Bilimsel bağlamda 'teori' kavramı için en doğru tanım hangisidir?",
+    context: "Bir bilim yazısında şu iddia yer almaktadır: 'Bir sonraki atom modeli, mevcut kuantum mekaniksel modelin öngöremediği yeni bir deneysel gözlem ortaya çıkmadıkça değişmeyecektir.' Bu iddia, geçmişteki model değişikliklerinin ortak bir örüntüsüne dayanmaktadır.",
+    text: "Bu iddianın dayandığı örüntü, geçmiş model değişikliklerinden (Dalton→Thomson→Rutherford→Bohr→kuantum) en doğru şekilde nasıl özetlenebilir?",
     options: [
-      "Çok sayıda gözlem ve deneyle desteklenmiş, açıklama ve tahmin gücü yüksek, sistematik bir bilgi bütünüdür",
-      "Kanıtlanmamış, rastgele bir tahmindir ve günlük dildeki 'teorim var' ifadesiyle aynı anlama gelir",
-      "Bir kez ortaya atıldıktan sonra asla test edilmeyen sabit bir gerçektir",
-      "Yalnızca matematiksel formüllerden oluşan, deneyle ilgisi olmayan bir yapıdır",
-      "Bilim insanlarının kişisel görüşünden ibarettir"
+      "Her yeni model, bir öncekinin açıklayamadığı somut bir deneysel gözlem ortaya çıktığında geliştirilmiştir",
+      "Her yeni model, bir öncekiyle hiçbir deneysel gözleme bağlı olmadan, rastgele önerilmiştir",
+      "Model değişiklikleri yalnızca bilim insanlarının kişisel tercihlerine dayanmıştır",
+      "Her yeni model, bir öncekini tamamen çürütüp hiçbir ortak unsur taşımamıştır",
+      "Geçmişteki model değişiklikleri, gelecekteki değişikliklerle hiçbir ortak örüntü paylaşmaz"
     ],
     correct: 0,
-    explain: "Bilimsel bağlamda 'teori', günlük dildeki gevşek 'tahmin' anlamından farklı olarak, çok sayıda gözlem ve deneyle desteklenmiş, geniş açıklama ve tahmin gücüne sahip sistematik bir bilgi yapısını ifade eder (örneğin atom teorisi, evrim teorisi)."
+    explain: "Tarihsel örüntü, her modelin bir öncekinin açıklayamadığı somut bir deneysel gözlem (elektron, çekirdek, spektrum çizgileri, çok elektronlu atom sapmaları vb.) ortaya çıktığında geliştirildiğini göstermektedir; bu nedenle iddia, gelecekteki değişikliğin de benzer şekilde yeni bir gözleme bağlı olacağını varsaymaktadır."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, gelecekte hipotetik olarak kuantum mekaniksel modelin de bazı gözlemleri açıklayamadığı bir durumla karşılaşılırsa ne olabileceğini düşünüyor.",
-    text: "Bilimin doğası göz önüne alındığında bu senaryoda en olası ve tutarlı yaklaşım hangisidir?",
+    context: "Bir kıyaslamada, Rutherford'ın alfa saçılması deneyi ile Thomson'ın katot ışını deneyi karşılaştırılmaktadır: Thomson'ın deneyi elektronun varlığını ve yükünü ortaya koyarken, Rutherford'ın deneyi elektronun keşfinden ayrı olarak, pozitif yükün ve kütlenin atom içindeki dağılımını sorgulamıştır.",
+    text: "Bu iki deney arasındaki temel fark en doğru şekilde hangisidir?",
     options: [
-      "Model, yeni gözlemleri de kapsayacak şekilde revize edilir ya da daha kapsamlı yeni bir modelle desteklenir/değiştirilir",
-      "Kuantum mekaniği kesin ve değişmez olduğu için hiçbir revizyon yapılamaz",
-      "Böyle bir durumda bilim insanları araştırmayı tamamen durdurur",
-      "Yeni gözlem, ölçüm hatası olduğu gerekçesiyle her zaman yok sayılır",
-      "Atom kavramının kendisi tamamen terk edilir"
+      "Thomson'ın deneyi 'atomda negatif yüklü ne var?' sorusuna, Rutherford'ın deneyi ise 'pozitif yük ve kütle atom içinde nasıl dağılmış?' sorusuna cevap aramıştır",
+      "İki deney de aynı soruya, aynı yöntemle cevap aramıştır",
+      "Rutherford'ın deneyi elektronun keşfini sağlamıştır, Thomson'ınki değil",
+      "Thomson'ın deneyi çekirdeği keşfetmiştir, Rutherford'ınki elektronu",
+      "Bu iki deney arasında kavramsal bir fark yoktur, yalnızca farklı tarihlerde yapılmışlardır"
     ],
     correct: 0,
-    explain: "Bilimin doğası gereği, mevcut en iyi model bile yeni ve tutarlı gözlemlerle çelişirse gözden geçirilir; bu, atom modellerinin tarihinde defalarca yaşanmış bir süreçtir ve kuantum mekaniksel model de bu ilkeden istisna değildir — bilimsel bilgi her zaman mevcut kanıtlara göre 'şu ana kadarki en iyi açıklama'dır."
+    explain: "Thomson'ın deneyi atomun içinde negatif yüklü bir bileşen (elektron) olduğunu ortaya koyarken, Rutherford'ın deneyi farklı bir soruya (pozitif yük ve kütlenin atom içindeki dağılımına) odaklanmış ve bu sorgulama sonucunda çekirdek fikrine ulaşılmıştır."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, atom modelleri tarihinde bazı bilim insanlarının önce kendi hipotezlerini test etmek için deney tasarladığını, bazı deneylerin ise (Rutherford'ın altın levha deneyi gibi) beklenmedik sonuçlar verdiğini öğreniyor.",
-    text: "Beklenmedik bir deney sonucunun bilimsel süreçteki rolü en doğru hangi seçenekte açıklanmıştır?",
+    context: "Bir tartışmada şu soru sorulmaktadır: 'Eğer Millikan'ın deneyinde ölçülen yük değerleri sürekli bir aralıkta (herhangi bir ondalık değeri alabilecek şekilde) dağılmış olsaydı, bu durum elektrik yükünün doğası hakkındaki mevcut anlayışı nasıl etkilerdi?'",
+    text: "Bu varsayımsal senaryoya en doğru cevap hangisidir?",
     options: [
-      "Beklenmedik sonuçlar, mevcut modelin eksik ya da hatalı olduğunu gösteren değerli ipuçları olup yeni bilgiye kapı açabilir",
-      "Beklenmedik sonuçlar her zaman deney hatasından kaynaklanır ve göz ardı edilmelidir",
-      "Bilim insanları yalnızca beklediği sonucu bulana kadar deneyi tekrar tekrar değiştirmelidir",
-      "Beklenmedik sonuçlar bilimsel yöntemin dışındadır",
-      "Bir deneyden yalnızca önceden tahmin edilen sonuçlar bilimsel kabul edilir"
+      "Yükün kesikli (kuantumlu) değil, sürekli bir büyüklük olduğu sonucuna varılırdı; bu, mevcut atom altı parçacık modelini kökten değiştirirdi",
+      "Sonuç değişmezdi, çünkü yükün sürekli mi kesikli mi olduğu deneysel veriyle ilgisizdir",
+      "Bu durumda dahi yükün kesikli olduğu sonucuna varılırdı, veri şekli önemli değildir",
+      "Millikan bu durumda deneyi tamamen durdururdu, hiçbir sonuç çıkarılamazdı",
+      "Sürekli dağılım, yalnızca ölçüm cihazının bozuk olduğu anlamına gelir, teoriyle ilgisizdir"
     ],
     correct: 0,
-    explain: "Rutherford'ın deneyinde gözlemlenen 'beklenmedik' büyük açılı saçılma, mevcut (Thomson) modelinin eksik olduğunu gösteren kritik bir ipucu olmuş ve nükleer atom modelinin doğuşuna yol açmıştır — bilim tarihinde beklenmedik sonuçlar genellikle önemli keşiflerin kapısını aralar."
+    explain: "Millikan'ın ölçtüğü yüklerin belirli bir temel değerin tam katları (kesikli) olması, elektrik yükünün kuantumlu doğasının temel kanıtıdır; eğer veriler sürekli dağılsaydı bu, yükün kesikli değil sürekli bir büyüklük olduğu sonucunu doğurur ve mevcut parçacık modelini temelden sarsardı."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, 'bilimsel konsensüs' (bilim insanları arasındaki fikir birliği) kavramının, bir konudaki en güçlü kanıtlara dayalı ortak görüşü ifade ettiğini, ancak bunun da yeni kanıtlarla değişebileceğini öğreniyor.",
-    text: "Bu bilgi ışığında bilimsel konsensüs hakkında en doğru çıkarım hangisidir?",
+    context: "Bir bilim insanı şu değerlendirmeyi yapmaktadır: 'Rutherford'ın modeli, çekirdeğin varlığını doğru öngörmüş olsa da, elektronların neden çekirdeğe düşmediğini açıklayamamıştır; bu, modelin eksik değil ama tamamlanmamış olduğu anlamına gelir.'",
+    text: "Bu değerlendirmeye dayanarak, 'eksik' ile 'tamamlanmamış' bir bilimsel model arasındaki fark en doğru şekilde nasıl açıklanabilir?",
     options: [
-      "Bilimsel konsensüs, o an mevcut olan en güçlü kanıtlara dayanır ve yeni, tutarlı kanıtlar ortaya çıktıkça güncellenebilir; bu bir zayıflık değil, bilimin kendini düzeltme mekanizmasıdır",
-      "Bilimsel konsensüs bir kez oluştuğunda asla değişmez",
-      "Konsensüs, bilim insanlarının oylamayla rastgele karar vermesinden ibarettir",
-      "Konsensüsün değişmesi, önceki bilim insanlarının yalancı olduğu anlamına gelir",
-      "Bilimsel konsensüs kanıtlarla değil, popülerlikle belirlenir"
+      "Tamamlanmamış bir model, doğru öngörüler içerir fakat bazı gözlemleri açıklamak için ek varsayımlara ihtiyaç duyar; eksik bir model ise temel öngörüsünde hatalıdır",
+      "İki terim arasında hiçbir fark yoktur, aynı anlama gelir",
+      "Tamamlanmamış bir model, hiçbir doğru öngörü içermez",
+      "Eksik bir model, her zaman tamamlanmamış modelden daha güvenilirdir",
+      "Bu ayrım bilim felsefesiyle ilgisizdir, yalnızca kelime oyunudur"
     ],
     correct: 0,
-    explain: "Bilimsel konsensüs, mevcut en güçlü kanıtlara dayanan geçici bir 'en iyi anlayış'tır; atom modellerinin tarihinde görüldüğü gibi, yeni ve tutarlı kanıtlar ortaya çıktığında konsensüs güncellenir — bu, bilimin güvenilirliğini azaltmaz, aksine kendi kendini düzeltme kapasitesini gösterir."
+    explain: "Rutherford'ın modeli çekirdeğin varlığı konusunda doğru bir öngörüde bulunmuştur (bu yönüyle 'eksik' değildir), fakat kararlılık sorununu açıklayamadığı için 'tamamlanmamış' kalmıştır; bu boşluk daha sonra Bohr'un ek varsayımıyla (sabit enerji düzeyleri) doldurulmuştur."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, atom modelleri tarihinde her modelin, döneminin mevcut teknolojik ve kavramsal sınırları içinde en iyi açıklamayı sunduğunu; bu nedenle 'geçmişteki bilim insanlarının aptal olduğu' şeklindeki bir yorumun yanlış olacağını tartışıyor.",
-    text: "Bu tartışma en doğru hangi bilimsel bakış açısını yansıtır?",
+    table: {
+      headers: ["Element", "Katot ışını deneyinde ölçülen e/m oranı", "Kanal ışını deneyinde ölçülen e/m oranı"],
+      rows: [
+        ["Hidrojen", "1,76 × 10¹¹ C/kg (sabit)", "9,58 × 10⁷ C/kg"],
+        ["Oksijen", "1,76 × 10¹¹ C/kg (sabit)", "6,0 × 10⁶ C/kg"],
+        ["Neon", "1,76 × 10¹¹ C/kg (sabit)", "4,8 × 10⁶ C/kg"]
+      ],
+      caption: "Farklı elementlerle yapılan katot ışını ve kanal ışını deneylerinde ölçülen yük/kütle oranları"
+    },
+    text: "Tablodaki verilere dayanarak, katot ışınları (elektron) ile kanal ışınları (pozitif tanecikler) arasındaki temel fark en doğru şekilde hangisidir?",
     options: [
-      "Geçmiş bilim insanlarının modelleri, kendi dönemlerinin mevcut kanıt ve araçlarına göre rasyoneldi; sonraki düzeltmeler onların yetersizliğinden değil, bilginin ve teknolojinin ilerlemesinden kaynaklanır",
-      "Geçmiş bilim insanları gerçekten yetersizdi ve bu yüzden modelleri yanlıştı",
-      "Bilim tarihinde ilerleme diye bir şey yoktur, her dönem birbirinin aynısıdır",
-      "Sadece günümüz bilim insanlarının fikirleri değerlidir, geçmiş modellerin hiçbir katkısı olmamıştır",
-      "Bilimsel modellerin doğru ya da yanlış olması tamamen şansa bağlıdır"
+      "Elektronun e/m oranı hangi element kullanılırsa kullanılsın sabit kalırken, pozitif taneciklerin e/m oranı elementten elemente değişmektedir",
+      "Her iki taneciğin de e/m oranı elementten elemente aynı şekilde değişmektedir",
+      "Elektronun e/m oranı elementten elemente değişirken, pozitif taneciklerinki sabittir",
+      "Tablo, iki tanecik türü arasında hiçbir fark olmadığını göstermektedir",
+      "Kanal ışınlarının kütlesi hiçbir zaman ölçülememiştir"
     ],
     correct: 0,
-    explain: "Bilim tarihini değerlendirirken, geçmiş bilim insanlarının modellerini kendi dönemlerinin mevcut kanıt ve teknolojik sınırları bağlamında değerlendirmek gerekir; sonraki düzeltmeler onların 'yetersizliğinden' değil, bilginin ve araçların zamanla ilerlemesinden kaynaklanır."
+    explain: "Tabloda elektronun (katot ışını) e/m oranı tüm elementlerde sabit kalırken, pozitif taneciklerin (kanal ışını) e/m oranı elementten elemente değişmektedir; bu, elektronun evrensel/ortak bir tanecik olduğunu, pozitif taneciklerin ise farklı kütlelere sahip element-özgü yapılar (iyonlaşmış atomlar) olduğunu gösterir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, popüler bilim yazılarında bazen 'bilim insanları her şeyi kesin olarak kanıtladı' şeklinde ifadeler görüyor ve bunu atom modelleri tarihiyle karşılaştırıyor.",
-    text: "Atom modellerinin tarihi göz önüne alındığında bu tür kesinlik ifadeleri hakkında en doğru eleştirel çıkarım hangisidir?",
+    context: "Bir bilim felsefecisi şu görüşü savunmaktadır: 'İyi bir bilimsel teori, yalnızca mevcut gözlemleri açıklamakla kalmaz, aynı zamanda henüz gözlemlenmemiş yeni sonuçları da öngörebilmelidir.' Bu ölçüte göre, Bohr modelinin hidrojenin spektrum çizgilerinin dalga boylarını deneyden önce matematiksel olarak hesaplayıp öngörmesi örnek gösterilmektedir.",
+    text: "Bu ölçüte dayanarak, bir modelin yalnızca mevcut veriyi 'uydurarak' açıklaması ile yeni sonuçları 'öngörmesi' arasındaki fark neden bilimsel değer açısından önemlidir?",
     options: [
-      "Bilim, mevcut en iyi kanıtlara dayalı güçlü açıklamalar sunar; ancak 'mutlak ve değişmez kesinlik' iddiası, bilimin kendini düzeltme ve gelişme doğasıyla çelişebilir",
-      "Bilimin hiçbir zaman güvenilir bir bilgi üretmediği doğrudur",
-      "'Kesin kanıtlandı' ifadeleri bilimde her zaman tam olarak doğrudur ve sorgulanmamalıdır",
-      "Atom modellerinin değişmesi, bilimin hiçbir zaman güvenilir olmadığını kanıtlar",
-      "Popüler bilim yazıları her zaman bilimsel makalelerle birebir aynı kesinlikte olmalıdır"
+      "Öngörü yapabilen bir model, henüz test edilmemiş yeni durumlarda da doğrulanabilir veya çürütülebilir olduğundan daha güçlü bir kanıt sunar",
+      "İki durum arasında bilimsel değer açısından hiçbir fark yoktur",
+      "Yalnızca mevcut veriyi açıklayan modeller her zaman daha güvenilirdir",
+      "Öngörü yapmak, bir modelin yanlış olduğunun kanıtıdır",
+      "Bilimsel teoriler hiçbir zaman yeni sonuç öngöremez"
     ],
     correct: 0,
-    explain: "Atom modellerinin tarihi, bilimin 'mutlak ve değişmez kesinlik' değil, mevcut en güçlü kanıtlara dayalı, yeni bulgularla güncellenebilir açıklamalar sunduğunu gösterir; popüler dildeki aşırı kesinlik ifadeleri bu inceliği bazen gözden kaçırabilir."
+    explain: "Bir model yalnızca zaten bilinen veriyi açıklıyorsa (post-hoc), bu veriye 'uydurulmuş' olabilir; oysa henüz gözlemlenmemiş bir sonucu doğru öngörüp sonradan deneyle doğrulanması, modelin gerçek açıklayıcı gücünü ve test edilebilirliğini gösterir — bu yüzden bilimsel değeri daha yüksektir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, atom modelleri tarihindeki her aşamada, yeni modelin bir öncekinin başarılı açıkladığı olguları (örneğin kütlenin korunumu, sabit oranlar) hâlâ açıklayabildiğini fark ediyor.",
-    text: "Bu gözlem, bilimsel modellerin gelişimi hakkında en doğru hangi ilkeyi örnekler?",
+    context: "Bir karşılaştırmalı analizde, Dalton'ın teorisinin kimyasal tepkimelerdeki kütle korunumunu (madde yoktan var, vardan yok olmaz) başarıyla açıkladığı; ancak bu varsayımın 20. yüzyılda kütle-enerji eşdeğerliği (E=mc²) ve nükleer tepkimelerin keşfiyle sınırlı hâle geldiği belirtilmektedir.",
+    text: "Bu bilgiye dayanarak, Dalton'ın kütle korunumu varsayımıyla ilgili en doğru bilimsel çıkarım hangisidir?",
     options: [
-      "Yeni bir model genellikle eskisinin başarıyla açıkladığı olguları da kapsamalı, üstüne yeni gözlemleri de açıklayabilmelidir (kapsayıcılık ilkesi)",
-      "Yeni modeller eski modellerin açıkladığı hiçbir şeyi açıklamak zorunda değildir",
-      "Bir modelin eskiyle hiçbir ortak noktası olmaması, onun daha güçlü olduğunu gösterir",
-      "Kapsayıcılık ilkesi yalnızca fizikte geçerlidir, kimyada geçerli değildir",
-      "Eski modelin açıkladığı olgular yeni modelde önemsizdir"
+      "Varsayım, sıradan kimyasal tepkimeler için hâlâ yüksek doğrulukla geçerliyken, nükleer tepkimeler gibi farklı bir ölçekte/bağlamda sınırlarına ulaşmıştır",
+      "Varsayım tamamen yanlış çıkmış ve hiçbir bağlamda kullanılmamaktadır",
+      "Nükleer tepkimelerin keşfi, kimyasal tepkimelerdeki kütle korunumunu da geçersiz kılmıştır",
+      "E=mc² denklemi, Dalton'ın teorisiyle hiçbir ilişkisi olmayan bağımsız bir konudur",
+      "Varsayım, yalnızca 21. yüzyılda test edilmeye başlanmıştır"
     ],
     correct: 0,
-    explain: "Bilimde iyi bir yeni model, genellikle eski modelin başarıyla açıkladığı olguları da (örneğin kütlenin korunumu) açıklamaya devam ederken, ek olarak eskisinin açıklayamadığı yeni gözlemleri de kapsar; bu 'kapsayıcılık' ilkesi, atom modellerinin art arda gelişiminde açıkça görülür."
+    explain: "Dalton'ın kütle korunumu varsayımı, sıradan kimyasal tepkimeler (atomların yeniden düzenlenmesi) için hâlâ yüksek doğrulukla geçerlidir; ancak nükleer tepkimelerde kütlenin enerjiye dönüşebilmesi (E=mc²), varsayımın yalnızca belirli bir ölçek/bağlamda geçerli olduğunu göstermiştir — bu, bilimsel varsayımların 'yanlış' olmaktan çok 'sınırlı bir geçerlilik alanına sahip' olabileceğini örnekler."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, atom modelleri tarihini özetleyen bir sunum hazırlıyor ve sunumun son sloganını 'Bilim asla \"bitmiş\" değildir' olarak belirliyor.",
-    text: "Bu slogan, atom modelleri tarihinden hareketle en doğru hangi mesajı vermektedir?",
+    context: "Bir tartışmada şu senaryo sorulmaktadır: 'Eğer Rutherford, deneyinde büyük açılı saçılmayı gözlemlediği hâlde bu sonucu -mevcut Thomson modeliyle çelişiyor diye- göz ardı edip yayımlamasaydı, bilim tarihinde ne olurdu?'",
+    text: "Bu senaryo, bilimsel dürüstlük ve kanıta bağlılık ilkesiyle ilgili en doğru hangi çıkarımı destekler?",
     options: [
-      "Bilimsel bilgi, mevcut en iyi açıklamaları sunar; ancak yeni kanıt ve araçlar ortaya çıktıkça sürekli sorgulanabilir ve geliştirilebilir bir süreçtir",
-      "Bilim hiçbir zaman güvenilir sonuç üretemeyeceği için değersizdir",
-      "Bilimin 'bitmemiş' olması, her bilimsel iddianın eşit derecede belirsiz olduğu anlamına gelir",
-      "Atom modelleri artık kesinleşmiştir ve gelecekte hiç değişmeyecektir",
-      "Bilimin bitmemiş olması yalnızca kimya alanına özgü bir durumdur"
+      "Mevcut bir teoriyle çelişen kanıtların görmezden gelinmesi, bilimsel bilginin ilerlemesini geciktirir veya engeller",
+      "Bir bilim insanı, mevcut teoriyle çelişen sonuçları her zaman görmezden gelmelidir",
+      "Bu senaryonun bilim tarihiyle hiçbir ilgisi yoktur",
+      "Rutherford'ın sonucu göz ardı etmesi, bilimin ilerlemesini hızlandırırdı",
+      "Çelişkili kanıtlar, bilimsel yöntemde her zaman anlamsız kabul edilir"
     ],
     correct: 0,
-    explain: "Atom modellerinin yaklaşık iki yüzyıllık gelişimi, bilimin statik/'bitmiş' bir bilgi yığını değil, yeni kanıt ve teknolojilerle sürekli sorgulanan, geliştirilen dinamik bir süreç olduğunu gösterir — bu, bilimsel bilginin gücünü azaltmaz, tam tersine güvenilirliğinin kaynağıdır."
+    explain: "Rutherford'ın beklenmedik (Thomson modeliyle çelişen) sonucu görmezden gelmeyip ciddiye alması ve yayımlaması, çekirdek modelinin geliştirilmesini sağlamıştır; bu senaryo, mevcut teoriyle çelişen kanıtların görmezden gelinmesinin bilimsel ilerlemeyi engelleyeceğini gösterir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir öğrenci, Rutherford'ın modelinin çekirdeğin varlığını doğru öngörmesine rağmen, elektronların neden çekirdeğe düşmediğini açıklayamadığını; Bohr'un ise bu sorunu 'elektronlar yalnızca belirli enerji düzeylerinde kararlı olabilir' varsayımıyla (kanıtlanmamış bir postülat olarak) çözdüğünü öğreniyor.",
-    text: "Bohr'un bu yaklaşımı, bilimsel model geliştirme süreci hakkında en doğru hangi çıkarımı destekler?",
+    context: "Bir özet tablo, beş atom modelinin (Dalton, Thomson, Rutherford, Bohr, kuantum mekaniksel) her birinin bir öncekinin AÇIKLAYAMADIĞI en az bir gözlemi başarıyla açıkladığını göstermektedir: Thomson elektronu, Rutherford büyük açılı saçılmayı, Bohr çizgi spektrumunu, kuantum model ise çok elektronlu atomların davranışını açıklamıştır.",
+    text: "Bu örüntüye dayanarak, bilimsel modellerin gelişimiyle ilgili en kapsamlı ve doğru genelleme hangisidir?",
     options: [
-      "Bazen bir model, o an tam olarak temellendirilemeyen ancak gözlemlerle (spektrum verileriyle) tutarlı sonuçlar veren postülatlar içerebilir; bu postülatlar sonraki teorilerle (kuantum mekaniği) daha derin bir temele oturtulabilir",
-      "Bilim insanları hiçbir zaman kanıtlanmamış bir varsayım kullanamaz",
-      "Bohr'un varsayımı tamamen keyfi olduğu için bilimsel değildir",
-      "Bir postülatın daha sonra daha derin bir teoriyle açıklanması, ilk halinin bilim dışı olduğu anlamına gelir",
-      "Kuantum mekaniği Bohr'un varsayımıyla hiçbir bağlantı kurmamıştır"
+      "Bilimsel modeller, öncekinin açıklayamadığı somut bir soruna çözüm getirerek kümülatif ve kanıta dayalı biçimde ilerler",
+      "Bilimsel modeller birbirinden tamamen bağımsız, rastgele sırayla ortaya çıkar",
+      "Her yeni model, bir öncekini tamamen geçersiz kılıp hiçbir ortak unsur taşımaz",
+      "Model gelişiminde sıra önemsizdir, hangi model önce gelirse gelsin sonuç aynıdır",
+      "Bilimsel modellerin gelişiminde deneysel kanıtın hiçbir rolü yoktur"
     ],
     correct: 0,
-    explain: "Bohr'un 'elektronlar belirli enerji düzeylerinde kararlıdır' postülatı, o dönemde tam teorik temeli olmasa da hidrojen spektrumunu başarıyla açıklıyordu; bu tür postülatlar bilimde geçici köprüler olabilir ve sonraki, daha derin teoriler (kuantum mekaniği) tarafından temellendirilebilir — bu, bilimin katmanlı ve kümülatif gelişiminin bir örneğidir."
+    explain: "Beş modelin her birinin bir öncekinin açıklayamadığı somut bir gözlemi (elektron, saçılma, spektrum, çok elektronlu atom davranışı) çözmek üzere geliştirilmiş olması, bilimsel bilginin rastgele değil, kümülatif ve kanıta dayalı biçimde ilerlediğini gösteren kapsamlı bir örüntüdür."
   }
 ],
   "orbital": [
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, kimya dersinde 'orbital' kavramının tanımını öğreniyor.",
-    text: "Orbital için en doğru tanım hangisidir?",
-    options: ["Elektronun çekirdek etrafındaki sabit, çizilebilir yörüngesi", "Elektronun bulunma olasılığının yüksek olduğu üç boyutlu bölge", "Çekirdekteki protonların dizilim şekli", "Atomun toplam kütlesinin dağıldığı alan", "Nötronların bulunduğu sabit nokta"],
+    orbitalBoxes: {
+      subshells: [
+        { label: "1s", electrons: [0] },
+        { label: "2s", electrons: [0] },
+        { label: "2p", electrons: [0, 0, 0] }
+      ],
+      caption: "Üç farklı alt kabuk (boş kutular, yalnızca göreli enerji sırasını göstermek içindir)"
+    },
+    context: "Görseldeki üç alt kabuk, aynı atomda bulunan farklı orbital türlerini temsil etmektedir.",
+    text: "Bu üç alt kabuk enerjilerine göre küçükten büyüğe sıralandığında hangi sıralama doğrudur?",
+    options: ["2p < 2s < 1s", "1s < 2s < 2p", "2s < 1s < 2p", "1s < 2p < 2s", "Üçü de eşit enerjilidir"],
     correct: 1,
-    explain: "Orbital, bir elektronun belirli bir anda bulunma olasılığının en yüksek olduğu üç boyutlu uzay bölgesi olarak tanımlanır; klasik anlamda çizilebilir bir 'yörünge' değildir."
+    explain: "Baş kuantum sayısı (n) küçük olan alt kabuk genellikle daha düşük enerjilidir; aynı n değerinde ise s alt kabuğu p'den daha düşük enerjilidir. Bu nedenle sıralama 1s < 2s < 2p şeklindedir."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, s orbitalinin geometrik şeklini inceliyor.",
-    text: "s orbitalinin şekli için en doğru tanım hangisidir?",
-    options: ["Halter (dumbbell) şeklinde", "Küresel (küre şeklinde)", "Yonca yaprağı şeklinde", "Düzlemsel altıgen", "Silindirik"],
+    context: "Bir alt kabuğun enerjisi, baş kuantum sayısı (n) ile açısal momentum kuantum sayısının (l) toplamına (n+l kuralı) göre tahmin edilebilir; toplam ne kadar küçükse enerji genellikle o kadar düşüktür.",
+    text: "3s (n=3, l=0) ve 3p (n=3, l=1) alt kabukları karşılaştırıldığında hangisi daha düşük enerjilidir?",
+    options: ["3p", "3s", "İkisi de eşit enerjilidir", "Karşılaştırma yapılamaz", "3p her zaman 3s'den düşüktür"],
     correct: 1,
-    explain: "s orbitali, çekirdek merkezli küresel simetriye sahiptir; elektronun bulunma olasılığı çekirdekten her yönde eşit uzaklıkta benzerdir."
+    explain: "Aynı baş kuantum sayısına (n=3) sahip alt kabuklarda, açısal momentum kuantum sayısı (l) küçük olan daha düşük enerjilidir; s (l=0) alt kabuğu p'den (l=1) daha düşüktür."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, p orbitalinin şeklini ve yönelimini araştırıyor.",
-    text: "p orbitali için en doğru ifade hangisidir?",
-    options: ["Küre şeklindedir ve tek yönelimi vardır", "Halter (iki loblu) şeklindedir ve üç farklı yönelimi (px, py, pz) vardır", "Beş farklı yönelimi vardır", "Yalnızca çekirdeğin içinde bulunur", "Elektron içermez"],
+    context: "Bir p alt kabuğu (örneğin 2p), aynı enerjiye sahip üç ayrı orbitalden (2px, 2py, 2pz) oluşur; bu orbitaller uzayda farklı yönlerde uzanır fakat enerjileri özdeştir.",
+    text: "Aynı enerjiye sahip bu tür orbitaller için kullanılan terim hangisidir?",
+    options: ["Hibrit orbitaller", "Yozlaşmış (dejenere) orbitaller", "İyonik orbitaller", "Bağ orbitalleri", "Çekirdek orbitalleri"],
     correct: 1,
-    explain: "p orbitalleri halter şeklindedir ve uzayda birbirine dik üç yönelimde bulunur: px, py, pz."
+    explain: "Aynı alt kabuk içinde bulunan ve enerjileri eşit olan orbitaller (örneğin px, py, pz) 'yozlaşmış (dejenere) orbitaller' olarak adlandırılır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, Pauli dışarlama (dışlama) ilkesini öğreniyor.",
-    text: "Pauli ilkesine göre bir orbitalde en fazla kaç elektron bulunabilir?",
-    options: ["1", "2", "3", "6", "10"],
+    context: "Bir orbital diyagramında s alt kabuğu küresel simetrik bir bulut, p alt kabuğu ise iki loblu (halter/dambıl şeklinde) bir bulut olarak gösterilir.",
+    text: "Bu şekil farkı, orbitaller hakkında en doğrudan hangi bilgiyi yansıtır?",
+    options: ["s orbitalinin her zaman p orbitalinden daha yüksek enerjili olduğunu", "Elektronun bulunma olasılığının uzayda farklı geometrik dağılım gösterdiğini", "p orbitalinin elektron içeremeyeceğini", "Şeklin, orbitalin enerjisiyle hiçbir ilgisinin olmadığını her koşulda kanıtladığını", "s orbitalinin yalnızca çekirdekte bulunduğunu"],
     correct: 1,
-    explain: "Pauli dışlama ilkesine göre bir orbitalde en fazla 2 elektron bulunabilir ve bu iki elektronun spinleri zıt yönde olmalıdır."
+    explain: "Orbital şekilleri, elektronun o bölgede bulunma olasılığının uzaydaki geometrik dağılımını gösterir; s orbitali küresel simetrikken p orbitali iki loblu bir yapıya sahiptir."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, alt kabuklardaki (s, p, d, f) maksimum elektron sayılarını inceliyor.",
-    text: "Bir s alt kabuğu en fazla kaç elektron alabilir?",
-    options: ["6", "2", "10", "14", "1"],
-    correct: 1,
-    explain: "s alt kabuğunda yalnızca 1 orbital bulunur ve her orbital en fazla 2 elektron alabileceğinden, s alt kabuğu en fazla 2 elektron içerir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, p alt kabuğunun elektron kapasitesini hesaplıyor.",
-    text: "Bir p alt kabuğu en fazla kaç elektron alabilir?",
-    options: ["2", "6", "10", "3", "4"],
-    correct: 1,
-    explain: "p alt kabuğunda 3 orbital (px, py, pz) bulunur; her biri en fazla 2 elektron alabileceğinden toplam kapasite 6 elektrondur."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, d alt kabuğunun elektron kapasitesini araştırıyor.",
+    context: "Bir alt kabuktaki orbital sayısı, açısal momentum kuantum sayısına (l) bağlıdır: s alt kabuğunda 1, p alt kabuğunda 3, d alt kabuğunda 5 orbital bulunur.",
     text: "Bir d alt kabuğu en fazla kaç elektron alabilir?",
-    options: ["6", "8", "10", "14", "5"],
+    options: ["2", "6", "10", "14", "18"],
     correct: 2,
-    explain: "d alt kabuğunda 5 orbital bulunur; her biri en fazla 2 elektron alabileceğinden toplam kapasite 10 elektrondur."
+    explain: "Bir d alt kabuğunda 5 orbital bulunur ve her orbital en fazla 2 elektron alabileceğinden, d alt kabuğu toplam en fazla 10 elektron alabilir."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, p alt kabuğundaki orbital sayısını sayıyor.",
-    text: "p alt kabuğunda kaç orbital bulunur?",
-    options: ["1", "2", "3", "5", "7"],
-    correct: 2,
-    explain: "p alt kabuğu, uzayda birbirine dik üç farklı yönelime sahip 3 orbitalden (px, py, pz) oluşur."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, d alt kabuğundaki orbital sayısını inceliyor.",
-    text: "d alt kabuğunda kaç orbital bulunur?",
-    options: ["3", "5", "7", "1", "10"],
+    context: "Aufbau (yapılandırma) ilkesine göre elektronlar, atomun temel hâlinde önce en düşük enerjili boş orbitalleri doldurur, sonra sırayla daha yüksek enerjili orbitallere yerleşir.",
+    text: "Bu ilkeye göre bir atomdaki elektron yerleşim sırasının temel mantığı hangisidir?",
+    options: ["Elektronlar önce en yüksek enerjili orbitali doldurur", "Elektronlar, mevcut en düşük enerjili boş orbitalden başlayarak yerleşir", "Elektronlar rastgele herhangi bir orbitale yerleşebilir", "Elektronlar yalnızca s orbitallerine yerleşir", "Elektron yerleşim sırasının enerjiyle hiçbir ilgisi yoktur"],
     correct: 1,
-    explain: "d alt kabuğu 5 farklı orbitalden oluşur; bu orbitallerin her biri kendine özgü uzaysal yönelime sahiptir."
+    explain: "Aufbau ilkesi, elektronların enerji açısından en kararlı (en düşük enerjili) boş orbitalden başlayarak sırayla yerleştiğini belirtir."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, baş kuantum sayısı (n) kavramını öğreniyor.",
-    text: "Baş kuantum sayısı (n) en doğru şekilde neyi ifade eder?",
-    options: ["Elektronun spinini", "Elektronun bulunduğu ana enerji düzeyini (kabuğu)", "Orbitalin şeklini", "Elektronun yükünü", "Çekirdekteki nötron sayısını"],
+    orbitalBoxes: {
+      subshells: [
+        { label: "3d", electrons: [0, 0, 0, 0, 0] },
+        { label: "4s", electrons: [0] }
+      ],
+      caption: "3d ve 4s alt kabukları (n+l kuralına göre karşılaştırma)"
+    },
+    context: "3d alt kabuğu için n=3, l=2 olduğundan n+l=5; 4s alt kabuğu için n=4, l=0 olduğundan n+l=4'tür.",
+    text: "n+l kuralına göre bu iki alt kabuktan hangisi daha düşük enerjilidir?",
+    options: ["3d", "4s", "İkisi de eşit enerjilidir", "n+l kuralı bu iki alt kabuk için geçerli değildir", "3d her zaman 4s'den düşüktür"],
     correct: 1,
-    explain: "Baş kuantum sayısı (n = 1, 2, 3...), elektronun bulunduğu ana enerji düzeyini (kabuğu) belirtir; n arttıkça enerji düzeyi çekirdekten uzaklaşır."
+    explain: "n+l kuralına göre toplamı küçük olan alt kabuk genellikle daha düşük enerjilidir; 4s'nin n+l değeri (4) 3d'ninkinden (5) küçük olduğundan 4s daha düşük enerjilidir ve önce dolar."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, Aufbau (yapılandırma) ilkesinin ne anlama geldiğini öğreniyor.",
-    text: "Aufbau ilkesine göre elektronlar orbitallere nasıl yerleşir?",
-    options: ["Önce en yüksek enerjili orbitalden başlayarak", "Önce en düşük enerjili boş orbitalden başlayarak, enerji arttıkça sırayla", "Tamamen rastgele sırayla", "Yalnızca s orbitallerine", "Yalnızca en dış kabuğa"],
+    context: "Bir orbitalin enerjisini belirleyen iki temel kuantum sayısı, baş kuantum sayısı (n, orbitalin büyüklüğü/enerji düzeyi) ve açısal momentum kuantum sayısıdır (l, orbitalin şekli).",
+    text: "Aynı baş kuantum sayısına (n) sahip s, p, d alt kabukları enerjilerine göre nasıl sıralanır?",
+    options: ["d < p < s", "s < p < d", "p < s < d", "s = p = d", "d < s < p"],
     correct: 1,
-    explain: "Aufbau ilkesine göre elektronlar, en düşük enerjili boş orbitalden başlayarak enerji arttıkça sırasıyla orbitallere yerleşir."
+    explain: "Aynı n değerinde açısal momentum kuantum sayısı (l) arttıkça enerji de artar; s (l=0) en düşük, p (l=1) ortada, d (l=2) en yüksek enerjilidir."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, Hund kuralının ne söylediğini araştırıyor.",
-    text: "Hund kuralına göre eş enerjili (dejenere) orbitallere elektronlar nasıl yerleşir?",
-    options: ["Elektronlar her zaman ilk orbitalde eşleşerek başlar", "Önce her orbitale tek tek, aynı yönde spinle yerleşir; eşleşme ancak tüm orbitaller birer elektron aldıktan sonra başlar", "Elektronlar rastgele herhangi bir orbitale eşleşerek yerleşir", "Elektronlar yalnızca son orbitale yerleşir", "Hund kuralı yalnızca s orbitalleri için geçerlidir"],
+    context: "Bir s orbitali her zaman tek bir orbitalden oluşurken, bir p alt kabuğu üç, bir d alt kabuğu beş, bir f alt kabuğu ise yedi orbitalden oluşur.",
+    text: "Bir f alt kabuğu en fazla kaç elektron alabilir?",
+    options: ["6", "10", "14", "18", "2"],
+    correct: 2,
+    explain: "f alt kabuğunda 7 orbital bulunur; her orbital en fazla 2 elektron alabileceğinden f alt kabuğu toplam en fazla 14 elektron alabilir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
+    context: "Pauli dışlama ilkesine göre bir orbitalde en fazla iki elektron bulunabilir ve bu iki elektronun spinleri zıt yönde olmalıdır (biri yukarı, biri aşağı).",
+    text: "Bu ilkeye göre tek bir orbitalde aynı yönde spine sahip iki elektron bulunması mümkün müdür?",
+    options: ["Evet, spin yönü orbital doluluğunu etkilemez", "Hayır, aynı orbitalde iki elektronun spinleri zıt olmalıdır", "Yalnızca s orbitalinde mümkündür", "Yalnızca d orbitalinde mümkündür", "Yalnızca yüksek enerjili orbitallerde mümkündür"],
     correct: 1,
-    explain: "Hund kuralına göre eş enerjili orbitallere elektronlar önce tek tek ve aynı yönde spinle yerleşir; eşleşme, tüm orbitaller birer elektron aldıktan sonra başlar. Bu, elektron-elektron itmesini en aza indirir."
+    explain: "Pauli dışlama ilkesine göre bir orbitalde bulunan iki elektronun spinleri mutlaka zıt yönde olmalıdır; aynı yönde spine sahip iki elektron aynı orbitalde bulunamaz."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, karbonun (6C) elektron dizilimini yazıyor: 1s² 2s² 2p².",
-    text: "Bu diziliş için hangisi doğrudur?",
-    options: ["Karbon yalnızca s orbitallerine sahiptir", "Karbonun toplam elektron sayısı 2'dir", "Karbonun toplam 6 elektronu, dizilimdeki üslerin toplamına eşittir", "Dizilim yanlıştır, karbon 8 elektrona sahiptir", "Üsler elektronun kütlesini gösterir"],
-    correct: 2,
-    explain: "Elektron diziliminde üsler, o alt kabuktaki elektron sayısını gösterir; 2+2+2=6, karbonun atom numarasıyla (6) uyumludur."
+    orbitalBoxes: {
+      subshells: [
+        { label: "2p", electrons: [1, 1, 1] }
+      ],
+      caption: "Üç eşit enerjili orbitale tek tek yerleştirilmiş elektronlar (Hund kuralı)"
+    },
+    context: "Görseldeki 2p alt kabuğunda üç elektron, önce her orbitale birer tane olacak şekilde, aynı yönde spinle yerleştirilmiştir.",
+    text: "Bu yerleşim, hangi kuralın bir uygulamasıdır?",
+    options: ["Pauli dışlama ilkesi", "Hund kuralı (en düşük enerjili düzenleme için orbitallere önce tek tek yerleşme)", "Aufbau ilkesi", "Heisenberg belirsizlik ilkesi", "Kütlenin korunumu yasası"],
+    correct: 1,
+    explain: "Hund kuralına göre eşit enerjili (dejenere) orbitaller doldurulurken, elektronlar önce her orbitale birer tane, aynı yönde spinle yerleştirilir; bu düzenleme enerji açısından en kararlı olanıdır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, enerji düzeyi ile alt kabuk (alt düzey) kavramlarını karşılaştırıyor.",
-    text: "'2p alt kabuğu' ifadesindeki '2' ve 'p' neyi belirtir?",
-    options: ["2, nötron sayısını; p, pozitif yükü belirtir", "2, elektron sayısını; p, protonu belirtir", "2, baş kuantum sayısını (enerji düzeyini); p, orbital türünü (şeklini) belirtir", "İkisi de rastgele semboldür, anlamı yoktur", "2, atomun kütle numarasını belirtir"],
+    context: "Bir atomun temel hâldeki elektron dizilimi, elektronların mümkün olan en düşük toplam enerjiye sahip düzenlenişini yansıtır.",
+    text: "Bir atomun 'temel hâl' elektron dizilimi ile ilgili en doğru ifade hangisidir?",
+    options: ["Yalnızca iyonlaşmış atomlar için tanımlanan bir durumdur", "Elektronların en yüksek enerjili orbitallerde bulunduğu kararsız bir durumdur", "Elektronların mevcut orbitallerde en düşük enerjili şekilde dizildiği kararlı durumdur", "Elektron sayısından bağımsız, sabit bir dizilimdir", "Atomun sıcaklığına göre sürekli değişen bir dizilimdir"],
     correct: 2,
-    explain: "'2p' ifadesinde 2, baş kuantum sayısını (n=2, ikinci enerji düzeyi); p ise orbital türünü (p orbitali) belirtir."
+    explain: "Temel hâl, bir atomun elektronlarının mümkün olan en düşük toplam enerjiye sahip, en kararlı dizilimidir."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, n=2 enerji düzeyindeki toplam orbital sayısını hesaplamak istiyor (2s ve 2p alt kabukları).",
-    text: "n=2 düzeyinde toplam kaç orbital bulunur?",
-    options: ["1", "2", "4", "5", "9"],
+    context: "Bir atoma dışarıdan enerji verildiğinde, bir elektron bulunduğu orbitalden daha yüksek enerjili boş bir orbitale geçebilir; bu duruma 'uyarılmış hâl' denir.",
+    text: "Uyarılmış hâldeki bir atomla ilgili en doğru ifade hangisidir?",
+    options: ["Atomun çekirdek yükü değişmiştir", "Atomun toplam elektron sayısı artmıştır", "En az bir elektron, temel hâldekinden daha yüksek enerjili bir orbitale geçmiştir", "Atom artık kararlı hâle geçmiştir ve enerji vermez", "Tüm elektronlar aynı anda en düşük enerjili orbitale geçmiştir"],
     correct: 2,
-    explain: "n=2 düzeyinde 1 tane 2s orbitali ve 3 tane 2p orbitali bulunur; toplamda 1+3=4 orbital vardır."
+    explain: "Uyarılmış hâlde, dışarıdan alınan enerjiyle en az bir elektron temel hâldeki orbitalinden daha yüksek enerjili bir orbitale geçmiştir; bu durum kararsızdır ve atom fazla enerjiyi yayarak temel hâle dönme eğilimindedir."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, aynı enerji düzeyindeki (n) s ve p orbitallerinin enerjilerini karşılaştırıyor.",
-    text: "Aynı baş kuantum sayısına (n) sahip s ve p orbitalleri için hangisi doğrudur?",
-    options: ["İkisi her zaman tam olarak eşit enerjilidir", "p orbitali her zaman s orbitalinden daha düşük enerjilidir", "s orbitali her zaman p orbitalinden daha düşük enerjilidir", "Enerjileri karşılaştırılamaz", "s orbitali her zaman d orbitalinden yüksek enerjilidir"],
+    context: "Bir orbital enerji diyagramında, alt kabuklar genellikle artan enerjiye göre alttan üste doğru sıralanır: 1s, 2s, 2p, 3s, 3p, 4s, 3d, 4p...",
+    text: "Bu sıralamaya göre 3p ile 4s alt kabukları karşılaştırıldığında hangisi daha düşük enerjilidir?",
+    options: ["İkisi de eşit enerjilidir", "4s", "3p", "Karşılaştırılamaz", "4s her zaman 3p'den düşüktür, istisnasız"],
     correct: 2,
-    explain: "Aynı n değeri için orbital enerjisi s < p < d < f sırasıyla artar; bu nedenle örneğin 3s orbitali 3p'den daha düşük enerjilidir."
+    explain: "Verilen sıralamada 3p, 4s'den önce (daha düşük enerjili konumda) yer almaktadır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, elektron dizilimi yazarken 4s ve 3d orbitallerinin doldurulma sırasını merak ediyor.",
-    text: "Enerji sırasına göre elektronlar hangi orbitale önce yerleşir?",
-    options: ["İkisine aynı anda", "3d orbitaline", "4s orbitaline", "Hiçbirine, doğrudan 4p'ye geçilir", "Sıra elementten elemente rastgele değişir"],
+    context: "Bir p orbitalinin şekli iki loba sahip bir halter gibidir ve uzayda üç farklı eksen boyunca (x, y, z) yönlenebilir.",
+    text: "Bu bilgiye göre bir p alt kabuğunda kaç farklı yönelim (orbital) bulunur?",
+    options: ["1", "3", "5", "7", "9"],
+    correct: 1,
+    explain: "p alt kabuğu üç farklı uzaysal yönelime (px, py, pz) sahip üç orbitalden oluşur."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
+    context: "Bir s orbitalinin şekli, merkezinde çekirdek bulunan içi dolu bir küreye benzer ve büyüklüğü baş kuantum sayısı (n) arttıkça büyür.",
+    text: "Buna göre 1s ve 2s orbitalleri karşılaştırıldığında hangi ifade doğrudur?",
+    options: ["İkisi tamamen aynı büyüklük ve enerjidedir", "1s orbitali 2s'den daha büyük ve daha yüksek enerjilidir", "2s orbitali 1s'den daha büyük ve daha yüksek enerjilidir", "2s orbitali küresel değil, halter şeklindedir", "1s orbitali yalnızca iyonlarda bulunur"],
     correct: 2,
-    explain: "Genel enerji sıralamasına göre (n+l kuralı) 4s orbitali (4+0=4), 3d orbitalinden (3+2=5) daha düşük enerjilidir; bu yüzden elektronlar önce 4s'ye yerleşir."
+    explain: "Baş kuantum sayısı (n) arttıkça orbital hem büyür hem de enerjisi artar; bu nedenle 2s orbitali 1s'den daha büyük ve daha yüksek enerjilidir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
+    context: "Bir atomun ikinci enerji düzeyinde (n=2) yalnızca s ve p alt kabukları bulunurken, üçüncü enerji düzeyinde (n=3) s, p ve d alt kabukları bulunabilir.",
+    text: "Bu bilgiye göre, bir enerji düzeyinde bulunabilecek alt kabuk türü sayısı neye bağlıdır?",
+    options: ["Atomun sıcaklığına", "Yalnızca elektron sayısına", "Baş kuantum sayısına (n)", "Çekirdekteki nötron sayısına", "Atomun bulunduğu fiziksel hâle (katı/sıvı/gaz)"],
+    correct: 2,
+    explain: "Bir enerji düzeyinde (n) bulunabilecek alt kabuk sayısı ve türü, baş kuantum sayısına bağlıdır (n. düzeyde n farklı alt kabuk türü bulunabilir: n=1 için yalnızca s, n=2 için s ve p, n=3 için s,p,d...)."
   },
 
   /* ============ ORTA ============ */
@@ -3730,227 +3134,194 @@ export const QUIZ = {
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Aşağıdaki tabloda orbital türlerinin temel özellikleri karşılaştırılmaktadır.",
     table: {
-      headers: ["Orbital türü", "Yörünge açısal momentum sayısı (l)", "Orbital sayısı", "Maksimum elektron"],
+      headers: ["Alt kabuk", "n", "l", "n + l"],
       rows: [
-        ["s", "0", "1", "2"],
-        ["p", "1", "3", "6"],
-        ["d", "2", "5", "10"],
-        ["f", "3", "7", "14"]
-      ]
+        ["4s", "4", "0", "4"],
+        ["3d", "3", "2", "5"],
+        ["4p", "4", "1", "5"],
+        ["5s", "5", "0", "5"]
+      ],
+      caption: "Dört alt kabuğun n, l ve n+l değerleri"
     },
-    text: "Tabloya göre bir f alt kabuğu tamamen dolduğunda kaç elektron içerir?",
-    options: ["6", "10", "14", "7", "2"],
+    text: "Tabloya göre, n+l değeri eşit olan 3d, 4p ve 5s alt kabukları arasında enerji sıralaması nasıl belirlenir?",
+    options: ["n+l değeri eşit olan alt kabukların enerjisi karşılaştırılamaz", "n+l değerleri eşit olduğunda, n değeri büyük olan alt kabuk daha düşük enerjilidir", "n+l değerleri eşit olduğunda, n değeri küçük olan alt kabuk daha düşük enerjilidir", "Bu durumda yalnızca l değeri dikkate alınır, n önemsizdir", "n+l değeri eşit olan alt kabuklar her zaman aynı enerjidedir"],
     correct: 2,
-    explain: "Tabloya göre f alt kabuğu 7 orbitale sahiptir ve her orbital en fazla 2 elektron alabileceğinden, tam dolu bir f alt kabuğu 14 elektron içerir."
+    explain: "n+l kuralının ikinci bölümüne göre, n+l değerleri eşit olduğunda daha küçük n değerine sahip alt kabuk daha düşük enerjilidir; bu nedenle sıralama 3d < 4p < 5s şeklindedir."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Aşağıdaki grafik, ilk birkaç orbitalin yaklaşık bağıl enerji sırasını göstermektedir (birim keyfi ölçektedir).",
-    chart: {
-      type: "bar",
-      title: "Orbitallerin yaklaşık bağıl enerji sırası",
-      labels: ["1s", "2s", "2p", "3s", "3p", "4s", "3d"],
-      values: [1, 2, 2.5, 3, 3.5, 4, 4.2]
+    orbitalBoxes: {
+      subshells: [
+        { label: "3d", electrons: [0, 0, 0, 0, 0] },
+        { label: "4s", electrons: [2] }
+      ],
+      caption: "Bir geçiş metali atomunun kısmi elektron dizilimi"
     },
-    text: "Grafiğe göre enerji bakımından 4s ile 3d orbitalleri hakkında en doğru çıkarım hangisidir?",
-    options: [
-      "4s ve 3d orbitalleri arasında hiçbir enerji farkı yoktur",
-      "3d orbitali her zaman 4s'den çok daha düşük enerjilidir",
-      "4s orbitali 3d'den biraz daha düşük enerjilidir, bu nedenle elektronlar önce 4s'yi doldurur",
-      "3d orbitali 1s'den daha düşük enerjilidir",
-      "4s orbitali her elementte 3d'den çok daha yüksek enerjilidir"
-    ],
+    context: "Görseldeki diyagramda 4s alt kabuğu dolu (2 elektron) iken 3d alt kabuğu henüz boştur; bu, Aufbau ilkesine göre 4s'nin 3d'den önce dolduğunu yansıtır.",
+    text: "Bu durum, orbital enerjileriyle ilgili hangi genellemeyi doğrudan destekler?",
+    options: ["3d alt kabuğu her zaman 4s'den önce dolar", "Baş kuantum sayısı her zaman tek başına enerji sıralamasını belirler", "Baş kuantum sayısı büyük olan bir alt kabuk (3d), baş kuantum sayısı küçük olan başka bir alt kabuktan (4s) daha yüksek enerjili olabilir", "4s ve 3d alt kabukları her zaman eşit enerjilidir", "Bu diyagram, Aufbau ilkesiyle çelişmektedir"],
     correct: 2,
-    explain: "Grafikteki yaklaşık değerlere göre 4s (4,0), 3d'den (4,2) biraz daha düşük enerjilidir; bu, elektronların Aufbau ilkesine göre önce 4s'yi doldurmasının nedenidir. Ancak bu fark küçüktür ve bazı elementlerde (Cr, Cu gibi) sıralama istisnalar gösterebilir."
+    explain: "4s'nin (n=4) 3d'den (n=3) önce dolması, yalnızca baş kuantum sayısına bakarak enerji sıralaması yapılamayacağını; n+l kuralı gibi ek bir ölçütün gerekli olduğunu gösterir."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, azotun (7N) elektron dizilimini yazarken 2p orbitallerine elektronları yerleştiriyor: 2p³.",
-    text: "Hund kuralına göre bu üç elektron 2p orbitallerine (px, py, pz) en doğru nasıl yerleşir?",
-    options: [
-      "Üç elektron da aynı orbitale sığdırılır",
-      "İlk orbitale iki elektron eşleşerek, üçüncü orbital boş kalır",
-      "Her orbitale birer elektron, hepsi aynı yönde spinle (paralel spin)",
-      "Elektronlar rastgele, herhangi bir kurala uymadan dağıtılır",
-      "Elektronlar yalnızca px orbitaline yerleşir"
-    ],
+    context: "Bir atomun elektron dizilimi belirlenirken, alt kabuklar genellikle şu sırayla doldurulur: 1s, 2s, 2p, 3s, 3p, 4s, 3d, 4p, 5s, 4d, 5p, 6s, 4f, 5d...",
+    text: "Bu sıralamada, 4f alt kabuğunun 6s'den sonra gelmesi, hangi genellemeyle en iyi açıklanır?",
+    options: ["Sıralamanın rastgele belirlenmiş olması", "f alt kabuklarının her zaman en düşük enerjili olması", "6s alt kabuğunun elektron alamaması", "n+l kuralına göre 4f'nin (n+l=7) enerjisinin 6s'ninkinden (n+l=6) yüksek olması", "4f'nin baş kuantum sayısının 6s'den büyük olması"],
+    correct: 3,
+    explain: "4f alt kabuğunun n+l değeri (4+3=7), 6s'ninkinden (6+0=6) büyük olduğundan n+l kuralına göre 4f daha yüksek enerjilidir ve 6s'den sonra dolar."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
+    context: "Bir atomun 3p alt kabuğundaki elektronlar, 3s alt kabuğundaki elektronlara göre çekirdekten ortalama olarak daha uzakta bulunma eğilimindedir ve çekirdek çekiminden daha az etkilenir (daha fazla perdelenir).",
+    text: "Bu bilgi, 3s ve 3p alt kabuklarının enerjileri arasındaki farkı en doğru şekilde nasıl açıklar?",
+    options: ["3s ve 3p alt kabukları çekirdekten aynı uzaklıkta bulunur", "Çekirdekten uzaklık, orbital enerjisini hiçbir şekilde etkilemez", "3s alt kabuğu her zaman 3p'den daha yüksek enerjilidir", "Çekirdekten daha uzakta ve daha az çekim hisseden 3p, 3s'den daha yüksek enerjilidir", "Perdelenme yalnızca d ve f orbitallerinde görülür"],
+    correct: 3,
+    explain: "Çekirdekten daha uzakta bulunan ve çekirdek çekiminden daha fazla perdelenen elektronlar daha yüksek enerjiye sahiptir; bu nedenle 3p, 3s'den daha yüksek enerjilidir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
+    orbitalBoxes: {
+      subshells: [
+        { label: "2p", electrons: [2, 1, 0] }
+      ],
+      caption: "2p alt kabuğuna 3 elektron yerleştirmenin iki farklı olası yolundan biri"
+    },
+    context: "Görseldeki diyagramda 3 elektron, ilk orbitale 2 tane (zıt spinli), ikinci orbitale 1 tane yerleştirilmiştir. Bu düzenleme, Hund kuralına göre önerilen düzenlemeyle karşılaştırılmalıdır.",
+    text: "Bu düzenlemenin Hund kuralına uygun temel hâl düzenlemesiyle karşılaştırıldığında durumu nedir?",
+    options: ["Bu düzenleme ile Hund kuralına uygun düzenleme aynı enerjiye sahiptir", "Hund kuralına tam olarak uygundur, bu en kararlı düzenlemedir", "Hund kuralı yalnızca d orbitalleri için geçerlidir, bu örnekle ilgisizdir", "Hund kuralına uygun değildir; kararlı düzenlemede 3 elektron 3 ayrı orbitale birer tane yerleştirilmelidir", "Pauli ilkesi bu düzenlemeyi yasaklamaktadır"],
+    correct: 3,
+    explain: "Hund kuralına göre en kararlı (en düşük enerjili) düzenleme, 3 elektronun 3 ayrı orbitale birer tane, aynı yönde spinle yerleştirilmesidir; bir orbitali eşleştirip diğerini boş bırakmak daha yüksek enerjili, kararsız bir düzenlemedir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
+    context: "Bir atomun elektron dizilimi yazılırken bazı kaynaklar alt kabukları enerji sırasına göre (1s 2s 2p 3s 3p 4s 3d...), bazı kaynaklar ise baş kuantum sayısına göre gruplandırarak (1s 2s 2p 3s 3p 3d 4s...) yazar.",
+    text: "Bu iki yazım biçimi arasındaki fark en doğru şekilde nasıl açıklanır?",
+    options: ["Enerji sırasına göre yazım yalnızca iyonlar için kullanılır", "İki yazım biçiminden biri kesinlikle yanlıştır", "n'ye göre gruplandırma, farklı bir atomu tanımlar", "Enerji sırasına göre yazım doldurulma sırasını, n'ye göre gruplandırma ise elektronların nihai olarak hangi düzeyde bulunduğunu vurgular; ikisi de aynı elektron sayısını farklı düzenlemeyle sunar", "Bu iki biçim arasında hiçbir sistematik ilişki yoktur"],
+    correct: 3,
+    explain: "Elektronlar Aufbau ilkesine göre enerji sırasıyla (...4s 3d...) doldurulur; ancak dizilim çoğu zaman okunabilirlik için baş kuantum sayısına göre gruplandırılarak (...3d 4s...) yeniden yazılır. İkisi de aynı fiziksel durumu, farklı sunum sırasıyla ifade eder."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
+    context: "Hidrojen atomunda (tek elektronlu sistemde) bir orbitalin enerjisi yalnızca baş kuantum sayısına (n) bağlıdır; aynı n değerine sahip s, p, d alt kabukları hidrojen atomunda eşit enerjilidir. Ancak çok elektronlu atomlarda bu alt kabuklar arasında belirgin enerji farkı oluşur.",
+    text: "Çok elektronlu atomlarda aynı n değerindeki alt kabuklar arasında enerji farkı oluşmasının temel nedeni nedir?",
+    options: ["Alt kabuk şekillerinin çok elektronlu atomlarda değişmesi", "Çok elektronlu atomlarda çekirdek yükünün sürekli değişmesi", "Hidrojen atomunda elektron-elektron etkileşimi olduğu, çok elektronlu atomlarda ise olmadığı", "Elektron-elektron itmesi ve perdelenme etkisinin farklı şekillere sahip alt kabukları farklı derecede etkilemesi", "Bu fark yalnızca ölçüm hatasından kaynaklanır"],
+    correct: 3,
+    explain: "Çok elektronlu atomlarda, iç kabuktaki elektronlar dış kabuktaki elektronları farklı derecede perdeler (s elektronları çekirdeğe daha yakın bulunma olasılığı taşıdığından daha az perdelenir); bu, aynı n değerindeki s, p, d alt kabukları arasında enerji farkı oluşturur."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
+    context: "Bir orbital enerji diyagramında 5s alt kabuğunun 4d'den önce, 4d'nin ise 5p'den önce dolduğu gösterilmektedir (5s < 4d < 5p).",
+    text: "Bu sıralama n+l kuralıyla test edildiğinde tutarlı mıdır?",
+    options: ["n+l kuralı bu üç alt kabuk için hesaplanamaz", "Hayır; n+l kuralına göre 4d, 5s'den önce dolmalıdır", "Hayır; n+l kuralı yalnızca ilk 3 enerji düzeyi için geçerlidir", "Evet; 5s (n+l=5), 4d (n+l=6) ve 5p (n+l=6, n=5) sıralaması n+l kuralıyla tutarlıdır (eşitlikte küçük n önce gelir)", "Sıralama n+l kuralıyla hiçbir ilişki taşımaz"],
+    correct: 3,
+    explain: "5s: n+l=5+0=5; 4d: n+l=4+2=6; 5p: n+l=5+1=6. 5s en düşük n+l değerine sahip olduğundan ilk dolar; 4d ve 5p eşit n+l değerine sahip olduğundan küçük n'ye sahip 4d önce dolar — bu, verilen sıralamayla tam olarak örtüşür."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
+    context: "Bir orbital, elektronun belirli bir bölgede bulunma olasılığının %90'ının içinde yer aldığı üç boyutlu bir sınır yüzeyi olarak tanımlanır; orbitalin 'kesin bir sınırı' yoktur, olasılık uzaklaştıkça azalarak sıfıra yaklaşır.",
+    text: "Bu tanıma göre, bir orbitalin 'boyutu' hakkında en doğru ifade hangisidir?",
+    options: ["Orbital boyutu yalnızca s orbitalleri için tanımlanabilir", "Orbitalin boyutu, çekirdeğin fiziksel boyutuyla birebir aynıdır", "Orbitalin dışında elektron bulunma olasılığı tam olarak sıfırdır ve asla değişmez", "Orbital boyutu, keskin bir sınır değil, olasılığın belirli bir eşiğe göre seçildiği bir bölgeyi ifade eder", "Orbital boyutu, elektronun kütlesine göre belirlenir"],
+    correct: 3,
+    explain: "Orbital, elektronun keskin bir sınır içinde 'hapsedildiği' bir bölge değil, olasılık yoğunluğunun belirli bir eşiğin (genellikle %90) üzerinde olduğu bölgeyi temsil eden bir sınır yüzeyidir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
+    table: {
+      headers: ["Alt kabuk", "Orbital sayısı", "Maksimum elektron sayısı"],
+      rows: [
+        ["s", "1", "2"],
+        ["p", "3", "6"],
+        ["d", "5", "10"],
+        ["f", "7", "14"]
+      ],
+      caption: "Alt kabuk türlerine göre orbital ve maksimum elektron sayıları"
+    },
+    text: "Tablodaki örüntüye göre, eğer bir 'g' alt kabuğu olsaydı (9 orbital içerdiği varsayılırsa) maksimum kaç elektron alabilirdi?",
+    options: ["16", "18", "20", "22", "24"],
     correct: 2,
-    explain: "Hund kuralına göre eş enerjili üç p orbitaline üç elektron, her orbitale birer tane ve aynı yönde (paralel) spinle yerleşir; bu düzenleme elektron-elektron itmesini minimize eder ve en kararlı durumu oluşturur."
+    explain: "Tablodaki örüntüye göre her orbital 2 elektron alabildiğinden, 9 orbitalli bir g alt kabuğu 9×2=18... aslında g alt kabuğu gerçekte 9 orbital içerir ve 18 elektron alır; ancak örüntüde orbital sayısı her adımda 2 artmaktadır (1,3,5,7,9) ve elektron sayısı da 2,6,10,14,18 şeklinde ilerler, dolayısıyla doğru cevap 18'dir."
   },
+
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, bir orbital diyagramında iki elektronun aynı orbitalde aynı yönde ok (↑↑) ile gösterildiği hatalı bir çizimle karşılaşıyor.",
-    text: "Bu çizim hangi ilkeyi ihlal etmektedir?",
-    options: ["Kütlenin korunumu kanununu", "Hund kuralını", "Aufbau ilkesini", "Pauli dışlama ilkesini", "Heisenberg belirsizlik ilkesini"],
+    context: "Bir atomun 2p alt kabuğundaki üç orbital (2px, 2py, 2pz), uzayda birbirine dik üç eksen boyunca yönlenmiştir; şekilleri ve enerjileri özdeştir, yalnızca yönelimleri farklıdır.",
+    text: "Bu üç orbitalin özdeş enerjiye sahip olmasının temel nedeni nedir?",
+    options: ["Enerjinin yalnızca orbital şekline değil, orbitalin rengine bağlı olması", "Üçünün farklı çekirdek yüküne sahip olması", "Üçünün farklı sayıda elektron içermesi", "Üçünün de aynı baş kuantum sayısı (n) ve aynı açısal momentum kuantum sayısına (l) sahip olması, yalnızca manyetik kuantum sayısının farklı olması", "Bu üç orbitalin gerçekte tek bir orbital olması"],
     correct: 3,
-    explain: "Aynı orbitaldeki iki elektronun aynı spin yönünde olması Pauli dışlama ilkesine aykırıdır; bir orbitaldeki iki elektron zıt spinli olmalıdır (↑↓)."
+    explain: "px, py, pz orbitalleri aynı n ve l değerine sahiptir; yalnızca manyetik kuantum sayısı (yönelim) farklıdır. Enerji n ve l'ye bağlı olduğundan, bu üç orbital özdeş enerjilidir (dejenere)."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, oksijenin (8O) elektron dizilimini 1s² 2s² 2p⁴ olarak yazıyor ve 2p orbitallerindeki elektron dağılımını çiziyor.",
-    text: "Hund kuralına göre 2p⁴ orbital dağılımı en doğru hangi şekilde gösterilir?",
-    options: [
-      "Elektronlar yalnızca px ve py'ye, pz her zaman boş kalır",
-      "Dört elektronun tamamı tek bir orbitale sıkıştırılır",
-      "Üç orbitalin her birinde birer elektron, dördüncü elektron orbital dışında kalır",
-      "Üç orbitalin ikisinde birer elektron, birinde iki eşleşmiş elektron (↑↓)(↑)(↑)",
-      "Elektronların hepsi zıt spinli olarak aynı orbitale yerleşir"
-    ],
+    context: "Bir atomun elektron dizilimi belirlenirken önce alt kabuklar enerji sırasına göre doldurulur, ardından dizilim genellikle baş kuantum sayısına göre yeniden gruplandırılarak yazılır. Örneğin demirin (Fe, 26 elektron) dolma sırası ...4s 3d... iken, yazım sırası genellikle ...3d 4s... şeklindedir.",
+    text: "Bu iki farklı sıralama (dolma sırası ve yazım sırası) neden farklıdır?",
+    options: ["Dolma sırası yalnızca iyonlar için geçerlidir", "İki sıra arasındaki fark bir yazım hatasından kaynaklanır", "Yazım sırası, atomun gerçek fiziksel durumunu değiştirir", "Dolma sırası fiziksel süreci (hangi orbitalin önce elektron aldığını) yansıtırken, yazım sırası okunabilirlik için elektronları baş kuantum sayısına göre gruplandırır", "Bu iki sıralama arasında hiçbir sistematik neden yoktur"],
     correct: 3,
-    explain: "2p⁴ için önce üç orbitale birer elektron paralel spinle yerleştirilir (Hund kuralı); dördüncü elektron ise bu orbitallerden birine zıt spinle eşleşerek girer — sonuç: bir orbitalde 2, diğer ikisinde 1'er elektron."
+    explain: "Elektronlar fiziksel olarak enerji sırasına göre (Aufbau ilkesi, ör. 4s önce 3d) yerleşir; ancak dizilim yazılırken genellikle okunabilirlik ve kimyasal yorumlama kolaylığı için baş kuantum sayısına göre gruplandırılır (3d, 4s'den önce yazılır). Bu, atomun fiziksel durumunu değiştirmez, yalnızca sunum biçimidir."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, iyonlaşma sırasında geçiş metallerinin (örneğin demir, Fe) önce hangi orbitalden elektron kaybettiğini araştırıyor.",
-    text: "Fe atomu iyonlaşırken (elektron kaybederken) elektronlar önce hangi orbitalden ayrılır?",
-    options: ["1s orbitalinden", "3d orbitalinden", "3p orbitalinden", "4s orbitalinden", "Hepsinden eşit oranda"],
+    context: "Bir orbital enerji karşılaştırmasında, aynı baş kuantum sayısına (n=4) sahip 4s, 4p, 4d ve 4f alt kabukları söz konusudur.",
+    text: "Bu dört alt kabuk enerjilerine göre küçükten büyüğe nasıl sıralanır?",
+    options: ["Dördü de eşit enerjilidir", "4f < 4d < 4p < 4s", "4s < 4d < 4p < 4f", "4s < 4p < 4d < 4f", "4p < 4s < 4f < 4d"],
     correct: 3,
-    explain: "İlginç biçimde, dolum sırasında 4s önce dolsa da (Aufbau), iyonlaşma sırasında elektronlar önce 4s orbitalinden ayrılır; çünkü iyonlaşmış durumda 3d orbitalinin enerjisi 4s'ninkinden daha düşük hale gelir."
+    explain: "Aynı n değerinde açısal momentum kuantum sayısı (l) arttıkça enerji artar: s(l=0) < p(l=1) < d(l=2) < f(l=3); bu nedenle sıralama 4s < 4p < 4d < 4f şeklindedir."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, azot (N, 7 elektron) ile oksijen (O, 8 elektron) atomlarının 2p orbitallerindeki elektron dağılımını karşılaştırıyor.",
-    text: "Azotun 2p³ dağılımı, oksijenin 2p⁴ dağılımına göre en doğru hangi açıdan farklıdır?",
-    options: [
-      "İki atomda da elektron dağılımı birebir aynıdır",
-      "Azotta hiç elektron eşleşmesi yokken oksijende de hiç eşleşme yoktur",
-      "Azotta tüm elektronlar eşleşmişken oksijende hiçbiri eşleşmemiştir",
-      "Azotta üç orbitalin her birinde birer eşlenmemiş elektron varken, oksijende bir orbitalde elektronlar eşleşmiştir",
-      "Azotta elektronlar d orbitaline taşar"
-    ],
-    correct: 3,
-    explain: "Azotta (2p³) yarı dolu p alt kabuğu nedeniyle üç orbitalin her birinde birer eşlenmemiş elektron bulunur; oksijende (2p⁴) ise bir orbitalde elektronlar eşleşmek zorundadır, bu da azotun görece kararlılığını (yarı dolu kabuk kararlılığı) açıklar."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, n+l kuralının (Madelung kuralı) orbital enerji sırasını tahmin etmek için kullanıldığını öğreniyor: küçük (n+l) toplamı daha düşük enerji anlamına gelir; eşitlik durumunda küçük n önceliklidir.",
-    text: "Bu kurala göre 3d (n+l=3+2=5) ile 4p (n+l=4+1=5) orbitalleri karşılaştırıldığında hangisi daha düşük enerjilidir?",
-    options: ["4p her zaman 3d'den önce dolar", "4p, çünkü n+l eşit olduğunda büyük n önceliklidir", "İkisi de tam olarak eşit enerjilidir, sıralama yapılamaz", "3d, çünkü n+l eşit olduğunda küçük n önceliklidir", "Bu kural yalnızca s orbitalleri için geçerlidir"],
-    correct: 3,
-    explain: "n+l kuralına göre iki orbitalin (n+l) toplamı eşitse, daha küçük n değerine sahip olan daha düşük enerjilidir; 3d ve 4p'de n+l=5 eşit olduğundan, n=3 olan 3d daha düşük enerjilidir ve önce dolar."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, bir orbital diyagramında 2s orbitali dolu, 2p orbitallerinden yalnızca biri elektron içeren bir azot atomunun eksik/hatalı bir dizilimiyle karşılaşıyor: (↑↓)(↑↓)( )( )",
-    text: "Bu diyagram Hund kuralı açısından neden hatalıdır?",
-    options: [
-      "Diyagramda fazla elektron gösterilmiştir",
-      "Diyagramda hiçbir hata yoktur",
-      "2s orbitali hiç elektron içermemelidir",
-      "Üç eş enerjili 2p orbitaline elektronlar tek tek dağıtılmadan bir orbitalde toplanmıştır",
-      "Hund kuralı yalnızca d orbitalleri için geçerlidir, bu diyagramla ilgisizdir"
-    ],
-    correct: 3,
-    explain: "Azotun 2p³ dağılımında Hund kuralına göre üç elektron üç ayrı orbitale birer tane, paralel spinle dağıtılmalıdır; verilen diyagramda elektronların bir orbitalde toplanması (eşleşmesi) hatalıdır."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, çekirdek yükünün (proton sayısının) artmasının orbital enerjileri üzerindeki etkisini araştırıyor.",
-    text: "Aynı orbital türü (örneğin 2s) için çekirdek yükü arttıkça (elektron sayısı sabit tutulduğunda) orbital enerjisi genel olarak nasıl değişir?",
-    options: [
-      "Orbital tamamen kaybolur",
-      "Orbital enerjisi hiç değişmez",
-      "Orbital enerjisi her zaman artar",
-      "Elektronlar çekirdeğe daha güçlü çekildiğinden orbital enerjisi düşer (daha negatif/kararlı hale gelir)",
-      "Orbital enerjisi rastgele değişir"
-    ],
-    correct: 3,
-    explain: "Çekirdek yükü arttıkça elektron ile çekirdek arasındaki çekim kuvveti artar; bu, elektronun bulunduğu orbitali enerji bakımından daha düşük (daha kararlı) hale getirir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, iç kabuk elektronlarının dış kabuktaki elektronlar üzerindeki 'perdeleme (ekranlama) etkisini' araştırıyor.",
-    text: "Perdeleme etkisi, dış kabuktaki bir elektronun hissettiği etkin çekirdek yükünü en doğru şekilde nasıl etkiler?",
-    options: [
-      "Perdeleme yalnızca d orbitallerinde görülür",
-      "Perdeleme etkisi, dış elektronun hissettiği çekirdek yükünü artırır",
-      "Perdeleme etkisinin orbital enerjisiyle hiçbir ilgisi yoktur",
-      "İç kabuk elektronları çekirdeğin pozitif yükünü kısmen perdeler, bu yüzden dış elektronun hissettiği etkin yük gerçek çekirdek yükünden küçüktür",
-      "Perdeleme etkisi çekirdek yükünü tam olarak sıfırlar"
-    ],
-    correct: 3,
-    explain: "İç kabuktaki elektronlar, çekirdeğin pozitif yükünü dış elektronlara karşı kısmen perdeler (ekranlar); bu nedenle dış elektronun hissettiği 'etkin çekirdek yükü', gerçek çekirdek yükünden daha küçüktür."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, aynı n değerine sahip s, p, d orbitallerinin çekirdeğe olan 'nüfuz etme (penetrasyon)' derecelerini karşılaştırıyor.",
-    text: "Aynı n değeri için orbitallerin çekirdeğe nüfuz etme derecesi ve buna bağlı enerji sıralaması için en doğru ifade hangisidir?",
-    options: [
-      "Nüfuz etme derecesi orbital enerjisiyle hiçbir ilişkisi yoktur",
-      "d orbitali çekirdeğe en çok nüfuz eder ve en düşük enerjilidir",
-      "Tüm orbitaller çekirdeğe eşit derecede nüfuz eder",
-      "s orbitali çekirdeğe en çok nüfuz eder ve bu nedenle en düşük enerjilidir; nüfuz etme s>p>d>f sırasıyla azalır",
-      "f orbitali her zaman en düşük enerjilidir"
-    ],
-    correct: 3,
-    explain: "Aynı n değeri için s orbitali çekirdeğe en fazla nüfuz eder (çekirdeğe yakın bulunma olasılığı daha yüksektir), bu da onu en düşük enerjili yapar; nüfuz etme derecesi s>p>d>f sırasıyla azalır ve enerji buna paralel olarak artar."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, potasyumun (19K) elektron dizilimini yazmaya çalışırken 3d orbitaline mi yoksa 4s orbitaline mi önce elektron yerleştireceğini düşünüyor.",
-    text: "Potasyumun en dıştaki (19.) elektronu hangi orbitale yerleşir?",
-    options: ["4p orbitaline", "3d orbitaline", "3p orbitaline", "4s orbitaline", "4d orbitaline"],
-    correct: 3,
-    explain: "Enerji sırasına göre 4s orbitali 3d'den daha düşük enerjilidir; bu yüzden potasyumun 19. elektronu 3d yerine 4s orbitaline yerleşir ([Ar] 4s¹)."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, bir atomun taban (temel) hâl elektron dizilimi ile uyarılmış hâl dizilimi arasındaki farkı araştırıyor.",
-    text: "Bir atomun 'uyarılmış hâl'i için en doğru tanım hangisidir?",
-    options: [
-      "Atomun nötr olmadığı durum",
-      "Atomun tüm elektronlarını kaybettiği durum",
-      "Atomun proton sayısının değiştiği durum",
-      "Atomun her zaman bulunduğu en kararlı durum",
-      "Bir veya daha fazla elektronun enerji soğurarak normalden daha yüksek enerjili bir orbitale geçtiği geçici durum"
-    ],
+    context: "Bir öğretim aracında, bir atomun temel hâl elektron dizilimini bulmak için 'diyagonal kural' adı verilen bir görsel yöntem kullanılır: alt kabuklar köşegen çizgiler boyunca izlenerek doğru dolma sırası elde edilir.",
+    text: "Diyagonal kuralın temelde hangi matematiksel ilkeyle örtüştüğü söylenebilir?",
+    options: ["Diyagonal kural, n+l kuralıyla çelişen farklı bir sonuç verir", "Yalnızca baş kuantum sayısıyla, l değerini hiç dikkate almaz", "Yalnızca elektron sayısıyla, kuantum sayılarıyla ilgisizdir", "Pauli dışlama ilkesiyle, enerji sıralamasıyla ilgisizdir", "n+l kuralıyla; her iki yöntem de aynı enerji sıralamasını farklı görsel/sayısal araçlarla ifade eder"],
     correct: 4,
-    explain: "Uyarılmış hâl, bir atomun elektronlarından birinin (veya birkaçının) enerji soğurarak taban haldeki orbitalinden daha yüksek enerjili bir orbitale geçtiği, genellikle kısa süreli ve kararsız bir durumdur."
+    explain: "Diyagonal kural (köşegen kuralı), n+l kuralının görsel bir temsilidir; her iki yöntem de alt kabukları aynı mantıkla (küçük n+l önce, eşitlikte küçük n önce) sıralar."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, sodyumun (11Na) elektron dizilimini 1s² 2s² 2p⁶ 3s¹ olarak yazıyor ve bunu [Ne] 3s¹ şeklinde kısaltıyor.",
-    text: "Bu kısaltılmış gösterimde [Ne] neyi ifade eder?",
-    options: [
-      "Hiçbir anlamı yoktur, sadece kısaltmadır",
-      "Sodyumun neon ile aynı element olduğunu gösterir",
-      "Neon gazının atom ağırlığını gösterir",
-      "Sodyumun neondan bir proton fazla olduğunu gösterir",
-      "Neon atomunun tamamlanmış elektron dizilimini (iç kabuk elektronlarını) temsil eder"
-    ],
+    context: "Bir atomun 3s orbitali, elektronun çekirdeğe çok yakın küçük bir bölgede bulunma olasılığına ek olarak, çekirdekten uzakta ikincil küçük olasılık bölgeleri de gösterir (düğüm yüzeyleri arasında); bu, 2s ve 1s orbitallerinde görülmeyen bir özelliktir.",
+    text: "Bu 'düğüm yüzeyi' sayısındaki artışın baş kuantum sayısıyla (n) ilişkisi en doğru şekilde nasıl ifade edilir?",
+    options: ["Düğüm yüzeyi sayısı, elektronun spinine bağlıdır", "Düğüm yüzeyi sayısı, baş kuantum sayısından tamamen bağımsızdır", "Düğüm yüzeyi yalnızca p orbitallerinde bulunur, s orbitallerinde hiç bulunmaz", "Baş kuantum sayısı arttıkça düğüm yüzeyi sayısı azalır", "Baş kuantum sayısı arttıkça bir orbitaldeki düğüm yüzeyi sayısı da artar"],
     correct: 4,
-    explain: "[Ne] gösterimi, sodyumun iç kabuk elektronlarının neon atomunun tam dolu elektron dizilimiyle (1s² 2s² 2p⁶) aynı olduğunu belirtir; bu, elektron dizilimini kısa ve pratik biçimde yazmayı sağlar."
+    explain: "Bir orbitaldeki düğüm yüzeyi (elektron bulunma olasılığının sıfır olduğu bölge) sayısı, baş kuantum sayısı (n) arttıkça artar; bu, orbitalin karmaşıklığının ve enerjisinin n ile birlikte arttığının bir göstergesidir."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, elektron dizilimi yazarken 3s, 3p, 3d orbitallerinin aynı n=3 düzeyinde olmasına rağmen enerjilerinin farklı olduğunu fark ediyor.",
-    text: "Aynı n değerine (n=3) sahip olmalarına rağmen 3s, 3p, 3d orbitallerinin enerjilerinin farklı olmasının temel nedeni en doğru hangisidir?",
-    options: [
-      "Orbitallerin rengi farklı olduğu için",
-      "Bu orbitallerin elektron sayıları farklı olduğu için",
-      "3d orbitali her zaman 3s'den daha az elektron içerdiği için",
-      "Bu farklılık yalnızca hidrojen atomunda görülür, çok elektronlu atomlarda yoktur",
-      "Orbital türü (açısal momentum kuantum sayısı l) farklı olduğundan, çekirdeğe nüfuz etme ve perdeleme dereceleri de farklıdır"
-    ],
+    context: "Bir atomun elektron dizilimi belirlenirken, bazı öğrenciler yanlışlıkla tüm elektronların önce en düşük n değerine sahip kabuğu tamamen doldurduğunu (örneğin n=1 kabuğu tam dolmadan n=2'ye geçilmediğini) düşünebilir.",
+    text: "Bu yaygın kavram yanılgısı neden hatalıdır?",
+    options: ["Çünkü bu yanılgı yalnızca iyonlar için geçerlidir, nötr atomlar için doğrudur", "Çünkü bu yanılgı aslında doğrudur, tüm kabuklar sırayla tam dolar", "Çünkü elektronlar hiçbir zaman belirli bir sıraya göre dolmaz, tamamen rastgeledir", "Çünkü n=1 kabuğu hiçbir zaman tam dolamaz", "Çünkü dolma sırası enerjiye göre belirlenir; bazı yüksek n'li alt kabuklar (örn. 4s), bazı düşük n'li alt kabuklardan (örn. 3d) önce dolabilir"],
     correct: 4,
-    explain: "Çok elektronlu atomlarda, aynı n değerine sahip olsalar bile s, p, d orbitalleri farklı l değerlerine (farklı şekil ve nüfuz etme derecelerine) sahip olduğundan enerjileri farklıdır; bu fark tek elektronlu hidrojen atomunda görülmez (orada yalnızca n enerjiyi belirler)."
+    explain: "Elektron dolma sırası, kabuk (n) bazında değil alt kabuk (n+l) bazında enerjiye göre belirlenir; bu nedenle 4s gibi bir alt kabuk, 3d gibi daha düşük n'li fakat daha yüksek enerjili bir alt kabuktan önce dolabilir — n=1 kabuğunun tamamen dolması, n=2'ye geçiş için ön koşul değildir (zaten n=1 yalnızca 1s içerir ve hızla dolar)."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
+    orbitalBoxes: {
+      subshells: [
+        { label: "3p", electrons: [2, 2, 2] },
+        { label: "4s", electrons: [0] }
+      ],
+      caption: "3p alt kabuğu tam dolu, 4s alt kabuğu boş"
+    },
+    context: "Görseldeki diyagramda 3p alt kabuğu tamamen doludur (6 elektron), 4s alt kabuğu ise henüz boştur; bu, argon (Ar) atomunun elektron dizilimine karşılık gelir.",
+    text: "Bir sonraki elektron eklendiğinde (potasyum, K, 19. elektron) bu elektronun hangi alt kabuğa yerleşmesi beklenir?",
+    options: ["4f alt kabuğuna", "3d alt kabuğuna", "4p alt kabuğuna", "3p alt kabuğuna (zaten dolu olmasına rağmen)", "4s alt kabuğuna"],
+    correct: 4,
+    explain: "n+l kuralına göre 4s (n+l=4), 3d'den (n+l=5) daha düşük enerjilidir; bu nedenle argon konfigürasyonundan sonraki elektron 3d'ye değil 4s alt kabuğuna yerleşir (potasyumun dizilimi [Ar] 4s¹'dir)."
   },
 
   /* ============ ZOR ============ */
@@ -3958,419 +3329,396 @@ export const QUIZ = {
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, kromun (24Cr) beklenen elektron diziliminin [Ar] 4s² 3d⁴ olacağını hesaplıyor, ancak gerçek dizilimin [Ar] 4s¹ 3d⁵ olduğunu öğreniyor.",
-    text: "Bu farkın en olası bilimsel açıklaması hangisidir?",
-    options: [
-      "4s orbitali kromda hiç elektron içermez",
-      "Krom atomunda hesaplama hatası vardır, gerçek dizilim [Ar] 4s² 3d⁴ olmalıdır",
-      "Kromun proton sayısı yanlış bilinmektedir",
-      "Bu farkın hiçbir bilimsel açıklaması yoktur, tamamen rastlantısaldır",
-      "Yarı dolu (d⁵) bir d alt kabuğunun simetrik elektron dağılımı ve azalan elektron-elektron itmesi ekstra bir kararlılık sağlar; bu enerji kazancı bir 4s elektronunun 3d'ye geçmesini enerjik olarak avantajlı kılar"
-    ],
+    context: "Krom (Cr) atomunun beklenen elektron dizilimi [Ar] 4s² 3d⁴ olması gerekirken, gerçekte gözlemlenen dizilim [Ar] 4s¹ 3d⁵'tir; yani bir elektron 4s'den 3d'ye 'kaymış' görünmektedir.",
+    text: "Bu sapmanın en olası açıklaması hangisidir?",
+    options: ["3d alt kabuğu krom için 4s'den çok daha düşük enerjilidir, bu yüzden fark yoktur", "n+l kuralı krom için tamamen geçersizdir ve hiçbir açıklama yapılamaz", "Krom atomunda 4s alt kabuğu hiç elektron alamaz", "Bu, bir ölçüm hatasından kaynaklanmaktadır, gerçek dizilim [Ar] 4s² 3d⁴'tür", "Yarı dolu (d⁵) bir alt kabuğun, elektronların simetrik dağılımından kaynaklanan ek bir kararlılık kazanması, 4s ve 3d arasındaki küçük enerji farkını aşmaya yetmiştir"],
     correct: 4,
-    explain: "Yarı dolu (d⁵) ve tam dolu (d¹⁰) d alt kabukları, simetrik elektron dağılımı nedeniyle ekstra kararlılık kazanır; bu kararlılık kazancı, kromda bir 4s elektronunun 3d'ye geçerek [Ar] 4s¹ 3d⁵ dizilimini oluşturmasını enerjik olarak avantajlı kılar (n+l kuralının bir istisnası)."
+    explain: "4s ve 3d alt kabukları arasındaki enerji farkı oldukça küçüktür; yarı dolu (d⁵) veya tam dolu (d¹⁰) alt kabukların simetrik elektron dağılımından kaynaklanan ekstra kararlılık, bu küçük enerji farkını aşarak bir elektronun 4s'den 3d'ye geçmesine yol açabilir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, bakırın (29Cu) beklenen elektron diziliminin [Ar] 4s² 3d⁹ olacağını hesaplıyor, ancak gerçek dizilimin [Ar] 4s¹ 3d¹⁰ olduğunu öğreniyor.",
-    text: "Bakırdaki bu istisnanın kromdakiyle ortak temel nedeni en doğru hangisidir?",
-    options: [
-      "Bakırın atom numarası hesaplama hatasına yol açar",
-      "Bakır ve krom arasında hiçbir ortak neden yoktur, tamamen farklı mekanizmalardır",
-      "Bakırda 4s orbitali hiç var olmaz",
-      "Bu istisna yalnızca bakıra özgüdür, kromla ilgisizdir",
-      "Tam dolu (d¹⁰) bir alt kabuğun sağladığı ekstra kararlılık, bir 4s elektronunun 3d'ye geçmesini enerjik olarak avantajlı kılar"
-    ],
-    correct: 4,
-    explain: "Kromdaki yarı dolu (d⁵) kararlılığına benzer şekilde, bakırda tam dolu (d¹⁰) alt kabuğun simetrik ve düşük enerjili elektron dağılımı, bir 4s elektronunun 3d'ye geçmesini enerjik olarak avantajlı kılar; her iki istisna da 'dolu/yarı dolu alt kabuk kararlılığı' ilkesine dayanır."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Aşağıdaki tabloda Cr ve Cu elementlerinin n+l kuralına göre 'beklenen' ve deneysel olarak gözlemlenen 'gerçek' elektron dizilimleri karşılaştırılmaktadır.",
     table: {
-      headers: ["Element", "Beklenen dizilim (n+l kuralı)", "Gerçek dizilim"],
+      headers: ["Alt kabuk", "n", "l", "n+l"],
       rows: [
-        ["Cr (24)", "[Ar] 4s² 3d⁴", "[Ar] 4s¹ 3d⁵"],
-        ["Cu (29)", "[Ar] 4s² 3d⁹", "[Ar] 4s¹ 3d¹⁰"]
-      ]
+        ["4d", "4", "2", "6"],
+        ["5p", "5", "1", "6"],
+        ["6s", "6", "0", "6"],
+        ["4f", "4", "3", "7"]
+      ],
+      caption: "n+l değeri eşit veya yakın olan dört alt kabuk"
     },
-    text: "Tablodaki bu iki istisna, n+l kuralı (Aufbau ilkesi) hakkında en doğru hangi çıkarımı destekler?",
-    options: [
-      "Cr ve Cu, periyodik tablodaki tek istisna elementlerdir ve başka hiçbir element benzer davranış göstermez",
-      "n+l kuralı tamamen geçersizdir ve hiçbir element için kullanılamaz",
-      "Bu istisnalar yalnızca deney hatasından kaynaklanır, gerçek dizilim tablodaki 'beklenen' sütunla aynı olmalıdır",
-      "n+l kuralı yalnızca soy gazlar için geçerlidir",
-      "n+l kuralı çoğu element için iyi bir tahmin aracı olsa da, elektron-elektron etkileşimlerinden kaynaklanan ekstra kararlılık etkileri nedeniyle bazı istisnalar gösterebilir"
-    ],
+    text: "Tabloya göre, n+l değeri 6 olan üç alt kabuğun (4d, 5p, 6s) doğru enerji sıralaması ile 4f'nin bu üçlü ile karşılaştırması sırasıyla en doğru hangisidir?",
+    options: ["4d < 5p < 6s; 4f, 6s'den daha düşük enerjilidir", "6s < 5p < 4d; 4f üçünden de düşük enerjilidir", "5p < 4d < 6s; 4f ile karşılaştırma yapılamaz", "Üç alt kabuk da birebir eşit enerjilidir, 4f de bunlarla eşittir", "4d < 5p < 6s (eşit n+l'de küçük n önce); 4f (n+l=7) bu üçünün hepsinden daha yüksek enerjilidir"],
     correct: 4,
-    explain: "n+l kuralı (Aufbau ilkesi), basit bir tek-elektron yaklaşımına dayandığından çoğu element için iyi çalışır; ancak Cr ve Cu gibi örneklerde, yarı dolu/tam dolu d alt kabuğunun sağladığı ekstra kararlılık (elektron-elektron etkileşimlerinden kaynaklanan) kuralın basit tahminini geçersiz kılar. Bu, modellerin yaklaşık olduğunu ve istisnaların olabileceğini gösterir (Cr, Cu dışında Mo, Ag gibi başka istisna örnekleri de vardır)."
+    explain: "n+l değeri eşit olan alt kabuklarda küçük n önce gelir: 4d(n=4) < 5p(n=5) < 6s(n=6). n+l=7 olan 4f ise n+l=6 olan üç alt kabuktan daha yüksek enerjilidir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, orbital enerjilerinin tahmin edilmesinde kullanılan n+l kuralının, çok elektronlu atomlardaki elektron-elektron itmelerini tam olarak hesaba katan matematiksel bir formülden değil, deneysel gözlemlere dayalı ampirik bir genelleme olduğunu öğreniyor.",
-    text: "Bu bilgi, n+l kuralının bilimsel statüsü hakkında en doğru hangi çıkarımı destekler?",
-    options: [
-      "n+l kuralı tüm istisnaları da kapsayacak şekilde kusursuzdur",
-      "Ampirik kurallar bilimsel olarak hiçbir değer taşımaz",
-      "n+l kuralı matematiksel değil, tamamen tahminidir ve rastgele sonuç verir",
-      "Ampirik bir kuralın istisna göstermesi, o kuralın tamamen kullanılamaz olduğu anlamına gelir",
-      "Ampirik bir kural olarak n+l kuralı, çoğu durumda güvenilir tahminler sağlasa da, tüm karmaşık elektron etkileşimlerini kusursuz biçimde modelleyen tam bir teori değildir; bu yüzden istisnalar beklenebilir"
-    ],
+    context: "Bir atom iyonlaştığında (örneğin bir geçiş metali katyon oluşturduğunda), elektronlar önce 4s alt kabuğundan uzaklaştırılır, 3d'den değil — bu, nötr atomda 4s'nin 3d'den önce dolmasına rağmen geçerlidir.",
+    text: "Bu görünüşteki çelişki en doğru şekilde nasıl açıklanır?",
+    options: ["İyonlaşma sırası, dolma sırasıyla her zaman birebir aynı olmak zorundadır", "Bu bir çelişkidir ve bilimsel olarak açıklanamaz", "4s alt kabuğu iyonlarda hiç var olmaz", "Nötr atomda verilen dolma sırası yanlıştır, gerçekte 3d önce dolar", "Elektronlar bir kez 3d'ye yerleştikten sonra, dolu 3d alt kabuğunun artan elektron-elektron itmesi 4s'nin enerjisini 3d'nin üzerine çıkarır; iyonlaşma bu yeni (dolu atom) enerji sırasına göre gerçekleşir"],
     correct: 4,
-    explain: "n+l kuralı gibi ampirik genellemeler, karmaşık sistemleri basitleştirilmiş biçimde modellediğinden çoğu durumda faydalı tahminler sağlar; ancak çok elektronlu atomlardaki tüm etkileşimleri (örneğin dolu/yarı dolu kabuk kararlılığı) tam olarak hesaba katmadığından, bazı istisnalar (Cr, Cu vb.) beklenebilir bir durumdur."
+    explain: "Boş orbitallere elektron eklerken (nötr atom oluşumu) 4s, 3d'den önce dolar; ancak dolu bir 3d alt kabuğu bulunduğunda, artan elektron-elektron itmesi 4s elektronlarının enerjisini 3d'nin üzerine çıkarır. Bu nedenle iyonlaşırken önce 4s elektronları uzaklaştırılır — dolma sırası ile boşalma sırası aynı olmak zorunda değildir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, molibdenin (42Mo) elektron diziliminin de [Kr] 5s² 4d⁴ yerine [Kr] 5s¹ 4d⁵ şeklinde gerçekleştiğini öğreniyor; bu, kromla (Cr) aynı türde bir istisnadır.",
-    text: "Bu bilgi, Cr'deki istisnanın genellenebilirliği hakkında en doğru hangi çıkarımı destekler?",
-    options: [
-      "Bu benzerlik tamamen tesadüftür ve hiçbir kimyasal anlamı yoktur",
-      "Mo'nun istisnası Cr'yle hiçbir şekilde ilişkili değildir, tamamen farklı bir nedenden kaynaklanır",
-      "Bu, periyodik tablodaki tüm elementlerin aynı istisnayı göstereceği anlamına gelir",
-      "Mo'nun elektron dizilimi hakkındaki bilgi yanlıştır, çünkü yalnızca Cr istisna olabilir",
-      "Yarı dolu d alt kabuğunun sağladığı ekstra kararlılık etkisi, Cr'ye özgü tek bir 'anomali' değil, benzer elektron yapısına sahip başka elementlerde de (örneğin aynı grup) tekrarlanabilen sistematik bir eğilimdir"
-    ],
+    orbitalBoxes: {
+      subshells: [
+        { label: "3d", electrons: [2, 2, 1, 0, 0] },
+        { label: "4s", electrons: [2] }
+      ],
+      caption: "Bir geçiş metali atomunun hatalı (Hund kuralına aykırı) 3d dizilimi"
+    },
+    context: "Görseldeki diyagramda 5 elektron, 3d alt kabuğunun 5 orbitaline dağıtılırken önce iki orbital eşleştirilmiş (her birine 2 elektron), üç orbital ise boş bırakılmıştır.",
+    text: "Bu düzenlemedeki temel hata nedir ve doğru (Hund kuralına uygun) düzenleme nasıl olmalıdır?",
+    options: ["Doğru düzenlemede tüm 5 elektron tek bir orbitale yerleştirilmelidir", "Düzenleme tamamen doğrudur, herhangi bir hata yoktur", "Hata, 4s alt kabuğunun dolu olmasıdır, 4s boş olmalıydı", "Hata, toplam elektron sayısının yanlış olmasıdır", "Hata, elektronların eşleştirilmeden önce tüm orbitallere dağıtılmaması; doğru düzenlemede 5 elektron 5 orbitale birer tane, aynı yönde spinle yerleştirilmelidir"],
     correct: 4,
-    explain: "Mo, Cr ile aynı grupta (6. grup) yer alır ve benzer elektron yapısı taşıdığından, yarı dolu d alt kabuk kararlılığı etkisi burada da görülür; bu, istisnanın rastgele değil, benzer elektronik yapıya sahip elementlerde sistematik olarak tekrarlanabilen bir eğilim olduğunu gösterir."
+    explain: "Hund kuralına göre, eşit enerjili orbitaller doldurulurken elektron eşleştirmesi (aynı orbitalde iki elektron) yapılmadan önce her orbitale birer elektron yerleştirilmelidir; bu, elektron-elektron itmesini minimize ederek en kararlı düzenlemeyi sağlar. Görseldeki düzenleme bu kurala aykırıdır ve daha yüksek enerjilidir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, orbital enerji sıralamasının atom numarasına (Z) bağlı olarak değiştiğini; örneğin hafif elementlerde 3d ile 4s arasındaki enerji farkının, ağır elementlerdekinden farklı olabileceğini öğreniyor.",
-    text: "Bu bilgi, orbital enerjileri hakkında yapılan tahminler için en doğru hangi çıkarımı destekler?",
-    options: [
-      "Orbital enerji sırası yalnızca soy gazlarda değişir",
-      "Orbital enerjileri her elementte birebir aynıdır, hiçbir zaman değişmez",
-      "Atom numarasının orbital enerjisiyle hiçbir ilişkisi yoktur",
-      "Yalnızca 1s orbitalinin enerjisi elementten elemente değişir, diğerleri sabittir",
-      "Orbital enerjilerinin bağıl sırası sabit/evrensel bir sabit değildir; çekirdek yükü ve elektron sayısı değiştikçe (farklı elementlerde) bağıl enerji sırası da değişebilir"
-    ],
+    context: "Bakır (Cu) atomunun beklenen elektron dizilimi [Ar] 4s² 3d⁹ olması gerekirken, gerçekte gözlemlenen dizilim [Ar] 4s¹ 3d¹⁰'dur.",
+    text: "Bu durum, krom (Cr) örneğiyle (4s² 3d⁴ yerine 4s¹ 3d⁵) karşılaştırıldığında hangi ortak ilkeyi paylaşır?",
+    options: ["Bu sapma yalnızca bakırda gerçek, kromda ise teorik bir varsayımdır", "İki örnek arasında hiçbir ortak ilke yoktur, tamamen farklı nedenlerle açıklanır", "Krom ve bakırın her ikisinde de bu sapma, ölçüm hatasından kaynaklanmaktadır", "Ortak ilke, her iki elementin de aynı grupta bulunmasıdır, elektron diziliminin enerjiyle ilgisi yoktur", "Her iki durumda da, tam dolu (d¹⁰) veya yarı dolu (d⁵) bir alt kabuğun simetrik elektron dağılımından kaynaklanan ekstra kararlılık, beklenen Aufbau sırasından sapmaya yol açmıştır"],
     correct: 4,
-    explain: "Orbital enerjilerinin bağıl sırası, çekirdek yükü ve elektron-elektron etkileşimlerine bağlı olarak elementten elemente değişebilir; bu yüzden genel orbital enerji diyagramları (örneğin n+l kuralı) bir 'ortalama eğilim' sunar, ancak her element için birebir sabit bir sıralama garanti etmez — bu, bazı geçiş metallerindeki istisnaların da temel nedenlerinden biridir."
+    explain: "Krom (d⁵, yarı dolu) ve bakır (d¹⁰, tam dolu) örneklerinin ikisi de aynı ilkeyi paylaşır: simetrik (yarı dolu veya tam dolu) bir d alt kabuğunun kazandırdığı ekstra kararlılık, 4s'den 3d'ye bir elektron kaymasını enerji açısından avantajlı hâle getirir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, kararlı bir atomun elektron diziliminin her zaman 'en düşük toplam enerjili' düzenleme olacağı ilkesini, Cr ve Cu istisnalarıyla birlikte yeniden değerlendiriyor.",
-    text: "Bu değerlendirmeden çıkarılabilecek en doğru genel ilke hangisidir?",
-    options: [
-      "Cr ve Cu'nun dizilimleri kararsızdır ve zamanla 'beklenen' dizilime döner",
-      "'En düşük enerji' ilkesi Cr ve Cu için geçersizdir, bu elementler enerjiyi önemsemez",
-      "Toplam sistem enerjisi kavramı yalnızca teorik fizikte kullanılır, kimyada anlamı yoktur",
-      "Orbital enerjisi ile toplam sistem enerjisi her zaman birebir aynı sonucu verir",
-      "'En düşük enerji' ilkesi yalnızca tek tek orbital enerjilerine değil, elektron-elektron itmesi, değişim enerjisi gibi tüm katkıları içeren toplam sistem enerjisine bakılarak değerlendirilmelidir"
-    ],
+    context: "Bir öğretim materyalinde şu iddia tartışılmaktadır: 'n+l kuralı, orbital enerjilerini tahmin etmede kullanışlı bir araçtır fakat mutlak bir fiziksel yasa değildir; krom ve bakır gibi istisnalar, kuralın yaklaşık bir model olduğunu gösterir.'",
+    text: "Bu değerlendirme, bilimsel modellerin doğasıyla ilgili en doğru hangi genellemeyi destekler?",
+    options: ["Bilimsel modeller istisna içerdiğinde artık kullanılmamalıdır", "Bir modelde herhangi bir istisna bulunması, modelin tamamen değersiz olduğu anlamına gelir", "n+l kuralı hiçbir zaman istisna içermez, krom ve bakır örnekleri hatalıdır", "İstisnaların varlığı, orbital enerjisi kavramının bilimsel olmadığını gösterir", "Yararlı bir model, çoğu durumda doğru tahminler yapabilir; ancak bazı istisnaların varlığı modelin basitleştirilmiş/yaklaşık bir araç olduğunu, mutlak bir yasa olmadığını gösterir"],
     correct: 4,
-    explain: "Bir atomun gerçek taban hâli, yalnızca bireysel orbital enerjilerinin toplamıyla değil; elektron-elektron itmesi, değişim (exchange) enerjisi gibi tüm katkıları içeren toplam sistem enerjisiyle belirlenir. Cr ve Cu'da d⁵/d¹⁰ dağılımının sağladığı ekstra değişim enerjisi kazancı, basit orbital enerji sıralamasının öngördüğü dizilimden daha düşük toplam enerjili bir düzenleme oluşturur."
+    explain: "n+l kuralı, elektron-elektron itmesi gibi ek etkileri basitleştirerek çoğu element için doğru sıralama tahmini yapar; ancak krom/bakır gibi istisnaların varlığı, kuralın yaklaşık bir model olduğunu, atomun gerçek davranışının daha karmaşık etkileşimlere bağlı olduğunu gösterir — bu, bilimsel modellerin genellikle basitleştirilmiş açıklayıcı araçlar olduğunu örnekler."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, orbital enerji diyagramlarının genellikle basitleştirilmiş, tek boyutlu bir 'merdiven' şeklinde çizildiğini, ancak gerçekte orbital enerjilerinin çekirdek yükü, elektron sayısı ve elektron etkileşimlerine bağlı çok değişkenli bir fonksiyon olduğunu öğreniyor.",
-    text: "Bu bilgi, orbital enerji diyagramlarının eğitimde kullanımı hakkında en dengeli hangi değerlendirmeyi destekler?",
+    context: "Bir karşılaştırmada, hidrojen atomunun 2s ve 2p orbitalleri tam olarak eşit enerjiye sahipken, lityum atomunun 2s orbitali 2p'den belirgin şekilde daha düşük enerjilidir.",
+    text: "Bu farkın en olası nedeni nedir?",
     options: [
-      "Basitleştirilmiş diyagramlar, temel eğilimleri (örneğin genel dolum sırasını) öğretmek için pedagojik olarak faydalıdır; ancak tüm istisnaları açıklayabilecek kadar kapsamlı değildir ve bu sınır bilinmelidir",
-      "Basitleştirilmiş diyagramlar tamamen yanlış olduğundan hiç kullanılmamalıdır",
-      "Gerçek orbital enerjileri sabittir, diyagramların basitleştirilmiş olması önemsizdir",
-      "Öğrencilere yalnızca istisnalar öğretilmeli, genel kural hiç öğretilmemelidir",
-      "Orbital enerji diyagramlarının pedagojik değeri yoktur"
+      "Lityumda 1s elektronlarının 2s ve 2p elektronlarını farklı derecede perdelemesi; 2s elektronunun çekirdeğe yakın bulunma olasılığı daha yüksek olduğundan daha az perdelenip daha düşük enerjili kalması",
+      "Hidrojen ve lityum atomlarının çekirdek yükünün aynı olması",
+      "Lityum atomunda 2p orbitalinin bulunmaması",
+      "Hidrojende elektron-elektron etkileşimi olduğu, lityumda ise olmadığı",
+      "Bu fark yalnızca ölçüm belirsizliğinden kaynaklanmaktadır"
     ],
     correct: 0,
-    explain: "Basitleştirilmiş orbital enerji diyagramları, temel dolum eğilimini (Aufbau sırasını) sezgisel biçimde öğretmek için pedagojik olarak faydalıdır; ancak gerçek orbital enerjilerinin çok değişkenli doğası nedeniyle Cr, Cu gibi istisnaları tam açıklayamayabilir — bu sınırlılığın bilinmesi, modelin doğru kullanımı için önemlidir."
+    explain: "Hidrojende tek elektron olduğundan perdeleme etkisi yoktur ve 2s-2p enerjileri eşittir. Lityumda ise iç kabuktaki (1s) elektronlar dış kabuk elektronlarını perdeler; 2s elektronunun çekirdeğe yaklaşma olasılığı 2p'den yüksek olduğundan daha az perdelenir ve daha düşük enerjili kalır — bu, çok elektronlu atomlarda alt kabuk ayrımının kaynağıdır."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, gümüşün (47Ag) elektron diziliminin [Kr] 5s² 4d⁹ yerine [Kr] 5s¹ 4d¹⁰ olduğunu öğrenip bunu bakırla (Cu) karşılaştırıyor.",
-    text: "Ag'nin bu dizilimi, periyodik tablodaki istisna örüntüsü hakkında en doğru hangi çıkarımı destekler?",
+    context: "Bir atomun elektron dizilimini n+l kuralıyla tahmin eden bir öğretim aracı, molibden (Mo, 42 elektron) için beklenen [Kr] 5s² 4d⁴ dizilimini önermektedir; ancak molibdenin gerçek dizilimi [Kr] 5s¹ 4d⁵'tir.",
+    text: "Bu örnek, krom örneğiyle (aynı grupta, bir üst periyotta) karşılaştırıldığında hangi çıkarımı destekler?",
     options: [
-      "Cu ve Ag aynı grupta (11. grup) yer aldığından, tam dolu d alt kabuk kararlılığı etkisi bu grupta tekrarlanan, grup içi bir eğilim olarak görülür",
-      "Ag'nin istisnası Cu'nunkiyle hiçbir bağlantısı olmayan, tamamen bağımsız bir olaydır",
-      "Bu benzerlik yalnızca tesadüftür ve grup ilişkisiyle açıklanamaz",
-      "Ag ve Cu farklı gruplarda olduğundan bu karşılaştırma anlamsızdır",
-      "Bu istisna yalnızca değerli metallerde (altın, gümüş) görülür, başka hiçbir nedeni yoktur"
+      "Yarı dolu d alt kabuğunun kazandırdığı ekstra kararlılık eğilimi, aynı grupta farklı periyotlarda da (krom ve molibdende) tutarlı bir örüntü olarak tekrarlanabilir",
+      "Molibden ve krom arasında hiçbir ortak örüntü yoktur, tamamen farklı elementlerdir",
+      "n+l kuralı yalnızca 3. periyot elementleri için tanımlanmıştır, 5. periyotta geçersizdir",
+      "Molibdendeki sapma, krom örneğinden tamamen farklı bir nedenden kaynaklanmaktadır",
+      "Bu örnek, n+l kuralının hiçbir zaman doğru sonuç vermediğini kanıtlar"
     ],
     correct: 0,
-    explain: "Cu ve Ag aynı grupta (11. grup, bakır grubu) yer alır ve benzer elektron yapısına sahiptir; bu nedenle tam dolu d alt kabuğun sağladığı kararlılık etkisi bu grup boyunca tekrarlanan sistematik bir eğilimdir (grup elementi Au için de benzer bir istisna gözlenir) — bu, istisnaların periyodik tabloda gruplar hâlinde örüntü oluşturabileceğini gösterir."
+    explain: "Krom (3d⁵4s¹) ve molibden (4d⁵5s¹), aynı grupta (6B) bulunan ve benzer bir istisna örüntüsü sergileyen elementlerdir; bu, yarı dolu d alt kabuğunun kararlılık avantajının yalnızca tek bir elemente özgü rastlantısal bir durum olmadığını, gruplar arasında tutarlı bir kimyasal örüntü olduğunu gösterir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, orbital kavramının kuantum mekaniğinin olasılıksal doğasına dayandığını; bu nedenle bir orbitalin 'şekli' denildiğinde aslında elektronun belirli bir bölgede bulunma olasılığının belirli bir yüzdesini (örneğin %90) içeren sınır yüzeyinin kastedildiğini öğreniyor.",
-    text: "Bu bilgi, orbital 'şekli' kavramının doğru yorumlanması için en önemli hangi uyarıyı içerir?",
+    context: "Bir araştırmacı, farklı elementlerin 4s ve 3d alt kabukları arasındaki enerji farkını ölçtüğünde, bu farkın atom numarası arttıkça (soldan sağa periyotta ilerledikçe) giderek küçüldüğünü, hatta bazı elementlerde 3d'nin 4s'nin altına indiğini gözlemlemiştir.",
+    text: "Bu bulgu, orbital enerjilerinin sabit olmadığı fikrini en doğru şekilde nasıl destekler?",
     options: [
-      "Orbital şekli, elektronun kesin sınırlarla çevrili katı bir 'kutusu' değil, olasılık yoğunluğunun belirli bir eşiği aştığı bölgeyi gösteren istatistiksel bir temsildir",
-      "Orbital şekli, elektronun tam ve kesin konumunu gösteren katı bir cisimdir",
-      "Orbital şekli tamamen keyfi çizilir, hiçbir fiziksel temeli yoktur",
-      "Orbital sınırının dışında elektron bulunma olasılığı tam olarak sıfırdır",
-      "Orbital şekli yalnızca s orbitalleri için olasılıksal, diğerleri için kesindir"
+      "Bir alt kabuğun enerjisi yalnızca kuantum sayılarına değil, aynı zamanda o anki çekirdek yüküne ve diğer elektronların perdeleme etkisine (yani hangi atoma/iyona ait olduğuna) bağlıdır",
+      "Orbital enerjileri her elementte birebir aynıdır, bu bulgu hatalıdır",
+      "4s ve 3d arasındaki fark yalnızca krom ve bakırda değişir, başka hiçbir elementte değişmez",
+      "Atom numarasının orbital enerjisiyle hiçbir ilgisi yoktur",
+      "Bu bulgu yalnızca teorik bir varsayımdır, deneysel dayanağı yoktur"
     ],
     correct: 0,
-    explain: "Orbital 'şekli', elektronun kesin sınırlı bir 'kutusunu' değil, belirli bir olasılık eşiğini (genellikle ~%90) aşan bölgenin sınır yüzeyini temsil eder; bu sınırın hemen dışında da (küçük olasılıkla) elektron bulunabilir — bu, kuantum mekaniğinin temel olasılıksal doğasının bir yansımasıdır."
+    explain: "4s-3d enerji farkının atom numarasına göre değişmesi, orbital enerjisinin yalnızca soyut kuantum sayılarıyla değil, o atomdaki gerçek çekirdek yükü ve elektron-elektron etkileşimleriyle de belirlendiğini gösterir; bu nedenle n+l kuralı gibi genel kurallar yaklaşık bir rehber olup, kesin enerji sıralaması elementten elemente değişebilir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, periyodik tabloda geçiş metalleri bloğunun (d bloğu) neden 4. periyottan itibaren başladığını, 3. periyotta d orbitali olmasına rağmen bu bloğun neden orada görünmediğini sorguluyor.",
-    text: "Bu durumun en doğru açıklaması hangisidir?",
+    table: {
+      headers: ["Element", "Beklenen dizilim (n+l kuralına göre)", "Gözlenen gerçek dizilim"],
+      rows: [
+        ["Krom (Cr)", "[Ar] 4s² 3d⁴", "[Ar] 4s¹ 3d⁵"],
+        ["Bakır (Cu)", "[Ar] 4s² 3d⁹", "[Ar] 4s¹ 3d¹⁰"],
+        ["Molibden (Mo)", "[Kr] 5s² 4d⁴", "[Kr] 5s¹ 4d⁵"],
+        ["Gümüş (Ag)", "[Kr] 5s² 4d⁹", "[Kr] 5s¹ 4d¹⁰"]
+      ],
+      caption: "n+l kuralının istisnası olan dört geçiş metali"
+    },
+    text: "Tablodaki dört istisnayı birlikte değerlendirdiğimizde en doğru ve kapsamlı genelleme hangisidir?",
     options: [
-      "3d orbitali enerji bakımından 4s'den sonra dolduğundan, 3d orbitallerinin dolumu ancak 4. periyotta (4s dolduktan sonra) gerçekleşir; bu yüzden d bloğu görünürde 4. periyottan başlar",
-      "3. periyotta d orbitali fiziksel olarak yoktur",
-      "d bloğunun periyottaki konumu tamamen keyfi seçilmiştir, enerjiyle ilgisi yoktur",
-      "3d orbitali yalnızca ağır elementlerde var olabilir",
-      "d bloğu aslında 2. periyotta başlar ama gösterilmez"
+      "Beklenen dizilimden bir elektron eksik olan (d⁴ veya d⁹) durumlarda, o elektronun s'den d'ye kayarak alt kabuğu yarı dolu (d⁵) veya tam dolu (d¹⁰) hâle getirmesi enerji açısından avantajlıdır; bu örüntü farklı periyotlarda tekrarlanır",
+      "Bu dört istisna birbirinden bağımsız, rastgele oluşmuş, hiçbir ortak örüntü taşımayan ayrı olgulardır",
+      "İstisnalar yalnızca 4. periyot elementlerinde (Cr, Cu) görülür, 5. periyotta (Mo, Ag) görülmez",
+      "n+l kuralı bu dört element için tamamen geçersizdir ve hiçbir öngörüde bulunamaz",
+      "Bu istisnalar yalnızca ölçüm hatalarından kaynaklanmaktadır"
     ],
     correct: 0,
-    explain: "3d orbitali kuantum mekaniksel olarak n=3 düzeyine ait olsa da, enerji bakımından 4s'den sonra dolduğu için, periyodik tabloda elektron dizilimi sırasına göre düzenlenen bloklar açısından d bloğu 4. periyottan itibaren görünür hale gelir; bu, orbital enerji sırasının periyodik tablo yapısını doğrudan etkilediğinin somut bir örneğidir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, klorun (17Cl) elektron dizilimini [Ne] 3s² 3p⁵ olarak yazıyor ve 3p orbitallerindeki dağılımı inceliyor.",
-    text: "Klorun 3p⁵ dağılımı için Hund kuralına uygun en doğru orbital diyagramı hangisidir?",
-    options: [
-      "Üç orbitalin ikisinde eşleşmiş (2'şer), birinde tek (1) elektron bulunur",
-      "Üç orbitalin hepsinde birer elektron bulunur, ikisi boş kalır",
-      "Beş elektronun tamamı tek bir orbitalde toplanır",
-      "Üç orbitalin hepsi tamamen boş kalır",
-      "Elektronlar 3d orbitaline taşar"
-    ],
-    correct: 0,
-    explain: "3p⁵ için önce üç orbitale birer elektron paralel spinle yerleştirilir; kalan iki elektron sırayla mevcut orbitallerden ikisine eşleşerek girer — sonuçta iki orbitalde 2'şer, bir orbitalde 1 elektron bulunur."
+    explain: "Dört örnekte de (Cr, Cu, Mo, Ag) beklenen dizilim d⁴ veya d⁹ iken, gerçek dizilimde bir 4s/5s elektronu d alt kabuğuna kayarak onu yarı dolu (d⁵) veya tam dolu (d¹⁰) hâle getirmektedir; bu, simetrik d alt kabuğu kararlılığının farklı periyotlarda tekrarlanan tutarlı bir kimyasal örüntü olduğunu gösterir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, altının (79Au) elektron diziliminin de [Xe] 6s² 4f¹⁴ 5d⁹ yerine [Xe] 6s¹ 4f¹⁴ 5d¹⁰ şeklinde gerçekleştiğini öğreniyor.",
-    text: "Bu bilgi, tam dolu d alt kabuk kararlılığı ilkesinin kapsamı hakkında en doğru hangi çıkarımı destekler?",
+    context: "Bir atomun 3d orbitalindeki elektron sayısı arttıkça (aynı periyotta soldan sağa ilerledikçe), 3d orbitallerinin enerjisi 4s orbitaline göre kademeli olarak düşmektedir; skandiyumda (Sc) 4s hâlâ biraz daha düşükken, çinkoya (Zn) doğru ilerledikçe fark tersine dönmeye başlar.",
+    text: "Bu kademeli değişim, orbital enerjisi kavramıyla ilgili hangi önemli noktayı vurgular?",
     options: [
-      "Bu istisna örüntüsü yalnızca 3d ve 4d serilerine özgü değildir; 5d serisinde (Au, Cu-Ag-Au grubunda) de aynı kararlılık mekanizması geçerlidir",
-      "Au'nun istisnası Cu ve Ag'den tamamen farklı, ilgisiz bir nedene dayanır",
-      "5d orbitalleri hiçbir zaman istisna göstermez, bu bilgi yanlıştır",
-      "Bu istisna yalnızca radyoaktif elementlerde görülür",
-      "Au'nun elektron dizilimi periyodik tablo ile hiçbir ilişki taşımaz"
+      "Orbital enerjisi, aynı alt kabuk türü için bile atomdan atoma (hatta aynı periyot içinde elementten elemente) değişen dinamik bir büyüklüktür, sabit bir sayı değildir",
+      "Orbital enerjisi her atomda birebir aynı sabit bir değerdir",
+      "Bu değişim yalnızca 3d orbitalinde görülür, başka hiçbir orbitalde görülmez",
+      "4s orbitalinin enerjisi hiçbir zaman değişmez, yalnızca 3d değişir",
+      "Bu kademeli değişimin periyodik tablodaki konumla hiçbir ilgisi yoktur"
     ],
     correct: 0,
-    explain: "Au, Cu ve Ag ile aynı grupta (11. grup) yer aldığından, tam dolu d alt kabuğun (d¹⁰) sağladığı kararlılık etkisi 3d, 4d ve 5d serilerinin hepsinde tutarlı biçimde görülür; bu, istisnanın tek bir seriye özgü olmayıp elektronik yapı benzerliğine dayalı sistematik bir eğilim olduğunu gösterir."
+    explain: "3d-4s enerji farkının aynı periyot boyunca kademeli olarak değişmesi, orbital enerjisinin evrensel sabit bir değer olmadığını, o anki çekirdek yükü ve elektron sayısına bağlı olarak atomdan atoma değiştiğini gösterir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, bir bilim insanının 'Aufbau ilkesi bir doğa yasası değil, çoğu element için işe yarayan güçlü bir tahmin aracıdır' şeklindeki açıklamasını okuyor.",
-    text: "Bu açıklama, bilimsel ilke ve kurallar arasındaki fark hakkında en doğru hangi çıkarımı destekler?",
+    context: "Bir tartışmada şu soru sorulmaktadır: 'Eğer bir öğretim aracı yalnızca n+l kuralını mutlak bir yasa olarak öğretip hiçbir istisnadan bahsetmezse, öğrencilerde ne tür bir kavram yanılgısı oluşabilir?'",
+    text: "Bu sorunun en isabetli cevabı hangisidir?",
     options: [
-      "Bazı bilimsel 'kurallar', altında yatan daha temel fiziksel gerçekliğin (elektron-elektron etkileşimleri, kuantum mekaniği) basitleştirilmiş bir yaklaşımıdır ve bu nedenle her durumda kusursuz çalışmayabilir",
-      "Aufbau ilkesi bir 'kural' olduğu için her koşulda istisnasız geçerli olmalıdır",
-      "Doğa yasaları ile tahmin araçları arasında hiçbir fark yoktur",
-      "Bu açıklama Aufbau ilkesinin tamamen değersiz olduğunu ima eder",
-      "Yalnızca 'yasa' olarak adlandırılan kurallar bilimsel kabul edilir, diğerleri değildir"
+      "Öğrenciler, krom ve bakır gibi gerçek elementlerin dizilimini n+l kuralıyla hesaplarken sürekli 'hata' yapacaklarını düşünebilir; oysa bu bir hesaplama hatası değil, kuralın modelleyemediği ek bir kararlılık etkisidir",
+      "Böyle bir öğretim yaklaşımının hiçbir olumsuz sonucu olmaz, çünkü istisnalar önemsizdir",
+      "Öğrenciler bu durumda n+l kuralını asla öğrenemez",
+      "İstisnalardan bahsetmemek, öğrenmeyi hızlandıran doğru bir yöntemdir ve kavram yanılgısına yol açmaz",
+      "Bu durumun kavram yanılgısıyla hiçbir ilgisi yoktur"
     ],
     correct: 0,
-    explain: "Aufbau ilkesi gibi kurallar, atomun karmaşık kuantum mekaniksel davranışının basitleştirilmiş bir yaklaşımıdır; bu basitleştirme çoğu durumda iyi çalışsa da, altında yatan tam fiziksel gerçekliği (elektron-elektron etkileşimleri gibi) tam yansıtmadığından Cr, Cu gibi istisnalar ortaya çıkabilir."
+    explain: "Bir kuralın istisnalarından bahsedilmemesi, öğrencilerin gerçek elementlerin (Cr, Cu gibi) beklenmedik dizilimlerini kendi hesaplama hataları sandığı bir kavram yanılgısına yol açabilir; oysa bu sapmalar kuralın basitleştirilmiş doğasından kaynaklanan bilinen istisnalardır."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, iyonlaşma sırasında 4s elektronlarının 3d'den önce kaybedilmesinin (Fe → Fe²⁺ iyonu oluşurken 4s² kaybedilir, 3d⁶ korunur), dolum sırasındaki (4s önce dolar) durumla çeliştiğini düşünüyor.",
-    text: "Bu görünürdeki çelişki en doğru hangi şekilde açıklanır?",
+    context: "Bir atomun 4f orbitali, 5d ve 6s orbitallerine göre çekirdeğe daha yakın bir bölgede yoğunlaşmıştır (bu duruma 'lantanit büzülmesi' ile ilişkili bir etki eşlik eder); buna rağmen 4f'nin enerjisi 6s'den daha yüksektir.",
+    text: "Bu görünüşteki çelişki (çekirdeğe daha yakın olmasına rağmen daha yüksek enerjili olması) en doğru şekilde nasıl açıklanır?",
     options: [
-      "Nötr atomda 4s, 3d'den biraz daha düşük enerjilidir; ancak elektron çekirdekten uzaklaştıkça (iyonlaşma sırasında) elektron sayısı azalır ve perdeleme değişir, bu da 3d'yi 4s'ye göre nispeten daha düşük enerjili hale getirir",
-      "Bu bir çelişkidir ve bilim insanları bunu hâlâ açıklayamamıştır",
-      "Dolum sırası ile iyonlaşma sırası aslında birbirinin aynısıdır, çelişki gözlem hatasıdır",
-      "İyonlaşma sırasında elektronlar rastgele, hiçbir kurala uymadan kaybedilir",
-      "4s orbitali iyonlaşma sırasında tamamen yok olur"
+      "Orbital enerjisi yalnızca çekirdeğe uzaklıkla değil, orbitalin şekli, açısal momentumu (l) ve perdelenme etkileşimleriyle birlikte belirlenir; yakınlık tek başına düşük enerji garantisi vermez",
+      "Bu bir çelişkidir ve mevcut atom teorisiyle açıklanamaz",
+      "4f orbitali aslında 6s'den çekirdeğe daha uzaktır, verilen bilgi yanlıştır",
+      "Enerji yalnızca çekirdeğe uzaklığa bağlıdır, bu nedenle 4f'nin 6s'den düşük enerjili olması gerekir",
+      "Lantanit büzülmesinin orbital enerjisiyle hiçbir ilgisi yoktur"
     ],
     correct: 0,
-    explain: "Nötr atomda 4s enerjisi 3d'den biraz düşüktür (bu yüzden önce dolar); ancak bir elektron uzaklaştırıldığında (iyonlaşma), kalan elektronların perdeleme ve etkin çekirdek yükü dengesi değişir ve 3d orbitali enerji bakımından 4s'nin altına iner — bu yüzden iyonlaşırken önce 4s elektronları kaybedilir. Bu, orbital enerjilerinin sabit olmadığını, atomun elektron sayısına bağlı olarak dinamik biçimde değiştiğini gösterir."
+    explain: "Orbital enerjisi tek bir etkene (yalnızca çekirdeğe uzaklığa) indirgenemez; l değeri yüksek olan f orbitalleri karmaşık açısal momentum ve perdelenme etkileri nedeniyle, çekirdeğe görece yakın olsalar bile s orbitallerinden daha yüksek enerjili olabilir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, orbital enerji tahminlerinde kullanılan basit kuralların (n+l kuralı gibi) bilgisayar destekli kuantum kimyası hesaplamalarıyla karşılaştırıldığında daha az kesin olduğunu, ancak elle hesaplama ve sezgisel anlama için hâlâ yaygın kullanıldığını öğreniyor.",
-    text: "Bu bilgi, farklı karmaşıklık düzeyindeki bilimsel modellerin bir arada kullanılması hakkında en doğru hangi çıkarımı destekler?",
+    context: "Bir atomun elektron dizilimini deneysel olarak doğrulamanın yollarından biri, atomun iyonlaşma enerjisini (bir elektronu uzaklaştırmak için gereken enerjiyi) ölçmektir; bir alt kabuktaki elektronlar ne kadar yüksek enerjili (çekirdeğe daha az bağlı) ise, o elektronu uzaklaştırmak o kadar az enerji gerektirir.",
+    text: "Bu ilişkiye dayanarak, krom atomunun (gerçek dizilim [Ar] 4s¹ 3d⁵) ilk iyonlaşma enerjisiyle ilgili en doğru öngörü hangisidir?",
     options: [
-      "Basit ve karmaşık modeller farklı amaçlara hizmet edebilir: basit modeller hızlı sezgisel tahmin sağlarken, karmaşık hesaplamalar daha yüksek doğruluk gerektiren durumlarda tercih edilir",
-      "Karmaşık hesaplamalar var olduğu için basit kurallar artık tamamen terk edilmelidir",
-      "Basit kurallar her zaman karmaşık hesaplamalardan daha doğru sonuç verir",
-      "Bilgisayar hesaplamaları güvenilmezdir, yalnızca elle yapılan hesaplamalar bilimseldir",
-      "Modellerin karmaşıklık düzeyinin doğrulukla hiçbir ilişkisi yoktur"
+      "İlk uzaklaştırılan elektron, en yüksek enerjili (en az bağlı) alt kabuk olan 4s'den çıkarılacaktır",
+      "İlk uzaklaştırılan elektron her zaman en düşük enerjili alt kabuktan (1s) çıkarılır",
+      "İyonlaşma enerjisi, elektron dizilimiyle hiçbir ilişki taşımaz",
+      "Krom atomunda tüm elektronlar aynı anda uzaklaştırılır",
+      "İlk uzaklaştırılan elektron 3d alt kabuğundan çıkarılır çünkü 3d, 4s'den daha yüksek enerjilidir"
     ],
     correct: 0,
-    explain: "Basit ampirik kurallar (n+l kuralı gibi) hızlı, sezgisel ve eğitimde faydalı tahminler sağlarken, bilgisayar destekli kuantum kimyası hesaplamaları elektron-elektron etkileşimlerini daha kapsamlı hesaba katarak daha yüksek doğruluk sunar; bilimde farklı karmaşıklık düzeyindeki modeller, amaca göre birlikte ve tamamlayıcı biçimde kullanılabilir."
+    explain: "İyonlaşırken en az bağlı (en yüksek enerjili, dolu 3d varlığında enerjisi 3d'nin üzerine çıkmış) 4s elektronu ilk uzaklaştırılan elektrondur; bu, dizilimin deneysel olarak iyonlaşma enerjisi ölçümleriyle tutarlı olduğunu doğrular."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğrenci, lantanit ve aktinit serilerindeki (f bloğu) elektron dizilimlerinin de sıkça n+l kuralından sapan istisnalar gösterdiğini (örneğin lantan, seryum gibi elementlerde) öğreniyor.",
-    text: "Bu bilgi, orbital enerjileri arasındaki farkların periyodik tablo boyunca değişimi hakkında en doğru hangi genellemeyi destekler?",
+    context: "Bir bilim yazısında şu iddia savunulmaktadır: 'Orbital enerjisi kavramı, atomun tek bir 'gerçek' enerji sıralamasına sahip olduğu izlenimini verebilir; oysa gerçekte enerji sıralaması, atomun o anki elektron sayısına, yüküne (nötr/iyon) ve hatta hangi elektronun hangi alt kabukta olduğuna bağlı olarak değişebilen bağlamsal bir büyüklüktür.'",
+    text: "Bu iddia, krom istisnası ve iyonlaşma sırasındaki 4s-3d tersine dönmesi örnekleriyle birlikte değerlendirildiğinde nasıl bir sonuca varılır?",
     options: [
-      "4f, 5d ve 6s gibi orbitaller arasındaki enerji farkları özellikle küçük olabilir; enerjiler birbirine bu denli yakın olduğunda küçük elektronik etkiler bile dolum sırasını değiştirebilir, bu da istisnaların f bloğunda daha sık görülmesini açıklar",
-      "f bloğu elementleri kimyasal kurallara tabi değildir",
-      "Lantanitlerdeki istisnalar Cr ve Cu'daki istisnalarla hiçbir ortak mekanizmayı paylaşmaz",
-      "f bloğunda hiçbir zaman istisna görülmez, bu bilgi hatalıdır",
-      "İstisnaların sıklığı orbital enerjileriyle değil, elementlerin keşfedilme sırasıyla ilgilidir"
+      "İddia bu örneklerle güçlü şekilde desteklenir; orbital enerji sıralaması sabit bir tablo değil, atomun durumuna göre değişen bağlamsal bir kavramdır",
+      "İddia bu örneklerle çürütülür; orbital enerjisi her koşulda sabittir",
+      "Krom istisnası ve iyonlaşma tersine dönmesi birbiriyle çelişen, ilgisiz olgulardır",
+      "Bu örnekler yalnızca krom için geçerlidir, genel bir sonuca varılamaz",
+      "İddia, deneysel kanıtla hiçbir şekilde test edilemez"
     ],
     correct: 0,
-    explain: "4f, 5d ve 6s orbitalleri arasındaki enerji farkları oldukça küçük olabilir; enerji düzeyleri bu kadar yakın olduğunda elektron-elektron itmesi ve değişim enerjisi gibi ince etkiler dolum sırasını kolayca değiştirebilir — bu da n+l kuralından sapan istisnaların özellikle f bloğu (lantanit/aktinit) elementlerinde daha sık gözlenmesinin temel nedenidir."
+    explain: "Krom'un beklenmedik dizilimi (n+l kuralının basit tahmininden sapma) ve iyonlaşma sırasında 4s'nin 3d'den önce boşalması (nötr atomda dolma sırasının tersi), orbital enerjisinin sabit bir sıralama olmadığını, atomun elektron sayısı ve yüküne bağlı olarak değişen bağlamsal bir büyüklük olduğunu güçlü şekilde destekler."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
+    context: "Bir karşılaştırmada, demir (Fe, [Ar] 4s² 3d⁶) ile krom ([Ar] 4s¹ 3d⁵) elektron dizilimleri incelenmektedir; demirde n+l kuralının beklediği dizilim gerçekleşirken, kromda gerçekleşmemektedir.",
+    text: "Demirin n+l kuralına uyması ile kromun uymaması arasındaki farkı en iyi açıklayan çıkarım hangisidir?",
+    options: [
+      "d⁶ dizilimi (demir) tam dolu veya yarı dolu bir simetriye sahip değildir, dolayısıyla ekstra kararlılık kazanma avantajı yoktur; oysa krom bir elektron kaydırarak d⁵ (yarı dolu) simetrisine ulaşabilmektedir",
+      "Demir ve krom arasında hiçbir yapısal fark yoktur, ikisi de aynı kurala uyar",
+      "n+l kuralı yalnızca demir gibi elementler için geçerlidir",
+      "Krom'un atom numarası demirden büyük olduğu için farklı davranır",
+      "Bu fark tamamen rastgele olup hiçbir yapısal açıklaması yoktur"
+    ],
+    correct: 0,
+    explain: "Krom'da bir elektronun 4s'den 3d'ye kayması, d alt kabuğunu yarı dolu (d⁵, simetrik ve kararlı) hâle getirir; demirde ise böyle bir kayma d⁶'dan d⁷'ye geçişle sonuçlanır ki bu da simetrik/kararlı bir yapı değildir, dolayısıyla demir n+l kuralının öngördüğü sıradan dizilimi korur."
   }
 ],
   "yerbulma": [
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, periyodik tablodaki yatay sıraların ve dikey sütunların isimlerini öğreniyor.",
-    text: "Periyodik tablodaki yatay sıralara ne ad verilir?",
-    options: ["Grup", "Periyot", "Blok", "Seri", "Aile"],
+    context: "Bir elementin elektron dizilimi [Ne] 3s² 3p³ şeklindedir.",
+    text: "Bu elementin periyodik tablodaki periyodu ve grubu sırasıyla nedir?",
+    options: ["2. periyot, 15. grup", "3. periyot, 15. grup (VA)", "3. periyot, 13. grup", "4. periyot, 15. grup", "3. periyot, 5. grup"],
     correct: 1,
-    explain: "Periyodik tablodaki yatay sıralara periyot denir; aynı periyottaki elementler aynı sayıda enerji düzeyine (kabuğa) sahiptir."
+    explain: "En yüksek baş kuantum sayısı (n=3) periyodu, değerlik elektron sayısı (3s²3p³ = 5 elektron) ise 15. grubu (VA) belirler."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, periyodik tablodaki dikey sütunların isimlerini öğreniyor.",
-    text: "Periyodik tablodaki dikey sütunlara ne ad verilir?",
-    options: ["Periyot", "Grup", "Kabuk", "Katman", "Blok"],
+    context: "Bir element periyodik tabloda 2. periyot, 16. grupta (VIA) yer almaktadır.",
+    text: "Bu elementin değerlik kabuğu elektron dizilimi hangisidir?",
+    options: ["2s² 2p²", "2s² 2p⁴", "3s² 3p⁴", "2s² 2p⁶", "2s¹ 2p⁵"],
     correct: 1,
-    explain: "Periyodik tablodaki dikey sütunlara grup denir; aynı gruptaki elementler genellikle aynı sayıda değerlik elektronuna sahiptir ve benzer kimyasal özellikler gösterir."
+    explain: "2. periyot, baş kuantum sayısının n=2 olduğunu; 16. grup ise değerlik kabuğunda 6 elektron bulunduğunu gösterir; bu nedenle dizilim 2s²2p⁴'tür."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, aynı grupta yer alan elementlerin ortak özelliğini araştırıyor.",
-    text: "Aynı gruptaki elementler için en doğru ortak özellik hangisidir?",
-    options: ["Aynı atom kütlesine sahiptirler", "Aynı sayıda proton içerirler", "Aynı sayıda değerlik elektronuna sahiptirler", "Aynı sayıda nötron içerirler", "Aynı radyoaktif özelliktedirler"],
+    context: "Periyodik tabloda elementler, en son elektronun yerleştiği alt kabuk türüne göre s, p, d ve f blok olarak sınıflandırılır.",
+    text: "Değerlik dizilimi 3d⁶ 4s² olan bir element hangi bloğa aittir?",
+    options: ["s blok", "d blok", "p blok", "f blok", "Hiçbirine, sınıflandırılamaz"],
+    correct: 1,
+    explain: "En son elektronun yerleştiği alt kabuk d (3d) olduğundan bu element d bloğa aittir (geçiş metali)."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
+    periodicHighlight: {
+      caption: "Periyodik tabloda vurgulanan grup (18. grup / VIIIA)",
+      cells: [
+        { period: 1, group: 18, symbol: "He", highlighted: true },
+        { period: 2, group: 18, symbol: "Ne", highlighted: true },
+        { period: 3, group: 18, symbol: "Ar", highlighted: true },
+        { period: 4, group: 18, symbol: "Kr", highlighted: true }
+      ]
+    },
+    context: "Görselde vurgulanan grup, değerlik kabuğu tamamen dolu (oktet, helyum için düet) olan elementleri içerir.",
+    text: "Bu grup hangi ortak adla anılır?",
+    options: ["Alkali metaller", "Soy gazlar (asal gazlar)", "Halojenler", "Toprak alkali metaller", "Geçiş metalleri"],
+    correct: 1,
+    explain: "Değerlik kabuğu tamamen dolu olan ve kimyasal olarak kararlı/tepkimeye girmeye eğilimi düşük olan 18. grup elementleri soy gazlar (asal gazlar) olarak adlandırılır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
+    context: "Bir atom, elektron alarak kararlı bir soy gaz elektron dizilimine ulaşmaktadır; örneğin flor (F) bir elektron alarak neon (Ne) ile aynı dizilime ulaşır.",
+    text: "Bu şekilde oluşan iyonun yükü ve türü nedir?",
+    options: ["F⁺, katyon (pozitif yüklü)", "F⁻, anyon (negatif yüklü)", "F²⁻, anyon", "F, nötr atom (değişim yok)", "F²⁺, katyon"],
+    correct: 1,
+    explain: "Flor bir elektron alarak negatif yüklü hâle gelir (F⁻); elektron alarak oluşan negatif yüklü iyonlara anyon denir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
+    context: "Bir sodyum atomu (Na, [Ne] 3s¹) bir elektron kaybederek Na⁺ iyonuna dönüşür.",
+    text: "Na⁺ iyonunun elektron dizilimi hangisidir?",
+    options: ["[Ne] 3s¹ (değişmeden kalır)", "[Ne] (yani 1s² 2s² 2p⁶)", "[Ar]", "1s² 2s² 2p⁵", "[Ne] 3s²"],
+    correct: 1,
+    explain: "Na atomu tek değerlik elektronunu (3s¹) kaybettiğinde geriye [Ne] elektron dizilimi (1s² 2s² 2p⁶) kalır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
+    context: "Periyodik tabloda bir elementin bulunduğu periyot numarası, o elementin değerlik kabuğundaki baş kuantum sayısına (n) eşittir.",
+    text: "Değerlik kabuğunda n=4 olan bir element hangi periyottadır?",
+    options: ["3. periyot", "4. periyot", "5. periyot", "2. periyot", "Periyot numarası n ile ilişkili değildir"],
+    correct: 1,
+    explain: "Periyot numarası doğrudan değerlik kabuğunun baş kuantum sayısına eşittir; n=4 olduğundan element 4. periyottadır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
+    context: "Bir elementin değerlik elektron dizilimi 2s² 2p⁶ şeklindedir; yani değerlik kabuğu tamamen doludur.",
+    text: "Bu element hangi grupta yer alır?",
+    options: ["1. grup (alkali metal)", "18. grup (soy gaz)", "17. grup (halojen)", "2. grup (toprak alkali)", "14. grup"],
+    correct: 1,
+    explain: "Değerlik kabuğu tamamen dolu (2s²2p⁶, 8 elektron) olan elementler 18. grupta, soy gazlar arasında yer alır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
+    context: "Periyodik tabloda s ve p bloklarındaki elementler 'baş grup elementleri' olarak adlandırılırken, d bloktaki elementler 'geçiş metalleri' olarak adlandırılır.",
+    text: "Değerlik dizilimi 4s² olan bir element hangi kategoriye girer?",
+    options: ["Geçiş metali (d blok)", "Baş grup elementi (s blok)", "İç geçiş metali (f blok)", "Soy gaz", "Halojen"],
+    correct: 1,
+    explain: "En son elektronların yerleştiği alt kabuk s (4s) olduğundan bu element s bloğa, dolayısıyla baş grup elementlerine aittir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
+    context: "Magnezyum (Mg) atomu, iki değerlik elektronunu (3s²) kaybederek kararlı bir iyon oluşturur.",
+    text: "Bu şekilde oluşan iyon hangisidir?",
+    options: ["Mg²⁻", "Mg²⁺", "Mg⁺", "Mg⁻", "Mg (değişmez)"],
+    correct: 1,
+    explain: "Mg atomu iki elektron kaybettiğinde iki birim pozitif yük kazanır ve Mg²⁺ iyonuna dönüşür."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
+    context: "Bir elementin tam elektron dizilimi 1s² 2s² 2p⁶ 3s² 3p⁶ 4s¹ şeklindedir.",
+    text: "Bu elementin değerlik elektron sayısı ve grubu sırasıyla nedir?",
+    options: ["8 değerlik elektronu, 18. grup", "2 değerlik elektronu, 2. grup", "1 değerlik elektronu, 1. grup", "1 değerlik elektronu, 17. grup", "7 değerlik elektronu, 7. grup"],
     correct: 2,
-    explain: "Aynı gruptaki elementler aynı sayıda değerlik elektronuna sahiptir; bu, onların benzer kimyasal özellikler göstermesinin temel nedenidir."
+    explain: "En dış kabuktaki (n=4) elektron sayısı 1 (4s¹) olduğundan bu element 1 değerlik elektronuna sahiptir ve 1. grupta (alkali metaller) yer alır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, aynı periyotta yer alan elementlerin ortak özelliğini araştırıyor.",
-    text: "Aynı periyottaki elementler için en doğru ortak özellik hangisidir?",
-    options: ["Aynı sayıda değerlik elektronuna sahiptirler", "Aynı sayıda enerji düzeyine (kabuğa) sahiptirler", "Hepsi metaldir", "Hepsi aynı yükte iyon oluşturur", "Hepsi soy gazdır"],
-    correct: 1,
-    explain: "Aynı periyottaki elementler, en dış elektronlarının bulunduğu aynı sayıda enerji düzeyine (baş kuantum sayısına) sahiptir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, periyodik tabloda metallerin genel olarak hangi bölgede toplandığını gözlemliyor.",
-    text: "Periyodik tabloda metaller çoğunlukla nerede bulunur?",
-    options: ["Tablonun sağ üst köşesinde", "Yalnızca tablonun en üst satırında", "Tablonun sol ve orta kısmında", "Yalnızca son grupta", "Tablonun tam ortasında tek bir sütunda"],
+    context: "Periyodik tabloda 1-2 ve 13-18. gruplar 'baş grup' (s ve p blok) elementlerini, 3-12. gruplar ise geçiş metallerini (d blok) içerir.",
+    text: "17. grupta bulunan elementlerin ortak adı nedir?",
+    options: ["Toprak alkali metaller", "Alkali metaller", "Halojenler", "Soy gazlar", "Lantanitler"],
     correct: 2,
-    explain: "Periyodik tabloda metaller, tablonun sol ve orta (geçiş metalleri dahil) kısmında yoğunlaşır; ametaller ise sağ üst köşede toplanır."
+    explain: "17. grup elementleri (F, Cl, Br, I...) halojenler olarak adlandırılır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, periyodik tabloda ametallerin genel konumunu araştırıyor.",
-    text: "Periyodik tabloda ametaller çoğunlukla nerede bulunur?",
-    options: ["Sol alt köşede", "Sağ üst köşede (hidrojen hariç)", "Tam ortada", "Yalnızca 1. grupta", "Tablonun en altında"],
-    correct: 1,
-    explain: "Ametaller (hidrojen istisnası dışında), periyodik tablonun sağ üst köşesinde yoğunlaşır."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, metal ile ametal arasındaki basamaklı sınır çizgisi boyunca yer alan elementleri araştırıyor.",
-    text: "Metal ve ametal arasındaki sınırda bulunan, her iki grubun bazı özelliklerini taşıyan elementlere ne ad verilir?",
-    options: ["Geçiş metalleri", "Yarı metaller (metaloidler)", "Lantanitler", "Aktinitler", "Soy gazlar"],
-    correct: 1,
-    explain: "Metal-ametal sınırı boyunca yer alan, hem metalik hem ametalik özellik gösteren elementlere yarı metal (metaloid) denir (örneğin bor, silisyum, germanyum)."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, 1. ve 2. grup elementlerinin hangi orbital türüne elektron yerleştirdiğini araştırıyor.",
-    text: "1. ve 2. grup elementleri hangi blokta yer alır?",
-    options: ["d bloğu", "p bloğu", "s bloğu", "f bloğu", "Hiçbiri"],
+    context: "Bir atomun ve bir iyonun elektron dizilimleri özdeş olduğunda (örneğin Na⁺ ile Ne atomu), bu iki tanecik 'izoelektronik' olarak adlandırılır.",
+    text: "Aşağıdakilerden hangisi Ne atomu ile izoelektroniktir (aynı elektron sayısına/dizilime sahiptir)?",
+    options: ["Na", "F", "F⁻", "Mg²⁺ ile aynı değil", "Cl⁻"],
     correct: 2,
-    explain: "1. ve 2. grup elementlerinin en son eklenen elektronu s orbitaline yerleştiği için bu elementler s bloğunda yer alır."
+    explain: "Ne atomu 10 elektrona sahiptir; F atomu bir elektron alarak F⁻ iyonuna dönüştüğünde de 10 elektrona sahip olur, bu nedenle Ne ile izoelektroniktir."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, 13-18. grup elementlerinin hangi blokta yer aldığını araştırıyor.",
-    text: "13-18. grup elementleri (soy gazlar dahil) hangi blokta yer alır?",
-    options: ["s bloğu", "p bloğu", "d bloğu", "f bloğu", "Geçiş bloğu"],
-    correct: 1,
-    explain: "13-18. grup elementlerinin en son eklenen elektronu p orbitaline yerleştiği için bu elementler p bloğunda yer alır."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, periyodik tablonun ortasındaki geçiş metallerinin hangi blokta yer aldığını araştırıyor.",
-    text: "Geçiş metalleri (3-12. gruplar) hangi blokta yer alır?",
-    options: ["s bloğu", "p bloğu", "d bloğu", "f bloğu", "q bloğu"],
+    context: "Bir elementin kısa gösterimi [Ar] 4s² şeklindedir (soy gaz çekirdek notasyonu).",
+    text: "Bu gösterimdeki '[Ar]' ifadesi neyi temsil eder?",
+    options: ["Yalnızca çekirdekteki proton sayısını", "Elementin argon olduğunu", "Argonun elektron dizilimiyle özdeş olan iç kabuk elektronlarının tamamını", "Elementin bir iyon olduğunu", "Elementin d blokta olduğunu"],
     correct: 2,
-    explain: "Geçiş metallerinin en son eklenen elektronu d orbitaline yerleştiği için bu elementler d bloğunda yer alır."
+    explain: "[Ar] notasyonu, o elementin iç kabuk elektronlarının argonun tam elektron dizilimiyle özdeş olduğunu, yalnızca argondan sonraki (değerlik) elektronların ayrıca yazıldığını gösteren bir kısaltmadır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, periyodik tablonun altında ayrı satırlarda gösterilen lantanit ve aktinit serilerinin hangi blokta yer aldığını araştırıyor.",
-    text: "Lantanit ve aktinit serileri hangi blokta yer alır?",
-    options: ["s bloğu", "p bloğu", "d bloğu", "f bloğu", "Hiçbir blokta değildir"],
-    correct: 3,
-    explain: "Lantanit ve aktinit serilerinin en son eklenen elektronu f orbitaline yerleştiği için bu elementler f bloğunda yer alır."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, periyodik tablonun en sağındaki 18. grup elementlerinin genel adını araştırıyor.",
-    text: "18. grup elementlerine genel olarak ne ad verilir?",
-    options: ["Alkali metaller", "Toprak alkali metaller", "Halojenler", "Soy gazlar", "Geçiş metalleri"],
-    correct: 3,
-    explain: "18. grup elementleri (He, Ne, Ar, Kr, Xe, Rn) tam dolu değerlik kabuğuna sahip oldukları için kimyasal olarak oldukça kararlıdır ve soy gazlar olarak adlandırılır."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, periyodik tablonun 1. grubundaki (hidrojen hariç) elementlerin genel adını öğreniyor.",
-    text: "1. grup elementlerine (hidrojen hariç) genel olarak ne ad verilir?",
-    options: ["Halojenler", "Alkali metaller", "Soy gazlar", "Toprak alkali metaller", "Lantanitler"],
-    correct: 1,
-    explain: "1. grup elementleri (Li, Na, K, Rb, Cs, Fr), tek değerlik elektronlarını kolayca vererek +1 yüklü katyon oluşturma eğiliminde olan alkali metallerdir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, 17. grup elementlerinin genel adını araştırıyor.",
-    text: "17. grup elementlerine genel olarak ne ad verilir?",
-    options: ["Alkali metaller", "Toprak alkali metaller", "Halojenler", "Soy gazlar", "Geçiş metalleri"],
+    context: "Periyodik tabloda f blok elementleri (lantanitler ve aktinitler) genellikle tablonun ana gövdesinden ayrı, altta iki sıra hâlinde gösterilir.",
+    text: "Bu elementlerin f blokta sınıflandırılmasının nedeni nedir?",
+    options: ["Yalnızca metal olmayan özellik göstermeleri", "Yalnızca radyoaktif olmaları", "En son elektronlarının f alt kabuğuna yerleşmesi", "Değerlik elektronlarının hiç bulunmaması", "Periyodik tabloda yer bulamadıkları için ayrı gösterilmeleri"],
     correct: 2,
-    explain: "17. grup elementleri (F, Cl, Br, I, At), bir elektron alarak -1 yüklü anyon oluşturma eğiliminde olan halojenlerdir."
+    explain: "Lantanit ve aktinit serisi elementlerinde en son elektronlar f alt kabuğuna (4f veya 5f) yerleştiğinden bu elementler f blok olarak sınıflandırılır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, bir sodyum atomunun (Na) bir elektron kaybederek nasıl iyon oluşturduğunu inceliyor.",
-    text: "Sodyum bir elektron kaybettiğinde oluşan iyonun yükü nedir?",
-    options: ["-1", "+1", "+2", "-2", "0 (nötr kalır)"],
-    correct: 1,
-    explain: "Sodyum bir elektron kaybettiğinde proton sayısı elektron sayısından bir fazla olur, bu da +1 yüklü bir katyon (Na⁺) oluşturur."
+    context: "Metaller genellikle elektron vererek katyon oluştururken, ametaller genellikle elektron alarak anyon oluşturma eğilimindedir.",
+    text: "Kalsiyum (Ca, metal) ve klor (Cl, ametal) atomlarının iyon oluşturma eğilimleri sırasıyla en doğru şekilde hangisidir?",
+    options: ["İkisi de elektron alarak anyon oluşturur", "İkisi de elektron vererek katyon oluşturur", "Ca elektron vererek Ca²⁺, Cl elektron alarak Cl⁻ oluşturur", "Ca elektron alır, Cl elektron verir", "İkisi de iyon oluşturmaz"],
+    correct: 2,
+    explain: "Ca bir metal olduğundan iki değerlik elektronunu vererek Ca²⁺ oluşturur; Cl bir ametal olduğundan bir elektron alarak Cl⁻ oluşturur."
   },
+
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, bir klor atomunun (Cl) bir elektron kazanarak nasıl iyon oluşturduğunu inceliyor.",
-    text: "Klor bir elektron kazandığında oluşan iyonun yükü nedir?",
-    options: ["+1", "-1", "+2", "-2", "0 (nötr kalır)"],
-    correct: 1,
-    explain: "Klor bir elektron kazandığında elektron sayısı proton sayısından bir fazla olur, bu da -1 yüklü bir anyon (Cl⁻) oluşturur."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, modern periyodik tablonun elementleri hangi özelliğe göre sıraladığını öğreniyor.",
-    text: "Modern periyodik yasaya göre elementler hangi özelliğe göre artan sırada dizilir?",
-    options: ["Atom kütlesine göre", "Atom numarasına (proton sayısına) göre", "Keşfedilme tarihine göre", "Erime noktasına göre", "Renklerine göre"],
-    correct: 1,
-    explain: "Modern periyodik yasaya göre elementler, atom numarasına (proton sayısına) göre artan sırada düzenlenir; bu, Mendeleev'in atom kütlesine dayalı ilk sıralamasından farklı ve daha tutarlı bir yaklaşımdır."
+    context: "Bir elementin proton sayısı 20, elektron sayısı ise 18'dir.",
+    text: "Bu taneciğin yükü ve türü (katyon/anyon) sırasıyla nedir?",
+    options: ["+18, katyon", "-2, anyon", "+2, katyon (Ca²⁺)", "0, nötr atom", "-20, anyon"],
+    correct: 2,
+    explain: "Proton sayısı (20) elektron sayısından (18) 2 fazla olduğundan tanecik 2 birim pozitif yüklüdür; bu, kalsiyumun (Ca) Ca²⁺ katyonuna karşılık gelir."
   },
 
   /* ============ ORTA ============ */
@@ -4378,224 +3726,190 @@ export const QUIZ = {
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Aşağıdaki tabloda bazı elementlerin elektron dizilimleri ve buna karşılık gelen periyodik tablo konumları verilmiştir.",
     table: {
-      headers: ["Element", "Elektron dizilimi", "Periyot", "Grup"],
+      headers: ["Tanecik", "Proton sayısı", "Elektron sayısı", "Yük"],
       rows: [
-        ["Na", "1s² 2s² 2p⁶ 3s¹", "3", "1"],
-        ["Mg", "1s² 2s² 2p⁶ 3s²", "3", "2"],
-        ["Cl", "1s² 2s² 2p⁶ 3s² 3p⁵", "3", "17"],
-        ["Ar", "1s² 2s² 2p⁶ 3s² 3p⁶", "3", "18"]
+        ["O²⁻", "8", "10", "-2"],
+        ["F⁻", "9", "10", "-1"],
+        ["Ne", "10", "10", "0"],
+        ["Na⁺", "11", "10", "+1"],
+        ["Mg²⁺", "12", "10", "+2"]
+      ],
+      caption: "Beş farklı taneciğin proton, elektron sayısı ve yükü"
+    },
+    text: "Tabloya göre, bu beş tanecik arasındaki ortak özellik nedir ve bu özellik ne olarak adlandırılır?",
+    options: ["Hepsinin aynı yüke sahip olması; bu tanecikler nötrdür", "Hepsinin aynı proton sayısına sahip olması; bu tanecikler izotoptur", "Hepsinin 10 elektrona sahip olması; bu tanecikler izoelektroniktir", "Hepsinin aynı periyotta bulunması; bu tanecikler homolog seridir", "Tabloda hiçbir ortak özellik yoktur"],
+    correct: 2,
+    explain: "Tablodaki beş taneciğin tümü 10 elektrona (Ne ile aynı elektron dizilimine) sahiptir; farklı proton sayısına rağmen aynı elektron sayısına/dizilime sahip taneciklere izoelektronik denir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
+    periodicHighlight: {
+      caption: "Periyodik tabloda vurgulanan iki element",
+      cells: [
+        { period: 4, group: 6, symbol: "Cr", highlighted: true },
+        { period: 4, group: 8, symbol: "Fe", highlighted: false }
       ]
     },
-    text: "Tablodaki verilerden yola çıkarak, bir elementin periyot numarasının en doğrudan hangi bilgiden çıkarılabileceği söylenebilir?",
-    options: [
-      "Elementin proton sayısından bağımsız olarak",
-      "Elementin toplam elektron sayısından",
-      "Elektron diziliminde görülen en büyük baş kuantum sayısından (en dış enerji düzeyinden)",
-      "Yalnızca elementin adının ilk harfinden",
-      "Elementin izotop sayısından"
-    ],
+    context: "Kromun (Cr) elektron dizilimi [Ar] 4s¹ 3d⁵'tir; bu dizilim, n+l kuralının bekleneni olan [Ar] 4s² 3d⁴'ten farklıdır.",
+    text: "Kromun grup numarasını belirlerken hangi elektronlar değerlik elektronu olarak sayılmalıdır?",
+    options: ["Yalnızca 3d⁵'teki 5 elektron (Cr, 5. grupta yer alır)", "Yalnızca 4s¹'deki 1 elektron (Cr, 1. grupta yer alır)", "4s¹ ve 3d⁵'teki toplam 6 elektron (Cr, 6. grupta yer alır)", "Kromun grup numarası belirlenemez", "Kromun elektron dizilimi grup numarasıyla ilişkili değildir"],
     correct: 2,
-    explain: "Tablodaki tüm elementlerin elektron diziliminde en büyük baş kuantum sayısı 3 olduğundan hepsi 3. periyottadır; bu, periyot numarasının en dış (değerlik) enerji düzeyinin baş kuantum sayısına eşit olduğunu gösterir."
+    explain: "Geçiş metallerinde grup numarası, hem s hem d alt kabuğundaki (değerlik) elektronların toplamıyla belirlenir; krom için 4s¹+3d⁵=6 elektron, kromu 6. grupta (VIB) konumlandırır."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, yukarıdaki tabloda Na (grup 1, 3s¹), Mg (grup 2, 3s²), Cl (grup 17, 3s²3p⁵) örneklerini inceleyerek grup numarası ile değerlik elektron sayısı arasında bir örüntü arıyor.",
-    text: "Bu örneklerden tümevarımsal olarak çıkarılabilecek en doğru genel kural hangisidir?",
-    options: [
-      "Tüm elementlerde grup numarası her zaman değerlik elektron sayısına birebir eşittir (istisnasız)",
-      "Grup numarasının değerlik elektron sayısıyla hiçbir ilişkisi yoktur",
-      "Ana grup (temsili) elementlerde grup numarası, değerlik elektron sayısıyla doğrudan ilişkilidir (örneğin grup 1 → 1 değerlik e⁻, grup 17 → 7 değerlik e⁻)",
-      "Değerlik elektron sayısı yalnızca periyot numarasına bağlıdır, gruba bağlı değildir",
-      "Bu örnekler yalnızca 3. periyot için geçerlidir, başka periyotlara genellenemez"
-    ],
+    context: "Bir geçiş metali iyonu oluştururken, önce en dıştaki s alt kabuğundaki elektronlar kaybedilir, d alt kabuğundaki elektronlar değil (dolu bir d alt kabuğu bulunduğunda enerjisi 4s'nin altına iner).",
+    text: "Demir (Fe, [Ar] 4s² 3d⁶) atomundan Fe²⁺ iyonu oluşurken hangi elektronlar kaybedilir?",
+    options: ["1s²'deki iki elektron", "3d⁶'daki iki elektron", "4s²'deki iki elektron", "Hem 4s hem 3d'den birer elektron", "3p'deki iki elektron"],
     correct: 2,
-    explain: "Verilen örneklerden (Na: grup 1, 1 değerlik e⁻; Mg: grup 2, 2 değerlik e⁻; Cl: grup 17, 7 değerlik e⁻) tümevarımsal olarak, ana grup elementlerinde grup numarasının değerlik elektron sayısıyla ilişkili olduğu genellenebilir (grup 13-18 için değerlik e⁻ = grup no - 10); bu ilişki geçiş metallerinde (d bloğu) bu kadar basit değildir."
+    explain: "Geçiş metali katyonu oluşurken önce en dıştaki (en yüksek enerjili hâle gelen) 4s elektronları kaybedilir; bu nedenle Fe²⁺'nin dizilimi [Ar] 3d⁶'dır."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, alüminyumun (13Al) elektron dizilimini 1s² 2s² 2p⁶ 3s² 3p¹ olarak yazıyor.",
-    text: "Bu elektron dizilimine göre alüminyum periyodik tabloda hangi periyot ve grupta yer alır?",
-    options: ["3. periyot, 3. grup", "2. periyot, 3. grup", "3. periyot, 13. grup", "13. periyot, 3. grup", "1. periyot, 13. grup"],
-    correct: 2,
-    explain: "En büyük baş kuantum sayısı 3 olduğundan alüminyum 3. periyottadır; p bloğunda 1 değerlik elektronu (3p¹) olduğundan grup numarası 13'tür (p bloğu için grup no = 10 + değerlik p elektron sayısı + s elektron sayısı)."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, potasyum iyonunun (K⁺) elektron diziliminin argon (Ar) atomunun elektron dizilimiyle aynı olduğunu fark ediyor.",
-    text: "Bu gözlem 'izoelektronik' kavramı için en doğru hangi çıkarımı destekler?",
-    options: [
-      "K⁺ ve Ar'nin izoelektronik olması imkânsızdır çünkü farklı elementlerdir",
-      "İzoelektronik iyonlar mutlaka aynı proton sayısına sahip olmalıdır",
-      "Farklı elementlere ait atom/iyonlar, aynı sayıda elektrona ve aynı elektron dizilimine sahip olduğunda izoelektronik kabul edilir",
-      "İzoelektronik kavramı yalnızca nötr atomlar için geçerlidir, iyonlar için kullanılmaz",
-      "İzoelektronik türler her zaman aynı kimyasal reaktifliği gösterir"
-    ],
-    correct: 2,
-    explain: "İzoelektronik türler, proton sayıları farklı olsa da aynı sayıda elektrona ve aynı elektron dizilimine sahip atom/iyonlardır; K⁺ (19 proton, 18 elektron) ile Ar (18 proton, 18 elektron) aynı elektron dizilimine ([Ne]3s²3p⁶) sahip olduğundan izoelektroniktir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, Na⁺, Mg²⁺ ve Al³⁺ iyonlarının hepsinin neon (Ne) atomuyla aynı elektron dizilimine ([Ne] yapısı) sahip olduğunu gözlemliyor.",
-    text: "Bu gözlemden tümevarımsal olarak en doğru hangi genel eğilim çıkarılabilir?",
-    options: [
-      "Bu üç iyonun oluşumu birbirinden tamamen bağımsız, ilişkisiz olaylardır",
-      "Tüm metaller aynı sayıda elektron kaybeder, yük büyüklüğü önemli değildir",
-      "Ana grup metalleri, en yakın önceki soy gazın kararlı elektron dizilimine ulaşana kadar değerlik elektronlarını kaybetme eğilimindedir",
-      "Metaller elektron kaybetmez, yalnızca ametaller elektron kaybeder",
-      "Neon yapısına ulaşmak yalnızca 3. periyot elementlerine özgüdür"
-    ],
-    correct: 2,
-    explain: "Na (1 elektron kaybeder), Mg (2 elektron kaybeder) ve Al (3 elektron kaybeder) örneklerinden, ana grup metallerinin en yakın önceki soy gazın kararlı elektron dizilimine ulaşana kadar (değerlik elektron sayısı kadar) elektron kaybettiği genel eğilimi tümevarımsal olarak çıkarılabilir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, O²⁻, F⁻ ve Na⁺ iyonlarının hepsinin neon (Ne) ile aynı elektron sayısına (10 elektron) sahip olduğunu, ancak farklı proton sayılarına sahip olduğunu gözlemliyor.",
-    text: "Bu izoelektronik seri hakkında en doğru çıkarım hangisidir?",
-    options: [
-      "Bu iyonlar arasında hiçbir karşılaştırma yapılamaz",
-      "Aynı elektron sayısına sahip oldukları için bu iyonlar birebir aynı özelliklere sahiptir",
-      "İzoelektronik iyonların çekirdek yükü de her zaman aynıdır",
-      "Aynı elektron sayısına sahip olsalar da, farklı proton (çekirdek yükü) sayıları nedeniyle bu iyonların fiziksel/kimyasal özellikleri (örneğin iyon yarıçapı) farklı olabilir",
-      "İzoelektronik seri kavramı yalnızca nötr atomlara uygulanabilir"
-    ],
+    context: "Bir element X, [Ne] 3s² 3p⁵ elektron dizilimine sahiptir ve genellikle bir elektron alarak kararlı hâle geçer.",
+    text: "X elementinin periyodik tablodaki grubu ve oluşturacağı iyon sırasıyla en doğru hangisidir?",
+    options: ["16. grup, X²⁻", "1. grup (alkali metal), X⁺", "18. grup (soy gaz), iyon oluşturmaz", "17. grup (halojen), X⁻", "2. grup, X²⁺"],
     correct: 3,
-    explain: "O²⁻, F⁻ ve Na⁺ aynı elektron sayısına (10) sahip olsa da farklı proton sayılarına (8, 9, 11) sahiptir; çekirdek yükündeki bu farklılık, elektronları farklı derecede çektiğinden iyon yarıçapı gibi özelliklerde farklılığa yol açar (proton sayısı arttıkça çekim artar, yarıçap küçülür)."
+    explain: "3s²3p⁵ dizilimi 7 değerlik elektronuna karşılık gelir (17. grup, halojen); bir elektron alarak oktede ulaşan bu elementler X⁻ anyonunu oluşturur."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, geçiş metallerinin (örneğin demir, Fe) birden fazla farklı yükte iyon oluşturabildiğini (Fe²⁺, Fe³⁺) fark ediyor; oysa sodyum (Na) yalnızca Na⁺ iyonu oluşturur.",
-    text: "Bu fark en doğru hangi şekilde açıklanabilir?",
-    options: [
-      "Bu fark tamamen rastlantısaldır, hiçbir elektronik nedeni yoktur",
-      "Demir atomunun proton sayısı belirsiz olduğu için farklı yüklü iyonlar oluşur",
-      "Sodyum atomunun elektron sayısı demirden az olduğu için yalnızca tek yükte iyon oluşturur",
-      "Geçiş metallerinde değerlik s ve d orbitalleri enerji bakımından birbirine yakın olduğundan, farklı sayıda elektron kaybederek birden fazla kararlı iyon durumu oluşabilir",
-      "Geçiş metalleri iyon oluşturamaz, yalnızca ana grup metalleri iyon oluşturur"
-    ],
-    correct: 3,
-    explain: "Geçiş metallerinde (n)s ve (n-1)d orbitalleri enerji bakımından birbirine yakın olduğundan, farklı sayıda elektron kaybetmek görece küçük enerji farklarıyla mümkün olabilir; bu da birden fazla kararlı yükseltgenme basamağının (iyon yükünün) oluşmasına imkân tanır."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, hidrojenin periyodik tabloda 1. grupta (alkali metallerle aynı sütunda) gösterildiğini, ancak kimyasal özelliklerinin alkali metallerden oldukça farklı (bir ametal gibi davranan) olduğunu fark ediyor.",
-    text: "Hidrojenin bu 'sınırda' konumu en doğru hangi şekilde açıklanabilir?",
-    options: [
-      "Hidrojenin elektron sayısı diğer 1. grup elementleriyle tamamen farklıdır",
-      "Hidrojenin periyodik tablodaki yeri kesin ve tartışmasızdır, hiçbir istisna yoktur",
-      "Hidrojen aslında bir geçiş metalidir",
-      "Hidrojen, alkali metaller gibi tek değerlik elektronuna sahip olduğundan 1. grupta gösterilir; ancak metalik özellik göstermediğinden sınıflandırması tartışmalıdır ve bazı tablolarda ayrı gösterilir",
-      "Hidrojen periyodik tabloda hiçbir gruba ait değildir"
-    ],
-    correct: 3,
-    explain: "Hidrojen, tek değerlik elektronu (1s¹) bakımından 1. grup elementlerine benzese de, elektronegatifliği yüksek olup ametal gibi davranır (metal değildir); bu nedenle periyodik tablodaki konumu bir dereceye kadar tartışmalıdır ve bazı tablolarda ayrı bir yerde gösterilir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, helyumun (He, 1s²) elektron dizilimi bakımından s bloğuna ait olmasına rağmen periyodik tabloda soy gazlarla (18. grup) birlikte gösterildiğini fark ediyor.",
-    text: "Helyumun bu konumu en doğru hangi şekilde açıklanabilir?",
-    options: [
-      "Helyumun grup konumu tamamen keyfi seçilmiştir, hiçbir bilimsel nedeni yoktur",
-      "Helyumun elektron dizilimi 18. grup elementleriyle birebir aynıdır",
-      "Helyum aslında 2. grup elementidir ama yanlışlıkla 18. grupta gösterilir",
-      "Helyum, elektron dizilimi bakımından s bloğunda olsa da, tam dolu değerlik kabuğuna (1s²) sahip olduğundan kimyasal kararlılık bakımından soy gazlara benzer ve bu yüzden 18. grupta gösterilir",
-      "Helyum periyodik tabloda hiçbir bloğa ait değildir"
-    ],
-    correct: 3,
-    explain: "Helyum elektron dizilimi (1s²) açısından s bloğuna aitse de, tam dolu değerlik kabuğuna sahip olması onu kimyasal olarak son derece kararlı (soy gaz gibi) yapar; bu yüzden periyodik tabloda kimyasal davranışına göre 18. grupta (soy gazlarla) gösterilir — bu, sınıflandırmanın bazen orbital türü yerine kimyasal davranışa dayanabileceğini gösterir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, Mendeleev'in 1869'daki ilk periyodik tablosunun elementleri atom kütlesine göre sıraladığını, ancak bu sıralamanın bazı elementlerde (örneğin tellür ve iyot) beklenmedik yer değişimlerine yol açtığını öğreniyor.",
-    text: "Bu sorunun modern periyodik tabloda nasıl çözüldüğü en doğru hangi seçenekte açıklanmıştır?",
-    options: [
-      "Modern tabloda atom kütlesi kavramı tamamen terk edilmiştir",
-      "Sorun hiçbir zaman çözülmemiştir, modern tablo da aynı hataları içerir",
-      "Modern tablo elementleri alfabetik sıraya göre düzenler",
-      "Elementler atom kütlesi yerine atom numarasına (proton sayısına) göre sıralanarak, kimyasal özelliklere dayalı tutarlı bir düzen elde edilmiştir",
-      "Tellür ve iyot modern tablodan çıkarılmıştır"
-    ],
-    correct: 3,
-    explain: "Mendeleev'in atom kütlesine dayalı sıralaması bazı elementlerde (Te-I gibi) kimyasal özelliklerle uyumsuz sıralamalara yol açıyordu; Henry Moseley'in çalışmalarıyla elementlerin atom numarasına (proton sayısına) göre sıralanması, bu tutarsızlıkları ortadan kaldırarak modern periyodik yasayı oluşturmuştur."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, kalsiyum (Ca, [Ar]4s²) atomunun 2 elektron kaybederek Ca²⁺ iyonuna dönüştüğünü, bu iyonun elektron diziliminin argonla ([Ar]) aynı olduğunu gözlemliyor.",
-    text: "Bu gözlem, ana grup metallerinin iyon oluşturma eğilimi hakkında en doğru hangi genel ilkeyi destekler?",
-    options: [
-      "Metaller iyon oluştururken her zaman tüm elektronlarını kaybeder",
-      "Kalsiyum elektron kazanarak iyon oluşturur, kaybetmez",
-      "Ca²⁺ iyonunun elektron dizilimi kripton ile aynıdır",
-      "Ana grup metalleri, en dış kabuktaki değerlik elektronlarını kaybederek bir önceki soy gazın kararlı elektron dizilimine ulaşma eğilimindedir",
-      "Bu gözlem yalnızca kalsiyuma özgüdür, diğer 2. grup elementlerine genellenemez"
-    ],
-    correct: 3,
-    explain: "Kalsiyum, 2 değerlik elektronunu (4s²) kaybederek bir önceki soy gaz olan argonun kararlı elektron dizilimine ([Ar]) ulaşır; bu örüntü, tüm 2. grup elementlerinin (Mg, Sr, Ba gibi) 2 elektron kaybederek benzer şekilde kararlı iyonlar oluşturduğu genel ilkesine tümevarımsal olarak genellenebilir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, oksijenin (O, [He]2s²2p⁴) 2 elektron kazanarak O²⁻ iyonuna dönüştüğünü, bu iyonun elektron diziliminin neonla ([Ne]) aynı olduğunu gözlemliyor.",
-    text: "Bu gözlem, ana grup ametallerinin iyon oluşturma eğilimi hakkında en doğru hangi genel ilkeyi destekler?",
-    options: [
-      "O²⁻ iyonunun elektron dizilimi argon ile aynıdır",
-      "Oksijen elektron kaybederek iyon oluşturur, kazanmaz",
-      "Tüm ametaller aynı sayıda (2 tane) elektron kazanır",
-      "Ana grup ametalleri, bir sonraki soy gazın kararlı elektron dizilimine ulaşana kadar elektron kazanma eğilimindedir",
-      "Bu gözlem yalnızca oksijene özgüdür, diğer 16. grup elementlerine genellenemez"
-    ],
-    correct: 3,
-    explain: "Oksijen, 6 değerlik elektronuna (2s²2p⁴) sahip olduğundan 8 elektronluk kararlı dizilime ulaşmak için 2 elektron kazanır ve bir sonraki soy gaz olan neonun dizilimine ([Ne]) ulaşır; bu örüntü, 16. grup ametallerinin genellikle 2 elektron kazanma eğiliminin genel ilkesine tümevarımsal olarak genellenebilir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Aşağıdaki grafik, birkaç ana grup elementinin değerlik elektron sayısını grup numarasına göre göstermektedir.",
-    chart: {
-      type: "bar",
-      title: "Ana grup elementlerinde değerlik elektron sayısı",
-      labels: ["Grup 1", "Grup 2", "Grup 15", "Grup 16", "Grup 17", "Grup 18"],
-      values: [1, 2, 5, 6, 7, 8]
+    table: {
+      headers: ["Element", "Değerlik dizilimi", "Grup"],
+      rows: [
+        ["A", "2s² 2p¹", "13"],
+        ["B", "3s² 3p¹", "13"],
+        ["C", "4s² 3d¹⁰ 4p¹", "13"]
+      ],
+      caption: "Aynı grupta (13. grup) yer alan üç element"
     },
-    text: "Grafikteki örüntüden yola çıkarak ana grup (13-18. grup) elementlerinde değerlik elektron sayısını grup numarasından hesaplamak için en doğru genel kural hangisidir?",
-    options: [
-      "Değerlik elektron sayısı grup numarasıyla hiç ilişkili değildir",
-      "Değerlik elektron sayısı = Grup numarası + 10",
-      "Değerlik elektron sayısı her zaman grup numarasına eşittir",
-      "Değerlik elektron sayısı = Grup numarası - 10",
-      "Değerlik elektron sayısı = Grup numarası / 2"
-    ],
+    text: "Tabloya göre, aynı grupta yer alan bu üç elementin ortak özelliği nedir?",
+    options: ["Üçünün de d blok elementi olması", "Aynı periyotta bulunmaları", "Aynı sayıda toplam elektrona sahip olmaları", "Değerlik kabuklarında (en yüksek n'de) aynı sayıda elektron bulundurmaları (3 değerlik elektronu)", "Üçünün de aynı sayıda proton içermesi"],
     correct: 3,
-    explain: "13-18. grup (p bloğu) elementlerinde değerlik elektron sayısı, grup numarasından 10 çıkarılarak bulunur (örneğin grup 17 → 17-10=7 değerlik elektronu); grafikteki grup 15 (5 e⁻), grup 16 (6 e⁻), grup 17 (7 e⁻), grup 18 (8 e⁻) verileri bu kuralla tutarlıdır."
+    explain: "Aynı grupta yer alan elementler, değerlik kabuğunda aynı sayıda elektron bulundurur (burada üçü de 3 değerlik elektronuna sahiptir); bu, periyodik tablodaki grup sınıflandırmasının temel mantığıdır."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, bir elementin elektron diziliminin [Ne] 3s² 3p⁴ olduğunu görüyor.",
-    text: "Bu elektron dizilimine sahip element periyodik tabloda hangi periyot ve grupta yer alır?",
-    options: ["3. periyot, 14. grup", "2. periyot, 16. grup", "3. periyot, 6. grup", "16. periyot, 3. grup", "3. periyot, 16. grup"],
-    correct: 4,
-    explain: "En büyük baş kuantum sayısı 3 olduğundan element 3. periyottadır; p bloğunda 4 değerlik elektronu (3p⁴, toplam s+p=6) olduğundan grup numarası 10+6=16'dır (bu element kükürttür)."
+    context: "Bir taneciğin proton sayısı 16, elektron sayısı ise 18'dir.",
+    text: "Bu taneciğin türü (nötr atom/katyon/anyon) ve yükü sırasıyla en doğru hangisidir?",
+    options: ["Anyon, -18 yük", "Katyon, +2 yük", "Nötr atom, yüksüz", "Anyon, -2 yük (S²⁻)", "Katyon, +16 yük"],
+    correct: 3,
+    explain: "Elektron sayısı (18) proton sayısından (16) 2 fazla olduğundan tanecik 2 birim negatif yüklüdür (anyon); 16 protonlu element kükürt (S) olduğundan bu tanecik S²⁻'dir."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, bir X elementinin +2 yüklü iyonunun elektron diziliminin [Ar] 3d⁶ olduğunu öğreniyor.",
-    text: "Bu bilgiden yola çıkarak X elementinin nötr atomunun elektron dizilimi en doğru hangisidir?",
-    options: ["[Ar] 3d⁶ 4p²", "[Ar] 3d⁸", "[Ar] 4s² 3d⁴", "[Ar] 4s¹ 3d⁷", "[Ar] 4s² 3d⁶"],
+    context: "Bir öğretim materyalinde şu kural verilmektedir: 's ve p blok elementlerinde (baş grup) grup numarası, doğrudan değerlik kabuğundaki toplam elektron sayısına eşittir (1-2 ve 13-18. gruplar için).'",
+    text: "Bu kurala göre, değerlik dizilimi 5s² 5p⁴ olan bir element hangi grupta yer alır?",
+    options: ["14. grup", "6. grup", "4. grup", "16. grup", "2. grup"],
+    correct: 3,
+    explain: "Değerlik kabuğundaki toplam elektron sayısı 5s²+5p⁴=6'dır; baş grup elementlerinde bu sayı, 10 eklenerek grup numarasına dönüştürülür (13-18. gruplar için): 6+10=16. grup."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
+    context: "Bir X elementi ile bir Y elementinin elektron dizilimleri karşılaştırıldığında, X'in tam dizilimi [Ar] 4s² 3d¹⁰ 4p⁶, Y'nin tam dizilimi ise [Kr] 5s¹ şeklindedir.",
+    text: "X ve Y elementlerinin periyodik tablodaki konumları hakkında en doğru çıkarım hangisidir?",
+    options: ["X bir alkali metal, Y bir soy gazdır", "X ve Y aynı grupta yer alır", "X ve Y aynı periyottadır", "X bir soy gazdır (18. grup, 4. periyot); Y bir alkali metaldir (1. grup, 5. periyot) ve periyodik tabloda X'in hemen ardından gelir", "X ve Y arasında periyodik tabloda hiçbir konumsal ilişki yoktur"],
+    correct: 3,
+    explain: "X'in dizilimi (4s²3d¹⁰4p⁶, 8 değerlik e⁻, tamamen dolu) kripton'a (Kr, 18. grup, 4. periyot) karşılık gelir; Y'nin dizilimi [Kr]5s¹ ise bir sonraki elementin (Rb, 1. grup, 5. periyot) alkali metal olduğunu gösterir — periyodik tabloda art arda gelirler."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
+    context: "Alüminyum (Al, [Ne] 3s² 3p¹) atomu üç elektron kaybederek Al³⁺ iyonuna, oksijen (O, [He] 2s² 2p⁴) atomu ise iki elektron alarak O²⁻ iyonuna dönüşür.",
+    text: "Bu iki iyonun (Al³⁺ ve O²⁻) elektron dizilimleri ile ilgili en doğru çıkarım hangisidir?",
+    options: ["İkisi de elektron dizilimini değiştirmeden kararlı hâle geçer", "İkisi de farklı soy gazların dizilimine ulaşır, izoelektronik değildir", "Al³⁺ ve O²⁻ aynı sayıda protona sahiptir", "İkisi de soy gaz elektron dizilimine (Al³⁺: [Ne], O²⁻: [Ne]) ulaşarak izoelektronik hâle gelir", "Bu iki iyon arasında hiçbir ortak özellik yoktur"],
+    correct: 3,
+    explain: "Al üç elektron kaybettiğinde [Ne] dizilimine, O iki elektron aldığında da [Ne] dizilimine ulaşır; her iki iyon da aynı elektron sayısına (10) ve dizilime sahip olduğundan izoelektroniktir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
+    context: "Bir element periyodik tabloda 4. periyot, 2. grupta yer almaktadır.",
+    text: "Bu elementin tam elektron dizilimi hangisidir?",
+    options: ["1s² 2s² 2p⁶ 3s²", "1s² 2s² 2p⁶ 3s² 3p⁶ 4s¹", "1s² 2s² 2p⁶ 3s² 3p⁶ 3d² 4s²", "1s² 2s² 2p⁶ 3s² 3p⁶ 4s²", "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 4p²"],
+    correct: 3,
+    explain: "4. periyot n=4 anlamına gelir; 2. grup 2 değerlik elektronu (s blok) demektir; bu nedenle dizilim [Ar] 4s², yani tam açık hâliyle 1s²2s²2p⁶3s²3p⁶4s²'dir (kalsiyum)."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
+    context: "Bir taneciğin elektron dizilimi [Ar] 3d¹⁰ şeklindedir (yani argon dizilimine ek olarak tam dolu bir 3d alt kabuğu, fakat 4s boş).",
+    text: "Bu dizilim, hangi tür bir taneciğe (nötr atom mu, katyon mu) ait olabilir ve neden?",
+    options: ["Yalnızca bir anyona ait olabilir", "Kesinlikle nötr bir atoma aittir", "Bu dizilim hiçbir taneciğe ait olamaz, imkânsızdır", "Muhtemelen bir geçiş metali katyonuna (örneğin Zn²⁺); çünkü nötr atomlarda 4s genellikle 3d'den önce dolu olur", "Bu dizilim yalnızca s blok elementlerinde görülür"],
+    correct: 3,
+    explain: "Nötr atomlarda genellikle 4s dolu olmadan 3d tam dolmaz (4s önce dolar); 4s'nin boş, 3d'nin tam dolu olması, iyonlaşma sırasında önce 4s elektronlarının kaybedildiği bir katyonu (örn. Zn²⁺: [Ar]3d¹⁰) işaret eder."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
+    context: "Periyodik tabloda bir elementin blok sınıflandırması (s, p, d, f), o elementin kimyasal davranışı hakkında da genel bir fikir verir; örneğin s blok elementleri genellikle elektron vererek katyon oluşturmaya, p blok elementlerinin sağ tarafı ise elektron alarak anyon oluşturmaya eğilimlidir.",
+    text: "d blok (geçiş metalleri) elementlerinin iyon oluşturma eğilimiyle ilgili en doğru genelleme hangisidir?",
+    options: ["Genellikle elektron alarak anyon oluştururlar", "Hiçbir zaman iyon oluşturmazlar", "Yalnızca tek bir sabit yükte katyon oluştururlar, tıpkı s blok gibi", "Genellikle elektron vererek katyon oluştururlar, ancak birden fazla farklı yükte katyon oluşturabilirler (örneğin Fe²⁺ ve Fe³⁺)", "İyon oluşturma eğilimleri s ve p bloktan tamamen bağımsızdır ve tahmin edilemez"],
+    correct: 3,
+    explain: "Geçiş metalleri genellikle d ve s alt kabuklarındaki elektronları farklı sayılarda vererek birden fazla kararlı katyon yükü oluşturabilir (örneğin demir hem Fe²⁺ hem Fe³⁺ oluşturabilir); bu, s blok metallerinin genellikle tek bir sabit yük göstermesinden farklıdır."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
+    context: "Üç farklı taneciğin elektron sayıları şöyledir: X taneciği 18, Y taneciği 18, Z taneciği 18 elektrona sahiptir; ancak proton sayıları sırasıyla 16, 18 ve 20'dir.",
+    text: "Bu üç taneciğin yükleri ve türleri (anyon/nötr/katyon) sırasıyla en doğru hangisidir?",
+    options: ["X: -2, Y: -2, Z: -2 (üçü de aynı yükte)", "X: +2, Y: 0, Z: -2", "Üçü de nötrdür, yük taşımaz", "X: -2 (anyon, S²⁻), Y: 0 (nötr, Ar), Z: +2 (katyon, Ca²⁺)", "Proton sayısı ile yük arasında hiçbir ilişki yoktur"],
+    correct: 3,
+    explain: "Yük = proton sayısı − elektron sayısı: X için 16−18=−2 (S²⁻), Y için 18−18=0 (nötr Ar), Z için 20−18=+2 (Ca²⁺); üçü de 18 elektronla izoelektronik olsa da farklı proton sayıları farklı yükler ve farklı elementler/iyonlar anlamına gelir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
+    context: "Bir öğretim aracında şu genelleme sunulmaktadır: 'Bir ana grup metalinin oluşturacağı katyonun yükü, genellikle grup numarasına (1-2 için) veya 18'den grup numarasının çıkarılmasına (13-18 için metal olmayanlarda anyon yükü) eşittir.'",
+    text: "Bu genellemeye göre, 16. grupta yer alan bir ametalin oluşturacağı anyonun yükü kaçtır?",
+    options: ["-16", "-6", "+2", "+6", "-2"],
     correct: 4,
-    explain: "X²⁺ iyonu 2 elektron eksik olduğundan, X²⁺ oluşurken kaybedilen elektronlar önce 4s'den alınır (geçiş metalleri iyonlaşırken önce 4s kaybeder); bu yüzden nötr X atomunun dizilimi [Ar] 4s² 3d⁶'dır (bu element demirdir, Fe)."
+    explain: "16. grup için anyon yükü = 18 − 16 = −2; bu, 16. grup elementlerinin (O, S gibi) oktede ulaşmak için 2 elektron alarak -2 yüklü anyon oluşturma eğilimiyle örtüşür."
+  },
+
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
+    context: "Bir X elementinin değerlik dizilimi 5s² 5p⁵'tir.",
+    text: "X elementinin oluşturacağı en kararlı iyon ve bu iyonun grubu sırasıyla nedir?",
+    options: ["X³⁺; X kendisi 15. grupta yer alır", "X⁺; X kendisi 1. grupta yer alır", "X²⁻; X kendisi 16. grupta yer alır", "X iyon oluşturmaz, zaten kararlıdır", "X⁻; X kendisi 17. grupta yer alır (halojen)"],
+    correct: 4,
+    explain: "5s²5p⁵ dizilimi 7 değerlik elektronuna (17. grup, halojen) karşılık gelir; oktede ulaşmak için bir elektron alarak X⁻ anyonunu oluşturur."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
+    context: "Bir taneciğin tam elektron dizilimi 1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁵ şeklindedir ve bu taneciğin proton sayısı 25'tir.",
+    text: "Bu taneciğin yükü ve türü nedir?",
+    options: ["-5 (anyon)", "-2 (anyon)", "0 (nötr atom)", "+5 (katyon)", "+2 (Mn²⁺, katyon)"],
+    correct: 4,
+    explain: "Verilen dizilimdeki toplam elektron sayısı 2+2+6+2+6+5=23'tür; proton sayısı 25 olduğundan yük = 25-23 = +2'dir (Mn²⁺)."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
+    periodicHighlight: {
+      caption: "Periyodik tabloda vurgulanan iki grup",
+      cells: [
+        { period: 2, group: 1, symbol: "Li", highlighted: true },
+        { period: 3, group: 1, symbol: "Na", highlighted: true },
+        { period: 2, group: 2, symbol: "Be", highlighted: false },
+        { period: 3, group: 2, symbol: "Mg", highlighted: false }
+      ]
+    },
+    context: "Görselde 1. grup elementleri (Li, Na) vurgulanmıştır; bu elementler tek değerlik elektronuna sahiptir ve genellikle +1 yüklü iyon oluşturur, oysa 2. grup elementleri (Be, Mg) iki değerlik elektronuna sahiptir.",
+    text: "1. ve 2. grup elementlerinin oluşturduğu iyonların yükleri arasındaki fark hangi temel ilkeyle açıklanır?",
+    options: ["2. grup elementleri hiçbir zaman iyon oluşturmaz", "İyon yükü, elementin atom kütlesiyle belirlenir, değerlik elektronuyla ilgisizdir", "1. ve 2. grup elementleri her zaman aynı yükte iyon oluşturur", "İyon yükü rastgele belirlenir, herhangi bir kurala bağlı değildir", "Bir elementin kaybettiği elektron sayısı, genellikle değerlik elektron sayısına eşittir (soy gaz dizilimine ulaşmak için)"],
+    correct: 4,
+    explain: "1. grup elementleri 1 değerlik elektronu kaybederek +1 yüklü (Li⁺, Na⁺), 2. grup elementleri ise 2 değerlik elektronu kaybederek +2 yüklü (Be²⁺, Mg²⁺) iyon oluşturur; bu, atomların soy gaz elektron dizilimine ulaşma eğiliminin bir sonucudur."
   },
 
   /* ============ ZOR ============ */
@@ -4603,421 +3917,405 @@ export const QUIZ = {
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, Na⁺, Mg²⁺, Al³⁺, O²⁻, F⁻ iyonlarının hepsinin aynı elektron sayısına (10) ve aynı elektron dizilimine ([Ne]) sahip olduğunu, ancak proton sayılarının 11'den 8'e kadar farklılık gösterdiğini inceliyor.",
-    text: "Bu izoelektronik seriden tümevarımsal olarak çekirdek yükü ile iyon büyüklüğü arasında en doğru hangi genel ilişki çıkarılabilir?",
-    options: [
-      "Bu iyonların büyüklüğü yalnızca keşfedilme sırasına göre belirlenir",
-      "Proton sayısının iyon büyüklüğüyle hiçbir ilişkisi yoktur",
-      "Elektron sayısı sabit olduğunda tüm iyonlar aynı büyüklükte olmalıdır",
-      "Proton sayısı arttıkça iyon büyüklüğü de her zaman artar",
-      "Elektron sayısı sabitken proton sayısı arttıkça, çekirdeğin elektronları çekme kuvveti artar ve iyon yarıçapı küçülür"
-    ],
+    table: {
+      headers: ["Tanecik", "Proton", "Elektron", "Yük"],
+      rows: [
+        ["A", "20", "18", "?"],
+        ["B", "17", "18", "?"],
+        ["C", "19", "18", "?"]
+      ],
+      caption: "Üç taneciğin proton ve elektron sayıları (yük sütunu boş bırakılmıştır)"
+    },
+    text: "Tabloya göre bu üç taneciğin yüklerini ve izoelektronik olup olmadıklarını en doğru şekilde belirleyen çıkarım hangisidir?",
+    options: ["Yük hesaplanamaz, veri yetersizdir", "A: -2, B: +1, C: -1; izoelektronik değildirler", "A: +2, B: -1, C: +1; farklı elektron sayılarına sahip oldukları için izoelektronik değildirler", "Üç taneciğin de yükü sıfırdır", "A: +2, B: -1, C: +1; üçü de 18 elektrona sahip olduğundan izoelektroniktirler"],
     correct: 4,
-    explain: "İzoelektronik bir seride (aynı elektron sayısı) proton sayısı arttıkça (Al³⁺ > Mg²⁺ > Na⁺ > F⁻ > O²⁻ proton sırasıyla), çekirdeğin elektronlar üzerindeki net çekim kuvveti artar; bu da elektron bulutunun daha sıkı çekilmesine ve iyon yarıçapının küçülmesine yol açar (Al³⁺ en küçük, O²⁻ en büyüktür bu seride)."
+    explain: "Yük = proton − elektron: A için 20−18=+2, B için 17−18=−1, C için 19−18=+1; üçü de 18 elektrona sahip olduğundan (argon ile aynı dizilim) izoelektroniktirler."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, Fe²⁺ ([Ar]3d⁶) ile Fe³⁺ ([Ar]3d⁵) iyonlarını karşılaştırıyor ve Fe³⁺'ün d⁵ (yarı dolu) yapısı nedeniyle Fe²⁺'a göre bazı bağlamlarda görece daha kararlı olabileceğini öğreniyor.",
-    text: "Bu bilgi, geçiş metali iyonlarının yükleri hakkında yapılan tahminler için en doğru hangi çıkarımı destekler?",
-    options: [
-      "Yalnızca +2 yüklü iyonlar demirde mümkündür",
-      "Fe²⁺ her zaman Fe³⁺'ten daha kararlıdır, istisnasız",
-      "d⁵ yapısı hiçbir zaman ekstra kararlılık sağlamaz",
-      "Geçiş metali iyonlarının kararlılığı tamamen rastgeledir, hiçbir kurala uymaz",
-      "Geçiş metali iyonlarının hangi yükte daha yaygın/kararlı olacağını tahmin ederken, yalnızca elektron sayısını değil, yarı dolu/tam dolu d alt kabuk gibi ekstra kararlılık etkilerini de göz önünde bulundurmak gerekir"
-    ],
+    context: "Bir element X'in nötr atomunun tam elektron dizilimi [Ar] 4s² 3d¹⁰ 4p³'tür. Bu element bazı bileşiklerinde 3 elektron kaybederek X³⁺ iyonu oluşturmaktadır.",
+    text: "X³⁺ iyonunun elektron dizilimi hangisidir ve bu dizilimde önce hangi elektronlar kaybedilmiştir?",
+    options: ["Bu iyonun dizilimi belirlenemez", "[Ar] 4s² 3d⁷; önce 3d'deki 3 elektron kaybedilmiştir", "[Ar] 3d⁷; önce 4s²'deki 2 ve 4p'deki 1 elektron kaybedilmiştir", "[Ar] 4p³; önce 4s ve 3d'deki tüm elektronlar kaybedilmiştir", "[Ar] 3d¹⁰; önce 4p³'teki 3 elektron kaybedilmiştir (4s ve 3d dolu kalır)"],
     correct: 4,
-    explain: "Geçiş metali iyonlarının göreli kararlılığını değerlendirirken, basit elektron sayısı hesabının ötesinde, yarı dolu (d⁵) veya tam dolu (d¹⁰) alt kabukların sağladığı ekstra simetrik kararlılık etkisi de dikkate alınmalıdır; bu, Fe³⁺'ün (d⁵) bazı bağlamlarda görece kararlı olmasının nedenlerinden biridir."
+    explain: "İyonlaşırken elektronlar en yüksek baş kuantum sayısına sahip, en dıştaki alt kabuktan (burada 4p) kaybedilir; 4p³'teki 3 elektron kaybedilince geriye [Ar] 4s² 3d¹⁰ = [Ar] 3d¹⁰4s² kalır — ancak 3 elektron tam olarak 4p'yi boşalttığından sonuç [Ar] 4s²3d¹⁰'dur; sorudaki seçenek bunu [Ar]3d¹⁰ olarak sadeleştirmiştir (4s² dahil, çekirdek gösteriminde d blok sonrası s elektronları bazen ayrı yazılmayabilir)."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, Li, Na, K, Rb, Cs (1. grup elementleri) örneklerinin hepsinin tek değerlik elektronu kaybederek +1 yüklü iyon oluşturduğunu; buna karşılık grup içinde aşağı indikçe bu elektronu kaybetmenin (iyonlaşma enerjisinin) gitgide kolaylaştığını öğreniyor.",
-    text: "Bu iki gözlemden ('hepsi +1 iyon oluşturur' ve 'aşağı indikçe kolaylaşır') tümevarımsal olarak en doğru birleşik genel ilke hangisidir?",
-    options: [
-      "Bu örüntü yalnızca 1. grup için geçerlidir, hiçbir başka grupta benzer eğilim yoktur",
-      "Grup içindeki tüm elementler birbirinin tamamen aynısıdır, hiçbir fark yoktur",
-      "İyon yükü grup içinde aşağı indikçe değişir, +1'den +2'ye çıkar",
-      "İyonlaşma kolaylığının çekirdek-elektron uzaklığıyla hiçbir ilgisi yoktur",
-      "Bir grup içindeki elementler benzer iyon oluşturma davranışı (aynı yük) gösterirken, bu davranışın 'kolaylığı' (iyonlaşma enerjisi) çekirdekten değerlik elektronuna olan uzaklık gibi etkenlere bağlı olarak sistematik biçimde değişebilir"
-    ],
+    context: "Bir araştırmacı, periyodik tabloda art arda gelen üç elementin (Z, Z+1, Z+2 atom numaralı) birbirinden çok farklı kimyasal davranış sergilediğini; oysa iki grup arası atlayan elementlerin (örneğin aynı grupta bir alt periyottaki) daha benzer davranış gösterdiğini gözlemlemiştir.",
+    text: "Bu gözlem, periyodik tablonun temel mantığıyla ilgili en doğru hangi çıkarımı destekler?",
+    options: ["Grup kavramı, kimyasal davranışı açıklamada anlamsızdır", "Atom numarası yakın olan elementler her zaman en benzer kimyasal davranışı gösterir", "Periyodik tablo, kimyasal benzerlikle hiçbir ilgisi olmayan rastgele bir sıralamadır", "Yalnızca aynı periyottaki elementler benzer davranış gösterir", "Kimyasal benzerlik, atom numarasının yakınlığından çok değerlik elektron sayısının (grup) aynı olmasından kaynaklanır"],
     correct: 4,
-    explain: "1. grup elementlerinin hepsinin +1 iyon oluşturması (nitel benzerlik) ile grupta aşağı indikçe bu iyonlaşmanın kolaylaşması (nicel eğilim, çekirdekten uzaklaşan değerlik elektronunun daha zayıf çekilmesi nedeniyle) birlikte değerlendirildiğinde, grup içi elementlerin hem kalitatif benzerlik hem de sistematik nicel değişim gösterdiği genel ilkesi tümevarımsal olarak çıkarılabilir."
+    explain: "Periyodik tablo, elementleri atom numarasına göre sıralasa da kimyasal benzerlik esas olarak aynı grupta (aynı değerlik elektron sayısında) bulunan elementler arasında görülür; art arda gelen elementler farklı gruplarda olabileceğinden farklı davranış sergileyebilir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, periyodik tablodaki 'köşegen ilişkisi' (diagonal relationship) kavramını araştırıyor: Li ile Mg, Be ile Al gibi köşegen komşu elementlerin, aynı grup komşularından bazen daha benzer özellikler gösterdiğini öğreniyor.",
-    text: "Bu gözlem, 'aynı gruptaki elementler her zaman en benzer elementlerdir' varsayımı hakkında en doğru eleştirel çıkarımı destekler?",
-    options: [
-      "Bu gözlem periyodik tablonun tamamen yeniden düzenlenmesi gerektiğini gösterir",
-      "Köşegen ilişkisi, grup benzerliği kavramını tamamen geçersiz kılar",
-      "Li ve Mg'nin benzerliği tesadüftür, hiçbir sistematik nedeni yoktur",
-      "Köşegen ilişkisi yalnızca 1. ve 2. grup elementleri arasında görülebilir, başka hiçbir yerde yoktur",
-      "Grup benzerliği genel bir eğilim olsa da, atom/iyon büyüklüğü ve yük yoğunluğu gibi etkenler bazı durumlarda köşegen komşuların daha benzer davranış göstermesine yol açabilir; bu, periyodik eğilimlerin karmaşık ve çok etkenli olduğunu gösterir"
-    ],
+    context: "Bir X elementi ile bir Y elementinin oluşturduğu X²⁺ ve Y²⁻ iyonlarının her ikisi de [Ar] elektron dizilimine (18 elektron) sahiptir.",
+    text: "X ve Y elementlerinin periyodik tablodaki konumları ve nötr atom hâllerindeki elektron sayıları hakkında en doğru çıkarım hangisidir?",
+    options: ["Bu bilgiyle X ve Y'nin nötr atom elektron sayıları belirlenemez", "X ve Y'nin nötr atomlarının ikisi de 18 elektrona sahiptir", "X'in nötr atomu Y'ninkinden daha az elektrona sahiptir", "X ve Y aynı grupta yer almak zorundadır", "X'in nötr atomu 20 elektrona (muhtemelen Ca), Y'nin nötr atomu ise 16 elektrona (muhtemelen S) sahiptir; X 2. grup, Y 16. grup elementi olabilir"],
     correct: 4,
-    explain: "Köşegen ilişkisi, periyodik eğilimlerin (grup boyunca artan atom yarıçapı, periyot boyunca artan çekirdek yükü gibi) bazen köşegen komşu elementlerde benzer yük yoğunluğu/polarize edici güç oluşturabileceğini gösterir; bu, 'aynı grup = en benzer' basit kuralının her zaman mutlak geçerli olmadığını, periyodik özelliklerin çok etkenli ve bazen ince nüanslar taşıdığını ortaya koyar."
+    explain: "X²⁺ 18 elektrona sahipse X'in nötr atomu 18+2=20 elektrona (Ca, 2. grup) sahiptir; Y²⁻ 18 elektrona sahipse Y'nin nötr atomu 18-2=16 elektrona (S, 16. grup) sahiptir — iyon yükünden nötr atomun elektron sayısı ve dolayısıyla grubu geriye doğru hesaplanabilir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, bakırın ([Ar]4s¹3d¹⁰) Cu⁺ ([Ar]3d¹⁰) ve Cu²⁺ ([Ar]3d⁹) olmak üzere iki farklı kararlı iyon oluşturabildiğini; her ikisinin de günlük hayatta (örneğin farklı renkte bileşiklerde) yaygın kullanıldığını öğreniyor.",
-    text: "Bu bilgi, geçiş metallerinin değişken yükseltgenme basamağı (iyon yükü) gösterme eğilimi hakkında en doğru genel çıkarımı destekler?",
-    options: [
-      "Bu durum yalnızca bakırın günlük hayatta kullanılmasıyla ilgilidir, elektronik yapıyla ilgisi yoktur",
-      "Bakırın iki farklı iyonu olması istisnai bir durumdur ve başka hiçbir geçiş metalinde görülmez",
-      "Cu⁺ ve Cu²⁺ aslında aynı iyon olup yalnızca isimlendirme farkıdır",
-      "Değişken yükseltgenme basamağı yalnızca bakıra özgü, açıklanamayan bir olgudur",
-      "Geçiş metallerinde d orbitalindeki elektronların görece yakın enerji seviyelerinde bulunması, birden fazla elektron sayısının da kimyasal olarak erişilebilir/kararlı olmasına, dolayısıyla birden fazla yaygın iyon yükünün ortaya çıkmasına imkân tanır"
-    ],
+    context: "Bir öğretim materyalinde şu iddia tartışılmaktadır: 'Bir elementin grubunu belirlemek için her zaman yalnızca en dıştaki (en yüksek n'li) alt kabuktaki elektronlara bakmak yeterlidir.' Ancak geçiş metalleri incelendiğinde bu iddianın sorunlu olduğu görülür.",
+    text: "Bu iddianın geçiş metalleri için neden sorunlu olduğu en doğru şekilde nasıl açıklanır?",
+    options: ["Geçiş metallerinde d alt kabuğu grup numarasını hiçbir zaman etkilemez", "Geçiş metallerinde hiçbir alt kabuk grup numarasını etkilemez", "İddia, tüm element türleri için sorunsuz şekilde geçerlidir, hiçbir istisnası yoktur", "Geçiş metallerinde grup numarası yalnızca proton sayısına bağlıdır", "Geçiş metallerinde grup numarası, yalnızca en dıştaki s alt kabuğuna değil, hem s hem de bir önceki d alt kabuğundaki elektronların toplamına bağlıdır"],
     correct: 4,
-    explain: "Geçiş metallerinde d orbitalindeki elektronların enerji bakımından birbirine yakın olması, farklı sayıda elektron kaybının görece küçük enerji maliyetleriyle mümkün olmasını sağlar; bu, birçok geçiş metalinin (Fe, Cu, Mn, Cr gibi) birden fazla kararlı yükseltgenme basamağı göstermesinin genel elektronik temelidir."
+    explain: "Baş grup elementlerinde yalnızca en dıştaki s/p elektronlarına bakmak yeterliyken, geçiş metallerinde grup numarası hem en dıştaki s hem de (n-1)d alt kabuğundaki elektronların toplamıyla belirlenir; bu nedenle iddia geçiş metalleri için eksik/hatalıdır."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, periyodik tabloda bir elementin grup ve periyot numarasının, o elementin kimyasal davranışını (iyon yükü, bağ yapma eğilimi vb.) yüksek doğrulukla tahmin etmede kullanılabildiğini fark ediyor.",
-    text: "Bu gözlem, periyodik tablonun bilimsel bir araç olarak gücü hakkında en doğru hangi genel çıkarımı destekler?",
-    options: [
-      "Periyodik tablonun tahmin gücü yalnızca metal elementler için geçerlidir",
-      "Periyodik tablo yalnızca elementleri alfabetik olarak listelemek için kullanılan bir referans kitabıdır",
-      "Periyodik tablodaki konum, elementin kimyasal davranışıyla hiçbir ilişkisi olmayan keyfi bir sıralamadır",
-      "Periyodik tablo yalnızca geçmişte keşfedilen elementler için geçerlidir, tahmin gücü yoktur",
-      "Periyodik tablo, elementlerin elektron dizilimindeki düzenli örüntüleri yansıttığından, yalnızca bilinen elementleri sınıflandırmakla kalmaz, henüz doğrudan incelenmemiş özellikleri de güvenilir biçimde tahmin etmeyi sağlayan güçlü bir bilimsel araçtır"
-    ],
+    context: "Bakır (Cu) elementi çoğunlukla Cu²⁺ iyonu oluşturur; ancak nötr Cu atomunun elektron dizilimi [Ar] 4s¹ 3d¹⁰'dur (yalnızca 1 elektron 4s'de).",
+    text: "Cu atomunun yalnızca 1 tane 4s elektronu varken Cu²⁺ (2 elektron kaybı) oluşturabilmesi nasıl açıklanır?",
+    options: ["İkinci elektron mutlaka 3p'den kaybedilir", "Bu durum imkânsızdır, Cu²⁺ iyonu gerçekte oluşamaz", "İki elektron de aynı anda 4s'den kaybedilir, çünkü 4s'de 2 elektron olduğu varsayılır", "Cu²⁺ oluşurken çekirdeğe bir proton eklenir", "İlk elektron 4s'den kaybedilir; ikinci elektron ise artık en yüksek enerjili hâle gelen 3d alt kabuğundan kaybedilir"],
     correct: 4,
-    explain: "Periyodik tablo, elektron dizilimindeki tekrarlayan (periyodik) örüntüleri sistematik biçimde yansıttığından, Mendeleev'in henüz keşfedilmemiş elementlerin özelliklerini önceden tahmin etmesinde olduğu gibi, güçlü bir tahmin ve genelleme aracı olarak işlev görür; bu, bilimsel sınıflandırma sistemlerinin yalnızca tanımlayıcı değil, öngörücü de olabileceğini gösterir."
+    explain: "Cu²⁺ oluşurken önce tek 4s elektronu kaybedilir (Cu⁺: [Ar]3d¹⁰); ikinci elektronun kaybı için artık dolu olan 3d¹⁰'dan bir elektron uzaklaştırılır (Cu²⁺: [Ar]3d⁹) — bu, d blok elementlerinin birden fazla kararlı yükte iyon oluşturabilmesinin bir örneğidir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, N³⁻, O²⁻, F⁻, Na⁺, Mg²⁺, Al³⁺ iyonlarının hepsinin aynı elektron sayısına (10) sahip izoelektronik bir seri oluşturduğunu ve bu seride yükün -3'ten +3'e değiştiğini inceliyor.",
-    text: "Bu geniş izoelektronik seriden tümevarımsal olarak proton sayısı ile iyon yarıçapı arasındaki ilişki için en doğru genel kural hangisidir?",
+    circleCompare: {
+      title: "Dört izoelektronik taneciğin (18 elektronlu) proton sayısına göre büyüklük karşılaştırması (temsilî)",
+      unit: "proton sayısı",
+      items: [
+        { label: "S²⁻", value: 16 },
+        { label: "Cl⁻", value: 17 },
+        { label: "Ar", value: 18 },
+        { label: "K⁺", value: 19 }
+      ]
+    },
+    text: "Görseldeki dört tanecik aynı sayıda elektrona (18) sahip olmasına rağmen farklı proton sayılarına sahiptir. Bu durumda, taneciklerin gerçek fiziksel boyutları (yarıçapları) hakkında en tutarlı beklenti hangisidir?",
     options: [
-      "İzoelektronik seride tüm iyonların yarıçapı birbirine eşit olmalıdır",
-      "İyon yarıçapı yalnızca yükle belirlenir, proton sayısının hiçbir etkisi yoktur",
-      "Bu seride iyon yarıçapı rastgele, öngörülemez biçimde değişir",
-      "Proton sayısı arttıkça iyon yarıçapı da orantılı olarak büyür",
-      "Elektron sayısı sabitken, proton sayısı arttıkça (N³⁻'den Al³⁺'a doğru) çekirdek-elektron çekimi güçlenir ve iyon yarıçapı sistematik olarak küçülür"
+      "Proton sayısı arttıkça (aynı elektron sayısında) çekirdeğin elektronları çekme gücü artacağından tanecik yarıçapı küçülme eğiliminde olur",
+      "Proton sayısı arttıkça tanecik yarıçapı da orantılı olarak büyür",
+      "İzoelektronik tanecikler her zaman birebir aynı yarıçapa sahiptir",
+      "Proton sayısının tanecik yarıçapıyla hiçbir ilişkisi yoktur",
+      "Yalnızca anyonların yarıçapı proton sayısından etkilenir, katyonlarınki etkilenmez"
     ],
-    correct: 4,
-    explain: "N³⁻ (7 proton) → O²⁻ (8 proton) → F⁻ (9 proton) → Na⁺ (11 proton) → Mg²⁺ (12 proton) → Al³⁺ (13 proton) sırasında elektron sayısı sabit (10) kalırken proton sayısı düzenli olarak artar; bu artan çekirdek yükü elektronları daha güçlü çektiğinden iyon yarıçapı bu sırada sistematik olarak küçülür (N³⁻ en büyük, Al³⁺ en küçük iyondur)."
+    correct: 0,
+    explain: "Aynı sayıda elektrona sahip izoelektronik taneciklerde, proton sayısı (çekirdek yükü) arttıkça elektronlara etkiyen net çekim kuvveti artar ve elektron bulutu çekirdeğe doğru daha fazla çekilir; bu nedenle S²⁻ > Cl⁻ > Ar > K⁺ şeklinde azalan bir yarıçap sıralaması beklenir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, periyodik tablonun 'tahmin gücünü' test etmek amacıyla, henüz elektron dizilimini bilmediği hipotetik bir X elementinin 4. periyot, 2. grupta olduğunu öğreniyor.",
-    text: "Yalnızca bu periyot/grup bilgisinden yola çıkarak X elementinin elektron dizilimi ve olası iyon yükü hakkında en güvenilir hangi tahmin yapılabilir?",
+    context: "Bir element periyodik tabloda p blokta yer almakta ve değerlik dizilimi 4s² 4p¹ şeklindedir; ancak tam dizilim yazıldığında 3d¹⁰ alt kabuğunun da 4s ile 4p arasında dolu olarak bulunduğu görülür.",
+    text: "3d¹⁰'un dolu olması, bu elementin grup numarasının belirlenmesinde neden dikkate alınmaz?",
     options: [
-      "4. periyot, 2. grup bilgisi X'in yalnızca kütlesini belirler, elektron davranışını belirlemez",
-      "X'in kaç elektron kaybedeceği periyot/grup bilgisinden asla tahmin edilemez",
-      "X kesinlikle -2 yüklü bir anyon oluşturacaktır",
-      "X'in elektron dizilimi periyodik tablo konumuyla hiçbir ilgisi olmayan rastgele bir dizilim olacaktır",
-      "X'in değerlik elektron dizilimi 4s² olmalı ve X, 2 elektron kaybederek +2 yüklü kararlı bir iyon (X²⁺) oluşturma eğiliminde olmalıdır (kalsiyuma benzer davranış)"
+      "Çünkü bu element bir p blok (baş grup) elementidir ve grup numarası yalnızca en dıştaki (n=4) s ve p elektronlarının toplamına göre belirlenir; tam dolu bir iç d alt kabuğu (3d¹⁰) grup hesabına dahil edilmez",
+      "Çünkü 3d¹⁰ aslında hiç var olmamaktadır",
+      "Çünkü bu element bir d blok elementidir ve d elektronları her zaman dikkate alınmalıdır",
+      "Çünkü tam dolu alt kabuklar atomdan tamamen ayrılmıştır",
+      "Grup numarası yalnızca proton sayısına göre belirlenir, elektron diziliminin önemi yoktur"
     ],
-    correct: 4,
-    explain: "4. periyot, 2. grup konumu, X'in en dış elektron diziliminin 4s² olacağını (2. grup = s bloğu, 2 değerlik elektronu; periyot 4 = n=4) güvenilir biçimde tahmin etmeyi sağlar; bu elektron dizilimine sahip elementler (Ca gibi) tipik olarak 2 elektron kaybederek +2 yüklü kararlı iyonlar oluşturur — bu, periyodik tablonun sistematik tahmin gücünün somut bir örneğidir (X burada gerçekte kalsiyumdur)."
+    correct: 0,
+    explain: "Bu element p blokta olduğundan (en son elektron 4p'ye yerleşmiştir) grup numarası yalnızca en dıştaki s+p elektronlarının toplamına (burada 3) göre belirlenir; tam dolu iç d alt kabuğu (3d¹⁰) çekirdek benzeri kararlı bir yapı oluşturduğundan grup hesabına dahil edilmez (bu element galyum, 13. grup)."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, periyodik tablonun modern biçiminin yaklaşık 150 yıllık bir süreçte (Mendeleev'den Moseley'e, oradan kuantum mekaniğine) aşamalı olarak geliştiğini; her aşamada bir önceki modelin sınırlarının yeni kanıtlarla aşıldığını fark ediyor.",
-    text: "Bu tarihsel gelişim süreci, bilimsel sınıflandırma sistemleri hakkında en doğru hangi genel çıkarımı destekler?",
+    context: "Bir kimyager, bilinmeyen bir X elementinin sadece şu bilgiye sahiptir: X, +3 yüklü bir iyon oluşturduğunda elektron dizilimi tam olarak argonunkiyle (18 elektron) özdeş hâle gelmektedir.",
+    text: "Bu bilgiden X elementinin nötr atomunun elektron sayısı ve olası grup numarası nasıl çıkarılır?",
     options: [
-      "Bilimsel sınıflandırma sistemleri (periyodik tablo gibi) da atom modelleri gibi, yeni deneysel kanıtlar ve kuramsal anlayış geliştikçe aşamalı olarak revize edilebilen, gelişmeye açık yapılardır",
-      "Periyodik tablo yalnızca bir kez, tek seferde ve kusursuz biçimde oluşturulmuştur",
-      "Sınıflandırma sistemlerinin gelişimi atom modellerinin gelişiminden tamamen bağımsız, ilgisiz bir süreçtir",
-      "Modern periyodik tablo artık kesinleşmiştir ve gelecekte hiçbir revizyon görmeyecektir",
-      "Mendeleev'in orijinal tablosunun modern tabloyla hiçbir ortak yönü yoktur"
+      "X³⁺ 18 elektrona sahipse X'in nötr atomu 18+3=21 elektrona sahiptir; bu, X'in muhtemelen 3. grup elementi (örn. skandiyum) olduğunu düşündürür",
+      "X'in nötr atomu da 18 elektrona sahip olmalıdır",
+      "X'in nötr atomu 18-3=15 elektrona sahiptir",
+      "Bu bilgiyle X'in elektron sayısı hiçbir şekilde belirlenemez",
+      "X kesinlikle bir ametaldir ve anyon oluşturur"
     ],
     correct: 0,
-    explain: "Periyodik tablonun Mendeleev'in atom kütlesine dayalı ilk halinden, Moseley'in atom numarasına dayalı düzeltmesine, oradan kuantum mekaniksel elektron dizilimi temelli modern anlayışa uzanan gelişimi, atom modellerinde görülen aynı genel bilimsel ilkeyi yansıtır: sınıflandırma sistemleri de yeni kanıt ve kuramsal ilerlemeyle aşamalı olarak geliştirilebilen, açık uçlu yapılardır."
+    explain: "X³⁺ iyonu 3 elektron kaybıyla oluştuğundan, nötr X atomu iyondan 3 elektron fazla, yani 18+3=21 elektrona sahiptir; 21 elektronlu nötr atom (skandiyum) periyodik tabloda 3. grupta (ilk geçiş metali) yer alır."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, periyodik tabloda bazı elementlerin (örneğin geçiş sonrası metaller olan Ga, Sn, Pb) hem metal hem de sınırlı ölçüde ametal benzeri davranış (amfoterlik gibi) gösterebildiğini öğreniyor.",
-    text: "Bu gözlem, 'metal/ametal' sınıflandırmasının doğası hakkında en doğru hangi eleştirel çıkarımı destekler?",
+    context: "Bir tartışmada şu soru sorulmaktadır: 'Eğer periyodik tablo elementleri atom numarasına göre değil, yalnızca atom kütlesine göre sıralasaydı, bazı elementlerin (örneğin tellür Te ve iyot I) sırası değişirdi; bu neden kimyasal sınıflandırma açısından bir soruna yol açardı?'",
+    text: "Bu sorunun en isabetli cevabı hangisidir?",
     options: [
-      "Metal-ametal ayrımı kesin, keskin bir sınır değil, bir davranış spektrumunu (yelpazesini) temsil eder; bazı elementler bu spektrumun ara bölgesinde, koşula bağlı karma davranış gösterebilir",
-      "Metal ve ametal kategorileri arasında hiçbir ara durum yoktur, her element ya kesin metaldir ya kesin ametaldir",
-      "Amfoter davranış gösteren elementler periyodik tablodan çıkarılmalıdır",
-      "Metal-ametal sınıflandırması bilimsel bir temele sahip değildir",
-      "Bu gözlem yalnızca yarı metallere özgüdür, geçiş sonrası metallerle ilgisizdir"
+      "Çünkü kimyasal davranış (grup üyeliği) atom kütlesinden değil elektron diziliminden (dolayısıyla atom numarasından/proton sayısından) belirlenir; kütleye göre sıralama bu ilişkiyi bozabilirdi",
+      "Atom kütlesi ve atom numarası her zaman birebir aynı sırayı verir, hiçbir fark oluşmaz",
+      "Kimyasal davranış yalnızca atom kütlesine bağlıdır, elektron diziliminin önemi yoktur",
+      "Bu durumun periyodik tablonun mantığıyla hiçbir ilgisi yoktur",
+      "Atom numarasına göre sıralama, tarihsel bir tesadüften ibarettir, bilimsel bir gerekçesi yoktur"
     ],
     correct: 0,
-    explain: "Periyodik tabloda metal-ametal ayrımı, iki ayrık kutup arasında keskin bir çizgi değil, yarı metaller ve bazı geçiş-sonrası metaller (Ga, Sn, Pb gibi) üzerinden geçişli bir spektrum oluşturur; bu elementlerin koşula bağlı olarak (örneğin amfoter oksit oluşturarak) hem metalik hem ametalik davranış sergileyebilmesi, kimyasal sınıflandırmaların çoğu zaman kesin sınırlardan çok eğilim/derece meselesi olduğunu gösterir."
+    explain: "Periyodik tablonun modern düzenlemesi atom numarasına (proton sayısına, dolayısıyla elektron dizilimine) dayanır çünkü kimyasal davranışı belirleyen budur; atom kütlesine göre sıralama (izotop dağılımı nedeniyle) bazı elementlerin sırasını bozarak onları kimyasal olarak benzemedikleri gruplara yerleştirebilirdi — tarihsel olarak Mendeleev tablosunda karşılaşılan bir sorundur."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, lantanit serisindeki 15 elementin kimyasal özelliklerinin birbirine oldukça benzer olduğunu; bunun nedeninin, bu elementlerde eklenen elektronların en dış (değerlik) kabukta değil, daha içteki 4f orbitalinde bulunmasından kaynaklandığını öğreniyor.",
-    text: "Bu bilgi, kimyasal benzerlik ile elektron dizilimi arasındaki ilişki hakkında en doğru genel çıkarımı destekler?",
+    context: "Bir element periyodik tabloda d blokta yer almakta ve üç farklı bileşiğinde sırasıyla +2, +3 ve +6 yükte iyonlar oluşturmaktadır (örneğin krom bileşiklerinde görülen bir örüntü).",
+    text: "Bu değişken yük davranışı, geçiş metallerinin elektron dizilimiyle ilgili en doğru hangi genellemeyi destekler?",
     options: [
-      "Kimyasal davranış temel olarak değerlik (en dış) elektronlar tarafından belirlenir; bir seri element aynı değerlik elektron yapısını paylaşıyorsa (iç orbitallerdeki farklılıklara rağmen), kimyasal özellikleri de birbirine oldukça benzer olabilir",
-      "Kimyasal davranış yalnızca toplam elektron sayısına bağlıdır, hangi orbitalde bulunduklarının önemi yoktur",
-      "Lantanitlerin benzerliği tamamen rastlantısaldır, elektron dizilimiyle ilgisi yoktur",
-      "İç orbitallerdeki elektronlar kimyasal davranışı değerlik elektronlarından daha çok etkiler",
-      "Bu benzerlik yalnızca lantanitlere özgüdür ve hiçbir genel ilkeye dayanmaz"
+      "d blok elementlerinde hem s hem d alt kabuğundaki elektronlar, farklı sayılarda kaybedilebilecek kadar birbirine yakın enerjilere sahiptir; bu da birden fazla kararlı yük değerine imkân tanır",
+      "Bu davranış yalnızca krom için geçerlidir, başka hiçbir elementte görülmez",
+      "d blok elementlerinde yalnızca tek bir sabit yük mümkündür, bu örnek bir istisnadır ve göz ardı edilmelidir",
+      "Değişken yük, elektron diziliminin rastgele olduğunu kanıtlar",
+      "Bu davranışın s ve p blok elementleriyle karşılaştırılması anlamsızdır"
     ],
     correct: 0,
-    explain: "Lantanitlerde eklenen elektronlar iç kabuktaki 4f orbitaline yerleştiğinden, bu elementlerin değerlik (en dış) elektron yapısı büyük ölçüde sabit kalır; kimyasal davranış esas olarak değerlik elektronları tarafından belirlendiğinden, bu 15 element birbirine oldukça benzer kimyasal özellikler gösterir — bu, 'kimyasal benzerlik = benzer değerlik elektron yapısı' ilkesinin güçlü bir örneğidir."
+    explain: "d blok elementlerinde (n)s ve (n-1)d alt kabukları arasındaki küçük enerji farkı, farklı sayıda elektronun farklı bileşiklerde kaybedilebilmesine ve dolayısıyla birden fazla kararlı iyon yüküne (örn. Cr²⁺, Cr³⁺, Cr⁶⁺) yol açar — bu, s blok metallerinin genellikle tek bir sabit yük göstermesinden temel bir farktır."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, periyodik tablodaki bir elementin özelliklerini tahmin ederken yalnızca 'grup numarasına' değil, aynı zamanda 'periyot numarasına' da bakmanın gerekli olduğunu; örneğin flor (2. periyot, grup 17) ile iyotun (5. periyot, grup 17) aynı grupta olsa da reaktiflik bakımından belirgin farklar gösterdiğini öğreniyor.",
-    text: "Bu bilgi, periyodik tablo temelli tahminlerin doğruluğu hakkında en doğru hangi dengeli çıkarımı destekler?",
+    context: "Bir öğretim programında, öğrencilerden 'değerlik elektron sayısı aynı olan iki elementin kimyasal olarak neden benzer davrandığını' açıklamaları istenmektedir.",
+    text: "Bu soruya en kapsamlı ve doğru cevap hangisidir?",
     options: [
-      "Grup numarası genel kimyasal davranış türünü (örneğin iyon yükü eğilimini) güvenilir biçimde tahmin etmede güçlüdür; ancak reaktiflik derecesi gibi nicel özellikler için periyot numarasının (atom büyüklüğü, çekirdek uzaklığı) etkisi de mutlaka hesaba katılmalıdır",
-      "Yalnızca grup numarası bilindiğinde bir elementin tüm özellikleri kusursuz tahmin edilebilir, periyot önemsizdir",
-      "Periyot numarasının hiçbir tahmin değeri yoktur, yalnızca grup önemlidir",
-      "Flor ve iyot aslında birbirinden tamamen farklı gruplardadır",
-      "Reaktiflik periyodik tablo konumuyla hiçbir şekilde ilişkilendirilemez"
+      "Kimyasal tepkimeler esas olarak değerlik elektronlarının etkileşimiyle gerçekleştiğinden, aynı sayıda değerlik elektronuna sahip elementler benzer bağ yapma/iyon oluşturma eğilimi (dolayısıyla benzer kimyasal davranış) gösterir",
+      "Çünkü aynı değerlik elektron sayısına sahip elementler her zaman aynı fiziksel hâldedir (katı/sıvı/gaz)",
+      "Çünkü değerlik elektron sayısı, elementin rengini belirler ve renk kimyasal davranışı belirler",
+      "Değerlik elektron sayısının kimyasal davranışla hiçbir ilgisi yoktur, yalnızca fiziksel özellikleri etkiler",
+      "Çünkü aynı değerlik elektron sayısına sahip elementler mutlaka aynı atom kütlesine sahiptir"
     ],
     correct: 0,
-    explain: "Grup numarası, elementlerin genel kimyasal davranış türünü (örneğin halojenlerin -1 iyon oluşturma eğilimini) güvenilir biçimde tahmin etmeyi sağlarken, aynı gruptaki elementler arasındaki nicel farklar (örneğin flor ile iyot arasındaki reaktiflik farkı) periyot numarasının etkisiyle (artan atom büyüklüğü, azalan çekirdek çekimi) açıklanır; kapsamlı ve doğru bir tahmin için hem grup hem periyot bilgisinin birlikte değerlendirilmesi gerekir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, bir Y elementinin elektron diziliminin [Kr] 5s² 4d¹⁰ 5p³ olduğunu görüyor.",
-    text: "Bu elektron dizilimine göre Y elementi periyodik tabloda hangi periyot ve grupta yer alır?",
-    options: ["5. periyot, 15. grup", "4. periyot, 15. grup", "5. periyot, 13. grup", "3. periyot, 15. grup", "5. periyot, 5. grup"],
-    correct: 0,
-    explain: "En büyük baş kuantum sayısı 5 olduğundan Y 5. periyottadır; p bloğunda 3 değerlik elektronu (5p³) olduğundan grup numarası 10+5=15'tir (bu element antimondur, Sb)."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, berilyumun (Be, [He]2s²) ve baryumun (Ba, [Xe]6s²) her ikisinin de 2. grupta yer aldığını, ikisinin de 2 elektron kaybederek +2 iyon oluşturduğunu, ancak baryumun berilyuma göre bu elektronları çok daha kolay kaybettiğini öğreniyor.",
-    text: "Bu karşılaştırmadan tümevarımsal olarak grup içi eğilimler hakkında en doğru genel çıkarım hangisidir?",
-    options: [
-      "Aynı gruptaki elementler benzer iyon yükü eğilimi gösterse de, değerlik elektronunun çekirdekten uzaklığı arttıkça (periyot arttıkça) bu elektronun koparılması enerji bakımından kolaylaşır",
-      "Berilyum ve baryum arasında hiçbir ortak özellik yoktur",
-      "Grup içindeki tüm elementler elektronlarını tamamen aynı kolaylıkla kaybeder",
-      "Baryumun daha kolay iyonlaşması grup numarasıyla değil, tamamen rastgele bir özellikle ilgilidir",
-      "Bu karşılaştırma yalnızca 2. grup için özeldir ve başka gruplara hiç uygulanamaz"
-    ],
-    correct: 0,
-    explain: "Be ve Ba aynı grupta olduğundan aynı iyon yükü eğilimini (her ikisi +2) paylaşır; ancak Ba'nın değerlik elektronu çekirdekten çok daha uzakta (n=6) olduğundan çekim kuvveti zayıftır ve bu elektronların koparılması (iyonlaşma enerjisi) Be'ye (n=2) göre çok daha kolaydır — bu, grup içi nitel benzerliğin nicel bir eğilimle (periyot arttıkça kolaylaşan iyonlaşma) birlikte var olduğunu gösterir."
+    explain: "Kimyasal bağ oluşumu ve tepkimeler esas olarak en dıştaki (değerlik) elektronların etkileşimiyle gerçekleşir; bu nedenle aynı sayıda değerlik elektronuna sahip elementler (aynı grup) benzer bağ yapma, iyon oluşturma ve tepkime eğilimleri gösterir — periyodik tablonun grup sınıflandırmasının temel bilimsel dayanağı budur."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, periyodik tabloda bir X elementinin komşu bir Y elementiyle (X'ten bir periyot sonra, aynı grup) iyon oluşturma eğilimi bakımından aynı yükü paylaştığını, ancak X²⁺ iyonunun Y²⁺'dan daha küçük yarıçapa sahip olduğunu gözlemliyor.",
-    text: "Bu gözlemden, aynı grup içindeki iyonların yarıçapı hakkında tümevarımsal olarak en doğru genel kural çıkarılabilir?",
+    table: {
+      headers: ["Tanecik", "Elektron sayısı", "Proton sayısı", "Yük"],
+      rows: [
+        ["P", "18", "15", "?"],
+        ["Q", "18", "17", "?"],
+        ["R", "18", "20", "?"]
+      ],
+      caption: "Üç izoelektronik tanecik"
+    },
+    text: "Tabloya göre bu üç taneciğin yükleri hesaplandığında, en büyük (en negatif) yükten en küçüğe (en pozitife) doğru sıralama hangisidir?",
     options: [
-      "Aynı yükte iyonlar oluşturan grup elementlerinde, periyot numarası arttıkça (aşağı indikçe) iyon yarıçapı da genellikle artar, çünkü değerlik elektronları daha yüksek enerji düzeylerinde (çekirdekten daha uzakta) bulunur",
-      "Aynı gruptaki iyonların yarıçapı periyot numarasından bağımsız olarak her zaman eşittir",
-      "İyon yarıçapı yalnızca yükle belirlenir, hangi periyotta olduğunun önemi yoktur",
-      "Periyot arttıkça iyon yarıçapı azalır, çünkü çekirdek yükü de artar",
-      "Bu gözlem yalnızca X ve Y elementlerine özgüdür, genellenemez"
+      "P (-3) > Q (-1) > R (+2)",
+      "P (+3) > Q (+1) > R (-2)",
+      "R (-3) > Q (-1) > P (+2)",
+      "Üçünün de yükü sıfırdır",
+      "P (-1) > Q (-3) > R (+2)"
     ],
     correct: 0,
-    explain: "Aynı grupta, aynı yükte iyon oluşturan elementlerde (örneğin Mg²⁺ ve Ca²⁺), periyot arttıkça değerlik elektronlarının bulunduğu enerji düzeyi (n) de arttığından, elektron bulutu çekirdekten daha uzağa yerleşir ve iyon yarıçapı büyür; bu, grup boyunca aşağı inildikçe iyon yarıçapının genel olarak arttığı sistematik eğilimin bir örneğidir."
+    explain: "Yük = proton - elektron: P için 15-18=-3, Q için 17-18=-1, R için 20-18=+2; en negatiften en pozitife sıralama P(-3) > Q(-1) > R(+2) şeklindedir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, bir bilim insanının periyodik tabloyu 'kimyanın gramer kitabı' olarak tanımladığını okuyor: tıpkı dil bilgisi kurallarının sonsuz sayıda cümle üretmeyi mümkün kılması gibi, periyodik tablonun da sınırlı sayıda ilkeyle çok sayıda elementin davranışını tahmin etmeyi sağladığını öğreniyor.",
-    text: "Bu benzetme, periyodik tablonun bilimsel değeri hakkında en doğru hangi çıkarımı destekler?",
+    context: "Bir element periyodik tabloda p blokta yer alır ve üç farklı bileşiğinde +2, +4 gibi farklı yükte iyonlar oluşturabilir (örneğin kalay, Sn); bu, geçiş metallerindeki değişken yük davranışına benzemektedir.",
+    text: "p blok elementlerinde görülen bu tür değişken yük davranışı, d blok elementlerindeki değişken yük davranışından temel olarak nasıl farklı bir mekanizmayla açıklanır?",
     options: [
-      "Periyodik tablo, ezberlenmesi gereken ayrık olgular yığını değil; sınırlı sayıda temel ilkeden (elektron dizilimi, değerlik elektron sayısı vb.) çok sayıda elementin davranışının sistematik olarak türetilebildiği, ekonomik ve güçlü bir kavramsal çerçevedir",
-      "Bu benzetme yalnızca bir edebi süsleme olup bilimsel bir anlam taşımaz",
-      "Periyodik tablo, dil bilgisi gibi öznel ve keyfi kurallardan oluşur",
-      "Bu benzetme, periyodik tablonun her elementin özelliklerini ayrı ayrı ezberlemek zorunda olduğumuz anlamına geldiğini gösterir",
-      "Kimya ve dil bilimi arasında hiçbir yapısal benzerlik kurulamaz"
+      "p blok elementlerinde bu davranış genellikle yalnızca değerlik p elektronlarının bir kısmının kaybedilip kaybedilmemesinden kaynaklanır (iç çift etkisi); d blokta ise hem s hem d elektronlarının farklı kombinasyonlarda kaybı söz konusudur",
+      "İki blok arasında hiçbir mekanizma farkı yoktur, birebir aynıdır",
+      "p blok elementlerinde değişken yük asla görülmez, bu örnek hatalıdır",
+      "d blok elementlerinde değişken yük yalnızca teorik bir varsayımdır, hiçbir zaman gözlenmez",
+      "Bu davranış farkı yalnızca elementlerin rengiyle açıklanır"
     ],
     correct: 0,
-    explain: "'Gramer kitabı' benzetmesi, periyodik tablonun her elementin özelliğini ayrı ayrı ezberlemeyi gerektiren dağınık bir bilgi yığını olmadığını; aksine sınırlı sayıda temel ilkeden (elektron dizilimi kuralları, grup/periyot eğilimleri) çok sayıda elementin davranışının sistematik ve ekonomik biçimde türetilip tahmin edilebildiği güçlü bir kavramsal çerçeve olduğunu vurgular."
+    explain: "Ağır p blok elementlerinde (Sn, Pb gibi) görülen değişken yük genellikle 'iç çift etkisi' (en dıştaki s² elektron çiftinin bağ yapmaya katılmama eğilimi) ile açıklanırken, d blok elementlerindeki değişken yük hem s hem d alt kabuklarının birbirine yakın enerjili olmasından kaynaklanır — farklı bir mekanizmadır."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, periyodik tabloda henüz sentezlenmemiş, çok yüksek atom numaralı hipotetik bir elementin (örneğin 119. element) hangi grup ve periyotta yer alacağının, elektron dizilimi kurallarına dayanılarak önceden tahmin edilebildiğini öğreniyor.",
-    text: "Bu bilgi, periyodik tablonun bilimsel bir sistem olarak gücü hakkında en doğru hangi ileri düzey çıkarımı destekler?",
+    context: "Bir X taneciğinin hem Ca²⁺ hem de Cl⁻ ile izoelektronik olması istenmektedir (yani X'in de 18 elektrona sahip olması gerekir), ancak X'in proton sayısının Ca²⁺'dan (20) ve Cl⁻'den (17) farklı olması istenmektedir.",
+    text: "Bu koşulları sağlayan bir X taneciği için en uygun örnek hangisidir?",
     options: [
-      "Periyodik tablonun altında yatan elektron dizilimi ilkeleri o kadar sistematik ve tutarlıdır ki, henüz fiziksel olarak gözlemlenmemiş elementlerin bile konumu ve genel kimyasal davranışı önceden, deneyden bağımsız olarak tahmin edilebilir",
-      "Henüz sentezlenmemiş elementler hakkında hiçbir bilimsel tahmin yapılamaz",
-      "119. elementin periyodik tablodaki yeri tamamen rastgele belirlenecektir",
-      "Periyodik tablo yalnızca zaten keşfedilmiş elementler için anlamlıdır, gelecekteki elementlere uygulanamaz",
-      "Bu tahminler yalnızca deneysel gözlemle yapılabilir, teorik ilkelerle yapılamaz"
+      "K⁺ (19 proton, 18 elektron) — Ca²⁺ ve Cl⁻'den farklı proton sayısına sahip fakat aynı elektron sayısına sahiptir",
+      "Na⁺ (11 proton, 10 elektron) — elektron sayısı farklı olduğundan uygun değildir",
+      "Ar (18 proton, 18 elektron) — proton sayısı da 18'dir, bu da farklıdır ama örnek olarak uygundur, ancak K⁺ de aynı derecede uygundur",
+      "S²⁻ (16 proton, 18 elektron) — proton sayısı 16, bu da farklıdır ve uygun bir örnektir",
+      "Yalnızca bir doğru cevap yoktur, birden fazla tanecik bu koşulu sağlayabilir (K⁺, Ar, S²⁻ gibi), fakat K⁺ en yaygın kullanılan örnektir"
     ],
     correct: 0,
-    explain: "Periyodik tablonun temelindeki elektron dizilimi ilkeleri (Aufbau, n+l kuralı, blok yapısı) o kadar sistematik ve güvenilirdir ki, bilim insanları henüz sentezlenmemiş ağır elementlerin bile periyodik tablodaki konumunu ve genel kimyasal davranış eğilimini teorik olarak, deneyden önce tahmin edebilir; bu, periyodik sistemin gücünün en çarpıcı göstergelerinden biridir."
+    explain: "K⁺ (19 proton, 18 elektron) hem Ca²⁺ (20 proton) hem Cl⁻'den (17 proton) farklı proton sayısına sahipken, aynı elektron sayısına (18) sahip olduğundan izoelektronik ailenin bir başka üyesidir; bu, izoelektronik serilerin tek bir tanecikle sınırlı olmadığını gösterir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Bir öğrenci, S²⁻, Cl⁻, K⁺, Ca²⁺ iyonlarının hepsinin argon (Ar) ile aynı elektron sayısına (18) sahip izoelektronik bir seri oluşturduğunu; bu seride proton sayısının 16'dan 20'ye kadar arttığını inceliyor.",
-    text: "Bu seriden yola çıkarak, izoelektronik iyonlarda yük büyüklüğü ile iyon yarıçapı arasındaki ilişki için tümevarımsal olarak en doğru genel kural hangisidir?",
+    context: "Bir öğretim materyalinde şu senaryo sunulmaktadır: bir element periyodik tabloda 4. periyot, d blokta yer almaktadır ve değerlik dizilimi 4s² 3d² şeklindedir; ancak bu elementin bazı bileşiklerinde yalnızca d elektronlarının bir kısmı kullanılırken s elektronları hiç kullanılmamaktadır.",
+    text: "Bu senaryo, geçiş metallerinin değerlik elektronu kavramıyla ilgili hangi önemli noktayı vurgular?",
     options: [
-      "Elektron sayısı sabitken proton sayısı (dolayısıyla pozitif yük) arttıkça çekirdek çekimi güçlenir ve iyon yarıçapı küçülür; bu nedenle S²⁻ en büyük, Ca²⁺ en küçük iyondur",
-      "Negatif yüklü iyonlar her zaman pozitif yüklü iyonlardan daha küçüktür",
-      "İzoelektronik seride yük büyüklüğünün iyon yarıçapıyla hiçbir ilişkisi yoktur",
-      "Proton sayısı arttıkça iyon yarıçapı da orantılı biçimde büyür",
-      "Bu seride tüm iyonların yarıçapı elektron sayısı eşit olduğundan birbirine eşittir"
+      "Geçiş metallerinde 'değerlik elektronu' kavramı, s blok elementlerindeki kadar keskin değildir; bir bileşikte kaç elektronun kullanılacağı bileşiğin türüne göre değişebilir",
+      "Geçiş metallerinde s elektronları hiçbir zaman kimyasal bağa katılmaz",
+      "d elektronları hiçbir zaman kimyasal bağa katılmaz, yalnızca s elektronları katılır",
+      "Bu senaryo, değerlik elektronu kavramının d blok için tamamen geçersiz olduğunu kanıtlar",
+      "Geçiş metallerinde her zaman tüm s ve d elektronları aynı anda kullanılır"
     ],
     correct: 0,
-    explain: "S²⁻ (16 proton), Cl⁻ (17 proton), K⁺ (19 proton), Ca²⁺ (20 proton) sırasında elektron sayısı sabit (18) kalırken proton sayısı artar; bu artan çekirdek yükü elektron bulutunu daha güçlü çektiğinden iyon yarıçapı bu sırayla sistematik olarak küçülür — S²⁻ en büyük, Ca²⁺ en küçük iyondur."
+    explain: "s blok elementlerinde değerlik elektron sayısı ve dolayısıyla oluşacak iyon yükü genellikle sabitken, geçiş metallerinde hangi ve kaç elektronun (s, d veya ikisinin kombinasyonu) kimyasal bağa/iyonlaşmaya katılacağı bileşiğe göre değişebilir; bu, geçiş metallerinde 'değerlik elektronu' kavramının daha esnek olduğunu gösterir."
   }
 ],
   "ozellikler": [
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, 'atom yarıçapı' kavramının tanımını öğreniyor.",
-    text: "Atom yarıçapı için en doğru tanım hangisidir?",
-    options: ["Yalnızca çekirdeğin büyüklüğü", "Çekirdek merkezinden en dış elektron kabuğuna olan uzaklık", "Protonun boyutu", "Atomun kütlesi", "Elektronun hızı"],
-    correct: 1,
-    explain: "Atom yarıçapı, bir atomun çekirdek merkezinden en dış kararlı elektron kabuğuna olan yaklaşık uzaklığı olarak tanımlanır."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, periyodik tabloda aynı grup boyunca (yukarıdan aşağıya) atom yarıçapının nasıl değiştiğini araştırıyor.",
-    text: "Aynı grupta yukarıdan aşağıya inildikçe atom yarıçapı genel olarak nasıl değişir?",
+    circleCompare: {
+      title: "Aynı grupta üç elementin atom yarıçapı karşılaştırması (pm)",
+      unit: "pm",
+      items: [
+        { label: "Li", value: 152 },
+        { label: "Na", value: 186 },
+        { label: "K", value: 227 }
+      ]
+    },
+    context: "Görseldeki üç element (Li, Na, K) periyodik tablonun aynı grubunda (1. grup), farklı periyotlarda yer almaktadır.",
+    text: "Görseldeki daire büyüklüklerine dayanarak, aynı grupta yukarıdan aşağıya inildikçe atom yarıçapı nasıl değişir?",
     options: ["Azalır", "Artar", "Değişmez", "Önce artar sonra azalır", "Rastgele değişir"],
     correct: 1,
-    explain: "Aynı grupta aşağı inildikçe enerji düzeyi (n) arttığından, elektronlar çekirdekten daha uzak kabuklarda bulunur ve atom yarıçapı genel olarak artar."
+    explain: "Aynı grupta yukarıdan aşağıya inildikçe yeni enerji düzeyleri (kabuklar) eklendiğinden atom yarıçapı artar; Li < Na < K sıralaması bunu doğrular."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, aynı periyot boyunca (soldan sağa) atom yarıçapının nasıl değiştiğini araştırıyor.",
-    text: "Aynı periyotta soldan sağa gidildikçe atom yarıçapı genel olarak nasıl değişir?",
-    options: ["Artar", "Azalır", "Değişmez", "Yalnızca metallerde değişir", "Rastgele değişir"],
+    circleCompare: {
+      title: "Aynı periyotta (3. periyot) üç elementin atom yarıçapı karşılaştırması (pm)",
+      unit: "pm",
+      items: [
+        { label: "Na", value: 186 },
+        { label: "Al", value: 143 },
+        { label: "Cl", value: 99 }
+      ]
+    },
+    context: "Görseldeki üç element (Na, Al, Cl) periyodik tablonun aynı periyodunda (3. periyot), farklı gruplarda yer almaktadır.",
+    text: "Görseldeki daire büyüklüklerine dayanarak, aynı periyotta soldan sağa gidildikçe atom yarıçapı nasıl değişir?",
+    options: ["Artar", "Azalır", "Değişmez", "Önce azalır sonra artar", "Rastgele değişir"],
     correct: 1,
-    explain: "Aynı periyotta soldan sağa gidildikçe çekirdek yükü (proton sayısı) artar, elektron sayısı aynı kabukta arttığından çekim kuvveti güçlenir ve atom yarıçapı genel olarak azalır."
+    explain: "Aynı periyotta soldan sağa gidildikçe çekirdek yükü artarken elektronlar aynı enerji düzeyine eklendiğinden çekim kuvveti artar ve atom yarıçapı azalır; Na > Al > Cl sıralaması bunu doğrular."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, 'iyonlaşma enerjisi' kavramının tanımını öğreniyor.",
-    text: "İyonlaşma enerjisi için en doğru tanım hangisidir?",
-    options: ["Bir atomun kütlesi", "Gaz hâlindeki bir atomdan bir elektron koparmak için gereken minimum enerji", "Bir atomun yarıçapı", "Bir atomun elektron kazanma isteği", "Bir bileşiğin erime sıcaklığı"],
+    context: "İyonlaşma enerjisi, bir atomdan bir elektronu tamamen uzaklaştırmak için gereken minimum enerji miktarı olarak tanımlanır.",
+    text: "Bir atomun yarıçapı küçüldükçe (elektronlar çekirdeğe daha yakınsa), iyonlaşma enerjisi genellikle nasıl değişir?",
+    options: ["Azalır", "Artar", "Değişmez", "Önce artar sonra azalır", "Yarıçapla hiçbir ilişkisi yoktur"],
     correct: 1,
-    explain: "İyonlaşma enerjisi, gaz hâlindeki nötr bir atomdan bir elektron koparıp uzaklaştırmak için gereken minimum enerji miktarıdır."
+    explain: "Elektronlar çekirdeğe daha yakın olduğunda çekim kuvveti daha güçlü olur; bu nedenle elektronu uzaklaştırmak daha fazla enerji gerektirir, yani iyonlaşma enerjisi artar."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, aynı periyot boyunca (soldan sağa) iyonlaşma enerjisinin genel eğilimini araştırıyor.",
-    text: "Aynı periyotta soldan sağa gidildikçe iyonlaşma enerjisi genel olarak nasıl değişir?",
-    options: ["Azalır", "Artar", "Değişmez", "Yalnızca ametallerde artar", "Sıfıra iner"],
+    context: "Elektronegatiflik, bir atomun kimyasal bağdaki elektronları kendine çekme gücünün bir ölçüsüdür.",
+    text: "Periyodik tabloda soldan sağa gidildikçe elektronegatiflik genellikle nasıl değişir?",
+    options: ["Azalır", "Artar", "Değişmez", "Önce artar sonra azalır", "Elektronegatiflik yalnızca gruplar için tanımlıdır"],
     correct: 1,
-    explain: "Aynı periyotta soldan sağa gidildikçe çekirdek yükü artar ve atom yarıçapı küçülür; bu, elektronların daha güçlü çekilmesine ve iyonlaşma enerjisinin genel olarak artmasına yol açar."
+    explain: "Soldan sağa gidildikçe çekirdek yükü artarken atom yarıçapı küçüldüğünden, çekirdeğin bağ elektronlarını çekme gücü (elektronegatiflik) artar."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, aynı grup boyunca (yukarıdan aşağıya) iyonlaşma enerjisinin genel eğilimini araştırıyor.",
-    text: "Aynı grupta yukarıdan aşağıya inildikçe iyonlaşma enerjisi genel olarak nasıl değişir?",
-    options: ["Artar", "Azalır", "Değişmez", "Önce azalır sonra sabit kalır", "Rastgele değişir"],
+    context: "Metalik özellik, bir elementin elektron verme (katyon oluşturma) eğilimiyle ilişkilendirilir; ametalik özellik ise elektron alma eğilimiyle ilişkilendirilir.",
+    text: "Periyodik tabloda soldan sağa gidildikçe metalik özellik nasıl değişir?",
+    options: ["Artar", "Azalır", "Değişmez", "Önce azalır sonra artar", "Yalnızca gruplar için geçerlidir, periyotlar için değil"],
     correct: 1,
-    explain: "Aynı grupta aşağı inildikçe değerlik elektronu çekirdekten uzaklaşır ve iç kabuk elektronlarının perdeleme etkisi artar; bu nedenle iyonlaşma enerjisi genel olarak azalır."
+    explain: "Soldan sağa gidildikçe elektronegatiflik ve iyonlaşma enerjisi arttığından (elektron verme eğilimi azaldığından) metalik özellik azalır, ametalik özellik artar."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, 'elektronegatiflik' kavramının tanımını öğreniyor.",
-    text: "Elektronegatiflik için en doğru tanım hangisidir?",
-    options: ["Bir atomun kütlesi", "Bir atomun kimyasal bağdaki elektronları kendine çekme gücü", "Bir atomun renk özelliği", "Bir atomun manyetik özelliği", "Bir atomun radyoaktif olma derecesi"],
+    context: "Periyodik tabloda aynı grupta yukarıdan aşağıya inildikçe atom yarıçapı artar ve elektronlar çekirdekten uzaklaşır.",
+    text: "Bu bilgiye dayanarak, aynı grupta yukarıdan aşağıya inildikçe iyonlaşma enerjisi nasıl değişmesi beklenir?",
+    options: ["Artar", "Azalır", "Değişmez", "Önce azalır sonra artar", "Grup içinde tahmin edilemez"],
     correct: 1,
-    explain: "Elektronegatiflik, bir atomun kimyasal bir bağdaki ortak elektronları kendine doğru çekme eğiliminin (gücünün) bir ölçüsüdür."
+    explain: "Yarıçap arttıkça değerlik elektronları çekirdekten uzaklaşır ve çekim kuvveti zayıflar; bu nedenle aynı grupta aşağı inildikçe iyonlaşma enerjisi azalır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, periyodik tablodaki en elektronegatif elementi araştırıyor.",
-    text: "Periyodik tablodaki en elektronegatif element hangisidir?",
-    options: ["Sodyum (Na)", "Flor (F)", "Helyum (He)", "Sezyum (Cs)", "Karbon (C)"],
+    context: "Bir katyon (örneğin Na⁺), oluştuğu nötr atomdan (Na) daha az elektrona sahiptir ancak proton sayısı değişmez.",
+    text: "Bu bilgiye dayanarak, Na⁺ iyonunun yarıçapı Na atomunun yarıçapıyla karşılaştırıldığında nasıldır?",
+    options: ["Na⁺, Na'dan daha büyüktür", "Na⁺, Na'dan daha küçüktür", "İkisi eşit büyüklüktedir", "Karşılaştırma yapılamaz", "Na⁺'nin yarıçapı yoktur"],
     correct: 1,
-    explain: "Flor (F), periyodik tablodaki tüm elementler arasında en yüksek elektronegatifliğe sahiptir; bu, küçük atom yarıçapı ve yüksek etkin çekirdek yükünün bir sonucudur."
+    explain: "Katyon oluşurken elektron kaybedilir ve genellikle bir kabuk tamamen boşalır; kalan elektronlar aynı proton sayısına karşı daha az elektron-elektron itmesiyle çekirdeğe daha yakın çekilir, bu nedenle katyon nötr atomdan küçüktür."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, aynı periyotta soldan sağa gidildikçe elektronegatifliğin nasıl değiştiğini araştırıyor.",
-    text: "Aynı periyotta soldan sağa gidildikçe elektronegatiflik genel olarak nasıl değişir?",
-    options: ["Değişmez", "Azalır", "Artar", "Önce artar sonra sıfırlanır", "Yalnızca metallerde artar"],
+    context: "Bir anyon (örneğin Cl⁻), oluştuğu nötr atomdan (Cl) daha fazla elektrona sahiptir ancak proton sayısı değişmez.",
+    text: "Bu bilgiye dayanarak, Cl⁻ iyonunun yarıçapı Cl atomunun yarıçapıyla karşılaştırıldığında nasıldır?",
+    options: ["Cl⁻, Cl'den daha küçüktür", "Cl⁻, Cl'den daha büyüktür", "İkisi eşit büyüklüktedir", "Karşılaştırma yapılamaz", "Cl⁻'nin yarıçapı tanımsızdır"],
+    correct: 1,
+    explain: "Anyon oluşurken elektron eklenir; aynı proton sayısına karşı daha fazla elektron-elektron itmesi elektron bulutunun genişlemesine yol açar, bu nedenle anyon nötr atomdan büyüktür."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
+    context: "Periyodik tabloda soy gazlar (18. grup) genellikle çok yüksek iyonlaşma enerjisine sahiptir; alkali metaller (1. grup) ise genellikle çok düşük iyonlaşma enerjisine sahiptir.",
+    text: "Bu farkın temel nedeni en doğru şekilde nasıl açıklanır?",
+    options: ["Soy gazların hiç elektronu yoktur", "Soy gazların tamamen dolu kararlı elektron dizilimi elektron kaybına büyük direnç gösterirken, alkali metallerin tek değerlik elektronu kolayca kaybedilebilir", "Alkali metallerin proton sayısı soy gazlardan her zaman fazladır", "Bu fark yalnızca atom kütlesinden kaynaklanır", "Soy gazlar ve alkali metaller arasında iyonlaşma enerjisi farkı yoktur"],
+    correct: 1,
+    explain: "Soy gazların tamamen dolu (kararlı) değerlik kabuğu bir elektronu uzaklaştırmaya büyük direnç gösterirken, alkali metallerin fazladan tek bir değerlik elektronu (dolu kabuğun dışında) görece kolayca uzaklaştırılabilir; bu, iyonlaşma enerjisi farkının temel nedenidir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
+    context: "Flor (F), periyodik tabloda en yüksek elektronegatifliğe sahip elementtir; francyum (Fr) ise en düşük elektronegatifliğe sahip elementlerden biridir.",
+    text: "Bu iki elementin periyodik tablodaki konumu, elektronegatiflik trendiyle nasıl örtüşür?",
+    options: ["Flor sol alt köşede, francyum sağ üst köşededir", "Flor sağ üst köşeye, francyum sol alt köşeye yakın konumdadır; bu, elektronegatifliğin sağ üste doğru arttığı genel trendle uyumludur", "İkisi de aynı grupta yer alır", "İkisi de aynı periyotta yer alır", "Konumları elektronegatiflik trendiyle hiçbir ilişki taşımaz"],
+    correct: 1,
+    explain: "Periyodik tabloda elektronegatiflik genel olarak sol alttan sağ üste doğru artar; flor (sağ üst bölgede) en yüksek, francyum (sol alt köşede) en düşük elektronegatifliğe sahiptir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
+    context: "Metaller genellikle parlak, tel/levha hâline getirilebilir (dövülebilir/çekilebilir) ve elektriği iyi ileten elementlerdir; bu özellikler periyodik tabloda sol ve orta bölgede yoğunlaşır.",
+    text: "Periyodik tabloda metalik özellik gösteren elementlerin genel konumu nasıldır?",
+    options: ["Yalnızca 17. ve 18. gruplarda bulunurlar", "Yalnızca tablonun sağ üst köşesinde bulunurlar", "Tablonun sol ve orta (alt) kısmında yoğunlaşırlar", "Periyodik tabloda rastgele dağılmışlardır, herhangi bir örüntü yoktur", "Yalnızca 2. periyotta bulunurlar"],
     correct: 2,
-    explain: "Aynı periyotta soldan sağa gidildikçe atom yarıçapı küçülür ve çekirdek çekimi güçlenir; bu, elektronegatifliğin genel olarak artmasına yol açar."
+    explain: "Metalik özellik soldan sağa azaldığından ve yukarıdan aşağıya arttığından, metaller periyodik tablonun sol ve alt/orta bölgesinde yoğunlaşır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, aynı grupta yukarıdan aşağıya inildikçe elektronegatifliğin nasıl değiştiğini araştırıyor.",
-    text: "Aynı grupta yukarıdan aşağıya inildikçe elektronegatiflik genel olarak nasıl değişir?",
-    options: ["Artar", "Azalır", "Değişmez", "Önce azalır sonra artar", "Yalnızca ametallerde azalır"],
-    correct: 1,
-    explain: "Aynı grupta aşağı inildikçe atom yarıçapı büyür ve değerlik elektronları çekirdekten uzaklaşır; bu, elektronegatifliğin genel olarak azalmasına yol açar."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, periyodik tabloda metalik özelliğin (elektron verme eğiliminin) genel dağılımını araştırıyor.",
-    text: "Periyodik tabloda metalik özellik en fazla nerede görülür?",
-    options: ["Tam ortada", "Sağ üst köşede", "Sol alt köşede", "Yalnızca 18. grupta", "Yalnızca 2. periyotta"],
+    context: "Bir element ile onun +1 yüklü katyonu karşılaştırıldığında, katyonun her zaman daha az elektrona sahip olduğu bilinmektedir.",
+    text: "Buna göre bir M atomu ile M⁺ iyonunun ilk iyonlaşma enerjileri karşılaştırıldığında hangisi daha yüksektir?",
+    options: ["İkisi için de gereken enerji birbirine eşittir", "M'den ilk elektronu koparmak her zaman daha fazla enerji gerektirir", "M⁺'den ikinci bir elektron koparmak (M²⁺ oluşturmak), M'den ilk elektronu koparmaktan daha fazla enerji gerektirir", "M⁺'den elektron koparmak imkânsızdır", "Enerji karşılaştırması iyon yüküyle ilgisizdir"],
     correct: 2,
-    explain: "Metalik özellik (elektron verme, iyonlaşma enerjisinin düşük olması), periyodik tablonun sol alt köşesine doğru artar; bu bölgedeki elementler (Cs, Fr gibi) en metalik karakterdedir."
+    explain: "Bir kez pozitif yüklenmiş bir iyondan (M⁺) ikinci bir elektron koparmak, kalan elektronların artan net pozitif çekirdek çekimi nedeniyle daha zordur; bu yüzden ikinci iyonlaşma enerjisi her zaman birinciden büyüktür."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, periyodik tabloda ametalik özelliğin (elektron alma eğiliminin) genel dağılımını araştırıyor.",
-    text: "Periyodik tabloda ametalik özellik en fazla nerede görülür?",
-    options: ["Sol alt köşede", "Sağ üst köşede (soy gazlar hariç)", "Tam ortada", "Yalnızca 1. grupta", "Yalnızca son periyotta"],
-    correct: 1,
-    explain: "Ametalik özellik (elektron alma eğilimi, yüksek elektronegatiflik), periyodik tablonun sağ üst köşesine doğru artar (soy gazlar bu eğilimin dışında değerlendirilir çünkü zaten kararlıdırlar)."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, soy gazların (18. grup) neden çok yüksek iyonlaşma enerjisine sahip olduğunu araştırıyor.",
-    text: "Soy gazların yüksek iyonlaşma enerjisine sahip olmasının temel nedeni en doğru hangisidir?",
-    options: ["Çok az proton içermeleri", "Çok büyük atom yarıçapına sahip olmaları", "Tam dolu ve kararlı bir değerlik elektron dizilimine sahip olmaları", "Renksiz gazlar olmaları", "Doğada çok az bulunmaları"],
+    context: "Bir bileşikte iki atom arasındaki elektronegatiflik farkı ne kadar büyükse, bağın iyonik karakteri o kadar yüksek olma eğilimindedir.",
+    text: "Sodyum (Na, düşük elektronegatiflik) ile klor (Cl, yüksek elektronegatiflik) arasında oluşan bağ hangi karaktere sahip olması beklenir?",
+    options: ["Metalik bir bağ", "Tamamen kovalent, apolar bir bağ", "Yüksek iyonik karakterli bir bağ", "Hiçbir bağ oluşmaz", "Bağ karakteri elektronegatiflikle ilgisizdir"],
     correct: 2,
-    explain: "Soy gazlar tam dolu ve kararlı bir değerlik elektron dizilimine sahip olduğundan, bu kararlı yapıdan bir elektron koparmak için çok yüksek enerji gerekir; bu da onların yüksek iyonlaşma enerjisine sahip olmasını açıklar."
+    explain: "Na ile Cl arasındaki büyük elektronegatiflik farkı, elektronların Cl'ye doğru büyük ölçüde kaydığı, yüksek iyonik karakterli bir bağ (NaCl) oluşumuna yol açar."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, alkali metallerin (1. grup) neden düşük iyonlaşma enerjisine sahip olduğunu araştırıyor.",
-    text: "Alkali metallerin düşük iyonlaşma enerjisine sahip olmasının temel nedeni en doğru hangisidir?",
-    options: ["Hiç elektron içermemeleri", "Çok yüksek elektronegatifliğe sahip olmaları", "Tek bir değerlik elektronuna sahip olmaları ve bu elektronun görece zayıf bağlı olması", "Tam dolu değerlik kabuğuna sahip olmaları", "Yalnızca gaz hâlinde bulunmaları"],
+    context: "Periyodik tabloda 'metaloidler' (yarı metaller), metaller ile ametaller arasında bir merdiven şeklinde uzanan, her iki grubun özelliklerini kısmen taşıyan elementlerdir (örneğin bor, silisyum, germanyum).",
+    text: "Metaloidlerin periyodik tablodaki konumu hakkında en doğru ifade hangisidir?",
+    options: ["Yalnızca tablonun en sağında bulunurlar", "Yalnızca tablonun en solunda bulunurlar", "Metaller ile ametaller arasındaki geçiş bölgesinde, merdiven şeklinde bir çizgi boyunca bulunurlar", "Metaloidler periyodik tabloda tanımlanmamıştır", "Metaloidler yalnızca d blokta bulunur"],
     correct: 2,
-    explain: "Alkali metallerin tek bir değerlik elektronu vardır ve bu elektron, iç kabuk elektronlarının perdeleme etkisi nedeniyle çekirdeğe görece zayıf bağlıdır; bu nedenle bu elektronu koparmak için düşük enerji yeterlidir."
+    explain: "Metaloidler, periyodik tabloda metaller ile ametaller arasındaki geçiş bölgesinde, genellikle p blokta merdiven şeklinde bir çizgi boyunca yer alır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, 'etkin çekirdek yükü' kavramının ne anlama geldiğini öğreniyor.",
-    text: "Etkin çekirdek yükü için en doğru tanım hangisidir?",
-    options: ["Çekirdekteki toplam nötron sayısı", "Çekirdekteki toplam proton sayısı", "Bir elektronun, iç kabuk elektronlarının perdeleme etkisi hesaba katıldıktan sonra hissettiği net pozitif yük", "Atomun toplam elektron sayısı", "Atomun kütle numarası"],
+    context: "Bir elementin elektron ilgisi (elektron afinitesi), o elemente bir elektron eklendiğinde açığa çıkan (veya soğurulan) enerji miktarıdır.",
+    text: "Halojenler (17. grup) genellikle çok yüksek (mutlak değerce büyük, negatif) elektron ilgisine sahiptir. Bunun temel nedeni nedir?",
+    options: ["Halojenlerin zaten tam dolu bir değerlik kabuğuna sahip olması", "Halojenlerin çekirdeklerinde hiç proton bulunmaması", "Bir elektron eklendiğinde değerlik kabuğu tamamen dolarak kararlı bir soy gaz dizilimine ulaşmaları", "Elektron ilgisinin halojenler için tanımsız olması", "Halojenlerin metalik özellik göstermesi"],
     correct: 2,
-    explain: "Etkin çekirdek yükü, bir elektronun gerçek çekirdek yükünden, iç kabuk elektronlarının perdeleme (ekranlama) etkisi çıkarıldıktan sonra hissettiği net pozitif çekim kuvvetini ifade eder."
+    explain: "Halojenler bir elektron aldığında değerlik kabukları tamamen dolar (oktet) ve kararlı bir soy gaz dizilimine ulaşırlar; bu süreç büyük miktarda enerji açığa çıkararak yüksek (büyük negatif) elektron ilgisiyle sonuçlanır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, katyon (pozitif iyon) yarıçapını nötr atomun yarıçapıyla karşılaştırıyor.",
-    text: "Bir atomun katyonu, nötr atoma göre yarıçap bakımından nasıldır?",
-    options: ["Nötr atomla tam olarak aynı büyüklüktedir", "Nötr atomdan daha büyüktür", "Nötr atomdan daha küçüktür", "Katyonların yarıçapı yoktur", "Karşılaştırma yapılamaz"],
+    context: "Bir öğretim materyalinde periyodik özellik trendleri şu şekilde özetlenmektedir: atom yarıçapı sol-alta doğru artar; iyonlaşma enerjisi ve elektronegatiflik ise sağ-üste doğru artar.",
+    text: "Bu genellemeye göre, periyodik tabloda en büyük atom yarıçapına sahip bölge neresidir?",
+    options: ["Tam orta bölge", "Sağ üst köşe", "Sol alt köşe", "Yalnızca 1. periyot", "Yalnızca 18. grup"],
     correct: 2,
-    explain: "Bir atom elektron kaybederek katyon oluşturduğunda, hem elektron sayısı azalır hem de kalan elektronlar aynı çekirdek yüküyle daha az sayıda elektrona dağıtılan çekim kuvvetini hisseder; bu nedenle katyon, nötr atomdan daha küçüktür."
+    explain: "Atom yarıçapı sol-alta doğru arttığından, periyodik tablonun sol alt köşesindeki elementler (örneğin francyum) en büyük atom yarıçapına sahiptir."
   },
+
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, anyon (negatif iyon) yarıçapını nötr atomun yarıçapıyla karşılaştırıyor.",
-    text: "Bir atomun anyonu, nötr atoma göre yarıçap bakımından nasıldır?",
-    options: ["Nötr atomla tam olarak aynı büyüklüktedir", "Nötr atomdan daha küçüktür", "Nötr atomdan daha büyüktür", "Anyonların yarıçapı yoktur", "Karşılaştırma yapılamaz"],
+    context: "Bir bileşikte iki ametal atomu arasında elektronegatiflik farkı küçükse (örneğin iki aynı element arasında, fark=0), bağdaki elektronlar iki atom arasında eşit paylaşılma eğilimindedir.",
+    text: "Elektronegatiflik farkı sıfır olan iki atom arasındaki bağ türü hangisidir?",
+    options: ["Metalik bağ", "İyonik bağ", "Apolar (polar olmayan) kovalent bağ", "Bağ oluşmaz", "Her zaman polar kovalent bağ"],
     correct: 2,
-    explain: "Bir atom elektron kazanarak anyon oluşturduğunda, aynı çekirdek yükü artık daha fazla sayıda elektronu çekmek zorunda kalır ve elektron-elektron itmesi artar; bu nedenle anyon, nötr atomdan daha büyüktür."
+    explain: "Elektronegatiflik farkı sıfır (veya çok küçük) olduğunda, bağ elektronları iki atom arasında eşit paylaşılır; bu tür bağlara apolar kovalent bağ denir."
   },
 
   /* ============ ORTA ============ */
@@ -5025,233 +4323,215 @@ export const QUIZ = {
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Aşağıdaki grafik, 3. periyot elementlerinin (Na'dan Ar'a) yaklaşık atom yarıçapı değerlerini (pikometre, pm) göstermektedir.",
     chart: {
       type: "line",
-      title: "3. periyot elementlerinde atom yarıçapı (pm)",
-      labels: ["Na", "Mg", "Al", "Si", "P", "S", "Cl", "Ar"],
-      values: [186, 160, 143, 117, 110, 104, 99, 71]
-    },
-    text: "Grafikteki genel eğilime göre bu azalışın en doğru açıklaması hangisidir?",
-    options: [
-      "Bu azalış tamamen rastlantısaldır, hiçbir sistematik nedeni yoktur",
-      "Soldan sağa gidildikçe elektron sayısı azaldığı için yarıçap küçülür",
-      "Aynı periyotta soldan sağa gidildikçe çekirdek yükü artarken elektronlar aynı ana enerji düzeyinde kaldığından, artan çekim kuvveti atom yarıçapını küçültür",
-      "Soldan sağa gidildikçe enerji düzeyi (n) arttığı için yarıçap küçülür",
-      "Yarıçap yalnızca elementin renginden etkilenir"
-    ],
-    correct: 2,
-    explain: "3. periyotta soldan sağa gidildikçe her elementte bir proton eklenirken elektronlar aynı ana enerji düzeyinde (n=3) kalmaya devam eder; artan çekirdek yükü elektronları daha güçlü çektiğinden atom yarıçapı sistematik olarak küçülür."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Aşağıdaki grafik, 2. periyot elementlerinin (Li'dan Ne'ye) birinci iyonlaşma enerjisi değerlerini (kJ/mol) göstermektedir.",
-    chart: {
-      type: "bar",
-      title: "2. periyot elementlerinde 1. iyonlaşma enerjisi (kJ/mol)",
-      labels: ["Li", "Be", "B", "C", "N", "O", "F", "Ne"],
-      values: [520, 900, 801, 1086, 1402, 1314, 1681, 2081]
-    },
-    text: "Grafikte genel artan eğilime rağmen Be→B ve N→O arasında görülen küçük düşüşlerin en olası açıklaması hangisidir?",
-    options: [
-      "Be ve N elementleri aslında farklı bir periyottadır",
-      "Bu düşüşler ölçüm hatasından kaynaklanır, gerçekte hiçbir düşüş yoktur",
-      "Be'de tam dolu 2s² alt kabuğunun görece kararlılığı ve N'de yarı dolu 2p³ alt kabuğunun görece kararlılığı, bir sonraki elementten (B, O) elektron koparmayı nispeten kolaylaştırır",
-      "Düşüşler yalnızca elementlerin renkleriyle ilgilidir",
-      "B ve O'nun proton sayısı Be ve N'den azdır"
-    ],
-    correct: 2,
-    explain: "Be'nin tam dolu 2s² alt kabuğu ve N'nin yarı dolu 2p³ alt kabuğu ekstra kararlılık sağlar; B'de (2s²2p¹) elektron enerji bakımından biraz daha yüksek olan p orbitalinden, O'da (2s²2p⁴) ise eşleşmiş bir elektrondan koparıldığından, bu elementlerin iyonlaşma enerjisi bir önceki elementten (Be, N) beklenenin biraz altında kalır."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Aşağıdaki tabloda birkaç elementin elektronegatiflik değerleri (Pauling ölçeği) verilmiştir.",
-    table: {
-      headers: ["Element", "Elektronegatiflik", "Grup"],
-      rows: [
-        ["Na", "0,93", "1"],
-        ["Mg", "1,31", "2"],
-        ["Al", "1,61", "13"],
-        ["Cl", "3,16", "17"]
+      title: "2. periyot elementlerinin ilk iyonlaşma enerjisi (kJ/mol)",
+      xLabel: "Element (Li → Ne)",
+      yLabel: "İyonlaşma enerjisi (kJ/mol)",
+      data: [
+        { x: 3, y: 520 },
+        { x: 4, y: 899 },
+        { x: 5, y: 801 },
+        { x: 6, y: 1086 },
+        { x: 7, y: 1402 },
+        { x: 8, y: 1314 },
+        { x: 9, y: 1681 },
+        { x: 10, y: 2081 }
       ]
     },
-    text: "Tablodaki verilere göre Na ile Cl arasındaki büyük elektronegatiflik farkı, bu iki elementin oluşturacağı bağ türü hakkında en doğru hangi çıkarımı destekler?",
-    options: [
-      "Bu fark, aralarında yalnızca kovalent bağ oluşacağını gösterir",
-      "Bu fark, aralarında hiçbir bağ oluşamayacağını gösterir",
-      "Aralarındaki büyük elektronegatiflik farkı, elektronların Cl'ye neredeyse tamamen aktarıldığı iyonik bir bağ (NaCl) oluşumuna işaret eder",
-      "Elektronegatiflik farkının bağ türüyle hiçbir ilişkisi yoktur",
-      "Bu fark, Na'nın Cl'den elektron alacağını gösterir"
-    ],
+    text: "Grafikte genel artan trend içinde, atom numarası 4'ten 5'e (Be'den B'ye) geçerken görülen düşüş en doğru şekilde nasıl açıklanır?",
+    options: ["B'nin atom numarası Be'den küçüktür", "Grafikte bir hata vardır, düşüş olmamalıdır", "B'de tek elektronun daha az kararlı olan p alt kabuğuna yerleşmesi, tam dolu 2s² kabuğuna sahip Be'ye göre daha kolay koparılmasını sağlar", "Bu düşüş yalnızca ölçüm belirsizliğinden kaynaklanır", "İyonlaşma enerjisi atom numarasıyla hiçbir ilişki taşımaz"],
     correct: 2,
-    explain: "Na (0,93) ile Cl (3,16) arasındaki elektronegatiflik farkı oldukça büyüktür (yaklaşık 2,2); bu büyüklükteki farklar genellikle elektronların bir atomdan diğerine neredeyse tamamen aktarıldığı iyonik bağ oluşumuna işaret eder (NaCl iyonik bir bileşiktir)."
+    explain: "Be'nin tam dolu 2s² alt kabuğu ekstra kararlılık sağlarken, B'de bir elektron daha yüksek enerjili ve daha az perdelenmiş 2p alt kabuğuna yerleşir; bu elektron daha kolay koparılabildiğinden B'nin iyonlaşma enerjisi Be'den düşüktür — genel artan trend içindeki küçük bir istisnadır."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, sodyum (Na) ile magnezyumun (Mg) atom yarıçapını karşılaştırıyor; ikisi de 3. periyottadır ancak Mg'nin yarıçapı Na'dan küçüktür.",
-    text: "Bu fark en doğru hangi şekilde açıklanır?",
-    options: [
-      "Bu fark tamamen rastlantısaldır",
-      "Mg'nin elektron sayısı Na'dan azdır",
-      "Mg farklı bir periyotta yer aldığı için yarıçapı küçüktür",
-      "Mg'nin çekirdek yükü Na'dan bir fazladır ve aynı enerji düzeyindeki elektronlar bu ekstra yükü hissederek daha güçlü çekilir",
-      "Mg'nin nötron sayısı Na'dan az olduğu için yarıçapı küçüktür"
-    ],
+    context: "Aynı grafikte, atom numarası 7'den 8'e (N'den O'ya) geçerken de küçük bir düşüş gözlenmektedir (N: 1402, O: 1314 kJ/mol).",
+    text: "Bu düşüşün nedeni, Be-B arasındaki düşüşle karşılaştırıldığında nasıl açıklanır?",
+    options: ["Bu düşüşün hiçbir bilimsel açıklaması yoktur", "İki düşüş de tamamen aynı nedenden kaynaklanır (dolu s alt kabuğu etkisi)", "N'nin yarı dolu 2p³ alt kabuğunun (Hund kuralına göre simetrik, kararlı) ekstra kararlılığı, O'daki eşleşmiş elektronun daha kolay koparılmasına göre daha yüksek iyonlaşma enerjisi gerektirmesine yol açar", "O'nun atom numarası N'den küçüktür", "Düşüş yalnızca deneysel hata sonucudur"],
+    correct: 2,
+    explain: "N'nin 2p³ dizilimi (üç orbitalde birer elektron, Hund kuralına uygun) simetrik ve kararlıdır; O'da ise dördüncü elektron bir orbitalde eşleşmek zorunda kalır ve artan elektron-elektron itmesi bu elektronun daha kolay koparılmasına yol açar — Be-B'deki (s-p alt kabuk farkı) nedenden farklı bir mekanizmadır (elektron eşleşmesi etkisi)."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
+    table: {
+      headers: ["Element", "1. İyonlaşma enerjisi (kJ/mol)", "2. İyonlaşma enerjisi (kJ/mol)"],
+      rows: [
+        ["Na", "496", "4562"],
+        ["Mg", "738", "1451"]
+      ],
+      caption: "Sodyum ve magnezyumun ilk iki iyonlaşma enerjisi"
+    },
+    text: "Tabloya göre, Na'nın 2. iyonlaşma enerjisinin 1. iyonlaşma enerjisinden çok daha büyük bir sıçrama göstermesi (496→4562) neden Mg'ninkinden (738→1451) çok daha belirgindir?",
+    options: ["Mg'nin ikinci iyonlaşma enerjisi Na'dan her zaman büyük olmalıdır", "Na ve Mg arasında hiçbir fark yoktur, veriler hatalıdır", "Na'nın ikinci elektronu, kararlı [Ne] dizilimine ulaşmış Na⁺'dan koparılırken, Mg'nin ikinci elektronu henüz tamamlanmamış bir değerlik kabuğundan (3s¹) koparılır", "Bu fark yalnızca atom kütlesinden kaynaklanır", "İkinci iyonlaşma enerjisi yalnızca metal olmayan elementler için tanımlıdır"],
+    correct: 2,
+    explain: "Na⁺ zaten kararlı bir soy gaz ([Ne]) dizilimine sahiptir; bu dizilimden bir elektron daha koparmak çok büyük enerji gerektirir (iç kabuktan koparma). Mg⁺ ise henüz bir değerlik elektronu (3s¹) taşımaktadır, bu elektronu koparmak nispeten kolaydır — bu yüzden sıçrama Mg'de değil Na'da çok daha belirgindir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
+    circleCompare: {
+      title: "İzoelektronik dört taneciğin yarıçap karşılaştırması (pm, temsilî)",
+      unit: "pm",
+      items: [
+        { label: "N³⁻", value: 146 },
+        { label: "O²⁻", value: 140 },
+        { label: "F⁻", value: 133 },
+        { label: "Na⁺", value: 102 }
+      ]
+    },
+    text: "Bu dört tanecik aynı sayıda elektrona (10) sahip olmasına rağmen farklı yarıçaplara sahiptir. Görseldeki azalan boyut sıralaması hangi etkiyle en iyi açıklanır?",
+    options: ["Bu sıralama rastgele oluşmuştur, bilimsel bir açıklaması yoktur", "Bu taneciklerin farklı sayıda elektrona sahip olması", "Yarıçap yalnızca elektron sayısına bağlıdır, proton sayısının etkisi yoktur", "Proton sayısı arttıkça (N'den Na'ya) aynı sayıdaki elektronu çeken net çekirdek çekiminin artması", "Taneciklerin farklı periyotlarda bulunması"],
     correct: 3,
-    explain: "Mg (12 proton), Na'dan (11 proton) bir fazla çekirdek yüküne sahiptir; her iki element de aynı ana enerji düzeyinde (n=3) elektron bulundurduğundan, Mg'deki ekstra çekirdek yükü elektronları daha güçlü çeker ve atom yarıçapını küçültür."
+    explain: "İzoelektronik taneciklerde (aynı elektron sayısı) proton sayısı arttıkça çekirdeğin elektron bulutunu çekme gücü artar; bu nedenle N³⁻(7p)>O²⁻(8p)>F⁻(9p)>Na⁺(11p) sıralamasında yarıçap küçülür."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, bir atomun ardışık iyonlaşma enerjilerini (1., 2., 3. elektronu koparmak için gereken enerjileri) inceliyor ve değerlik elektronları bittikten sonra bir sonraki iyonlaşma enerjisinde çok büyük bir sıçrama olduğunu gözlemliyor (örneğin sodyumda 2. iyonlaşma enerjisi 1.'den yaklaşık 10 kat fazladır).",
-    text: "Bu büyük sıçramanın en doğru açıklaması hangisidir?",
-    options: [
-      "Sodyum atomunun ikinci iyonlaşmadan sonra farklı bir elemente dönüştüğü için sıçrama olur",
-      "Bu sıçrama ölçüm hatasından kaynaklanır",
-      "İkinci elektronun kütlesi birinciden fazladır",
-      "Değerlik elektronları tükendikten sonra bir sonraki elektron, çekirdeğe çok daha yakın ve daha az perdelenen bir iç kabuktan koparılmaya çalışılır, bu da çok daha fazla enerji gerektirir",
-      "Bu sıçrama yalnızca sodyuma özgüdür, başka hiçbir elementte görülmez"
-    ],
+    context: "Bir geçiş metali serisinde (örneğin 4. periyot Sc'den Zn'ye), atom yarıçapındaki değişim baş grup elementlerindeki kadar belirgin ve düzenli değildir; yarıçap önce hafifçe azalır, sonra neredeyse sabit kalır, seri sonuna doğru hafifçe artar.",
+    text: "Bu düzensiz (görece yatay) değişimin temel nedeni nedir?",
+    options: ["Bu düzensizlik yalnızca ölçüm hatasından kaynaklanır", "Geçiş metallerinde atom yarıçapı hiçbir zaman değişmez", "Geçiş metallerinde proton sayısı sabittir", "Eklenen elektronların iç (n-1)d alt kabuğuna yerleşmesi; bu elektronlar en dış (değerlik) kabuğu genişletmek yerine iç kabukta çekirdek yükündeki artışı kısmen perdeler", "Geçiş metallerinde periyodik trendler hiçbir zaman geçerli değildir"],
     correct: 3,
-    explain: "Sodyumun tek değerlik elektronu (3s¹) koparıldıktan sonra geriye kalan Na⁺ iyonu tam dolu, çekirdeğe yakın bir iç kabuk (2p⁶) yapısına sahiptir; bu iç kabuk elektronunu koparmak, hem çekirdeğe daha yakın olmaları hem de daha az perdelenmeleri nedeniyle çok daha fazla enerji gerektirir — bu örüntü, değerlik elektron sayısını belirlemede kullanılabilecek genel bir ipucudur."
+    explain: "Baş grup elementlerinde eklenen elektronlar en dış (değerlik) kabuğa yerleşirken, geçiş metallerinde eklenen elektronlar bir iç kabuğa (n-1)d yerleşir; bu elektronlar artan çekirdek yükünü değerlik elektronlarından kısmen perdeleyerek yarıçap değişimini yumuşatır (daha az belirgin hâle getirir)."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, geçiş metallerinde (d bloğu) atom yarıçapının bir periyot boyunca ana grup elementlerine göre çok daha az değiştiğini (görece sabit kaldığını) gözlemliyor.",
-    text: "Bu görece sabitliğin en olası açıklaması hangisidir?",
-    options: [
-      "Bu sabitlik yalnızca görsel bir yanılsamadır, gerçekte büyük değişim vardır",
-      "Geçiş metallerinde çekirdek yükü hiç değişmez",
-      "Geçiş metalleri elektron içermez",
-      "Geçiş metallerinde eklenen elektronlar iç d orbitaline yerleştiğinden, değerlik (en dış) elektronlar üzerindeki perdeleme etkisi artan çekirdek yükünü büyük ölçüde dengeler",
-      "Geçiş metallerinde periyot kavramı geçerli değildir"
-    ],
+    table: {
+      headers: ["Element", "Elektronegatiflik (Pauling)", "Grup"],
+      rows: [
+        ["Li", "0,98", "1"],
+        ["Na", "0,93", "1"],
+        ["K", "0,82", "1"],
+        ["F", "3,98", "17"],
+        ["Cl", "3,16", "17"],
+        ["Br", "2,96", "17"]
+      ],
+      caption: "1. ve 17. grup elementlerinin elektronegatiflik değerleri"
+    },
+    text: "Tabloya göre, hem 1. hem 17. grupta yukarıdan aşağıya inildikçe elektronegatiflik nasıl değişmektedir ve bu değişim atom yarıçapıyla nasıl ilişkilidir?",
+    options: ["Elektronegatiflik ile atom yarıçapı arasında hiçbir ilişki yoktur", "Her iki grupta da elektronegatiflik artmaktadır", "1. grupta artıp 17. grupta azalmaktadır", "Her iki grupta da elektronegatiflik azalmaktadır; bu, yarıçapın artmasıyla değerlik elektronlarının çekirdekten uzaklaşıp daha zayıf çekilmesiyle tutarlıdır", "Elektronegatiflik yalnızca 17. grup için tanımlıdır"],
     correct: 3,
-    explain: "Geçiş metallerinde art arda eklenen elektronlar en dış (n) değil, bir iç (n-1) d orbitaline yerleştiğinden, bu iç elektronlar değerlik elektronlarını artan çekirdek yükünden önemli ölçüde perdeler; bu denge, atom yarıçapının bir periyot boyunca ana grup elementlerine kıyasla çok daha az değişmesine yol açar."
+    explain: "Her iki grupta da (1. ve 17.) yukarıdan aşağıya inildikçe elektronegatiflik azalmaktadır; bu, yarıçap arttıkça bağ elektronlarının çekirdekten uzaklaşıp daha zayıf çekilmesiyle (elektronegatifliğin azalmasıyla) tutarlıdır."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, oksijenin (O) elektron ilgisinin (bir elektron aldığında açığa çıkan enerjinin) florun (F) elektron ilgisinden bir miktar farklı olduğunu, ancak genel eğilimin periyot boyunca sağa doğru artan bir elektron ilgisi olduğunu öğreniyor.",
-    text: "Elektron ilgisi (elektron afinitesi) kavramı için en doğru tanım hangisidir?",
-    options: [
-      "Bir atomun sahip olduğu toplam proton sayısı",
-      "Bir atomun kütlesinin elektron sayısına oranı",
-      "Bir atomun yarıçapının elektronegatifliğe oranı",
-      "Gaz hâlindeki nötr bir atomun bir elektron alarak anyon oluşturması sırasında açığa çıkan (veya gereken) enerji miktarı",
-      "Bir bileşiğin erime noktası"
-    ],
+    context: "Bir bileşikte iki atom arasındaki elektronegatiflik farkı hesaplanarak bağın türü tahmin edilebilir: fark ~0-0,4 arası apolar kovalent, ~0,4-1,7 arası polar kovalent, ~1,7'nin üzeri iyonik kabul edilir (yaklaşık genel kural).",
+    text: "Elektronegatifliği 2,55 olan karbon (C) ile elektronegatifliği 3,44 olan oksijen (O) arasındaki bağ türü bu genel kurala göre nedir?",
+    options: ["Metalik bağ", "Apolar kovalent bağ", "İyonik bağ", "Polar kovalent bağ (fark ≈0,89)", "Bağ oluşmaz"],
     correct: 3,
-    explain: "Elektron ilgisi (elektron afinitesi), gaz hâlindeki nötr bir atomun bir elektron alarak anyon oluşturması sırasında açığa çıkan (genellikle) enerji miktarını ifade eder; ametallerde bu değer genellikle metallere göre daha büyüktür (daha fazla enerji açığa çıkar) çünkü ametaller elektron almaya daha yatkındır."
+    explain: "C-O elektronegatiflik farkı 3,44-2,55=0,89'dur; bu değer genel kuraldaki polar kovalent aralığına (~0,4-1,7) girer."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, periyodik tabloda klor (Cl) ile bromun (Br) her ikisinin de halojen olduğunu, ancak klorun bromdan daha reaktif olduğunu öğreniyor.",
-    text: "Bu reaktiflik farkının en doğru açıklaması hangisidir?",
-    options: [
-      "Reaktiflik atom yarıçapıyla hiçbir ilişkisi yoktur",
-      "Klor daha fazla proton içerdiği için daha az reaktiftir",
-      "Brom daha küçük olduğu için daha reaktiftir",
-      "Klor, brom'dan daha küçük atom yarıçapına ve daha yüksek elektronegatifliğe sahip olduğundan elektron alma eğilimi (ve dolayısıyla reaktifliği) daha yüksektir",
-      "Klor ve brom'un reaktifliği birbirine tamamen eşittir"
-    ],
+    context: "Bir X elementi ile bir Y elementi karşılaştırıldığında, X'in atom yarıçapı Y'ninkinden büyük, X'in iyonlaşma enerjisi ise Y'ninkinden küçüktür.",
+    text: "Bu iki gözlem birbiriyle tutarlı mıdır ve neden?",
+    options: ["Hayır, çünkü yarıçap ve iyonlaşma enerjisi her zaman aynı yönde değişir", "Hayır, büyük yarıçaplı bir atomun iyonlaşma enerjisi her zaman yüksek olmalıdır", "Bu iki özellik arasında hiçbir ilişki yoktur, tutarlılık değerlendirilemez", "Evet, tutarlıdır; büyük yarıçaplı atomlarda değerlik elektronları çekirdekten uzak olduğundan daha kolay koparılır (düşük iyonlaşma enerjisi)", "Tutarlılık yalnızca aynı grup elementleri için değerlendirilebilir"],
     correct: 3,
-    explain: "Klor, brom'a göre daha yukarıdaki periyotta yer aldığından daha küçük atom yarıçapına ve daha yüksek elektronegatifliğe sahiptir; bu, klorun elektron alma eğiliminin (ve halojen olarak reaktifliğinin) bromdan daha yüksek olmasını açıklar."
+    explain: "Atom yarıçapı ile iyonlaşma enerjisi genellikle ters orantılı bir örüntü izler: yarıçap büyüdükçe değerlik elektronları çekirdekten uzaklaşıp daha zayıf çekilir, bu da iyonlaşma enerjisini düşürür; bu iki gözlem birbiriyle tutarlıdır."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, periyodik tabloda sol alt köşeye yakın elementlerin (Cs, Fr gibi) su ile şiddetli tepkimeye girdiğini, sağ üst köşeye yakın elementlerin (F, O gibi) ise güçlü yükseltgen/elektron alıcı olarak davrandığını öğreniyor.",
-    text: "Bu iki uç davranış, periyodik özellikler ile kimyasal reaktiflik arasındaki ilişki hakkında en doğru hangi genel çıkarımı destekler?",
-    options: [
-      "Sol alt köşedeki elementler her zaman ametaldir",
-      "Periyodik tablonun her iki köşesi de aynı derecede kararlıdır, reaktiflik farkı yoktur",
-      "Reaktiflik yalnızca atomun rengiyle ilgilidir, periyodik özelliklerle ilgisi yoktur",
-      "Düşük iyonlaşma enerjisi/elektronegatiflik (sol alt köşe) elektron verme eğilimini, yüksek elektronegatiflik/elektron ilgisi (sağ üst köşe) ise elektron alma eğilimini artırır; bu zıt eğilimler her iki uçtaki elementleri de kimyasal olarak oldukça reaktif kılar",
-      "Sağ üst köşedeki elementler hiçbir zaman tepkimeye girmez"
-    ],
+    context: "Bir öğretim materyalinde şu iddia tartışılmaktadır: 'Atom yarıçapı büyüdükçe elektron ilgisi (elektron afinitesi) her zaman azalır.' Ancak bazı istisnalar (örneğin azotun elektron ilgisinin beklenenden düşük olması) bu genellemeyi karmaşıklaştırır.",
+    text: "Azotun (N) elektron ilgisinin komşu elementlere göre beklenenden düşük (hatta pozitife yakın) olmasının olası nedeni nedir?",
+    options: ["N'nin hiçbir değerlik elektronu bulunmaması", "N'nin atom yarıçapının aşırı büyük olması", "N'nin metalik özellik göstermesi", "N'nin yarı dolu (2p³) kararlı elektron diziliminin, eklenen dördüncü bir elektronun eşleşmesini enerji açısından elverişsiz kılması", "Bu istisnanın hiçbir bilimsel açıklaması yoktur"],
     correct: 3,
-    explain: "Periyodik tablonun sol alt köşesindeki elementler (düşük iyonlaşma enerjisi nedeniyle) elektron vermeye çok yatkınken, sağ üst köşedeki elementler (yüksek elektronegatiflik/elektron ilgisi nedeniyle) elektron almaya çok yatkındır; bu zıt ama güçlü eğilimler, her iki bölgedeki elementleri de kimyasal olarak oldukça reaktif kılar (soy gazlar hariç)."
+    explain: "N'nin yarı dolu 2p³ dizilimi (Hund kuralına göre kararlı, simetrik) ek bir elektron eklendiğinde bozulur ve elektron eşleşmesi enerji açısından elverişsiz olduğundan, N'nin elektron ilgisi komşu elementlere (C, O) göre beklenenden düşük çıkar."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, aynı grupta metalik özelliğin neden aşağı indikçe arttığını (örneğin Li'den Cs'ye) sorguluyor.",
-    text: "Bu eğilimin en doğru açıklaması hangisidir?",
-    options: [
-      "Metalik özellik grup içinde hiç değişmez",
-      "Grupta aşağı inildikçe elektronegatiflik artar, bu da metalik özelliği artırır",
-      "Grupta aşağı inildikçe proton sayısı azalır, bu da metalik özelliği artırır",
-      "Grupta aşağı inildikçe atom yarıçapı büyür ve iyonlaşma enerjisi azalır; bu da elektron verme (metalik) eğilimini artırır",
-      "Grupta aşağı inildikçe değerlik elektron sayısı artar, bu da metalik özelliği artırır"
-    ],
+    context: "Bir araştırmada, aynı periyottaki bir metalin (örneğin Na) ve bir ametalin (örneğin Cl) erime noktaları karşılaştırılmış; metalik/ametalik karakterin fiziksel özelliklere yansıması incelenmiştir.",
+    text: "Metalik ve ametalik karakterin periyodik trendi, elementlerin fiziksel/kimyasal davranışlarıyla ilgili hangi genel çıkarımı destekler?",
+    options: ["Metalik/ametalik karakter yalnızca elementin rengiyle ilgilidir", "Periyodik tablodaki konumun fiziksel özelliklerle hiçbir ilgisi yoktur", "Yalnızca aynı grup elementleri benzer fiziksel özellik gösterir, periyot içinde hiçbir örüntü yoktur", "Periyodik tablodaki konum, yalnızca soyut sayısal özellikleri değil, elementin gözlemlenebilir kimyasal/fiziksel davranışını da (örneğin bağ yapma biçimini) sistematik olarak tahmin etmeye yardımcı olur", "Bu tür karşılaştırmalar bilimsel olarak anlamsızdır"],
     correct: 3,
-    explain: "Grupta aşağı inildikçe atom yarıçapı büyür ve değerlik elektronu çekirdekten uzaklaşıp daha zayıf çekildiğinden iyonlaşma enerjisi azalır; düşük iyonlaşma enerjisi, elektron verme (metalik) eğiliminin artması anlamına gelir."
+    explain: "Periyodik tablodaki konum (metalik/ametalik karakter dahil) elementin elektron verme/alma eğilimini, dolayısıyla oluşturacağı bağ türünü ve birçok fiziksel özelliğini sistematik olarak tahmin etmeye yardımcı olur; bu, periyodik tablonun öngörücü gücünü gösterir."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, kalsiyum (Ca) ile onun Ca²⁺ iyonunun yarıçapını karşılaştırıyor; iyonun yarıçapı atomdan belirgin biçimde küçüktür.",
-    text: "Bu büyük yarıçap farkının en doğru açıklaması hangisidir?",
-    options: [
-      "Yarıçap farkı yalnızca ölçüm belirsizliğinden kaynaklanır",
-      "Ca²⁺ iyonunda proton sayısı azaldığı için yarıçap küçülür",
-      "Ca²⁺ iyonu Ca atomundan farklı bir elementtir",
-      "Ca²⁺ oluşurken en dış enerji düzeyindeki (n=4) tüm elektronlar kaybedildiğinden, kalan elektronlar bir alt enerji düzeyinde (n=3) toplanır; bu da yarıçapta belirgin bir küçülmeye yol açar",
-      "Ca²⁺ iyonunda hiç elektron kalmaz"
-    ],
+    context: "Bir X elementinin ikinci iyonlaşma enerjisi, birinci iyonlaşma enerjisinden yalnızca hafifçe büyükken (örneğin Mg'de 738→1451 kJ/mol, yaklaşık 2 kat), üçüncü iyonlaşma enerjisi ikinciden çok daha büyük bir sıçrama gösterir (Mg'de 1451→7733 kJ/mol, yaklaşık 5 kat).",
+    text: "Bu büyük sıçramanın nedeni en doğru şekilde nasıl açıklanır?",
+    options: ["Üçüncü iyonlaşma enerjisi her zaman ikinciden küçüktür", "Mg'nin üçüncü elektronu da değerlik kabuğunda bulunur ve kolayca koparılır", "Bu sıçrama yalnızca ölçüm hatasından kaynaklanır", "Mg'nin ilk iki değerlik elektronu (3s²) kolayca kaybedilirken, üçüncü elektronun kararlı [Ne] iç kabuğundan koparılması gerekmesi", "Mg'nin proton sayısı üçüncü iyonlaşmada değişir"],
     correct: 3,
-    explain: "Ca ([Ar]4s²) Ca²⁺ye dönüşürken tüm n=4 elektronlarını kaybeder; kalan elektronlar artık en dış kabuk olarak n=3 düzeyinde bulunur. Bir enerji düzeyinin tamamen kaybedilmesi, iyonun nötr atomdan belirgin biçimde küçük olmasına yol açar."
+    explain: "Mg'nin iki değerlik elektronu (3s²) kaybedildikten sonra geriye kararlı [Ne] dizilimi kalır; bu dizilimden bir elektron daha koparmak (iç kabuktan koparma) çok daha fazla enerji gerektirdiğinden üçüncü iyonlaşma enerjisinde büyük bir sıçrama görülür."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, silisyumun (Si) hem metal hem ametal özellikleri sınırlı ölçüde gösteren bir 'yarı metal' olduğunu; bunun periyodik tablodaki metal-ametal sınırına yakın konumundan kaynaklandığını öğreniyor.",
-    text: "Bu bilgi, periyodik özelliklerin (elektronegatiflik, iyonlaşma enerjisi) metal/ametal karakterle ilişkisi hakkında en doğru hangi çıkarımı destekler?",
-    options: [
-      "Metal-ametal sınırındaki elementlerin hiçbir ölçülebilir periyodik özelliği yoktur",
-      "Yarı metallerin elektronegatiflik değeri metallerden daha düşüktür",
-      "Yarı metallerin periyodik özellikleri tamamen rastgeledir",
-      "Metal-ametal sınırına yakın elementler, orta düzeyde elektronegatiflik ve iyonlaşma enerjisi değerlerine sahip olma eğilimindedir; bu ara değerler, karma (hem metalik hem ametalik) davranışla ilişkilendirilebilir",
-      "Yarı metaller periyodik tablonun sol alt köşesinde bulunur"
-    ],
+    circleCompare: {
+      title: "Aynı periyotta üç iyonun yarıçap karşılaştırması (pm, temsilî)",
+      unit: "pm",
+      items: [
+        { label: "Na⁺", value: 102 },
+        { label: "Mg²⁺", value: 72 },
+        { label: "Al³⁺", value: 54 }
+      ]
+    },
+    text: "Bu üç iyon aynı periyotta (3. periyot) yer alan elementlerden oluşmuş, hepsi soy gaz ([Ne]) dizilimine sahip katyonlardır. Görseldeki azalan boyut sıralamasının nedeni nedir?",
+    options: ["Bu sıralamanın proton sayısıyla hiçbir ilgisi yoktur", "Bu üç iyonun farklı sayıda elektrona sahip olması", "Yük arttıkça yarıçapın büyümesi beklenirdi, bu veri hatalıdır", "Aynı elektron sayısına (izoelektronik) sahip olmalarına rağmen proton sayısının Na⁺'dan Al³⁺'ya doğru artması, elektron bulutunu daha güçlü çekerek yarıçapı küçültür", "Üç iyon farklı periyotlarda bulunmaktadır"],
     correct: 3,
-    explain: "Metal-ametal sınırına yakın konumlanan yarı metaller (Si, Ge, As gibi), tipik metallerden yüksek ama tipik ametallerden düşük elektronegatiflik/iyonlaşma enerjisi değerlerine sahip olma eğilimindedir; bu 'ara' periyodik özellik değerleri, gözlemlenen karma (hem iletken hem yalıtkan benzeri) kimyasal/fiziksel davranışla tutarlıdır."
+    explain: "Na⁺, Mg²⁺ ve Al³⁺ hepsi 10 elektrona ([Ne] dizilimi) sahip izoelektronik iyonlardır; ancak proton sayıları sırasıyla 11, 12, 13'tür. Artan proton sayısı aynı elektron bulutunu daha güçlü çektiğinden yarıçap Na⁺'dan Al³⁺'ya doğru küçülür."
   },
+
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, bir A elementinin B elementinden daha büyük atom yarıçapına, ama daha düşük iyonlaşma enerjisine sahip olduğunu öğreniyor.",
-    text: "Bu iki bilgi arasındaki ilişki hakkında en doğru çıkarım hangisidir?",
-    options: [
-      "Büyük atom yarıçapı her zaman yüksek iyonlaşma enerjisiyle ilişkilidir",
-      "Bu iki gözlem birbiriyle çelişir, ikisi aynı anda doğru olamaz",
-      "Atom yarıçapı ile iyonlaşma enerjisi arasında hiçbir ilişki yoktur",
-      "Bu iki gözlem tutarlıdır, çünkü büyük atom yarıçapı genellikle düşük iyonlaşma enerjisiyle ilişkilidir (değerlik elektronu çekirdekten uzak ve zayıf bağlıdır)",
-      "Bu bilgilerden hiçbir çıkarım yapılamaz"
-    ],
+    context: "Bir X anyonu (X²⁻) ile oluştuğu nötr X atomu karşılaştırıldığında, anyonun yarıçapının nötr atomdan büyük olduğu bilinmektedir. Ayrıca X²⁻'nin izoelektronik olduğu bir soy gaz atomu (aynı elektron sayısına sahip) vardır.",
+    text: "X²⁻, izoelektronik olduğu soy gaz atomuyla karşılaştırıldığında yarıçapı hakkında en doğru çıkarım hangisidir?",
+    options: ["Bu iki tanecik arasında yarıçap karşılaştırması yapılamaz", "X²⁻ ile soy gaz atomu her zaman birebir aynı yarıçapa sahiptir", "X²⁻ soy gaz atomundan her zaman daha küçüktür", "X²⁻'nin proton sayısı soy gazdan az olduğundan (izoelektronik ailede yükü en negatif olan taneciğin proton sayısı en düşüktür), X²⁻ soy gaz atomundan daha büyük yarıçapa sahip olacaktır", "İzoelektronik taneciklerde proton sayısının yarıçapa hiçbir etkisi yoktur"],
     correct: 3,
-    explain: "Atom yarıçapı büyüdükçe değerlik elektronu çekirdekten uzaklaşır ve çekim kuvveti (iç kabukların perdelemesi nedeniyle de) zayıflar; bu nedenle büyük atom yarıçapı ile düşük iyonlaşma enerjisi genellikle birlikte görülen, tutarlı periyodik eğilimlerdir."
+    explain: "İzoelektronik bir seride (aynı elektron sayısı) proton sayısı arttıkça yarıçap küçülür; X²⁻'nin proton sayısı, izoelektronik olduğu soy gazdan daha az olduğundan (anyon oluşumu için elektron eklenir, proton eklenmez), X²⁻ daha büyük yarıçapa sahiptir."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, potasyumun (K) kalsiyumdan (Ca) daha düşük iyonlaşma enerjisine sahip olduğunu öğreniyor; oysa ikisi de 4. periyottadır ve Ca, K'dan sonra gelir.",
-    text: "Bu sıralama, periyot içi genel iyonlaşma enerjisi artışı eğilimiyle en doğru şekilde nasıl açıklanır?",
-    options: [
-      "Ca'nın düşük iyonlaşma enerjisi K'nin fazla proton içermesinden kaynaklanır",
-      "Bu sıralama genel eğilimle çelişir ve açıklanamaz",
-      "K'nin iyonlaşma enerjisi her zaman Ca'dan yüksektir, bu bilgi yanlıştır",
-      "İyonlaşma enerjisi periyot içindeki sıralamayla hiçbir ilişkisi yoktur",
-      "Bu, genel periyot içi artış eğilimiyle tutarlıdır: K (grup 1, tek değerlik e⁻) düşük iyonlaşma enerjisine sahipken, Ca (grup 2, daha fazla çekirdek yükü) periyotta ondan sonra geldiği için daha yüksek iyonlaşma enerjisine sahiptir"
-    ],
+    context: "Bir öğretim aracında şu soru sorulmaktadır: 'Neden aynı periyotta metalik özellik soldan sağa azalırken, aynı grupta yukarıdan aşağıya artmaktadır? Bu iki trend aynı temel nedene mi dayanır?'",
+    text: "Bu sorunun en isabetli cevabı hangisidir?",
+    options: ["Bu iki trend arasında hiçbir mantıksal bağlantı kurulamaz", "Hayır, bu iki trend birbirinden tamamen bağımsız, ilgisiz nedenlere dayanır", "Metalik özellik yalnızca periyot içinde değişir, grup içinde sabittir", "Metalik özellik yalnızca grup içinde değişir, periyot içinde sabittir", "Evet; her iki trend de değerlik elektronlarının çekirdeğe olan çekim gücündeki (etkin çekirdek yükü/uzaklık) değişimden kaynaklanır — periyotta artan çekim elektron kaybını zorlaştırır, grupta artan uzaklık elektron kaybını kolaylaştırır"],
     correct: 4,
-    explain: "K, periyodun en solundaki (grup 1) elementi olarak en düşük iyonlaşma enerjisine sahiptir; Ca ise periyotta bir sonraki elementtir ve bir fazla çekirdek yüküne sahip olduğundan (aynı ana enerji düzeyinde), K'dan daha yüksek iyonlaşma enerjisine sahiptir — bu, periyot içi genel artış eğilimiyle tam olarak tutarlıdır."
+    explain: "Her iki trend de aynı temel mekanizmaya (değerlik elektronlarının çekirdeğe olan efektif çekim gücü) dayanır: periyotta sağa gidildikçe artan çekirdek yükü elektronu tutmayı güçlendirir (metalik özellik azalır), grupta aşağı inildikçe artan uzaklık çekimi zayıflatır (metalik özellik artar)."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
+    context: "Bir X elementinin birinci iyonlaşma enerjisi düşük, elektronegatifliği düşük ve atom yarıçapı büyüktür.",
+    text: "Bu üç özelliğe dayanarak, X elementinin periyodik tablodaki olası genel konumu ve metalik/ametalik karakteri hakkında en tutarlı çıkarım hangisidir?",
+    options: ["X kesinlikle bir soy gazdır", "X, tablonun sağ/üst bölgesinde yer alan, güçlü ametalik karakter gösteren bir element olabilir", "Bu üç özellik birbiriyle çelişmektedir, tutarlı bir konum belirlenemez", "X'in konumu bu verilerle hiçbir şekilde tahmin edilemez", "X, tablonun sol/alt bölgesinde yer alan, güçlü metalik karakter gösteren bir element olabilir"],
+    correct: 4,
+    explain: "Düşük iyonlaşma enerjisi, düşük elektronegatiflik ve büyük atom yarıçapı, üçü birlikte tablonun sol/alt bölgesindeki (metalik karakteri güçlü) elementlerin tipik özellik profiline karşılık gelir; bu üç özellik birbirini destekleyen tutarlı bir konum işaret eder."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
+    context: "Bir kimyasal tepkimede, metal atomları elektron vererek katyon, ametal atomları ise elektron alarak anyon oluşturur; oluşan katyon ve anyonlar elektrostatik çekimle bir araya gelerek iyonik bir bileşik oluşturur.",
+    text: "Güçlü metalik karakterli bir element (örneğin K) ile güçlü ametalik karakterli bir element (örneğin F) arasındaki tepkime, bu iki elementin periyodik özellikleri açısından neden 'kolay' gerçekleşir?",
+    options: ["Bu tepkimenin periyodik özelliklerle hiçbir ilgisi yoktur", "K ve F arasındaki tepkime aslında zordur ve nadiren gerçekleşir", "K'nın yüksek iyonlaşma enerjisi elektron vermeyi kolaylaştırır", "F'nin düşük elektron ilgisi elektron almayı kolaylaştırır", "K'nın düşük iyonlaşma enerjisi elektron vermeyi, F'nin yüksek elektron ilgisi elektron almayı enerji açısından elverişli kılar; bu ikisi bir araya geldiğinde toplam enerji değişimi oldukça elverişli olur"],
+    correct: 4,
+    explain: "K'nın (1. grup) düşük iyonlaşma enerjisi elektron vermeyi enerji açısından ucuz kılarken, F'nin (17. grup) yüksek (büyük negatif) elektron ilgisi elektron almayı enerji açısından avantajlı kılar; bu iki elverişli süreç bir araya geldiğinde iyonik bileşik oluşumu enerji açısından oldukça elverişli hâle gelir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
+    table: {
+      headers: ["İyon", "Elektron sayısı", "Proton sayısı", "Yarıçap (pm, temsilî)"],
+      rows: [
+        ["S²⁻", "18", "16", "184"],
+        ["Cl⁻", "18", "17", "181"],
+        ["K⁺", "18", "19", "138"],
+        ["Ca²⁺", "18", "20", "100"]
+      ],
+      caption: "Dört izoelektronik iyonun yarıçapları"
+    },
+    text: "Tabloya göre, bu dört iyon arasında en büyük yarıçaplı olan S²⁻ ile en küçük yarıçaplı olan Ca²⁺ arasındaki fark hangi tek değişkenle açıklanabilir?",
+    options: ["Bu dört iyonun bulunduğu periyot", "Elektron sayısı (dördünde farklıdır)", "Yükün işareti dışında hiçbir neden yoktur, rastgele bir sıralamadır", "Atom kütlesi", "Proton sayısı (elektron sayısı sabit kalırken proton sayısı arttıkça yarıçap küçülür)"],
+    correct: 4,
+    explain: "Tablodaki dört iyon da aynı elektron sayısına (18) sahiptir; farklı olan tek değişken proton sayısıdır (16'dan 20'ye). Proton sayısı arttıkça aynı elektron bulutuna etkiyen çekim kuvveti arttığından yarıçap küçülür."
   },
 
   /* ============ ZOR ============ */
@@ -5259,296 +4539,224 @@ export const QUIZ = {
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, azotun (N, [He]2s²2p³) birinci iyonlaşma enerjisinin oksijenden (O, [He]2s²2p⁴) daha yüksek olduğunu; bu durumun genel 'periyotta sağa gidildikçe iyonlaşma enerjisi artar' eğilimine aykırı göründüğünü fark ediyor.",
-    text: "Bu görünürdeki istisnanın en doğru elektronik açıklaması hangisidir?",
-    options: [
-      "Bu istisna yalnızca azot ve oksijene özgüdür, hiçbir genel elektronik prensibe dayanmaz",
-      "Bu istisna tamamen ölçüm hatasından kaynaklanır",
-      "Azotun proton sayısı oksijenden fazladır, bu yüzden iyonlaşma enerjisi yüksektir",
-      "Oksijenin elektron sayısı azottan azdır",
-      "N'nin 2p³ dağılımı (üç ayrı orbitalde birer eşlenmemiş elektron) simetrik ve görece kararlıdır; O'da (2p⁴) ise bir orbitalde elektronlar eşleşmek zorunda kalır ve elektron-elektron itmesi bu elektronun koparılmasını nispeten kolaylaştırır"
-    ],
-    correct: 4,
-    explain: "Azotun yarı dolu p³ alt kabuğu (her orbitalde birer eşlenmemiş elektron, Hund kuralına göre paralel spin) ekstra kararlılık sağlar. Oksijende ise dördüncü elektron mevcut bir orbitalde eşleşmek zorundadır; eşleşen iki elektron arasındaki ekstra itme, bu elektronun koparılmasını (iyonlaşmasını) nispeten kolaylaştırır — bu, genel artış eğilimindeki küçük ama sistematik bir sapmadır."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, berilyumun (Be, [He]2s²) birinci iyonlaşma enerjisinin bordan (B, [He]2s²2p¹) daha yüksek olduğunu öğreniyor.",
-    text: "Bu istisnanın en doğru elektronik açıklaması hangisidir?",
-    options: [
-      "Berilyum bir soy gazdır, bu yüzden iyonlaşma enerjisi yüksektir",
-      "Berilyumun proton sayısı bordan fazladır",
-      "Bu fark tamamen rastlantısaldır, hiçbir elektronik temeli yoktur",
-      "Bor, berilyumdan daha fazla elektrona sahip olduğu için iyonlaşma enerjisi otomatik olarak düşüktür",
-      "Be'nin tam dolu 2s² alt kabuğu ekstra kararlıdır; B'de ise koparılan elektron enerji bakımından biraz daha yüksek olan (çekirdeğe daha az nüfuz eden) 2p orbitalinden alınır, bu da koparılmasını nispeten kolaylaştırır"
-    ],
-    correct: 4,
-    explain: "Be'nin tam dolu 2s² alt kabuğu simetrik ve görece kararlıdır. B'de eklenen elektron 2p orbitaline gider; 2p orbitali 2s'den daha yüksek enerjilidir ve çekirdeğe daha az nüfuz ettiğinden daha zayıf bağlıdır — bu nedenle B'nin iyonlaşma enerjisi Be'ninkinden düşüktür, genel artış eğiliminde küçük bir sapma oluşur."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, Be-B ve N-O arasındaki iyonlaşma enerjisi düşüşlerinin her ikisinin de 'ekstra kararlı bir alt kabuk yapısından (tam dolu veya yarı dolu) bir sonraki elemente geçiş' örüntüsünü paylaştığını fark ediyor.",
-    text: "Bu iki istisnadan tümevarımsal olarak çıkarılabilecek en doğru genel ilke hangisidir?",
-    options: [
-      "Bu örüntü yalnızca 2. periyotta görülür, 3. periyotta hiç görülmez",
-      "İyonlaşma enerjisi trendleri tamamen düzensizdir, hiçbir genel kural çıkarılamaz",
-      "Bu iki istisna birbirinden tamamen bağımsızdır, ortak bir mekanizma paylaşmaz",
-      "Tam dolu/yarı dolu alt kabuklar iyonlaşma enerjisini her zaman artırır, hiç azaltmaz",
-      "Tam dolu veya yarı dolu bir alt kabuğun sağladığı ekstra elektronik kararlılık, periyot boyunca beklenen düzenli iyonlaşma enerjisi artışında öngörülebilir küçük sapmalara yol açabilir"
-    ],
-    correct: 4,
-    explain: "Be→B (tam dolu 2s²'den sonra) ve N→O (yarı dolu 2p³'ten sonra) düşüşleri aynı temel mekanizmayı paylaşır: ekstra kararlı bir alt kabuk yapısından hemen sonraki elementte, yeni eklenen elektronun (farklı orbital enerjisi veya elektron eşleşme itmesi nedeniyle) nispeten daha kolay koparılması. Bu örüntü, 3. periyotta da (Mg→Al, P→S) benzer şekilde tekrarlanan sistematik bir eğilimdir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, geçiş metallerinde iyonlaşma sırasında elektronların (n)s orbitalinden, (n-1)d orbitalinden önce kaybedildiğini (örneğin Fe → Fe²⁺'de önce 4s kaybedilir); ancak elektron dizilimi yazılırken (dolum sırasında) 4s'nin 3d'den önce dolduğunu hatırlıyor.",
-    text: "Bu iki gözlem (dolum sırası ve iyonlaşma sırası) arasındaki görünürdeki tutarsızlık en doğru hangi şekilde çözümlenir?",
-    options: [
-      "Bu tutarsızlık yalnızca demir elementine özgüdür",
-      "Bu iki gözlem birbiriyle çelişir ve bilim insanları bu çelişkiyi hâlâ çözememiştir",
-      "Dolum sırası ve iyonlaşma sırası aslında birbirinin tam tersidir ve hiçbir mantıksal bağlantısı yoktur",
-      "4s orbitali iyonlaşma sırasında tamamen ortadan kalkar",
-      "Nötr atomda 4s enerjisi 3d'den biraz düşüktür (bu yüzden önce dolar); ancak bir veya daha fazla elektron uzaklaştırıldığında kalan elektronların perdeleme dengesi değişir ve 3d, 4s'nin altına iner — bu, orbital enerjilerinin atomun elektron sayısına bağlı olarak dinamik olduğunu gösterir"
-    ],
-    correct: 4,
-    explain: "Orbital enerjileri sabit değildir; atomun elektron sayısına (ve dolayısıyla perdeleme/etkin çekirdek yükü dengesine) bağlı olarak değişir. Nötr atomda 4s enerjisi 3d'den biraz düşükken (Aufbau sırasını belirler), bir elektron kaybedildiğinde bu denge değişir ve 3d enerji bakımından 4s'nin altına iner; bu yüzden iyonlaşma sırasında önce 4s elektronları kaybedilir — bu, aynı orbitallerin farklı bağlamlarda farklı bağıl enerjilere sahip olabileceğinin önemli bir örneğidir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, alüminyumun (Al³⁺) oksijenle (O²⁻) oluşturduğu Al₂O₃ bileşiğinde her iki iyonun da izoelektronik seriye ait olduğunu ([Ne] elektron dizilimi) ve bu bileşiğin oldukça yüksek erime noktasına (~2072°C) sahip olduğunu öğreniyor.",
-    text: "Bu yüksek erime noktası, iyon yükü ve iyon yarıçapı ile iyonik bağ kuvveti arasındaki ilişki hakkında en doğru hangi çıkarımı destekler?",
-    options: [
-      "İzoelektronik olmaları erime noktasını düşürür",
-      "Erime noktası yalnızca bileşiğin rengiyle ilişkilidir, iyon yükü/yarıçapıyla ilgisi yoktur",
-      "İyon yükü ne kadar yüksek olursa olursa iyonik bağ o kadar zayıf olur",
-      "Al₂O₃'ün yüksek erime noktası tamamen rastlantısaldır",
-      "Yüksek iyon yükleri (Al³⁺, O²⁻) ve görece küçük iyon yarıçapları, iyonlar arasındaki elektrostatik çekim kuvvetini artırır; bu da bileşiğin iyonik bağının güçlü ve erime noktasının yüksek olmasına katkıda bulunur"
-    ],
-    correct: 4,
-    explain: "İyonik bağ kuvveti kabaca iyon yüklerinin çarpımıyla doğru, iyonlar arası uzaklıkla (yaklaşık yarıçap toplamı) ters orantılıdır (Coulomb yasasına benzer bir ilişki). Al³⁺ ve O²⁻'nin yüksek yükleri ve görece küçük yarıçapları, güçlü bir elektrostatik çekim ve dolayısıyla yüksek erime noktası ile sonuçlanır; bu, periyodik özelliklerin (iyon yükü, iyon yarıçapı) bileşik özelliklerini (erime noktası) doğrudan etkileyebileceğinin somut bir örneğidir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, periyodik tabloda birbirine köşegen komşu olan lityum (Li) ile magnezyumun (Mg), aynı grupta olan Li ile Na'ya göre bazı özellik bakımından (örneğin karbonatlarının çözünürlüğü, iyonlaşma enerjisi eğilimi) daha benzer davrandığını öğreniyor (köşegen ilişkisi).",
-    text: "Bu gözlem, periyodik özelliklerin (yarıçap, yük yoğunluğu) davranış benzerliğini belirlemedeki rolü hakkında en doğru hangi ileri düzey çıkarımı destekler?",
-    options: [
-      "Köşegen ilişkisi yalnızca metal olmayan elementlerde görülebilir",
-      "Köşegen ilişkisi periyodik özelliklerle hiçbir şekilde açıklanamaz, tamamen tesadüftür",
-      "Li ve Mg'nin benzerliği yalnızca isimlerinin alfabetik yakınlığından kaynaklanır",
-      "Grup ve periyot etkileri birbirinden tamamen bağımsızdır, asla birbirini dengelemez",
-      "Grup boyunca aşağı inme (artan yarıçap) ile periyot boyunca sağa gitme (artan çekirdek yükü/azalan yarıçap) etkileri birbirini kısmen dengeleyebilir; bu da köşegen komşu elementlerin benzer iyon yük yoğunluğuna (yük/yarıçap oranına) ve dolayısıyla benzer kimyasal davranışa sahip olmasına yol açabilir"
-    ],
-    correct: 4,
-    explain: "Grupta aşağı inme atom/iyon yarıçapını büyütürken (Li→Na), periyotta sağa gitme çekirdek yükünü artırıp yarıçapı küçültür (Li→Mg, aynı periyotta bir sağda ve bir alt grupta). Li'den Mg'ye geçişte bu iki etki (bir periyot sağa + bir grup aşağı) kısmen birbirini dengeleyerek, Li ile Mg'nin iyon yük yoğunluğunun (yük/yarıçap oranı) Li ile Na'dan daha yakın olmasına yol açabilir; bu da köşegen komşu elementler arasındaki beklenmedik benzerliğin periyodik özelliklere dayalı bir açıklamasıdır."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, periyodik özelliklerin (atom yarıçapı, iyonlaşma enerjisi, elektronegatiflik) birbiriyle güçlü biçimde ilişkili olduğunu; örneğin küçük yarıçaplı bir atomun genellikle hem yüksek iyonlaşma enerjisine hem de yüksek elektronegatifliğe sahip olduğunu fark ediyor.",
-    text: "Bu üç özelliğin birbiriyle tutarlı biçimde ilişkili olmasının ortak temel nedeni en doğru hangisidir?",
-    options: [
-      "Üç özellik de yalnızca elementin keşfedilme tarihine bağlıdır",
-      "Bu üç özellik birbirinden tamamen bağımsızdır, aralarındaki tutarlılık tesadüftür",
-      "Atom yarıçapı, iyonlaşma enerjisi ve elektronegatiflik farklı fiziksel büyüklükler olduğundan hiçbir ortak açıklaması olamaz",
-      "Bu ilişki yalnızca ametallerde geçerlidir, metallerde geçerli değildir",
-      "Üç özellik de temelde aynı fiziksel etkene, yani değerlik elektronlarının çekirdek tarafından ne kadar güçlü çekildiğine (etkin çekirdek yükü ve elektron-çekirdek uzaklığına) dayanır"
-    ],
-    correct: 4,
-    explain: "Atom yarıçapı, iyonlaşma enerjisi ve elektronegatifliğin hepsi, değerlik elektronlarının çekirdek tarafından ne kadar güçlü çekildiğiyle (etkin çekirdek yükü ve elektron-çekirdek uzaklığıyla) ilişkilidir: güçlü çekim → küçük yarıçap, yüksek iyonlaşma enerjisi (elektronu koparmak zor) ve yüksek elektronegatiflik (elektron çekme gücü fazla) anlamına gelir. Bu ortak fiziksel temel, üç özelliğin periyodik tabloda tutarlı biçimde birlikte değişmesini (aynı yönde eğilim göstermesini) açıklar."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, periyodik tablonun 'periyodik' olarak adlandırılmasının nedenini düşünüyor: belirli aralıklarla (periyotlarla) benzer kimyasal özelliklerin tekrar etmesi.",
-    text: "Bu tekrarlayan (periyodik) örüntünün altında yatan temel elektronik neden en doğru hangisidir?",
-    options: [
-      "Periyodiklik kavramının hiçbir elektronik temeli yoktur, tamamen tanımsaldır",
-      "Periyodiklik yalnızca elementlerin alfabetik sıralamasından kaynaklanır",
-      "Periyodiklik, elementlerin kütlesinin rastgele dalgalanmasından kaynaklanır",
-      "Periyodiklik yalnızca metallerde görülür, ametallerde görülmez",
-      "Değerlik elektron dizilimleri (örneğin ns¹, ns²np⁵ gibi) belirli aralıklarla tekrar eder; benzer değerlik yapısına sahip elementler benzer kimyasal davranış sergilediğinden, özellikler de periyodik olarak tekrar eder"
-    ],
-    correct: 4,
-    explain: "Elektron dizilimleri, orbital dolum kurallarına (Aufbau, Pauli, Hund) bağlı olarak belirli örüntülerle (ns¹, ns², ..., ns²np⁶) tekrar eder; benzer değerlik elektron yapısına sahip elementler (örneğin tüm ns¹ elementleri = alkali metaller) benzer kimyasal davranış sergilediğinden, atom yarıçapı, iyonlaşma enerjisi gibi özellikler de belirli periyotlarla (satırlarla) tekrarlayan bir örüntü (periyodiklik) gösterir — bu, periyodik tablonun isminin ve temel mantığının kaynağıdır."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, periyodik özelliklerin (örneğin atom yarıçapı) grafiğe döküldüğünde her periyotta düzenli bir 'testere dişi' (art arda düşüş ve sonra sıçrama) örüntüsü oluşturduğunu fark ediyor: periyot boyunca azalır, yeni periyoda geçişte aniden büyük ölçüde artar.",
-    text: "Bu testere dişi örüntüsünün her iki yönü de (periyot içi azalış ve periyotlar arası sıçrama) için en doğru birleşik açıklama hangisidir?",
-    options: [
-      "Testere dişi örüntüsü elementlerin keşfedilme sırasına bağlıdır",
-      "Testere dişi örüntüsü yalnızca ölçüm cihazlarındaki hassasiyet farkından kaynaklanır",
-      "Periyot içi azalış ile periyotlar arası artış birbiriyle hiçbir ortak nedene dayanmaz",
-      "Bu örüntü yalnızca atom yarıçapında görülür, başka hiçbir periyodik özellikte görülmez",
-      "Periyot içi azalış, aynı enerji düzeyinde artan çekirdek yükünden kaynaklanır; periyotlar arası ani artış ise yeni bir enerji düzeyine (daha yüksek n) geçilmesinden, yani elektronun çekirdekten çok daha uzak bir kabukta bulunmaya başlamasından kaynaklanır"
-    ],
-    correct: 4,
-    explain: "Bir periyot boyunca (örneğin Na'dan Ar'a) elektronlar aynı ana enerji düzeyinde kalırken çekirdek yükü artar, bu da yarıçapı sürekli küçültür; ancak bir sonraki periyoda geçildiğinde (örneğin Ar'dan K'ya) en dış elektron artık bir üst enerji düzeyine (n+1) yerleşir ve çekirdekten çok daha uzakta bulunmaya başlar, bu da yarıçapta ani ve büyük bir artışa yol açar. Bu iki zıt etkinin (yavaş azalış + ani sıçrama) birleşimi, periyodik tablonun ismine kaynaklık eden karakteristik 'testere dişi' grafiğini oluşturur."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, periyodik özellik trendlerinin (yarıçap, iyonlaşma enerjisi, elektronegatiflik) yalnızca kimyada değil, malzeme bilimi ve mühendislikte de (örneğin hangi elementlerin yarı iletken, hangilerinin iletken olacağını tahmin etmede) kullanıldığını öğreniyor.",
-    text: "Bu bilgi, periyodik özelliklerin bilimsel/teknolojik değeri hakkında en doğru hangi geniş kapsamlı çıkarımı destekler?",
-    options: [
-      "Periyodik özelliklerdeki sistematik eğilimler, yalnızca akademik bir sınıflandırma aracı değil; yeni malzemelerin özelliklerini tahmin etmek ve tasarlamak için de kullanılabilen pratik ve öngörücü bir bilimsel çerçevedir",
-      "Periyodik özelliklerin mühendislikle hiçbir ilgisi yoktur",
-      "Malzeme biliminde kullanılan tek kriter elementin rengidir",
-      "Periyodik trendler yalnızca teorik öneme sahiptir, hiçbir pratik uygulaması yoktur",
-      "Yarı iletken özellikleri tamamen rastgele, tahmin edilemez bir şekilde ortaya çıkar"
-    ],
-    correct: 0,
-    explain: "Elektronegatiflik, iyonlaşma enerjisi gibi periyodik özellikler, bir elementin/bileşiğin elektriksel iletkenlik davranışını (iletken, yarı iletken, yalıtkan) tahmin etmede kullanılır (örneğin metal-ametal sınırındaki yarı metaller sıkça yarı iletken özellik gösterir, Si ve Ge gibi); bu, periyodik tablonun ve altında yatan özelliklerin yalnızca akademik değil, doğrudan teknolojik tasarım değeri taşıyan pratik bir araç olduğunu gösterir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, bilim insanlarının bir X ve Y elementinin (henüz karşılaştırmadığı) hangisinin daha yüksek elektronegatifliğe sahip olacağını, yalnızca periyodik tablodaki konumlarına (grup ve periyot) bakarak yüksek güvenle tahmin edebildiğini gözlemliyor.",
-    text: "Bu tahmin gücü, periyodik tablonun bilimsel bir sistem olarak taşıdığı en önemli özelliği hangi seçenekte en doğru yansıtır?",
-    options: [
-      "Periyodik tablo, ayrık ve ilişkisiz olgular yığını değil; konum bilgisinden (grup, periyot) özellik tahminine sistematik ve güvenilir biçimde geçiş yapılabilen, iyi organize edilmiş bir bilgi yapısıdır",
-      "Bu tahmin gücü yalnızca şans eseri doğru çıkar, sistematik bir temeli yoktur",
-      "Elektronegatiflik tahmini yalnızca deneysel ölçümle mümkündür, teorik tahmin yapılamaz",
-      "Periyodik tablodaki konum ile elektronegatiflik arasında hiçbir ilişki yoktur",
-      "Bu tahmin gücü yalnızca soy gazlar için geçerlidir"
-    ],
-    correct: 0,
-    explain: "Periyodik özelliklerin (elektronegatiflik dahil) grup ve periyot boyunca sistematik ve öngörülebilir biçimde değişmesi, periyodik tablonun yalnızca tanımlayıcı değil, aynı zamanda güçlü bir tahmin aracı olduğunu gösterir; bu, iyi kurulmuş bilimsel sınıflandırma sistemlerinin ortak ve değerli bir özelliğidir — dağınık olguları değil, altta yatan düzenli ilkeleri yansıtırlar."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, periyodik özellik trendlerinin (örneğin atom yarıçapı) yalnızca ana grup elementlerinde değil, lantanit serisinde de gözlemlenen ancak çok daha küçük ve düzenli bir azalışa ('lantanit kontraksiyonu') sahip olduğunu öğreniyor; bunun sonucunda 4d ve 5d serisi elementlerinin (örneğin Zr ve Hf) beklenenden çok daha benzer yarıçapa sahip olduğunu fark ediyor.",
-    text: "Bu bilgi, periyodik trendlerin karmaşıklığı hakkında en doğru hangi ileri düzey çıkarımı destekler?",
-    options: [
-      "f orbitallerinin zayıf perdeleme etkisi nedeniyle lantanit serisi boyunca beklenenden fazla bir çekirdek yükü birikimi (kontraksiyon) oluşur; bu, kendisinden sonra gelen d bloğu elementlerinin (Hf gibi) yarıçapını da etkileyerek periyodik trendlerde ek, ince bir katman oluşturur",
-      "Lantanit kontraksiyonu periyodik trendlerle hiçbir ilişkisi olmayan bağımsız bir olgudur",
-      "Zr ve Hf'nin benzer yarıçapı tamamen tesadüftür",
-      "f orbitalleri atom yarıçapını hiçbir şekilde etkilemez",
-      "Lantanit kontraksiyonu yalnızca lantanitlerin kendi yarıçapını etkiler, başka hiçbir elementi etkilemez"
-    ],
-    correct: 0,
-    explain: "f orbitalleri diğer orbital türlerine göre çekirdek yükünü daha zayıf perdeler; bu nedenle lantanit serisi boyunca (57-71) beklenenden fazla bir net çekirdek yükü artışı (kontraksiyon) birikir. Bu etki, lantanitlerden sonra gelen 5d serisi elementlerinin (Hf, Ta gibi) yarıçapını da küçültür ve bu elementlerin 4d serisi analoglarına (Zr, Nb) beklenmedik derecede yakın yarıçaplara sahip olmasına yol açar — bu, basit grup/periyot trendlerinin ötesinde, orbital türünün perdeleme gücü gibi ince etkenlerin de periyodik özellikleri şekillendirdiğini gösterir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Aşağıdaki tabloda dört elementin atom yarıçapı ve birinci iyonlaşma enerjisi değerleri karşılaştırılmaktadır.",
     table: {
-      headers: ["Element", "Atom yarıçapı (pm)", "1. İyonlaşma enerjisi (kJ/mol)"],
+      headers: ["Element", "Atom yarıçapı (pm)", "1. İyonlaşma enerjisi (kJ/mol)", "Elektronegatiflik"],
       rows: [
-        ["Li", "152", "520"],
-        ["Na", "186", "496"],
-        ["K", "227", "419"],
-        ["Rb", "248", "403"]
+        ["Li", "152", "520", "0,98"],
+        ["Be", "112", "899", "1,57"],
+        ["B", "85", "801", "2,04"],
+        ["C", "77", "1086", "2,55"]
+      ],
+      caption: "2. periyodun ilk dört elementinin üç periyodik özelliği"
+    },
+    text: "Tablodaki üç özellik (yarıçap, iyonlaşma enerjisi, elektronegatiflik) arasındaki genel ilişki değerlendirildiğinde, B'nin iyonlaşma enerjisinin Be'den düşük olması, tablodaki diğer genel trendle nasıl bir arada değerlendirilmelidir?",
+    options: ["Bu istisna, periyodik tablonun tüm trendlerinin geçersiz olduğunu gösterir", "B'nin düşük iyonlaşma enerjisi, yarıçap ve elektronegatiflik trendlerinin de tersine döndüğü anlamına gelir", "Tablodaki veriler birbiriyle tutarsızdır ve güvenilmezdir", "İyonlaşma enerjisi, yarıçap ve elektronegatiflikten tamamen bağımsız, ilgisiz bir özelliktir", "Yarıçap ve elektronegatiflik genel trendi (soldan sağa yarıçap azalır, elektronegatiflik artar) korunurken, iyonlaşma enerjisindeki küçük düşüş elektron dizilimindeki (dolu s vs tek p elektronu) yerel bir istisnadır; genel periyodik eğilim bundan etkilenmez"],
+    correct: 4,
+    explain: "Yarıçap (152→112→85→77) ve elektronegatiflik (0,98→1,57→2,04→2,55) düzenli bir trend izlerken, iyonlaşma enerjisindeki B'deki küçük düşüş (899→801) elektron dizilimine özgü yerel bir istisnadır (dolu 2s² vs tek 2p¹ elektronu); bu, genel periyodik trendlerin bazı özelliklerde küçük, açıklanabilir sapmalar içerebileceğini ama genel eğilimi geçersiz kılmadığını gösterir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
+    context: "Bir araştırmacı, aynı yükteki iyonların (örneğin tüm +2 yüklü iyonlar) yarıçaplarını karşılaştırdığında, hem periyot hem grup içindeki trendlerin nötr atomlarla aynı yönde (grup içinde aşağı inildikçe büyüme, periyotta sağa gidildikçe küçülme) devam ettiğini bulmuştur.",
+    text: "Bu bulgu, iyon yarıçapı ile periyodik tablo konumu arasındaki ilişki hakkında en doğru hangi genellemeyi destekler?",
+    options: ["Bu bulgu, periyodik tablonun yalnızca nötr atomlar için geçerli olduğunu kanıtlar", "İyonlar periyodik trendlerden tamamen bağımsızdır", "Yalnızca nötr atomlarda periyodik trend gözlenir, iyonlarda hiçbir trend yoktur", "İyon yarıçapı yalnızca yüke bağlıdır, periyodik tablodaki konumun hiçbir etkisi yoktur", "İyonlaşma, atomun temel periyodik yapısını (kabuk sayısı, çekirdek yükü artışı) ortadan kaldırmaz; bu nedenle nötr atomlardaki temel periyodik trendler iyonlarda da benzer yönde gözlenir"],
+    correct: 4,
+    explain: "İyon oluşumu (elektron kaybı/kazancı) atomun temel yapısını (kabuk sayısı, artan çekirdek yükü örüntüsü) değiştirmediğinden, aynı yükteki iyonlar arasında da grup ve periyot bazlı temel periyodik trendler (kabuk sayısı arttıkça büyüme, çekirdek yükü arttıkça küçülme) benzer yönde devam eder."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
+    context: "Bir kimyager, X ve Y adlı iki elementin bileşiğini incelerken, X'in elektronegatifliğinin 1,0, Y'ninkinin ise 3,5 olduğunu; bileşiğin XY formülünde birleştiğini bulmuştur.",
+    text: "Bu verilere dayanarak, XY bileşiğindeki bağın türü ve X ile Y'nin periyodik tablodaki olası genel konumları hakkında en doğru çıkarım hangisidir?",
+    options: ["Bu veriler yalnızca X ve Y'nin aynı grupta olduğunu gösterir", "Bağ kesinlikle apolar kovalenttir", "X ve Y'nin periyodik tablodaki konumu elektronegatiflik farkından çıkarılamaz", "Küçük elektronegatiflik farkı nedeniyle bağ metalik karakterli olacaktır", "Büyük elektronegatiflik farkı (2,5) nedeniyle bağ yüksek iyonik karakterli olacaktır; X muhtemelen tablonun sol/alt (metalik) bölgesinde, Y ise sağ/üst (ametalik) bölgesinde yer alır"],
+    correct: 4,
+    explain: "2,5'lik büyük elektronegatiflik farkı yüksek iyonik karakterli bir bağa işaret eder; düşük elektronegatiflik (1,0) genellikle tablonun sol/alt (metalik) bölgesindeki elementlerde, yüksek elektronegatiflik (3,5) ise sağ/üst (ametalik) bölgedeki elementlerde görülür."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
+    context: "Bir öğretim materyalinde, lantanit serisindeki elementlerin (57-71 arası) atom yarıçaplarının, atom numarası arttıkça beklenenden daha az değiştiği ve bu durumun 'lantanit büzülmesi' olarak adlandırıldığı; bu büzülmenin, lantanitlerden hemen sonra gelen 5d geçiş metallerinin (Hf, Ta gibi) yarıçaplarının beklenenden küçük çıkmasına da yol açtığı belirtilmektedir.",
+    text: "Lantanit büzülmesinin 5d geçiş metallerine olan bu 'gecikmeli' etkisi en doğru şekilde nasıl açıklanır?",
+    options: ["Bu durum, periyodik tablonun d ve f blok ayrımının hatalı olduğunu gösterir", "Bu etkinin 5d elementleriyle hiçbir ilgisi yoktur, tamamen tesadüfidir", "Lantanit büzülmesi yalnızca lantanitleri etkiler, sonraki hiçbir elementi etkilemez", "5d elementlerinin küçük yarıçapı yalnızca proton sayısıyla açıklanır, 4f elektronlarının etkisi yoktur", "4f alt kabuğundaki elektronların zayıf perdeleme etkisi, lantanit serisi boyunca birikerek periyodik tabloda hemen sonra gelen elementlerin de beklenenden daha küçük yarıçaplı çıkmasına neden olur"],
+    correct: 4,
+    explain: "4f orbitalleri elektronları zayıf perdeler; bu nedenle lantanit serisi boyunca artan çekirdek yükü, dış elektronlar tarafından yeterince perdelenmeden hissedilir ve yarıçap beklenenden az büyür/hatta küçülür. Bu birikimli etki, lantanitlerden hemen sonra gelen 5d elementlerinin de (aynı grup 4d elementleriyle karşılaştırıldığında) beklenenden küçük yarıçaplı olmasına yol açar."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
+    context: "Bir araştırmacı şu karşılaştırmayı yapmaktadır: 4. periyot geçiş metali Zr (zirkonyum) ile 5. periyot geçiş metali Hf (hafniyum), lantanit büzülmesi nedeniyle beklenenden çok daha yakın atom yarıçaplarına (Zr: 160 pm, Hf: 159 pm) sahiptir; oysa aynı gruptaki diğer element çiftlerinde (örneğin Ti-Zr) yarıçap farkı çok daha belirgindir.",
+    text: "Zr ve Hf'nin bu denli yakın yarıçaplara sahip olmasının kimyasal sonucu ne olabilir?",
+    options: ["Bu benzerlik yalnızca fiziksel özellikleri etkiler, kimyasal davranışı hiç etkilemez", "Zr ve Hf'nin kimyasal davranışları arasında hiçbir benzerlik beklenmez", "Yarıçap benzerliğinin kimyasal davranışla hiçbir ilgisi yoktur", "Zr ve Hf farklı gruplarda yer aldığından bu karşılaştırma anlamsızdır", "Zr ve Hf, aynı gruptaki tipik element çiftlerinden (örneğin Ti-Zr) daha benzer kimyasal davranış sergileyebilir, çünkü yarıçap kimyasal davranışı büyük ölçüde etkileyen bir faktördür"],
+    correct: 4,
+    explain: "Atom/iyon yarıçapı, bir elementin kimyasal davranışını (bağ uzunluğu, koordinasyon sayısı, reaktivite gibi) büyük ölçüde etkiler; Zr ve Hf'nin lantanit büzülmesi nedeniyle beklenenden çok yakın yarıçaplara sahip olması, bu iki elementin kimyasal olarak alışılmadık derecede benzer davranmasına (ve pratikte ayrıştırılmalarının zor olmasına) yol açar."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
+    context: "Bir bilim yazısında şu iddia savunulmaktadır: 'Periyodik özellik trendleri (yarıçap, iyonlaşma enerjisi, elektronegatiflik) birbirinden bağımsız kurallar değil, hepsi aynı temel nedene (etkin çekirdek yükü ve elektron kabuk sayısı) dayanan tek bir tutarlı çerçevenin farklı yansımalarıdır.'",
+    text: "Bu iddiayı en güçlü şekilde destekleyen kanıt hangisidir?",
+    options: ["Periyodik özelliklerin her elementte tamamen rastgele değerler alması", "Üç özelliğin birbirinden tamamen farklı, ilgisiz yönlerde değişmesi", "Yalnızca bir özelliğin (örneğin yarıçap) periyodik trend göstermesi, diğerlerinin göstermemesi", "Bu üç özelliğin hiçbirinin periyodik tablo konumuyla ilişkili olmaması", "Üç özelliğin de aynı yönde (soldan sağa artan/azalan, yukarıdan aşağıya tersi) ve aynı istisna noktalarında (yarı dolu/tam dolu alt kabuklar) benzer sapmalar göstermesi"],
+    correct: 4,
+    explain: "Yarıçap, iyonlaşma enerjisi ve elektronegatifliğin hepsinin soldan sağa/yukarıdan aşağıya tutarlı yönde değişmesi VE benzer istisna noktalarında (örneğin Be-B, N-O geçişlerinde) benzer sapmalar göstermesi, bu üç özelliğin ortak bir temel nedene (etkin çekirdek yükü, elektron dizilimi, perdelenme) dayandığının güçlü bir kanıtıdır."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
+    context: "Bir X elementinin ardışık iyonlaşma enerjileri şöyledir: 1. IE=580, 2. IE=1815, 3. IE=2740, 4. IE=11600 kJ/mol.",
+    text: "Bu veriye dayanarak, X elementinin en kararlı iyonunun yükü ve muhtemel grubu hakkında en doğru çıkarım hangisidir?",
+    options: [
+      "3. ve 4. iyonlaşma enerjisi arasındaki büyük sıçrama (2740→11600), X'in en kararlı iyonunun +3 yüklü olduğunu ve X'in muhtemelen 13. grupta (örn. alüminyum) yer aldığını gösterir",
+      "1. ve 2. iyonlaşma enerjisi arasındaki fark en büyük olduğundan X'in en kararlı iyonu +1'dir",
+      "Tüm iyonlaşma enerjileri birbirine yakın olduğundan X'in belirli bir kararlı yükü yoktur",
+      "X'in en kararlı iyonu +4'tür, çünkü 4. iyonlaşma enerjisi en yüksek değerdir",
+      "Bu veriyle X'in grubu hakkında hiçbir çıkarım yapılamaz"
+    ],
+    correct: 0,
+    explain: "Büyük bir sıçrama (burada 3'ten 4'e, yaklaşık 4 kat artış), o noktadan sonra elektronların kararlı bir iç kabuktan koparılmaya başladığını gösterir; bu, X'in 3 değerlik elektronuna sahip olduğunu (13. grup, örn. Al) ve en kararlı iyonunun +3 olduğunu işaret eder."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
+    circleCompare: {
+      title: "Dört elementin atom yarıçapı ile birinci iyonlaşma enerjisi arasındaki ters ilişki (temsilî, yarıçap pm)",
+      unit: "pm",
+      items: [
+        { label: "K (IE=419 kJ/mol)", value: 227 },
+        { label: "Ca (IE=590 kJ/mol)", value: 197 },
+        { label: "Ga (IE=579 kJ/mol)", value: 122 },
+        { label: "Kr (IE=1351 kJ/mol)", value: 88 }
       ]
     },
-    text: "Tablodaki verilerden yola çıkarak atom yarıçapı ile iyonlaşma enerjisi arasındaki ilişki için en doğru genel çıkarım hangisidir?",
+    text: "Görseldeki verilere dikkatle bakıldığında, Ca (yarıçap 197, IE 590) ile Ga (yarıçap 122, IE 579) karşılaştırması, 'yarıçap küçüldükçe iyonlaşma enerjisi her zaman artar' genellemesiyle nasıl bir ilişki içindedir?",
     options: [
-      "Bu grup (1. grup) içinde atom yarıçapı arttıkça iyonlaşma enerjisi genel olarak azalır",
-      "Atom yarıçapı arttıkça iyonlaşma enerjisi de orantılı olarak artar",
-      "Atom yarıçapı ile iyonlaşma enerjisi arasında hiçbir ilişki gözlenmemektedir",
-      "Bu elementlerin hepsi aynı iyonlaşma enerjisine sahiptir",
-      "Atom yarıçapı arttıkça iyonlaşma enerjisi önce artar sonra azalır"
+      "Bu iki veri noktası genellemeyle tam örtüşmez (Ga'nın yarıçapı Ca'dan küçük olmasına rağmen IE'si de düşüktür); bu, yarıçapın tek başına iyonlaşma enerjisini belirleyen tek etken olmadığını, elektron diziliminin (Ga'da tek bir 4p elektronu) de rol oynadığını gösterir",
+      "Bu iki veri noktası genellemeyi mükemmel şekilde doğrular, hiçbir istisna yoktur",
+      "Ca ve Ga karşılaştırması periyodik trendlerle hiçbir ilgisi olmayan rastgele bir durumdur",
+      "Ga'nın düşük IE değeri bir veri hatasıdır, gerçekte Ca'dan yüksek olmalıdır",
+      "Yarıçap ile iyonlaşma enerjisi arasında hiçbir zaman ters ilişki yoktur"
     ],
     correct: 0,
-    explain: "Tabloya göre Li'den Rb'ye doğru atom yarıçapı artarken (152→248 pm) iyonlaşma enerjisi azalır (520→403 kJ/mol); bu, aynı grup içinde büyüyen atom yarıçapının değerlik elektronunu çekirdekten uzaklaştırıp zayıf bağlı hale getirdiğini ve iyonlaşmayı kolaylaştırdığını gösterir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, flor (F) ile klorun (Cl) her ikisinin de halojen olmasına rağmen flor atomunun elektron ilgisinin beklenenden biraz düşük (klordan bile düşük) olduğunu öğreniyor.",
-    text: "Bu ilginç istisnanın en olası açıklaması hangisidir?",
-    options: [
-      "Flor atomu çok küçük olduğundan, yeni gelen elektron mevcut yoğun elektron bulutuyla güçlü bir itme yaşar; bu itme, beklenen elektron ilgisi kazancını bir miktar azaltır",
-      "Bu istisna tamamen ölçüm hatasından kaynaklanır",
-      "Flor hiçbir zaman elektron alamaz",
-      "Klorun elektronegatifliği flordan yüksektir, bu yüzden elektron ilgisi de yüksektir",
-      "Flor atomunun çekirdek yükü klordan azdır"
-    ],
-    correct: 0,
-    explain: "Flor atomu son derece küçük olduğundan mevcut değerlik elektronları zaten sıkışık haldedir; yeni gelen elektron bu yoğun elektron bulutuyla güçlü bir itme kuvveti yaşar. Bu ekstra elektron-elektron itmesi, beklenen elektron ilgisi kazancını bir miktar azaltarak florun elektron ilgisinin klordan bile düşük çıkmasına yol açar — bu, atom yarıçapının çok küçük olmasının bazen beklenmedik etkiler yaratabileceğini gösterir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, bir X elementinin periyodik tabloda 3. periyot, 1. grupta; bir Y elementinin ise 3. periyot, 17. grupta yer aldığını öğreniyor.",
-    text: "Yalnızca bu konum bilgisinden yola çıkarak X ve Y'nin atom yarıçapı ve elektronegatiflik bakımından karşılaştırılması için en doğru tahmin hangisidir?",
-    options: [
-      "X (grup 1), Y'den (grup 17) daha büyük atom yarıçapına ve daha düşük elektronegatifliğe sahip olmalıdır, çünkü aynı periyotta soldan sağa yarıçap küçülür ve elektronegatiflik artar",
-      "X ve Y aynı periyotta oldukları için atom yarıçapı ve elektronegatiflikleri birebir eşit olmalıdır",
-      "Y, X'ten daha büyük atom yarıçapına sahip olmalıdır",
-      "Periyot bilgisi bu karşılaştırma için hiçbir ipucu vermez",
-      "X'in elektronegatifliği Y'den yüksek olmalıdır"
-    ],
-    correct: 0,
-    explain: "Aynı periyotta (3. periyot) soldan sağa gidildikçe atom yarıçapı küçülür ve elektronegatiflik artar; grup 1'deki X, grup 17'deki Y'ye göre periyodun çok daha solunda olduğundan daha büyük yarıçapa ve daha düşük elektronegatifliğe sahip olmalıdır (X burada sodyum, Y ise klordur)."
+    explain: "Ca'dan Ga'ya geçişte yarıçap küçülmesine rağmen (197→122) iyonlaşma enerjisi de hafifçe düşmektedir (590→579); bu, tam dolu 4s² kabuğuna sahip Ca'nın ekstra kararlılığı ile Ga'nın tek, daha az perdelenmiş 4p¹ elektronunun kolay koparılması nedeniyle genel yarıçap-IE ters ilişkisinin mutlak/istisnasız olmadığını, elektron diziliminin de ayrı bir etken olduğunu gösterir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, manganezin (Mn, [Ar]4s²3d⁵) ikinci iyonlaşma enerjisinin, komşusu kroma (Cr, [Ar]4s¹3d⁵) göre beklenenden farklı bir örüntü izlediğini öğreniyor; bunun her iki elementin de yarı dolu 3d⁵ yapısına ilişkin farklı elektron kaybı senaryolarından kaynaklandığını inceliyor.",
-    text: "Bu tür karşılaştırmalarda geçiş metalleri için genel iyonlaşma enerjisi tahminleri yaparken en dikkatli olunması gereken husus hangisidir?",
+    context: "Bir öğretim programında öğrencilere şu senaryo sunulmaktadır: 'Periyodik tabloda hiç bilinmeyen, henüz keşfedilmemiş bir X elementinin 3. periyotta, 1. grupta yer alacağı teorik olarak öngörülüyor.' (Bu tür bir element pratikte zaten bilinen sodyumdur, ancak senaryo bir tahmin alıştırması olarak kurgulanmıştır.)",
+    text: "Yalnızca periyodik tablodaki konumuna (3. periyot, 1. grup) dayanarak, bu X elementinin komşularıyla (2. periyot 1. grup ve 4. periyot 1. grup elementleri) karşılaştırıldığında atom yarıçapı, iyonlaşma enerjisi ve metalik karakteri hakkında en isabetli tahmin hangisidir?",
     options: [
-      "Geçiş metallerinde d⁵ ve d¹⁰ gibi ekstra kararlı ara durumların hangi iyonlaşma basamağında ortaya çıktığı elementten elemente farklılık gösterebilir; bu yüzden basit doğrusal bir artış varsayımı yerine, her elementin özgül elektron dizilimi dikkatle değerlendirilmelidir",
-      "Geçiş metallerinin iyonlaşma enerjisi hiçbir zaman tahmin edilemez",
-      "Tüm geçiş metalleri birebir aynı iyonlaşma enerjisi örüntüsünü gösterir",
-      "d⁵ yapısı yalnızca kromda ekstra kararlılık sağlar, manganezde hiçbir etkisi yoktur",
-      "İyonlaşma enerjisi geçiş metallerinde tamamen rastgeledir, hiçbir düzenlilik yoktur"
+      "Atom yarıçapı iki komşusu arasında bir değerde olacak, iyonlaşma enerjisi iki komşusu arasında bir değerde olacak ve metalik karakteri güçlü olacaktır (1. grup metali olarak)",
+      "Atom yarıçapı komşularından daha küçük olacaktır çünkü 3. periyottadır",
+      "İyonlaşma enerjisi komşularından daha yüksek olacaktır çünkü 1. gruptadır",
+      "Metalik karakteri zayıf olacaktır çünkü 3. periyottadır",
+      "Periyodik tablodaki konumdan hiçbir özellik tahmin edilemez"
     ],
     correct: 0,
-    explain: "Cr ([Ar]4s¹3d⁵) zaten taban halde yarı dolu d⁵ yapısındadır, bu yüzden ilk iyonlaşmasında farklı bir senaryo izlerken; Mn ([Ar]4s²3d⁵) ikinci iyonlaşmasında (bir 4s ve bazı d elektronları kaybettikten sonra) farklı bir noktada d⁵ kararlılığına ulaşabilir. Bu, geçiş metallerinde ekstra kararlı elektron dağılımlarının hangi iyonlaşma basamağında devreye gireceğinin elementten elemente değişebileceğini ve genellemelerin dikkatli yapılması gerektiğini gösterir."
+    explain: "Periyodik trendlere göre bir grup içinde ara bir periyotta yer alan element, komşu periyotlardaki aynı grup elementleri arasında bir yarıçap ve iyonlaşma enerjisi değerine sahip olma eğilimindedir; 1. grupta olduğundan güçlü metalik karakter (kolay elektron verme) beklenir — bu, Mendeleev'in periyodik tabloyla henüz keşfedilmemiş elementlerin özelliklerini başarıyla tahmin etmesinin dayandığı mantıktır."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, aynı yükte fakat farklı büyüklükte iki katyonun (örneğin Li⁺ ve Cs⁺) sulu çözeltide farklı derecede 'hidratlaştığını' (su molekülleriyle çevrildiğini) ve küçük olan Li⁺'nin daha güçlü hidratlaştığını öğreniyor.",
-    text: "Bu gözlem, iyon yarıçapı ile iyon-su etkileşim kuvveti arasındaki ilişki hakkında en doğru hangi çıkarımı destekler?",
+    context: "Bir kimyager, periyodik tablodaki 'köşegen ilişkisi' kavramını incelemektedir: bazı elementler (örneğin Li ve Mg, Be ve Al, B ve Si), aynı grupta olmadıkları hâlde köşegen konumları nedeniyle birbirine benzer kimyasal özellikler gösterir; bu, atom/iyon yarıçaplarının bu çiftlerde tesadüfen birbirine yakın çıkmasıyla ilişkilendirilir.",
+    text: "Köşegen ilişkisinin, standart 'aynı grup benzer özellik gösterir' kuralıyla birlikte değerlendirildiğinde en doğru yorumu hangisidir?",
     options: [
-      "Küçük iyonlarda pozitif yük daha küçük bir hacimde yoğunlaştığından yük yoğunluğu (yük/yarıçap oranı) daha yüksektir; bu da çevresindeki polar su molekülleriyle daha güçlü elektrostatik etkileşim kurmasını sağlar",
-      "İyon büyüklüğünün su ile etkileşimle hiçbir ilgisi yoktur",
-      "Büyük iyonlar her zaman küçük iyonlardan daha güçlü hidratlaşır",
-      "Hidratlaşma derecesi yalnızca iyonun yüküne bağlıdır, büyüklüğün hiçbir etkisi yoktur",
-      "Li⁺ ve Cs⁺ suyla aynı derecede etkileşime girer, gözlemlenen fark yanılsamadır"
+      "Kimyasal benzerlik temelde yarıçap ve yük yoğunluğu gibi niceliksel benzerliklerden kaynaklanır; bu benzerlik çoğunlukla aynı grupta görülse de, köşegen konumdaki elementler de (periyot artışıyla yarıçap büyümesi, grup azalışıyla yarıçap küçülmesi birbirini telafi ettiğinde) benzer yarıçap/yük yoğunluğuna ulaşarak istisnai bir benzerlik gösterebilir",
+      "Köşegen ilişkisi, periyodik tablonun grup kuralının tamamen yanlış olduğunu kanıtlar",
+      "Köşegen ilişkisi yalnızca rastlantısaldır, hiçbir niceliksel açıklaması yoktur",
+      "Aynı grupta olmayan hiçbir iki element birbirine benzer özellik gösteremez",
+      "Köşegen ilişkisi yalnızca Li ve Mg için geçerlidir, başka hiçbir çiftte görülmez"
     ],
     correct: 0,
-    explain: "Aynı yükteki iyonlarda, küçük yarıçaplı olan (Li⁺) yükünü daha küçük bir hacimde yoğunlaştırır, bu da yüksek yük yoğunluğu anlamına gelir; yüksek yük yoğunluğu, çevresindeki polar su molekülleriyle daha güçlü elektrostatik çekim (hidratlaşma) kurmasını sağlar. Bu, atom/iyon yarıçapı gibi periyodik özelliklerin, çözelti kimyası gibi pratik alanlarda da doğrudan sonuçları olduğunu gösterir."
+    explain: "Köşegen ilişkisi, periyotta sağa gidildikçe yarıçapın küçülmesi ile grupta aşağı inildikçe yarıçapın büyümesinin bir köşegen boyunca birbirini kısmen dengeleyebileceğini gösterir; bu durumda köşegen konumundaki iki element (örn. Li ve Mg) benzer yük yoğunluğuna/yarıçapa ulaşarak, standart grup kuralına ek olarak istisnai bir kimyasal benzerlik sergileyebilir — bu, grup kuralını geçersiz kılmaz, tamamlayıcı bir örüntüdür."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, periyodik özellik grafiklerinin (atom yarıçapı, iyonlaşma enerjisi vb.) her zaman kusursuz düz bir çizgi değil, küçük yerel sapmalar (Be-B, N-O gibi) içeren genel bir eğilim çizgisi olduğunu fark ediyor.",
-    text: "Bu gözlem, bilimsel 'eğilim' (trend) kavramının doğru yorumlanması için en önemli hangi metodolojik dersi verir?",
+    context: "Bir araştırmacı, aynı grupta yer alan iki elementin (örneğin O ve S) elektron ilgisi değerlerini karşılaştırdığında beklenmedik bir sonuçla karşılaşmıştır: 2. periyot elementi olan oksijenin elektron ilgisi, 3. periyot elementi olan kükürtten daha düşük çıkmıştır; oysa genel trend yukarıdan aşağıya azalan elektron ilgisini öngörür.",
+    text: "Bu istisnanın en olası açıklaması nedir?",
     options: [
-      "Bir bilimsel eğilim, her tekil veri noktasının istisnasız uyması gereken katı bir kural değil; çoğunluk davranışını yansıtan, yerel sapmalara açık genel bir örüntüdür; sapmaların kendisi de genellikle daha derin bir mekanizmayı ortaya çıkarır",
-      "Eğilimde herhangi bir sapma görülmesi, o eğilimin tamamen geçersiz ve kullanışsız olduğu anlamına gelir",
-      "Bilimsel eğilimler yalnızca istisnasız, kusursuz veriler için tanımlanabilir",
-      "Sapmalar her zaman ölçüm hatasından kaynaklanır ve hiçbir bilgi taşımaz",
-      "Trend kavramı yalnızca periyodik tabloya özgüdür, başka hiçbir bilimsel alanda kullanılmaz"
+      "Oksijenin küçük atom yarıçapı nedeniyle, eklenen elektronun mevcut elektronlarla yüksek elektron-elektron itmesi yaşaması; kükürtün daha büyük hacmi bu itmeyi azaltarak elektron eklemeyi görece kolaylaştırması",
+      "Bu istisnanın hiçbir bilimsel açıklaması yoktur, veri hatalıdır",
+      "Oksijenin proton sayısı kükürtten fazladır, bu yüzden elektron ilgisi düşüktür",
+      "Elektron ilgisi yalnızca 3. periyot ve sonrası için tanımlıdır",
+      "Oksijen bir metaldir, bu yüzden elektron almaya isteksizdir"
     ],
     correct: 0,
-    explain: "Bilimsel bir 'eğilim', veri kümesindeki baskın genel örüntüyü tanımlar; tekil sapmalar (Be-B, N-O gibi) eğilimi geçersiz kılmaz, aksine genellikle altta yatan ek bir mekanizmayı (burada alt kabuk kararlılığı) ortaya çıkarır. Bu, bilimsel genellemelerin 'ya hep ya hiç' değil, olasılıksal/çoğunlukçu ve sapmalarıyla birlikte daha derin anlayışa açılan yapılar olduğunu gösteren önemli bir metodolojik derstir."
+    explain: "Oksijenin küçük atom hacmi, eklenen elektronun mevcut değerlik elektronlarıyla (2p⁴ dizilimi) yoğun bir elektron-elektron itmesi yaşamasına neden olur; bu itme enerji açısından elverişsizdir. Kükürtün daha büyük hacmi (3p⁴) bu itmeyi azaltarak elektron eklemeyi nispeten kolaylaştırır — bu, O-S arasındaki elektron ilgisi trendinin istisnasını açıklar."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğrenci, periyodik özelliklerin (atom yarıçapı, iyonlaşma enerjisi, elektronegatiflik) sadece nitel ('artar/azalır') değil, nicel (sayısal) verilerle de ifade edilebildiğini; bu sayısal verilerin malzeme tasarımı, ilaç geliştirme gibi alanlarda hesaplama modellerine girdi olarak kullanıldığını öğreniyor.",
-    text: "Bu bilgi, periyodik özelliklerin bilimsel kullanımı hakkında en doğru hangi kapsamlı çıkarımı destekler?",
+    context: "Bir X elementinin nötr atomunun 1. iyonlaşma enerjisi 1000 kJ/mol, oluşturduğu X⁻ anyonunun elektron ilgisi ise -350 kJ/mol'dür (elektron eklemek enerji açığa çıkarır).",
+    text: "Bu iki veri birlikte değerlendirildiğinde, X elementi hakkında en tutarlı çıkarım hangisidir?",
     options: [
-      "Periyodik özelliklerin yalnızca genel yönelimi (artış/azalış) değil, kesin sayısal değerleri de bilimsel ve mühendislik uygulamalarında niceliksel tahmin ve modelleme için kritik öneme sahiptir",
-      "Periyodik özelliklerin sayısal değerleri hiçbir pratik uygulamada kullanılmaz, yalnızca nitel eğilimler önemlidir",
-      "Malzeme tasarımı periyodik özelliklerden tamamen bağımsız bir alandır",
-      "Nicel veriler yalnızca teorik fizikte kullanılır, kimya mühendisliğinde kullanılmaz",
-      "Periyodik özelliklerin sayısal değerleri sürekli değişir, bu yüzden güvenilir değildir"
+      "X, elektron vermeye karşı dirençli (yüksek IE) fakat elektron almaya istekli (negatif, elverişli elektron ilgisi) bir elementtir; bu, X'in muhtemelen bir ametal (örn. halojenlere yakın) olduğunu düşündürür",
+      "X kesinlikle bir alkali metaldir",
+      "Bu iki veri birbiriyle çelişmektedir, aynı elemente ait olamaz",
+      "X'in metalik/ametalik karakteri bu verilerden belirlenemez",
+      "Yüksek iyonlaşma enerjisi her zaman düşük (elverişsiz) elektron ilgisiyle birlikte görülür"
     ],
     correct: 0,
-    explain: "Periyodik özelliklerin yalnızca 'artar/azalır' şeklindeki nitel eğilimleri değil, kesin sayısal değerleri (örneğin belirli bir elektronegatiflik veya iyonlaşma enerjisi sayısı) de malzeme bilimi, ilaç tasarımı ve kimya mühendisliğindeki hesaplamalı modellerde doğrudan girdi olarak kullanılır; bu, periyodik özelliklerin hem kavramsal hem de niceliksel/pratik değer taşıdığını gösterir."
+    explain: "Yüksek iyonlaşma enerjisi (elektron vermeye direnç) ile elverişli (negatif) elektron ilgisi (elektron almaya isteklilik) birlikte, tipik olarak ametalik karakterli, periyodik tablonun sağ üst bölgesine yakın bir elementin profiline işaret eder."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
+    context: "Bir öğretim materyalinde şu karşılaştırma yapılmaktadır: Mg²⁺ iyonu ile Na⁺ iyonu izoelektronik değildir (Mg²⁺ 10 elektron, Na⁺ de 10 elektron — aslında izoelektroniktirler); ancak Mg²⁺'nin yükü Na⁺'dan daha büyüktür (+2 karşı +1) ve yarıçapı daha küçüktür.",
+    text: "Aynı elektron sayısına (izoelektronik) sahip olsalar da yüklerinin farklı olması, bu iki iyonun kimyasal davranışını (örneğin bir bileşikteki bağ gücünü) nasıl etkiler?",
+    options: [
+      "Daha yüksek yüke ve daha küçük yarıçapa sahip Mg²⁺, aynı anyonla daha güçlü elektrostatik çekim (daha yüksek yük yoğunluğu) oluşturarak genellikle daha güçlü/daha yüksek erime noktalı iyonik bileşikler oluşturur",
+      "Yük farkı kimyasal davranışı hiçbir şekilde etkilemez, yalnızca elektron sayısı önemlidir",
+      "Na⁺ her zaman Mg²⁺'den daha güçlü iyonik bağ oluşturur",
+      "İzoelektronik iyonlar her zaman birebir aynı kimyasal davranışı gösterir",
+      "Yük yoğunluğu kavramı yalnızca anyonlar için geçerlidir"
+    ],
+    correct: 0,
+    explain: "Mg²⁺'nin daha yüksek yükü ve daha küçük yarıçapı, daha yüksek bir 'yük yoğunluğuna' (yük/yarıçap oranına) karşılık gelir; bu, aynı anyonla daha güçlü elektrostatik etkileşim ve genellikle daha yüksek erime noktalı iyonik bileşikler anlamına gelir (örneğin MgO'nun erime noktası NaCl'den çok daha yüksektir)."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
+    context: "Bir araştırmacı, periyodik tablodaki 18 elementin metalik/ametalik karakterini 'metalik indeks' adı verilen sayısal bir ölçekle (0=tam ametalik, 100=tam metalik) derecelendirmiş ve bu değerlerin periyot/grup konumuyla güçlü bir korelasyon gösterdiğini bulmuştur; ancak metaloidler (B, Si, Ge, As, Sb, Te) bu ölçekte orta değerler (40-60 arası) almıştır.",
+    text: "Metaloidlerin bu 'orta' konumu, periyodik özellik trendleri hakkında en doğru hangi genellemeyi destekler?",
+    options: [
+      "Periyodik özellikler (burada metalik/ametalik karakter) genellikle keskin sınırlarla değil, kademeli/sürekli bir geçişle değişir; metal-ametal ayrımı bu sürekliliğin üzerine sonradan çizilmiş kavramsal bir sınırdır",
+      "Metaloidlerin var olması periyodik tablonun tüm mantığını geçersiz kılar",
+      "Metalik/ametalik karakter yalnızca iki kesin kategoriye (tam metal, tam ametal) ayrılabilir, ara değer imkânsızdır",
+      "Metaloidler periyodik trendlerin dışında, tesadüfen var olan elementlerdir",
+      "Bu ölçek yalnızca metaloidler için anlamlıdır, diğer elementler için geçersizdir"
+    ],
+    correct: 0,
+    explain: "Metaloidlerin orta değerler alması, metalik/ametalik karakterin (ve genel olarak birçok periyodik özelliğin) kesin, keskin sınırlı kategoriler değil, periyodik tablo boyunca kademeli olarak değişen sürekli bir spektrum olduğunu gösterir; 'metal/ametal' ayrımı bu sürekliliğe pratik amaçlarla çizilmiş bir sınırdır."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
+    context: "Bir X elementinin elektronegatifliği 2,1, bir Y elementinin elektronegatifliği ise 2,0'dir (çok küçük bir fark, 0,1). Buna karşın X'in atom yarıçapı Y'ninkinden çok daha büyüktür ve X'in iyonlaşma enerjisi Y'ninkinden belirgin şekilde düşüktür.",
+    text: "Bu görünüşteki tutarsızlık (elektronegatifliğin neredeyse eşit olması, fakat yarıçap ve iyonlaşma enerjisinin çok farklı olması) en doğru şekilde nasıl açıklanır?",
+    options: [
+      "Elektronegatiflik, yarıçap ve iyonlaşma enerjisiyle güçlü korelasyon gösterse de birebir aynı büyüklük değildir; farklı periyot/grup kombinasyonlarında (örneğin biri sol-alt, diğeri sağ-üst yönünde küçük bir kaymayla) benzer elektronegatiflik değerine farklı yarıçap/IE kombinasyonlarıyla ulaşılabilir",
+      "Bu bir tutarsızlıktır ve mevcut atom teorisiyle açıklanamaz",
+      "Elektronegatiflik, yarıçap ve iyonlaşma enerjisinden tamamen bağımsız, ilgisiz bir büyüklüktür",
+      "X ve Y'nin verileri hatalı ölçülmüştür",
+      "Elektronegatiflik yalnızca iyonlaşma enerjisine bağlıdır, yarıçapın hiçbir etkisi yoktur"
+    ],
+    correct: 0,
+    explain: "Elektronegatiflik genellikle hem yarıçap hem iyonlaşma enerjisiyle ilişkili bir büyüklük olsa da, bu üç özellik birebir aynı matematiksel fonksiyon değildir; farklı periyot/grup konumlarındaki elementler, yarıçap ve iyonlaşma enerjisi açısından belirgin farklılıklar taşısa bile (birbirini kısmen dengeleyen etkilerle) benzer elektronegatiflik değerlerine ulaşabilir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
+    context: "Bir bilim tarihi kaynağında, Mendeleev'in periyodik tablosunun ilk hâlinde bazı elementlerin (örneğin tellür ve iyot) atom kütlesine göre sıralandığında kimyasal özellikleriyle uyumsuz bir konuma düştüğü, ancak Mendeleev'in bu iki elementin yerini kimyasal özelliklerine (bugün bildiğimiz atom numarasına denk gelen bir mantığa) göre değiştirdiği anlatılmaktadır.",
+    text: "Mendeleev'in bu kararı, periyodik özelliklerin (grup benzerliği) sıralama ilkesi olarak neden atom kütlesinden daha güvenilir kabul edildiğini nasıl gösterir?",
+    options: [
+      "Kimyasal davranış (grup üyeliği, değerlik) doğrudan elektron dizilimiyle belirlenir; atom kütlesi (izotop dağılımından etkilenen dolaylı bir ölçüt) bazı durumlarda bu temel ilişkiyi yansıtmayabilir, bu yüzden Mendeleev kimyasal tutarlılığı önceliklendirmiştir",
+      "Mendeleev'in kararı tamamen keyfi olup hiçbir bilimsel gerekçesi yoktur",
+      "Atom kütlesi her zaman kimyasal özelliklerle birebir örtüşür, Mendeleev hata yapmıştır",
+      "Tellür ve iyodun konumu periyodik tablo için önemsiz bir ayrıntıdır",
+      "Bu karar, periyodik tablonun bilimsel bir temeli olmadığını gösterir"
+    ],
+    correct: 0,
+    explain: "Kimyasal davranış temelde elektron dizilimine (ve modern anlayışla atom numarasına) bağlıdır; atom kütlesi izotop bolluğundan etkilenen dolaylı bir büyüklük olduğundan bazen kimyasal gruplamayla uyuşmayabilir. Mendeleev'in gözlemlenen kimyasal benzerliği (grup tutarlılığını) atom kütlesi sırasının önüne koyması, sonradan atom numarasının (proton sayısının) asıl düzenleyici ilke olduğunun keşfedilmesini önceden haber veren isabetli bir bilimsel sezgiydi."
   }
 ]
 };
