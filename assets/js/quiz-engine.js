@@ -2440,7 +2440,7 @@ export function renderQuiz(
           <span class="bullet">
 
             ${String.fromCharCode(
-              97 + optionIndex
+              65 + optionIndex
             )}
 
           </span>

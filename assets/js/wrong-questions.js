@@ -158,7 +158,7 @@ function showSimilarQuestion(
 
     button.innerHTML = `
       <span>
-        ${String.fromCharCode(97 + index)}
+        ${String.fromCharCode(65 + index)}
       </span>
       ${option}
     `;
@@ -393,7 +393,7 @@ export async function renderWrongQuestions(hostEl) {
           <strong>
             Doğru cevap:
             ${String.fromCharCode(
-              97 + q.correct
+              65 + q.correct
             )}
           </strong>
         </div>
