@@ -262,6 +262,344 @@ function renderPhScale(chart) {
   `;
 }
 
+function renderOrbitalBoxes(diagram) {
+
+  if (!diagram || !Array.isArray(diagram.subshells)) return "";
+
+  const ARROW = { 0: "", 1: "↑", 2: "↑↓" };
+
+  const groups = diagram.subshells.map(sub => {
+    const boxes = (sub.electrons || [])
+      .map(e => `<div class="obox">${ARROW[e] || ""}</div>`)
+      .join("");
+    return `
+      <div class="osub">
+        <div class="oboxes">${boxes}</div>
+        <div class="olabel">${escapeHTML(sub.label)}</div>
+      </div>
+    `;
+  }).join("");
+
+  const caption = diagram.caption
+    ? `<div class="odiagram-caption">${escapeHTML(diagram.caption)}</div>`
+    : "";
+
+  return `
+    <div class="odiagram-wrap">
+      ${caption}
+      <div class="odiagram">${groups}</div>
+    </div>
+  `;
+}
+
+function renderCircleCompare(data) {
+
+  if (!data || !Array.isArray(data.items) || data.items.length === 0) return "";
+
+  const values = data.items.map(it => Number(it.value));
+  const maxVal = Math.max(...values) || 1;
+  const MAX_R = 44;
+
+  const items = data.items.map(it => {
+    const r = Math.max((Number(it.value) / maxVal) * MAX_R, 6);
+    const label = escapeHTML(it.label);
+    const valueLabel = escapeHTML(`${it.value}${data.unit ? " " + data.unit : ""}`);
+    return `
+      <div class="ccircle-item">
+        <svg viewBox="0 0 96 96" width="96" height="96">
+          <circle cx="48" cy="48" r="${r.toFixed(1)}" fill="var(--gas)" opacity="0.75"></circle>
+        </svg>
+        <div class="ccircle-label">${label}</div>
+        <div class="ccircle-value">${valueLabel}</div>
+      </div>
+    `;
+  }).join("");
+
+  const title = data.title
+    ? `<div class="ccompare-title">${escapeHTML(data.title)}</div>`
+    : "";
+
+  return `
+    <div class="ccompare-wrap">
+      ${title}
+      <div class="ccompare-row">${items}</div>
+    </div>
+  `;
+}
+
+function renderPeriodicHighlight(data) {
+
+  if (!data || !Array.isArray(data.cells) || data.cells.length === 0) return "";
+
+  const periods = [...new Set(data.cells.map(c => c.period))].sort((a, b) => a - b);
+  const groups = [...new Set(data.cells.map(c => c.group))].sort((a, b) => a - b);
+
+  const cellMap = new Map(
+    data.cells.map(c => [`${c.period}-${c.group}`, c])
+  );
+
+  const rows = periods.map(p => {
+    const cols = groups.map(g => {
+      const cell = cellMap.get(`${p}-${g}`);
+      if (!cell) return `<div class="pgrid-cell pgrid-empty"></div>`;
+      const cls = cell.highlighted ? "pgrid-cell pgrid-hl" : "pgrid-cell";
+      return `<div class="${cls}">${escapeHTML(cell.symbol)}</div>`;
+    }).join("");
+    return `<div class="pgrid-row">${cols}</div>`;
+  }).join("");
+
+  const caption = data.caption
+    ? `<div class="pgrid-caption">${escapeHTML(data.caption)}</div>`
+    : "";
+
+  return `
+    <div class="pgrid-wrap">
+      ${caption}
+      <div class="pgrid" style="grid-template-columns:repeat(${groups.length},36px)">${rows}</div>
+    </div>
+  `;
+}
+
+/* =========================================================
+   GHS TEHLİKE PİKTOGRAMLARI (özgün, sadeleştirilmiş çizimler)
+   ========================================================= */
+
+const GHS_ICONS = {
+  flame: `
+    <path d="M50,24 C41,35 37,47 40,57 C42,64 47,67 50,67 C53,67 58,64 60,57 C63,47 59,35 50,24 Z" fill="#000"></path>
+    <path d="M50,40 C46,46 44,52 46,57 C47,60 49,61 50,61 C51,61 53,60 54,57 C56,52 54,46 50,40 Z" fill="#fff"></path>
+  `,
+  oxidizing: `
+    <circle cx="50" cy="60" r="9" fill="#000"></circle>
+    <path d="M50,26 C43,35 40,45 43,53 C45,58 48,60 50,60 C52,60 55,58 57,53 C60,45 57,35 50,26 Z" fill="#000"></path>
+  `,
+  explosive: `
+    <circle cx="50" cy="54" r="11" fill="#000"></circle>
+    <g stroke="#000" stroke-width="3.2" stroke-linecap="round">
+      <line x1="50" y1="40" x2="50" y2="30"></line>
+      <line x1="60" y1="45" x2="68" y2="37"></line>
+      <line x1="64" y1="54" x2="74" y2="54"></line>
+      <line x1="40" y1="45" x2="32" y2="37"></line>
+      <line x1="36" y1="54" x2="26" y2="54"></line>
+      <line x1="43" y1="63" x2="37" y2="70"></line>
+      <line x1="57" y1="63" x2="63" y2="70"></line>
+    </g>
+    <path d="M50,30 C52,26 50,22 46,22" fill="none" stroke="#000" stroke-width="2.4" stroke-linecap="round"></path>
+  `,
+  gas: `
+    <rect x="42" y="34" width="16" height="34" rx="4" fill="none" stroke="#000" stroke-width="3.2"></rect>
+    <rect x="46" y="26" width="8" height="8" fill="#000"></rect>
+    <line x1="46" y1="34" x2="46" y2="68" stroke="#fff" stroke-width="0"></line>
+  `,
+  corrosive: `
+    <g stroke="#000" stroke-width="2.6" fill="none">
+      <path d="M34,28 L28,42 L40,42 Z"></path>
+      <path d="M56,28 L50,44 L64,44 Z"></path>
+    </g>
+    <line x1="30" y1="52" x2="70" y2="52" stroke="#000" stroke-width="3"></line>
+    <path d="M26,52 C24,58 22,62 18,66" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round"></path>
+    <path d="M40,52 C39,58 38,62 36,67" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round"></path>
+    <path d="M58,52 C58,58 59,63 61,68" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round"></path>
+  `,
+  toxic: `
+    <circle cx="50" cy="42" r="14" fill="none" stroke="#000" stroke-width="3.2"></circle>
+    <circle cx="44" cy="40" r="2.6" fill="#000"></circle>
+    <circle cx="56" cy="40" r="2.6" fill="#000"></circle>
+    <path d="M46,48 C48,50 52,50 54,48" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round"></path>
+    <g stroke="#000" stroke-width="2.4" stroke-linecap="round">
+      <line x1="34" y1="60" x2="66" y2="68"></line>
+      <line x1="34" y1="68" x2="66" y2="60"></line>
+    </g>
+    <circle cx="34" cy="60" r="2" fill="#000"></circle>
+    <circle cx="66" cy="68" r="2" fill="#000"></circle>
+    <circle cx="34" cy="68" r="2" fill="#000"></circle>
+    <circle cx="66" cy="60" r="2" fill="#000"></circle>
+  `,
+  irritant: `
+    <rect x="46.5" y="26" width="7" height="26" rx="3" fill="#000"></rect>
+    <circle cx="50" cy="60" r="4.4" fill="#000"></circle>
+  `,
+  "health-hazard": `
+    <circle cx="50" cy="34" r="8" fill="#000"></circle>
+    <path d="M36,68 C36,54 42,46 50,46 C58,46 64,54 64,68 Z" fill="#000"></path>
+    <path d="M50,50 L54,58 L48,59 L53,67 L44,56 L50,55 Z" fill="#fff"></path>
+  `,
+  environment: `
+    <line x1="24" y1="64" x2="76" y2="64" stroke="#000" stroke-width="2.6"></line>
+    <path d="M38,64 L38,40" stroke="#000" stroke-width="3" stroke-linecap="round" fill="none"></path>
+    <path d="M38,46 L30,38 M38,50 L47,42 M38,56 L29,50" stroke="#000" stroke-width="2.2" stroke-linecap="round" fill="none"></path>
+    <path d="M58,58 C64,54 70,54 74,58 C70,62 64,62 58,58 Z" fill="#000"></path>
+    <path d="M58,58 L52,54 L52,62 Z" fill="#000"></path>
+  `
+};
+
+const GHS_LABELS = {
+  flame: "Alevlenir",
+  oxidizing: "Oksitleyici",
+  explosive: "Patlayıcı",
+  gas: "Basınçlı gaz",
+  corrosive: "Aşındırıcı",
+  toxic: "Toksik",
+  irritant: "Zararlı / Tahriş edici",
+  "health-hazard": "Sağlığa zararlı",
+  environment: "Çevreye zararlı"
+};
+
+function renderGHSPictogram(code) {
+
+  const icon = GHS_ICONS[code];
+  if (!icon) return "";
+
+  const label = escapeHTML(GHS_LABELS[code] || code);
+
+  return `
+    <div class="ghs-item">
+      <svg viewBox="0 0 100 100" width="64" height="64">
+        <rect x="18" y="18" width="64" height="64" rx="7" fill="#fff" stroke="#dc2626" stroke-width="6" transform="rotate(45 50 50)"></rect>
+        ${icon}
+      </svg>
+      <div class="ghs-label">${label}</div>
+    </div>
+  `;
+}
+
+function renderGHSPictograms(data) {
+
+  const codes = Array.isArray(data) ? data : (data && Array.isArray(data.codes) ? data.codes : null);
+  if (!codes || codes.length === 0) return "";
+
+  const title = (!Array.isArray(data) && data && data.title)
+    ? `<div class="ghs-title">${escapeHTML(data.title)}</div>`
+    : "";
+
+  const items = codes.map(c => renderGHSPictogram(c)).join("");
+
+  return `
+    <div class="ghs-wrap">
+      ${title}
+      <div class="ghs-row">${items}</div>
+    </div>
+  `;
+}
+
+/* =========================================================
+   GÜNLÜK NESNE / LABORATUVAR MALZEMESİ İKONLARI (özgün çizimler)
+   ========================================================= */
+
+const OBJECT_ICONS = {
+  detergent: `
+    <rect x="30" y="30" width="20" height="8" rx="2" fill="#7c3aed"></rect>
+    <path d="M28,38 h24 v34 a4,4 0 0 1 -4,4 h-16 a4,4 0 0 1 -4,-4 Z" fill="#a78bfa"></path>
+    <rect x="34" y="46" width="12" height="18" rx="2" fill="#fff" opacity="0.7"></rect>
+  `,
+  battery: `
+    <rect x="40" y="22" width="10" height="6" fill="#334155"></rect>
+    <rect x="28" y="28" width="34" height="46" rx="3" fill="#22c55e"></rect>
+    <rect x="28" y="46" width="34" height="14" fill="#166534"></rect>
+    <text x="45" y="42" font-size="14" font-weight="800" fill="#fff" text-anchor="middle">+</text>
+    <text x="45" y="70" font-size="14" font-weight="800" fill="#fff" text-anchor="middle">−</text>
+  `,
+  toothpaste: `
+    <path d="M32,26 h20 l4,10 h-28 Z" fill="#0ea5e9"></path>
+    <path d="M28,36 h28 v30 a6,6 0 0 1 -6,6 h-16 a6,6 0 0 1 -6,-6 Z" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2"></path>
+    <rect x="28" y="48" width="28" height="7" fill="#0ea5e9"></rect>
+  `,
+  soda: `
+    <path d="M34,26 h16 l3,42 a4,4 0 0 1 -4,4 h-14 a4,4 0 0 1 -4,-4 Z" fill="#fde68a" stroke="#b45309" stroke-width="2"></path>
+    <line x1="33.4" y1="42" x2="50.6" y2="42" stroke="#b45309" stroke-width="1.6"></line>
+    <circle cx="40" cy="36" r="1.6" fill="#fff"></circle>
+    <circle cx="45" cy="50" r="1.6" fill="#fff"></circle>
+    <circle cx="41" cy="58" r="1.6" fill="#fff"></circle>
+    <line x1="46" y1="18" x2="42" y2="28" stroke="#334155" stroke-width="2.4" stroke-linecap="round"></line>
+  `,
+  vinegar: `
+    <path d="M44,22 h6 v8 h-6 Z" fill="#84cc16"></path>
+    <path d="M36,30 h22 l4,8 v28 a4,4 0 0 1 -4,4 h-22 a4,4 0 0 1 -4,-4 v-28 Z" fill="#d9f99d" stroke="#4d7c0f" stroke-width="2"></path>
+    <rect x="37" y="46" width="20" height="12" fill="#fff" opacity="0.8"></rect>
+  `,
+  beaker: `
+    <path d="M38,24 h18 v14 l10,26 a4,4 0 0 1 -4,5.4 h-30 a4,4 0 0 1 -4,-5.4 l10,-26 Z" fill="none" stroke="#0f172a" stroke-width="2.6"></path>
+    <path d="M34,54 h26" stroke="#0f172a" stroke-width="2"></path>
+    <path d="M35,46 h24 l4.4,10 h-32.8 Z" fill="#7dd3fc" opacity="0.7"></path>
+  `,
+  flask: `
+    <path d="M45,24 h6 v16 l14,26 a4,4 0 0 1 -3.6,5.8 h-27 a4,4 0 0 1 -3.6,-5.8 l14,-26 Z" fill="none" stroke="#0f172a" stroke-width="2.6"></path>
+    <path d="M38,58 C41,53 47,53 50,56 C53,59 58,58 60,55 l2.4,4.4 a4,4 0 0 1 -3.6,5.8 h-27 a4,4 0 0 1 -3.6,-5.8 Z" fill="#86efac" opacity="0.8"></path>
+    <line x1="43" y1="24" x2="43" y2="20" stroke="#0f172a" stroke-width="2.6"></line>
+    <line x1="53" y1="24" x2="53" y2="20" stroke="#0f172a" stroke-width="2.6"></line>
+  `,
+  glove: `
+    <path d="M32,60 v-22 a4,4 0 0 1 8,0 v-8 a4,4 0 0 1 8,0 v-8 a4,4 0 0 1 8,0 v8 a4,4 0 0 1 8,0 v6 a4,4 0 0 1 6,3.6 v14 a14,14 0 0 1 -14,14 h-10 a14,14 0 0 1 -14,-13.6 Z" fill="#fbbf24" stroke="#92400e" stroke-width="1.6"></path>
+  `,
+  extinguisher: `
+    <rect x="40" y="20" width="10" height="8" rx="1.4" fill="#0f172a"></rect>
+    <path d="M36,28 h18 l3,6 h-24 Z" fill="#0f172a"></path>
+    <path d="M38,34 h14 v34 a7,7 0 0 1 -7,7 a7,7 0 0 1 -7,-7 Z" fill="#dc2626"></path>
+    <path d="M52,38 l14,-6" stroke="#0f172a" stroke-width="2.4" stroke-linecap="round"></path>
+    <circle cx="66" cy="32" r="2" fill="#0f172a"></circle>
+  `,
+  pill: `
+    <rect x="26" y="42" width="48" height="18" rx="9" fill="#f87171" transform="rotate(-25 50 51)"></rect>
+    <rect x="26" y="42" width="24" height="18" rx="9" fill="#fecaca" transform="rotate(-25 50 51)"></rect>
+  `,
+  foil: `
+    <ellipse cx="50" cy="30" rx="16" ry="6" fill="#cbd5e1" stroke="#64748b" stroke-width="1.6"></ellipse>
+    <path d="M34,30 v18 a16,6 0 0 0 32,0 v-18" fill="none" stroke="#64748b" stroke-width="1.6"></path>
+    <path d="M34,48 l32,14" stroke="#94a3b8" stroke-width="2.4"></path>
+  `
+};
+
+const OBJECT_LABELS = {
+  detergent: "Deterjan şişesi",
+  battery: "Pil",
+  toothpaste: "Diş macunu",
+  soda: "Gazlı içecek",
+  vinegar: "Sirke şişesi",
+  beaker: "Beher",
+  flask: "Erlenmeyer",
+  glove: "Koruyucu eldiven",
+  extinguisher: "Yangın söndürücü",
+  pill: "İlaç tableti",
+  foil: "Alüminyum folyo"
+};
+
+function renderObjectIcon(type, customLabel) {
+
+  const icon = OBJECT_ICONS[type];
+  if (!icon) return "";
+
+  const label = escapeHTML(customLabel || OBJECT_LABELS[type] || type);
+
+  return `
+    <div class="oicon-item">
+      <svg viewBox="0 0 100 90" width="72" height="65">${icon}</svg>
+      <div class="oicon-label">${label}</div>
+    </div>
+  `;
+}
+
+function renderObjectIcons(data) {
+
+  const items = Array.isArray(data) ? data : (data && Array.isArray(data.items) ? data.items : null);
+  if (!items || items.length === 0) return "";
+
+  const title = (!Array.isArray(data) && data && data.title)
+    ? `<div class="oicon-title">${escapeHTML(data.title)}</div>`
+    : "";
+
+  const rendered = items.map(it => {
+    if (typeof it === "string") return renderObjectIcon(it);
+    return renderObjectIcon(it.type, it.label);
+  }).join("");
+
+  return `
+    <div class="oicon-wrap">
+      ${title}
+      <div class="oicon-row">${rendered}</div>
+    </div>
+  `;
+}
+
 function renderChart(chart) {
 
   if (!chart || !chart.type) return "";
@@ -2036,6 +2374,16 @@ export function renderQuiz(
       ${renderDataTable(question.table)}
 
       ${renderChart(question.chart)}
+
+      ${renderOrbitalBoxes(question.orbitalBoxes)}
+
+      ${renderCircleCompare(question.circleCompare)}
+
+      ${renderPeriodicHighlight(question.periodicHighlight)}
+
+      ${renderGHSPictograms(question.pictograms)}
+
+      ${renderObjectIcons(question.objectIcons)}
 
 
       <div class="qtext">
