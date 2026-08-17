@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>[Ders Adı] · [Tema Adı] — Ders Defteri (ŞABLON)</title>
+<style>
+  :root{
+    --ink:#14152b; --ink-soft:#3c3f5c; --line:#c7cbdd; --paper:#ffffff; --bg:#eef0f7;
+    --accent:#4a3fd1; --accent-2:#d9930a; --good:#177a44;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family: Georgia, "Times New Roman", serif; line-height:1.42; font-size:12.5px;
+  }
+  .page{
+    width:210mm; min-height:297mm; margin:14px auto; background:var(--paper);
+    padding:16mm 15mm; position:relative; box-shadow:0 2px 10px rgba(0,0,0,.12);
+  }
+  /* Sayfa kenar boşlukları @page üzerinden ayarlanır (padding üzerinden değil):
+     bir ünite tek bir .page div'i olarak birden fazla fiziksel A4 sayfasına
+     taşabildiğinden (uzun konu anlatımı + çok etkinlikli çalışma sayfaları),
+     kenar boşluğu .page'in kendi padding'i olsaydı yalnızca taştığı ilk ve son
+     fiziksel sayfada uygulanır, aradaki tüm sayfalar kenar boşluksuz (kağıda
+     kadar dayanan metinle) basılırdı. @page margin ise basılan HER fiziksel
+     sayfaya otomatik ve eşit uygulanır — kitap baskısı için gereken düzenli,
+     yeterli kenar boşluğunu garanti eden doğru mekanizma budur. */
+  @page{ size:210mm 297mm; margin:16mm 15mm; }
+  @media print{
+    body{ background:#fff; }
+    .page{ margin:0; box-shadow:none; width:auto; min-height:auto; padding:0; page-break-after:always; }
+    /* Kapak sayfaları içeriği dikeyde ortalar; min-height:auto ile içerik kısa kalırsa
+       gradyan arka plan tüm fiziksel sayfanın basılabilir alanını kaplamaz ve
+       üstte/altta beyaz boşluk kalır. Basılabilir alan artık @page margin'i
+       düşülmüş haliyle 265mm (297mm - 16mm - 16mm) yüksekliğindedir. */
+    .page.cover{ min-height:calc(297mm - 32mm); }
+    .noprint{ display:none !important; }
+    .soru, .box, .baglam, .kavramlar-list, .lo-box, .draw-box, .draw-row, .ca-item, .ca-unit, .depo-wrap,
+    table.wk, table.usage, table.depo-matrix{
+      break-inside:avoid; page-break-inside:avoid;
+    }
+    /* .worksheet kutuları (özellikle çok etkinlikli olanlar) tek bir A4 sayfasından uzun
+       olabilir; break-inside:avoid uygulanırsa tamamı bir sonraki sayfaya atlar ve önceki
+       sayfada büyük bir boşluk kalır. Bunun yerine yalnızca kısa worksheet'lerin (tek etkinlikli,
+       .short-worksheet ile işaretlenen) bölünmemesi sağlanır; uzun olanlar doğal akışla bölünür. */
+    .worksheet.short-worksheet{ break-inside:avoid; page-break-inside:avoid; }
+    .baglam{ break-after:avoid; page-break-after:avoid; }
+    .konu-h{ break-after:avoid; page-break-after:avoid; }
+    .sorular-h{ break-after:avoid; page-break-after:avoid; }
+    .wlbl{ break-after:avoid; page-break-after:avoid; }
+    .kavramlar-list dt{ break-inside:avoid; page-break-inside:avoid; }
+  }
+  h1,h2,h3,h4{ font-family: Arial, Helvetica, sans-serif; font-weight:800; color:var(--ink); margin:0 0 .4em; }
+  p{ margin:0 0 .6em; }
+  /* footer-tag KASITLI OLARAK normal akışta (position:absolute DEĞİL): bir .page
+     div'i (bir ünitenin tamamı) birden fazla fiziksel A4 sayfasına taşabildiğinden,
+     mutlak konumlandırma toplam (çok sayfalı) kutunun sonuna göre hesaplanır ve bu
+     nokta çoğunlukla son fiziksel sayfanın ortasına denk gelip canlı metnin üzerine
+     biner. Normal akışta ise ünitenin son sorusundan hemen sonra, üstte kalıp asla
+     başka içerikle çakışmayan bir "ünite sonu" etiketi olarak görünür. */
+  .footer-tag{ display:flex; justify-content:space-between; margin-top:14px; font-family:Arial,sans-serif; font-size:9.5px; color:#8a8ea8; border-top:1px solid var(--line); padding-top:6px; }
+
+  /* ---- Kapak ---- */
+  .cover{ background:linear-gradient(160deg,#14122c,#211f47 60%,#0c0a1f); color:#fff; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; }
+  .cover .eyebrow{ font-family:Arial,sans-serif; letter-spacing:.12em; text-transform:uppercase; font-size:12px; color:#bcaeff; margin-bottom:18px; }
+  .cover .emoji{ font-size:54px; margin-bottom:14px; }
+  .cover h1{ font-family:Arial,sans-serif; color:#fff; font-size:34px; max-width:520px; margin-bottom:10px; }
+  .cover .sub{ color:#c7bfe6; max-width:460px; font-family:Arial,sans-serif; font-size:13.5px; margin-bottom:26px; }
+  .cover .badges{ display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-bottom:30px; }
+  .cover .badge{ font-family:Arial,sans-serif; font-size:11px; font-weight:700; border:1px solid #4a3fd1; color:#c7bfe6; padding:6px 14px; border-radius:999px; background:rgba(109,91,255,.12); }
+  .cover .frame{ border:1px solid rgba(255,255,255,.25); border-radius:18px; padding:34px 40px; max-width:480px; }
+  .cover .site{ margin-top:26px; font-family:Arial,sans-serif; font-size:12px; color:#bcaeff; }
+  .cover .author{ margin-top:40px; font-family:Arial,sans-serif; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:#8a80b3; }
+
+  /* ---- İçindekiler / Nasıl Kullanılır ---- */
+  .toc-bolum{ font-family:Arial,sans-serif; font-weight:800; font-size:12.5px; letter-spacing:.05em; text-transform:uppercase; color:var(--accent); margin:10px 0 5px; }
+  .toc-item{ display:flex; justify-content:space-between; padding:4px 0; border-bottom:1px dotted var(--line); font-family:Arial,sans-serif; font-size:13px; }
+  .toc-item b{ margin-right:8px; }
+  .toc-item .kod{ color:#8a8ea8; font-size:11px; }
+
+  table.usage{ width:100%; border-collapse:collapse; margin:10px 0; font-family:Arial,sans-serif; font-size:12px; }
+  table.usage th, table.usage td{ border:1px solid var(--line); padding:6px 9px; text-align:left; vertical-align:top; }
+  table.usage th{ background:#f0f1fa; }
+
+  .soru-turleri{ display:flex; gap:10px; flex-wrap:wrap; margin:10px 0; }
+  .st-chip{ font-family:Arial,sans-serif; font-size:10.5px; font-weight:800; border:1.5px solid var(--ink); padding:4px 10px; border-radius:999px; }
+
+  /* ---- Ünite başlığı ---- */
+  .unit-kicker{ font-family:Arial,sans-serif; font-weight:800; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); margin-bottom:5px; }
+  .unit-title{ font-family:Arial,sans-serif; font-size:23px; margin-bottom:10px; }
+  .lo-box{ border:2px solid var(--ink); border-radius:6px; padding:10px 14px; margin-bottom:12px; font-family:Arial,sans-serif; font-size:12px; }
+  .lo-box b{ display:block; font-size:11px; text-transform:uppercase; letter-spacing:.04em; margin-bottom:3px; }
+  .lo-box ul{ margin:5px 0 0; padding-left:18px; }
+  .lo-box li{ margin-bottom:2px; }
+
+  h3.konu-h{ font-size:16px; border-bottom:2px solid var(--ink); padding-bottom:3px; margin-top:16px; }
+  h4.alt-h{ font-family:Arial,sans-serif; font-size:13px; margin-top:12px; color:var(--accent); }
+
+  /* ---- İki sütunlu dizgi (defter ailesindeki diğer kitaplarla tutarlı) ----
+     CSS Grid yerine multi-column (columns) kullanılır: konu anlatımı bir üniteyi
+     tek .page div'i olarak akışkan biçimde birden fazla fiziksel sayfaya
+     taşabildiğinden, Grid öğeleri sayfa sınırında güvenilir bölünmez (taşma/boş
+     sayfa hatası riski); multi-column ise içeriği sütun sütun, sayfa kırılımına
+     uygun şekilde akıtır. */
+  .konu-cols, .sorular-cols, .ca-cols{ columns:2; column-gap:10mm; }
+  .box{ border-radius:6px; padding:10px 12px; margin:10px 0; font-family:Arial,sans-serif; font-size:11.8px; }
+  .box .lbl{ font-weight:800; font-size:10px; text-transform:uppercase; letter-spacing:.05em; margin-bottom:5px; display:flex; align-items:center; gap:5px; }
+  .kavram{ border:2px solid var(--accent); background:#f5f4fd; }
+  .kavram .lbl{ color:var(--accent); }
+  .ornek{ border:2px dashed var(--good); background:#f2f9f4; }
+  .ornek .lbl{ color:var(--good); }
+  .gercek{ border:2px double var(--accent-2); background:#fdf6ea; }
+  .gercek .lbl{ color:var(--accent-2); }
+  .uygulama{ border:2px solid var(--ink); background:#f0f1fa; }
+  .uygulama .lbl{ color:var(--ink); }
+  .notlarim{ border:1.5px dashed #8a8ea8; min-height:56px; background:repeating-linear-gradient(#fff,#fff 20px,#e7e9f3 21px); }
+  .notlarim .lbl{ color:#5a5e78; }
+
+  .kavramlar-list{ border:1px solid var(--line); border-radius:6px; padding:9px 12px; margin:10px 0; font-family:Arial,sans-serif; font-size:11.5px; background:#fafafe; columns:2; column-gap:10mm; }
+  .kavramlar-list .lbl{ font-weight:800; font-size:10px; text-transform:uppercase; color:#5a5e78; margin-bottom:5px; column-span:all; }
+  .kavramlar-list dt{ font-weight:800; margin-top:5px; }
+  .kavramlar-list dd{ margin:0 0 2px; color:var(--ink-soft); }
+
+  .sorular-h{ font-family:Arial,sans-serif; font-size:15px; margin-top:18px; border-top:3px solid var(--ink); padding-top:8px; }
+  .soru{ margin:9px 0; font-family:Georgia,serif; font-size:12.3px; }
+  .soru .no{ font-weight:800; }
+  .soru .tip{ font-family:Arial,sans-serif; font-size:9px; font-weight:800; border:1px solid var(--ink); border-radius:999px; padding:2px 7px; margin-right:6px; text-transform:uppercase; }
+  .cevap-satir{ border-bottom:1px dotted #8a8ea8; height:15px; margin:3px 0; }
+  .secenekler{ margin:5px 0 0 22px; }
+  .secenekler div{ margin-bottom:2px; }
+  .baglam{ border-left:3px solid var(--accent-2); background:#fdf8ee; padding:9px 11px; margin:10px 0; font-size:12px; }
+  .baglam .baglam-lbl{ font-family:Arial,sans-serif; font-weight:800; font-size:10px; text-transform:uppercase; color:var(--accent-2); margin-bottom:4px; }
+
+  .ca-unit{ margin-bottom:14px; }
+  .ca-unit h4{ font-family:Arial,sans-serif; font-size:13px; border-bottom:1px solid var(--line); padding-bottom:4px; }
+  .ca-item{ font-size:11.5px; margin-bottom:5px; }
+  .ca-item b{ font-family:Arial,sans-serif; }
+
+  .print-bar{ position:fixed; top:14px; right:14px; z-index:10; font-family:Arial,sans-serif; }
+  .print-bar button{ font-weight:800; padding:10px 18px; border-radius:999px; border:none; background:#14152b; color:#fff; cursor:pointer; box-shadow:0 4px 14px rgba(0,0,0,.25); }
+
+  /* ---- Doldurulabilir çalışma tabloları (Uygulamada Dene / etkinlikler) ---- */
+  table.wk{ width:100%; border-collapse:collapse; margin:8px 0 4px; font-family:Arial,sans-serif; font-size:10.8px; }
+  table.wk th{ background:var(--accent); color:#fff; border:1px solid var(--accent); padding:5px 7px; text-align:left; font-size:9.5px; text-transform:uppercase; letter-spacing:.02em; }
+  table.wk td{ border:1px solid var(--line); padding:5px 7px; vertical-align:top; color:var(--ink); }
+  table.wk td.fill{ background:repeating-linear-gradient(#fff,#fff 12px,#eceefa 13px); min-height:24px; height:24px; }
+  table.wk td.center{ text-align:center; }
+  table.wk tr:nth-child(even) td:not(.fill){ background:#fafafe; }
+
+  /* ---- Kimyasal depolama matrisi ---- */
+  table.depo-matrix{ border-collapse:collapse; margin:12px auto; font-family:Arial,sans-serif; font-size:10px; }
+  table.depo-matrix th, table.depo-matrix td{ border:1px solid var(--line); width:27px; height:27px; text-align:center; padding:0; }
+  table.depo-matrix th{ background:#f0f1fa; font-size:9px; font-weight:700; color:var(--ink-soft); }
+  table.depo-matrix td.ok{ background:#177a44; color:#fff; font-weight:800; }
+  table.depo-matrix td.no{ background:#a83232; color:#fff; font-weight:800; }
+  table.depo-matrix td.caution{ background:#c9a227; color:#2b2200; font-weight:800; }
+  table.depo-matrix td.water{ background:#d9930a; color:#fff; font-weight:800; }
+  .depo-legend{ font-family:Arial,sans-serif; font-size:10px; margin-top:8px; color:var(--ink-soft); }
+  .depo-legend div{ margin-bottom:3px; }
+  .depo-legend .sw{ display:inline-block; width:11px; height:11px; border-radius:2px; margin-right:6px; vertical-align:middle; }
+  .depo-key{ font-family:Arial,sans-serif; font-size:9.5px; color:var(--ink-soft); margin-top:6px; }
+
+  /* ---- Elle çizim/işaretleme kutuları ---- */
+  .draw-row{ display:flex; gap:8px; flex-wrap:wrap; margin:8px 0; }
+  .draw-box{
+    flex:1 1 140px; min-width:120px; border:1.5px solid var(--ink); border-radius:6px; padding:5px;
+    font-family:Arial,sans-serif;
+  }
+  .draw-box .dcap{ font-size:9.5px; font-weight:800; text-align:center; margin-bottom:3px; color:var(--ink-soft); }
+  .draw-box .darea{
+    height:58px; border-radius:4px;
+    background-image: linear-gradient(#e3e5f2 1px, transparent 1px), linear-gradient(90deg, #e3e5f2 1px, transparent 1px);
+    background-size: 8px 8px; background-color:#fdfdff;
+  }
+  .grid-fill{ display:grid; gap:7px; margin:8px 0; }
+  .grid-fill.c2{ grid-template-columns:1fr 1fr; }
+  .grid-fill.c3{ grid-template-columns:1fr 1fr 1fr; }
+  .fill-card{ border:1px solid var(--line); border-radius:6px; padding:7px 9px; font-family:Arial,sans-serif; font-size:10.5px; }
+  .fill-card b{ display:block; font-size:9.5px; text-transform:uppercase; letter-spacing:.03em; color:var(--accent); margin-bottom:3px; }
+
+  .worksheet{
+    border:2px solid var(--ink); border-radius:8px; padding:10px 12px; margin:10px 0; font-family:Arial,sans-serif; font-size:11.5px;
+    background:#fcfcff;
+  }
+  .worksheet .wlbl{ font-weight:800; font-size:10.5px; text-transform:uppercase; letter-spacing:.04em; margin-bottom:6px; display:flex; align-items:center; gap:6px; color:var(--ink); }
+  .worksheet p{ font-size:11px; margin:0 0 6px; }
+  .worksheet .hint{ font-size:10px; color:#5a5e78; font-style:italic; margin-top:2px; }
+</style>
+</head>
+<body>
+
+<div class="print-bar noprint"><button onclick="window.print()">🖨 Yazdır / PDF Kaydet</button></div>
+
+<!-- ============ KAPAK ============
+     [Bu kapak sayfası bir ŞABLONDUR. Köşeli parantez içindeki her
+     alanı kendi dersinize göre doldurun.] -->
+<div class="page cover">
+  <div class="frame">
+    <div class="eyebrow">[Müfredat/Program Adı] · [Sınıf Düzeyi]</div>
+    <div class="emoji">🎓</div>
+    <h1>[Tema Adı]</h1>
+    <div class="sub">Ders Defteri — Konu Anlatımı, Uygulama Rehberi ve Bağlam Temelli Sorular</div>
+    <div class="badges">
+      <span class="badge">[KAZANIM KODU ARALIĞI]</span>
+      <span class="badge">[N] Konu</span>
+      <span class="badge">[N] Soru</span>
+      <span class="badge">Cevap Anahtarlı</span>
+    </div>
+    <div class="sub" style="font-style:italic; margin-bottom:0;">Bu defter, "[SİTE ADI]" adlı dijital uygulamanın basılı eşlikçisidir. Sınıfta veya evde, uygulamayla birlikte ya da tek başına kullanılabilir.</div>
+  </div>
+  <div class="site">[site-alan-adı] · [Tema Adı]</div>
+  <div class="author">[YAZAR ADI]</div>
+</div>
+
+<!-- ============ İÇİNDEKİLER ============ -->
+<div class="page">
+  <h2 style="font-family:Arial,sans-serif; font-size:22px;">İçindekiler</h2>
+
+  <!-- Her ünite için bir .toc-item satırı ekleyin; birden fazla
+       bölüm varsa .toc-bolum ile gruplandırın (AtomLab 9'da olduğu
+       gibi "Bölüm I / Bölüm II"). Tek bölümlü bir ders defterinde
+       .toc-bolum satırını hiç kullanmayabilirsiniz. -->
+  <div class="toc-bolum">[Bölüm Adı]</div>
+  <div class="toc-item"><span><b>Ünite 1</b> — [Örnek Ünite] <span class="kod">([KAZANIM KODU])</span></span></div>
+  <!-- <div class="toc-item"><span><b>Ünite 2</b> — ... <span class="kod">(...)</span></span></div> -->
+
+  <div class="toc-bolum">Ek</div>
+  <div class="toc-item"><span><b>Cevap Anahtarı</b></span></div>
+
+  <h2 style="font-family:Arial,sans-serif; font-size:20px; margin-top:20px;">Bu Defter Nasıl Kullanılır?</h2>
+  <p style="font-family:Arial,sans-serif; font-size:12px;">Bu ders defteri, [SİTE ADI] dijital uygulamasıyla birlikte, sınıfta ya da evde kullanılmak üzere tasarlanmıştır. Her ünite aynı dört aşamayı izler — tıpkı uygulamadaki gibi:</p>
+  <table class="usage">
+    <tr><th>Aşama</th><th>Bu defterde karşılığı</th></tr>
+    <tr><td>🔍 Merak Et</td><td>Konu anlatımının giriş paragrafı, günlük hayattan bir soruyla başlar.</td></tr>
+    <tr><td>🧪 Keşfet</td><td>"Uygulamada Dene" kutusu — uygulamadaki etkinliği yaparken doldurulur.</td></tr>
+    <tr><td>📘 Açıklayalım</td><td>Konu Anlatımı, Kavram/Örnek Çözüm kutuları ve Bu Ünitenin Kavramları.</td></tr>
+    <tr><td>🎯 Değerlendir</td><td>Sürekli numaralanmış Açık Uçlu, Çoktan Seçmeli ve Bağlam Temelli Sorular.</td></tr>
+  </table>
+
+  <p style="font-family:Arial,sans-serif; font-size:12px; font-weight:800; margin-top:16px;">SORU TÜRLERİ HAKKINDA</p>
+  <div class="soru-turleri">
+    <span class="st-chip">AÇIK UÇLU</span><span class="st-chip">ÇOKTAN SEÇMELİ</span><span class="st-chip">BAĞLAM TEMELLİ</span>
+  </div>
+  <p style="font-family:Arial,sans-serif; font-size:12px;">AÇIK UÇLU sorularda kendi cümlelerinle, gerekçeli bir açıklama yazman istenir; cevap satırlarına yaz. ÇOKTAN SEÇMELİ sorularda 5 seçenek (A–E) bulunur. BAĞLAM TEMELLİ sorular bir okuma parçasıyla (bağlamla) başlar ve o bağlamla ilgili birkaç alt soru içerir; doğru cevaba ulaşmak için parçayı dikkatle okuyup derste öğrendiğin kavramı o duruma uygulaman gerekir — cevap parçanın içinde doğrudan yazmaz.</p>
+  <p style="font-family:Arial,sans-serif; font-size:12px;">Her ünitenin sonunda çözdüğün soruları, kitabın en sonundaki Cevap Anahtarı ile kontrol edebilirsin.</p>
+  <p style="font-family:Arial,sans-serif; font-size:11.5px; color:#5a5e78;"><strong>Öğretmene not:</strong> Defter, siyah-beyaz fotokopi/baskıda da okunaklı olacak şekilde tasarlanmıştır. Sayfa içindeki kutular (kavram, uygulama, notlarım, örnek çözüm, bağlam) çerçeve stiliyle ve etiket simgesiyle birbirinden ayrılır, yalnızca renge dayanmaz.</p>
+
+  <p style="font-family:Arial,sans-serif; font-size:12.5px; margin-top:18px;">Ad Soyad: _________________________________________ &nbsp;&nbsp;&nbsp; Sınıf / No: _______________</p>
+</div>
+
+<!-- ============ ÜNİTE 1 (ÖRNEK) ============
+     Bu ünitenin tüm içeriği AtomLab 9'dan alınmış, ÇALIŞAN GERÇEK BİR
+     ÖRNEKTİR — amaç, aşağıdaki kutu tiplerinin (kavram/örnek çözüm/
+     notlarım/worksheet/kavramlar-list/soru türleri/bağlam temelli/
+     cevap anahtarı) nasıl bir arada kullanıldığını somut biçimde
+     göstermektir. Kendi konunuz için bu ünitenin tamamını silip aynı
+     kutu yapısını koruyarak yeniden yazın. -->
+<div class="page">
+  <div class="unit-kicker">[Bölüm Adı] · Ünite 1 · [KAZANIM KODU]</div>
+  <h2 class="unit-title">1. Günlük Hayatta Kimya (örnek)</h2>
+  <div class="lo-box">
+    <b>Öğrenme Çıktısı</b> Kimya biliminin günlük hayata katkısına ilişkin çıkarım yapabilme
+    <b style="margin-top:8px">Beceri</b> Çıkarım Yapma
+    <ul>
+      <li>a) Kimyanın günlük hayattaki kullanım alanlarını (temizlik, ilaç/sağlık, gıda, enerji, tarım vb.) tanımlar.</li>
+      <li>b) Bu kullanım alanlarına ilişkin gözlem ve örnekler toplar.</li>
+      <li>c) Topladığı örneklerden kimya biliminin günlük hayata katkısına ilişkin çıkarımlar yapar.</li>
+    </ul>
+  </div>
+
+  <h3 class="konu-h">Konu Anlatımı</h3>
+  <div class="konu-cols">
+  <p>Sabah yüzünü yıkamandan akşam telefonunu şarj etmene kadar geçen her an, aslında görünmez bir kimya laboratuvarındasın. El ve yüz temizlemede kullanılan su ve sabun, hastalıklarla mücadelede kullanılan ilaçlar, bilgisayardaki silisyum çipi, günümüzde önemli bir sorun hâline gelen plastik atıkların giderilmesi — bu örneklerin tamamı kimyasal maddeleri ve olayları içerir. Kimya bilimi; temizlik, ilaç, gıda, enerji ve tarım gibi pek çok sektörü etkiler ve insanların maddeleri nasıl etkileşime geçirebileceğini, bu süreçlerin günlük hayatta nasıl uygulanabileceğini anlamalarına yardımcı olur.</p>
+  <p>Bilgisayarların işlemesi, telefonların şarj olması ve televizyon ekranlarının ışıldaması gibi olaylar, atomun yapısındaki elektronların hareketine dayanır — bu defterin ikinci bölümünde (Ünite 5-8) tam olarak bu atom yapısını inceleyeceksin. Kimya bilgisi, doğada hayatta kalma becerilerini bile güçlendirir: kolonya, aseton veya yağ gibi maddeler yanıcı özellikleri sayesinde ateş yakmakta kullanılabilir; çakıl-kum-kömür katmanlarından geçirilen su, fiziksel bir süzme işlemiyle temizlenebilir.</p>
+
+  <div class="box kavram">
+    <div class="lbl">💡 Kavram · Kimya Bilimi</div>
+    Maddenin yapısını, özelliklerini ve maddeler arasındaki etkileşimleri inceleyen; bu bilgiyi günlük hayat sorunlarının çözümüne uygulayan temel bilim dalı.
+  </div>
+
+  <div class="box ornek">
+    <div class="lbl">✔ Örnek Çözüm</div>
+    <b>Soru:</b> Bir diş macunu etiketinde köpürtücü madde, tatlandırıcı ve flor bileşiği içerdiği belirtilmektedir. Bu gözlem, kimyanın günlük hayata katkısı açısından nasıl yorumlanabilir?<br/><br/>
+    <b>Çözüm:</b> Diş macunu gibi günlük bir üründeki her bileşen (köpürtücü, tatlandırıcı, flor bileşiği) belirli bir kimyasal işlevi yerine getirmek üzere tasarlanmıştır. Bu, kimya biliminin soyut bir laboratuvar konusu değil, günlük kullandığımız ürünlerin işlevselliğinin doğrudan temelini oluşturduğunu gösterir. <b>Sonuç:</b> Kimya bilgisi, ürün tasarımından sağlığa kadar günlük hayatın içindedir.
+  </div>
+
+  <div class="box notlarim">
+    <div class="lbl">✎ Notlarım</div>
+    <div class="cevap-satir"></div><div class="cevap-satir"></div><div class="cevap-satir"></div>
+  </div>
+
+  </div>
+  <div class="worksheet">
+    <div class="wlbl">📱 Uygulamada Dene — Modül 1 (2 Etkinlik)</div>
+    <p><b>1) Sınıflandırma Etkinliği —</b> Sitenin 1. modülünde "Kimyasal Maddeleri Kullanım Alanına Göre Grupla" etkinliğini tamamla (en az 15 madde). Sonra uygulamada geçmeyen, kendi hayatından iki örnek daha bul ve doğru kategoriyi yaz.</p>
+    <table class="wk">
+      <tr><th>Madde (kendi örneğin)</th><th>Kullanım Alanı (temizlik / ilaç / gıda / enerji / tarım)</th></tr>
+      <tr><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td class="fill"></td><td class="fill"></td></tr>
+    </table>
+    <p style="margin-top:14px"><b>2) pH Laboratuvarı Etkinliği —</b> Her maddeye tıklamadan önce pH'ını tahmin et; sonra uygulamadan okuduğun değeri, asit/baz/nötr sınıfını ve "Eklenen Su"yu 5 birime getirdiğinde okunan yeni pH'ı tabloya yaz.</p>
+    <table class="wk">
+      <tr><th>Madde</th><th>Tahminim (pH)</th><th>Uygulama (pH)</th><th>Asit / Baz / Nötr</th><th>5 birim su sonrası pH</th></tr>
+      <tr><td>Limon Tuzu</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Sirke</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Gazlı İçecek</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Diş Macunu</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Karbonat</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Sıvı Sabun</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Antiasit Tablet</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Çamaşır Suyu</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Lavabo Açıcı</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
+    <p class="hint">Bulgu: Tabloyu incele — su eklemek pH'ı hep aynı yöne mi götürüyor, yoksa maddenin asit/baz olmasına göre mi değişiyor? Gözlemini bir cümlede yaz: ______________________________________________</p>
+  </div>
+
+  <div class="kavramlar-list">
+    <div class="lbl">📚 Bu Ünitenin Kavramları</div>
+    <dt>Kimyasal Madde</dt><dd>Belirli bir bileşime ve karakteristik özelliklere sahip, doğal ya da üretilmiş her türlü madde.</dd>
+    <dt>Çıkarım</dt><dd>Gözlemlenen örneklerden yola çıkarak genel bir sonuca ulaşma süreci.</dd>
+    <dt>pH</dt><dd>Bir çözeltinin asitlik/bazlık derecesini gösteren, 0-14 arasında değişen ölçek; 7 nötrdür.</dd>
+    <dt>Seyreltme</dt><dd>Bir çözeltiye su eklenerek derişiminin azaltılması; pH'ı 7'ye yaklaştırır ama tam nötr yapmaz.</dd>
+  </div>
+
+  <div class="sorular-h">SORULAR</div>
+  <div class="sorular-cols">
+  <div class="soru"><span class="no">1.</span> <span class="tip">Açık Uçlu</span> Kimyanın günlük hayata katkısını, en az iki farklı sektörden (temizlik, ilaç, gıda, enerji, tarım) örnek vererek açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">2.</span> <span class="tip">Açık Uçlu</span> Bir ürünün (örneğin bir temizlik malzemesinin) etiketindeki içerik bilgisi, o ürünü güvenle kullanmana nasıl yardımcı olur?
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">3.</span> <span class="tip">Açık Uçlu</span> "Plastik atık sorunu, kimya biliminin ilgi alanına girmez." ifadesine katılıyor musun? Gerekçelendir.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">4.</span> <span class="tip">Açık Uçlu</span> Doğada hayatta kalma becerileriyle kimya bilgisi arasında nasıl bir ilişki kurulabilir? Bir örnekle açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">5.</span> <span class="tip">Çoktan Seçmeli</span> Aşağıdakilerden hangisi kimya biliminin doğrudan etkilediği bir sektör DEĞİLDİR?
+    <div class="secenekler">
+      <div>○ A) Temizlik ürünleri üretimi</div><div>○ B) İlaç geliştirme</div>
+      <div>○ C) Gıda üretimi</div><div>○ D) Bir şiirin kafiye düzeni</div>
+      <div>○ E) Enerji depolama (pil) teknolojileri</div>
+    </div></div>
+  <div class="soru"><span class="no">6.</span> <span class="tip">Çoktan Seçmeli</span> Bilgisayarların işlemesi, telefonların şarj olması ve ekranların ışıldaması gibi olaylar temelde neye dayanır?
+    <div class="secenekler">
+      <div>○ A) Atomun yapısındaki elektronların hareketine</div><div>○ B) Yalnızca yazılım kodlarına</div>
+      <div>○ C) Atmosferdeki nem oranına</div><div>○ D) Cihazın rengine</div>
+      <div>○ E) Kullanıcının hızına</div>
+    </div></div>
+  <div class="soru"><span class="no">7.</span> <span class="tip">Çoktan Seçmeli</span> Çakıl, kum, odun kömürü ve kumaş katmanlarından oluşan bir su filtresi ile suyun berraklaştırılması hangi türde bir işlemdir?
+    <div class="secenekler">
+      <div>○ A) Kimyasal değişim</div><div>○ B) Fiziksel ayırma</div>
+      <div>○ C) Nükleer tepkime</div><div>○ D) Biyolojik fotosentez</div>
+      <div>○ E) Radyoaktif bozunma</div>
+    </div></div>
+  <div class="soru"><span class="no">8.</span> <span class="tip">Çoktan Seçmeli</span> Aşağıdakilerden hangisi kimya biliminin "günlük hayata katkısına ilişkin bir çıkarım" örneğidir?
+    <div class="secenekler">
+      <div>○ A) "Dün hava güneşliydi."</div>
+      <div>○ B) "Sabun kullandığımda ellerimdeki yağ çözüldüğü için daha temiz hissediyorum, bu bir kimyasal etkileşimdir."</div>
+      <div>○ C) "Bugün okula geç kaldım."</div>
+      <div>○ D) "Kırmızı rengi severim."</div>
+      <div>○ E) "Sınıfımızda 30 öğrenci var."</div>
+    </div></div>
+  <div class="baglam">
+    <div class="baglam-lbl">9–10. Bağlam Temelli · Kamp Ateşi</div>
+    <p style="margin:0">Doğada kamp yapan bir grup, yanlarında kibrit ya da çakmak bulunmadığını fark ediyor; ancak çantalarında kolonya, bir miktar bitkisel yağ ve pamuklu bir bez bulunuyor. Grup, kolonyayı bezin üzerine dökerek ve bir taşla kıvılcım çıkararak ateş yakmayı başarıyor; ateşin uzun süre yanmasını sağlamak için de üzerine az miktarda yağ ekliyorlar.</p>
+  </div>
+  <div class="soru"><span class="no">9.</span> a) Kolonyanın hızla tutuşup bezin ateşi başlatmasını sağlayan özelliği nedir? Bu durumu kimyasal bir kavramla adlandırarak açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+  <div class="soru"><span class="no">10.</span> b) Yağın ateşe eklenmesiyle kolonyanın ateşe eklenmesi arasındaki farkı, ikisinin de "yanıcı" olmasına rağmen neden birinin daha hızlı, diğerinin daha uzun süre yandığını tartışarak açıkla.
+    <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
+
+  </div>
+  <div class="footer-tag"><span>[Ders Adı] · Ders Defteri</span><span>Ünite 1 — [KAZANIM KODU]</span></div>
+</div>
+
+<!-- ============ [BURADAN SONRA KENDİ ÜNİTELERİNİZİ EKLEYİN] ============
+     Her yeni ünite için yukarıdaki "ÜNİTE 1 (ÖRNEK)" bloğunun tamamını
+     kopyalayıp aşağıya yapıştırın; unit-kicker/unit-title/lo-box/
+     konu-h/box'ları/kavramlar-list/sorular-cols/footer-tag içeriğini
+     değiştirin. Soru numaralarını üniteler arasında SIFIRLAMAYIN gerek
+     yok — her ünite kendi içinde 1'den başlar (defterin tamamı için
+     tek bir numaralandırma şart değildir, AtomLab 9'da da böyleydi).
+     ======================================================================= -->
+
+<!-- ============ EK · CEVAP ANAHTARI ============ -->
+<div class="page">
+  <h2 style="font-family:Arial,sans-serif; font-size:22px;">Ek · Cevap Anahtarı</h2>
+  <p style="font-family:Arial,sans-serif; font-size:11.5px; color:#5a5e78;">Açık uçlu sorularda tek bir "doğru cevap" yoktur; notlar hangi kavram/ilişkinin doğru kullanılması gerektiğini gösterir. Çoktan seçmeli ve bağlam temelli sorularda doğru şık ve kısa gerekçesi verilmiştir.</p>
+
+  <div class="ca-cols">
+  <div class="ca-unit">
+    <h4>Ünite 1 — [Örnek Ünite] ([KAZANIM KODU])</h4>
+    <div class="ca-item">1-4. Cevaplar, ilgili "Konu Anlatımı" bölümündeki kavram ve ilişkilerle tutarlı, gerekçeli bir açıklama içermelidir.</div>
+    <div class="ca-item"><b>5. D</b> — [Kısa gerekçe.]</div>
+    <div class="ca-item"><b>6. A</b> — [Kısa gerekçe.]</div>
+    <div class="ca-item"><b>7. B</b> — [Kısa gerekçe.]</div>
+    <div class="ca-item"><b>8. B</b> — [Kısa gerekçe.]</div>
+    <div class="ca-item">9-10. Açık uçlu — konu anlatımındaki ilgili kavramla değerlendirilir.</div>
+  </div>
+  <!-- Her yeni ünite için bir .ca-unit bloğu daha ekleyin. -->
+  </div>
+
+  <div class="footer-tag"><span>[Ders Adı] · Ders Defteri</span><span>Cevap Anahtarı</span></div>
+</div>
+
+<!-- ============ KAPANIŞ ============ -->
+<div class="page cover" style="background:linear-gradient(160deg,#0c0a1f,#211f47 55%,#14122c);">
+  <div class="emoji">🎓</div>
+  <h1 style="font-size:28px">Tebrikler!</h1>
+  <div class="sub">[Tema adı] temasının [N] ünitesini tamamladın.</div>
+  <div class="badges" style="max-width:520px">
+    <span class="badge">1 [Ünite adı]</span>
+    <!-- Her ünite için bir .badge span'i ekleyin. -->
+  </div>
+  <div class="sub" style="font-style:italic; max-width:480px;">[Kapanış cümlesi — öğrencinin neler öğrendiğini özetleyen 1-2 cümle.]</div>
+  <div class="site" style="margin-top:20px">[Ders Adı] · [Tema Adı] Ders Defteri</div>
+  <div class="author">[Müfredat/kaynak referansı — örn. Türkiye Yüzyılı Maarif Modeli ... Öğretim Programı temel alınarak hazırlanmıştır.]</div>
+</div>
+
+</body>
+</html>
