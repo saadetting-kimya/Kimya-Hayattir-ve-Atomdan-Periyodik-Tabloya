@@ -589,1101 +589,912 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    matchPairs: {
-      left: [
-        "Çıkarılan cevherlerdeki metal oksit ve tuz bileşiklerinin yapısını analiz etmek",
-        "Bir gıda örneğindeki katkı maddesi miktarını hassas cihazlarla belirlemek",
-        "Canlı hücrelerdeki enzimlerin yapısını ve metabolik rolünü incelemek",
-        "Yakıt ve plastiklerde bulunan, karbon atomlarının oluşturduğu uzun zincirli bileşikleri incelemek"
-      ],
-      right: ["Organik kimya", "Analitik kimya", "Biyokimya", "Anorganik kimya"]
-    },
-    text: "Yukarıdaki eşleştirmede, 3 numaralı uygulama hangi harfteki alt disiplinle ilişkilidir?",
-    options: ["c", "a", "b", "d", "Hiçbiriyle ilişkili değildir"],
-    correct: 0,
-    explain: "3 numaralı uygulama (canlı hücrelerdeki enzim yapısı ve metabolik rol) biyokimyanın konusudur; bu da 'c' harfindeki seçenekle eşleşir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    matchPairs: {
-      left: [
-        "Kimyasal tepkimelerin hızını ve açığa çıkan/soğurulan enerji miktarını ölçmek",
-        "Bir akarsudaki ağır metal ve kirletici madde derişimlerini düzenli ölçmek",
-        "Hastalık teşhisi için radyoaktif işaretleyici maddelerle görüntüleme yapmak",
-        "Tekstil ve ambalajda kullanılan, uzun zincirli tekrar eden birimlerden oluşan yapılar geliştirmek"
-      ],
-      right: ["Nükleer kimya", "Fizikokimya", "Polimer kimyası", "Çevre kimyası"]
-    },
-    text: "Yukarıdaki eşleştirmede, 2 numaralı uygulama hangi harfteki alt disiplinle ilişkilidir?",
-    options: ["a", "b", "c", "d", "Hiçbiriyle ilişkili değildir"],
+    context: "Analitik kimya, bir maddenin hangi bileşenlerden oluştuğunu belirlemeyi hedefleyen 'nitel (kalitatif)' analiz yöntemleri ile bu bileşenlerin miktarını belirlemeyi hedefleyen 'nicel (kantitatif)' analiz yöntemlerini kullanır.",
+    text: "Bir besin örneğindeki bir katkı maddesinin TÜRÜNÜN (hangi madde olduğunun) belirlenmesi, analitik kimyanın hangi analiz türüne örnektir?",
+    options: ["Biyokimyasal analiz","Nicel (kantitatif) analiz","Fizikokimyasal analiz","Nitel (kalitatif) analiz","Analitik kimyayla ilgisi yoktur"],
     correct: 3,
-    explain: "2 numaralı uygulama (akarsudaki kirletici derişimi ölçümü) çevre kimyasının konusudur; bu da 'd' harfindeki seçenekle eşleşir."
+    explain: "Bir maddenin HANGİ bileşenlerden oluştuğunu (türünü) belirlemeyi hedefleyen analiz nitel (kalitatif) analizdir; miktarını belirlemeyi hedefleyen analiz ise nicel (kantitatif) analizdir."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    dialogue: [
-      { who: "Öğrenci A", text: "Bir pilin zamanla neden tükendiğini araştırmak bence anorganik kimyanın konusu, çünkü piller metal içerir." },
-      { who: "Öğrenci B", text: "Bence elektrokimyanın konusu; çünkü asıl soru elektrik akımı ile kimyasal tepkime arasındaki ilişkiyle ilgili." },
-      { who: "Öğrenci C", text: "Bence biyokimyanın konusu, çünkü piller de canlı hücreler gibi enerji depolar." }
-    ],
-    text: "Bir pilin zamanla tükenmesinin nedenini araştırmak, kimyanın hangi alt disiplininin en doğrudan konusudur?",
-    options: ["Öğrenci A", "Öğrenci B", "Öğrenci C", "Üçü de eşit derecede haklıdır", "Bu soru hiçbir alt disiplinin konusu değildir"],
+    context: "Analitik kimya; şeker pancarındaki şeker miktarının belirlenmesi, besin maddelerinin içerik analizi, pH hesapları ve suların sertlik derecelerinin tayini gibi çeşitli uygulama alanlarına sahiptir.",
+    text: "Bir laboratuvarda şeker pancarından elde edilen özütteki şeker MİKTARININ (kaç gram olduğunun) belirlenmesi hangi disiplinin doğrudan uygulama alanına girer?",
+    options: ["Anorganik kimya","Organik kimya","Fizikokimya","Polimer kimyası","Analitik kimya (nicel analiz)"],
+    correct: 4,
+    explain: "Bir örnekteki bir bileşenin MİKTARININ hassas şekilde belirlenmesi, analitik kimyanın nicel (kantitatif) analiz uygulamalarından biridir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Biyokimya, 'canlı' anlamına gelen Yunanca 'bios' kelimesinden türemiştir ve canlı organizmalardaki kimyasal bileşiklerin yapısını, özelliklerini ve organizmanın yaşam süreci boyunca gerçekleşen kimyasal tepkimeleri inceler.",
+    text: "Biyokimyanın detaylı olarak incelediği molekül gruplarından biri aşağıdakilerden hangisidir?",
+    options: ["Volkanik kayaçlar","Yıldızlararası gaz bulutları","Karbonhidratlar","Yarı iletken kristaller","Saf metal külçeleri"],
+    correct: 2,
+    explain: "Biyokimya; karbonhidratlar, proteinler, lipitler, nükleik asitler, vitaminler ve hormonlar gibi moleküllerin canlı organizmalardaki yapısını ve rolünü detaylı biçimde inceler."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Biyokimya, canlılardaki moleküllerin detaylı incelenmesini sağlayarak günümüzde tıp, gıda, tarım ve endüstri gibi pek çok dalda uygulama alanı bulur.",
+    text: "Biyokimya bilgisinin uygulandığı alanlar arasında aşağıdakilerden hangisi YER ALMAZ?",
+    options: ["Tarım","Tıp","Gıda","Yalnızca tıp; biyokimyanın gıda, tarım veya endüstriyle hiçbir ilgisi yoktur","Endüstri"],
+    correct: 3,
+    explain: "Biyokimya yalnızca tıpla sınırlı değildir; gıda, tarım ve endüstri gibi pek çok dalda uygulama alanı bulur. Bu nedenle 'yalnızca tıp' ifadesi yanlıştır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Organik kimya, karbon elementini içeren bileşiklerin yapılarını, özelliklerini ve tepkimelerini kapsamlı bir şekilde inceleyen bir kimya disiplinidir; bu nedenle 'karbon kimyası' olarak da adlandırılır.",
+    text: "Organik kimyaya neden 'karbon kimyası' da denir?",
+    options: ["Karbon elementini hiç incelemediği için","Yalnızca kömürle ilgilendiği için","İncelediği bütün bileşikler karbon elementi içerdiği için","Yalnızca metalik bileşikleri incelediği için","Bu isimlendirmenin bilimsel bir dayanağı yoktur"],
+    correct: 2,
+    explain: "Organik kimya, karbon elementini içeren bileşikleri incelediği için 'karbon kimyası' olarak da adlandırılır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Organik kimya sadece karbon atomuyla ilgileniyor gibi görünse de, meydana gelen bileşiklerin çeşitliliği nedeniyle kimyanın en geniş çalışma alanına sahiptir; petrol ürünleri, kozmetik ürünler, ilaçlar, plastikler, boyalar ve deterjanlar bu alana girer.",
+    text: "Organik kimyanın 'kimyanın en geniş çalışma alanı' olarak tanımlanmasının temel nedeni nedir?",
+    options: ["Karbon bileşiklerinin son derece çeşitli olması","Yalnızca tek bir tür bileşikle ilgilenmesi","Diğer tüm disiplinleri tamamen kapsaması","Deneysel araç gerektirmemesi","Aslında dar bir alan olması"],
+    correct: 0,
+    explain: "Karbon atomunun çok çeşitli bileşikler oluşturabilmesi (petrol ürünlerinden ilaçlara, plastiklere kadar), organik kimyayı kimyanın en geniş çalışma alanı yapar."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Anorganik kimya; organik olmayan bileşiklerin yapılarını, özelliklerini ve tepkimelerini inceleyen bir kimya disiplinidir. Bu disiplin asitler, bazlar, tuzlar, metaller, ametaller, yarı metaller ve mineraller gibi çeşitli maddelerin karakteristik özellikleri ve kimyasal tepkimeleri üzerine odaklanır.",
+    text: "Aşağıdakilerden hangisi anorganik kimyanın doğrudan incelediği madde gruplarından biri DEĞİLDİR?",
+    options: ["Asitler","Karbonhidratlar (biyokimyanın ilgi alanıdır)","Tuzlar","Yarı metaller","Mineraller"],
     correct: 1,
-    explain: "Elektrik akımı ile kimyasal tepkime (pil, akü, korozyon vb.) arasındaki ilişkiyi inceleyen alt disiplin elektrokimyadır; Öğrenci B haklıdır."
+    explain: "Anorganik kimya asit, baz, tuz, metal, ametal, yarı metal ve mineralleri inceler; karbonhidratlar canlı organizmalardaki bir molekül grubu olduğundan biyokimyanın konusudur."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Petrolden elde edilen ham maddelerin işlenip plastik ambalaj malzemesine dönüştürülmesi ve bu ambalajların doğadaki bozunma süresinin incelenmesi süreci ele alınmaktadır.",
-    statements: [
-      "Bu süreç yalnızca organik kimyanın ilgi alanındadır, başka hiçbir disiplinle ilişkisi yoktur.",
-      "Petrolden plastiğe dönüşüm organik kimyanın, ambalajın doğadaki etkisi ise çevre kimyasının konusudur.",
-      "Ambalajın uzun, tekrar eden zincirli yapısının incelenmesi, sürece polimer kimyasının da dahil olduğunu gösterir."
-    ],
+    context: "Anorganik kimya; tıp, malzeme bilimi, inşaat mühendisliği, tarım, nanoteknoloji ve yarı iletken teknolojisi gibi pek çok çeşitli uygulama alanına sahiptir.",
+    text: "Elektronik çip üretiminde kullanılan yarı iletken teknolojisi, en doğrudan hangi disiplinin uygulama alanına girer?",
+    options: ["Anorganik kimya","Organik kimya","Biyokimya","Analitik kimya","Fizikokimya"],
+    correct: 0,
+    explain: "Yarı iletken teknolojisi, anorganik kimyanın MEB kitabında sayılan uygulama alanlarından biridir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Fizikokimya; kimyasal sistemlerin özelliklerini ve davranışlarını, tepkimelerin nasıl meydana geldiğini ve kimyasal olaylar sırasındaki enerji dönüşümlerini inceleyen bir disiplindir; sıcaklık, basınç, hacim ve derişim gibi fiziksel faktörlerin kimyasal tepkimelere etkilerini kapsamlı şekilde ele alır.",
+    text: "Bir tepkimenin hızının sıcaklık değişimiyle nasıl etkilendiğini incelemek, en doğrudan hangi disiplinin konusudur?",
+    options: ["Polimer kimyası","Fizikokimya","Organik kimya","Anorganik kimya","Analitik kimya"],
+    correct: 1,
+    explain: "Sıcaklığın (fiziksel bir faktörün) tepkime hızına etkisini incelemek fizikokimyanın temel konularından biridir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Fizikokimya; gazların balonlardaki davranışları, bir parça buzun erime sürecindeki değişimler, şekerin suyun içinde nasıl çözündüğü ve araç motorlarında ısıyla ilgili süreçlerin anlaşılmasında önemli bir rol oynar.",
+    text: "Bir küp şekerin suda ÇÖZÜNME sürecini enerji ve moleküler davranış açısından incelemek, hangi disiplinin doğrudan kapsamına girer?",
+    options: ["Biyokimya","Polimer kimyası","Yalnızca anorganik kimya","Fizikokimya","Yalnızca organik kimya"],
+    correct: 3,
+    explain: "Bir maddenin çözünme sürecindeki enerji değişimi ve davranışı fizikokimyanın MEB kitabında verilen örneklerinden biridir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Polimer kimyası; makromoleküllerin (büyük moleküllerin) kimyası olup polimerlerin sentezini, yapılarını, özelliklerini, davranışlarını ve uygulamalarını inceleyen bir kimya disiplinidir.",
+    text: "'Makromolekül' ifadesi polimer kimyasında en doğrudan neyi tanımlar?",
+    options: ["Yalnızca sıvı hâldeki bileşikleri","Yalnızca tek bir atomdan oluşan iyonları","Radyoaktif olarak bozunan çekirdekleri","Çok sayıda küçük birimin bir araya gelmesiyle oluşan büyük molekülleri","Elektrik yükü taşımayan tüm molekülleri"],
+    correct: 3,
+    explain: "Makromolekül, çok sayıda tekrar eden küçük biriminin (monomerin) bir araya gelmesiyle oluşan büyük moleküldür; polimerler bu tür makromoleküllerdir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Polimer kimyası; plastikler, kauçuklar, fiberler, yapıştırıcılar, jelatinler ve biyopolimerler gibi çeşitli malzemeleri inceler.",
+    text: "Aşağıdaki malzemelerden hangisi polimer kimyasının doğrudan inceleme alanına GİRMEZ?",
+    options: ["Jelatin","Kauçuk","Fiber","Yapıştırıcı","Saf bir metal külçesi"],
+    correct: 4,
+    explain: "Saf bir metal külçesi bir makromolekül/polimer değildir; metaller anorganik kimyanın konusudur. Kauçuk, fiber, yapıştırıcı ve jelatin ise polimer kimyasının örnekleridir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    matchPairs: {"left":["Bir maddenin hangi bileşenlerden oluştuğunu (nitel) ve bu bileşenlerin miktarını (nicel) belirlemeye odaklanır.","Canlı organizmalardaki kimyasal bileşiklerin yapısını ve yaşam süreci boyunca gerçekleşen tepkimeleri inceler.","Karbon elementini içeren bileşiklerin çeşitliliği nedeniyle kimyanın en geniş çalışma alanına sahiptir.","Sıcaklık, basınç, hacim ve derişim gibi fiziksel faktörlerin kimyasal tepkimelere etkisini inceler."],"right":["Fizikokimya","Analitik kimya","Biyokimya","Organik kimya"]},
+    text: "Yukarıdaki eşleştirmede, 2 numaralı tanım hangi harfteki disipline aittir?",
+    options: ["a","c","b","d","Hiçbiriyle ilişkili değildir"],
+    correct: 1,
+    explain: "Canlı organizmalardaki kimyasal bileşikleri ve yaşam süreci tepkimelerini inceleyen disiplin biyokimyadır; bu da 'c' harfindeki seçenekle eşleşir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    dialogue: [{"who":"Öğrenci A","text":"Bence organik kimya sadece canlılardan elde edilen doğal maddeleri inceler; laboratuvarda sentezlenen karbon bileşikleri organik kimyanın konusu değildir."},{"who":"Öğrenci B","text":"Bence öyle değil; organik kimyanın ölçütü maddenin kaynağı değil, karbon elementi İÇERİP içermediğidir — laboratuvarda sentezlenen bir plastik de karbon içeriyorsa organik kimyanın konusudur."},{"who":"Öğrenci C","text":"Bence organik ve anorganik kimya arasında hiçbir fark yoktur, ikisi aynı şeydir."}],
+    text: "Organik kimyanın tanımıyla ilgili hangi öğrencinin görüşü doğrudur?",
+    options: ["Öğrenci A","Öğrenci B","Öğrenci C","A ve C birlikte","Hiçbiri"],
+    correct: 1,
+    explain: "Organik kimyanın ölçütü, bileşiğin karbon içerip içermediğidir; kaynağının doğal ya da sentetik olması bu sınıflandırmayı değiştirmez. Öğrenci B haklıdır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir 2p alt kabuğuna değil, bir üretim sürecine dönelim: Petrolden elde edilen ham maddelerin işlenip uzun zincirli, tekrar eden birimlerden oluşan bir plastik ambalaj malzemesine dönüştürülmesi süreci ele alınmaktadır.",
+    statements: ["Petrolden elde edilen ham maddelerin karbon bileşiklerine dönüştürülmesi organik kimyanın konusudur.","Ortaya çıkan malzemenin uzun, tekrar eden zincirli yapısının incelenmesi, sürece polimer kimyasının da dahil olduğunu gösterir.","Bu süreç yalnızca tek bir disiplinin (yalnızca organik kimyanın) ilgi alanındadır, başka hiçbir disiplinle ilişkisi yoktur."],
     text: "Yukarıdaki ifadelerden hangileri doğrudur?",
-    options: ["Yalnız I", "Yalnız II", "II ve III", "I ve II", "I, II ve III"],
-    correct: 2,
-    explain: "Petrolün plastiğe dönüştürülmesi organik kimyanın, ambalajın çevredeki etkisi çevre kimyasının, uzun zincirli yapının incelenmesi ise polimer kimyasının konusudur — süreç birden fazla alt disiplini bir arada kapsar, bu yüzden I yanlıştır."
+    options: ["Yalnız I","I, II ve III","Yalnız III","II ve III","I ve II"],
+    correct: 4,
+    explain: "Petrolden karbon bileşiği üretimi organik kimyanın, ortaya çıkan malzemenin uzun zincirli yapısı polimer kimyasının konusudur (I ve II doğru); süreç tek bir disiplinle sınırlı olmadığından III yanlıştır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    checklist: [
-      "Anorganik kimya yalnızca metalleri inceler, başka hiçbir bileşik türüyle ilgilenmez.",
-      "Analitik kimya, bir örnekteki maddenin türünü ve miktarını belirlemekle ilgilenir.",
-      "Biyokimya yalnızca hastanelerde kullanılan bir alandır, günlük hayatla ilgisi yoktur.",
-      "Jeokimya, yer kabuğundaki kayaç ve minerallerin kimyasal bileşimini inceler."
-    ],
+    checklist: ["Anorganik kimya yalnızca metalleri inceler, başka hiçbir bileşik türüyle ilgilenmez.","Analitik kimya, bir örnekteki maddenin türünü (nitel) ve miktarını (nicel) belirlemekle ilgilenir.","Fizikokimya yalnızca gazların davranışlarıyla ilgilenir, sıvı/katı hâl değişimleriyle ilgisi yoktur.","Polimer kimyası hem doğal (jelatin gibi) hem sentetik (plastik gibi) polimerleri inceler."],
     text: "Yukarıdaki ifadelerden kaç tanesi doğrudur?",
-    options: ["1", "2", "3", "4", "Hiçbiri"],
-    correct: 1,
-    explain: "Yalnızca 2. ve 4. ifadeler doğrudur. Anorganik kimya metaller dışında karbon içermeyen geniş bir bileşik sınıfını kapsar (1. yanlış); biyokimya gıda, ilaç, kozmetik gibi pek çok günlük alanla ilgilidir (3. yanlış)."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    dialogue: [
-      { who: "Öğrenci A", text: "Kozmetik ürünlerdeki nemlendirici bileşenlerin sentezlenmesi organik kimyanın konusu, çünkü bu bileşenler karbon temelli." },
-      { who: "Öğrenci B", text: "Bence bu tamamen biyokimyanın konusu, çünkü cilt canlı bir dokudur." },
-      { who: "Öğrenci C", text: "İkisi de haklı olabilir: bileşenin sentezlenmesi organik kimyayla, cilt üzerindeki etkisinin incelenmesi ise biyokimyayla ilgilidir." }
-    ],
-    text: "Kozmetik ürün geliştirme süreciyle ilgili hangi öğrencinin görüşü en doğru ve kapsamlıdır?",
-    options: ["Öğrenci A", "Öğrenci B", "Öğrenci C", "Hiçbiri", "Yalnızca A ve B birlikte tam doğrudur"],
+    options: ["1","3","2","4","Hiçbiri"],
     correct: 2,
-    explain: "Kozmetik ürün geliştirme, hem bileşenin sentezlendiği organik kimyayı hem de bileşenin canlı doku üzerindeki etkisinin incelendiği biyokimyayı bir arada gerektirir; Öğrenci C'nin disiplinler arası bakışı en kapsamlı olandır."
+    explain: "Yalnızca 2. ve 4. ifadeler doğrudur. Anorganik kimya asit/baz/tuz/ametal/yarı metal/mineralleri de kapsar (1. yanlış); fizikokimya buzun erimesi gibi katı-sıvı hâl değişimlerini de inceler (3. yanlış)."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir adli olay yerinde bulunan iz miktardaki bir toz örneğinin hangi maddeden oluştuğu belirlenmeye, ardından örnekte radyoaktif iz olup olmadığı kontrol edilmeye çalışılmaktadır.",
-    statements: [
-      "Örnekteki maddenin türünün belirlenmesi analitik kimyanın konusudur.",
-      "Radyoaktif izin kontrol edilmesi nükleer kimyanın konusudur.",
-      "Bu iki adım birlikte yalnızca tek bir alt disiplinin kapsamındadır, başka disiplinle ilgisi yoktur."
-    ],
+    context: "Bir suyun pH değerinin ÖLÇÜLMESİ ile bu pH değerinin sıcaklıkla nasıl DEĞİŞTİĞİNİN incelenmesi, iki farklı disiplinle ilişkilendirilebilir.",
+    text: "Bu iki görev sırasıyla hangi disiplinlerle en doğrudan ilişkilidir?",
+    options: ["Biyokimya ve polimer kimyası","Organik kimya ve anorganik kimya","Analitik kimya (ölçüm) ve fizikokimya (sıcaklıkla değişim)","Yalnızca analitik kimya, ikisi de aynı disiplindir","Bu iki görevin kimyayla ilgisi yoktur"],
+    correct: 2,
+    explain: "Bir değerin doğrudan ÖLÇÜLMESİ analitik kimyanın; bu değerin fiziksel bir koşulla (sıcaklık) nasıl DEĞİŞTİĞİNİN incelenmesi ise fizikokimyanın konusudur."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir gıda laboratuvarında, üretim hattından alınan örneklerdeki koruyucu madde miktarı hassas cihazlarla ölçülüp yasal sınırlarla karşılaştırılmaktadır.",
+    text: "Bu çalışma en doğrudan hangi disiplinin uygulamasıdır?",
+    options: ["Fizikokimya","Organik kimya","Analitik kimya","Polimer kimyası","Anorganik kimya"],
+    correct: 2,
+    explain: "Bir maddenin miktarının hassas cihazlarla ölçülmesi analitik kimyanın (nicel analiz) doğrudan uygulama alanıdır."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir araştırmacı, kas dokusundaki bir enzimin yapısını ve bu enzimin vücuttaki metabolik rolünü incelemektedir.",
+    text: "Bu araştırma en doğrudan hangi disiplinin çalışma alanına girer?",
+    options: ["Polimer kimyası","Anorganik kimya","Fizikokimya","Analitik kimya","Biyokimya"],
+    correct: 4,
+    explain: "Canlı organizmalardaki bir molekülün (enzim, bir tür protein) yapısını ve metabolik rolünü inceleme biyokimyanın konusudur."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir Ar-Ge biriminde, petrol türevi bir hammaddeden yeni bir boya bileşiği sentezlenmeye çalışılmaktadır.",
+    text: "Bu çalışma en doğrudan hangi disiplinin uygulamasıdır?",
+    options: ["Anorganik kimya","Organik kimya","Fizikokimya","Analitik kimya","Biyokimya"],
+    correct: 1,
+    explain: "Petrol türevi (karbon bazlı) bir hammaddeden yeni bileşik sentezlemek organik kimyanın uygulama alanlarından biridir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir inşaat malzemeleri laboratuvarında, farklı mineral bileşimlerinin betonun dayanıklılığına etkisi incelenmektedir.",
+    text: "Bu inceleme en doğrudan hangi disiplinin uygulama alanına girer?",
+    options: ["Biyokimya","Organik kimya","Anorganik kimya","Polimer kimyası","Fizikokimya"],
+    correct: 2,
+    explain: "Mineral bileşimlerinin incelenmesi ve inşaat mühendisliğinde uygulanması anorganik kimyanın MEB kitabında verilen uygulama alanlarından biridir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir mühendislik ekibi, bir araç motorunun çalışması sırasında yakıtın yanma tepkimesinde açığa çıkan ısının motor verimine etkisini incelemektedir.",
+    text: "Bu inceleme en doğrudan hangi disiplinin uygulama alanına girer?",
+    options: ["Fizikokimya","Yalnızca organik kimya","Yalnızca anorganik kimya","Biyokimya","Analitik kimya"],
+    correct: 0,
+    explain: "Araç motorlarındaki ısıyla ilgili süreçler, MEB kitabında fizikokimyanın örnek uygulama alanı olarak verilmiştir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir malzeme laboratuvarında, yeni geliştirilen bir biyopolimerin doğada ne kadar sürede parçalanabildiği (biyobozunurluk) test edilmektedir.",
+    text: "Bu test en doğrudan hangi disiplinin uygulama alanına girer?",
+    options: ["Anorganik kimya","Polimer kimyası","Yalnızca analitik kimya","Yalnızca fizikokimya","Biyokimya"],
+    correct: 1,
+    explain: "Biyopolimerlerin incelenmesi, polimer kimyasının MEB kitabında açıkça sayılan konularından biridir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    dialogue: [{"who":"Öğrenci A","text":"Kozmetik bir nemlendiricinin içindeki karbon bileşiğinin SENTEZLENMESİ organik kimyanın konusu."},{"who":"Öğrenci B","text":"Bu bileşenin CİLTTEKİ (canlı dokudaki) etkisinin incelenmesi ise biyokimyanın konusu; yani bu süreç iki disiplini birden kapsar."},{"who":"Öğrenci C","text":"Hayır, kozmetik ürünler kimyanın hiçbir disipliniyle ilgili değildir, tamamen güzellik sektörüne aittir."}],
+    text: "Kozmetik ürün geliştirme süreciyle ilgili hangi öğrencinin/öğrencilerin görüşü en doğru ve kapsamlıdır?",
+    options: ["Yalnızca Öğrenci A","Yalnızca Öğrenci C","Hiçbiri","Yalnızca Öğrenci B","Öğrenci A ve B birlikte"],
+    correct: 4,
+    explain: "Kozmetik ürün geliştirme; bileşenin sentezlendiği organik kimyayı ve bileşenin canlı doku üzerindeki etkisinin incelendiği biyokimyayı bir arada gerektirir. A ve B birlikte haklıdır."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir müze laboratuvarında, eski bir tablodaki pigmentin kimyasal BİLEŞİMİ belirlenmekte, ayrıca bu pigmentin ışığa maruz kaldığında zamanla nasıl BOZULDUĞU da incelenmektedir.",
+    statements: ["Pigmentin kimyasal bileşiminin belirlenmesi analitik kimyanın konusudur.","Pigmentin zamanla bozulma sürecinin (tepkime hızı, kararlılık) incelenmesi fizikokimyanın konusudur.","Bu iki çalışma birbirinden tamamen bağımsızdır, aynı restorasyon çalışmasının parçaları değildir."],
     text: "Yukarıdaki ifadelerden hangileri doğrudur?",
-    options: ["Yalnız I", "I ve II", "Yalnız III", "II ve III", "I, II ve III"],
-    correct: 1,
-    explain: "Madde türünün belirlenmesi analitik kimyanın, radyoaktif iz kontrolü nükleer kimyanın konusudur; adli inceleme birden fazla temel disiplinin uygulamalı bir kesişimidir, bu yüzden III yanlıştır."
+    options: ["Yalnız I","Yalnız III","I ve II","II ve III","I, II ve III"],
+    correct: 2,
+    explain: "Bileşim belirleme analitik kimyanın, bozulma sürecinin incelenmesi fizikokimyanın konusudur (I ve II doğru); ikisi aynı restorasyon çalışmasının tamamlayıcı parçaları olduğundan III yanlıştır."
   },
   {
-    difficulty: "kolay",
+    difficulty: "orta",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    checklist: [
-      "Elektrokimya yalnızca pil teknolojileriyle ilgilenir, korozyonla ilgisi yoktur.",
-      "Gıda kimyası, bir ürünün saklama koşullarının besin değerine etkisini inceleyebilir.",
-      "Farmasötik (ilaç) kimya, yeni ilaç moleküllerinin tasarlanıp test edilmesiyle ilgilenir.",
-      "Polimer kimyası yalnızca yapay/sentetik plastiklerle ilgilenir, doğal liflerle ilgisi yoktur."
-    ],
+    checklist: ["Biyokimya yalnızca insan vücuduyla ilgilenir, bitkiler veya mikroorganizmalarla ilgilenmez.","Fizikokimya, bir tepkimenin ENERJİ değişimini de kapsam alanına alır.","Organik kimya, yalnızca doğada bulunan (sentetik olmayan) karbon bileşikleriyle ilgilenir.","Anorganik kimya, yarı iletken teknolojisi gibi ileri teknoloji alanlarında da uygulama bulur."],
     text: "Yukarıdaki ifadelerden kaç tanesi doğrudur?",
-    options: ["1", "3", "4", "Hiçbiri", "2"],
-    correct: 4,
-    explain: "Yalnızca 2. ve 3. ifadeler doğrudur. Elektrokimya korozyonu da kapsar (1. yanlış); polimer kimyası selüloz, protein gibi doğal polimerleri de inceler (4. yanlış)."
+    options: ["1","3","4","2","Hiçbiri"],
+    correct: 3,
+    explain: "Yalnızca 2. ve 4. ifadeler doğrudur. Biyokimya tüm canlıları kapsar (1. yanlış); organik kimya sentetik karbon bileşiklerini de inceler (3. yanlış)."
   },
   {
-    difficulty: "kolay",
+    difficulty: "orta",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir Ar-Ge biriminde, pil ve akü teknolojilerinde kullanılan elektrik akımı ile kimyasal tepkime arasındaki ilişki incelenmektedir.",
-    text: "Burada tarif edilen çalışma, kimyanın hangi alt disipliniyle ilişkilidir?",
-    options: ["Jeokimya", "Elektrokimya", "Biyokimya", "Analitik kimya", "Gıda kimyası"],
+    matchPairs: {"left":["Bir betonun dayanıklılığını artırmak için mineral katkı oranlarını ayarlamak","Bir tepkimenin hızının basınç değişimiyle nasıl etkilendiğini ölçmek","Yeni bir biyobozunur ambalaj malzemesinin moleküler yapısını tasarlamak","Bir su örneğindeki ağır metal derişimini hassas cihazla ölçmek"],"right":["Analitik kimya","Anorganik kimya","Fizikokimya","Polimer kimyası"]},
+    text: "Yukarıdaki eşleştirmede, 3 numaralı görev hangi harfteki disipline aittir?",
+    options: ["a","d","c","b","Hiçbiriyle ilişkili değildir"],
     correct: 1,
-    explain: "Elektrik enerjisi ile kimyasal tepkimeler arasındaki dönüşümü (piller, elektroliz, korozyon vb.) inceleyen alt disiplin elektrokimyadır."
+    explain: "Ambalaj malzemesinin moleküler yapısını tasarlamak polimer kimyasının konusudur; bu da 'd' harfindeki seçenekle eşleşir."
   },
   {
-    difficulty: "kolay",
+    difficulty: "orta",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir gıda mühendisliği biriminde, dondurulmuş bir ürünün besin değerinin ve dokusunun saklama süresince nasıl değiştiği incelenmektedir.",
-    text: "Bu süreç en doğrudan kimyanın hangi alt disipliniyle bağlantılıdır?",
-    options: ["Gıda kimyası", "Nükleer kimya", "Jeokimya", "Elektrokimya", "Polimer kimyası"],
+    table: {"headers":["Disiplin","Odaklandığı temel soru"],"rows":[["Analitik kimya","Bir örnekte ne var ve ne kadar var?"],["Fizikokimya","Tepkime nasıl ve ne hızla gerçekleşir, enerji nasıl dönüşür?"],["Polimer kimyası","Büyük moleküller nasıl sentezlenir ve nasıl davranır?"]],"caption":"Üç disiplinin odaklandığı temel sorular"},
+    text: "Tabloya göre, bir tepkimenin sıcaklık artışıyla neden hızlandığını açıklamak en doğrudan hangi disiplinin 'temel sorusuna' karşılık gelir?",
+    options: ["Fizikokimya","Analitik kimya","Polimer kimyası","Anorganik kimya","Organik kimya"],
     correct: 0,
-    explain: "Gıdaların bileşimini, işlenmesini ve saklama koşullarının besin/kalite üzerindeki etkisini inceleyen alt disiplin gıda kimyasıdır."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir jeoloji ekibi, farklı kayaç katmanlarındaki mineral bileşimini analiz ederek bölgenin oluşum tarihini yorumlamaktadır.",
-    text: "Tarif edilen bu inceleme, kimyanın hangi alt disiplinine aittir?",
-    options: ["Gıda kimyası", "Biyokimya", "Jeokimya", "Polimer kimyası", "Nükleer kimya"],
-    correct: 2,
-    explain: "Yer kabuğundaki kayaç ve minerallerin kimyasal bileşimini, oluşumunu inceleyen alt disiplin jeokimyadır."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir ilaç geliştirme sürecinde, yeni bir molekülün vücuttaki hedef proteine nasıl bağlandığı tasarlanıp test edilmektedir.",
-    text: "Bu görev en doğrudan hangi alt disiplinin çalışma alanına girer?",
-    options: ["Çevre kimyası", "Farmasötik (ilaç) kimyası", "Jeokimya", "Elektrokimya", "Polimer kimyası"],
-    correct: 1,
-    explain: "Hastalıkların tedavisi için etkili ve güvenli moleküllerin tasarlanması, sentezlenmesi ve test edilmesi farmasötik kimyanın çalışma alanıdır."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir adli laboratuvarda, olay yerinden alınan iz miktardaki bir örnekteki maddenin türü, hassas cihazlarla kesin olarak belirlenmeye çalışılmaktadır.",
-    text: "Bu analiz süreci kimyanın hangi alt disipliniyle ilişkilidir?",
-    options: ["Polimer kimyası", "Biyokimya", "Jeokimya", "Analitik kimya", "Nükleer kimya"],
-    correct: 3,
-    explain: "İz miktardaki maddelerin türünün ve miktarının hassas biçimde belirlenmesi analitik kimyanın uygulama alanlarından biridir (adli kimya, analitik kimyanın bir uygulama koludur)."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir metalurji tesisinde, farklı metal alaşımlarının sertlik ve korozyon direncini artırmak için bileşim oranları değiştirilmektedir.",
-    text: "Bu odak alanı, kimyanın hangi alt disiplinini işaret eder?",
-    options: ["Biyokimya", "Organik kimya", "Anorganik kimya", "Gıda kimyası", "Nükleer kimya"],
-    correct: 2,
-    explain: "Metaller ve alaşımların yapısını, özelliklerini inceleyen ve geliştiren çalışmalar anorganik kimyanın kapsamındadır."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir spor bilimleri laboratuvarında, yoğun antrenman sonrası kas dokusundaki laktik asit birikiminin enerji üretim süreciyle ilişkisi incelenmektedir.",
-    text: "Yukarıdaki tanım en doğrudan kimyanın hangi alt disipliniyle örtüşür?",
-    options: ["Polimer kimyası", "Biyokimya", "Jeokimya", "Nükleer kimya", "Elektrokimya"],
-    correct: 1,
-    explain: "Canlı organizmalardaki (kas dokusu, enerji metabolizması gibi) kimyasal süreçlerin incelenmesi biyokimyanın çalışma alanına girer."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir su arıtma tesisinde, içme suyundaki klor ve diğer dezenfeksiyon yan ürünlerinin derişimi düzenli olarak izlenmektedir.",
-    text: "Bu izleme çalışması kimyanın hangi alt disipliniyle en doğrudan ilişkilidir?",
-    options: ["Polimer kimyası", "Nükleer kimya", "Jeokimya", "Organik sentez kimyası", "Çevre kimyası (analitik yöntemlerle desteklenir)"],
-    correct: 4,
-    explain: "Su kaynaklarındaki kimyasal madde derişimlerinin izlenmesi ve çevresel etkilerinin değerlendirilmesi çevre kimyasının temel uygulamalarındandır."
-  },
-
-  /* ============ ORTA ============ */
-
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Aşağıdaki şemada bir X disiplininin üç çalışma alanı verilmiştir: (I) asit-baz tepkimeleri, (II) organik olmayan maddelerin özellikleri, (III) petrol ve petrol ürünleri dışındaki maddelerin incelenmesi.",
-    text: "Şemadaki üç maddeye bakılarak X disiplini en doğru şekilde hangisidir?",
-    options: ["Biyokimya", "Organik kimya", "Gıda kimyası", "Nükleer kimya", "Anorganik kimya"],
-    correct: 4,
-    explain: "Asit-baz tepkimeleri, organik olmayan madde özellikleri ve petrol dışı maddelerin incelenmesi anorganik kimyanın kapsamına girer; organik kimya karbon bileşiklerini (özellikle petrol türevlerini) incelediğinden bu üç madde anorganik kimyayı işaret eder."
+    explain: "Tepkime hızının nasıl ve neden değiştiğini (enerji dönüşümü açısından) açıklamak fizikokimyanın temel sorusudur."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir araştırmacı, hem gıda ürünlerinin bileşim analizine hem de yeni nanomalzemelerin geliştirilmesine ilgi duymaktadır; ancak hangi alanda uzmanlaşacağına henüz karar verememiştir.",
-    text: "Bu araştırmacının her iki ilgi alanında da kısa süreli gözlem/staj deneyimi edinip kararını sonra vermesi önerildiğinde, bu öneri kariyer planlama sürecinin hangi iki unsuruyla en doğrudan ilişkilidir?",
-    options: ["Yalnızca okulun coğrafi konumu", "Kendini tanıma (ilgi alanlarını netleştirme) ve alan araştırması (deneyimleyerek bilgi edinme)", "Yalnızca maaş beklentisi ve iş saatleri", "Yalnızca arkadaş çevresinin tercihleri", "Kariyer planlamayla hiçbir ilgisi yoktur"],
-    correct: 1,
-    explain: "Farklı alanlarda kısa süreli deneyim edinmek, hem kişinin kendi ilgi/yeteneklerini daha iyi tanımasını hem de alan hakkında gerçekçi bilgi edinmesini sağlar; bu, kariyer planlama sürecinin temel bileşenlerindendir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Aşağıdaki tabloda üç meslek profesyonelinin günlük iş tanımı özetlenmiştir.",
-    table: {
-      headers: ["Profesyonel", "İş tanımı"],
-      rows: [
-        ["1", "Kan örneklerindeki enzim ve hormon düzeylerini ölçerek hastalık teşhisine katkı sağlar"],
-        ["2", "Yeni bir ambalaj malzemesinin esneklik ve dayanıklılık özelliklerini test eder"],
-        ["3", "Bir gölün suyundaki azot/fosfor derişimini izleyerek su kalitesini değerlendirir"]
-      ]
-    },
-    text: "Tablodaki 1, 2 ve 3 numaralı profesyoneller sırasıyla hangi alt disiplinlerde çalışıyor olabilir?",
-    options: ["1: Analitik kimya, 2: Anorganik kimya, 3: Gıda kimyası", "1: Nükleer kimya, 2: Organik kimya, 3: Jeokimya", "1: Biyokimya, 2: Polimer kimyası, 3: Çevre kimyası", "1: Elektrokimya, 2: Biyokimya, 3: Polimer kimyası", "1: Jeokimya, 2: Nükleer kimya, 3: Elektrokimya"],
-    correct: 2,
-    explain: "Kan örneklerindeki biyomolekülleri inceleyen 1. profesyonel biyokimya, ambalaj malzemesinin polimer özelliklerini test eden 2. profesyonel polimer kimyası, su kalitesini izleyen 3. profesyonel ise çevre kimyası alanında çalışıyor olabilir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir laboratuvarda iki farklı çalışma yürütülmektedir: birinci çalışma bir boya fabrikasında üretilen boyadaki metal element yüzdelerini kütlece belirlemeyi; ikinci çalışma ise sıcaklık ve basıncın bir tepkimenin hızına etkisini incelemeyi amaçlamaktadır.",
-    text: "Bu iki çalışma sırasıyla kimyanın hangi alt disiplinleriyle en doğrudan ilişkilidir?",
-    options: ["Birinci: Organik kimya, İkinci: Jeokimya", "Birinci: Biyokimya, İkinci: Nükleer kimya", "Birinci: Polimer kimyası, İkinci: Gıda kimyası", "Birinci: Analitik kimya, İkinci: Fizikokimya", "Birinci: Elektrokimya, İkinci: Anorganik kimya"],
-    correct: 3,
-    explain: "Bir malzemedeki element yüzdelerinin kütlece belirlenmesi analitik kimyanın; sıcaklık/basıncın tepkime hızına etkisinin incelenmesi ise fizikokimyanın (kimyasal kinetik) konusudur."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir gastronomi laboratuvarında, sıvı azot kullanılarak dondurma yapılması, jelatin/nişasta ile malzemelerin jöleye dönüştürülmesi gibi teknikler geliştirilmektedir; bu teknikler sırasında sıcaklık değişiminin ve molekül yapısının besinin dokusuna etkisi izlenmektedir.",
-    text: "Bu çalışmalar en doğrudan kimyanın hangi iki alt disiplininin kesişiminde yer alır?",
-    options: ["Analitik kimya ve çevre kimyası", "Nükleer kimya ve jeokimya", "Elektrokimya ve polimer kimyası", "Gıda kimyası ve fizikokimya", "Biyokimya ve anorganik kimya"],
-    correct: 3,
-    explain: "Besinlerin bileşimi ve dokusuyla ilgili çalışmalar gıda kimyasının; sıcaklık/hâl değişiminin bu dokuya etkisinin incelenmesi ise fizikokimyanın (termodinamik, hâl değişimleri) konusudur — bu iki alan kesişerek moleküler gastronomi gibi uygulamalı alanları besler."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir malzeme test laboratuvarında iki farklı ambalaj filminin (X ve Y) esneklik, su geçirmezlik ve ısıya dayanıklılık özellikleri karşılaştırılarak hangisinin gıda ambalajı için daha uygun olduğu belirlenmeye çalışılmaktadır.",
-    text: "Bu karşılaştırmalı test süreci en doğrudan kimyanın hangi alt disipliniyle ilişkilidir?",
-    options: ["Biyokimya", "Nükleer kimya", "Polimer kimyası", "Jeokimya", "Elektrokimya"],
-    correct: 2,
-    explain: "Ambalaj filmleri genellikle polimer yapılı malzemelerdir; bu malzemelerin fiziksel/kimyasal özelliklerinin test edilip karşılaştırılması polimer kimyasının uygulama alanına girer."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Aşağıda beş farklı kimya alt disiplini ve bunların örnek uygulama alanları eşleştirilmiştir; ancak bir eşleştirme yanlış yapılmıştır.",
-    table: {
-      headers: ["Disiplin", "Uygulama alanı"],
-      rows: [
-        ["Elektrokimya", "Pil/akü teknolojileri"],
-        ["Biyokimya", "DNA yapısının incelenmesi"],
-        ["Jeokimya", "Kayaç yaşının belirlenmesi"],
-        ["Organik kimya", "Metal alaşımlarının sertliği"],
-        ["Gıda kimyası", "Besin katkı maddelerinin analizi"]
-      ]
-    },
-    text: "Tabloda hangi disiplin-uygulama eşleştirmesi hatalıdır?",
-    options: ["Jeokimya — Kayaç yaşının belirlenmesi", "Elektrokimya — Pil/akü teknolojileri", "Biyokimya — DNA yapısının incelenmesi", "Organik kimya — Metal alaşımlarının sertliği", "Gıda kimyası — Besin katkı maddelerinin analizi"],
-    correct: 3,
-    explain: "Metal alaşımlarının incelenmesi anorganik kimyanın konusudur; organik kimya karbon temelli bileşikleri (canlı kaynaklı/sentetik organik maddeleri) inceler, bu yüzden tablodaki 'Organik kimya — Metal alaşımlarının sertliği' eşleştirmesi hatalıdır."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir enerji şirketinde çalışan bir grup, hem güneş pili malzemelerinin (anorganik yarı iletkenler) verimliliğini hem de bu pillerin ürettiği elektriğin depolanmasında kullanılan pil hücrelerindeki kimyasal tepkimeleri incelemektedir.",
-    text: "Bu çalışma grubunun faaliyetleri, kimyanın hangi iki alt disipliniyle en doğrudan ilişkilidir?",
-    options: ["Nükleer kimya ve polimer kimyası", "Organik kimya ve jeokimya", "Biyokimya ve gıda kimyası", "Anorganik kimya ve elektrokimya", "Analitik kimya ve çevre kimyası"],
-    correct: 3,
-    explain: "Yarı iletken malzemelerin (anorganik bileşikler) incelenmesi anorganik kimyanın; pil hücrelerindeki elektrik-kimyasal tepkime ilişkisinin incelenmesi ise elektrokimyanın konusudur."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir çalışma ekibi, toprağın altında binlerce yıl kalmış organik kalıntılardaki karbon izotop oranlarını ölçerek kalıntının yaklaşık yaşını hesaplamaktadır.",
-    text: "Bu yöntem en doğrudan kimyanın hangi alt disipliniyle ilişkilidir?",
-    options: ["Elektrokimya", "Polimer kimyası", "Nükleer kimya", "Gıda kimyası", "Fizikokimya"],
-    correct: 2,
-    explain: "Radyoaktif izotopların (örneğin karbon-14) bozunma oranına dayanan yaş tayini yöntemleri (karbon tarihleme) nükleer kimyanın bir uygulamasıdır."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir üniversite bölümünün tanıtım metninde, mezunların hem ilaç şirketlerinde yeni molekül tasarımında hem de gıda şirketlerinde katkı maddesi analizinde çalışabildiği belirtilmektedir.",
-    text: "Bu iki çalışma alanı arasındaki ortak nokta, kimyanın alt disiplinleri hakkında en doğru hangi çıkarımı destekler?",
-    options: ["İlaç ve gıda sektörleri kimyayla hiçbir ilgisi olmayan alanlardır", "Bu iki alan hiçbir ortak temele sahip değildir, tesadüfen aynı bölümden mezun olunur", "Kimyada yalnızca tek bir alt disiplin gerçek anlamda geçerlidir", "Bu iki alanın ortak noktası yalnızca çalışanların maaşıdır", "Farklı alt disiplinler (örneğin farmasötik kimya ve gıda kimyası) birbirinden bağımsız görünse de, ortak temel kimya bilgisi ve yöntemleri (molekül analizi, sentez) üzerine kurulu olabilir"],
-    correct: 4,
-    explain: "Farklı görünen alt disiplinler (farmasötik kimya, gıda kimyası gibi) genellikle ortak temel kimya bilgisi (molekül yapısı, analiz yöntemleri, sentez ilkeleri) üzerine kuruludur; bu da kimya eğitiminin çok yönlü kariyer olanakları sunmasını açıklar."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Aşağıdaki grafikte, dört farklı kimya alt disiplininde son on yılda yayımlanan bilimsel makale sayısındaki yaklaşık artış oranı (%) gösterilmiştir.",
-    chart: {
-      type: "bar",
-      title: "Alt disiplinlerde yayın sayısı artış oranı (%)",
-      labels: ["Analitik", "Polimer", "Biyokimya", "Nükleer"],
-      values: [22, 35, 48, 15]
-    },
-    text: "Grafikteki verilere dayanarak, son on yılda araştırma ilgisinin en hızlı arttığı alt disiplin hangisidir?",
-    options: ["Nükleer kimya", "Biyokimya", "Polimer kimyası", "Analitik kimya", "Grafikten bu sonuç çıkarılamaz"],
-    correct: 1,
-    explain: "Grafiğe göre biyokimya %48 ile en yüksek artış oranına sahiptir; bu, biyokimya alanındaki araştırma ilgisinin incelenen dönemde diğer üç disipline göre en hızlı arttığını gösterir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir sanayi bölgesindeki bir tesis, ürettiği atık suyu doğaya bırakmadan önce içindeki ağır metal ve organik kirletici derişimini standartlara uygun hâle getirmek için arıtma süreçleri uygulamaktadır.",
-    text: "Bu arıtma sürecinin tasarımı ve kirletici derişiminin izlenmesi, kimyanın hangi iki alt disipliniyle en doğrudan ilişkilidir?",
-    options: ["Biyokimya ve elektrokimya", "Nükleer kimya ve gıda kimyası", "Çevre kimyası ve analitik kimya", "Polimer kimyası ve jeokimya", "Organik sentez kimyası ve anorganik kimya"],
-    correct: 2,
-    explain: "Atık suyun çevresel etkisinin azaltılması çevre kimyasının; kirletici derişiminin hassas biçimde ölçülüp standartlara uygunluğunun doğrulanması ise analitik kimyanın çalışma alanına girer."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir araştırma ekibi, bitkilerin fotosentez sırasında ışık enerjisini kimyasal enerjiye dönüştürme verimliliğini hem hücresel/moleküler düzeyde hem de bu sürecin termodinamik (enerji) verimliliği açısından incelemektedir.",
-    text: "Bu çalışma en doğrudan kimyanın hangi iki alt disiplininin kesişiminde yer alır?",
-    options: ["Elektrokimya ve analitik kimya", "Jeokimya ve nükleer kimya", "Biyokimya ve fizikokimya", "Polimer kimyası ve gıda kimyası", "Anorganik kimya ve çevre kimyası"],
-    correct: 2,
-    explain: "Fotosentezin hücresel/moleküler mekanizması biyokimyanın; enerji dönüşümünün verimliliğinin (termodinamik açıdan) incelenmesi ise fizikokimyanın konusudur."
-  },
-
-  /* ============ ZOR ============ */
-
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir ilaç şirketinin Ar-Ge biriminde, yeni bir ilaç adayı molekülün önce laboratuvar ortamında sentezlenmesi, ardından vücuttaki hedef proteine bağlanma etkinliğinin ölçülmesi ve son olarak kan/idrar örneklerinde miktarının hassas biçimde tayin edilmesi gerekmektedir.",
-    text: "Bu sürecin üç aşaması sırasıyla en doğrudan hangi alt disiplinlerle ilişkilendirilebilir?",
-    options: ["Anorganik kimya → Jeokimya → Elektrokimya", "Jeokimya → Nükleer kimya → Polimer kimyası", "Elektrokimya → Çevre kimyası → Gıda kimyası", "Organik kimya (sentez) → Biyokimya (hedef proteine bağlanma) → Analitik kimya (miktar tayini)", "Biyokimya → Analitik kimya → Organik kimya (sıra önemsizdir)"],
-    correct: 3,
-    explain: "Yeni bir molekülün laboratuvarda sentezlenmesi organik kimyanın; bu molekülün biyolojik hedeflerle etkileşiminin incelenmesi biyokimyanın; vücut sıvılarındaki miktarının hassas ölçümü ise analitik kimyanın konusudur — bu, tek bir ilaç geliştirme sürecinin birden fazla alt disiplini nasıl bir arada kullandığını gösterir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir akademisyen, kariyeri boyunca önce anorganik kimya alanında yarı iletken malzemeler üzerine çalışmış, ardından bu malzemelerin güneş pili verimliliğini artırmak için fizikokimya (enerji dönüşümü) yöntemlerini kullanmaya başlamıştır.",
-    text: "Bu kariyer geçişi, kimya alt disiplinleri arasındaki ilişki hakkında en doğru hangi çıkarımı destekler?",
-    options: ["Alt disiplinler arasındaki sınırlar kesin ve geçirimsiz değildir; bir araştırmacı birikimli deneyimini yeni bir disiplinin yöntemleriyle birleştirerek disiplinler arası çalışmalar yürütebilir", "Bir kimyacı kariyeri boyunca yalnızca tek bir alt disiplinde çalışabilir", "Anorganik kimya ile fizikokimya arasında hiçbir bağlantı kurulamaz", "Disiplinler arası geçiş, önceki bilginin tamamen değersizleşmesi anlamına gelir", "Bu tür bir kariyer geçişi bilimsel olarak mümkün değildir"],
+    context: "Bir laboratuvarda, bir ilaç hammaddesindeki karbon iskeletli molekülün SENTEZ YÖNTEMİ geliştirilmekte, ayrı bir ekip ise bu molekülün SAFLIK ORANINI hassas cihazlarla ölçmektedir.",
+    text: "Bu iki görev sırasıyla hangi disiplinlerle en doğrudan ilişkilidir?",
+    options: ["Organik kimya (sentez) ve analitik kimya (saflık ölçümü)","Anorganik kimya ve biyokimya","Fizikokimya ve polimer kimyası","İkisi de yalnızca analitik kimyanın konusudur","Bu iki görevin kimyayla ilgisi yoktur"],
     correct: 0,
-    explain: "Kimyanın alt disiplinleri arasındaki sınırlar akademik sınıflandırma kolaylığı sağlasa da, gerçek araştırma pratiğinde geçirgendir; bir araştırmacı önceki disiplin bilgisini yeni yöntemlerle birleştirerek disiplinler arası (interdisipliner) çalışmalar yürütebilir — bu, modern bilimsel araştırmanın yaygın bir özelliğidir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir çevresel adli olay soruşturmasında, bir akarsudaki balık ölümlerinin nedenini belirlemek için hem sudaki kirletici derişimi ölçülmüş (X yöntemi) hem de ölü balık dokularındaki kirletici birikimi ve bunun hücresel düzeydeki etkisi incelenmiştir (Y yöntemi).",
-    text: "X ve Y yöntemleri sırasıyla en doğrudan hangi alt disiplinlerle ilişkilidir?",
-    options: ["X ve Y aynı disiplini temsil eder, ayrım anlamsızdır", "X: Nükleer kimya, Y: Jeokimya", "X: Polimer kimyası, Y: Elektrokimya", "X: Organik sentez kimyası, Y: Gıda kimyası", "X: Analitik kimya / çevre kimyası, Y: Biyokimya"],
-    correct: 4,
-    explain: "Sudaki kirletici derişiminin ölçülmesi analitik kimya ve çevre kimyasının; kirleticinin canlı doku üzerindeki hücresel/biyokimyasal etkisinin incelenmesi ise biyokimyanın konusudur — bu örnek, gerçek dünya sorunlarının çözümünde birden fazla alt disiplinin birlikte kullanıldığını gösterir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir malzeme bilimi ekibi, yeni geliştirdikleri biyobozunur bir plastiğin hem polimer zincir yapısını hem de bu plastiğin doğada mikroorganizmalarca parçalanma hızını incelemektedir.",
-    text: "Bu çalışmanın kapsamı, kimyanın alt disiplinleri arasındaki ilişki hakkında en doğru hangi çıkarımı destekler?",
-    options: ["Yeni nesil malzeme geliştirme çalışmaları, genellikle tek bir disiplinin değil, birden fazla alt disiplinin (burada polimer kimyası ve çevre kimyası/biyokimya) bir arada kullanılmasını gerektirir", "Biyobozunur plastik geliştirme yalnızca polimer kimyasıyla ilgilidir, başka hiçbir disipline ihtiyaç yoktur", "Parçalanma hızının incelenmesi kimyayla değil yalnızca biyoloji ile ilgilidir", "Alt disiplinler arasında hiçbir zaman ortak çalışma yürütülmez", "Bu tür bir çalışma kimyanın hiçbir alt disipliniyle ilişkilendirilemez"],
-    correct: 0,
-    explain: "Biyobozunur plastik geliştirme, hem malzemenin polimer yapısının tasarlanmasını (polimer kimyası) hem de bu malzemenin çevrede/canlı sistemlerde nasıl parçalandığının anlaşılmasını (çevre kimyası, biyokimya) gerektirir; bu, güncel malzeme araştırmalarının disiplinler arası doğasını gösterir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir üniversite müfredat komitesi, 'analitik kimya' dersinin yalnızca bağımsız bir alt disiplin olarak değil, aynı zamanda organik kimya, biyokimya ve çevre kimyası derslerinin laboratuvar uygulamalarında da (ölçüm ve analiz yöntemleri olarak) kullanıldığını fark etmiştir.",
-    text: "Bu gözlem, analitik kimyanın kimya alanındaki konumu hakkında en doğru hangi çıkarımı destekler?",
-    options: ["Bu gözlem analitik kimyanın öneminin azaldığını gösterir", "Analitik kimyanın diğer disiplinlerle hiçbir bağlantısı yoktur", "Analitik kimya yalnızca kendi başına var olabilen, izole bir alandır", "Organik kimya, biyokimya ve çevre kimyası analitik kimyaya hiç ihtiyaç duymaz", "Analitik kimya, yalnızca bağımsız bir uzmanlık alanı değil, aynı zamanda diğer birçok alt disiplinde ölçüm ve doğrulama için kullanılan temel, yatay bir araç/yöntem bütünüdür"],
-    correct: 4,
-    explain: "Analitik kimya, madde miktarı/türünü belirleme yöntemleriyle (kromatografi, spektroskopi vb.) hem kendi başına bir uzmanlık alanı hem de diğer birçok alt disiplinin (organik kimya, biyokimya, çevre kimyası) araştırmalarında ölçüm ve doğrulama aracı olarak kullanılan, disiplinler arası 'yatay' bir bilgi/yöntem bütünüdür."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir bilim tarihi incelemesinde, 19. yüzyılda 'kimya' tek bir bütün disiplin olarak öğretilirken, 20. yüzyıl boyunca bilgi birikiminin artmasıyla organik, anorganik, fizikokimya, biyokimya gibi alt disiplinlere ayrıldığı; ancak son yıllarda 'kimyasal biyoloji', 'malzeme kimyası' gibi yeni disiplinler arası alanların ortaya çıktığı belirtilmektedir.",
-    text: "Bu tarihsel süreç, bilimsel disiplinlerin gelişimi hakkında en doğru hangi genellemeyi destekler?",
-    options: ["Bilim tarihindeki bu değişim tamamen rastlantısaldır, hiçbir bilimsel gerekçesi yoktur", "Bilimsel disiplinler yalnızca zamanla parçalanır, hiçbir zaman yeniden birleşmez", "Kimya biliminde disiplin ayrımı 19. yüzyıldan beri hiç değişmemiştir", "Disiplinler arası yeni alanların ortaya çıkması, eski alt disiplinlerin tamamen ortadan kalktığı anlamına gelir", "Bilimsel disiplinler zamanla hem uzmanlaşarak alt dallara ayrılabilir hem de yeni sorulara yanıt ararken tekrar disiplinler arası birleşmeler oluşturabilir; bu iki eğilim birbiriyle çelişmez"],
-    correct: 4,
-    explain: "Bilim tarihinde disiplinler hem artan bilgi birikimiyle uzmanlaşarak alt dallara ayrılabilir (farklılaşma) hem de karmaşık, çok yönlü sorunları çözmek için farklı alt disiplinlerin yöntemlerini birleştiren yeni disiplinler arası alanlar (kimyasal biyoloji, malzeme kimyası gibi) doğurabilir; bu iki eğilim bilimin dinamik gelişiminin doğal bir parçasıdır."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir teknoloji şirketi, giyilebilir sağlık cihazlarında kullanılmak üzere hem cilde temas eden esnek polimer malzemeler hem de vücuttaki belirli biyobelirteçleri (örneğin glikoz) algılayabilen kimyasal sensörler geliştirmektedir.",
-    text: "Bu ürün geliştirme sürecinin gerektirdiği bilgi birikimi, kimyanın alt disiplinleri hakkında en doğru hangi çıkarımı destekler?",
-    options: ["Bu tür ürünler kimyasal sensör içermediğinden kimyayla ilgisizdir", "Bu tür bir ürün yalnızca polimer kimyası bilgisiyle geliştirilebilir", "Biyobelirteç algılama, kimyayla değil yalnızca elektronik mühendisliğiyle ilgilidir", "Alt disiplinlerin bir araya gelmesi, ürün geliştirme sürecini bilimsel açıdan geçersiz kılar", "Karmaşık, çok bileşenli ürünlerin geliştirilmesi genellikle tek bir alt disiplinin değil, polimer kimyası, analitik kimya ve biyokimya gibi birden fazla alanın bilgisinin bütünleştirilmesini gerektirir"],
-    correct: 4,
-    explain: "Giyilebilir bir sağlık cihazı; cilde uygun esnek malzeme (polimer kimyası), belirli bir biyobelirteci seçici olarak algılayabilen kimyasal tepkime tasarımı (analitik kimya) ve bu biyobelirtecin vücuttaki biyolojik anlamının bilinmesi (biyokimya) gibi birden fazla alt disiplinin bilgisinin bütünleştirilmesini gerektirir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir gıda güvenliği kurumunun raporunda, 'organik' sertifikalı bir üründeki pestisit kalıntısının hem hangi bileşik olduğunun (tür tayini) hem de ne kadar miktarda bulunduğunun (miktar tayini) belirlenmesi gerektiği, ayrıca bu miktarın sağlık üzerindeki olası etkisinin de değerlendirilmesi gerektiği belirtilmektedir.",
-    text: "Bu değerlendirme sürecindeki üç görev (tür tayini, miktar tayini, sağlık etkisi değerlendirmesi) en doğrudan hangi alt disiplin(ler)in bilgisini gerektirir?",
-    options: ["Bu üç görev birbirinden tamamen bağımsız, hiçbir ortak disiplin gerektirmez", "Tür ve miktar tayini analitik kimyanın; sağlık etkisinin değerlendirilmesi ise biyokimya ve toksikoloji bilgisinin (biyokimyayla yakından ilişkili) desteğini gerektirir", "Tür tayini biyokimya, miktar tayini ise nükleer kimya gerektirir", "Sağlık etkisi değerlendirmesi kimyayla hiçbir ilgisi olmayan, tamamen tıbbi bir konudur", "Bu üç görev de yalnızca gıda kimyasıyla, başka hiçbir disiplinle ilgisizdir"],
-    correct: 1,
-    explain: "Bir kalıntının hangi bileşik olduğunu ve ne kadar miktarda bulunduğunu belirlemek analitik kimyanın temel işlevidir; bu miktarın sağlık üzerindeki etkisinin değerlendirilmesi ise biyokimya ve toksikoloji bilgisini gerektirir — kapsamlı bir gıda güvenliği değerlendirmesi bu bilgilerin bütünleştirilmesiyle mümkün olur."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir uzay araştırmaları merkezinde, hem bir gezegenin atmosferindeki gazların bileşimi uzaktan spektroskopik yöntemlerle analiz edilmekte hem de bu gazların oluşum kökeninin (jeolojik/biyolojik) olası kimyasal süreçlerle açıklanması araştırılmaktadır.",
-    text: "Bu araştırmanın kapsamı en doğrudan kimyanın hangi alt disiplinlerinin bilgisini bütünleştirir?",
-    options: ["Analitik kimya (spektroskopik bileşim analizi) ve jeokimya/anorganik kimya (oluşum sürecinin kimyasal açıklaması)", "Yalnızca gıda kimyası bilgisi yeterlidir", "Yalnızca polimer kimyası bilgisi gereklidir", "Bu araştırma kimyanın hiçbir alt disipliniyle ilgili değildir, tamamen astronomiye aittir", "Yalnızca elektrokimya bilgisi yeterlidir"],
-    correct: 0,
-    explain: "Bir gök cismindeki gazların bileşiminin spektroskopik yöntemlerle belirlenmesi analitik kimyanın; bu bileşimin oluşum kökeninin (jeolojik/kimyasal süreçler açısından) yorumlanması ise jeokimya ve anorganik kimya bilgisini gerektirir — bu, kimya bilgisinin uzay bilimleriyle kesişen disiplinler arası bir örneğidir (astrokimya)."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir üretim biriminde, deterjan gibi günlük temizlik ürünlerinin köpük oluşturma ve yağ çözme özelliklerini sağlayan bileşenler tasarlanmaktadır.",
-    objectIcons: ["detergent"],
-    text: "Bu tasarım süreci en doğrudan kimyanın hangi alt disipliniyle ilişkilidir?",
-    options: ["Organik kimya", "Nükleer kimya", "Jeokimya", "Gıda kimyası", "Elektrokimya"],
-    correct: 0,
-    explain: "Deterjanlardaki yüzey aktif maddeler karbon temelli (organik) bileşiklerdir; bu tür bileşiklerin tasarımı ve sentezi organik kimyanın kapsamına girer."
+    explain: "Karbon iskeletli bir molekülün sentezi organik kimyanın; saflık oranının ölçülmesi analitik kimyanın konusudur."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Aşağıdaki tabloda, dört farklı kimya alanının uygulama örnekleri farklı çalışma gruplarınca eşleştirilmiştir.",
-    table: {
-      headers: ["Kimya Alanı", "1. Grup uygulama alanı", "2. Grup uygulama alanı"],
-      rows: [
-        ["Malzeme ve Nanoteknoloji", "Gübre üretimi", "Nanomalzeme üretimi"],
-        ["Enerji Sektörü", "Enerji depolama sistemleri", "Pil teknolojileri"],
-        ["Sağlık ve Biyoteknoloji", "Biyomedikal", "Adli kimya"],
-        ["Gıda ve İçecek Endüstrisi", "Gıda güvenliği", "Besin analizi"]
-      ]
-    },
-    text: "Tabloda verilen dört kimya alanı için, hangi grubun (1. veya 2.) verdiği örneklerin tamamı ilgili alanla tutarlıdır?",
-    options: ["Tablodaki veriler yetersiz olduğundan karşılaştırma yapılamaz", "2. Grup; nanomalzeme üretimi, pil teknolojileri, adli kimya ve besin analizi örnekleri ilgili alanlarla tutarlıdır, 1. Gruptaki 'gübre üretimi' Malzeme ve Nanoteknoloji alanına tam uymaz", "Her iki grup da tamamen hatalıdır", "Her iki grup da eşit derecede doğrudur, ayrım yapılamaz", "1. Grup; tüm örnekler ilgili alanla birebir uyumludur"],
-    correct: 1,
-    explain: "Gübre üretimi, Malzeme ve Nanoteknoloji alanından çok Agronomi/Tarım kimyasıyla ilişkilidir; 2. gruptaki diğer üç eşleştirme (nanomalzeme, pil teknolojisi, adli kimya, besin analizi) ilgili alanlarla daha tutarlıdır."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir üniversite kariyer merkezi, mezunların farklı sektörlerdeki (ilaç, gıda, enerji, çevre) iş ilanlarını incelediğinde, ilan başlıklarının farklı olsa da aday niteliklerinde sıklıkla 'analitik ölçüm cihazlarını kullanabilme' ve 'veri yorumlama' becerilerinin ortak biçimde arandığını fark etmiştir.",
-    text: "Bu gözlem, farklı sektörlerdeki kimya kariyerleri arasındaki ilişki hakkında en doğru hangi çıkarımı destekler?",
-    options: ["Veri yorumlama becerisinin kimya kariyerleriyle hiçbir ilgisi yoktur", "Farklı sektörlerdeki kimya kariyerleri arasında hiçbir ortak beceri yoktur", "Analitik ölçüm becerisi yalnızca ilaç sektöründe aranır", "Görünüşte farklı sektörlere ait kariyerler, analitik kimyaya dayalı ortak temel becerileri paylaşabilir", "Bu gözlem yalnızca tesadüfi bir örtüşmedir, genellenemez"],
-    correct: 3,
-    explain: "Analitik ölçüm ve veri yorumlama gibi beceriler, farklı sektörlerdeki (ilaç, gıda, enerji, çevre) kimya kariyerlerinin ortak paydasını oluşturan, analitik kimyaya dayalı temel yeterliliklerdir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir kozmetik Ar-Ge biriminde, hem cilde uygulanan bir kremin içindeki nemlendirici moleküllerin cilt hücreleriyle etkileşimi hem de kremin raf ömrü boyunca bileşenlerinin bozulmadan kalıp kalmadığı incelenmektedir.",
-    text: "Bu iki inceleme sırasıyla en doğrudan hangi alt disiplinlerle ilişkilidir?",
-    options: ["Elektrokimya ve polimer kimyası", "Nükleer kimya ve jeokimya", "Biyokimya (hücre etkileşimi) ve analitik kimya (bileşen kararlılığının izlenmesi)", "Çevre kimyası ve gıda kimyası", "Anorganik kimya ve fizikokimya"],
+    context: "Bir üretici, ürettiği bileşiğin içerdiği anorganik tuzların oranını hassas cihazla belirlemeye çalışmaktadır.",
+    text: "Bu belirleme çalışması hangi disiplinin doğrudan uygulama alanına girer?",
+    options: ["Biyokimya","Organik kimya","Analitik kimya","Polimer kimyası","Fizikokimya"],
     correct: 2,
-    explain: "Bir molekülün canlı hücrelerle etkileşiminin incelenmesi biyokimyanın; bir ürünün bileşenlerinin zaman içindeki kararlılığının/bozunmasının izlenmesi ise analitik kimyanın (kararlılık analizi) konusudur."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir geri dönüşüm tesisinde, karışık plastik atıklardan önce polimer türünün (PET, HDPE, PVC vb.) hızlı biçimde ayırt edilmesi, ardından ayrıştırılan her türün yeniden işlenebilirliğinin kimyasal olarak değerlendirilmesi gerekmektedir.",
-    text: "Bu iki aşama sırasıyla en doğrudan hangi alt disiplinlerin bilgisini gerektirir?",
-    options: ["Biyokimya ve çevre kimyası (yalnızca)", "Nükleer kimya ve gıda kimyası", "Jeokimya ve elektrokimya", "Analitik kimya (polimer türü tanımlama) ve polimer kimyası (yeniden işlenebilirlik değerlendirmesi)", "Bu iki aşama da yalnızca mühendislik bilgisi gerektirir, kimyayla ilgisizdir"],
-    correct: 3,
-    explain: "Farklı plastik türlerinin hızlı tanımlanması (örneğin spektroskopik yöntemlerle) analitik kimyanın; bu polimerlerin zincir yapısına bağlı olarak yeniden işlenebilirliğinin değerlendirilmesi ise polimer kimyasının konusudur."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir tarım Ar-Ge biriminde, hem toprağın mineral bileşiminin bitkinin besin alımına etkisi hem de bitkinin bu besinleri kullanarak gerçekleştirdiği hücresel biyokimyasal süreçler eş zamanlı incelenmektedir.",
-    text: "Bu iki inceleme alanı, kimyanın hangi iki alt disiplininin tarım bağlamında kesiştiğini gösterir?",
-    options: ["Bu iki inceleme aynı disiplinin tekrarıdır, kesişim yoktur", "Nükleer kimya ve polimer kimyası", "Elektrokimya ve analitik kimya (yalnızca)", "Gıda kimyası ve nükleer kimya", "Jeokimya (toprak mineral bileşimi) ve biyokimya (bitki hücresel süreçleri)"],
-    correct: 4,
-    explain: "Toprağın mineral/element bileşiminin incelenmesi jeokimyanın; bitkinin bu besinleri hücresel düzeyde nasıl kullandığının incelenmesi ise biyokimyanın konusudur — tarım bilimi bu iki alt disiplinin bilgisini bütünleştirir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir batarya geri dönüşüm tesisinde, kullanılmış lityum iyon pillerden değerli metallerin (kobalt, nikel, lityum) hem güvenli biçimde geri kazanılması (kimyasal ayrıştırma) hem de bu sürecin çevreye salınan atık miktarının izlenmesi gerekmektedir.",
-    text: "Bu iki gereklilik en doğrudan hangi alt disiplinlerin bilgisini bir araya getirir?",
-    options: ["Yalnızca nükleer kimya bilgisi yeterlidir", "Elektrokimya/anorganik kimya (metal geri kazanımı) ve çevre kimyası (atık izleme)", "Yalnızca gıda kimyası bilgisi yeterlidir", "Bu süreç kimyanın hiçbir alt disipliniyle ilgili değildir", "Yalnızca polimer kimyası bilgisi yeterlidir"],
-    correct: 1,
-    explain: "Pillerdeki metal bileşiklerin ayrıştırılıp geri kazanılması elektrokimya ve anorganik kimyanın; bu süreçte ortaya çıkan atığın çevresel etkisinin izlenmesi ise çevre kimyasının konusudur — sürdürülebilir geri dönüşüm bu bilgilerin bütünleştirilmesini gerektirir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir spor performansı araştırma merkezinde, hem sporcuların terleme yoluyla kaybettiği elektrolitlerin miktarı hassas cihazlarla ölçülmekte hem de bu kayıpların kas hücrelerindeki enerji üretim süreçleri üzerindeki etkisi incelenmektedir.",
-    text: "Bu iki inceleme hangi alt disiplinlerin çalışma alanına girmektedir?",
-    options: ["Gıda kimyası ve jeokimya", "Jeokimya ve nükleer kimya", "Polimer kimyası ve elektrokimya", "Analitik kimya (elektrolit miktarının ölçümü) ve biyokimya (hücresel enerji süreçlerine etkisi)", "Bu iki inceleme birbirinin birebir aynısıdır, ayrım anlamsızdır"],
-    correct: 3,
-    explain: "Terle kaybedilen elektrolit miktarının hassas biçimde ölçülmesi analitik kimyanın; bu kaybın hücresel enerji üretimi (metabolizma) üzerindeki etkisinin incelenmesi ise biyokimyanın konusudur."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir arkeoloji-kimya iş birliği projesinde, antik bir seramik parçasının hem hangi mineral hammaddelerden yapıldığı (bileşim analizi) hem de üretildiği dönemi belirlemek için içerdiği radyoaktif izotopların bozunma oranı incelenmektedir.",
-    text: "Bu projedeki iki inceleme yöntemi en doğrudan hangi alt disiplinlerin bilgisini birleştirir?",
-    options: [
-      "Analitik kimya/jeokimya (mineral bileşim analizi) ve nükleer kimya (izotop bozunma oranıyla yaş tayini)",
-      "Biyokimya ve gıda kimyası",
-      "Polimer kimyası ve elektrokimya",
-      "Çevre kimyası ve organik kimya (yalnızca)",
-      "Bu iki yöntem birbirinden tamamen bağımsızdır, ortak bir disiplin gerektirmez"
-    ],
-    correct: 0,
-    explain: "Bir seramiğin mineral bileşiminin belirlenmesi analitik kimya ve jeokimyanın; radyoaktif izotop bozunma oranına dayalı yaş tayini ise nükleer kimyanın konusudur — arkeometri (arkeolojik bilim) bu iki alanın bilgisini bir araya getirir."
+    explain: "Bir bileşikteki tuz oranının hassas biçimde belirlenmesi analitik kimyanın (nicel analiz) konusudur."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir otomotiv Ar-Ge biriminde, hem araç egzozundan çıkan gazların bileşimi hassas cihazlarla ölçülmekte hem de bu gazların atmosferdeki diğer maddelerle etkileşiminin çevresel etkisi araştırılmaktadır.",
-    text: "Bu iki inceleme hangi alt disiplinlerin kapsamına girmektedir?",
-    options: ["Polimer kimyası ve biyokimya", "Nükleer kimya ve gıda kimyası", "Analitik kimya (gaz bileşiminin ölçümü) ve çevre kimyası (atmosferik etkileşim/etki)", "Jeokimya ve elektrokimya", "Bu iki inceleme birbirinden tamamen kopuk, ortak bir konusu yoktur"],
-    correct: 2,
-    explain: "Egzoz gazlarının bileşiminin hassas ölçümü analitik kimyanın; bu gazların atmosferdeki diğer maddelerle etkileşiminin (örneğin hava kirliliğine katkısının) incelenmesi ise çevre kimyasının konusudur."
+    context: "Bir malzeme biliminde, kauçuğun sıcaklık arttıkça neden yumuşadığı, moleküler yapısındaki zincirlerin hareketliliği açısından incelenmektedir.",
+    text: "Bu inceleme en doğrudan hangi İKİ disiplinin kesişiminde yer alır?",
+    options: ["Bu inceleme kimyanın hiçbir disipliniyle ilgili değildir","Analitik kimya ve biyokimya","Organik kimya ve anorganik kimya","Yalnızca analitik kimya","Polimer kimyası ve fizikokimya"],
+    correct: 4,
+    explain: "Kauçuk bir polimerdir (polimer kimyası); sıcaklıkla davranış değişimi ise fizikokimyanın konusudur."
   },
   {
-    difficulty: "zor",
+    difficulty: "orta",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir uzay tarımı araştırmasında, hem uzay istasyonundaki kapalı bir ortamda bitkilerin hangi mineral çözeltileriyle beslenebileceği (topraksız tarım) hem de bitkinin bu ortamda ürettiği besin öğelerinin besin değerinin Dünya'daki eşdeğerine kıyasla nasıl değiştiği incelenmektedir.",
-    text: "Bu iki araştırma sorusu en doğrudan hangi alt disiplinlerin bilgisini gerektirir?",
-    options: [
-      "Anorganik kimya/biyokimya (mineral besleme çözeltisi tasarımı) ve gıda kimyası (besin değeri karşılaştırması)",
-      "Yalnızca nükleer kimya bilgisi yeterlidir",
-      "Yalnızca elektrokimya bilgisi yeterlidir",
-      "Bu araştırma kimyanın hiçbir alt disipliniyle ilgili değildir",
-      "Yalnızca polimer kimyası bilgisi yeterlidir"
-    ],
+    context: "Bir hastanede, kan örneklerindeki hormon düzeyleri ölçülerek hastalık teşhisine katkı sağlanmaktadır.",
+    text: "Bu ölçüm süreci en doğrudan hangi İKİ disiplinin bilgisini bir arada kullanır?",
+    options: ["Yalnızca analitik kimya, hormonun disiplinle ilgisi yoktur","Organik kimya ve fizikokimya","Anorganik kimya ve polimer kimyası","Yalnızca biyokimya, ölçümün disiplinle ilgisi yoktur","Biyokimya (hormon molekülü) ve analitik kimya (ölçüm)"],
+    correct: 4,
+    explain: "Hormon canlı organizmadaki bir molekül olduğundan biyokimyanın; düzeyinin hassas biçimde ölçülmesi ise analitik kimyanın konusudur."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir mühendis, yeni bir plastik ambalaj filminin hem moleküler yapısını (uzun zincirli birimler) hem de bu filmin farklı sıcaklıklarda ne kadar esnek kaldığını incelemektedir.",
+    text: "Bu iki inceleme sırasıyla hangi disiplinlerle en doğrudan ilişkilidir?",
+    options: ["Polimer kimyası (yapı) ve fizikokimya (sıcaklıkla davranış)","Organik kimya ve anorganik kimya","Analitik kimya ve biyokimya","İkisi de yalnızca polimer kimyasının konusudur, fizikokimyanın ilgisi yoktur","Bu iki görevin kimyayla ilgisi yoktur"],
     correct: 0,
-    explain: "Bitkiler için uygun mineral besin çözeltisinin tasarlanması anorganik kimya ve bitkinin bu besinleri kullanma biyokimyasının; üretilen besinin besin değerinin analiz edilip karşılaştırılması ise gıda kimyasının konusudur."
+    explain: "Malzemenin moleküler yapısı polimer kimyasının; sıcaklıkla davranış değişimi ise fizikokimyanın konusudur."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir laboratuvarda, doğal kaynaklı (bitkisel) bir yağın kimyasal yapısı incelenirken, aynı zamanda bu yağın saflık derecesi de ölçülmektedir.",
+    text: "Bu iki çalışma sırasıyla hangi disiplinlerle en doğrudan ilişkilidir?",
+    options: ["Anorganik kimya ve fizikokimya","Organik kimya (yapı) ve analitik kimya (saflık ölçümü)","Biyokimya ve polimer kimyası","İkisi de yalnızca organik kimyanın konusudur","Bu iki görevin kimyayla ilgisi yoktur"],
+    correct: 1,
+    explain: "Yağ karbon bileşiği olduğundan yapısının incelenmesi organik kimyanın; saflık derecesinin ölçülmesi ise analitik kimyanın konusudur."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir müze koruma laboratuvarında, hem tarihi bir tablodaki pigmentlerin kimyasal bileşimi belirlenmekte hem de bu pigmentlerin zamanla ışığa/neme maruz kalarak nasıl bozulduğu incelenerek uygun koruma yöntemleri geliştirilmektedir.",
-    text: "Bu iki çalışma en doğrudan hangi alt disiplinlerin bilgisini bir araya getirir?",
-    options: ["Jeokimya ve polimer kimyası (yalnızca)", "Biyokimya ve nükleer kimya", "Gıda kimyası ve elektrokimya", "Analitik kimya (pigment bileşimi belirleme) ve fizikokimya (bozunma sürecinin/kararlılığın incelenmesi)", "Bu iki çalışma kimyanın hiçbir alt disipliniyle ilgili değildir, sanat tarihine aittir"],
+    context: "Bir araştırmacı, bir maddenin önce hangi elementlerden oluştuğunu (nitel analiz) belirlemekte, sonra bu elementlerin kütlece yüzdesini (nicel analiz) hesaplamaktadır; üstelik bu madde karbon içeren, büyük ve tekrar eden birimlerden oluşan bir yapıya sahiptir.",
+    text: "Bu çalışma en doğrudan hangi disiplinlerin kesişiminde yer alır?",
+    options: ["Anorganik kimya ve fizikokimya","Yalnızca analitik kimya","Yalnızca polimer kimyası","Analitik kimya, organik kimya ve polimer kimyasının üçü birden","Biyokimya ve analitik kimya"],
     correct: 3,
-    explain: "Pigmentlerin kimyasal bileşiminin belirlenmesi analitik kimyanın; bu pigmentlerin çevresel etkenler altında zamanla nasıl bozulduğunun (kararlılık, tepkime hızı açısından) incelenmesi ise fizikokimyanın konusudur — kültürel mirasın korunması bu bilgilerin birleşimini gerektirir."
+    explain: "Nitel+nicel analiz süreci analitik kimyanın; karbon içermesi organik kimyanın; büyük, tekrar eden birimlerden oluşması polimer kimyasının konusudur — üçü birden geçerlidir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir yarı iletken üreticisi, kullandığı silikon kristalinin SAFLIK DERECESİNİ hassas cihazlarla ölçerken, aynı zamanda bu kristalin sıcaklık değiştikçe elektrik iletkenliğinin NASIL DEĞİŞTİĞİNİ de incelemektedir.",
+    text: "Silikonun kendisiyle ilgilenen temel disiplin ile bu iki inceleme süreci sırasıyla hangi disiplinlerle ilişkilidir?",
+    options: ["Silikon anorganik kimyanın konusudur ama ölçüm süreçlerinin hiçbiri kimyayla ilgili değildir","Silikon organik kimyanın konusudur; ikisi de biyokimyanın konusudur","Silikon polimer kimyasının konusudur; ikisi de anorganik kimyanın konusudur","Bu sürecin kimyayla hiçbir ilgisi yoktur","Silikon anorganik kimyanın konusudur; saflık ölçümü analitik kimyanın, iletkenlik değişimi fizikokimyanın konusudur"],
+    correct: 4,
+    explain: "Silikon (yarı iletken malzeme) anorganik kimyanın konusudur; saflık ölçümü analitik kimyanın, sıcaklıkla iletkenlik değişimi ise fizikokimyanın konusudur."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir biyoteknoloji firması, doğal bir proteini laboratuvar ortamında sentezlemeye çalışmakta, ardından bu sentetik proteinin vücuttaki etkisini test etmektedir.",
+    text: "Protein molekülünün sentezlenmesi ile vücuttaki etkisinin test edilmesi süreçleri sırasıyla hangi disiplinle en doğrudan ilişkilidir?",
+    options: ["Yalnızca organik kimya, biyokimyanın ilgisi yoktur","Biyokimya (protein, canlı sistemdeki etkisiyle birlikte) her iki aşamada da temel disiplindir","Yalnızca anorganik kimya","Yalnızca fizikokimya","Yalnızca polimer kimyası"],
+    correct: 1,
+    explain: "Protein, biyokimyanın MEB kitabında sayılan temel molekül gruplarından biridir; hem sentezi hem canlı sistemdeki etkisi biyokimyanın kapsamındadır."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir malzeme mühendisi, çelik bir alaşımın METAL BİLEŞİMİNİ analiz etmekte, ayrıca bu alaşımın YÜKSEK SICAKLIKTA nasıl davrandığını (genleşme, faz değişimi) incelemektedir.",
+    text: "Çeliğin kendisiyle ilgilenen temel disiplin ile bu iki inceleme süreci sırasıyla hangi disiplinlerle ilişkilidir?",
+    options: ["Çelik anorganik kimyanın konusudur; bileşim analizi analitik kimyanın, sıcaklıkla davranış fizikokimyanın konusudur","Çelik organik kimyanın konusudur; ikisi de aynı disiplinin konusudur","Çelik polimer kimyasının konusudur; ikisi de biyokimyanın konusudur","Çeliğin kimyayla hiçbir ilgisi yoktur","Çelik anorganik kimyanın konusudur ama diğer iki süreç kimyayla ilgisizdir"],
+    correct: 0,
+    explain: "Çelik bir metal alaşımı olduğundan anorganik kimyanın konusudur; bileşim analizi analitik kimyanın, yüksek sıcaklıktaki davranışı ise fizikokimyanın konusudur."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir araştırma ekibi, doğal kauçuğun (bir biyopolimer) moleküler yapısını incelerken, aynı zamanda bu kauçuğun canlı bir bitkiden (kauçuk ağacından) nasıl üretildiğini de araştırmaktadır.",
+    text: "Doğal kauçuğun moleküler yapısının incelenmesi ile bitkideki üretim SÜRECİNİN araştırılması sırasıyla hangi disiplinlerle en doğrudan ilişkilidir?",
+    options: ["İkisi de yalnızca polimer kimyasının konusudur","Organik kimya ve anorganik kimya","Analitik kimya ve fizikokimya","Polimer kimyası (moleküler yapı) ve biyokimya (canlıdaki üretim süreci)","Bu araştırmanın kimyayla ilgisi yoktur"],
+    correct: 3,
+    explain: "Kauçuğun moleküler yapısı polimer kimyasının; canlı bir organizmadaki üretim süreci ise biyokimyanın konusudur."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    checklist: ["Bir bileşiğin karbon içerip içermediği, onun organik mi anorganik mi olduğunu belirleyen temel ölçüttür.","Fizikokimya yalnızca gazlarla ilgilenir; sıvı ve katı hâl değişimleri bu disiplinin kapsamı dışındadır.","Bir maddenin canlı bir organizmadan elde edilmiş olması onu biyokimyanın konusu yapabilir; aynı maddenin karbon iskeletinin incelenmesi ise organik kimyanın da konusu olabilir.","Polimer kimyası yalnızca insan yapımı (sentetik) malzemelerle ilgilenir, doğada bulunan biyopolimerlerle ilgilenmez."],
+    text: "Yukarıdaki ifadelerden kaç tanesi doğrudur?",
+    options: ["2","4","3","Hiçbiri","1"],
+    correct: 0,
+    explain: "Yalnızca 1. ve 3. ifadeler doğrudur. Fizikokimya sıvı/katı hâl değişimlerini de kapsar (2. yanlış); polimer kimyası doğal biyopolimerleri de inceler (4. yanlış)."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir gıda ürününün üretim sürecinde: (I) ürünün içerdiği proteinlerin yapısı inceleniyor, (II) ürünün ambalaj filminin moleküler yapısı test ediliyor, (III) üründeki koruyucu madde miktarı hassas cihazla ölçülüyor.",
+    statements: ["I numaralı çalışma biyokimyanın konusudur.","II numaralı çalışma polimer kimyasının konusudur.","III numaralı çalışma organik kimyanın değil, analitik kimyanın konusudur."],
+    text: "Yukarıdaki ifadelerden hangileri doğrudur?",
+    options: ["I, II ve III","I ve II","Yalnız III","II ve III","Yalnız I"],
+    correct: 0,
+    explain: "I biyokimya (protein), II polimer kimyası (ambalaj filmi), III analitik kimya (madde organik olsa da miktar ÖLÇÜMÜ analitik kimyanın işidir) — üçü de doğrudur."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    matchPairs: {"left":["Bir tepkimenin sıcaklıkla nasıl hızlandığını, enerji açısından açıklar.","Bir örnekteki maddenin türünü VE miktarını birlikte belirlemeyi hedefler.","Canlı bir hücredeki binlerce farklı molekülün etkileşimini inceler.","Karbon iskeletli bileşiklerin çeşitliliği nedeniyle en geniş çalışma alanına sahiptir.","Büyük, tekrar eden birimlerden oluşan moleküllerin sentezini ve davranışını inceler."],"right":["Organik kimya","Polimer kimyası","Fizikokimya","Analitik kimya","Biyokimya"]},
+    text: "Yukarıdaki eşleştirmede, 4 numaralı tanım hangi harfteki disipline aittir?",
+    options: ["d","b","c","a","e"],
+    correct: 3,
+    explain: "Karbon iskeletli bileşiklerin çeşitliliği nedeniyle en geniş çalışma alanına sahip olan disiplin organik kimyadır; bu da 'a' harfindeki seçenekle eşleşir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    dialogue: [{"who":"Öğrenci A","text":"Bir ilaç molekülünün karbon iskeletinin nasıl sentezlendiğini incelemek organik kimyanın, bu molekülün vücuttaki hedef proteine nasıl bağlandığını incelemek ise biyokimyanın konusudur; ikisi farklı ama tamamlayıcı sorular sorar."},{"who":"Öğrenci B","text":"Hayır, ikisi de aynı disiplin; ilaç molekülü tek bir madde olduğu için hangi soruyu sorduğumuzun bir önemi yoktur."},{"who":"Öğrenci C","text":"Bence ilaç geliştirme kimyayla hiç ilgili değildir, tamamen tıbbın konusudur."}],
+    text: "İlaç molekülüyle ilgili yukarıdaki görüşlerden hangisi doğrudur?",
+    options: ["Öğrenci A","Öğrenci B","Öğrenci C","B ve C birlikte","Hiçbiri"],
+    correct: 0,
+    explain: "Aynı madde, sorulan SORUYA göre (sentez süreci vs. canlı sistemdeki etkileşim) farklı disiplinlerin konusu olabilir; bu, 'bir madde yalnızca tek bir disipline aittir' kavram yanılgısını düzeltir. Öğrenci A haklıdır."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    table: {"headers":["Çalışma","Odaklandığı soru"],"rows":[["1","Bir alaşımdaki metal oranlarının hassas ölçümü"],["2","Bir polimerin sıcaklıkla esneklik değişiminin incelenmesi"],["3","Bir enzimin canlı hücredeki rolünün incelenmesi"]],"caption":"Üç farklı çalışma"},
+    text: "Tablodaki 1, 2 ve 3 numaralı çalışmalar için en uygun disiplinler sırasıyla hangileridir?",
+    options: ["1: Biyokimya, 2: Organik kimya, 3: Fizikokimya","1: Organik kimya, 2: Anorganik kimya, 3: Analitik kimya","1: Analitik kimya, 2: Fizikokimya, 3: Biyokimya","1: Polimer kimyası, 2: Biyokimya, 3: Analitik kimya","1: Fizikokimya, 2: Analitik kimya, 3: Organik kimya"],
+    correct: 2,
+    explain: "1. çalışma bir ölçüm olduğundan analitik kimya; 2. çalışma malzemenin sıcaklıkla DAVRANIŞ değişimi olduğundan fizikokimya; 3. çalışma canlı hücredeki bir molekül olduğundan biyokimyadır."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir araştırmacı, doğal kauçuğun (bir biyopolimer) SICAKLIKLA ESNEKLİĞİNİN NASIL DEĞİŞTİĞİNİ ölçmektedir; kauçuğun kendisi hem polimer kimyasının hem de (canlı kaynaklı olduğu için) biyokimyanın ilgi alanına girebilir.",
+    text: "Ancak bu araştırmacının sorduğu asıl soru (sıcaklıkla esneklik değişimi) hangi disiplinin temel sorusuyla en doğrudan örtüşür?",
+    options: ["Organik kimya","Biyokimya","Analitik kimya","Anorganik kimya","Fizikokimya"],
+    correct: 4,
+    explain: "Madde hangi disipline 'ait' görünürse görünsün, sorulan SORU (fiziksel koşulun davranışa etkisi) fizikokimyaya aittir — bu, 'bir malzeme = tek disiplin' kavram yanılgısını düzeltir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir gıda mühendisi hem ürünün içerdiği yağ oranını (nicel analiz) ölçmekte hem de bu yağın sıcaklıkla nasıl erimeye başladığını (erime davranışı) incelemektedir.",
+    text: "Bu iki çalışma sırasıyla hangi disiplinlerle en doğrudan ilişkilidir?",
+    options: ["Organik kimya ve anorganik kimya","Analitik kimya (nicel ölçüm) ve fizikokimya (sıcaklıkla erime davranışı)","Biyokimya ve polimer kimyası","İkisi de yalnızca organik kimyanın konusudur","Bu iki görevin kimyayla ilgisi yoktur"],
+    correct: 1,
+    explain: "Yağ oranının hassas ölçümü analitik kimyanın; sıcaklıkla erime davranışının incelenmesi ise fizikokimyanın konusudur."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir plastik türü olan naylonun (bir polimer) SENTEZ TEPKİMESİNDE hangi karbon bazlı başlangıç maddelerinin kullanıldığı organik kimya bilgisiyle belirlenirken, ortaya çıkan naylon ipliğinin dayanıklılığı ve esnekliği polimer kimyası bilgisiyle test edilmektedir.",
+    text: "Bu açıklamaya göre organik kimya ile polimer kimyası arasındaki ilişki en doğru şekilde nasıl özetlenebilir?",
+    options: ["Organik kimya yalnızca doğal, polimer kimyası yalnızca sentetik maddelerle ilgilenir","İkisi tamamen aynı disiplindir, aralarında hiçbir fark yoktur","Polimer kimyası organik kimyadan tamamen bağımsızdır, karbon bileşikleriyle hiç ilgilenmez","Organik kimya bilgisi genellikle polimer sentezinin temelini oluşturur; polimer kimyası ise ortaya çıkan büyük moleküllerin özellik ve davranışlarına odaklanır — ikisi birbirini tamamlar","Bu iki disiplin arasında hiçbir ilişki kurulamaz"],
+    correct: 3,
+    explain: "Polimerlerin çoğu karbon bazlı (organik) başlangıç maddelerinden sentezlenir; organik kimya bu sentezin temelini, polimer kimyası ise ortaya çıkan büyük molekülün özellik/davranışını inceler."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    dialogue: [{"who":"Öğrenci A","text":"Bence kimyanın alt disiplinleri birbirinden kesin sınırlarla ayrılmıştır; bir çalışma asla birden fazla disiplinin konusu olamaz."},{"who":"Öğrenci B","text":"Bence öyle değil; pek çok gerçek uygulama (ilaç geliştirme, ambalaj malzemesi tasarımı gibi) birden fazla alt disiplinin bilgisini bir arada gerektirir, sınırlar kesin değil tamamlayıcıdır."},{"who":"Öğrenci C","text":"Bence alt disiplinler yalnızca üniversitede öğretilir, gerçek iş hayatında hiçbir işe yaramaz."}],
+    text: "Kimyanın alt disiplinleri arasındaki ilişkiyle ilgili hangi öğrencinin görüşü en doğrudur?",
+    options: ["Öğrenci A","Öğrenci C","Öğrenci B","A ve C birlikte","Hiçbiri"],
+    correct: 2,
+    explain: "Gerçek uygulamalar genellikle birden fazla alt disiplini bir arada gerektirir; disiplinler arası sınırlar kesin değil, tamamlayıcıdır. Öğrenci B haklıdır."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir su arıtma ekipmanı üreticisi, ürettiği filtrenin İÇERDİĞİ mineral bileşimini belirlemekte (I), bu mineral yapının farklı sıcaklıklarda ne kadar kararlı kaldığını incelemekte (II) ve filtredeki metal iyonlarının karakteristik özelliklerini araştırmaktadır (III).",
+    statements: ["I numaralı çalışma analitik kimyanın konusudur.","II numaralı çalışma fizikokimyanın konusudur.","III numaralı çalışma anorganik kimyanın konusudur."],
+    text: "Yukarıdaki ifadelerden hangileri doğrudur?",
+    options: ["Yalnız I","I ve II","II ve III","I, II ve III","I ve III"],
+    correct: 3,
+    explain: "I analitik kimya (bileşim belirleme), II fizikokimya (sıcaklıkla kararlılık), III anorganik kimya (metal iyonlarının karakteristik özellikleri) — üçü de doğrudur."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Altı alt disiplin (analitik, biyokimya, organik, anorganik, fizikokimya, polimer kimyası) farklı sorulara odaklanır: 'ne var, ne kadar var?', 'canlıda nasıl işler?', 'karbon bileşikleri nasıl davranır?', 'karbonsuz maddeler nasıl davranır?', 'enerji ve hız nasıl değişir?', 'büyük moleküller nasıl oluşur?'.",
+    text: "Bu altı disiplinin farklı sorulara odaklanması, kimyanın alt disiplinlere ayrılmasıyla ilgili en doğru hangi genellemeyi destekler?",
+    options: ["Altı disiplin de aynı soruyu farklı kelimelerle sorar, aralarında gerçek bir fark yoktur","Alt disiplinler birbirinden tamamen kopuk, hiçbir ortak yönü olmayan ayrı bilimlerdir","Alt disiplinlerden yalnızca biri (analitik kimya) diğerlerinin temelini oluşturur, geri kalanlar önemsizdir","Alt disiplinlere ayrılma yalnızca eğitim amaçlıdır, gerçek araştırmada hiçbir karşılığı yoktur","Alt disiplinler, kimyanın geniş kapsamını yönetilebilir/uzmanlaşabilir sorulara bölerek incelemeyi kolaylaştırır; ama gerçek problemler genellikle birden fazla disiplini bir arada gerektirir"],
+    correct: 4,
+    explain: "Alt disiplinlere ayrılma, kimyanın geniş kapsamını odaklı sorulara bölerek derinlemesine uzmanlaşmayı mümkün kılar; ancak gerçek dünya problemleri (bu modüldeki pek çok örnekte görüldüğü gibi) genellikle birden fazla disiplini bir arada gerektirir."
   }
 ],
   "kariyer": [
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    matchPairs: {
-      left: [
-        "Gıda üretim hattından alınan örneklerde katkı maddesi ve mikrobiyolojik güvenlik ölçümü yapıp standartlarla karşılaştırmak",
-        "Olay yerinden toplanan iz miktardaki maddeleri analiz ederek adli sürece kanıt üretmek",
-        "Yeni geliştirilen bir ilaç molekülünün etkinliğini ve yan etkilerini klinik öncesi test etmek",
-        "Fabrikadaki kimyasalların güvenli depolanması ve etiketlenmesi için prosedür hazırlamak"
-      ],
-      right: ["Farmasötik Ar-Ge kimyageri", "İş sağlığı ve güvenliği (EHS) uzmanı", "Gıda kalite kontrol uzmanı", "Adli (forensic) kimyager"]
-    },
-    text: "Yukarıdaki eşleştirmede, 3 numaralı görev tanımı hangi harfteki kariyerle ilişkilidir?",
-    options: ["a", "b", "c", "d", "Hiçbiriyle ilişkili değildir"],
+    context: "MEB'in 'Bilgi Görseli 1.1' şemasına göre kimya alanında eğitim gören bireyler sekiz farklı geniş alanda çalışabilir. Bu alanlardan biri boya, plastik, gübre, reçine, petrokimya, deterjan ve kozmetik gibi çeşitli ürünlerin sentezi, formülasyonu ve üretimini kapsar.",
+    text: "Yukarıda tanımlanan kariyer alanı hangisidir?",
+    options: ["Sağlık ve Biyoteknoloji","Kimya Endüstrisi","Enerji Sektörü","Malzeme ve Nanoteknoloji","Agronomi ve Tarım"],
+    correct: 1,
+    explain: "Boya, plastik, gübre, reçine, petrokimya, deterjan ve kozmetik ürünlerin üretimi MEB kitabında 'Kimya Endüstrisi' alanı olarak tanımlanmıştır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bilgi Görseli 1.1'deki alanlardan biri; adli kimya, ilaç geliştirme, biyoteknoloji ve biyomedikal alanlarında araştırma ve uygulama yapılmasını kapsar.",
+    text: "Yukarıda tanımlanan kariyer alanı hangisidir?",
+    options: ["Çevre ve Sürdürülebilirlik","Kimya Endüstrisi","Sağlık ve Biyoteknoloji","Eğitim ve Akademik Çalışma","Gıda ve İçecek Endüstrisi"],
+    correct: 2,
+    explain: "Adli kimya, ilaç geliştirme, biyoteknoloji ve biyomedikal araştırma/uygulama MEB kitabında 'Sağlık ve Biyoteknoloji' alanı olarak tanımlanmıştır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bilgi Görseli 1.1'deki alanlardan biri; atık yönetimi, su arıtma teknolojileri, biyolojik çeşitliliğin korunması ve yeşil teknolojilerin geliştirilmesini kapsar.",
+    text: "Yukarıda tanımlanan kariyer alanı hangisidir?",
+    options: ["Kimya Endüstrisi","Enerji Sektörü","Çevre ve Sürdürülebilirlik","Agronomi ve Tarım","Malzeme ve Nanoteknoloji"],
+    correct: 2,
+    explain: "Atık yönetimi, su arıtma teknolojileri ve yeşil teknolojiler MEB kitabında 'Çevre ve Sürdürülebilirlik' alanı olarak tanımlanmıştır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bilgi Görseli 1.1'deki alanlardan biri; enerji üretimi, yenilenebilir enerji teknolojileri, pil teknolojileri, yakıt hücreleri ve enerji depolama sistemlerini kapsar.",
+    text: "Yukarıda tanımlanan kariyer alanı hangisidir?",
+    options: ["Sağlık ve Biyoteknoloji","Çevre ve Sürdürülebilirlik","Enerji Sektörü","Gıda ve İçecek Endüstrisi","Malzeme ve Nanoteknoloji"],
+    correct: 2,
+    explain: "Enerji üretimi, yenilenebilir enerji, pil teknolojileri ve yakıt hücreleri MEB kitabında 'Enerji Sektörü' alanı olarak tanımlanmıştır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bilgi Görseli 1.1'deki alanlardan biri; gıda güvenliği, gıda üretimi, besin analizi, aroma geliştirme, gıda teknolojisi ve moleküler gastronomi alanlarında araştırma ve uygulamayı kapsar.",
+    text: "Yukarıda tanımlanan kariyer alanı hangisidir?",
+    options: ["Gıda ve İçecek Endüstrisi","Agronomi ve Tarım","Kimya Endüstrisi","Sağlık ve Biyoteknoloji","Eğitim ve Akademik Çalışma"],
     correct: 0,
-    explain: "3 numaralı görev (yeni ilaç molekülünün etkinlik/yan etki testi) farmasötik Ar-Ge kimyagerinin işidir; bu da 'a' harfindeki seçenekle eşleşir."
+    explain: "Gıda güvenliği, besin analizi, aroma geliştirme ve moleküler gastronomi MEB kitabında 'Gıda ve İçecek Endüstrisi' alanı olarak tanımlanmıştır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    matchPairs: {
-      left: [
-        "Üniversitede lisans öğrencilerine atomun yapısı ve kimyasal bağları anlatıp laboratuvar uygulaması yürütmek",
-        "Akarsudan alınan su örneklerinde ağır metal ve kirletici derişimini ölçüp su kalitesini haritalamak",
-        "Yeni bir nemlendirici kremin cilt üzerindeki etkisini test edip formülasyonu optimize etmek",
-        "Ham petrolü damıtarak benzin, mazot gibi yakıt türlerine ayrıştırma sürecini planlayıp izlemek"
-      ],
-      right: ["Petrokimya mühendisi", "Kozmetik Ar-Ge kimyageri", "Çevre kimyageri", "Kimya öğretmenliği/akademisyenliği"]
-    },
-    text: "Yukarıdaki eşleştirmede, 1 numaralı görev tanımı hangi harfteki kariyerle ilişkilidir?",
-    options: ["a", "b", "c", "d", "Hiçbiriyle ilişkili değildir"],
-    correct: 1,
-    explain: "1 numaralı görev (ders anlatma + laboratuvar uygulaması) kimya öğretmenliği/akademisyenliğinin işidir; bu da 'b' harfindeki seçenekle eşleşir."
+    context: "Bilgi Görseli 1.1'deki alanlardan biri; öğretmenlik ve üniversitede öğretim üyeliği yapmayı kapsar.",
+    text: "Yukarıda tanımlanan kariyer alanı hangisidir?",
+    options: ["Agronomi ve Tarım","Malzeme ve Nanoteknoloji","Sağlık ve Biyoteknoloji","Kimya Endüstrisi","Eğitim ve Akademik Çalışma"],
+    correct: 4,
+    explain: "Öğretmenlik ve üniversite öğretim üyeliği MEB kitabında 'Eğitim ve Akademik Çalışma' alanı olarak tanımlanmıştır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    dialogue: [
-      { who: "Öğrenci A", text: "Kimya kariyeri demek mutlaka beyaz önlükle laboratuvarda çalışmak demektir, başka bir seçenek yoktur." },
-      { who: "Öğrenci C", text: "Bence öyle değil; bilim gazeteciliği, patent uzmanlığı gibi laboratuvar dışı kariyerler de kimya bilgisi gerektirir." },
-      { who: "Öğrenci B", text: "Kimya kariyeri sadece lisansüstü eğitimle mümkündür, teknik/meslek eğitimiyle bu alanda çalışılamaz." }
-    ],
-    text: "Kimya alanındaki kariyer olanaklarıyla ilgili hangi öğrencinin görüşü en doğrudur?",
-    options: ["Öğrenci A", "Öğrenci C", "Öğrenci B", "A ve B birlikte haklıdır", "Hiçbiri"],
-    correct: 1,
-    explain: "Kimya kariyer alanları laboratuvar dışına da (bilim iletişimi, patent/fikri mülkiyet, EHS vb.) uzanır ve farklı eğitim seviyelerinden kariyer yollarına açıktır; Öğrenci C haklıdır."
+    context: "Bilgi Görseli 1.1'deki alanlardan biri; malzeme bilimi, nanoteknoloji ve nanomalzeme üretimi, elektronik ve kompozit malzeme geliştirmeyi kapsar.",
+    text: "Yukarıda tanımlanan kariyer alanı hangisidir?",
+    options: ["Eğitim ve Akademik Çalışma","Enerji Sektörü","Çevre ve Sürdürülebilirlik","Gıda ve İçecek Endüstrisi","Malzeme ve Nanoteknoloji"],
+    correct: 4,
+    explain: "Malzeme bilimi, nanoteknoloji, elektronik ve kompozit malzeme geliştirme MEB kitabında 'Malzeme ve Nanoteknoloji' alanı olarak tanımlanmıştır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir üniversite öğrencisi kimya kariyeri planlaması yaparken aşağıdaki ifadeleri değerlendirmektedir.",
-    statements: [
-      "Kimya lisans mezunu yalnızca akademisyen olabilir, sanayide çalışamaz.",
-      "Kimya bilgisi, gıda, ilaç, kozmetik, çevre gibi birçok farklı sektörde istihdam olanağı sağlar.",
-      "Kimya kariyeri planlarken kişisel ilgi alanları (örneğin çevre, sağlık, sanat) kariyer seçimini yönlendirebilir."
-    ],
-    text: "Yukarıdaki ifadelerden hangileri doğrudur?",
-    options: ["Yalnız I", "Yalnız II", "I ve III", "II ve III", "I, II ve III"],
+    context: "Bilgi Görseli 1.1'deki alanlardan biri; gübre, pestisit ve tarım kimyasalları gibi ürünlerin üretimi ile tarım verimliliğini geliştirme çalışmalarını kapsar.",
+    text: "Yukarıda tanımlanan kariyer alanı hangisidir?",
+    options: ["Agronomi ve Tarım","Kimya Endüstrisi","Enerji Sektörü","Sağlık ve Biyoteknoloji","Malzeme ve Nanoteknoloji"],
+    correct: 0,
+    explain: "Gübre, pestisit ve tarım kimyasalları üretimiyle tarım verimliliğini artırma MEB kitabında 'Agronomi ve Tarım' alanı olarak tanımlanmıştır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Türkiye'nin ilk kimya teknoloji merkezi projesi, kimya sektöründe ileri teknoloji ve yüksek katma değere sahip yerli ürünler geliştirmek amacıyla hayata geçirilmiştir.",
+    text: "Bu proje hangi iş birliği modeliyle hayata geçirilmiştir?",
+    options: ["Bu proje herhangi bir iş birliğine dayanmamaktadır","Yalnızca özel şirketler arası ortaklık","Yalnızca üniversiteler arası ortaklık","Uluslararası bir kuruluşun tek başına finansmanı","Kamu-sanayi iş birliği"],
+    correct: 4,
+    explain: "Kimya Teknoloji Merkezi, kamu-sanayi iş birliği ile hayata geçirilen Türkiye'nin ilk projesidir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Kimya teknolojisi ön lisans programlarını tamamlayanlar, kimya sektöründe nitelikli personel ihtiyacını karşılamak amacıyla çeşitli üniversitelerde uygulanan programlardan mezun olur.",
+    text: "Kimya teknolojisi ön lisans mezunları hangi pozisyonlarda çalışma imkânı bulur?",
+    options: ["Bu mezunlar hiçbir pozisyonda çalışamaz","Yalnızca üniversitede öğretim üyesi olarak","Yalnızca fabrika müdürü olarak","Yalnızca uluslararası şirketlerin CEO'su olarak","Laboratuvar teknikeri, kalite kontrol analisti, araştırma asistanı gibi pozisyonlarda"],
+    correct: 4,
+    explain: "Kimya teknolojisi ön lisans mezunları laboratuvar teknikeri, kalite kontrol analisti, araştırma asistanı vb. pozisyonlarda çalışma imkânı bulur."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Üniversitelerde kimya ile ilişkili daha ileri düzeyde eğitim sunan kimya, kimya mühendisliği, polimer malzeme mühendisliği ve kimya öğretmenliği gibi lisans programları da mevcuttur.",
+    text: "Bu lisans programlarından mezun olanlar hangi unvanlara sahip olur?",
+    options: ["Yalnızca 'doktor' unvanına","Yalnızca 'teknisyen' unvanına","Kimyager, kimya mühendisi, polimer malzeme mühendisi, kimya öğretmeni","Yalnızca 'avukat' unvanına","Bu programlardan mezun olanlar hiçbir unvana sahip olmaz"],
+    correct: 2,
+    explain: "Kimya, kimya mühendisliği, polimer malzeme mühendisliği ve kimya öğretmenliği lisans programlarından mezun olanlar sırasıyla kimyager, kimya mühendisi, polimer malzeme mühendisi ve kimya öğretmeni unvanlarına sahip olur."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Kariyer planlaması; bireyin kariyer yolunu belirlemesi, hedeflerini tanımlaması ve bu hedeflere ulaşmak için strateji geliştirmesidir.",
+    text: "'Kariyer planlaması' kavramı en doğru şekilde nasıl tanımlanır?",
+    options: ["Bir kişinin doğduğu andan itibaren sahip olduğu, değiştirilemeyen bir yazgı","Yalnızca bir iş başvuru formunu doldurma süreci","Bireyin kariyer yolunu belirlemesi, hedeflerini tanımlaması ve strateji geliştirmesi","Yalnızca maaş miktarını karşılaştırma süreci","Kariyer planlamasının bilimsel bir tanımı yoktur"],
+    correct: 2,
+    explain: "MEB kitabına göre kariyer planlaması, bireyin kariyer yolunu belirlemesi, hedeflerini tanımlaması ve bu hedeflere ulaşmak için strateji geliştirmesidir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Kariyer Planlama Döngüsü dört evreden oluşur: Kişisel Özelliklerini Tanı, Kariyer Fırsatlarını Araştır, Karar Ver ve Planlama Yap, Planlarını Uygula.",
+    text: "Kariyer Planlama Döngüsü'nün ilk evresi olan 'Kişisel Özelliklerini Tanı' evresi başka hangi isimle de anılır?",
+    options: ["Bu evrenin başka bir ismi yoktur","Kariyer Fırsatları","Karar Verme","Planları Uygulama","Öz Farkındalık"],
+    correct: 4,
+    explain: "MEB kitabındaki Kariyer Planlama Döngüsü şemasında 'Kişisel Özelliklerini Tanı' evresi 'Öz Farkındalık' olarak da adlandırılmıştır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "1946'da Mardin'in Savur ilçesinde doğan, İstanbul Üniversitesi Tıp Fakültesini birincilikle bitiren ve DNA onarım mekanizmaları üzerine yaptığı çalışmalarla 2015'te Nobel Kimya Ödülü kazanan bir Türk bilim insanıdır.",
+    text: "Yukarıda tanıtılan bilim insanı kimdir?",
+    options: ["Bu tanım hiçbir gerçek bilim insanına ait değildir","Oktay Sinanoğlu","Cabir bin Hayyan","Ebu Bekir Razi","Aziz Sancar"],
+    correct: 4,
+    explain: "Bu tanım, 2015 Nobel Kimya Ödülü'nü kazanan ilk Türk vatandaşı olan Aziz Sancar'a aittir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Aziz Sancar, 2015 Nobel Kimya Ödülü'nü hücrelerin hasar görmüş DNA'yı nasıl onardığı ve genetik bilgiyi nasıl koruduğu üzerine yaptığı araştırmalarla kazanmıştır.",
+    text: "Aziz Sancar'ın Nobel Ödülü'nü kazanmasını sağlayan araştırma konusu nedir?",
+    options: ["Bir enerji santralinin tasarımı","Yeni bir gezegenin keşfi","Bir aşının geliştirilmesi","Bir polimer malzemenin sentezi","Hasar görmüş DNA'nın hücreler tarafından onarım mekanizmaları"],
+    correct: 4,
+    explain: "Aziz Sancar, hasar görmüş DNA'nın hücreler tarafından nasıl onarıldığını ve genetik bilginin nasıl korunduğunu haritalandıran çalışmasıyla 2015 Nobel Kimya Ödülü'nü kazanmıştır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "İtalya'nın Bari şehrinde doğup 1939'da ailesiyle Türkiye'ye dönen, California Üniversitesi Kimya Mühendisliği Bölümünü üç senede ve birincilikle bitiren, 25 yaşında Yale Üniversitesinde en genç profesör unvanını alan ve 'Türk Aynştaynı' olarak tanınan bilim insanıdır.",
+    text: "Yukarıda tanıtılan bilim insanı kimdir?",
+    options: ["Ebu Bekir Razi","Aziz Sancar","Cabir bin Hayyan","Oktay Sinanoğlu","Bu tanım hiçbir gerçek bilim insanına ait değildir"],
     correct: 3,
-    explain: "Kimya lisans mezunları sanayi, hastane, müze, hukuk bürosu gibi çok çeşitli alanlarda çalışabilir (I yanlış); kimya bilgisi birçok sektöre yayılır ve kişisel ilgi alanları kariyer seçiminde etkilidir (II ve III doğru)."
+    explain: "Bu tanım, kimya, biyokimya ve moleküler biyofizik alanlarında önemli katkılar yapan, 'Türk Aynştaynı' olarak tanınan Oktay Sinanoğlu'na aittir."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    checklist: [
-      "Adli kimyager yalnızca cinayet davalarında çalışır, başka suç/kaza türleriyle ilgilenmez.",
-      "Kültürel miras koruma kimyageri, sanat eserlerindeki malzemeleri kimyasal yöntemlerle inceleyebilir.",
-      "Bilim iletişimi/gazeteciliği kariyeri, kimya bilgisi gerektirmeyen tamamen ayrı bir alandır.",
-      "Metalurji/malzeme mühendisi, alaşım oluşturma ve saflaştırma süreçleriyle ilgilenebilir."
-    ],
+    context: "Aziz Sancar tıp eğitimi alıp biyokimya/moleküler biyoloji alanında derinleşerek 2015 Nobel Kimya Ödülü'nü kazanmış; Oktay Sinanoğlu ise kimya mühendisliği eğitimi alıp kimya/biyokimya/moleküler biyofizik alanlarında uluslararası ödüller kazanmıştır.",
+    text: "Aziz Sancar ve Oktay Sinanoğlu'nun ortak yönü aşağıdakilerden hangisidir?",
+    options: ["İkisi de aynı Nobel Ödülü'nü birlikte paylaşmıştır","İkisi de aynı üniversiteden aynı yıl mezun olmuştur","İkisi de yalnızca Türkiye'de çalışmıştır, yurt dışı deneyimleri yoktur","İkisi de kimya/biyokimya alanında uluslararası düzeyde tanınan Türk bilim insanlarıdır","İkisinin de kimyayla hiçbir ilgisi yoktur"],
+    correct: 3,
+    explain: "Aziz Sancar ve Oktay Sinanoğlu, farklı eğitim yollarından geçmiş olsalar da ikisi de kimya/biyokimya alanında uluslararası düzeyde tanınan Türk bilim insanlarıdır."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    dialogue: [{"who":"Öğrenci A","text":"Atık su arıtma teknolojileri geliştirmek istiyorsan bence Enerji Sektörü'nde çalışmalısın, çünkü su arıtma da bir çeşit enerji işlemidir."},{"who":"Öğrenci B","text":"Bence Çevre ve Sürdürülebilirlik alanı daha doğru; çünkü su arıtma teknolojileri açıkça bu alanın tanımında yer alıyor."},{"who":"Öğrenci C","text":"Bence hiçbiri, su arıtmanın kimyayla hiçbir ilgisi yok, tamamen mühendisliğin konusu."}],
+    text: "Su arıtma teknolojileriyle ilgilenmek isteyen biri için en uygun kariyer alanı hangisidir?",
+    options: ["Öğrenci A haklıdır","Öğrenci C haklıdır","Hiçbiri haklı değildir","A ve C birlikte haklıdır","Öğrenci B haklıdır"],
+    correct: 4,
+    explain: "Su arıtma teknolojileri, MEB kitabında açıkça 'Çevre ve Sürdürülebilirlik' alanının tanımında sayılmıştır. Öğrenci B haklıdır."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    matchPairs: {"left":["Boya, plastik, gübre, reçine, petrokimya, deterjan ve kozmetik ürünlerin üretimi","Adli kimya, ilaç geliştirme, biyoteknoloji ve biyomedikal araştırmalar","Gıda güvenliği, besin analizi, aroma geliştirme ve moleküler gastronomi","Malzeme bilimi, nanoteknoloji, elektronik ve kompozit malzeme geliştirme"],"right":["Malzeme ve Nanoteknoloji","Kimya Endüstrisi","Sağlık ve Biyoteknoloji","Gıda ve İçecek Endüstrisi"]},
+    text: "Yukarıdaki eşleştirmede, 3 numaralı tanım hangi harfteki kariyer alanına aittir?",
+    options: ["a","d","c","b","Hiçbiriyle ilişkili değildir"],
+    correct: 1,
+    explain: "Gıda güvenliği, besin analizi ve moleküler gastronomi 'Gıda ve İçecek Endüstrisi' alanına aittir; bu da 'd' harfindeki seçenekle eşleşir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    matchPairs: {"left":["Atık yönetimi, su arıtma teknolojileri ve yeşil teknolojilerin geliştirilmesi","Enerji üretimi, yenilenebilir enerji, pil teknolojileri ve yakıt hücreleri","Öğretmenlik ve üniversitede öğretim üyeliği","Gübre, pestisit ve tarım kimyasalları üretimiyle tarım verimliliğini artırma"],"right":["Agronomi ve Tarım","Çevre ve Sürdürülebilirlik","Enerji Sektörü","Eğitim ve Akademik Çalışma"]},
+    text: "Yukarıdaki eşleştirmede, 2 numaralı tanım hangi harfteki kariyer alanına aittir?",
+    options: ["a","b","c","d","Hiçbiriyle ilişkili değildir"],
+    correct: 2,
+    explain: "Enerji üretimi, yenilenebilir enerji ve yakıt hücreleri 'Enerji Sektörü' alanına aittir; bu da 'c' harfindeki seçenekle eşleşir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Kariyer Planlama Döngüsü şu evrelerden oluşur: Kişisel Özelliklerini Tanı (Öz Farkındalık), Kariyer Fırsatlarını Araştır, Karar Ver ve Planlama Yap, Planlarını Uygula.",
+    statements: ["Döngü, bireyin kendi ilgi ve yeteneklerini tanımasıyla başlar.","Kariyer fırsatlarını araştırmak, karar verme aşamasından SONRA gelir.","Döngü, planların uygulanmasıyla sona erer ve bir daha tekrarlanmaz."],
+    text: "Yukarıdaki ifadelerden hangisi doğrudur?",
+    options: ["I ve II","Yalnız I","Yalnız III","II ve III","I, II ve III"],
+    correct: 1,
+    explain: "Döngü, kişisel özellikleri tanımayla başlar (I doğru); fırsatları araştırmak karar vermeden ÖNCE gelir (II yanlış); şema DÖNGÜSEL olduğundan bir kez uygulamayla bitmez, tekrar gözden geçirilebilir (III yanlış)."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    checklist: ["Kimya Endüstrisi yalnızca boya üretimiyle ilgilenir, başka hiçbir ürünle ilgisi yoktur.","Sağlık ve Biyoteknoloji alanı adli kimyayı da kapsar.","Eğitim ve Akademik Çalışma alanı yalnızca ilkokul öğretmenliğini kapsar, üniversiteyle ilgisi yoktur.","Malzeme ve Nanoteknoloji alanı elektronik malzeme geliştirmeyi de kapsar."],
     text: "Yukarıdaki ifadelerden kaç tanesi doğrudur?",
-    options: ["4", "2", "1", "Hiçbiri", "3"],
+    options: ["1","2","3","4","Hiçbiri"],
     correct: 1,
-    explain: "Yalnızca 2. ve 4. ifadeler doğrudur. Adli kimyager pek çok suç/kaza türünde kanıt analiz eder (1. yanlış); bilim iletişimi kimya bilgisini geniş kitleye doğru aktarmayı gerektirir (3. yanlış)."
+    explain: "Yalnızca 2. ve 4. ifadeler doğrudur. Kimya Endüstrisi plastik, gübre, deterjan, kozmetik gibi pek çok ürünü kapsar (1. yanlış); Eğitim ve Akademik Çalışma üniversite öğretim üyeliğini de kapsar (3. yanlış)."
   },
   {
-    difficulty: "kolay",
+    difficulty: "orta",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    dialogue: [
-      { who: "Öğrenci A", text: "Tarım kimyası araştırmacısı sadece gübre üretir, toprak analiziyle ilgilenmez." },
-      { who: "Öğrenci C", text: "Bence bu iş tamamen çevre kimyagerinin görevidir, tarım kimyasıyla ilgisi yoktur." },
-      { who: "Öğrenci B", text: "Bence tarım kimyası araştırmacısı hem toprağın besin içeriğini analiz eder hem de verimi artıracak gübre formülasyonu geliştirir." }
-    ],
-    text: "Tarım kimyası araştırmacısının görev tanımıyla ilgili hangi öğrencinin görüşü doğrudur?",
-    options: ["Öğrenci A", "Öğrenci C", "A ve C birlikte", "Öğrenci B", "Hiçbiri"],
+    context: "Aziz Sancar, NATO-TÜBİTAK bursuyla ABD'ye giderek Johns Hopkins Üniversitesinde çalışmış, ardından Dallas Teksas Üniversitesi Moleküler Biyoloji programına katılmıştır.",
+    text: "Aziz Sancar'ın bu adımları, kariyer planlamasının hangi unsuruna somut bir örnektir?",
+    options: ["Yurt dışında ileri eğitim/araştırma fırsatlarını araştırıp değerlendirme","Yalnızca şans eseri gerçekleşen, plansız bir olay","Kariyer planlamasıyla hiçbir ilgisi olmayan rastgele bir seyahat","Yalnızca maddi kazanç amaçlı bir karar","Kariyer Planlama Döngüsü'nün hiçbir evresiyle ilişkilendirilemez"],
+    correct: 0,
+    explain: "Sancar'ın burs ve üniversite seçimleri, Kariyer Planlama Döngüsü'ndeki 'Kariyer Fırsatlarını Araştır' evresinin somut bir örneğidir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Oktay Sinanoğlu, babasının vefatı sonrasında maddi sıkıntılar yaşamasına rağmen azmi ve zekâsı sayesinde burslu olarak gittiği California Üniversitesi Kimya Mühendisliği Bölümünü üç senede ve birincilikle bitirmiştir.",
+    text: "Bu bilgi, Sinanoğlu'nun kariyer yolculuğuyla ilgili en doğru hangi çıkarımı destekler?",
+    options: ["Maddi zorluklar azim ve başarıyla aşılabilecek engeller olabilir; başarı yalnızca elverişli koşullara bağlı değildir","Maddi sıkıntı yaşayan hiç kimse akademik başarı elde edemez","Burslu okumak akademik başarıyı garanti etmez, hiçbir katkısı yoktur","Sinanoğlu'nun başarısı tamamen şans eseridir","Bu bilgi kariyer planlamasıyla hiçbir ilişki taşımaz"],
+    correct: 0,
+    explain: "Sinanoğlu'nun hikâyesi, maddi zorlukların azim ve çalışkanlıkla aşılabileceğini; başarının yalnızca elverişli koşullara değil, bireyin çabasına da bağlı olduğunu gösterir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Aziz Sancar, klonlanmış bir genin zarar görmüş DNA'nın onarımında kullanılabileceğini keşfetmiş; bu buluşu üzerine önce yüksek lisans, 1977'de ise doktora derecesini tamamlamıştır.",
+    text: "Bu bilgiye göre Sancar'ın akademik kariyerindeki ilerlemesi neyle doğrudan ilişkilidir?",
+    options: ["Rastgele bir kura sonucuyla","Yalnızca ailesinin maddi desteğiyle","Bir öğretmeninin doğrudan ricasıyla","Kendi yaptığı özgün bir bilimsel keşifle","Bu ilerlemenin bilimsel bir dayanağı yoktur"],
     correct: 3,
-    explain: "Tarım kimyası araştırmacısı hem toprağın besin madde içeriğini analiz eder hem de verimi artıracak gübre formülasyonları geliştirir; Öğrenci B haklıdır."
+    explain: "Sancar'ın akademik kariyerindeki ilerleme (yüksek lisans, doktora), klonlanmış genle ilgili kendi yaptığı özgün keşfe dayanmaktadır."
   },
   {
-    difficulty: "kolay",
+    difficulty: "orta",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir patent/fikri mülkiyet uzmanının (kimya arka planlı) günlük işinde aşağıdaki görevler yer alabilir.",
-    statements: [
-      "Yeni bir kimyasal sürecin daha önceki buluşlarla örtüşüp örtüşmediğini teknik dokümanlardan değerlendirmek.",
-      "Hukuki süreçlerde kullanılacak teknik raporları hazırlamak.",
-      "Bu görev yalnızca hukuk eğitimi gerektirir, kimya bilgisine hiç ihtiyaç duyulmaz."
-    ],
+    table: {"headers":["Kariyer alanı","Açıklama"],"rows":[["Enerji Sektörü","Yenilenebilir enerji ve pil teknolojileri"],["Agronomi ve Tarım","Gübre ve tarım kimyasalları üretimi"],["Malzeme ve Nanoteknoloji","Öğretmenlik ve üniversite öğretim üyeliği"],["Gıda ve İçecek Endüstrisi","Besin analizi ve gıda güvenliği"]],"caption":"Dört kariyer alanı ve açıklamaları; bir eşleştirme hatalı yapılmıştır"},
+    text: "Tabloda hangi kariyer alanı-açıklama eşleştirmesi HATALIDIR?",
+    options: ["Malzeme ve Nanoteknoloji — Öğretmenlik ve üniversite öğretim üyeliği","Enerji Sektörü — Yenilenebilir enerji ve pil teknolojileri","Agronomi ve Tarım — Gübre ve tarım kimyasalları üretimi","Gıda ve İçecek Endüstrisi — Besin analizi ve gıda güvenliği","Tabloda hatalı bir eşleştirme yoktur"],
+    correct: 0,
+    explain: "Öğretmenlik ve üniversite öğretim üyeliği aslında 'Eğitim ve Akademik Çalışma' alanına aittir; Malzeme ve Nanoteknoloji ise malzeme bilimi, nanoteknoloji, elektronik ve kompozit malzeme geliştirmeyle ilgilidir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Kimya Teknoloji Merkezi'nin Girişimcilik ve AR-GE Merkezi birimi, sanayi-üniversite iş birliği içerisinde genç bilim insanlarına ve akademisyenlere kimya alanındaki araştırma ve geliştirme faaliyetlerini hayata geçirmeleri için fırsatlar sunmaktadır.",
+    text: "Bu birimin sunduğu fırsatlardan yararlanan öğrenciler AR-GE faaliyetleri sayesinde en doğrudan neyi geliştirme şansı bulur?",
+    options: ["Kendi alanlarında uzmanlaşma ve liderlik becerileri","Yalnızca yabancı dil becerileri","Yalnızca spor becerileri","Bu birimin öğrencilere hiçbir katkısı yoktur","Yalnızca sosyal medya kullanım becerileri"],
+    correct: 0,
+    explain: "MEB kitabına göre AR-GE faaliyetleri sayesinde öğrenciler kendi alanlarında uzmanlaşma ve liderlik becerilerini geliştirme şansına sahip olur."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    dialogue: [{"who":"Öğrenci A","text":"Kozmetik ürün formülasyonu geliştirmek istiyorum; bu Kimya Endüstrisi alanına girer, çünkü kozmetik ürünler açıkça bu alanın tanımında sayılmış."},{"who":"Öğrenci B","text":"Bence Sağlık ve Biyoteknoloji alanına girer, çünkü kozmetik cilt üzerinde kullanılıyor."},{"who":"Öğrenci C","text":"Bence bu, sekiz kariyer alanının hiçbirine girmez."}],
+    text: "Kozmetik ürün formülasyonu geliştirmek isteyen biri için MEB'in sınıflandırmasına göre en uygun kariyer alanı hangisidir?",
+    options: ["B ve C birlikte haklıdır","Öğrenci B haklıdır","Öğrenci C haklıdır","Öğrenci A haklıdır","Hiçbiri haklı değildir"],
+    correct: 3,
+    explain: "MEB kitabındaki Kimya Endüstrisi tanımı açıkça 'kozmetik' ürünleri saymıştır; Öğrenci A haklıdır."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Aziz Sancar, Nobel Ödülü'nü aldıktan sonra 'Beni ödüle götüren, Atatürk'ün yaptığı eğitim devrimidir' diyerek madalyasını ve sertifikasını Anıtkabir Müzesine teslim etmiştir.",
+    text: "Bu davranış, Sancar'ın hangi tutumunu en doğrudan yansıtır?",
+    options: ["Bu davranışın kariyer planlamasıyla hiçbir ilgisi yoktur","Ödülü önemsemediğini gösteren kayıtsız bir tutum","Yalnızca kişisel çıkarını önceleyen bir tutum","Başarısını aldığı eğitim fırsatlarına ve ülkesine bağlayan bir minnettarlık tutumu","Bilimsel başarıyı reddeden bir tutum"],
+    correct: 3,
+    explain: "Sancar'ın bu davranışı, kendi başarısını aldığı eğitim fırsatlarına ve ülkesine bağlayan bir minnettarlık tutumunu yansıtır."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Oktay Sinanoğlu, çalışmaları sayesinde Amerika'da Alfred Sloan Ödülü, Japonya'da Uluslararası Seçkin Bilim Ödülü, Meksika'da Elena Moshinsky Bilim Ödülü ve Almanya'da dünyada ilk defa verilen Aleksander von Humbolt Bilim Ödülü'nü kazanmıştır.",
+    text: "Bu bilgi, Sinanoğlu'nun bilimsel kariyerinin hangi yönünü en açık şekilde gösterir?",
+    options: ["Yalnızca Türkiye'de bilinen, dünyada tanınmayan bir bilim insanı olduğunu","Katkılarının yalnızca Türkiye'de değil, uluslararası düzeyde de tanındığını","Ödüllerin kariyer planlamasıyla hiçbir ilgisi olmadığını","Sinanoğlu'nun yalnızca bir ülkede çalıştığını","Bu ödüllerin kimya alanıyla ilgisiz olduğunu"],
+    correct: 1,
+    explain: "Farklı ülkelerden (Amerika, Japonya, Meksika, Almanya) aldığı ödüller, Sinanoğlu'nun katkılarının uluslararası düzeyde tanındığını gösterir."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "'Bilgi Görseli 1.1' kimya alanında eğitim gören bireylerin çalışabileceği sekiz farklı alanı göstermektedir.",
+    statements: ["Bu sekiz alan birbirinden tamamen bağımsızdır, bir kişi yalnızca birinde çalışabilir.","Bu sekiz alan, kimya eğitiminin sanayi, sağlık, çevre, enerji, gıda, eğitim, malzeme ve tarım gibi çok farklı sektörlerde iş imkânı sunduğunu gösterir.","Bu sekiz alandan yalnızca 'Eğitim ve Akademik Çalışma' gerçek bir kariyer seçeneğidir, diğerleri örnek amaçlıdır."],
+    text: "Yukarıdaki ifadelerden hangisi doğrudur?",
+    options: ["Yalnız II","Yalnız I","I ve III","II ve III","I, II ve III"],
+    correct: 0,
+    explain: "Sekiz alan, kimya eğitiminin çok farklı sektörlerde iş imkânı sunduğunu gösterir (II doğru); alanlar arasında geçiş/kesişim mümkündür (I yanlış) ve hepsi gerçek kariyer seçenekleridir (III yanlış)."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Kimya teknolojisi ön lisans programını tamamlayan biri laboratuvar teknikeri olarak çalışabilirken, kimya lisans programını tamamlayan biri kimyager unvanına sahip olur.",
+    text: "Bu bilgiye göre, ön lisans ve lisans mezuniyeti arasındaki temel fark en doğru şekilde nasıl özetlenebilir?",
+    options: ["İkisi arasında hiçbir fark yoktur, aynı unvana sahip olurlar","Eğitim düzeyi, elde edilebilecek unvan ve pozisyonun kapsamını etkiler","Ön lisans mezunları hiçbir pozisyonda çalışamaz","Lisans mezunları yalnızca akademisyen olabilir, sanayide çalışamaz","Bu bilgi kariyer planlamasıyla ilgisizdir"],
+    correct: 1,
+    explain: "Ön lisans ve lisans mezuniyeti farklı unvan ve pozisyonlara karşılık gelir; eğitim düzeyi bu kapsamı doğrudan etkiler."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Kimya, kimya mühendisliği, polimer malzeme mühendisliği ve kimya öğretmenliği farklı lisans programlarıdır; her biri farklı bir unvana karşılık gelir.",
+    text: "Polimer malzeme mühendisliği programından mezun olan biri hangi unvana sahip olur?",
+    options: ["Laboratuvar teknikeri","Kimyager","Kimya öğretmeni","Polimer malzeme mühendisi","Bu program herhangi bir unvan sağlamaz"],
+    correct: 3,
+    explain: "Polimer malzeme mühendisliği lisans programından mezun olanlar 'polimer malzeme mühendisi' unvanına sahip olur."
+  },
+  {
+    difficulty: "orta",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Kariyer Planlama Döngüsü şeması, dört evrenin (Kişisel Özelliklerini Tanı, Kariyer Fırsatlarını Araştır, Karar Ver ve Planlama Yap, Planlarını Uygula) bir merkez etrafında döngüsel olarak birbirine bağlandığını gösterir.",
+    text: "Bu döngüsel yapı, kariyer planlamasıyla ilgili en doğru hangi fikri destekler?",
+    options: ["Kariyer planlaması yalnızca lise yıllarında bir kez yapılır ve bir daha değiştirilemez","Kariyer planlaması tek seferlik bir karar değil, zamanla tekrar gözden geçirilebilen sürekli bir süreçtir","Döngüdeki evrelerin sırası önemsizdir, herhangi bir sırayla uygulanabilir","Döngü yalnızca bilim insanları için geçerlidir","Bu şemanın kariyer planlamasıyla hiçbir ilişkisi yoktur"],
+    correct: 1,
+    explain: "Döngüsel yapı, kariyer planlamasının tek seferlik değil, zamanla tekrar gözden geçirilebilen sürekli bir süreç olduğunu gösterir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bir araştırmacı, yakıt hücrelerinde kullanılan yeni bir elektrot malzemesini (nanoyapılı bir kompozit) geliştirmektedir; bu malzeme hem enerji depolama verimini artırmakta hem de nanoteknoloji yöntemleriyle üretilmektedir.",
+    text: "Bu araştırmacının çalışması en doğrudan hangi İKİ kariyer alanının kesişiminde yer alır?",
+    options: ["Bu çalışmanın sekiz kariyer alanından hiçbiriyle ilgisi yoktur","Gıda ve İçecek Endüstrisi ve Eğitim ve Akademik Çalışma","Agronomi ve Tarım ve Sağlık ve Biyoteknoloji","Yalnızca Kimya Endüstrisi, diğerleriyle ilgisi yoktur","Enerji Sektörü ve Malzeme ve Nanoteknoloji"],
+    correct: 4,
+    explain: "Yakıt hücresi/enerji depolama Enerji Sektörü'nün; nanoyapılı kompozit malzeme geliştirme ise Malzeme ve Nanoteknoloji'nin tanımında yer alır — çalışma bu ikisinin kesişimindedir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bir uzman, olay yerinden toplanan iz miktardaki maddeleri analiz ederek adli sürece bilimsel kanıt sunmaktadır.",
+    text: "Bu görev, MEB'in kariyer alanları sınıflandırmasına göre hangi geniş kariyer alanının İÇİNDE yer alır?",
+    options: ["Sağlık ve Biyoteknoloji (adli kimya bu alanın kapsamında sayılmıştır)","Kimya Endüstrisi","Agronomi ve Tarım","Eğitim ve Akademik Çalışma","Bu görev sekiz kariyer alanından hiçbirinin kapsamında değildir"],
+    correct: 0,
+    explain: "MEB kitabındaki Bilgi Görseli 1.1'de adli kimya, 'Sağlık ve Biyoteknoloji' alanının açıklamasında açıkça sayılmıştır."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Kimya bilgisi, son dönemlerde gastronominin bilimsel bir alan olma sürecine katkıda bulunarak 'moleküler gastronomi' kavramının gelişimine yardımcı olmuştur.",
+    text: "Moleküler gastronomi, MEB'in kariyer alanları sınıflandırmasına göre hangi geniş alanın kapsamına girer?",
+    options: ["Enerji Sektörü","Malzeme ve Nanoteknoloji","Gıda ve İçecek Endüstrisi","Eğitim ve Akademik Çalışma","Bu kavram sekiz kariyer alanından hiçbirinin kapsamında değildir"],
+    correct: 2,
+    explain: "MEB kitabı, moleküler gastronomiyi açıkça 'Gıda ve İçecek Endüstrisi' alanının tanımı içinde saymıştır."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Aziz Sancar tıp eğitimi alıp biyokimya/moleküler biyoloji alanında; Oktay Sinanoğlu ise kimya mühendisliği eğitimi alıp kimya/biyokimya/moleküler biyofizik alanında uluslararası düzeyde tanınmıştır.",
+    statements: ["İkisi de başlangıçta farklı bir eğitimle (tıp / mühendislik) başlayıp, sonrasında kimyayla ilişkili alanlarda derinleşmiştir.","İkisi de yaşamları boyunca yalnızca Türkiye'de çalışmış, yurt dışı deneyimleri yoktur.","İkisi de uluslararası ödüller kazanarak alanlarında tanınmıştır."],
     text: "Yukarıdaki ifadelerden hangileri doğrudur?",
-    options: ["Yalnız I", "Yalnız III", "I ve II", "II ve III", "I, II ve III"],
-    correct: 2,
-    explain: "Patent/fikri mülkiyet uzmanı teknik dokümanları değerlendirir ve hukuki süreçlere teknik rapor hazırlar (I ve II doğru); bu kariyer hem hukuk hem kimya arka planı gerektirdiğinden III yanlıştır."
+    options: ["Yalnız I","I ve II","II ve III","I ve III","I, II ve III"],
+    correct: 3,
+    explain: "İkisi de farklı bir eğitimle başlayıp kimyayla ilişkili alanlarda derinleşmiş ve uluslararası ödüller kazanmıştır (I ve III doğru); ancak ikisi de ABD'de önemli süre çalışmış/okumuştur, bu yüzden II yanlıştır."
   },
   {
-    difficulty: "kolay",
+    difficulty: "zor",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    checklist: [
-      "Klinik biyokimya uzmanı, hastalardan alınan kan örneklerindeki biyokimyasal parametreleri ölçebilir.",
-      "Elektrokimya/batarya mühendisi yalnızca güneş panelleriyle ilgilenir, pil teknolojisiyle ilgisi yoktur.",
-      "Astrokimya araştırmacısı, göktaşı örneklerindeki element bileşimini inceleyebilir.",
-      "Kariyer seçiminde yalnızca maaş miktarı dikkate alınmalıdır, ilgi alanı önemli değildir."
-    ],
+    context: "Aziz Sancar, 2015 Nobel Kimya Ödülü'nü hücrelerin hasar görmüş DNA'yı nasıl onardığını ve genetik bilgiyi nasıl koruduğunu haritalandıran çalışmasıyla kazanmıştır; kimya alanında Nobel Ödülü kazanan İLK Türk vatandaşıdır.",
+    text: "Aşağıdaki ifadelerden hangisi bu bilgiyle ÇELİŞİR (yanlıştır)?",
+    options: ["Sancar'ın araştırması genetik bilginin korunmasıyla ilgilidir","Sancar'ın çalışması DNA onarım mekanizmalarıyla ilgilidir","Sancar, 2015 yılında Nobel Kimya Ödülü kazanmıştır","Sancar, kimya alanında Nobel Ödülü kazanan ikinci Türk vatandaşıdır","Sancar, kimya alanında Nobel kazanan ilk Türk vatandaşıdır"],
+    correct: 3,
+    explain: "Sancar kimya alanında Nobel Ödülü kazanan İKİNCİ değil, İLK Türk vatandaşıdır; bu nedenle bu ifade bilgiyle çelişir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    dialogue: [{"who":"Öğrenci A","text":"Bence kimya kariyer alanları birbirinden kesin çizgilerle ayrılmıştır; bir kişi kariyeri boyunca yalnızca bir alanda çalışabilir."},{"who":"Öğrenci B","text":"Bence öyle değil; örneğin bir gıda mühendisi hem Gıda ve İçecek Endüstrisi'nde hem de Çevre ve Sürdürülebilirlik alanında (gıda atığının çevresel etkisini azaltma gibi) çalışabilir."},{"who":"Öğrenci C","text":"Bence kariyer alanları arasında geçiş yapmak imkânsızdır, biri seçildiğinde diğerlerine asla geçilemez."}],
+    text: "Kimya kariyer alanları arasındaki ilişkiyle ilgili hangi öğrencinin görüşü en doğrudur?",
+    options: ["Öğrenci A","Öğrenci C","Öğrenci B","A ve C birlikte","Hiçbiri"],
+    correct: 2,
+    explain: "Gerçek meslekler genellikle birden fazla kariyer alanının özelliklerini bir arada taşıyabilir; alanlar arasında kesin, geçilmez sınırlar yoktur. Öğrenci B haklıdır."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Kimya Teknoloji Merkezi, Türkiye'den dünyaya açılacak bu merkez ile küresel ticarette Türk kimya sektörünün öne çıkarılmasını hedeflemektedir; bu merkez kamu-sanayi iş birliğiyle hayata geçirilen Türkiye'nin ilk projesidir.",
+    text: "Bu bilgiye göre Kimya Teknoloji Merkezi'nin nihai stratejik hedefi en doğru şekilde nasıl özetlenebilir?",
+    options: ["Yalnızca yurt dışından ürün ithal etmek","Yalnızca üniversite öğrencilerine staj imkânı sunmak","Yerli, yüksek katma değerli kimyasal ürünler geliştirerek Türkiye'yi küresel kimya ticaretinde öne çıkarmak","Kimya sektörünü tamamen kapatmak","Bu merkezin herhangi bir stratejik hedefi yoktur"],
+    correct: 2,
+    explain: "MEB kitabına göre merkez, yerli/yüksek katma değerli ürünler geliştirerek küresel ticarette Türk kimya sektörünü öne çıkarmayı hedeflemektedir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    table: {"headers":["Kişi","Eğitim alanı","Uluslararası tanınma"],"rows":[["Aziz Sancar","Tıp → Biyokimya/Moleküler Biyoloji","2015 Nobel Kimya Ödülü"],["Oktay Sinanoğlu","Kimya Mühendisliği → Kimya/Biyokimya","Alfred Sloan, Humbolt vb. ödüller, 2 kez Nobel adaylığı"]],"caption":"İki Türk bilim insanının kariyer yolculuğu"},
+    text: "Tablodaki iki bilim insanının kariyer yolculuğu karşılaştırıldığında en doğru ortak çıkarım hangisidir?",
+    options: ["İkisi de farklı bir temel eğitimden başlayıp derin uzmanlaşmayla uluslararası düzeyde tanınan Türk bilim insanları olmuştur","İkisi de aynı üniversitede aynı bölümü okumuştur","İkisi de yalnızca ulusal düzeyde tanınmıştır, uluslararası ödülleri yoktur","İkisinin kariyer yolculuğu arasında hiçbir ortak yön yoktur","Tablo, kariyer planlamasıyla ilgili hiçbir bilgi vermez"],
+    correct: 0,
+    explain: "Tablo, ikisinin de farklı bir temel eğitimden (tıp/mühendislik) başlayıp kimyayla ilişkili alanlarda derinleşerek uluslararası düzeyde tanındığını gösterir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    checklist: ["Enerji Sektörü kariyer alanı yalnızca fosil yakıtlarla ilgilenir, yenilenebilir enerjiyle ilgisi yoktur.","Malzeme ve Nanoteknoloji alanı elektronik malzeme geliştirmeyi kapsayabilir.","Kariyer Planlama Döngüsü'nde 'Karar Ver ve Planlama Yap' evresi, fırsatları araştırmadan ÖNCE gelir.","Kimya teknolojisi ön lisans mezunları kalite kontrol analisti olarak çalışabilir."],
     text: "Yukarıdaki ifadelerden kaç tanesi doğrudur?",
-    options: ["3", "2", "4", "1", "Hiçbiri"],
+    options: ["1","3","2","4","Hiçbiri"],
+    correct: 2,
+    explain: "Yalnızca 2. ve 4. ifadeler doğrudur. Enerji Sektörü yenilenebilir enerjiyi de kapsar (1. yanlış); döngüde fırsatları araştırma, karar vermeden ÖNCE gelir (3. yanlış, sıralama ters verilmiş)."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Oktay Sinanoğlu'nun bilime katkıları arasında 'Atom ve Moleküllerde Çoklu Elektron Kuramı', 'Yapısal-Elektronik Yöntem' ve 'Mikrotermodinamik' gibi teoriler sayılabilir.",
+    text: "Bu katkılar, Sinanoğlu'nun çalışma alanıyla ilgili en doğru hangi çıkarımı destekler?",
+    options: ["Yalnızca gıda mühendisliği alanında çalışmıştır","Yalnızca deneysel laboratuvar teknisyenliği yapmıştır","Bu teorilerin kimyayla hiçbir ilgisi yoktur","Kuramsal/teorik kimya ve moleküler biyofizik alanlarında derin katkılar sağlamıştır","Bu katkılar hiçbir bilimsel değere sahip değildir"],
+    correct: 3,
+    explain: "Sayılan teoriler (çoklu elektron kuramı, mikrotermodinamik vb.), Sinanoğlu'nun kuramsal/teorik kimya ve moleküler biyofizik alanlarında derin katkılar sağladığını gösterir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "MEB'in kariyer alanları sınıflandırması sekiz geniş alan sunar; ancak gerçek iş tanımları genellikle birden fazla alanın kesişiminde yer alabilir (örneğin biyoyakıt Ar-Ge'si hem Enerji Sektörü hem Agronomi ve Tarım'la ilişkili olabilir).",
+    statements: ["Sekiz kariyer alanı, olası tüm kimya kariyerlerini kesin ve örtüşmeyen kutulara ayırır.","Gerçek dünyadaki bir iş, birden fazla kariyer alanının özelliklerini aynı anda taşıyabilir.","Sınıflandırma, kariyer seçeneklerini tanımaya yardımcı bir çerçevedir; katı, değişmez bir kural değildir."],
+    text: "Yukarıdaki ifadelerden hangileri doğrudur?",
+    options: ["II ve III","I ve II","Yalnız I","I ve III","I, II ve III"],
+    correct: 0,
+    explain: "Sekiz alan kesin, örtüşmeyen kutular değildir (I yanlış); gerçek işler birden fazla alanın özelliğini taşıyabilir ve sınıflandırma esnek bir çerçevedir (II ve III doğru)."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Aziz Sancar, klonlanmış bir genin zarar görmüş DNA'nın onarımında kullanılabileceğini KENDİ ARAŞTIRMASIYLA keşfetmiş, bu buluşu akademik kariyerinin (yüksek lisans, doktora, doçentlik) temelini oluşturmuştur.",
+    text: "Bu bilgi, bilimsel kariyer gelişimiyle ilgili en doğru hangi genellemeyi destekler?",
+    options: ["Akademik unvanlar rastgele, hak edilmeden verilir","Akademik kariyer, bilimsel keşiflerden tamamen bağımsız ilerler","Yalnızca doğuştan gelen yetenek akademik kariyeri belirler, araştırmanın önemi yoktur","Özgün bir bilimsel katkı/keşif, bir bilim insanının akademik kariyerinin ilerlemesinde belirleyici olabilir","Bu bilgi kariyer planlamasıyla ilişkilendirilemez"],
+    correct: 3,
+    explain: "Sancar'ın örneği, özgün bir bilimsel keşfin akademik kariyerin (yüksek lisans, doktora, doçentlik) ilerlemesinde belirleyici olabileceğini gösterir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Aziz Sancar'ın hayat hikâyesi incelendiğinde: önce tıp eğitimi alıp kendi ilgi alanını netleştirmesi, sonra yurt dışında araştırma fırsatlarını değerlendirmesi, ardından DNA onarımı alanında uzmanlaşmaya karar vermesi ve bu kararı yıllarca sürdürmesi görülür.",
+    text: "Sancar'ın bu yaşam öyküsü, Kariyer Planlama Döngüsü'nün hangi evreleriyle en doğrudan örtüşür?",
+    options: ["Yalnızca 'Planlarını Uygula' evresiyle","Döngünün dört evresinin tümüyle (özellikleri tanıma, fırsatları araştırma, karar verip planlama, planı uygulama)","Yalnızca 'Kişisel Özelliklerini Tanı' evresiyle","Döngünün hiçbir evresiyle ilişkilendirilemez","Yalnızca 'Kariyer Fırsatlarını Araştır' evresiyle"],
     correct: 1,
-    explain: "Yalnızca 1. ve 3. ifadeler doğrudur. Elektrokimya/batarya mühendisi asıl olarak pil teknolojisiyle ilgilenir (2. yanlış); ilgi alanı da kariyer seçiminde önemli bir etkendir (4. yanlış)."
+    explain: "Sancar'ın yaşam öyküsündeki adımlar (ilgi alanını netleştirme, fırsatları araştırma, uzmanlaşmaya karar verme, kararı sürdürme) döngünün dört evresinin tümüyle örtüşür."
   },
   {
-    difficulty: "kolay",
+    difficulty: "zor",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir metal geri dönüşüm tesisinde, hurda metallerin bileşimi analiz edilerek saflaştırma ve alaşım oluşturma süreçleri yönetilmektedir.",
-    text: "Bu iş, kariyer alanları arasında en çok hangisiyle örtüşür?",
-    options: ["Bilim gazetecisi", "Farmasötik kimyager", "Metalurji/malzeme mühendisi", "Adli kimyager", "Tarım kimyası uzmanı"],
-    correct: 2,
-    explain: "Metal bileşiminin analizi, saflaştırma ve alaşım süreçlerinin yönetimi metalurji/malzeme mühendisliğinin işidir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir hastane laboratuvarında, hastalardan alınan kan örneklerindeki biyokimyasal parametreler (şeker, kolesterol, enzim düzeyleri) ölçülerek tanı sürecine katkı sağlanmaktadır.",
-    text: "Bu görevi üstlenen kişinin kariyeri en doğrudan hangisidir?",
-    options: ["Klinik biyokimya uzmanı", "Petrokimya mühendisi", "Astrokimya araştırmacısı", "Patent uzmanı", "Malzeme test mühendisi"],
-    correct: 0,
-    explain: "Kan örneklerindeki biyokimyasal parametrelerin ölçülerek tanıya katkı sağlanması klinik biyokimya uzmanının işidir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir pil üreticisinde, farklı elektrot malzemelerinin şarj kapasitesi ve dayanıklılığı test edilerek yeni nesil batarya tasarımı geliştirilmektedir.",
-    text: "Aşağıdakilerden hangisi bu görev tanımına en uygun kariyer alanıdır?",
-    options: ["Gıda güvenliği denetçisi", "Adli kimyager", "Elektrokimya/batarya mühendisi", "Bilim müzesi küratörü", "Jeokimyager"],
-    correct: 2,
-    explain: "Elektrot malzemelerinin test edilip yeni batarya tasarımı geliştirilmesi elektrokimya/batarya mühendisliğinin çalışma alanıdır."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir müze laboratuvarında, tarihi bir tablonun boya katmanları kimyasal yöntemlerle incelenerek uygun koruma ve restorasyon yöntemi belirlenmektedir.",
-    text: "Bu görev tanımı, hangi kariyer alanının tipik bir örneğidir?",
-    options: ["Gıda kalite uzmanı", "Petrokimya mühendisi", "Kültürel miras koruma kimyageri", "Elektrokimya mühendisi", "Tarım kimyası araştırmacısı"],
-    correct: 2,
-    explain: "Sanat eserlerindeki malzemelerin kimyasal analizi ve uygun koruma yönteminin belirlenmesi kültürel miras koruma kimyagerinin işidir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir tarım Ar-Ge biriminde, toprağın besin madde içeriği analiz edilerek verimi artıracak gübre formülasyonları geliştirilmektedir.",
-    text: "Bu çalışma alanı en doğrudan hangi kariyerle örtüşür?",
-    options: ["Kozmetik uzmanı", "Adli kimyager", "Nükleer güvenlik uzmanı", "Tarım kimyası araştırmacısı", "Bilim gazetecisi"],
-    correct: 3,
-    explain: "Toprak besin analizi ve gübre formülasyonu geliştirme tarım kimyası araştırmacısının çalışma alanıdır."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir yayın kuruluşunda, karmaşık bilimsel araştırma bulguları geniş kitlelerin anlayabileceği şekilde makalelere ve haberlere dönüştürülmektedir.",
-    text: "Bu görevi yürüten uzmanın kariyeri hangisidir?",
-    options: ["Adli kimyager", "Malzeme test mühendisi", "Gıda kalite uzmanı", "Petrokimya mühendisi", "Bilim iletişimi/gazeteciliği"],
+    dialogue: [{"who":"Öğrenci A","text":"Kimya alanında kariyer sahibi olmak için mutlaka lisans mezunu (kimyager, mühendis) olmak gerekir; ön lisans mezunlarının kariyer imkânı yoktur."},{"who":"Öğrenci B","text":"Bence öyle değil; kimya teknolojisi ön lisans mezunları da laboratuvar teknikeri, kalite kontrol analisti gibi pozisyonlarda çalışma imkânı bulur."},{"who":"Öğrenci C","text":"Bence kariyer yalnızca akademik unvanlarla ilgilidir, sanayide çalışmak kariyer sayılmaz."}],
+    text: "Kimya alanında kariyer imkânlarıyla ilgili hangi öğrencinin görüşü doğrudur?",
+    options: ["Öğrenci A","Öğrenci C","Hiçbiri","A ve C birlikte","Öğrenci B"],
     correct: 4,
-    explain: "Bilimsel bulguların geniş kitlelere anlaşılır biçimde aktarılması bilim iletişimi/gazeteciliği kariyerinin işidir."
+    explain: "MEB kitabına göre ön lisans mezunları da laboratuvar teknikeri, kalite kontrol analisti, araştırma asistanı gibi pozisyonlarda çalışabilir; kariyer yalnızca lisans/akademik unvanla sınırlı değildir. Öğrenci B haklıdır."
   },
   {
-    difficulty: "kolay",
+    difficulty: "zor",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir hukuk bürosunda, yeni geliştirilen bir kimyasal sürecin daha önce başka bir buluşla örtüşüp örtüşmediği teknik dokümanlar incelenerek değerlendirilmektedir.",
-    text: "Tarif edilen görev hangi kariyer alanının bir örneğidir?",
-    options: ["Gıda mühendisi", "Kozmetik Ar-Ge kimyageri", "Astrokimya araştırmacısı", "Patent/fikri mülkiyet uzmanı (kimya arka planlı)", "Elektrokimya mühendisi"],
-    correct: 3,
-    explain: "Kimyasal buluşların teknik özgünlüğünün değerlendirilmesi patent/fikri mülkiyet uzmanlığının (kimya arka planlı) işidir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir uzay ajansının laboratuvarında, bir göktaşı örneğindeki mineral ve element bileşimi analiz edilerek Güneş Sistemi'nin oluşumu hakkında ipuçları aranmaktadır.",
-    text: "Bu iş tanımı en doğrudan hangi kariyer alanına aittir?",
-    options: ["Kozmetik formülasyon uzmanı", "Gıda güvenliği denetçisi", "İş güvenliği uzmanı", "Astrokimya araştırmacısı", "Patent uzmanı"],
-    correct: 3,
-    explain: "Göktaşı örneklerinin bileşiminin analiz edilerek Güneş Sistemi'nin oluşumuna dair ipucu aranması astrokimya araştırmacısının işidir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir ilaç fabrikasında, üretilen her partinin belirlenen kalite standartlarına uyup uymadığı kontrol edilerek onay/red kararı verilmektedir.",
-    text: "Bu görev en çok hangi kariyer alanıyla ilişkilendirilebilir?",
-    options: ["Petrokimya mühendisi", "Kalite güvence (GMP) denetçisi", "Bilim müzesi küratörü", "Astrokimya araştırmacısı", "Tarım kimyası uzmanı"],
+    context: "Sinanoğlu, başarılarını ülkesine hizmet olarak görmüş ve insanın milletine ve insanlığa faydalı olmak için çalışması gerektiğine inanmıştır. Çok çalışkan ve donanımlı olmasına rağmen alçak gönüllü bir kişiliğe sahip olan Sinanoğlu'nun yaşam felsefesi daima bir adım daha ileri gitmektir. Türkçenin korunması ve doğru kullanılması için de önemli çalışmalar yapmıştır.",
+    text: "Bu bilgi, Sinanoğlu'nun kariyerine bakışıyla ilgili en doğru hangi çıkarımı destekler?",
+    options: ["Bilimsel başarıyı yalnızca kişisel şöhret için istemiştir","Bilimsel başarıyı yalnızca kişisel kazanç değil, topluma/ülkeye katkı amacıyla da ilişkilendirmiştir","Türkçeyle ilgili çalışmaları kariyeriyle hiç ilişkili değildir","Alçak gönüllülüğü, bilimsel üretkenliğini azaltmıştır","Sinanoğlu yalnızca kendi çıkarını düşünen bir bilim insanıdır"],
     correct: 1,
-    explain: "Üretim partilerinin kalite standartlarına uygunluğunun denetlenmesi kalite güvence (GMP) denetçisinin görevidir."
-  },
-
-  /* ============ ORTA ============ */
-
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Aşağıdaki tabloda dört farklı kariyer alanının, çalışma ortamı ve ağırlıklı olarak kullandığı kimya alt disiplini birlikte listelenmiştir.",
-    table: {
-      headers: ["Kariyer", "Çalışma ortamı", "Ağırlıklı alt disiplin"],
-      rows: [
-        ["Adli kimyager", "Kriminal laboratuvar", "Analitik kimya"],
-        ["Kozmetik Ar-Ge uzmanı", "Ürün geliştirme laboratuvarı", "Organik kimya"],
-        ["Batarya mühendisi", "Enerji Ar-Ge merkezi", "Elektrokimya"],
-        ["Klinik biyokimya uzmanı", "Hastane laboratuvarı", "Biyokimya"]
-      ],
-      caption: "Dört kariyer alanı ve ağırlıklı alt disiplinleri"
-    },
-    text: "Tabloya göre, hücresel enerji süreçleriyle ilgili moleküler bilgiye en çok ihtiyaç duyan kariyer hangisidir?",
-    options: ["Adli kimyager", "Kozmetik Ar-Ge uzmanı", "Batarya mühendisi", "Hiçbiri, hepsi eşit düzeyde ihtiyaç duyar", "Klinik biyokimya uzmanı"],
-    correct: 4,
-    explain: "Tabloda klinik biyokimya uzmanının ağırlıklı alt disiplini biyokimyadır; hücresel enerji süreçleri biyokimyanın konusu olduğundan bu kariyer en çok ihtiyaç duyar."
+    explain: "Sinanoğlu'nun 'milletine ve insanlığa faydalı olma' inancı ve Türkçe için yaptığı çalışmalar, bilimsel başarıyı toplumsal katkıyla ilişkilendiren bir bakış açısını yansıtır."
   },
   {
-    difficulty: "orta",
+    difficulty: "zor",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir üniversite mezunu, hem laboratuvar ortamında uzun saatler geçirmekten hem de elde ettiği bulguları rapor hâline getirip yöneticilere sunmaktan keyif alıyor; ancak saha çalışmasına veya insanlarla doğrudan etkileşime pek ilgi duymuyor.",
-    text: "Bu ilgi profiline en uygun kariyer aşağıdakilerden hangisidir?",
-    options: ["Bilim gazeteciliği", "Ürün satış temsilciliği", "Kimya öğretmenliği", "Çevre saha denetçiliği", "Kalite kontrol/analitik laboratuvar uzmanlığı"],
-    correct: 4,
-    explain: "Laboratuvarda uzun süre çalışma ve bulguları rapor hâline getirme eğilimi, saha/insan etkileşimi gerektirmeyen kalite kontrol/analitik laboratuvar uzmanlığıyla en çok örtüşür; diğer seçenekler yoğun sunum, öğretim veya saha teması gerektirir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    chart: {
-      type: "bar",
-      title: "Bir bölgedeki kimya mezunlarının sektörel dağılımı (yüzde)",
-      xLabel: "Sektör",
-      yLabel: "Mezun oranı (%)",
-      data: [
-        { label: "İlaç/sağlık", value: 32 },
-        { label: "Gıda", value: 22 },
-        { label: "Enerji/petrokimya", value: 18 },
-        { label: "Eğitim", value: 15 },
-        { label: "Diğer (adli, kozmetik, vb.)", value: 13 }
-      ]
-    },
-    text: "Grafiğe göre, bölgedeki kimya mezunlarının en büyük ikinci grubu hangi sektörde istihdam edilmektedir?",
-    options: ["Gıda", "İlaç/sağlık", "Enerji/petrokimya", "Eğitim", "Diğer"],
-    correct: 0,
-    explain: "Grafikte en yüksek oran ilaç/sağlık (%32), ikinci en yüksek oran ise gıda sektörüdür (%22)."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir sağlık kurumunda, hem yeni bir ilaç molekülünün vücutta nasıl parçalandığı (metabolize olduğu) incelenmekte hem de bu molekülün üretim sürecinde çevreye salınan atıkların yönetimi planlanmaktadır.",
-    text: "Bu iki görev sırasıyla en doğrudan hangi kariyer alanlarıyla ilişkilidir?",
-    options: ["Kozmetik Ar-Ge uzmanı ve müze koruma kimyageri", "Adli kimyager ve bilim gazetecisi", "Astrokimya araştırmacısı ve patent uzmanı", "Bu iki görev aynı kariyerin farklı isimleridir, ayrım yapılamaz", "Farmasötik Ar-Ge kimyageri ve çevre/sürdürülebilirlik danışmanı"],
-    correct: 4,
-    explain: "Molekülün vücutta metabolizmasının incelenmesi farmasötik Ar-Ge kimyagerinin; üretim atıklarının çevresel yönetimi ise çevre/sürdürülebilirlik danışmanının işidir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir kariyer danışmanlığı raporunda şu gözlem paylaşılmıştır: analitik kimya kökenli meslekler (kalite kontrol, adli kimya, çevre izleme gibi) neredeyse her sektörde talep görürken, astrokimya gibi çok uzmanlaşmış alanlarda pozisyon sayısı çok sınırlıdır ve genellikle sadece araştırma kurumlarında bulunur.",
-    text: "Bu gözleme dayanarak, kariyer planlaması açısından en dengeli çıkarım hangisidir?",
-    options: ["Uzmanlaşmış alanlarda çalışmak hiçbir zaman tercih edilmemelidir", "Astrokimya, analitik kimyadan her zaman daha fazla iş imkânı sunar", "Geniş istihdam olanağı isteyen biri için analitik kimya temelli bir kariyer, dar uzmanlaşmış alanlara göre daha fazla sektörel seçenek sunar", "Sektörel talep, bir kariyerin bilimsel değerini doğrudan belirler", "Analitik kimya kökenli meslekler yalnızca laboratuvar dışı işlerde bulunur"],
-    correct: 2,
-    explain: "Metinde açıkça belirtildiği gibi analitik kimya kökenli meslekler daha geniş sektörel talep görürken, astrokimya gibi dar alanlar sınırlı pozisyon sunar; bu, geniş istihdam arayan biri için dengeli bir çıkarımdır."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    objectIcons: { title: "Bir iş yerinde kullanılan malzemeler", items: [{ type: "glove", label: "Koruyucu eldiven" }, { type: "flask", label: "Titrasyon düzeneği" }, { type: "extinguisher", label: "Yangın söndürücü" }] },
-    context: "Görseldeki üç malzemenin bir arada, düzenli olarak kontrol edilip kayıt altına alındığı bir iş yeri tarif edilmektedir; bu iş yerinde ayrıca çalışanlara düzenli güvenlik eğitimleri verilmektedir.",
-    text: "Bu iş yerinin sorumlusu için en uygun kariyer tanımı hangisidir?",
-    options: ["İş sağlığı ve güvenliği (EHS) uzmanı", "Bilim gazetecisi", "Patent avukatı", "Müze küratörü", "Sanat eseri restoratörü"],
-    correct: 0,
-    explain: "Koruyucu ekipman, laboratuvar düzeneği ve yangın güvenliğinin birlikte denetlenip eğitim verilmesi EHS (iş sağlığı ve güvenliği) uzmanının görev tanımına uyar."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir gıda denetim biriminde, ithal edilen bir ürün partisinde izin verilenden fazla katkı maddesi tespit edilmiş ve parti satışa sunulmadan geri çekilmiştir.",
-    text: "Bu süreçte görev alan uzmanın kariyeri en doğrudan hangisidir?",
-    options: ["Gıda kalite kontrol/denetim uzmanı", "Astrokimya araştırmacısı", "Elektrokimya mühendisi", "Kültürel miras koruma kimyageri", "Patent uzmanı"],
-    correct: 0,
-    explain: "Katkı maddesi tespiti ve ürünün standartlara uygunluğunun denetlenmesi gıda kalite kontrol/denetim uzmanının işidir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    table: {
-      headers: ["Kariyer", "Gerekli ek yetkinlik"],
-      rows: [
-        ["Bilim gazeteciliği", "Yazılı/sözlü anlatım, karmaşık bilgiyi sadeleştirme"],
-        ["Patent uzmanlığı", "Hukuk bilgisi, teknik doküman analizi"],
-        ["Kimya öğretmenliği", "Pedagoji, sınıf yönetimi"],
-        ["Kalite güvence denetçiliği", "Mevzuat bilgisi (GMP/ISO), denetim süreçleri"]
-      ],
-      caption: "Kimya kökenli dört kariyerin gerektirdiği ek yetkinlikler"
-    },
-    text: "Tabloya göre, güçlü hukuk bilgisi ve teknik doküman analiz becerisi gerektiren kariyer hangisidir?",
-    options: ["Bilim gazeteciliği", "Kimya öğretmenliği", "Patent uzmanlığı", "Kalite güvence denetçiliği", "Hepsi eşit düzeyde hukuk bilgisi gerektirir"],
-    correct: 2,
-    explain: "Tabloda patent uzmanlığının gerektirdiği ek yetkinlik olarak hukuk bilgisi ve teknik doküman analizi belirtilmiştir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir teknoloji şirketinde, binlerce moleküler yapı verisi bilgisayar algoritmalarıyla taranarak yeni bir ilaç adayı molekülün hangi özelliklere sahip olması gerektiği tahmin edilmektedir.",
-    text: "Bu görev en doğrudan hangi (görece yeni) kariyer alanına örnektir?",
-    options: ["Kemoinformatik/hesaplamalı kimya uzmanı", "Adli kimyager", "Müze koruma kimyageri", "Gıda mühendisi", "İş güvenliği uzmanı"],
-    correct: 0,
-    explain: "Moleküler verilerin bilgisayar algoritmalarıyla analiz edilerek yeni molekül özelliklerinin tahmin edilmesi kemoinformatik/hesaplamalı kimya uzmanlığının işidir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir maden şirketinde hem çıkarılan cevherin metal içeriği analiz edilmekte hem de işletmenin çevresel atık yönetim planı hazırlanmaktadır.",
-    text: "Bu iki görev sırasıyla en doğrudan hangi kariyer alanlarıyla örtüşür?",
-    options: ["Kimya öğretmeni ve müze küratörü", "Kozmetik Ar-Ge uzmanı ve bilim gazetecisi", "Adli kimyager ve patent uzmanı", "Astrokimya araştırmacısı ve klinik biyokimya uzmanı", "Metalurji/jeokimya uzmanı ve çevre/sürdürülebilirlik danışmanı"],
-    correct: 4,
-    explain: "Cevherin metal içeriğinin analizi metalurji/jeokimya uzmanının; atık yönetim planı hazırlama ise çevre/sürdürülebilirlik danışmanının görev alanına girer."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir spor bilimleri merkezinde, sporcuların kas dokusundaki enerji üretim süreçleri ve beslenme takviyelerinin performansa etkisi incelenmektedir.",
-    text: "Bu göreve dayanarak, en uygun kariyer alanı hangisidir?",
-    options: ["Bilim müzesi küratörü", "Petrokimya mühendisi", "Patent avukatı", "Spor biyokimyası uzmanı", "Elektrokimya mühendisi"],
-    correct: 3,
-    explain: "Kas dokusundaki enerji üretimi ve beslenme takviyelerinin etkisinin incelenmesi spor biyokimyası uzmanının çalışma alanıdır."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir üniversite mezunu, laboratuvar araştırmasından çok, farklı şirketlere kimyasal madde ve ekipman satışı yaparken teknik danışmanlık da sunmayı, müşteri ziyaretleri yapmayı seviyor.",
-    text: "Bu ilgi profiline sahip birinin kariyer tercihi en uygun şekilde hangisi olur?",
-    options: ["Kimyasal ürün satış/teknik destek mühendisliği", "Akademik araştırmacılık", "Adli kimyagerlik", "Kalite güvence denetçiliği (sürekli laboratuvar)", "Müze koruma kimyagerliği"],
-    correct: 0,
-    explain: "Şirketlere satış yapma, teknik danışmanlık sunma ve müşteri ziyaretleri, laboratuvar-ağırlıklı değil saha/iletişim ağırlıklı satış-teknik destek mühendisliğiyle örtüşür."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir nükleer santralde, radyasyon seviyeleri sürekli izlenmekte ve çalışanların güvenli doz sınırları içinde kalması için prosedürler uygulanmaktadır.",
-    text: "Bu çalışma en doğrudan hangi kariyer alanının parçasıdır?",
-    options: ["Nükleer kimya/radyasyon güvenliği uzmanı", "Kozmetik Ar-Ge kimyageri", "Bilim gazetecisi", "Tarım kimyası araştırmacısı", "Patent uzmanı"],
-    correct: 0,
-    explain: "Radyasyon seviyelerinin izlenmesi ve güvenli doz prosedürlerinin uygulanması nükleer kimya/radyasyon güvenliği uzmanının işidir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir sigorta şirketi, kimyasal madde üreten fabrikalara sigorta poliçesi düzenlemeden önce tesisin güvenlik risklerini kimyasal madde envanterine göre değerlendiren bir uzmandan rapor talep etmektedir.",
-    text: "Bu uzmanın kariyeri en doğrudan hangisidir?",
-    options: ["Gıda mühendisi", "Kimyasal risk değerlendirme/EHS danışmanı", "Kimya öğretmeni", "Müze koruma kimyageri", "Astrokimya araştırmacısı"],
+    context: "Kimya alanında kariyer planlaması; sekiz geniş çalışma alanını tanımayı, eğitim düzeyine göre elde edilebilecek unvanları bilmeyi, döngüsel bir planlama sürecini izlemeyi ve gerçek rol model bilim insanlarının yolculuklarından ders çıkarmayı bir arada gerektirir.",
+    text: "Bu bilgiye göre, etkili bir kariyer planlamasının temel bileşenleri en doğru şekilde nasıl özetlenebilir?",
+    options: ["Yalnızca yüksek maaş beklentisi","Alan farkındalığı, eğitim/unvan bilgisi, sistemli bir planlama süreci ve ilham verici örneklerin birlikte değerlendirilmesi","Yalnızca ailenin verdiği karar","Yalnızca şans ve tesadüfler","Kariyer planlamasının belirli bir bileşeni yoktur, tamamen rastgeledir"],
     correct: 1,
-    explain: "Fabrikanın kimyasal madde envanterine göre güvenlik riskini değerlendirip rapor sunmak kimyasal risk değerlendirme/EHS danışmanlığının işidir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir devlet kurumunda, yeni geliştirilen bir tarım ilacının çevreye ve insan sağlığına olan uzun vadeli etkileri değerlendirilerek kullanım izni verilip verilmeyeceğine karar verilmektedir.",
-    text: "Bu değerlendirmeyi yapan uzmanın kariyeri en doğrudan hangisidir?",
-    options: ["Patent uzmanı", "Kozmetik Ar-Ge kimyageri", "Bilim müzesi küratörü", "Elektrokimya mühendisi", "Çevresel/toksikolojik risk değerlendirme uzmanı"],
-    correct: 4,
-    explain: "Bir kimyasalın çevre ve sağlık üzerindeki uzun vadeli etkilerinin değerlendirilerek izin kararına katkı sağlanması çevresel/toksikolojik risk değerlendirme uzmanının işidir."
-  },
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir malzeme test laboratuvarında, yeni geliştirilen bir kompozit malzemenin darbe dayanımı, ısıya dayanıklılığı ve esneklik özellikleri ölçülerek uçak parçalarında kullanıma uygunluğu değerlendirilmektedir.",
-    text: "Tanımlanan bu iş hangi kariyer alanına karşılık gelir?",
-    options: ["Nükleer güvenlik uzmanı", "Adli kimyager", "Malzeme bilimi/polimer mühendisi", "Gıda kalite uzmanı", "Bilim gazetecisi"],
-    correct: 2,
-    explain: "Kompozit malzemelerin mekanik ve termal özelliklerinin test edilmesi malzeme bilimi/polimer mühendisliğinin çalışma alanıdır."
-  },
-
-  {
-    difficulty: "orta",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir kozmetik firmasında hem yeni bir güneş kremi formülünün cilt üzerindeki koruma etkinliği organik kimya yöntemleriyle test edilmekte hem de ürünün ambalajında kullanılan plastik malzemenin geri dönüştürülebilirliği polimer kimyası yöntemleriyle değerlendirilmektedir.",
-    text: "Bu iki görev hangi kariyer alanlarının ortak çalışmasını gerektirir?",
-    options: ["Bu iki görev aynı kariyerin farklı isimleridir", "Adli kimyager ve bilim gazetecisi", "Astrokimya araştırmacısı ve patent uzmanı", "Kozmetik Ar-Ge kimyageri ve polimer/malzeme mühendisi", "Klinik biyokimya uzmanı ve müze koruma kimyageri"],
-    correct: 3,
-    explain: "Güneş kreminin koruma etkinliğinin test edilmesi kozmetik Ar-Ge kimyagerinin; ambalaj plastiğinin geri dönüştürülebilirliğinin değerlendirilmesi ise polimer/malzeme mühendisinin işidir."
-  },
-
-  /* ============ ZOR ============ */
-
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir kişinin kariyer geçmişi şöyledir: önce bir ilaç şirketinde klinik öncesi molekül testleri yapan bir Ar-Ge kimyageri olarak çalışmış; ardından aynı şirketin düzenleyici işler (regülasyon) biriminde, geliştirilen ilaçların ruhsatlandırma sürecinde gerekli teknik dokümanları hazırlayan bir uzman olarak görev almıştır.",
-    text: "Bu geçiş, kariyer planlaması açısından hangi çıkarımı en iyi destekler?",
-    options: ["Bu geçiş yalnızca şans eseri gerçekleşmiştir, genellenebilir bir örnek değildir", "Ar-Ge kimyagerliği ile düzenleyici işler uzmanlığı aynı yetkinlikleri gerektirdiği için pratikte tek bir meslektir", "Bir kişi kariyer boyunca yalnızca tek bir dar uzmanlık alanında kalmak zorundadır", "Bir kimya kariyeri, laboratuvar becerileriyle birlikte mevzuat/dokümantasyon bilgisi kazanılarak farklı bir uzmanlık alanına genişleyebilir", "Düzenleyici işler biriminde çalışmak laboratuvar geçmişini tamamen değersiz kılar"],
-    correct: 3,
-    explain: "Örnek, laboratuvar temelli bir kariyerin ek yetkinlik (mevzuat/dokümantasyon bilgisi) kazanılarak farklı ama ilişkili bir uzmanlık alanına (düzenleyici işler) genişleyebileceğini gösterir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir uzay tarımı projesinde hem toprak benzeri ortamların (regolit) mineral bileşimi anorganik kimya yöntemleriyle analiz edilmekte hem de bu ortamlarda yetiştirilen bitkilerin besin değeri gıda kimyası yöntemleriyle test edilmektedir.",
-    text: "Bu proje ekibinde görev alacak iki uzmanın kariyer alanları sırasıyla en doğrudan hangileridir?",
-    options: ["Bu iki görev birbirinin aynısıdır, ayrım anlamsızdır", "Adli kimyager ve bilim gazetecisi", "Kozmetik Ar-Ge uzmanı ve patent avukatı", "Anorganik/jeokimya uzmanı ve gıda kimyası araştırmacısı", "Elektrokimya mühendisi ve müze koruma kimyageri"],
-    correct: 3,
-    explain: "Regolit benzeri ortamların mineral bileşiminin analizi anorganik/jeokimya uzmanının; yetiştirilen bitkilerin besin değerinin test edilmesi ise gıda kimyası araştırmacısının işidir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    table: {
-      headers: ["Kariyer", "Ortalama haftalık laboratuvar süresi", "Ortalama haftalık rapor/sunum süresi"],
-      rows: [
-        ["Analitik laboratuvar uzmanı", "32 saat", "6 saat"],
-        ["Bilim iletişimcisi (kimya kökenli)", "4 saat", "28 saat"],
-        ["Kalite güvence denetçisi", "14 saat", "18 saat"],
-        ["Ar-Ge kimyageri (kozmetik)", "26 saat", "10 saat"]
-      ],
-      caption: "Dört kariyerin haftalık zaman dağılımı (ortalama)"
-    },
-    text: "Tabloya göre, laboratuvar süresi ile rapor/sunum süresi arasındaki fark en düşük (yani en dengeli dağılan) kariyer hangisidir?",
-    options: ["Analitik laboratuvar uzmanı", "Kalite güvence denetçisi", "Bilim iletişimcisi", "Ar-Ge kimyageri (kozmetik)", "Hepsinde fark eşittir"],
-    correct: 1,
-    explain: "Farklar: analitik uzmanda 26 saat, iletişimcide 24 saat, kalite güvence denetçisinde 4 saat, Ar-Ge kimyagerinde 16 saat. En düşük fark kalite güvence denetçisine aittir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir müze koruma laboratuvarında hem tarihi bir heykelin yüzeyindeki korozyon ürünleri analitik kimya yöntemleriyle tanımlanmakta hem de heykelin orijinal alaşım bileşimi metalurji/jeokimya yöntemleriyle belirlenmeye çalışılmaktadır.",
-    text: "Bu iki analiz sırasıyla en doğrudan hangi kariyer uzmanlıklarının kesişimini yansıtır?",
-    options: ["Kültürel miras koruma kimyageri (analitik kimya + metalurji/jeokimya bilgisiyle)", "Adli kimyager ve bilim gazetecisi", "Farmasötik Ar-Ge kimyageri ve patent uzmanı", "Kozmetik Ar-Ge uzmanı ve nükleer güvenlik uzmanı", "Bu iki analiz birbirinden tamamen bağımsızdır, ortak bir uzmanlık gerektirmez"],
-    correct: 0,
-    explain: "Korozyon ürünlerinin tanımlanması analitik kimya, orijinal alaşımın belirlenmesi metalurji/jeokimya bilgisi gerektirir; bu ikisinin bir arada kullanıldığı kariyer kültürel miras koruma kimyagerliğidir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir kariyer araştırması raporunda şu veriler paylaşılmıştır: analitik kimya temelli mesleklerde açık pozisyon sayısı yüksek fakat ortalama ücret artışı yavaş seyrederken, kemoinformatik/hesaplamalı kimya gibi yeni gelişen alanlarda pozisyon sayısı daha az fakat ücret artışı belirgin şekilde daha hızlıdır.",
-    text: "Bu veriye dayanarak, kariyer planlaması açısından en dengeli çıkarım hangisidir?",
-    options: ["Pozisyon sayısı düşük olan alanlar hiçbir zaman tercih edilmemelidir", "İş güvencesi önceliği olan biri için analitik kimya, hızlı ücret artışı önceliği olan biri için kemoinformatik daha uygun olabilir", "Analitik kimya kökenli meslekler zamanla tamamen ortadan kalkacaktır", "Ücret artış hızı, bir mesleğin bilimsel değerini belirleyen tek ölçüttür", "Kemoinformatik her zaman analitik kimyadan daha fazla pozisyon sunar"],
-    correct: 1,
-    explain: "Veriler, iki alanın farklı önceliklere (iş güvencesi vs. hızlı ücret artışı) göre farklı avantajlar sunduğunu gösterir; bu, kişinin önceliğine göre dengeli bir seçim yapılabileceği anlamına gelir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir gıda güvenliği skandalında, önce bir analitik laboratuvar uzmanı ürün örneklerinde yasaklı bir madde tespit etmiş; ardından bir kalite güvence denetçisi bu bulguyu üretim sürecindeki hangi aşamada bulaşmanın gerçekleştiğini araştırmış; son olarak bir düzenleyici işler uzmanı, ilgili resmî kuruma sunulacak düzeltici eylem raporunu hazırlamıştır.",
-    text: "Bu üç aşamanın sırasıyla en doğrudan yansıttığı yetkinlik zinciri hangisidir?",
-    options: ["Tespit (analitik ölçüm) → kök neden araştırması (süreç denetimi) → resmî raporlama (mevzuat bilgisi)", "Üç aşama da tamamen aynı yetkinliği gerektirir, sıralamanın önemi yoktur", "Kök neden araştırması, tespitten önce yapılmalıdır", "Resmî raporlama, analitik ölçüm yapılmadan da tamamlanabilir", "Bu üç görev tek bir kişi tarafından eşzamanlı olarak yürütülemez"],
-    correct: 0,
-    explain: "Sıralama, önce bir sorunun analitik yöntemlerle tespit edilmesini, sonra sürecin hangi aşamasında oluştuğunun denetlenmesini, son olarak mevzuata uygun resmî raporlamanın yapılmasını yansıtır — üç farklı yetkinliğin mantıksal zinciridir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir otomotiv şirketinde hem yeni bir yakıt katkı maddesinin motor performansına etkisi petrokimya yöntemleriyle test edilmekte hem de bu katkı maddesinin egzoz emisyonlarına etkisi çevre kimyası yöntemleriyle değerlendirilmektedir.",
-    text: "Bu iki değerlendirme sırasıyla en doğrudan hangi kariyer alanlarının kesişimini gerektirir?",
-    options: ["Kozmetik Ar-Ge uzmanı ve patent avukatı", "Adli kimyager ve bilim müzesi küratörü", "Petrokimya mühendisliği ve çevre kimyası/sürdürülebilirlik uzmanlığı", "Klinik biyokimya uzmanı ve nükleer güvenlik uzmanı", "Bu iki değerlendirme birbirinden tamamen kopuktur"],
-    correct: 2,
-    explain: "Yakıt katkısının motor performansına etkisi petrokimya mühendisliğinin; egzoz emisyonlarına etkisi çevre kimyası/sürdürülebilirlik uzmanlığının konusudur — proje ikisinin ortak çalışmasını gerektirir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir kariyer danışmanı, kimya lisans mezunlarına şu tavsiyeyi vermektedir: 'Sadece laboratuvar becerisi geliştirmek yeterli değildir; bir alt disiplinde derinleşirken aynı zamanda veri analizi, raporlama veya mevzuat gibi bir yan yetkinlik de kazanmak, kariyer seçeneklerinizi genişletir.'",
-    text: "Bu tavsiye, aşağıdaki kariyer profillerinden hangisiyle EN AZ örtüşür?",
-    options: ["Fizikokimya bilgisine ek olarak temel programlama/veri işleme öğrenen bir mezun", "Analitik kimya bilgisine ek olarak istatistiksel veri analizi öğrenen bir mezun", "Organik kimya bilgisine ek olarak mevzuat/dokümantasyon süreçlerini öğrenen bir mezun", "Biyokimya bilgisine ek olarak bilimsel yazım ve raporlama becerisi geliştiren bir mezun", "Yalnızca laboratuvar deneyi yapmayı öğrenip başka hiçbir beceri geliştirmeyen bir mezun"],
-    correct: 4,
-    explain: "Danışmanın tavsiyesi bir yan yetkinlik kazanmayı öneriyor; yalnızca laboratuvar deneyiyle sınırlı kalıp başka beceri geliştirmeyen profil bu tavsiyeyle en az örtüşür."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    circleCompare: {
-      title: "Dört kariyer alanında Türkiye'deki tahmini yıllık açık pozisyon sayısı (temsilî)",
-      unit: "pozisyon",
-      items: [
-        { label: "Gıda kalite kontrol", value: 1200 },
-        { label: "Adli kimya", value: 90 },
-        { label: "Kozmetik Ar-Ge", value: 340 },
-        { label: "Astrokimya araştırma", value: 15 }
-      ]
-    },
-    text: "Görseldeki dairelerin büyüklük farkına dayanarak, hangi çıkarım en doğru şekilde desteklenir?",
-    options: ["Dört alandaki pozisyon sayıları birbirine çok yakındır", "Astrokimya araştırma, dört alan arasında en yüksek istihdam hacmine sahiptir", "Gıda kalite kontrol alanı, dört alan arasında en geniş istihdam hacmine sahiptir", "Adli kimya, kozmetik Ar-Ge'den daha fazla pozisyon sunmaktadır", "Görseldeki daire büyüklükleri pozisyon sayısıyla ilişkili değildir"],
-    correct: 2,
-    explain: "Dairelerin alanı pozisyon sayısıyla orantılıdır; gıda kalite kontrol (1200) açık ara en büyük daireye, dolayısıyla en geniş istihdam hacmine sahiptir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir ilaç şirketindeki analitik kimyager, kariyerinin ilk yıllarında saf laboratuvar Ar-Ge işiyle uğraşmış; birkaç yıl sonra ekip yöneticiliğine geçmiş ve artık zamanının çoğunu bütçe planlama, ekip koordinasyonu ve üst yönetime rapor sunmaya ayırıyor; laboratuvara doğrudan girme sıklığı belirgin biçimde azalmıştır.",
-    text: "Bu kariyer gelişimi, aşağıdaki genellemelerden hangisini EN İYİ örnekler?",
-    options: ["Bu geçiş yalnızca ilaç sektöründe görülen istisnai bir durumdur", "Bir kimyagerin kariyeri boyunca laboratuvar dışına çıkması mesleki başarısızlık göstergesidir", "Yönetsel pozisyona geçen biri artık kimya bilgisini hiç kullanmaz", "Teknik bir alanda derinleşen bir kariyer, zamanla yönetsel/liderlik yetkinliklerinin öne çıktığı bir role dönüşebilir", "Ekip yöneticiliği, laboratuvar Ar-Ge deneyimi olmadan da aynı etkinlikte yürütülebilir"],
-    correct: 3,
-    explain: "Örnek, teknik bir kariyerin zamanla yönetim/liderlik ağırlıklı bir role evrilebileceğini gösteren yaygın bir kariyer gelişim örüntüsüdür."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir sürdürülebilirlik danışmanlığı biriminde hem bir fabrikanın atık su arıtma sürecinin verimliliği çevre kimyası yöntemleriyle analiz edilmekte hem de bu sürecin maliyet-fayda dengesi işletme verileriyle değerlendirilmektedir.",
-    text: "Bu iki değerlendirme, sürdürülebilirlik danışmanlığı kariyerinin hangi özelliğini en iyi yansıtır?",
-    options: ["Bu iki değerlendirme birbirinin birebir tekrarıdır", "Bu kariyer yalnızca laboratuvar analiziyle sınırlıdır, ekonomik veriyle ilgisi yoktur", "Bu kariyer yalnızca ekonomik veri analiziyle sınırlıdır, kimya bilgisi gerekmez", "Çevre kimyası analizi ile maliyet-fayda değerlendirmesi birbiriyle hiçbir zaman aynı projede yer almaz", "Bu kariyer, teknik kimya bilgisiyle işletme/ekonomik değerlendirme becerisinin bir arada kullanılmasını gerektirir"],
-    correct: 4,
-    explain: "Atık su arıtma verimliliğinin kimyasal analizi ile sürecin maliyet-fayda dengesinin değerlendirilmesi bir arada yürütüldüğünden, sürdürülebilirlik danışmanlığı hem teknik hem ekonomik yetkinlik gerektiren bir kariyerdir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir araştırma ekibi, yeni keşfedilen bir mineralin hem kristal yapısını (jeokimya) hem de bu mineralin olası endüstriyel katalizör olarak kullanılabilirliğini (fizikokimya) incelemektedir. Ekip, bulgularını hem akademik bir dergide yayımlamayı hem de bir patent başvurusuna dönüştürmeyi planlamaktadır.",
-    text: "Bu projenin tamamlanabilmesi için sırasıyla hangi kariyer uzmanlıklarının bir araya gelmesi gerekir?",
-    options: ["Bu proje hiçbir kimya kariyeri gerektirmez, tamamen hukuki bir süreçtir", "Yalnızca bir adli kimyager yeterlidir", "Yalnızca bir bilim gazetecisi yeterlidir", "Yalnızca bir kozmetik Ar-Ge uzmanı yeterlidir", "Jeokimyager, fizikokimyager ve patent/fikri mülkiyet uzmanı"],
-    correct: 4,
-    explain: "Kristal yapı analizi jeokimyager, katalizör potansiyeli değerlendirmesi fizikokimyager, patent başvurusu ise patent/fikri mülkiyet uzmanı gerektirir — proje üçünün ortak çalışmasını gerektirir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir kariyer anketinde, kimya mezunlarına 'işinizde en çok zaman ayırdığınız etkinlik' sorulmuş ve şu sonuç elde edilmiştir: laboratuvar ölçümü yapanların büyük kısmı analitik/kalite kontrol alanında, veri/rapor hazırlayanların büyük kısmı düzenleyici işler ve kalite güvence alanında, insanlarla doğrudan etkileşim kuranların büyük kısmı ise satış/eğitim alanında çalışmaktadır.",
-    text: "Bu ankete dayanarak, 'insanlarla yoğun etkileşim kurmaktan çok, sayısal veriyle uğraşmayı tercih eden' bir mezun için en uygun alan grubu hangisidir?",
-    options: ["Bilim gazeteciliği", "Satış/eğitim", "Analitik/kalite kontrol veya düzenleyici işler/kalite güvence", "Kimyasal ürün pazarlama", "Anket, kariyer tercihiyle ilgili hiçbir bilgi sunmamaktadır"],
-    correct: 2,
-    explain: "Ankete göre laboratuvar ölçümü ve veri/rapor hazırlama ağırlıklı roller (analitik/kalite kontrol, düzenleyici işler/kalite güvence) insan etkileşiminden çok sayısal veriyle uğraşmayı önceleyen bir profille örtüşür."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir içme suyu şebekesinde beklenmedik bir koku şikâyeti alınmıştır. Önce bir analitik laboratuvar uzmanı su örneklerinde iz miktarda organik kirletici tespit etmiş; ardından bir çevre kimyageri kirliliğin kaynağının yakındaki bir sanayi tesisi olup olmadığını araştırmış; son olarak bir halk sağlığı uzmanı tespit edilen derişimin sağlık açısından risk oluşturup oluşturmadığını değerlendirmiştir.",
-    text: "Bu üç aşama, sırasıyla hangi yetkinlik zincirini yansıtır?",
-    options: ["Bu üç görev aynı kariyer alanına aittir, ayrım anlamsızdır", "Üç aşama da birbirinin birebir tekrarıdır", "Sağlık riski değerlendirmesi, tespitten önce yapılmalıdır", "Kaynak araştırması, analitik ölçüm yapılmadan tamamlanabilir", "Tespit (analitik ölçüm) → kaynak araştırması (çevresel izleme) → sağlık riski değerlendirmesi (toksikoloji/halk sağlığı)"],
-    correct: 4,
-    explain: "Sıralama önce analitik tespiti, sonra kirlilik kaynağının çevresel yöntemlerle araştırılmasını, son olarak sağlık riskinin toksikoloji/halk sağlığı bilgisiyle değerlendirilmesini yansıtır."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir üniversite mezunu, lisans sırasında hem organik kimya hem de işletme derslerini almış; mezuniyet sonrası bir ilaç şirketinin önce Ar-Ge biriminde molekül sentezi üzerine çalışmış, birkaç yıl sonra aynı şirketin iş geliştirme biriminde yeni ilaç adaylarının pazar potansiyelini değerlendiren bir role geçmiştir.",
-    text: "Bu kariyer yolu, aşağıdaki genellemelerden hangisini EN İYİ destekler?",
-    options: ["Bu geçiş yalnızca ilaç sektörüne özgüdür, başka sektörlerde görülmez", "İşletme dersleri almak, bir kimyagerin teknik yetkinliğini azaltır", "İş geliştirme rolüne geçen biri artık hiçbir kimya bilgisi kullanmaz", "Teknik kimya bilgisi ile işletme/pazar analizi bilgisinin birleşimi, laboratuvar dışı yeni kariyer rollerine geçiş imkânı sunabilir", "Ar-Ge biriminde çalışmamış biri iş geliştirme rolüne hiçbir zaman geçemez"],
-    correct: 3,
-    explain: "Örnek, teknik kimya bilgisiyle işletme/pazar analizi bilgisinin bir arada kazanılmasının laboratuvar dışı yeni bir role (iş geliştirme) geçişi mümkün kıldığını gösterir."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir afet sonrası bölgede hem yıkılan binalardan çıkan yapı malzemelerinin (asbest, boya vb.) içerdiği tehlikeli maddeler analitik kimya yöntemleriyle taranmakta hem de bu maddelerin bölge halkı için oluşturduğu sağlık riski değerlendirilmektedir.",
-    text: "Bu iki görev sırasıyla en doğrudan hangi kariyer uzmanlıklarının bir arada çalışmasını gerektirir?",
-    options: ["Adli kimyager ve bilim müzesi küratörü", "Analitik/malzeme kimyageri ve halk sağlığı/toksikoloji uzmanı", "Kozmetik Ar-Ge uzmanı ve patent avukatı", "Astrokimya araştırmacısı ve elektrokimya mühendisi", "Bu iki görev tek bir kişi tarafından hiçbir zaman birlikte yürütülemez"],
-    correct: 1,
-    explain: "Yapı malzemelerindeki tehlikeli maddelerin taranması analitik/malzeme kimyagerinin; bunların sağlık riskinin değerlendirilmesi ise halk sağlığı/toksikoloji uzmanının işidir — ikisi birlikte çalışmayı gerektirir."
+    explain: "Etkili bir kariyer planlaması; hangi alanların var olduğunu bilmeyi, eğitim düzeyine göre unvanları anlamayı, sistemli (döngüsel) bir süreç izlemeyi ve gerçek örneklerden ilham almayı bir arada gerektirir."
   }
 ],
   "guvenlik": [
