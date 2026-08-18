@@ -110,7 +110,20 @@
      taşabildiğinden, Grid öğeleri sayfa sınırında güvenilir bölünmez (taşma/boş
      sayfa hatası riski); multi-column ise içeriği sütun sütun, sayfa kırılımına
      uygun şekilde akıtır. */
-  .konu-cols, .sorular-cols, .ca-cols{ columns:2; column-gap:10mm; }
+  /* column-fill:auto ZORUNLU: varsayılan 'balance' değeri tüm akışın toplam
+     yüksekliğine göre TEK bir bölünme noktası hesaplar; break-inside:avoid
+     olan büyük bir blok (ör. GHS piktogram ızgarası) o noktaya sığmazsa,
+     kalan sütun tamamen BOŞ kalır ve blok bir sonraki sütuna/sayfaya atlar
+     (gözlemlenen büyük boşluk hatası). auto ile sütun 1 doğal olarak dolar,
+     böyle bir "hesaplanmış boşluk" oluşmaz. */
+  .konu-cols, .sorular-cols, .ca-cols{ columns:2; column-gap:10mm; column-fill:auto; }
+  /* depo-wrap (9x9 kimyasal depolama matrisi) tek sütun genişliğinde (85mm)
+     hücreler sarıldığı için çok uzuyor (~1724px) — bu, bir sayfa sütununun
+     TOPLAM yüksekliğinden (~986px) bile fazla, yani break-inside:avoid ile
+     hiçbir sütuna asla sığamıyor ve bu da büyük boş alan hatasına yol açıyor.
+     column-span:all ile tabloyu tam sayfa genişliğine (180mm) yayıp hem
+     okunabilirliği artırıyor hem de yüksekliği makul sınırlara indiriyoruz. */
+  .depo-wrap{ column-span:all; }
   .box{ border-radius:6px; padding:10px 12px; margin:10px 0; font-family:Arial,sans-serif; font-size:11.8px; }
   .box .lbl{ font-weight:800; font-size:10px; text-transform:uppercase; letter-spacing:.05em; margin-bottom:5px; display:flex; align-items:center; gap:5px; }
   .kavram{ border:2px solid var(--accent); background:#f5f4fd; }
@@ -406,11 +419,26 @@
     <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
   <div class="soru"><span class="no">4.</span> <span class="tip">Açık Uçlu</span> Doğada hayatta kalma becerileriyle kimya bilgisi arasında nasıl bir ilişki kurulabilir? Bir örnekle açıkla.
     <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
-  <div class="soru"><span class="no">5.</span> <span class="tip">Çoktan Seçmeli</span> Aşağıdakilerden hangisi kimya biliminin doğrudan etkilediği bir sektör DEĞİLDİR?
+  <div class="soru"><span class="no">5.</span> <span class="tip">Çoktan Seçmeli</span> Aşağıdaki pH skalasında X noktasıyla işaretlenen maddenin özelliği için hangisi doğrudur?
+    <svg viewBox="0 0 300 60" width="100%" style="max-width:300px; display:block; margin:6px 0 8px;">
+      <defs>
+        <linearGradient id="q1phGrad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#e53935"></stop>
+          <stop offset="50%" stop-color="#8bc34a"></stop>
+          <stop offset="100%" stop-color="#8e24aa"></stop>
+        </linearGradient>
+      </defs>
+      <rect x="10" y="24" width="280" height="14" fill="url(#q1phGrad)" rx="3"></rect>
+      <text x="10" y="18" font-size="8" fill="#333">0</text>
+      <text x="150" y="18" text-anchor="middle" font-size="8" fill="#333">7</text>
+      <text x="290" y="18" text-anchor="end" font-size="8" fill="#333">14</text>
+      <polygon points="50,24 45,15 55,15" fill="#000"></polygon>
+      <text x="50" y="52" text-anchor="middle" font-size="11" font-weight="700" fill="#000">X</text>
+    </svg>
     <div class="secenekler">
-      <div>○ A) Temizlik ürünleri üretimi</div><div>○ B) İlaç geliştirme</div>
-      <div>○ C) Gıda üretimi</div><div>○ D) Bir şiirin kafiye düzeni</div>
-      <div>○ E) Enerji depolama (pil) teknolojileri</div>
+      <div>○ A) Kuvvetli baz</div><div>○ B) Zayıf asit</div>
+      <div>○ C) Kuvvetli asit</div><div>○ D) Tam nötr</div>
+      <div>○ E) Zayıf baz</div>
     </div></div>
   <div class="soru"><span class="no">6.</span> <span class="tip">Çoktan Seçmeli</span> Bilgisayarların işlemesi, telefonların şarj olması ve ekranların ışıldaması gibi olaylar temelde neye dayanır?
     <div class="secenekler">
@@ -722,7 +750,18 @@
       <div>○ C) Sağlık ve biyoteknoloji</div><div>○ D) Kimya endüstrisi</div>
       <div>○ E) Eğitim ve akademik çalışma</div>
     </div></div>
-  <div class="soru"><span class="no">8.</span> <span class="tip">Çoktan Seçmeli</span> Kariyer planlama döngüsünde "fırsatları araştırma" basamağından hemen sonra hangi basamak gelir?
+  <div class="soru"><span class="no">8.</span> <span class="tip">Çoktan Seçmeli</span> Aşağıdaki döngüde yıldız (★) ile işaretlenen "Fırsat Araştırma" basamağından, döngünün yönü izlenerek hemen sonra hangi basamağa geçilir?
+    <svg viewBox="0 0 200 200" width="140" height="140" style="display:block; margin:6px 0 8px;">
+      <path d="M100,17 A83,83 0 0 1 183,100 L141,100 A41,41 0 0 0 100,59 Z" fill="var(--accent)" opacity="0.28" stroke="#fff" stroke-width="2"></path>
+      <text x="141" y="55" text-anchor="middle" font-size="9" font-weight="700">Öz Fark.</text>
+      <path d="M183,100 A83,83 0 0 1 100,183 L100,141 A41,41 0 0 0 141,100 Z" fill="var(--accent-2)" opacity="0.45" stroke="#fff" stroke-width="2"></path>
+      <text x="141" y="140" text-anchor="middle" font-size="9" font-weight="700">Fırsat★</text>
+      <path d="M100,183 A83,83 0 0 1 17,100 L59,100 A41,41 0 0 0 100,141 Z" fill="var(--good)" opacity="0.28" stroke="#fff" stroke-width="2"></path>
+      <text x="59" y="140" text-anchor="middle" font-size="9" font-weight="700">Karar/Plan</text>
+      <path d="M17,100 A83,83 0 0 1 100,17 L100,59 A41,41 0 0 0 59,100 Z" fill="#c9a227" opacity="0.3" stroke="#fff" stroke-width="2"></path>
+      <text x="59" y="55" text-anchor="middle" font-size="9" font-weight="700">Uygulama</text>
+      <circle cx="100" cy="100" r="35" fill="#fff" stroke="#ccc" stroke-width="1"></circle>
+    </svg>
     <div class="secenekler">
       <div>○ A) Karar verip plan yapma</div><div>○ B) Öz farkındalık</div>
       <div>○ C) Planı uygulama</div><div>○ D) Hiçbiri, döngü burada biter</div>
@@ -780,15 +819,16 @@
       <div><span class="sw" style="background:#c9a227"></span>! Özel önlemler alınarak birlikte depolanabilir.</div>
       <div><span class="sw" style="background:#d9930a"></span>! Su ile temas ettiğinde alevlenebilir, gaz çıkaran veya kendiliğinden yanmaya yatkın maddelerle depolanamaz.</div>
     </div>
+  </div>
   <p>Laboratuvarda güvenli çalışabilmek, kullanılan araç-gereci doğru tanımaktan da geçer. <b>Erlenmayer</b>, koni biçimli dar boyunlu bir cam kaptır; titrasyon, çözelti hazırlama ve karıştırma işlemlerinde kullanılır, dar boynu çalkalarken sıçramayı azaltır. <b>Balon joje</b>, boyun kısmında tek bir ölçü çizgisi bulunan, belirli hacimde ve derişimi kesin olarak bilinen çözeltiler hazırlamak/saklamak için kullanılır. <b>Deney tüpü</b>, küçük hacimli maddelerin karıştırılması, ısıtılması ve soğutulması gibi genel amaçlarla kullanılan ince, uzun bir cam kaptır. <b>Damlalık</b> küçük hacimlerdeki sıvıları damla damla aktarmak; <b>dereceli silindir (mezür)</b>, boyunca bulunan dereceli işaretlerle sıvı hacmini hassas biçimde ölçmek; <b>kroze</b>, katı maddeleri yüksek sıcaklıkta ısıtma ve yakma işlemlerinde kullanılan ısıya dayanıklı küçük bir kap olarak görev yapar.</p>
 
   <table class="usage">
     <tr><th>Görsel</th><th>Araç</th><th>Kullanım Amacı</th></tr>
     <tr><td><svg viewBox="0 0 100 96" width="46" height="44"><path d="M42,20 L42,42 L24,78 Q22,84 30,84 L70,84 Q78,84 76,78 L58,42 L58,20 Z" fill="none" stroke="var(--ink)" stroke-width="2.4"></path><line x1="40" y1="20" x2="60" y2="20" stroke="var(--ink)" stroke-width="2.8"></line></svg></td><td>Erlenmayer</td><td>Titrasyon, çözelti hazırlama ve karıştırma</td></tr>
     <tr><td><svg viewBox="0 0 100 96" width="46" height="44"><path d="M46,18 L46,38 C30,54 24,64 24,72 A26,20 0 0 0 76,72 C76,64 70,54 54,38 L54,18 Z" fill="none" stroke="var(--ink)" stroke-width="2.4"></path><line x1="44" y1="18" x2="56" y2="18" stroke="var(--ink)" stroke-width="2.8"></line></svg></td><td>Balon Joje</td><td>Belirli hacim ve derişimde çözelti hazırlama/saklama</td></tr>
-    <tr><td><svg viewBox="0 0 100 96" width="46" height="44"><path d="M40,14 L40,66 A10,10 0 0 0 60,66 L60,14" fill="none" stroke="var(--ink)" stroke-width="2.4"></path><line x1="38" y1="14" x2="62" y2="14" stroke="var(--ink)" stroke-width="2.8"></line></svg></td><td>Deney Tüpü</td><td>Küçük hacimli madde karıştırma, ısıtma, soğutma</td></tr>
+    <tr><td><svg viewBox="0 0 100 96" width="46" height="44"><path d="M40,14 L40,66 A10,10 0 0 0 60,66 L60,14" fill="none" stroke="var(--ink)" stroke-width="2.4"></path></svg></td><td>Deney Tüpü</td><td>Küçük hacimli madde karıştırma, ısıtma, soğutma</td></tr>
     <tr><td>—</td><td>Damlalık</td><td>Sıvıyı damla damla aktarma</td></tr>
-    <tr><td><svg viewBox="0 0 100 96" width="46" height="44"><path d="M40,16 L40,78 Q40,84 47,84 L53,84 Q60,84 60,78 L60,16" fill="none" stroke="var(--ink)" stroke-width="2.4"></path><path d="M37,16 L56,16 L67,11 L63,16 Z" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round"></path></svg></td><td>Dereceli Silindir (Mezür)</td><td>Sıvı hacmini hassas ölçme</td></tr>
+    <tr><td><svg viewBox="0 0 100 96" width="46" height="44"><path d="M40,16 L58,16 L67,10 L60,16 L60,78 Q60,84 53,84 L47,84 Q40,84 40,78 Z" fill="none" stroke="var(--ink)" stroke-width="2.4" stroke-linejoin="round"></path></svg></td><td>Dereceli Silindir (Mezür)</td><td>Sıvı hacmini hassas ölçme</td></tr>
     <tr><td><svg viewBox="0 0 100 96" width="46" height="44"><path d="M40,82 L34,36 Q34,30 40,30 L60,30 Q66,30 66,36 L60,82 Z" fill="none" stroke="var(--ink)" stroke-width="2.4"></path><ellipse cx="50" cy="30" rx="16" ry="4" fill="none" stroke="var(--ink)" stroke-width="2.4"></ellipse></svg></td><td>Kroze</td><td>Katıyı yüksek sıcaklıkta ısıtma/yakma</td></tr>
   </table>
 
@@ -900,11 +940,12 @@
       <div>○ D) Kırık cam malzemeyi elle toplamak</div>
       <div>○ E) Kimyasal kullanmadan önce etiketi dikkatle okumak</div>
     </div></div>
-  <div class="soru"><span class="no">6.</span> <span class="tip">Çoktan Seçmeli</span> Canlı dokuyu tahrip eden ya da metali aşındıran maddeleri belirten piktogram hangisidir?
+  <div class="soru"><span class="no">6.</span> <span class="tip">Çoktan Seçmeli</span> Aşağıdaki piktogram hangi tehlike türünü belirtir?
+    <img src="../assets/img/ghs/corrosive.svg" alt="GHS piktogramı" width="52" height="52" style="display:block; margin:4px 0 8px;">
     <div class="secenekler">
       <div>○ A) Zehirli</div><div>○ B) Basınçlı gaz</div>
       <div>○ C) Oksitleyici</div><div>○ D) Çevreye zararlı</div>
-      <div>○ E) Korozif</div>
+      <div>○ E) Korozif (canlı dokuyu tahrip eden/metali aşındıran)</div>
     </div></div>
   <div class="soru"><span class="no">7.</span> <span class="tip">Çoktan Seçmeli</span> Sodyum metalinin su ile teması sırasında dikkat edilmesi gereken en önemli risk nedir?
     <div class="secenekler">
@@ -1102,11 +1143,21 @@
       <div>○ C) Rutherford</div><div>○ D) Bohr</div>
       <div>○ E) Thomson</div>
     </div></div>
-  <div class="soru"><span class="no">6.</span> <span class="tip">Çoktan Seçmeli</span> Atomun çoğunlukla boşluktan oluştuğunu ve pozitif yükün küçük bir çekirdekte toplandığını hangi deney/model ortaya koymuştur?
+  <div class="soru"><span class="no">6.</span> <span class="tip">Çoktan Seçmeli</span> Aşağıdaki diyagram, altın yaprak deneyinde alfa parçacıklarının izlediği yolları göstermektedir. Bu diyagramdaki sapma, atom hakkında hangi sonuca götürür?
+    <svg viewBox="0 0 180 130" width="150" height="108" style="display:block; margin:6px 0 8px;">
+      <circle cx="90" cy="65" r="45" fill="none" stroke="#ccc" stroke-width="1.5" stroke-dasharray="3 4"></circle>
+      <line x1="0" y1="35" x2="176" y2="35" stroke="#555" stroke-width="1.6"></line>
+      <polygon points="176,35 170,32 170,38" fill="#555"></polygon>
+      <line x1="0" y1="95" x2="176" y2="95" stroke="#555" stroke-width="1.6"></line>
+      <polygon points="176,95 170,92 170,98" fill="#555"></polygon>
+      <path d="M0,65 L64,65 L4,25" fill="none" stroke="#c0392b" stroke-width="2.2"></path>
+      <polygon points="4,25 3,31 9,29" fill="#c0392b"></polygon>
+      <circle cx="90" cy="65" r="5.5" fill="#c0392b"></circle>
+    </svg>
     <div class="secenekler">
-      <div>○ A) Dalton modeli</div><div>○ B) Thomson modeli</div>
-      <div>○ C) Rutherford'un altın yaprak deneyi</div><div>○ D) Bohr modeli</div>
-      <div>○ E) Aufbau ilkesi</div>
+      <div>○ A) Atomun içi negatif yükle tamamen doludur</div><div>○ B) Atomun kütlesi her yere eşit dağılmıştır</div>
+      <div>○ C) Pozitif yük ve kütle küçük bir çekirdekte yoğunlaşmıştır</div><div>○ D) Elektronlar sabit yörüngelerde dolaşır</div>
+      <div>○ E) Enerji seviyeleri kuantumludur</div>
     </div></div>
   <div class="soru"><span class="no">7.</span> <span class="tip">Çoktan Seçmeli</span> Elektronun belirli bir anda çekirdeğe göre tam konumunun bilinemeyeceğini öngören ilke hangisidir?
     <div class="secenekler">
@@ -1306,7 +1357,14 @@
     </div></div>
   <div class="baglam">
     <div class="baglam-lbl">9–10. Bağlam Temelli · Hatalı Bir Orbital Diyagramı</div>
-    <p style="margin:0">Bir ders materyalinde, 6 elektronlu karbon (C) atomunun elektron dizilimi gösterilirken 2p orbitallerinden birine 2 elektron (eşleşmiş), diğer ikisi boş olarak çizilmiştir.</p>
+    <p style="margin:0">Bir ders materyalinde, 6 elektronlu karbon (C) atomunun elektron dizilimi gösterilirken 2p orbitallerinden birine 2 elektron (eşleşmiş), diğer ikisi boş olarak çizilmiştir. Bu çizim aşağıdaki gibidir:</p>
+    <div class="odiagram-wrap" style="margin-top:8px">
+      <div class="odiagram">
+        <div class="osub"><div class="oboxes"><div class="obox">↑↓</div></div><div class="olabel">1s</div></div>
+        <div class="osub"><div class="oboxes"><div class="obox">↑↓</div></div><div class="olabel">2s</div></div>
+        <div class="osub"><div class="oboxes"><div class="obox">↑↓</div><div class="obox"></div><div class="obox"></div></div><div class="olabel">2p</div></div>
+      </div>
+    </div>
   </div>
   <div class="soru"><span class="no">9.</span> a) Bu çizim hangi kuralla çelişmektedir? Açıkla.
     <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
@@ -1392,7 +1450,12 @@
       <div>○ C) 8B</div><div>○ D) 8A</div>
       <div>○ E) 1B</div>
     </div></div>
-  <div class="soru"><span class="no">6.</span> <span class="tip">Çoktan Seçmeli</span> Bileşiklerinde yalnızca +1 yüklü iyon oluşturan, su ile şiddetli tepkimeye giren grup hangisidir?
+  <div class="soru"><span class="no">6.</span> <span class="tip">Çoktan Seçmeli</span> Aşağıda vurgulanan grup, bileşiklerinde yalnızca +1 yüklü iyon oluşturur ve su ile şiddetli tepkimeye girer. Bu grup hangisidir?
+    <div class="pgrid" style="grid-template-columns:repeat(8,26px); margin:6px 0 8px;">
+      <div class="pgrid-cell pgrid-hl">H</div><div class="pgrid-cell pgrid-empty"></div><div class="pgrid-cell pgrid-empty"></div><div class="pgrid-cell pgrid-empty"></div><div class="pgrid-cell pgrid-empty"></div><div class="pgrid-cell pgrid-empty"></div><div class="pgrid-cell pgrid-empty"></div><div class="pgrid-cell">He</div>
+      <div class="pgrid-cell pgrid-hl">Li</div><div class="pgrid-cell">Be</div><div class="pgrid-cell">B</div><div class="pgrid-cell">C</div><div class="pgrid-cell">N</div><div class="pgrid-cell">O</div><div class="pgrid-cell">F</div><div class="pgrid-cell">Ne</div>
+      <div class="pgrid-cell pgrid-hl">Na</div><div class="pgrid-cell">Mg</div><div class="pgrid-cell">Al</div><div class="pgrid-cell">Si</div><div class="pgrid-cell">P</div><div class="pgrid-cell">S</div><div class="pgrid-cell">Cl</div><div class="pgrid-cell">Ar</div>
+    </div>
     <div class="secenekler">
       <div>○ A) 7A — Halojenler</div><div>○ B) 2A — Toprak alkali metaller</div>
       <div>○ C) 8A — Soy gazlar</div><div>○ D) 1A — Alkali metaller</div>
@@ -1606,9 +1669,13 @@
       <div>○ C) Helyum (He)</div><div>○ D) Sodyum (Na)</div>
       <div>○ E) Oksijen (O)</div>
     </div></div>
-  <div class="soru"><span class="no">7.</span> <span class="tip">Çoktan Seçmeli</span> Bir anyon (örneğin Cl⁻) oluşurken atom yarıçapında ne olur?
+  <div class="soru"><span class="no">7.</span> <span class="tip">Çoktan Seçmeli</span> Aşağıdaki gerçek ölçekli karşılaştırmaya göre, bir anyon (Cl⁻) oluşurken atom yarıçapında ne olur? Bu değişimin nedeni nedir?
+    <div class="ccompare-row" style="margin:6px 0 8px; justify-content:flex-start; gap:24px;">
+      <div class="ccircle-item"><svg viewBox="0 0 96 96" width="60" height="60"><circle cx="48" cy="48" r="24" fill="var(--gas)" opacity="0.75"></circle></svg><div class="ccircle-label">Cl atomu</div><div class="ccircle-value">99 pm</div></div>
+      <div class="ccircle-item"><svg viewBox="0 0 96 96" width="60" height="60"><circle cx="48" cy="48" r="44" fill="var(--gas)" opacity="0.75"></circle></svg><div class="ccircle-label">Cl⁻ iyonu</div><div class="ccircle-value">181 pm</div></div>
+    </div>
     <div class="secenekler">
-      <div>○ A) Değişmez</div><div>○ B) Büyür</div>
+      <div>○ A) Değişmez</div><div>○ B) Büyür — elektron sayısı artınca elektron başına düşen çekim azalır</div>
       <div>○ C) Küçülür</div><div>○ D) Önce büyür sonra küçülür</div>
       <div>○ E) Sıfır olur</div>
     </div></div>
@@ -1642,7 +1709,7 @@
   <div class="ca-unit">
     <h4>Ünite 1 — Günlük Hayatta Kimya (KİM.9.1.1)</h4>
     <div class="ca-item">1-4. Cevaplar, ilgili "Konu Anlatımı" bölümündeki kavram ve ilişkilerle tutarlı, gerekçeli bir açıklama içermelidir.</div>
-    <div class="ca-item"><b>5. D</b> — Bir şiirin kafiye düzeni, kimya biliminin etkilediği bir sektör değildir; diğer dördü (temizlik, ilaç, gıda, enerji) doğrudan kimya uygulamalarıdır.</div>
+    <div class="ca-item"><b>5. C</b> — X noktası pH skalasında 0'a yakın (≈2), yani kuvvetli asit bölgesindedir.</div>
     <div class="ca-item"><b>6. A</b> — Bilgisayar, telefon ve ekran teknolojileri atomdaki elektronların hareketine dayanır.</div>
     <div class="ca-item"><b>7. B</b> — Katmanlardan geçirerek katı parçacıkları tutmak, maddenin kimliğini değiştirmeyen fiziksel bir ayırma işlemidir.</div>
     <div class="ca-item"><b>8. B</b> — Gözlemlenen bir olaydan (sabunun yağı çözmesi) kimyasal bir ilişkiye ulaşmak, çıkarım yapmanın bir örneğidir.</div>
@@ -1683,7 +1750,7 @@
     <h4>Ünite 5 — Atom Teorileri ve Atomun Yapısı (KİM.9.1.5)</h4>
     <div class="ca-item">1-4. Cevaplar, ilgili "Konu Anlatımı" bölümündeki kavram ve ilişkilerle tutarlı, gerekçeli bir açıklama içermelidir.</div>
     <div class="ca-item"><b>5. E</b> — Elektronu ilk kez Thomson keşfetmiştir (katot ışını deneyleri).</div>
-    <div class="ca-item"><b>6. C</b> — Rutherford'un altın yaprak (alfa saçılma) deneyi, çekirdeğin varlığını ortaya koymuştur.</div>
+    <div class="ca-item"><b>6. C</b> — Alfa parçacıklarının bir kısmının büyük açıyla sapması, pozitif yükün ve kütlenin küçük, yoğun bir çekirdekte toplandığını gösterir.</div>
     <div class="ca-item"><b>7. D</b> — Heisenberg belirsizlik ilkesi, konum ve hızın aynı anda kesin bilinemeyeceğini öngörür.</div>
     <div class="ca-item"><b>8. A</b> — Bir proton/nötronun kütlesi bir elektronunkinden yaklaşık 1836 kat fazladır.</div>
     <div class="ca-item">9-10. Açık uçlu — konu anlatımındaki ilgili kavramla değerlendirilir (bilimsel bilginin değişebilirliği).</div>

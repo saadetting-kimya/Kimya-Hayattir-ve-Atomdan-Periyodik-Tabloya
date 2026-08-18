@@ -624,12 +624,10 @@ const LAB_EQUIPMENT_SHAPES = {
   `,
   deneytupu: `
     <path d="M40,14 L40,66 A10,10 0 0 0 60,66 L60,14" fill="none" stroke="var(--ink)" stroke-width="2"></path>
-    <line x1="38" y1="14" x2="62" y2="14" stroke="var(--ink)" stroke-width="2.4"></line>
     <line x1="42" y1="40" x2="58" y2="40" stroke="var(--ink)" stroke-width="1.3" opacity="0.5"></line>
   `,
   mezur: `
-    <path d="M40,16 L40,78 Q40,84 47,84 L53,84 Q60,84 60,78 L60,16" fill="none" stroke="var(--ink)" stroke-width="2"></path>
-    <path d="M37,16 L56,16 L67,11 L63,16 Z" fill="none" stroke="var(--ink)" stroke-width="1.8" stroke-linejoin="round"></path>
+    <path d="M40,16 L58,16 L67,10 L60,16 L60,78 Q60,84 53,84 L47,84 Q40,84 40,78 Z" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round"></path>
     <line x1="43" y1="32" x2="49" y2="32" stroke="var(--ink)" stroke-width="1.2" opacity="0.6"></line>
     <line x1="43" y1="46" x2="49" y2="46" stroke="var(--ink)" stroke-width="1.2" opacity="0.6"></line>
     <line x1="43" y1="60" x2="49" y2="60" stroke="var(--ink)" stroke-width="1.2" opacity="0.6"></line>
