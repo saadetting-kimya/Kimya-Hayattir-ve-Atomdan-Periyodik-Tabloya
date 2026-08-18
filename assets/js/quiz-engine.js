@@ -13,6 +13,11 @@
    - Keşif Günlüğünü korumak
    ========================================================= */
 
+/* GHS piktogramları için gerçek görsel dosyası desteği: assets/img/ghs/
+   klasörüne <kod>.svg (örn. toxic.svg) konursa motor otomatik olarak
+   onu kullanır; dosya yoksa aşağıdaki elle çizilmiş SVG'ye döner. */
+const GHS_IMG_BASE = new URL("../img/ghs/", import.meta.url).href;
+
 /* =========================================================
    STORAGE ANAHTARLARI
    ========================================================= */
@@ -479,7 +484,14 @@ function renderGHSPictogram(code, tagLetter) {
 
   return `
     <div class="ghs-item">
-      <svg viewBox="0 0 100 100" width="64" height="64">
+      <img
+        src="${GHS_IMG_BASE}${code}.svg"
+        alt="${escapeHTML(GHS_LABELS[code] || code)}"
+        width="64" height="64"
+        style="display:block"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='block';"
+      >
+      <svg viewBox="0 0 100 100" width="64" height="64" style="display:none">
         <rect x="18" y="18" width="64" height="64" rx="7" fill="#fff" stroke="#dc2626" stroke-width="6" transform="rotate(45 50 50)"></rect>
         ${icon}
       </svg>
