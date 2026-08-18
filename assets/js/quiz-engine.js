@@ -645,6 +645,12 @@ const LAB_EQUIPMENT_SHAPES = {
     <line x1="44" y1="34" x2="49" y2="34" stroke="var(--ink)" stroke-width="1.3" opacity="0.7"></line>
     <line x1="44" y1="44" x2="49" y2="44" stroke="var(--ink)" stroke-width="1.3" opacity="0.7"></line>
   `,
+  damlalik: `
+    <path d="M40,14 Q40,8 50,8 Q60,8 60,14 L60,30 Q60,34 56,34 L44,34 Q40,34 40,30 Z" fill="none" stroke="var(--ink)" stroke-width="2"></path>
+    <line x1="46" y1="34" x2="46" y2="72" stroke="var(--ink)" stroke-width="2"></line>
+    <line x1="54" y1="34" x2="54" y2="72" stroke="var(--ink)" stroke-width="2"></line>
+    <path d="M46,72 L54,72 L50,88 Z" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round"></path>
+  `,
   ayirmahunisi: `
     <path d="M30,18 Q26,18 26,24 C26,46 34,54 50,66 C66,54 74,46 74,24 Q74,18 70,18 Z" fill="none" stroke="var(--ink)" stroke-width="2"></path>
     <ellipse cx="50" cy="18" rx="10" ry="3" fill="none" stroke="var(--ink)" stroke-width="1.8"></ellipse>
@@ -663,6 +669,7 @@ const LAB_EQUIPMENT_LABELS = {
   mezur: "Dereceli Silindir (Mezür)",
   kroze: "Kroze",
   pipet: "Pipet",
+  damlalik: "Damlalık",
   ayirmahunisi: "Ayırma Hunisi"
 };
 
