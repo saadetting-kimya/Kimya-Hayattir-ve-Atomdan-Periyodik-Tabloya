@@ -77,10 +77,11 @@ gerçek bir bilimsel olgudur), yine de cümlenin YAPISI "kişi bir şey
 yapıyor" formülüne düşmesin; edilgen/nesnel çatı tercih edin.
 
 **Otomatik kontrol:** `scripts/verify-quiz-data.mjs`, isim listesi +
-"öğrenci"/"kişi " kalıp taraması yapar. Her modül yazımından sonra
-çalıştırın (bkz. Bölüm 7). Not: bu tarama bazen yanlış pozitif üretir
-("alkali", "metali", "aslında" gibi kelimeler "ali "/"aslı" alt dizisini
-içerir) — her sonucu elle gözden geçirin, körü körüne "düzeltmeyin".
+"öğrenci"/"kişi" kalıp taraması yapar; tam kelime eşleşmesi kullanır
+(`hasWholeWord`), bu yüzden "alkali", "metali", "aslında" gibi kelimeler
+artık yanlış pozitif üretmez. `dialogue` alanı kullanan sorularda
+"öğrenci" kelimesi kasıtlı olarak istisna tutulur (bkz. Bölüm 4b) — bu
+formatın kendisi meşru bir istisnadır, "kişi yapıyor" tembelliği değil.
 
 ---
 
@@ -109,6 +110,43 @@ titrasyon eğrisi, gaz P-V-T simülasyonu), `quiz-engine.js` içine
 `render...()` deseniyle (bkz. mevcut fonksiyonlar) yeni bir fonksiyon
 ekleyip `createQuestionCard()` içinde çağırın — motor bu şekilde
 genişlemeye açık tasarlanmıştır.
+
+---
+
+## 4b. Kitap-Tarzı Soru Formatları (Şekil değil, SORUNUN YAPISI)
+
+Piyasa kitapları (ve MEB kitabı) sadece görsel çeşitliliğiyle değil,
+**soru köklerinin yapısıyla** da özgün hissettirir: tek bir "X nedir?"
+sorusu yerine çoklu ifade kombinasyonu, eşleştirme, öğrenci görüşü
+karşılaştırması, D/Y kontrol listesi gibi kalıplar kullanırlar. Aşağıdaki
+4 alan, Bölüm 4'teki görsel bileşenlerle **birlikte** kullanılabilir
+(örn. `pictograms` + `statements` aynı soruda bir arada durabilir);
+sorunun puanlanması yine standart `options`/`correct` (5 şık, 0-4 indeks)
+üzerinden yapılır — motorun puanlama mantığı değişmez, yalnızca bağlam
+kutusu zenginleşir.
+
+| Alan adı | Ne zaman kullanılır | Şema |
+|---|---|---|
+| `statements` | "I, II, III" kombinasyon sorusu (ÖSYM/MEB tarzı çok yaygın kalıp) | `string[]` (otomatik I, II, III... numaralanır); `options` genelde `["Yalnız I","Yalnız II","I ve II",...]` şeklinde kombinasyon şıkları olur |
+| `dialogue` | Farklı akıl yürütmeleri karşılaştırıp kavram yanılgısı ayıklamak istediğinizde | `{who, text}[]` — `who` alanına gerçek isim YAZMAYIN, "Öğrenci A/B/C" gibi nötr etiket kullanın |
+| `matchPairs` | İki sütunlu eşleştirme bağlamı (sol numaralı, sağ harfli) | `{left: string[], right: string[]}` — gerçek soru bu bağlamdan TEK bir eşleşmeyi sorar (örn. "2 numaralı öge hangi harfle eşleşir?") |
+| `checklist` | D/Y ifade grubu üzerinden "kaç tanesi doğrudur/yanlıştır" tarzı soru | `string[]` — kutucuklar yalnızca görseldir, işaretlenemez; gerçek cevap MC şıklarında |
+
+**`pictograms` ile eşleştirme:** Birden fazla GHS simgesini tek soruda
+göstermek ve etiketlerini gizleyip harflendirmek isterseniz
+`pictograms: { codes: [...], hideLabels: true }` kullanın — simgeler
+altında "Patlayıcı" yazısı yerine a/b/c harfi görünür, gerçek tanım
+`statements` ile ayrı verilir (bkz. `assets/js/quiz-data.js` içindeki
+`guvenlik` modülündeki örnek).
+
+**"Öğrenci A/B/C" formatı Bölüm 3'teki yasağı ihlal etmez mi?**
+Hayır — Bölüm 3'ün yasakladığı şey, sorunun **varsayılan açılışının**
+her seferinde "bir öğrenci X yapıyor" tekrarına düşmesidir (tembel,
+monoton bir kalıp). `dialogue` formatı bunun tam tersi: 2-3 FARKLI
+görüşü yan yana koyup öğrenciden hangisinin bilimsel olarak doğru
+olduğunu ayırt etmesini ister — bu, kavram yanılgılarını yüzeye çıkarmak
+için pedagojik olarak kanıtlanmış, kasıtlı ve seyrek kullanılması
+gereken bir tekniktir; her sorunun varsayılanı yapmayın.
 
 ---
 
@@ -245,7 +283,14 @@ tutucuları doldurun). Diğerlerini konunuza göre yeniden yazın.
    Bilinçli çeşitlendirme (Bölüm 3) olmadan yazmayın.
 6. **Telif materyalini asla birebir/yakın parafraz kopyalamayın** —
    yalnızca konu kapsamı ve stil için referans alın, tüm metni ve
-   görselleri sıfırdan, özgün olarak yazın/çizin.
+   görselleri sıfırdan, özgün olarak yazın/çizin. Bu projede gerçekten
+   yaşandı: bir PR, GHS piktogramlarını "ders kitabının s. 38-39
+   sayfasından birebir kırpılmış" PNG'lerle değiştirmişti (commit mesajı
+   bunu açıkça itiraf ediyordu) — aylar sonra fark edilip elle çizilmiş
+   özgün SVG'lerle değiştirildi. Standart/düzenleyici semboller (GHS,
+   ISO trefoil vb.) kullanılabilir ama KAYNAK, ilgili resmi kurumun
+   (örn. BM GHS Purple Book, Wikimedia Commons'ın kamu malı sürümleri)
+   kendisi olmalı — bir yayınevinin SAYFA GÖRÜNTÜSÜ değil.
 
 ---
 

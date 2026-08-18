@@ -6,6 +6,38 @@
 <title>Atom Orbitalleri ve Elektron Dizilimi — AtomLab 9</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2246%22 fill=%22%236d5bff%22/></svg>">
 <link rel="stylesheet" href="../assets/css/style.css?v=2" />
+<style>
+  /* MEB "Etkinlik-1.8: Atom Orbitallerinin Bağıl Enerjileri" simülatörü için
+     module 8'deki (Periyodik Özellikler) trend-card/coord-graph desenleriyle
+     aynı görsel dil — tıkla-göster kartları + koordinat grafiği. */
+  .trend-picker{ display:flex; gap:10px; flex-wrap:wrap; }
+  .trend-card{
+    width:92px; padding:10px 8px; border-radius:12px; background:var(--lab-glass); border:2px solid var(--lab-line);
+    text-align:center; transition:.15s;
+  }
+  .trend-card .tc-sym{ font-family:var(--mono); font-weight:800; font-size:16px; color:#f1eeff; }
+  .trend-card .tc-z{ font-size:10px; color:#8a80b3; }
+  .trend-card .tc-val{ margin-top:6px; font-family:var(--mono); font-size:11px; font-weight:700; color:var(--heat); min-height:15px; }
+  .trend-card.locked{ opacity:.4; }
+  .trend-card.active{ cursor:pointer; border-color:var(--gas); box-shadow:0 0 0 3px rgba(109,91,255,.2); }
+  .trend-card.active:hover{ background:rgba(109,91,255,.14); }
+  .trend-card.active .tc-val{ color:#fff; font-weight:800; }
+  .trend-card.done .tc-val{ color:var(--good); }
+  .trend-card .tc-btn{
+    margin-top:6px; font-size:10.5px; font-weight:800; padding:3px 8px; border-radius:999px;
+    background:var(--gas); color:#fff; display:inline-block;
+  }
+  .coord-graph{ width:100%; height:auto; }
+  .coord-graph .axis{ stroke:#463d80; stroke-width:1; }
+  .coord-graph .axis-label{ fill:#8a80b3; font-size:8px; font-family:var(--mono); }
+  .coord-graph .pt-2s{ fill:var(--mol-b); stroke:#fff; stroke-width:1; }
+  .coord-graph .pt-2p{ fill:var(--gas); stroke:#fff; stroke-width:1; }
+  .coord-graph .trace-2s{ fill:none; stroke:var(--mol-b); stroke-width:2; opacity:.75; }
+  .coord-graph .trace-2p{ fill:none; stroke:var(--gas); stroke-width:2; opacity:.75; }
+  .coord-legend{ display:flex; gap:16px; font-size:11px; color:#c7bfe6; margin-top:6px; }
+  .coord-legend span{ display:inline-flex; align-items:center; gap:5px; }
+  .coord-legend i{ width:10px; height:10px; border-radius:50%; display:inline-block; }
+</style>
 <script type="importmap">
 { "imports": {
   "three": "../assets/vendor/three/three.module.js",
@@ -158,9 +190,26 @@
 <section class="section tight">
   <div class="container">
     <div class="section-head">
+      <span class="eyebrow">📖 Öğren</span>
+      <h2>Alt Kabuklar Hangi Sırayla Dolar? — Diyagonal Diyagram</h2>
+      <p>Bir alt kabuğun enerjisi doğrudan hesaplanmaz; bunun yerine, alt kabukları enerji sırasına göre gösteren hazır bir diyagramdan okunur/ezberlenir. Bu diyagrama <strong>diyagonal diyagram (köşegen kuralı)</strong> denir.</p>
+    </div>
+    <div class="card">
+      <div id="diagonal-diagram-host"></div>
+      <div class="callout model" style="margin-top:10px">
+        <h5>Nasıl okunur?</h5>
+        <p>Alt kabuklar, temel enerji seviyesine (satır) ve türüne (sütun: s, p, d) göre bir ızgaraya yerleştirilir. Izgarada sağ üstten sol alta doğru <strong>köşegen oklar</strong> çizilir; bu okları soldan sağa, her okun içinde de yukarıdan aşağıya izlersen dolma sırasını (1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p) elde edersin. Dikkat: 4s, 3d'den önce dolar — bu diyagramın en çok şaşırtan ama ezberlenmesi gereken noktasıdır.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="container">
+    <div class="section-head">
       <span class="eyebrow">🔍 Keşfet</span>
-      <h2>Önce Sırala: Orbitaller Hangi Sırayla Dolar?</h2>
-      <p>Elektronlar orbitallere enerjilerine göre, en düşükten en yükseğe doğru yerleşir. Aşağıdaki 8 orbitali tıklayarak <strong>artan enerji sırasına</strong> diz — Z≤36 arası tüm elementler için gereken sıralamanın tamamı bu.</p>
+      <h2>Şimdi Sen Sırala: Orbitaller Hangi Sırayla Dolar?</h2>
+      <p>Elektronlar orbitallere enerjilerine göre, en düşükten en yükseğe doğru yerleşir. Yukarıda okuduğun diyagonal diyagramı kullanarak aşağıdaki 8 orbitali tıklayıp <strong>artan enerji sırasına</strong> diz — Z≤36 arası tüm elementler için gereken sıralamanın tamamı bu.</p>
     </div>
     <div class="card">
       <div class="small" style="margin-bottom:8px">Havuz — sırayla tıkla (doğru sıraya göre)</div>
@@ -172,6 +221,43 @@
         <button class="btn" id="energy-reset">↺ Sıfırla</button>
       </div>
       <div id="energy-feedback" style="margin-top:14px"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">🔍 Keşfet</span>
+      <h2>Aynı Tür, Farklı Atom: Orbital Enerjisi Karşılaştırması</h2>
+      <p>2. periyottaki B, C, N, O, F elementlerinde sırayla ölçüm yap; 2s ve 2p alt kabuklarının bağıl enerjisinin atom numarasıyla nasıl değiştiğini ve aynı atomda 2s ile 2p'nin birbirine göre enerjisini grafikte gözlemle.</p>
+    </div>
+    <div class="card">
+      <div class="two-col">
+        <div class="lab-panel">
+          <div class="lab-head">
+            <div class="lab-title"><span class="dot"></span> Ölçüm İstasyonu</div>
+            <button class="btn on-dark small" id="oe-reset">↺ Sıfırla</button>
+          </div>
+          <div class="trend-picker" id="oe-picker"></div>
+        </div>
+        <div class="lab-panel">
+          <div class="lab-head">
+            <div class="lab-title"><span class="dot"></span> Grafik: Atom Numarası — Bağıl Enerji</div>
+          </div>
+          <svg id="oe-graph" class="coord-graph" viewBox="0 0 320 200"></svg>
+          <div class="coord-legend">
+            <span><i style="background:var(--gas)"></i> 2p</span>
+            <span><i style="background:var(--mol-b)"></i> 2s</span>
+          </div>
+        </div>
+      </div>
+      <div class="callout model" style="margin-top:14px" id="oe-note">Ölçümlere başla — her iki eğri de ortaya çıkacak.</div>
+      <div class="journal" style="margin-top:14px">
+        <label>📓 Keşif Günlüğü — MEB Etkinlik-1.8 soruları</label>
+        <textarea id="journal6-oe" placeholder="1) Enerji seviyesi artışına (atom numarası arttıkça) bağlı olarak atom orbitallerinin bağıl enerjileri nasıl değişmektedir? Gerekçelendirerek önerme şeklinde yaz.&#10;2) Aynı enerji seviyesindeki (2. enerji seviyesi) farklı tür orbitallerin (2s ve 2p) enerjileri aynı mıdır? Bağıl enerji seviyeleri hakkında önermeni yaz."></textarea>
+        <div class="save-state"></div>
+      </div>
     </div>
   </div>
 </section>
@@ -312,7 +398,7 @@
 
 <script type="module">
   import { mountNav, mountFooter } from "../assets/js/nav.js?v=1";
-  import { renderQuiz, markVisited, bindJournal } from "../assets/js/quiz-engine.js?v=3";
+  import { renderQuiz, markVisited, bindJournal, renderDiagonalDiagram } from "../assets/js/quiz-engine.js?v=4";
   import { QUIZ } from "../assets/js/quiz-data.js?v=5";
   import { QUESTION_BANK } from "../question-bank.js?v=2";
   import { EL_BY_Z, buildConfig, toConventionalOrder, configString, nobleGasShorthand } from "../assets/js/periodic-data.js?v=1";
@@ -323,6 +409,7 @@
   markVisited("orbital");
   bindJournal(document.getElementById("journal6"), "orbital-1");
   renderQuiz(document.getElementById("quiz-host"), QUIZ.orbital, "orbital", QUESTION_BANK.kim916);
+  document.getElementById("diagonal-diagram-host").innerHTML = renderDiagonalDiagram();
 
   /* ---- Önce Sırala: Orbitalleri Enerjiye Göre Diz ----
    * Z≤36 müfredat sınırı için Aufbau dolum sırasının tamamı bu 8 alt
@@ -388,6 +475,105 @@
   });
   document.getElementById("energy-reset").addEventListener("click", resetEnergySort);
   resetEnergySort();
+
+  /* ---- Aynı Tür, Farklı Atom: Orbital Enerjisi Karşılaştırması ----
+   * MEB "Etkinlik-1.8" — 2. periyot B,C,N,O,F için 2s ve 2p alt kabuklarının
+   * bağıl enerjisi, kitaptaki grafiğin okunmasıyla elde edilen yaklaşık
+   * değerlerdir (kJ/mol, göreli/negatif ölçek — sıfır noktası keyfi). */
+  (function () {
+    const OE_ELS = [
+      { sym: "B", z: 5, e2s: -1300, e2p: -800 },
+      { sym: "C", z: 6, e2s: -1750, e2p: -950 },
+      { sym: "N", z: 7, e2s: -2150, e2p: -1150 },
+      { sym: "O", z: 8, e2s: -2900, e2p: -1450 },
+      { sym: "F", z: 9, e2s: -4500, e2p: -1800 },
+    ];
+    let oeRevealed = OE_ELS.map(() => false);
+
+    function oeRenderPicker() {
+      const nextIdx = oeRevealed.findIndex(r => !r);
+      const picker = document.getElementById("oe-picker");
+      picker.innerHTML = OE_ELS.map((el, i) => {
+        const done = oeRevealed[i];
+        const isActive = i === nextIdx;
+        const state = done ? "done" : (isActive ? "active" : "locked");
+        return `
+          <div class="trend-card ${state}" data-idx="${i}">
+            <div class="tc-sym">${el.sym}</div>
+            <div class="tc-z">Z=${el.z}</div>
+            <div class="tc-val">${done ? `2s: ${el.e2s}<br>2p: ${el.e2p}` : (isActive ? "?" : "")}</div>
+            ${isActive ? `<div class="tc-btn">📏 Ölç</div>` : ""}
+          </div>
+        `;
+      }).join("");
+      picker.querySelectorAll(".trend-card.active").forEach(card => {
+        card.addEventListener("click", () => {
+          oeRevealed[+card.dataset.idx] = true;
+          oeRenderPicker();
+          oeRenderGraph();
+          oeUpdateNote();
+        });
+      });
+    }
+
+    function oeBuildGraph() {
+      const plotX0 = 44, plotX1 = 308, plotY0 = 14, plotY1 = 168;
+      const zs = OE_ELS.map(el => el.z);
+      const xMin = zs[0] - 1, xMax = zs[zs.length - 1] + 1;
+      const yMin = -4900, yMax = 0;
+      const xScale = z => plotX0 + (z - xMin) / (xMax - xMin) * (plotX1 - plotX0);
+      const yScale = v => plotY0 + (yMax - v) / (yMax - yMin) * (plotY1 - plotY0);
+
+      let svg = `<line class="axis" x1="${plotX0}" y1="${plotY0}" x2="${plotX0}" y2="${plotY1}"/>`;
+      svg += `<line class="axis" x1="${plotX0}" y1="${plotY1}" x2="${plotX1}" y2="${plotY1}"/>`;
+      [yMin, yMin / 2, 0].forEach(v => {
+        const y = yScale(v);
+        svg += `<line class="axis" x1="${plotX0 - 3}" y1="${y}" x2="${plotX0}" y2="${y}"/>`;
+        svg += `<text class="axis-label" x="${plotX0 - 6}" y="${y + 3}" text-anchor="end">${Math.round(v)}</text>`;
+      });
+      OE_ELS.forEach(el => {
+        const x = xScale(el.z);
+        svg += `<line class="axis" x1="${x}" y1="${plotY1}" x2="${x}" y2="${plotY1 + 3}"/>`;
+        svg += `<text class="axis-label" x="${x}" y="${plotY1 + 13}" text-anchor="middle">${el.sym}</text>`;
+      });
+      svg += `<text class="axis-label" x="${(plotX0 + plotX1) / 2}" y="196" text-anchor="middle">Atom No (Z)</text>`;
+      svg += `<text class="axis-label" transform="rotate(-90 12 ${(plotY0 + plotY1) / 2})" x="12" y="${(plotY0 + plotY1) / 2}" text-anchor="middle">Bağıl Enerji</text>`;
+
+      const pts2s = OE_ELS.map((el, i) => oeRevealed[i] ? { x: xScale(el.z), y: yScale(el.e2s) } : null).filter(Boolean);
+      const pts2p = OE_ELS.map((el, i) => oeRevealed[i] ? { x: xScale(el.z), y: yScale(el.e2p) } : null).filter(Boolean);
+      if (pts2s.length > 1) svg += `<polyline class="trace-2s" points="${pts2s.map(p => `${p.x},${p.y}`).join(" ")}"/>`;
+      if (pts2p.length > 1) svg += `<polyline class="trace-2p" points="${pts2p.map(p => `${p.x},${p.y}`).join(" ")}"/>`;
+      OE_ELS.forEach((el, i) => {
+        if (!oeRevealed[i]) return;
+        svg += `<circle class="pt-2s" cx="${xScale(el.z)}" cy="${yScale(el.e2s)}" r="4"/>`;
+        svg += `<circle class="pt-2p" cx="${xScale(el.z)}" cy="${yScale(el.e2p)}" r="4"/>`;
+      });
+      return svg;
+    }
+    function oeRenderGraph() {
+      document.getElementById("oe-graph").innerHTML = oeBuildGraph();
+    }
+
+    function oeUpdateNote() {
+      const doneCount = oeRevealed.filter(Boolean).length;
+      const note = document.getElementById("oe-note");
+      if (doneCount < OE_ELS.length) {
+        note.innerHTML = `<h5>Devam Et</h5><p>${doneCount}/${OE_ELS.length} atomun 2s ve 2p enerjisi ölçüldü. Sıradaki elementin kutusuna tıklayıp "📏 Ölç" ile devam et.</p>`;
+        return;
+      }
+      note.innerHTML = `<h5>İki Eğilim Birden!</h5><p><strong>Aynı alt kabuk, artan Z:</strong> 2p (üstteki turuncu eğri) ve 2s (alttaki mor eğri) çizgilerinin ikisi de B'den F'ye gidildikçe düşüyor (daha negatif oluyor) — çekirdeğin artan çekimi elektronları daha sıkı bağlıyor. <strong>Aynı atom, farklı alt kabuk:</strong> her element için 2p noktası her zaman 2s noktasının üstünde, yani 2p her zaman 2s'den daha yüksek enerjili — aynı temel enerji seviyesinde (n=2) bile alt kabuklar birbirinden farklı enerjilere sahip.</p>`;
+    }
+
+    function oeReset() {
+      oeRevealed = OE_ELS.map(() => false);
+      oeRenderPicker();
+      oeRenderGraph();
+      oeUpdateNote();
+    }
+    document.getElementById("oe-reset").addEventListener("click", oeReset);
+    oeReset();
+  })();
+  bindJournal(document.getElementById("journal6-oe"), "orbital-oe");
 
   /* ---- Orbital benzetimi: Uzun Pozlu Fotoğraf ---- */
   const expoCanvas = document.getElementById("expo-canvas");

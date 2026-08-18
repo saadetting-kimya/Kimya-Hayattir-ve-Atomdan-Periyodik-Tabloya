@@ -6,8 +6,13 @@
 <title>Kimya 9 · Kimya Hayattır ve Atomdan Periyodik Tabloya — Ders Defteri</title>
 <style>
   :root{
-    --ink:#14152b; --ink-soft:#3c3f5c; --line:#c7cbdd; --paper:#ffffff; --bg:#eef0f7;
-    --accent:#4a3fd1; --accent-2:#d9930a; --good:#177a44;
+    --ink:#14152b; --ink-soft:#3c3f5c; --ink-faint:#6b6f8c; --line:#c7cbdd; --paper:#ffffff; --bg:#eef0f7;
+    --surface:#f7f7fc; --surface-2:#e4e6f2; --accent:#4a3fd1; --accent-2:#d9930a; --good:#177a44;
+    --mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    /* Görsel bileşen renk paleti — assets/css/style.css'teki uygulama paletiyle aynı
+       isimlendirme (madde 6/11: uygulama ile defter aynı görsel dili kullanmalı). */
+    --gas:#4a3fd1; --gas-dark:#372f9e; --bad:#b3261e; --heat:#d9930a; --heat-dark:#a8730a;
+    --mol-a:#1d6fd1; --mol-b:#c22a72;
   }
   *{ box-sizing:border-box; }
   body{
@@ -37,7 +42,9 @@
     .page.cover{ min-height:calc(297mm - 32mm); }
     .noprint{ display:none !important; }
     .soru, .box, .baglam, .kavramlar-list, .lo-box, .draw-box, .draw-row, .ca-item, .ca-unit, .depo-wrap,
-    table.wk, table.usage, table.depo-matrix{
+    table.wk, table.usage, table.depo-matrix,
+    .visual-wrap, .amodel-wrap, .ncloud-wrap, .cyc-wrap, .cmap-wrap, .lequip-wrap, .qchart-wrap,
+    .odiagram-wrap, .pgrid-wrap, .ccompare-wrap, .ghs-wrap, .diagonal-diagram-wrap{
       break-inside:avoid; page-break-inside:avoid;
     }
     /* .worksheet kutuları (özellikle çok etkinlikli olanlar) tek bir A4 sayfasından uzun
@@ -103,7 +110,20 @@
      taşabildiğinden, Grid öğeleri sayfa sınırında güvenilir bölünmez (taşma/boş
      sayfa hatası riski); multi-column ise içeriği sütun sütun, sayfa kırılımına
      uygun şekilde akıtır. */
-  .konu-cols, .sorular-cols, .ca-cols{ columns:2; column-gap:10mm; }
+  /* column-fill:auto ZORUNLU: varsayılan 'balance' değeri tüm akışın toplam
+     yüksekliğine göre TEK bir bölünme noktası hesaplar; break-inside:avoid
+     olan büyük bir blok (ör. GHS piktogram ızgarası) o noktaya sığmazsa,
+     kalan sütun tamamen BOŞ kalır ve blok bir sonraki sütuna/sayfaya atlar
+     (gözlemlenen büyük boşluk hatası). auto ile sütun 1 doğal olarak dolar,
+     böyle bir "hesaplanmış boşluk" oluşmaz. */
+  .konu-cols, .sorular-cols, .ca-cols{ columns:2; column-gap:10mm; column-fill:auto; }
+  /* depo-wrap (9x9 kimyasal depolama matrisi) tek sütun genişliğinde (85mm)
+     hücreler sarıldığı için çok uzuyor (~1724px) — bu, bir sayfa sütununun
+     TOPLAM yüksekliğinden (~986px) bile fazla, yani break-inside:avoid ile
+     hiçbir sütuna asla sığamıyor ve bu da büyük boş alan hatasına yol açıyor.
+     column-span:all ile tabloyu tam sayfa genişliğine (180mm) yayıp hem
+     okunabilirliği artırıyor hem de yüksekliği makul sınırlara indiriyoruz. */
+  .depo-wrap{ column-span:all; }
   .box{ border-radius:6px; padding:10px 12px; margin:10px 0; font-family:Arial,sans-serif; font-size:11.8px; }
   .box .lbl{ font-weight:800; font-size:10px; text-transform:uppercase; letter-spacing:.05em; margin-bottom:5px; display:flex; align-items:center; gap:5px; }
   .kavram{ border:2px solid var(--accent); background:#f5f4fd; }
@@ -186,6 +206,52 @@
   .worksheet .wlbl{ font-weight:800; font-size:10.5px; text-transform:uppercase; letter-spacing:.04em; margin-bottom:6px; display:flex; align-items:center; gap:6px; color:var(--ink); }
   .worksheet p{ font-size:11px; margin:0 0 6px; }
   .worksheet .hint{ font-size:10px; color:#5a5e78; font-style:italic; margin-top:2px; }
+
+  /* ---- Görsel bileşenler (uygulamayla aynı görsel dil — assets/js/quiz-engine.js'in
+     render fonksiyonlarından üretilmiş statik SVG/HTML; madde 6/8/11) ---- */
+  .visual-wrap{ background:var(--bg); border:1px solid var(--line); border-radius:10px; padding:12px 14px; margin:10px 0 14px; }
+  .visual-caption{ font-family:Arial,sans-serif; font-size:11.5px; color:var(--ink-faint); margin-bottom:8px; text-align:center; }
+  .visual-row{ display:flex; gap:16px; flex-wrap:wrap; justify-content:center; align-items:flex-start; }
+
+  .amodel-wrap, .ncloud-wrap, .cyc-wrap, .lequip-wrap{ display:flex; flex-direction:column; align-items:center; gap:6px; }
+  .amodel-label, .ncloud-label, .lequip-label{ font-family:Arial,sans-serif; font-size:11.5px; font-weight:700; color:var(--ink); }
+  .amodel-caption, .ncloud-caption, .cyc-caption, .lequip-caption{ font-family:Arial,sans-serif; font-size:11px; color:var(--ink-faint); text-align:center; }
+
+  .cmap-grid{ display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  .cmap-card{ background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--gas); border-radius:8px; padding:7px 9px; }
+  .cmap-label{ font-family:Arial,sans-serif; font-size:11.5px; font-weight:700; color:var(--ink); margin-bottom:2px; }
+  .cmap-detail{ font-family:Arial,sans-serif; font-size:10px; color:var(--ink-faint); line-height:1.35; }
+
+  .qtable-wrap{ margin-bottom:0; }
+  .qchart-svg{ width:100%; height:auto; color:var(--ink); display:block; }
+
+  .odiagram{ display:flex; gap:14px; align-items:flex-end; flex-wrap:wrap; justify-content:center; }
+  .osub{ display:flex; flex-direction:column; align-items:center; gap:5px; }
+  .oboxes{ display:flex; }
+  .obox{ width:26px; height:26px; border:1.8px solid var(--ink-soft); display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:var(--gas); background:var(--surface); }
+  .osub .obox:not(:last-child){ border-right:none; }
+  .olabel{ font-family:var(--mono); font-size:10.5px; color:var(--ink-faint); font-weight:700; }
+
+  .diagonal-diagram-wrap{ background:var(--bg); border:1px solid var(--line); border-radius:8px; padding:12px 14px; margin:10px 0; }
+  .diagonal-diagram-svg{ width:100%; max-width:280px; height:auto; display:block; margin:0 auto; color:var(--ink); }
+  .diagonal-diagram-note{ font-family:Arial,sans-serif; font-size:10px; color:var(--ink-soft); text-align:center; margin-top:6px; line-height:1.4; }
+
+  .pgrid{ display:inline-grid; gap:3px; margin:0 auto; }
+  .pgrid-row{ display:contents; }
+  .pgrid-cell{ aspect-ratio:1; display:flex; align-items:center; justify-content:center; border-radius:5px; border:1px solid var(--line); font-size:10.5px; font-weight:700; color:var(--ink-soft); background:var(--surface); }
+  .pgrid-empty{ border:none; background:transparent; }
+  .pgrid-hl{ background:rgba(74,63,209,.16); border-color:var(--gas); color:var(--gas-dark); font-weight:800; }
+
+  .ccompare-title{ font-family:Arial,sans-serif; font-size:11.5px; font-weight:700; color:var(--ink); margin-bottom:10px; text-align:center; }
+  .ccompare-row{ display:flex; gap:14px; align-items:flex-end; flex-wrap:wrap; justify-content:center; }
+  .ccircle-item{ display:flex; flex-direction:column; align-items:center; gap:2px; }
+  .ccircle-label{ font-family:Arial,sans-serif; font-size:11px; font-weight:700; color:var(--ink); margin-top:2px; }
+  .ccircle-value{ font-family:var(--mono); font-size:10px; color:var(--ink-faint); }
+
+  .ghs-row{ display:flex; gap:14px; flex-wrap:wrap; justify-content:center; }
+  .ghs-item{ display:flex; flex-direction:column; align-items:center; gap:4px; width:78px; }
+  .ghs-item img{ display:block; }
+  .ghs-label{ font-family:Arial,sans-serif; font-size:9.5px; text-align:center; color:var(--ink-soft); font-weight:600; line-height:1.2; }
 </style>
 </head>
 <body>
@@ -296,6 +362,34 @@
       <tr><td class="fill"></td><td class="fill"></td></tr>
     </table>
     <p style="margin-top:14px"><b>2) pH Laboratuvarı Etkinliği —</b> Her maddeye tıklamadan önce pH'ını tahmin et; sonra uygulamadan okuduğun değeri, asit/baz/nötr sınıfını ve "Eklenen Su"yu 5 birime getirdiğinde okunan yeni pH'ı tabloya yaz.</p>
+    <div class="visual-wrap">
+      <div class="visual-caption">Örnek: pH skalasında üç madde nasıl işaretlenir? (aşağıdaki tabloyu doldururken sen de kendi maddelerini böyle işaretleyebilirsin)</div>
+      <div class="qchart-wrap">
+      <svg class="qchart-svg" viewBox="0 0 480 154" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+    <linearGradient id="phGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e53935"></stop>
+      <stop offset="50%" stop-color="#8bc34a"></stop>
+      <stop offset="100%" stop-color="#8e24aa"></stop>
+    </linearGradient>
+  </defs>
+        <text x="240.0" y="16" text-anchor="middle" font-size="12" font-weight="600" fill="currentColor">pH Skalası Üzerinde Örnek Maddeler</text>
+        <rect x="30" y="44" width="420" height="22" fill="url(#phGrad)" rx="4"></rect>
+        <text x="30" y="26.0" font-size="9.5" fill="currentColor">0</text>
+        <text x="240.0" y="26.0" text-anchor="middle" font-size="9.5" fill="currentColor">7</text>
+        <text x="450.0" y="26.0" text-anchor="end" font-size="9.5" fill="currentColor">14</text>
+        <polygon points="120.0,40.0 114.0,30.0 126.0,30.0" fill="currentColor"></polygon>
+        <line x1="120.0" y1="66.0" x2="120.0" y2="84.0" stroke="currentColor" stroke-opacity="0.4"></line>
+        <text x="120.0" y="96.0" text-anchor="middle" font-size="10.5" fill="currentColor">Sirke (asit)</text>
+        <polygon points="240.0,40.0 234.0,30.0 246.0,30.0" fill="currentColor"></polygon>
+        <line x1="240.0" y1="66.0" x2="240.0" y2="106.0" stroke="currentColor" stroke-opacity="0.4"></line>
+        <text x="240.0" y="118.0" text-anchor="middle" font-size="10.5" fill="currentColor">Saf Su (nötr)</text>
+        <polygon points="300.0,40.0 294.0,30.0 306.0,30.0" fill="currentColor"></polygon>
+        <line x1="300.0" y1="66.0" x2="300.0" y2="84.0" stroke="currentColor" stroke-opacity="0.4"></line>
+        <text x="300.0" y="96.0" text-anchor="middle" font-size="10.5" fill="currentColor">Karbonat (baz)</text>
+      </svg>
+      </div>
+    </div>
     <table class="wk">
       <tr><th>Madde</th><th>Tahminim (pH)</th><th>Uygulama (pH)</th><th>Asit / Baz / Nötr</th><th>5 birim su sonrası pH</th></tr>
       <tr><td>Limon Tuzu</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
@@ -329,11 +423,26 @@
     <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
   <div class="soru"><span class="no">4.</span> <span class="tip">Açık Uçlu</span> Doğada hayatta kalma becerileriyle kimya bilgisi arasında nasıl bir ilişki kurulabilir? Bir örnekle açıkla.
     <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
-  <div class="soru"><span class="no">5.</span> <span class="tip">Çoktan Seçmeli</span> Aşağıdakilerden hangisi kimya biliminin doğrudan etkilediği bir sektör DEĞİLDİR?
+  <div class="soru"><span class="no">5.</span> <span class="tip">Çoktan Seçmeli</span> Aşağıdaki pH skalasında X noktasıyla işaretlenen maddenin özelliği için hangisi doğrudur?
+    <svg viewBox="0 0 300 60" width="100%" style="max-width:300px; display:block; margin:6px 0 8px;">
+      <defs>
+        <linearGradient id="q1phGrad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#e53935"></stop>
+          <stop offset="50%" stop-color="#8bc34a"></stop>
+          <stop offset="100%" stop-color="#8e24aa"></stop>
+        </linearGradient>
+      </defs>
+      <rect x="10" y="24" width="280" height="14" fill="url(#q1phGrad)" rx="3"></rect>
+      <text x="10" y="18" font-size="8" fill="#333">0</text>
+      <text x="150" y="18" text-anchor="middle" font-size="8" fill="#333">7</text>
+      <text x="290" y="18" text-anchor="end" font-size="8" fill="#333">14</text>
+      <polygon points="50,24 45,15 55,15" fill="#000"></polygon>
+      <text x="50" y="52" text-anchor="middle" font-size="11" font-weight="700" fill="#000">X</text>
+    </svg>
     <div class="secenekler">
-      <div>○ A) Temizlik ürünleri üretimi</div><div>○ B) İlaç geliştirme</div>
-      <div>○ C) Gıda üretimi</div><div>○ D) Bir şiirin kafiye düzeni</div>
-      <div>○ E) Enerji depolama (pil) teknolojileri</div>
+      <div>○ A) Kuvvetli baz</div><div>○ B) Zayıf asit</div>
+      <div>○ C) Kuvvetli asit</div><div>○ D) Tam nötr</div>
+      <div>○ E) Zayıf baz</div>
     </div></div>
   <div class="soru"><span class="no">6.</span> <span class="tip">Çoktan Seçmeli</span> Bilgisayarların işlemesi, telefonların şarj olması ve ekranların ışıldaması gibi olaylar temelde neye dayanır?
     <div class="secenekler">
@@ -386,6 +495,36 @@
   <div class="konu-cols">
   <p>Kimya, gündelik yaşamın her alanında etkilidir; besin maddelerinden tarımda kullanılan gübrelere, çamaşır deterjanlarından şampuanlara kadar birçok ürün kimyanın etkisi altındadır. Bu geniş kapsamlı bilim dalı altı ana alt disipline ayrılır: maddelerin bileşenlerini ve miktarlarını belirleyen <b>analitik kimya</b> (nitel/nicel analiz), canlı organizmalardaki tepkimeleri inceleyen <b>biyokimya</b>, karbon bileşiklerini inceleyen (ve bileşik çeşitliliği nedeniyle kimyanın en geniş alanı olan) <b>organik kimya</b>, karbon içermeyen bileşikleri (asit, baz, tuz, metal, mineral) inceleyen <b>anorganik kimya</b>, kimyasal sistemlerin fiziksel faktörlere (sıcaklık, basınç, derişim) bağlı davranışını ve enerji dönüşümlerini inceleyen <b>fizikokimya</b>, ve büyük moleküllerin (makromoleküllerin) kimyasını inceleyen <b>polimer kimyası</b>.</p>
   <p>Bu disiplinler birbirinden kopuk değildir; gerçek bir problem çoğu zaman birden fazla disiplinin bir arada kullanılmasını gerektirir. Örneğin yeni bir ilaç geliştirmek hem organik kimya (molekülün sentezi), hem biyokimya (vücuttaki etkisi), hem de analitik kimya (saflık ve doz kontrolü) bilgisini aynı anda kullanır.</p>
+
+  <div class="cmap-wrap">
+      <div class="cmap-caption">Kimyanın altı ana alt disiplini</div>
+      <div class="cmap-grid">
+    <div class="cmap-card" style="border-left-color:var(--gas)">
+      <div class="cmap-label">Analitik Kimya</div>
+      <div class="cmap-detail">Maddelerin bileşenlerini ve miktarlarını belirler (nitel/nicel analiz).</div>
+    </div>
+    <div class="cmap-card" style="border-left-color:var(--bad)">
+      <div class="cmap-label">Biyokimya</div>
+      <div class="cmap-detail">Canlı organizmalardaki kimyasal tepkimeleri inceler.</div>
+    </div>
+    <div class="cmap-card" style="border-left-color:var(--good)">
+      <div class="cmap-label">Organik Kimya</div>
+      <div class="cmap-detail">Karbon bileşiklerini inceler; kimyanın en geniş alt disiplinidir.</div>
+    </div>
+    <div class="cmap-card" style="border-left-color:var(--heat)">
+      <div class="cmap-label">Anorganik Kimya</div>
+      <div class="cmap-detail">Karbon içermeyen bileşikleri (asit, baz, tuz, metal) inceler.</div>
+    </div>
+    <div class="cmap-card" style="border-left-color:var(--mol-a)">
+      <div class="cmap-label">Fizikokimya</div>
+      <div class="cmap-detail">Kimyasal sistemlerin fiziksel faktörlere bağlı davranışını inceler.</div>
+    </div>
+    <div class="cmap-card" style="border-left-color:var(--mol-b)">
+      <div class="cmap-label">Polimer Kimyası</div>
+      <div class="cmap-detail">Büyük moleküllerin (makromoleküllerin) kimyasını inceler.</div>
+    </div>
+  </div>
+    </div>
 
   <div class="box kavram">
     <div class="lbl">💡 Kavram · Nitel ve Nicel Analiz</div>
@@ -492,6 +631,66 @@
   <p>Kimya bilimi; ürettiği bilgi ve yöntemlerle çeşitli maddelerin özelliklerinin belirlenmesine ve günlük hayattaki kullanım alanlarının anlaşılmasına yardımcı olur. Kimya teknolojisi ön lisans programlarını tamamlayanlar <b>kimya teknikeri</b> unvanı alarak laboratuvar teknikeri, kalite kontrol analisti gibi pozisyonlarda çalışabilir. Üniversitelerin dört yıllık lisans programları (kimya, kimya mühendisliği, polimer malzeme mühendisliği, kimya öğretmenliği) ise sırasıyla <b>kimyager</b>, <b>kimya mühendisi</b>, <b>polimer malzeme mühendisi</b> ve <b>kimya öğretmeni</b> unvanlarına yol açar.</p>
   <p>Kimya bilgisiyle çalışılabilecek sekiz temel sektör şunlardır: <b>kimya endüstrisi</b> (boya, plastik, deterjan üretimi), <b>agronomi ve tarım</b> (gübre, pestisit), <b>sağlık ve biyoteknoloji</b> (adli kimya, ilaç geliştirme), <b>malzeme ve nanoteknoloji</b>, <b>çevre ve sürdürülebilirlik</b> (atık yönetimi, su arıtma), <b>eğitim ve akademik çalışma</b>, <b>enerji sektörü</b> (pil teknolojileri) ve <b>gıda ve içecek endüstrisi</b> (moleküler gastronomi dâhil). Kariyer planlaması dört basamaklı bir döngüdür: kişisel özellikleri tanıma (öz farkındalık), fırsatları araştırma, karar verip plan yapma ve planı uygulama.</p>
 
+  <div class="visual-row">
+    <div class="cyc-wrap">
+      <div class="cyc-caption">Kariyer Planlama Döngüsü</div>
+      <svg viewBox="0 0 260 260" width="220" height="220" class="cyc-svg">
+      <path d="M130.0,22.0 A108,108 0 0 1 238.0,130.0 L176.0,130.0 A46,46 0 0 0 130.0,84.0 Z" fill="var(--gas)" opacity="0.32" stroke="var(--surface)" stroke-width="2"></path>
+      <text x="187.3" y="67.2" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--ink)"><tspan x="187.3" dy="0">Öz</tspan><tspan x="187.3" dy="11">Farkındalık</tspan></text>
+      <text x="187.3" y="53.2" text-anchor="middle" font-size="10" fill="var(--ink-faint)" font-family="var(--mono)">1</text>
+      <path d="M238.0,130.0 A108,108 0 0 1 130.0,238.0 L130.0,176.0 A46,46 0 0 0 176.0,130.0 Z" fill="var(--bad)" opacity="0.32" stroke="var(--surface)" stroke-width="2"></path>
+      <text x="187.3" y="181.8" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--ink)"><tspan x="187.3" dy="0">Fırsat</tspan><tspan x="187.3" dy="11">Araştırma</tspan></text>
+      <text x="187.3" y="167.8" text-anchor="middle" font-size="10" fill="var(--ink-faint)" font-family="var(--mono)">2</text>
+      <path d="M130.0,238.0 A108,108 0 0 1 22.0,130.0 L84.0,130.0 A46,46 0 0 0 130.0,176.0 Z" fill="var(--good)" opacity="0.32" stroke="var(--surface)" stroke-width="2"></path>
+      <text x="72.7" y="170.8" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--ink)"><tspan x="72.7" dy="0">Karar</tspan><tspan x="72.7" dy="11">/</tspan><tspan x="72.7" dy="11">Plan</tspan><tspan x="72.7" dy="11">Yapma</tspan></text>
+      <text x="72.7" y="156.8" text-anchor="middle" font-size="10" fill="var(--ink-faint)" font-family="var(--mono)">3</text>
+      <path d="M22.0,130.0 A108,108 0 0 1 130.0,22.0 L130.0,84.0 A46,46 0 0 0 84.0,130.0 Z" fill="var(--heat)" opacity="0.32" stroke="var(--surface)" stroke-width="2"></path>
+      <text x="72.7" y="67.2" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--ink)"><tspan x="72.7" dy="0">Planı</tspan><tspan x="72.7" dy="11">Uygulama</tspan></text>
+      <text x="72.7" y="53.2" text-anchor="middle" font-size="10" fill="var(--ink-faint)" font-family="var(--mono)">4</text>
+        <circle cx="130" cy="130" r="42" fill="var(--surface)" stroke="var(--line)" stroke-width="1.3"></circle>
+        <text x="130" y="128.0" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--ink)"><tspan x="130" dy="0">Kariyer</tspan><tspan x="130" dy="12">Planlama</tspan></text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="cmap-wrap">
+      <div class="cmap-caption">Kimya alanında sekiz kariyer sektörü</div>
+      <div class="cmap-grid">
+    <div class="cmap-card" style="border-left-color:var(--gas)">
+      <div class="cmap-label">Kimya Endüstrisi</div>
+      <div class="cmap-detail">Boya, plastik, deterjan üretimi.</div>
+    </div>
+    <div class="cmap-card" style="border-left-color:var(--bad)">
+      <div class="cmap-label">Agronomi ve Tarım</div>
+      <div class="cmap-detail">Gübre, pestisit geliştirme.</div>
+    </div>
+    <div class="cmap-card" style="border-left-color:var(--good)">
+      <div class="cmap-label">Sağlık ve Biyoteknoloji</div>
+      <div class="cmap-detail">Adli kimya, ilaç geliştirme.</div>
+    </div>
+    <div class="cmap-card" style="border-left-color:var(--heat)">
+      <div class="cmap-label">Malzeme ve Nanoteknoloji</div>
+      <div class="cmap-detail">Yeni malzeme ve nanomalzeme geliştirme.</div>
+    </div>
+    <div class="cmap-card" style="border-left-color:var(--mol-a)">
+      <div class="cmap-label">Çevre ve Sürdürülebilirlik</div>
+      <div class="cmap-detail">Atık yönetimi, su arıtma.</div>
+    </div>
+    <div class="cmap-card" style="border-left-color:var(--mol-b)">
+      <div class="cmap-label">Eğitim ve Akademik Çalışma</div>
+      <div class="cmap-detail">Öğretmenlik, araştırma.</div>
+    </div>
+    <div class="cmap-card" style="border-left-color:var(--gas-dark)">
+      <div class="cmap-label">Enerji Sektörü</div>
+      <div class="cmap-detail">Pil teknolojileri, enerji depolama.</div>
+    </div>
+    <div class="cmap-card" style="border-left-color:var(--heat-dark)">
+      <div class="cmap-label">Gıda ve İçecek Endüstrisi</div>
+      <div class="cmap-detail">Moleküler gastronomi dâhil.</div>
+    </div>
+  </div>
+    </div>
+
   <div class="box gercek">
     <div class="lbl">🌍 Gerçek Hayattan</div>
     Nobel Ödüllü biyokimyager Aziz Sancar, DNA onarım mekanizmaları üzerine yaptığı çalışmalarla 2015 Nobel Kimya Ödülü'nü kazandı — kimya alanında bu ödülü alan ilk Türk vatandaşı oldu. "Türk Aynştaynı" olarak anılan Oktay Sinanoğlu ise 25 yaşında Yale'de en genç profesör unvanını aldı ve atom-molekül kuramına önemli katkılar sağladı.
@@ -555,7 +754,18 @@
       <div>○ C) Sağlık ve biyoteknoloji</div><div>○ D) Kimya endüstrisi</div>
       <div>○ E) Eğitim ve akademik çalışma</div>
     </div></div>
-  <div class="soru"><span class="no">8.</span> <span class="tip">Çoktan Seçmeli</span> Kariyer planlama döngüsünde "fırsatları araştırma" basamağından hemen sonra hangi basamak gelir?
+  <div class="soru"><span class="no">8.</span> <span class="tip">Çoktan Seçmeli</span> Aşağıdaki döngüde yıldız (★) ile işaretlenen "Fırsat Araştırma" basamağından, döngünün yönü izlenerek hemen sonra hangi basamağa geçilir?
+    <svg viewBox="0 0 200 200" width="140" height="140" style="display:block; margin:6px 0 8px;">
+      <path d="M100,17 A83,83 0 0 1 183,100 L141,100 A41,41 0 0 0 100,59 Z" fill="var(--accent)" opacity="0.28" stroke="#fff" stroke-width="2"></path>
+      <text x="141" y="55" text-anchor="middle" font-size="9" font-weight="700">Öz Fark.</text>
+      <path d="M183,100 A83,83 0 0 1 100,183 L100,141 A41,41 0 0 0 141,100 Z" fill="var(--accent-2)" opacity="0.45" stroke="#fff" stroke-width="2"></path>
+      <text x="141" y="140" text-anchor="middle" font-size="9" font-weight="700">Fırsat★</text>
+      <path d="M100,183 A83,83 0 0 1 17,100 L59,100 A41,41 0 0 0 100,141 Z" fill="var(--good)" opacity="0.28" stroke="#fff" stroke-width="2"></path>
+      <text x="59" y="140" text-anchor="middle" font-size="9" font-weight="700">Karar/Plan</text>
+      <path d="M17,100 A83,83 0 0 1 100,17 L100,59 A41,41 0 0 0 59,100 Z" fill="#c9a227" opacity="0.3" stroke="#fff" stroke-width="2"></path>
+      <text x="59" y="55" text-anchor="middle" font-size="9" font-weight="700">Uygulama</text>
+      <circle cx="100" cy="100" r="35" fill="#fff" stroke="#ccc" stroke-width="1"></circle>
+    </svg>
     <div class="secenekler">
       <div>○ A) Karar verip plan yapma</div><div>○ B) Öz farkındalık</div>
       <div>○ C) Planı uygulama</div><div>○ D) Hiçbiri, döngü burada biter</div>
@@ -614,10 +824,50 @@
       <div><span class="sw" style="background:#d9930a"></span>! Su ile temas ettiğinde alevlenebilir, gaz çıkaran veya kendiliğinden yanmaya yatkın maddelerle depolanamaz.</div>
     </div>
   </div>
+  <p>Laboratuvarda güvenli çalışabilmek, kullanılan araç-gereci doğru tanımaktan da geçer. <b>Erlenmayer</b>, koni biçimli dar boyunlu bir cam kaptır; titrasyon, çözelti hazırlama ve karıştırma işlemlerinde kullanılır, dar boynu çalkalarken sıçramayı azaltır. <b>Balon joje</b>, boyun kısmında tek bir ölçü çizgisi bulunan, belirli hacimde ve derişimi kesin olarak bilinen çözeltiler hazırlamak/saklamak için kullanılır. <b>Deney tüpü</b>, küçük hacimli maddelerin karıştırılması, ısıtılması ve soğutulması gibi genel amaçlarla kullanılan ince, uzun bir cam kaptır. <b>Damlalık</b> küçük hacimlerdeki sıvıları damla damla aktarmak; <b>dereceli silindir (mezür)</b>, boyunca bulunan dereceli işaretlerle sıvı hacmini hassas biçimde ölçmek; <b>kroze</b>, katı maddeleri yüksek sıcaklıkta ısıtma ve yakma işlemlerinde kullanılan ısıya dayanıklı küçük bir kap olarak görev yapar.</p>
+
+  <table class="usage">
+    <tr><th>Görsel</th><th>Araç</th><th>Kullanım Amacı</th></tr>
+    <tr><td><svg viewBox="0 0 100 96" width="46" height="44"><path d="M42,20 L42,42 L24,78 Q22,84 30,84 L70,84 Q78,84 76,78 L58,42 L58,20 Z" fill="none" stroke="var(--ink)" stroke-width="2.4"></path><line x1="40" y1="20" x2="60" y2="20" stroke="var(--ink)" stroke-width="2.8"></line></svg></td><td>Erlenmayer</td><td>Titrasyon, çözelti hazırlama ve karıştırma</td></tr>
+    <tr><td><svg viewBox="0 0 100 96" width="46" height="44"><path d="M46,18 L46,38 C30,54 24,64 24,72 A26,20 0 0 0 76,72 C76,64 70,54 54,38 L54,18 Z" fill="none" stroke="var(--ink)" stroke-width="2.4"></path><line x1="44" y1="18" x2="56" y2="18" stroke="var(--ink)" stroke-width="2.8"></line></svg></td><td>Balon Joje</td><td>Belirli hacim ve derişimde çözelti hazırlama/saklama</td></tr>
+    <tr><td><svg viewBox="0 0 100 96" width="46" height="44"><path d="M40,14 L40,66 A10,10 0 0 0 60,66 L60,14" fill="none" stroke="var(--ink)" stroke-width="2.4"></path></svg></td><td>Deney Tüpü</td><td>Küçük hacimli madde karıştırma, ısıtma, soğutma</td></tr>
+    <tr><td><svg viewBox="0 0 100 96" width="46" height="44"><path d="M40,14 Q40,8 50,8 Q60,8 60,14 L60,30 Q60,34 56,34 L44,34 Q40,34 40,30 Z" fill="none" stroke="var(--ink)" stroke-width="2.4"></path><line x1="46" y1="34" x2="46" y2="72" stroke="var(--ink)" stroke-width="2.4"></line><line x1="54" y1="34" x2="54" y2="72" stroke="var(--ink)" stroke-width="2.4"></line><path d="M46,72 L54,72 L50,88 Z" fill="none" stroke="var(--ink)" stroke-width="2.4" stroke-linejoin="round"></path></svg></td><td>Damlalık</td><td>Sıvıyı damla damla aktarma</td></tr>
+    <tr><td><svg viewBox="0 0 100 96" width="46" height="44"><path d="M40,16 L58,16 L67,10 L60,16 L60,78 Q60,84 53,84 L47,84 Q40,84 40,78 Z" fill="none" stroke="var(--ink)" stroke-width="2.4" stroke-linejoin="round"></path></svg></td><td>Dereceli Silindir (Mezür)</td><td>Sıvı hacmini hassas ölçme</td></tr>
+    <tr><td><svg viewBox="0 0 100 96" width="46" height="44"><path d="M40,82 L34,36 Q34,30 40,30 L60,30 Q66,30 66,36 L60,82 Z" fill="none" stroke="var(--ink)" stroke-width="2.4"></path><ellipse cx="50" cy="30" rx="16" ry="4" fill="none" stroke="var(--ink)" stroke-width="2.4"></ellipse></svg></td><td>Kroze</td><td>Katıyı yüksek sıcaklıkta ısıtma/yakma</td></tr>
+  </table>
 
   <div class="box kavram">
     <div class="lbl">💡 Kavram · Risk Piktogramı</div>
     Kimyasal maddelerin etiketlerinde bulunan, o maddenin taşıdığı tehlike türünü (patlayıcı, zehirli, korozif vb.) sembolle gösteren, sağlık ve güvenlik amaçlı işaret.
+  </div>
+
+  <div class="visual-wrap">
+    <div class="visual-caption">GHS'in 9 resmî tehlike piktogramı + radyoaktif madde uyarı simgesi (ISO 361) — worksheet'teki çizim etkinliğinden önce bunları incele</div>
+    <div class="ghs-row">
+      <div class="ghs-item"><img src="../assets/img/ghs/flame.svg" alt="Alevlenir" width="56" height="56"><div class="ghs-label">Alevlenir/Parlayıcı</div></div>
+      <div class="ghs-item"><img src="../assets/img/ghs/oxidizing.svg" alt="Oksitleyici" width="56" height="56"><div class="ghs-label">Oksitleyici</div></div>
+      <div class="ghs-item"><img src="../assets/img/ghs/explosive.svg" alt="Patlayıcı" width="56" height="56"><div class="ghs-label">Patlayıcı</div></div>
+      <div class="ghs-item"><img src="../assets/img/ghs/gas.svg" alt="Basınçlı gaz" width="56" height="56"><div class="ghs-label">Basınçlı Gaz</div></div>
+      <div class="ghs-item"><img src="../assets/img/ghs/corrosive.svg" alt="Aşındırıcı/Korozif" width="56" height="56"><div class="ghs-label">Korozif</div></div>
+      <div class="ghs-item"><img src="../assets/img/ghs/toxic.svg" alt="Toksik" width="56" height="56"><div class="ghs-label">Zehirli</div></div>
+      <div class="ghs-item"><img src="../assets/img/ghs/irritant.svg" alt="Tahriş edici" width="56" height="56"><div class="ghs-label">Tahriş Edici</div></div>
+      <div class="ghs-item"><img src="../assets/img/ghs/health-hazard.svg" alt="Sağlığa zararlı" width="56" height="56"><div class="ghs-label">Sağlığa Zararlı</div></div>
+      <div class="ghs-item"><img src="../assets/img/ghs/environment.svg" alt="Çevreye zararlı" width="56" height="56"><div class="ghs-label">Çevreye Zararlı</div></div>
+      <div class="ghs-item">
+        <svg viewBox="0 0 100 100" width="56" height="56">
+          <path d="M50,8 L92,86 L8,86 Z" fill="#ffd400" stroke="#000" stroke-width="4" stroke-linejoin="round"></path>
+          <g transform="translate(50,60)">
+            <circle r="8" fill="#000"></circle>
+            <g fill="#000">
+              <path d="M6.93,-4 L24.25,-14 A28,28 0 0 1 24.25,14 L6.93,4 A8,8 0 0 0 6.93,-4 Z"></path>
+              <path d="M6.93,-4 L24.25,-14 A28,28 0 0 1 24.25,14 L6.93,4 A8,8 0 0 0 6.93,-4 Z" transform="rotate(120)"></path>
+              <path d="M6.93,-4 L24.25,-14 A28,28 0 0 1 24.25,14 L6.93,4 A8,8 0 0 0 6.93,-4 Z" transform="rotate(240)"></path>
+            </g>
+          </g>
+        </svg>
+        <div class="ghs-label">Radyoaktif Madde</div>
+      </div>
+    </div>
   </div>
 
   <div class="box ornek">
@@ -633,7 +883,7 @@
 
   </div>
   <div class="worksheet">
-    <div class="wlbl">📱 Uygulamada Dene — Modül 4 (3 Etkinlik)</div>
+    <div class="wlbl">📱 Uygulamada Dene — Modül 4 (4 Etkinlik)</div>
     <p><b>1) Güvenlik Senaryosu Simülatörü —</b> Uygulamada en az 4 farklı madde kombinasyonunu "karıştır"; sonucu tabloya yaz.</p>
     <table class="wk">
       <tr><th>1. Madde</th><th>2. Madde</th><th>Sonuç (Tehlike var mı? Ne oluşur?)</th></tr>
@@ -657,12 +907,23 @@
       <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
       <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
     </table>
+    <p style="margin-top:12px"><b>4) Laboratuvar Araç-Gereçlerini Tanı —</b> Uygulamadaki araç-gereç tanıma ve eşleştirme etkinliğini tamamladıktan sonra, aşağıdaki tabloyu boş bırakılan sütunları doldurarak tamamla.</p>
+    <table class="wk">
+      <tr><th>Araç</th><th>Ayırt Edici Özelliği</th><th>Kullanım Amacı</th></tr>
+      <tr><td>Erlenmayer</td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Balon Joje</td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Kroze</td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>Dereceli Silindir (Mezür)</td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
   </div>
 
   <div class="kavramlar-list">
     <div class="lbl">📚 Bu Ünitenin Kavramları</div>
     <dt>Korozif Madde</dt><dd>Canlı dokuyu tahrip eden ya da metali aşındıran madde.</dd>
     <dt>Kimyasal Depolama Matrisi</dt><dd>Kimyasal maddelerin hangi koşullarda birlikte/ayrı depolanacağını belirleyen plan sistemi.</dd>
+    <dt>Erlenmayer</dt><dd>Koni biçimli, dar boyunlu; titrasyon ve çözelti hazırlama/karıştırma işlemlerinde kullanılan cam kap.</dd>
+    <dt>Balon Joje</dt><dd>Boyun kısmında tek ölçü çizgisi bulunan, belirli hacim ve derişimde çözelti hazırlamak/saklamak için kullanılan cam malzeme.</dd>
+    <dt>Kroze</dt><dd>Katı maddeleri yüksek sıcaklıkta ısıtma ve yakma işlemlerinde kullanılan, ısıya dayanıklı küçük kap.</dd>
   </div>
 
   <div class="sorular-h">SORULAR</div>
@@ -683,11 +944,12 @@
       <div>○ D) Kırık cam malzemeyi elle toplamak</div>
       <div>○ E) Kimyasal kullanmadan önce etiketi dikkatle okumak</div>
     </div></div>
-  <div class="soru"><span class="no">6.</span> <span class="tip">Çoktan Seçmeli</span> Canlı dokuyu tahrip eden ya da metali aşındıran maddeleri belirten piktogram hangisidir?
+  <div class="soru"><span class="no">6.</span> <span class="tip">Çoktan Seçmeli</span> Aşağıdaki piktogram hangi tehlike türünü belirtir?
+    <img src="../assets/img/ghs/corrosive.svg" alt="GHS piktogramı" width="52" height="52" style="display:block; margin:4px 0 8px;">
     <div class="secenekler">
       <div>○ A) Zehirli</div><div>○ B) Basınçlı gaz</div>
       <div>○ C) Oksitleyici</div><div>○ D) Çevreye zararlı</div>
-      <div>○ E) Korozif</div>
+      <div>○ E) Korozif (canlı dokuyu tahrip eden/metali aşındıran)</div>
     </div></div>
   <div class="soru"><span class="no">7.</span> <span class="tip">Çoktan Seçmeli</span> Sodyum metalinin su ile teması sırasında dikkat edilmesi gereken en önemli risk nedir?
     <div class="secenekler">
@@ -734,7 +996,69 @@
   <div class="konu-cols">
   <p>Atom modeli, 120 yılda beş kez değişti — her seferinde eski model tamamen "yanlış" olduğu için değil, yeni bir kanıtı açıklayamadığı için geliştirildi. <b>Dalton (1803)</b>: atom, bölünemez ve içi dolu bir küredir. <b>Thomson (1897)</b>: katot ışını deneyleriyle elektron keşfedildi; atom, pozitif yüklü bir hamur içine gömülü elektronlardan oluşan bir küre olarak tasvir edildi. <b>Rutherford (1911)</b>: altın yaprak deneyinde alfa parçacıklarının bir kısmının büyük açılarla geri sekmesi, pozitif yükün küçük ve yoğun bir çekirdekte toplandığını gösterdi. <b>Bohr (1913)</b>: elektronlar çekirdek etrafında belirli enerji seviyelerinde (yörüngelerde) hareket eder; enerji soğurunca üst seviyeye çıkar (absorbsiyon), enerji yayarak alt seviyeye iner (emisyon). <b>Modern/Kuantum Model (1926)</b>: Heisenberg belirsizlik ilkesine göre elektronun konumu ve hızı aynı anda kesin bilinemez; elektronlar belirli yörüngelerde değil, bulunma olasılığının yüksek olduğu üç boyutlu bölgelerde (orbitallerde) tanımlanır.</p>
   <p>Atomun temel tanecikleri proton ve nötron (çekirdekte) ile elektrondur (çekirdek dışında). Elektron ve protonun yük büyüklüğü aynıdır (sırasıyla -1 ve +1 bağıl yük); nötron nötrdür. Bir proton/nötronun kütlesi bir elektronunkinden yaklaşık 1836 kat fazladır. Nötr bir atomda proton sayısı elektron sayısına eşittir; proton sayısı elementin <b>atom numarasını (Z)</b> belirler.</p>
+  <div class="visual-row">
+    <div class="amodel-wrap">
+      <svg viewBox="0 0 180 180" width="120" height="120" class="amodel-svg">
+      <circle cx="90" cy="90" r="52" fill="var(--gas)" opacity="0.55" stroke="var(--ink-soft)" stroke-width="2"></circle>
+      <text x="90" y="95" text-anchor="middle" font-size="11" fill="var(--ink)" font-weight="700">bölünemez</text>
+    </svg>
+      <div class="amodel-label">Dalton (1803)</div>
+    </div>
+    <div class="amodel-wrap">
+      <svg viewBox="0 0 180 180" width="120" height="120" class="amodel-svg">
+      <circle cx="90" cy="90" r="52" fill="var(--gas)" opacity="0.32" stroke="var(--ink-soft)" stroke-width="2"></circle>
+      <text x="90.0" y="75.0" text-anchor="middle" font-size="10" fill="var(--ink-faint)" font-weight="700">+</text><text x="109.3" y="70.0" text-anchor="middle" font-size="10" fill="var(--ink-faint)" font-weight="700">+</text><text x="131.4" y="85.7" text-anchor="middle" font-size="10" fill="var(--ink-faint)" font-weight="700">+</text><text x="105.6" y="102.0" text-anchor="middle" font-size="10" fill="var(--ink-faint)" font-weight="700">+</text><text x="100.3" y="121.2" text-anchor="middle" font-size="10" fill="var(--ink-faint)" font-weight="700">+</text><text x="75.6" y="132.5" text-anchor="middle" font-size="10" fill="var(--ink-faint)" font-weight="700">+</text><text x="74.4" y="102.0" text-anchor="middle" font-size="10" fill="var(--ink-faint)" font-weight="700">+</text><text x="60.5" y="87.8" text-anchor="middle" font-size="10" fill="var(--ink-faint)" font-weight="700">+</text><text x="63.0" y="60.8" text-anchor="middle" font-size="10" fill="var(--ink-faint)" font-weight="700">+</text>
+      <circle cx="101.6" cy="58.1" r="3.6" fill="var(--gas)"></circle><circle cx="123.5" cy="84.1" r="3.6" fill="var(--gas)"></circle><circle cx="111.9" cy="116.0" r="3.6" fill="var(--gas)"></circle><circle cx="78.4" cy="121.9" r="3.6" fill="var(--gas)"></circle><circle cx="56.5" cy="95.9" r="3.6" fill="var(--gas)"></circle><circle cx="68.1" cy="64.0" r="3.6" fill="var(--gas)"></circle>
+    </svg>
+      <div class="amodel-label">Thomson (1897)</div>
+    </div>
+    <div class="amodel-wrap">
+      <svg viewBox="0 0 180 180" width="120" height="120" class="amodel-svg">
+      <circle cx="90" cy="90" r="60" fill="none" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="3 4"></circle>
+      <line x1="0" y1="54.0" x2="176.0" y2="54.0" stroke="var(--ink-soft)" stroke-width="1.6"></line>
+      <polygon points="176.0,54.0 170.8,51.0 170.8,57.0" fill="var(--ink-soft)"></polygon>
+      <line x1="0" y1="122.0" x2="176.0" y2="122.0" stroke="var(--ink-soft)" stroke-width="1.6"></line>
+      <polygon points="176.0,122.0 170.8,119.0 170.8,125.0" fill="var(--ink-soft)"></polygon>
+      <path d="M0,90.0 L84.0,90.0 L4,44.0" fill="none" stroke="var(--bad)" stroke-width="2.2"></path>
+      <polygon points="4.0,44.0 2.8,49.9 8.5,48.0" fill="var(--bad)"></polygon>
+      <circle cx="90" cy="90" r="5.5" fill="var(--bad)"></circle>
+    </svg>
+      <div class="amodel-label">Rutherford (1911)</div>
+    </div>
+    <div class="amodel-wrap">
+      <svg viewBox="0 0 180 180" width="120" height="120" class="amodel-svg">
+      <circle cx="90" cy="90" r="7" fill="var(--bad)"></circle>
+      <circle cx="90" cy="90" r="22" fill="none" stroke="var(--line)" stroke-width="1.3"></circle><circle cx="90.0" cy="68.0" r="3.4" fill="var(--gas)"></circle><circle cx="90.0" cy="112.0" r="3.4" fill="var(--gas)"></circle><circle cx="90" cy="90" r="37" fill="none" stroke="var(--line)" stroke-width="1.3"></circle><circle cx="99.6" cy="54.3" r="3.4" fill="var(--gas)"></circle><circle cx="122.0" cy="71.5" r="3.4" fill="var(--gas)"></circle><circle cx="125.7" cy="99.6" r="3.4" fill="var(--gas)"></circle><circle cx="108.5" cy="122.0" r="3.4" fill="var(--gas)"></circle><circle cx="80.4" cy="125.7" r="3.4" fill="var(--gas)"></circle><circle cx="58.0" cy="108.5" r="3.4" fill="var(--gas)"></circle><circle cx="54.3" cy="80.4" r="3.4" fill="var(--gas)"></circle><circle cx="71.5" cy="58.0" r="3.4" fill="var(--gas)"></circle><circle cx="90" cy="90" r="52" fill="none" stroke="var(--line)" stroke-width="1.3"></circle><circle cx="116.0" cy="45.0" r="3.4" fill="var(--gas)"></circle>
+    </svg>
+      <div class="amodel-label">Bohr (1913) — Örn: Na (2,8,1)</div>
+    </div>
+  </div>
+
   <p>Bohr'un modeline giden yol, Newton'un güneş ışığını bir prizmadan geçirip bütün renklerin (kırmızıdan mora, aralıksız) ortaya çıktığını göstermesiyle başlar — buna <b>sürekli spektrum</b> denir. Ancak bir gaz (örneğin hidrojen) enerjiyle uyarılıp yaydığı ışık aynı şekilde bir prizmadan geçirilirse, ortaya TÜM renkler değil yalnızca BELİRLİ birkaç renk (dalga boyu) çıkar; buna <b>kesikli (çizgi) spektrum</b> denir. Bu fark, enerjinin atom içinde her değeri değil yalnızca belirli (kuantumlanmış) seviyeleri alabildiğinin ilk kanıtıydı ve Bohr'u katman modeline götürdü.</p>
+
+  <div class="visual-wrap">
+    <div class="visual-caption">Sürekli spektrum (güneş ışığı) ile hidrojenin kesikli (çizgi) spektrumunun karşılaştırması</div>
+    <svg viewBox="0 0 480 110" width="100%" style="max-width:480px; display:block; margin:0 auto;">
+      <defs>
+        <linearGradient id="contSpec" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#8e24aa"></stop>
+          <stop offset="20%" stop-color="#2979ff"></stop>
+          <stop offset="40%" stop-color="#00c853"></stop>
+          <stop offset="60%" stop-color="#ffd600"></stop>
+          <stop offset="80%" stop-color="#ff9100"></stop>
+          <stop offset="100%" stop-color="#e53935"></stop>
+        </linearGradient>
+      </defs>
+      <text x="0" y="14" font-size="11" font-weight="700" fill="var(--ink)">Sürekli Spektrum (Güneş Işığı)</text>
+      <rect x="0" y="20" width="480" height="26" fill="url(#contSpec)" rx="3"></rect>
+      <text x="0" y="76" font-size="11" font-weight="700" fill="var(--ink)">Kesikli (Çizgi) Spektrum — Hidrojen</text>
+      <rect x="0" y="82" width="480" height="26" fill="#0a0a12" rx="3"></rect>
+      <line x1="66" y1="82" x2="66" y2="108" stroke="#8e24aa" stroke-width="4"></line>
+      <line x1="150" y1="82" x2="150" y2="108" stroke="#2979ff" stroke-width="4"></line>
+      <line x1="248" y1="82" x2="248" y2="108" stroke="#00c853" stroke-width="4"></line>
+      <line x1="392" y1="82" x2="392" y2="108" stroke="#e53935" stroke-width="4"></line>
+    </svg>
+  </div>
 
   <div class="box kavram">
     <div class="lbl">💡 Kavram · Bilimsel Model</div>
@@ -823,11 +1147,21 @@
       <div>○ C) Rutherford</div><div>○ D) Bohr</div>
       <div>○ E) Thomson</div>
     </div></div>
-  <div class="soru"><span class="no">6.</span> <span class="tip">Çoktan Seçmeli</span> Atomun çoğunlukla boşluktan oluştuğunu ve pozitif yükün küçük bir çekirdekte toplandığını hangi deney/model ortaya koymuştur?
+  <div class="soru"><span class="no">6.</span> <span class="tip">Çoktan Seçmeli</span> Aşağıdaki diyagram, altın yaprak deneyinde alfa parçacıklarının izlediği yolları göstermektedir. Bu diyagramdaki sapma, atom hakkında hangi sonuca götürür?
+    <svg viewBox="0 0 180 130" width="150" height="108" style="display:block; margin:6px 0 8px;">
+      <circle cx="90" cy="65" r="45" fill="none" stroke="#ccc" stroke-width="1.5" stroke-dasharray="3 4"></circle>
+      <line x1="0" y1="35" x2="176" y2="35" stroke="#555" stroke-width="1.6"></line>
+      <polygon points="176,35 170,32 170,38" fill="#555"></polygon>
+      <line x1="0" y1="95" x2="176" y2="95" stroke="#555" stroke-width="1.6"></line>
+      <polygon points="176,95 170,92 170,98" fill="#555"></polygon>
+      <path d="M0,65 L64,65 L4,25" fill="none" stroke="#c0392b" stroke-width="2.2"></path>
+      <polygon points="4,25 3,31 9,29" fill="#c0392b"></polygon>
+      <circle cx="90" cy="65" r="5.5" fill="#c0392b"></circle>
+    </svg>
     <div class="secenekler">
-      <div>○ A) Dalton modeli</div><div>○ B) Thomson modeli</div>
-      <div>○ C) Rutherford'un altın yaprak deneyi</div><div>○ D) Bohr modeli</div>
-      <div>○ E) Aufbau ilkesi</div>
+      <div>○ A) Atomun içi negatif yükle tamamen doludur</div><div>○ B) Atomun kütlesi her yere eşit dağılmıştır</div>
+      <div>○ C) Pozitif yük ve kütle küçük bir çekirdekte yoğunlaşmıştır</div><div>○ D) Elektronlar sabit yörüngelerde dolaşır</div>
+      <div>○ E) Enerji seviyeleri kuantumludur</div>
     </div></div>
   <div class="soru"><span class="no">7.</span> <span class="tip">Çoktan Seçmeli</span> Elektronun belirli bir anda çekirdeğe göre tam konumunun bilinemeyeceğini öngören ilke hangisidir?
     <div class="secenekler">
@@ -871,14 +1205,11 @@
   <h3 class="konu-h">Konu Anlatımı</h3>
   <div class="konu-cols">
   <p>Modern atom teorisine göre elektronun bulunma olasılığının yüksek olduğu üç boyutlu bölgeye <b>orbital</b> denir. Orbital türleri s, p, d ve f'dir: s orbitali küre şeklindedir ve her enerji seviyesinde bulunur; p orbitalleri 2. enerji seviyesinden, d orbitalleri 3.'ten, f orbitalleri 4.'ten itibaren bulunur. Çok elektronlu atomlarda orbitallerin bağıl enerji sıralaması genellikle şöyledir: <b>1s &lt; 2s &lt; 2p &lt; 3s &lt; 3p &lt; 4s &lt; 3d &lt; 4p &lt; 5s &lt; 4d &lt; 5p &lt; 6s &lt; 4f …</b></p>
-  <p>Bu sıralamayı ezberlemenin klasik yolu <b>diyagonal kural</b> diyagramıdır: alt kabuklar katmana (satır) ve türe (sütun: s, p, d) göre bir ızgaraya yazılır, sonra sağ üstten sol alta doğru çapraz çizgiler çekilip izlenir. Aşağıdaki tabloda her kutunun sağ üst köşesindeki küçük sayı, o alt kabuğun dolum sırasındaki yerini gösterir:</p>
-  <table class="wk" style="max-width:280px">
-    <tr><th></th><th>s</th><th>p</th><th>d</th></tr>
-    <tr><td>n=1</td><td>1s (1)</td><td>—</td><td>—</td></tr>
-    <tr><td>n=2</td><td>2s (2)</td><td>2p (3)</td><td>—</td></tr>
-    <tr><td>n=3</td><td>3s (4)</td><td>3p (5)</td><td>3d (7)</td></tr>
-    <tr><td>n=4</td><td>4s (6)</td><td>4p (8)</td><td>—</td></tr>
-  </table>
+  <p>Bu sıralamayı ezberlemenin klasik yolu <b>diyagonal kural (köşegen kuralı)</b> diyagramıdır: alt kabuklar temel enerji seviyesine (satır) ve türe (sütun: s, p, d) göre bir ızgaraya yerleştirilir, sonra sağ üstten sol alta doğru köşegen oklar çizilip izlenir. Bu okları soldan sağa, her okun içinde de yukarıdan aşağıya izlersen dolma sırasını elde edersin. Aşağıdaki diyagramda her kutunun üstündeki küçük sayı, o alt kabuğun dolum sırasındaki yerini gösterir:</p>
+  <div class="diagonal-diagram-wrap">
+    <svg viewBox="0 0 300 200" class="diagonal-diagram-svg"><defs><marker id="diag-arrow-print" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="var(--gas)"></path></marker></defs><text x="70" y="16" text-anchor="middle" font-size="12" font-weight="700" fill="currentColor">s</text><text x="160" y="16" text-anchor="middle" font-size="12" font-weight="700" fill="currentColor">p</text><text x="250" y="16" text-anchor="middle" font-size="12" font-weight="700" fill="currentColor">d</text><text x="20" y="44" text-anchor="middle" font-size="11" fill="currentColor" opacity="0.65">n=1</text><text x="20" y="89" text-anchor="middle" font-size="11" fill="currentColor" opacity="0.65">n=2</text><text x="20" y="134" text-anchor="middle" font-size="11" fill="currentColor" opacity="0.65">n=3</text><text x="20" y="179" text-anchor="middle" font-size="11" fill="currentColor" opacity="0.65">n=4</text><line x1="150.2" y1="89.9" x2="89.7" y2="120.2" stroke="var(--gas)" stroke-width="2" marker-end="url(#diag-arrow-print)" opacity="0.75"></line><line x1="150.2" y1="134.9" x2="89.7" y2="165.2" stroke="var(--gas)" stroke-width="2" marker-end="url(#diag-arrow-print)" opacity="0.75"></line><line x1="240.2" y1="134.9" x2="179.7" y2="165.2" stroke="var(--gas)" stroke-width="2" marker-end="url(#diag-arrow-print)" opacity="0.75"></line><circle cx="70" cy="40" r="20" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1.5"></circle><text x="70" y="44" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">1s</text><circle cx="86" cy="26" r="9" fill="var(--gas)"></circle><text x="86" y="29.5" text-anchor="middle" font-size="9.5" font-weight="700" fill="#fff">1</text><circle cx="70" cy="85" r="20" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1.5"></circle><text x="70" y="89" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">2s</text><circle cx="86" cy="71" r="9" fill="var(--gas)"></circle><text x="86" y="74.5" text-anchor="middle" font-size="9.5" font-weight="700" fill="#fff">2</text><circle cx="160" cy="85" r="20" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1.5"></circle><text x="160" y="89" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">2p</text><circle cx="176" cy="71" r="9" fill="var(--gas)"></circle><text x="176" y="74.5" text-anchor="middle" font-size="9.5" font-weight="700" fill="#fff">3</text><circle cx="70" cy="130" r="20" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1.5"></circle><text x="70" y="134" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">3s</text><circle cx="86" cy="116" r="9" fill="var(--gas)"></circle><text x="86" y="119.5" text-anchor="middle" font-size="9.5" font-weight="700" fill="#fff">4</text><circle cx="160" cy="130" r="20" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1.5"></circle><text x="160" y="134" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">3p</text><circle cx="176" cy="116" r="9" fill="var(--gas)"></circle><text x="176" y="119.5" text-anchor="middle" font-size="9.5" font-weight="700" fill="#fff">5</text><circle cx="250" cy="130" r="20" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1.5"></circle><text x="250" y="134" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">3d</text><circle cx="266" cy="116" r="9" fill="var(--gas)"></circle><text x="266" y="119.5" text-anchor="middle" font-size="9.5" font-weight="700" fill="#fff">7</text><circle cx="70" cy="175" r="20" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1.5"></circle><text x="70" y="179" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">4s</text><circle cx="86" cy="161" r="9" fill="var(--gas)"></circle><text x="86" y="164.5" text-anchor="middle" font-size="9.5" font-weight="700" fill="#fff">6</text><circle cx="160" cy="175" r="20" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1.5"></circle><text x="160" y="179" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">4p</text><circle cx="176" cy="161" r="9" fill="var(--gas)"></circle><text x="176" y="164.5" text-anchor="middle" font-size="9.5" font-weight="700" fill="#fff">8</text></svg>
+    <div class="diagonal-diagram-note">Her alt kabuğun üstündeki mor rakam, o alt kabuğun dolma sırasındaki yerini gösterir: <b>1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p</b>.</div>
+  </div>
   <p>Elektronlar bu orbitallere üç kuralla yerleşir. <b>Aufbau ilkesi:</b> elektronlar önce en düşük enerjili boş orbitale, atomun toplam enerjisini en aza indirecek şekilde yerleşir. <b>Pauli dışlama ilkesi:</b> bir orbitalde en fazla 2 elektron bulunabilir ve bu elektronların spinleri zıt yönlü olmalıdır. <b>Hund kuralı:</b> eş enerjili orbitaller (örn. üç 2p orbitali) önce birer elektronla, aynı yönlü spinle tek tek doldurulur; eşleşme ancak boş orbital kalmayınca başlar — çünkü birbirini iten aynı yüklü elektronlar enerjilerini azaltmak için olabildiğince uzak durur. Tam dolu ya da tam yarı dolu alt kabuklar (küresel simetri) ekstra kararlılık sağlar; bu yüzden krom (Cr, [Ar]4s¹3d⁵) ve bakır (Cu, [Ar]4s¹3d¹⁰) gibi bazı elementlerde gözlenen dizilim, saf Aufbau öngörüsünden küçük farklarla ayrılır.</p>
   <p>Atomlar elektron dizilimini soy gazlarınkine benzeterek kararlı hâle gelmek ister. Metaller (1A, 2A, 3A grupları) valans elektronlarını vererek <b>katyon</b> (pozitif iyon) oluşturur; ametaller (5A, 6A, 7A grupları) valans kabuğunu tamamlayacak kadar elektron alarak <b>anyon</b> (negatif iyon) oluşturur. Örneğin Na (1s²2s²2p⁶3s¹) bir elektron vererek Na⁺'a (1s²2s²2p⁶) dönüşür; bu dizilim Neon'un dizilimiyle birebir aynıdır — Na⁺ ile Ne <b>izoelektroniktir</b>.</p>
 
@@ -896,6 +1227,23 @@
     <div class="lbl">✔ Örnek Çözüm</div>
     <b>Soru:</b> 7 elektronlu azot (N) atomunun elektron dizilimini Aufbau, Pauli ve Hund kurallarına göre yaz.<br/><br/>
     <b>Çözüm:</b> Aufbau ilkesine göre önce 1s (2 elektron), sonra 2s (2 elektron) dolar; kalan 3 elektron 2p orbitallerine (üç eş enerjili orbital) Hund kuralına göre birer birer, aynı yönde yerleşir — hiçbiri eşleşmez, çünkü 3 elektron için 3 boş orbital vardır. <b>Sonuç:</b> 1s² 2s² 2p³ (2p orbitallerinin üçü de tek elektronlu).
+    <div class="odiagram-wrap" style="margin-top:10px">
+      <div class="odiagram-caption">Azot (N, Z=7) elektron dizilimi — Aufbau, Pauli ve Hund kurallarına göre</div>
+      <div class="odiagram">
+      <div class="osub">
+        <div class="oboxes"><div class="obox">↑↓</div></div>
+        <div class="olabel">1s</div>
+      </div>
+      <div class="osub">
+        <div class="oboxes"><div class="obox">↑↓</div></div>
+        <div class="olabel">2s</div>
+      </div>
+      <div class="osub">
+        <div class="oboxes"><div class="obox">↑</div><div class="obox">↑</div><div class="obox">↑</div></div>
+        <div class="olabel">2p</div>
+      </div>
+    </div>
+    </div>
   </div>
 
   <div class="box notlarim">
@@ -1010,7 +1358,14 @@
     </div></div>
   <div class="baglam">
     <div class="baglam-lbl">9–10. Bağlam Temelli · Hatalı Bir Orbital Diyagramı</div>
-    <p style="margin:0">Bir ders materyalinde, 6 elektronlu karbon (C) atomunun elektron dizilimi gösterilirken 2p orbitallerinden birine 2 elektron (eşleşmiş), diğer ikisi boş olarak çizilmiştir.</p>
+    <p style="margin:0">Bir ders materyalinde, 6 elektronlu karbon (C) atomunun elektron dizilimi gösterilirken 2p orbitallerinden birine 2 elektron (eşleşmiş), diğer ikisi boş olarak çizilmiştir. Bu çizim aşağıdaki gibidir:</p>
+    <div class="odiagram-wrap" style="margin-top:8px">
+      <div class="odiagram">
+        <div class="osub"><div class="oboxes"><div class="obox">↑↓</div></div><div class="olabel">1s</div></div>
+        <div class="osub"><div class="oboxes"><div class="obox">↑↓</div></div><div class="olabel">2s</div></div>
+        <div class="osub"><div class="oboxes"><div class="obox">↑↓</div><div class="obox"></div><div class="obox"></div></div><div class="olabel">2p</div></div>
+      </div>
+    </div>
   </div>
   <div class="soru"><span class="no">9.</span> a) Bu çizim hangi kuralla çelişmektedir? Açıkla.
     <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
@@ -1049,6 +1404,10 @@
     <div class="lbl">✔ Örnek Çözüm</div>
     <b>Soru:</b> Elektron dizilimi [Ne] 3s² 3p⁴ olan elementin periyodik tablodaki adresini bul.<br/><br/>
     <b>Çözüm:</b> En yüksek enerji düzeyi n=3 → 3. periyot. Dizilim p orbitaliyle bitiyor → A grubu. En yüksek düzeydeki toplam elektron sayısı 2+4=6 → 6A grubu. <b>Sonuç:</b> 3. periyot, 6A grubu (bu element kükürttür, S).
+    <div class="pgrid-wrap" style="margin-top:10px">
+      <div class="pgrid-caption">Kükürt (S) elementinin periyodik tablodaki adresi — 3. periyot, 6A grubu (yalnızca A grupları gösterilmiştir)</div>
+      <div class="pgrid" style="grid-template-columns:repeat(8,32px)"><div class="pgrid-row"><div class="pgrid-cell">H</div><div class="pgrid-cell pgrid-empty"></div><div class="pgrid-cell pgrid-empty"></div><div class="pgrid-cell pgrid-empty"></div><div class="pgrid-cell pgrid-empty"></div><div class="pgrid-cell pgrid-empty"></div><div class="pgrid-cell pgrid-empty"></div><div class="pgrid-cell">He</div></div><div class="pgrid-row"><div class="pgrid-cell">Li</div><div class="pgrid-cell">Be</div><div class="pgrid-cell">B</div><div class="pgrid-cell">C</div><div class="pgrid-cell">N</div><div class="pgrid-cell">O</div><div class="pgrid-cell">F</div><div class="pgrid-cell">Ne</div></div><div class="pgrid-row"><div class="pgrid-cell">Na</div><div class="pgrid-cell">Mg</div><div class="pgrid-cell">Al</div><div class="pgrid-cell">Si</div><div class="pgrid-cell">P</div><div class="pgrid-cell pgrid-hl">S</div><div class="pgrid-cell">Cl</div><div class="pgrid-cell">Ar</div></div></div>
+    </div>
   </div>
 
   <div class="box notlarim">
@@ -1092,7 +1451,12 @@
       <div>○ C) 8B</div><div>○ D) 8A</div>
       <div>○ E) 1B</div>
     </div></div>
-  <div class="soru"><span class="no">6.</span> <span class="tip">Çoktan Seçmeli</span> Bileşiklerinde yalnızca +1 yüklü iyon oluşturan, su ile şiddetli tepkimeye giren grup hangisidir?
+  <div class="soru"><span class="no">6.</span> <span class="tip">Çoktan Seçmeli</span> Aşağıda vurgulanan grup, bileşiklerinde yalnızca +1 yüklü iyon oluşturur ve su ile şiddetli tepkimeye girer. Bu grup hangisidir?
+    <div class="pgrid" style="grid-template-columns:repeat(8,26px); margin:6px 0 8px;">
+      <div class="pgrid-cell pgrid-hl">H</div><div class="pgrid-cell pgrid-empty"></div><div class="pgrid-cell pgrid-empty"></div><div class="pgrid-cell pgrid-empty"></div><div class="pgrid-cell pgrid-empty"></div><div class="pgrid-cell pgrid-empty"></div><div class="pgrid-cell pgrid-empty"></div><div class="pgrid-cell">He</div>
+      <div class="pgrid-cell pgrid-hl">Li</div><div class="pgrid-cell">Be</div><div class="pgrid-cell">B</div><div class="pgrid-cell">C</div><div class="pgrid-cell">N</div><div class="pgrid-cell">O</div><div class="pgrid-cell">F</div><div class="pgrid-cell">Ne</div>
+      <div class="pgrid-cell pgrid-hl">Na</div><div class="pgrid-cell">Mg</div><div class="pgrid-cell">Al</div><div class="pgrid-cell">Si</div><div class="pgrid-cell">P</div><div class="pgrid-cell">S</div><div class="pgrid-cell">Cl</div><div class="pgrid-cell">Ar</div>
+    </div>
     <div class="secenekler">
       <div>○ A) 7A — Halojenler</div><div>○ B) 2A — Toprak alkali metaller</div>
       <div>○ C) 8A — Soy gazlar</div><div>○ D) 1A — Alkali metaller</div>
@@ -1140,7 +1504,83 @@
   <h3 class="konu-h">Konu Anlatımı</h3>
   <div class="konu-cols">
   <p><b>Atom yarıçapı</b>, bir grupta yukarıdan aşağıya inildikçe artar (enerji seviyesi/katman sayısı arttığı için en dış elektron çekirdekten uzaklaşır); bir periyotta soldan sağa gidildikçe azalır (elektronlar aynı katmana eklenirken artan çekirdek yükü onları daha güçlü çeker). <b>İyonlaşma enerjisi</b> (gaz hâlindeki nötr bir atomdan elektron koparmak için gereken enerji) tam ters yönde değişir: grupta aşağı inildikçe azalır, periyotta sağa gidildikçe artar. 2A ve 5A gruplarındaki elementlerin iyonlaşma enerjisi, kendilerinden sonraki gruptan yüksektir — çünkü tam dolu (ns²) veya yarı dolu (np³) alt kabuklar ekstra kararlılık sağlar. Bir elementin art arda ölçülen iyonlaşma enerjileri (İE₁, İE₂, İE₃…) her zaman artar; ancak valans elektronlar tükenip bir alt (dolu, kararlı) enerji seviyesinden elektron koparılmaya başlanınca değerde büyük bir <b>sıçrama</b> gözlenir.</p>
+  <div class="visual-wrap">
+    <div class="visual-caption">Örnek (worksheet'teki 2. periyot/1A grubu etkinliğinden FARKLI bir çalışılmış örnek — 3. periyot): atom yarıçapı soldan sağa nasıl küçülür?</div>
+    <div class="ccompare-row">
+      <div class="ccircle-item"><svg viewBox="0 0 96 96" width="72" height="72"><circle cx="48" cy="48" r="44.0" fill="var(--gas)" opacity="0.75"></circle></svg><div class="ccircle-label">Na</div><div class="ccircle-value">186 pm</div></div>
+      <div class="ccircle-item"><svg viewBox="0 0 96 96" width="72" height="72"><circle cx="48" cy="48" r="37.8" fill="var(--gas)" opacity="0.75"></circle></svg><div class="ccircle-label">Mg</div><div class="ccircle-value">160 pm</div></div>
+      <div class="ccircle-item"><svg viewBox="0 0 96 96" width="72" height="72"><circle cx="48" cy="48" r="33.8" fill="var(--gas)" opacity="0.75"></circle></svg><div class="ccircle-label">Al</div><div class="ccircle-value">143 pm</div></div>
+      <div class="ccircle-item"><svg viewBox="0 0 96 96" width="72" height="72"><circle cx="48" cy="48" r="27.7" fill="var(--gas)" opacity="0.75"></circle></svg><div class="ccircle-label">Si</div><div class="ccircle-value">117 pm</div></div>
+      <div class="ccircle-item"><svg viewBox="0 0 96 96" width="72" height="72"><circle cx="48" cy="48" r="26.0" fill="var(--gas)" opacity="0.75"></circle></svg><div class="ccircle-label">P</div><div class="ccircle-value">110 pm</div></div>
+      <div class="ccircle-item"><svg viewBox="0 0 96 96" width="72" height="72"><circle cx="48" cy="48" r="24.6" fill="var(--gas)" opacity="0.75"></circle></svg><div class="ccircle-label">S</div><div class="ccircle-value">104 pm</div></div>
+      <div class="ccircle-item"><svg viewBox="0 0 96 96" width="72" height="72"><circle cx="48" cy="48" r="23.4" fill="var(--gas)" opacity="0.75"></circle></svg><div class="ccircle-label">Cl</div><div class="ccircle-value">99 pm</div></div>
+    </div>
+  </div>
+
+  <div class="visual-wrap">
+    <div class="visual-caption">3. periyotta ölçülen gerçek 1. iyonlaşma enerjisi değerleri — Mg (2A) ve P (5A) sonrasındaki sıçramalara dikkat et</div>
+    <div class="qchart-wrap">
+      <svg class="qchart-svg" viewBox="0 0 480 240" xmlns="http://www.w3.org/2000/svg">
+        <text x="240.0" y="16" text-anchor="middle" font-size="12" font-weight="600" fill="currentColor">3. Periyotta 1. İyonlaşma Enerjisi (kJ/mol)</text>
+        <line x1="44" y1="194" x2="460" y2="194" stroke="currentColor" stroke-opacity="0.35"></line>
+        <polyline points="44.0,194.0 113.3,141.4 182.7,176.2 252.0,131.0 321.3,81.9 390.7,84.5 460.0,30.0" fill="none" stroke="var(--gas)" stroke-width="2.5"></polyline>
+      <circle cx="44.0" cy="194.0" r="3.5" fill="var(--gas)"></circle>
+      <text x="44.0" y="184.0" text-anchor="middle" font-size="10.5" fill="currentColor">496</text>
+      <text x="44.0" y="210.0" text-anchor="middle" font-size="10.5" fill="currentColor">Na</text>
+      <circle cx="113.3" cy="141.4" r="3.5" fill="var(--gas)"></circle>
+      <text x="113.3" y="131.4" text-anchor="middle" font-size="10.5" fill="currentColor">738</text>
+      <text x="113.3" y="210.0" text-anchor="middle" font-size="10.5" fill="currentColor">Mg</text>
+      <circle cx="182.7" cy="176.2" r="3.5" fill="var(--gas)"></circle>
+      <text x="182.7" y="166.2" text-anchor="middle" font-size="10.5" fill="currentColor">578</text>
+      <text x="182.7" y="210.0" text-anchor="middle" font-size="10.5" fill="currentColor">Al</text>
+      <circle cx="252.0" cy="131.0" r="3.5" fill="var(--gas)"></circle>
+      <text x="252.0" y="121.0" text-anchor="middle" font-size="10.5" fill="currentColor">786</text>
+      <text x="252.0" y="210.0" text-anchor="middle" font-size="10.5" fill="currentColor">Si</text>
+      <circle cx="321.3" cy="81.9" r="3.5" fill="var(--gas)"></circle>
+      <text x="321.3" y="71.9" text-anchor="middle" font-size="10.5" fill="currentColor">1012</text>
+      <text x="321.3" y="210.0" text-anchor="middle" font-size="10.5" fill="currentColor">P</text>
+      <circle cx="390.7" cy="84.5" r="3.5" fill="var(--gas)"></circle>
+      <text x="390.7" y="74.5" text-anchor="middle" font-size="10.5" fill="currentColor">1000</text>
+      <text x="390.7" y="210.0" text-anchor="middle" font-size="10.5" fill="currentColor">S</text>
+      <circle cx="460.0" cy="30.0" r="3.5" fill="var(--gas)"></circle>
+      <text x="460.0" y="20.0" text-anchor="middle" font-size="10.5" fill="currentColor">1251</text>
+      <text x="460.0" y="210.0" text-anchor="middle" font-size="10.5" fill="currentColor">Cl</text>
+      </svg>
+    </div>
+  </div>
+
   <p><b>Elektronegatiflik</b> (bir atomun bağ elektronlarını kendine çekme gücü, 0-4 arası Pauling ölçeğinde), atom yarıçapıyla ters, iyonlaşma enerjisiyle aynı yönde değişir: periyotta soldan sağa artar, grupta yukarıdan aşağıya azalır. Flor (F), 4,0 değeriyle en yüksek elektronegatifliğe sahip elementtir; soy gazların elektronegatifliğinden söz edilmez. Katyon oluşumunda (elektron sayısı azalırken proton sayısı sabit kalınca çekim artar) yarıçap küçülür; anyon oluşumunda (elektron sayısı artınca çekim elektron başına azalır) yarıçap büyür.</p>
+
+  <div class="visual-wrap">
+    <div class="visual-caption">3. periyotta elektronegatiflik (Pauling ölçeği) — soldan sağa artış</div>
+    <div class="qchart-wrap">
+      <svg class="qchart-svg" viewBox="0 0 480 240" xmlns="http://www.w3.org/2000/svg">
+        <text x="240.0" y="16" text-anchor="middle" font-size="12" font-weight="600" fill="currentColor">3. Periyotta Elektronegatiflik (Pauling Ölçeği)</text>
+        <line x1="40" y1="194" x2="460" y2="194" stroke="currentColor" stroke-opacity="0.35"></line>
+        <rect x="40.0" y="151.2" width="48.0" height="42.8" fill="var(--gas)" opacity="0.85" rx="3"></rect>
+        <text x="64.0" y="145.2" text-anchor="middle" font-size="11" fill="currentColor">0.9</text>
+        <text x="64.0" y="210.0" text-anchor="middle" font-size="10.5" fill="currentColor">Na</text>
+        <rect x="102.0" y="137.0" width="48.0" height="57.0" fill="var(--gas)" opacity="0.85" rx="3"></rect>
+        <text x="126.0" y="131.0" text-anchor="middle" font-size="11" fill="currentColor">1.2</text>
+        <text x="126.0" y="210.0" text-anchor="middle" font-size="10.5" fill="currentColor">Mg</text>
+        <rect x="164.0" y="122.7" width="48.0" height="71.3" fill="var(--gas)" opacity="0.85" rx="3"></rect>
+        <text x="188.0" y="116.7" text-anchor="middle" font-size="11" fill="currentColor">1.5</text>
+        <text x="188.0" y="210.0" text-anchor="middle" font-size="10.5" fill="currentColor">Al</text>
+        <rect x="226.0" y="108.4" width="48.0" height="85.6" fill="var(--gas)" opacity="0.85" rx="3"></rect>
+        <text x="250.0" y="102.4" text-anchor="middle" font-size="11" fill="currentColor">1.8</text>
+        <text x="250.0" y="210.0" text-anchor="middle" font-size="10.5" fill="currentColor">Si</text>
+        <rect x="288.0" y="94.2" width="48.0" height="99.8" fill="var(--gas)" opacity="0.85" rx="3"></rect>
+        <text x="312.0" y="88.2" text-anchor="middle" font-size="11" fill="currentColor">2.1</text>
+        <text x="312.0" y="210.0" text-anchor="middle" font-size="10.5" fill="currentColor">P</text>
+        <rect x="350.0" y="75.2" width="48.0" height="118.8" fill="var(--gas)" opacity="0.85" rx="3"></rect>
+        <text x="374.0" y="69.2" text-anchor="middle" font-size="11" fill="currentColor">2.5</text>
+        <text x="374.0" y="210.0" text-anchor="middle" font-size="10.5" fill="currentColor">S</text>
+        <rect x="412.0" y="51.4" width="48.0" height="142.6" fill="var(--gas)" opacity="0.85" rx="3"></rect>
+        <text x="436.0" y="45.4" text-anchor="middle" font-size="11" fill="currentColor">3</text>
+        <text x="436.0" y="210.0" text-anchor="middle" font-size="10.5" fill="currentColor">Cl</text>
+      </svg>
+    </div>
+  </div>
 
   <div class="box kavram">
     <div class="lbl">💡 Kavram · İyonlaşma Enerjisi</div>
@@ -1230,9 +1670,13 @@
       <div>○ C) Helyum (He)</div><div>○ D) Sodyum (Na)</div>
       <div>○ E) Oksijen (O)</div>
     </div></div>
-  <div class="soru"><span class="no">7.</span> <span class="tip">Çoktan Seçmeli</span> Bir anyon (örneğin Cl⁻) oluşurken atom yarıçapında ne olur?
+  <div class="soru"><span class="no">7.</span> <span class="tip">Çoktan Seçmeli</span> Aşağıdaki gerçek ölçekli karşılaştırmaya göre, bir anyon (Cl⁻) oluşurken atom yarıçapında ne olur? Bu değişimin nedeni nedir?
+    <div class="ccompare-row" style="margin:6px 0 8px; justify-content:flex-start; gap:24px;">
+      <div class="ccircle-item"><svg viewBox="0 0 96 96" width="60" height="60"><circle cx="48" cy="48" r="24" fill="var(--gas)" opacity="0.75"></circle></svg><div class="ccircle-label">Cl atomu</div><div class="ccircle-value">99 pm</div></div>
+      <div class="ccircle-item"><svg viewBox="0 0 96 96" width="60" height="60"><circle cx="48" cy="48" r="44" fill="var(--gas)" opacity="0.75"></circle></svg><div class="ccircle-label">Cl⁻ iyonu</div><div class="ccircle-value">181 pm</div></div>
+    </div>
     <div class="secenekler">
-      <div>○ A) Değişmez</div><div>○ B) Büyür</div>
+      <div>○ A) Değişmez</div><div>○ B) Büyür — elektron sayısı artınca elektron başına düşen çekim azalır</div>
       <div>○ C) Küçülür</div><div>○ D) Önce büyür sonra küçülür</div>
       <div>○ E) Sıfır olur</div>
     </div></div>
@@ -1266,7 +1710,7 @@
   <div class="ca-unit">
     <h4>Ünite 1 — Günlük Hayatta Kimya (KİM.9.1.1)</h4>
     <div class="ca-item">1-4. Cevaplar, ilgili "Konu Anlatımı" bölümündeki kavram ve ilişkilerle tutarlı, gerekçeli bir açıklama içermelidir.</div>
-    <div class="ca-item"><b>5. D</b> — Bir şiirin kafiye düzeni, kimya biliminin etkilediği bir sektör değildir; diğer dördü (temizlik, ilaç, gıda, enerji) doğrudan kimya uygulamalarıdır.</div>
+    <div class="ca-item"><b>5. C</b> — X noktası pH skalasında 0'a yakın (≈2), yani kuvvetli asit bölgesindedir.</div>
     <div class="ca-item"><b>6. A</b> — Bilgisayar, telefon ve ekran teknolojileri atomdaki elektronların hareketine dayanır.</div>
     <div class="ca-item"><b>7. B</b> — Katmanlardan geçirerek katı parçacıkları tutmak, maddenin kimliğini değiştirmeyen fiziksel bir ayırma işlemidir.</div>
     <div class="ca-item"><b>8. B</b> — Gözlemlenen bir olaydan (sabunun yağı çözmesi) kimyasal bir ilişkiye ulaşmak, çıkarım yapmanın bir örneğidir.</div>
@@ -1307,7 +1751,7 @@
     <h4>Ünite 5 — Atom Teorileri ve Atomun Yapısı (KİM.9.1.5)</h4>
     <div class="ca-item">1-4. Cevaplar, ilgili "Konu Anlatımı" bölümündeki kavram ve ilişkilerle tutarlı, gerekçeli bir açıklama içermelidir.</div>
     <div class="ca-item"><b>5. E</b> — Elektronu ilk kez Thomson keşfetmiştir (katot ışını deneyleri).</div>
-    <div class="ca-item"><b>6. C</b> — Rutherford'un altın yaprak (alfa saçılma) deneyi, çekirdeğin varlığını ortaya koymuştur.</div>
+    <div class="ca-item"><b>6. C</b> — Alfa parçacıklarının bir kısmının büyük açıyla sapması, pozitif yükün ve kütlenin küçük, yoğun bir çekirdekte toplandığını gösterir.</div>
     <div class="ca-item"><b>7. D</b> — Heisenberg belirsizlik ilkesi, konum ve hızın aynı anda kesin bilinemeyeceğini öngörür.</div>
     <div class="ca-item"><b>8. A</b> — Bir proton/nötronun kütlesi bir elektronunkinden yaklaşık 1836 kat fazladır.</div>
     <div class="ca-item">9-10. Açık uçlu — konu anlatımındaki ilgili kavramla değerlendirilir (bilimsel bilginin değişebilirliği).</div>

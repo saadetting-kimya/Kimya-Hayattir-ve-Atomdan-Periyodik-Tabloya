@@ -13,6 +13,11 @@
    - Keşif Günlüğünü korumak
    ========================================================= */
 
+/* GHS piktogramları için gerçek görsel dosyası desteği: assets/img/ghs/
+   klasörüne <kod>.svg (örn. toxic.svg) konursa motor otomatik olarak
+   onu kullanır; dosya yoksa aşağıdaki elle çizilmiş SVG'ye döner. */
+const GHS_IMG_BASE = new URL("../img/ghs/", import.meta.url).href;
+
 /* =========================================================
    STORAGE ANAHTARLARI
    ========================================================= */
@@ -202,6 +207,200 @@ function renderLineChart(chart) {
   `;
 }
 
+/* =========================================================
+   ÇOKLU SERİLİ ÇİZGİ GRAFİĞİ — aynı x ekseninde (ör. atom
+   numarası) birden fazla seriyi (ör. 2s ve 2p alt kabuklarının
+   bağıl enerjisi) karşılaştırmak için. MEB kitabındaki
+   "Etkinlik-1.8: Atom Orbitallerinin Bağıl Enerjileri"
+   grafiğiyle aynı mantık: farklı orbital türlerinin enerjisi,
+   artan atom numarasıyla nasıl değiştiğini karşılaştırmalı
+   gösterir (kuantum sayısı formülü değil, veriye dayalı okuma).
+   ========================================================= */
+function renderCompareLineChart(chart) {
+  if (!chart) return "";
+  const labels = Array.isArray(chart.labels) ? chart.labels : [];
+  const series = Array.isArray(chart.series) ? chart.series : [];
+  if (labels.length === 0 || series.length === 0) return "";
+
+  const W = 480, H = 270;
+  const padL = 56, padR = 20, padT = 30, padB = 50;
+  const plotW = W - padL - padR;
+  const plotH = H - padT - padB;
+
+  const allValues = series.flatMap(s => (s.values || []).map(Number));
+  const minVal = Math.min(...allValues);
+  const maxVal = Math.max(...allValues);
+  const range = (maxVal - minVal) || 1;
+  const step = labels.length > 1 ? plotW / (labels.length - 1) : 0;
+
+  const colors = ["var(--gas)", "var(--bad)", "var(--mol-a)"];
+
+  const seriesSvg = series.map((s, si) => {
+    const color = s.color || colors[si % colors.length];
+    const values = (s.values || []).map(Number);
+    const points = values.map((v, i) => {
+      const x = padL + i * step;
+      const y = padT + plotH - ((v - minVal) / range) * plotH;
+      return { x, y };
+    });
+    const polyline = points.map(p => `${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(" ");
+    const dots = points.map(p => `<circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="3.2" fill="${color}"></circle>`).join("");
+    return `<polyline points="${polyline}" fill="none" stroke="${color}" stroke-width="2.4"></polyline>${dots}`;
+  }).join("");
+
+  const xLabels = labels.map((l, i) => {
+    const x = padL + i * step;
+    return `<text x="${x.toFixed(1)}" y="${(padT + plotH + 18).toFixed(1)}" text-anchor="middle" font-size="10.5" fill="currentColor">${escapeHTML(String(l))}</text>`;
+  }).join("");
+
+  const legend = series.map((s, si) => {
+    const color = s.color || colors[si % colors.length];
+    const lx = padL + si * 90;
+    return `<rect x="${lx}" y="${(H - 14).toFixed(1)}" width="10" height="10" fill="${color}"></rect><text x="${(lx + 14).toFixed(1)}" y="${(H - 5).toFixed(1)}" font-size="10.5" fill="currentColor">${escapeHTML(s.label || "")}</text>`;
+  }).join("");
+
+  const title = chart.title
+    ? `<text x="${(W / 2).toFixed(1)}" y="16" text-anchor="middle" font-size="12" font-weight="600" fill="currentColor">${escapeHTML(chart.title)}</text>`
+    : "";
+
+  const yLabel = chart.yLabel
+    ? `<text x="12" y="${(padT + plotH / 2).toFixed(1)}" text-anchor="middle" font-size="9.5" fill="currentColor" transform="rotate(-90 12 ${(padT + plotH / 2).toFixed(1)})">${escapeHTML(chart.yLabel)}</text>`
+    : "";
+
+  return `
+    <div class="qchart-wrap">
+      <svg class="qchart-svg" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
+        ${title}
+        ${yLabel}
+        <line x1="${padL}" y1="${padT}" x2="${padL}" y2="${padT + plotH}" stroke="currentColor" stroke-opacity="0.35"></line>
+        <line x1="${padL}" y1="${padT + plotH}" x2="${padL + plotW}" y2="${padT + plotH}" stroke="currentColor" stroke-opacity="0.35"></line>
+        ${seriesSvg}
+        ${xLabels}
+        ${legend}
+      </svg>
+    </div>
+  `;
+}
+
+/* =========================================================
+   ORBİTAL ŞEKİLLERİ (s, p, d) — MEB kitabındaki "Etkinlik-1.8"
+   görselinde gösterilen evrensel/standart orbital sınır yüzey
+   şekillerinin özgün, sadeleştirilmiş 2B çizimleri (s: küresel,
+   p: iki loblu/dambıl, d: dört loblu/yonca). Herhangi bir
+   yayınevinin 3B render'ı değil, kimyada standart olan geometrik
+   temsildir.
+   ========================================================= */
+const ORBITAL_SHAPES = {
+  s: `<circle cx="50" cy="50" r="30" fill="var(--gas)" opacity="0.38" stroke="var(--gas-dark)" stroke-width="2"></circle>`,
+  p: `
+    <ellipse cx="28" cy="50" rx="22" ry="13" fill="var(--gas)" opacity="0.38" stroke="var(--gas-dark)" stroke-width="2"></ellipse>
+    <ellipse cx="72" cy="50" rx="22" ry="13" fill="var(--gas)" opacity="0.38" stroke="var(--gas-dark)" stroke-width="2"></ellipse>
+  `,
+  d: `
+    <ellipse cx="32" cy="32" rx="17" ry="9" fill="var(--good)" opacity="0.4" stroke="#0d5c33" stroke-width="1.8" transform="rotate(45 32 32)"></ellipse>
+    <ellipse cx="68" cy="32" rx="17" ry="9" fill="var(--good)" opacity="0.4" stroke="#0d5c33" stroke-width="1.8" transform="rotate(-45 68 32)"></ellipse>
+    <ellipse cx="32" cy="68" rx="17" ry="9" fill="var(--good)" opacity="0.4" stroke="#0d5c33" stroke-width="1.8" transform="rotate(-45 32 68)"></ellipse>
+    <ellipse cx="68" cy="68" rx="17" ry="9" fill="var(--good)" opacity="0.4" stroke="#0d5c33" stroke-width="1.8" transform="rotate(45 68 68)"></ellipse>
+  `
+};
+
+const ORBITAL_SHAPE_LABELS = { s: "s orbitali", p: "p orbitali", d: "d orbitali" };
+
+function renderOrbitalShape(item) {
+  const type = typeof item === "string" ? item : item.type;
+  const shape = ORBITAL_SHAPES[type];
+  if (!shape) return "";
+  const customLabel = typeof item === "object" ? item.label : null;
+  const label = escapeHTML(customLabel || ORBITAL_SHAPE_LABELS[type] || type);
+  return `
+    <div class="oshape-item">
+      <svg viewBox="0 0 100 100" width="86" height="86">${shape}</svg>
+      <div class="oshape-label">${label}</div>
+    </div>
+  `;
+}
+
+function renderOrbitalShapes(data) {
+  const items = Array.isArray(data) ? data : (data && Array.isArray(data.items) ? data.items : null);
+  if (!items || items.length === 0) return "";
+  const title = (!Array.isArray(data) && data && data.title)
+    ? `<div class="oshape-title">${escapeHTML(data.title)}</div>`
+    : "";
+  const rendered = items.map(renderOrbitalShape).join("");
+  return `
+    <div class="oshape-wrap">
+      ${title}
+      <div class="oshape-row">${rendered}</div>
+    </div>
+  `;
+}
+
+/* =========================================================
+   DİYAGONAL DİYAGRAM (köşegen kuralı) — alt kabukların hangi
+   sırayla dolduğunu görsel olarak izleten ızgara + köşegen ok
+   diyagramı (Z≤36 müfredat sınırı: 1s..4p, 8 alt kabuk).
+   ========================================================= */
+const DIAG_CELLS = [
+  { label: "1s", order: 1, col: 0, row: 0 },
+  { label: "2s", order: 2, col: 0, row: 1 },
+  { label: "2p", order: 3, col: 1, row: 1 },
+  { label: "3s", order: 4, col: 0, row: 2 },
+  { label: "3p", order: 5, col: 1, row: 2 },
+  { label: "3d", order: 7, col: 2, row: 2 },
+  { label: "4s", order: 6, col: 0, row: 3 },
+  { label: "4p", order: 8, col: 1, row: 3 }
+];
+const DIAG_ARROWS = [
+  ["2p", "3s"],
+  ["3p", "4s"],
+  ["3d", "4p"]
+];
+
+function renderDiagonalDiagram() {
+  const colX = [70, 160, 250];
+  const rowY = [40, 85, 130, 175];
+  const byLabel = {};
+  DIAG_CELLS.forEach(c => { byLabel[c.label] = c; });
+  const xy = c => [colX[c.col], rowY[c.row]];
+
+  let svg = `<defs><marker id="diag-arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="var(--gas)"></path></marker></defs>`;
+
+  svg += `<text x="${colX[0]}" y="16" text-anchor="middle" font-size="12" font-weight="700" fill="currentColor">s</text>`;
+  svg += `<text x="${colX[1]}" y="16" text-anchor="middle" font-size="12" font-weight="700" fill="currentColor">p</text>`;
+  svg += `<text x="${colX[2]}" y="16" text-anchor="middle" font-size="12" font-weight="700" fill="currentColor">d</text>`;
+  rowY.forEach((y, i) => {
+    svg += `<text x="20" y="${y + 4}" text-anchor="middle" font-size="11" fill="currentColor" opacity="0.65">n=${i + 1}</text>`;
+  });
+
+  DIAG_ARROWS.forEach(([fromLabel, toLabel]) => {
+    const [x1, y1] = xy(byLabel[fromLabel]);
+    const [x2, y2] = xy(byLabel[toLabel]);
+    const dx = x2 - x1, dy = y2 - y1;
+    const len = Math.hypot(dx, dy);
+    const shrink = 22;
+    const ex = x1 + dx * (1 - shrink / len);
+    const ey = y1 + dy * (1 - shrink / len);
+    const sx = x1 + dx * (shrink / len * 0.5);
+    const sy = y1 + dy * (shrink / len * 0.5);
+    svg += `<line x1="${sx.toFixed(1)}" y1="${sy.toFixed(1)}" x2="${ex.toFixed(1)}" y2="${ey.toFixed(1)}" stroke="var(--gas)" stroke-width="2" marker-end="url(#diag-arrow)" opacity="0.75"></line>`;
+  });
+
+  DIAG_CELLS.forEach(c => {
+    const [x, y] = xy(c);
+    svg += `<circle cx="${x}" cy="${y}" r="20" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1.5"></circle>`;
+    svg += `<text x="${x}" y="${y + 4}" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">${c.label}</text>`;
+    svg += `<circle cx="${x + 16}" cy="${y - 14}" r="9" fill="var(--gas)"></circle>`;
+    svg += `<text x="${x + 16}" y="${y - 10.5}" text-anchor="middle" font-size="9.5" font-weight="700" fill="#fff">${c.order}</text>`;
+  });
+
+  return `
+    <div class="diagonal-diagram-wrap">
+      <svg viewBox="0 0 300 200" class="diagonal-diagram-svg">${svg}</svg>
+      <div class="diagonal-diagram-note">Her alt kabuğun üstündeki mor rakam, o alt kabuğun dolma sırasındaki yerini gösterir: <strong>1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p</strong>.</div>
+    </div>
+  `;
+}
+
 function renderPhScale(chart) {
 
   const W = 480;
@@ -292,6 +491,401 @@ function renderOrbitalBoxes(diagram) {
   `;
 }
 
+/* =========================================================
+   ORBİTAL KUTU SETİ — aynı soruda birden fazla etiketli
+   ("A", "B", "C"...) elektron dizilimini yan yana gösterir.
+   MEB kitabındaki "Elektronlar Orbitallere Nasıl Yerleşir?"
+   etkinliğindeki gibi, Pauli/Hund/Aufbau kuralına UYAN ve
+   UYMAYAN dizilimleri karşılaştırarak buldurmaya yöneliktir.
+   ========================================================= */
+function renderOrbitalBoxSet(items) {
+
+  if (!Array.isArray(items) || items.length === 0) return "";
+
+  const cards = items.map((item, i) => {
+    const tag = item.tag || String.fromCharCode(65 + i);
+    const diagram = renderOrbitalBoxes({ subshells: item.subshells, caption: item.caption });
+    return `
+      <div class="oset-item">
+        <div class="oset-tag">${escapeHTML(tag)}</div>
+        ${diagram}
+      </div>
+    `;
+  }).join("");
+
+  return `<div class="oset-wrap">${cards}</div>`;
+}
+
+function polarPoint(cx, cy, r, angleDeg) {
+  const a = (angleDeg - 90) * Math.PI / 180;
+  return [cx + r * Math.cos(a), cy + r * Math.sin(a)];
+}
+
+/* =========================================================
+   ATOM MODELLERİ — Dalton (bölünemez küre), Thomson (üzümlü
+   kek), Rutherford (yoğun çekirdek + boşluk + saçılma) ve
+   Bohr (katmanlı yörünge) modellerinin özgün SVG çizimleri.
+   Yalnızca evrensel/standart ders kitabı gösterim biçimini
+   (herhangi bir yayınevinin çizimini değil) yeniden üretir.
+   ========================================================= */
+function renderAtomModel(model) {
+
+  if (!model || !model.type) return "";
+
+  const W = 180, H = 180, cx = W / 2, cy = H / 2;
+  let svgInner = "";
+
+  if (model.type === "dalton") {
+    svgInner = `
+      <circle cx="${cx}" cy="${cy}" r="52" fill="var(--gas)" opacity="0.55" stroke="var(--ink-soft)" stroke-width="2"></circle>
+      <text x="${cx}" y="${cy + 5}" text-anchor="middle" font-size="11" fill="var(--ink)" font-weight="700">bölünemez</text>
+    `;
+  } else if (model.type === "thomson") {
+    const plusMarks = Array.from({ length: 9 }).map((_, i) => {
+      const [x, y] = polarPoint(cx, cy, 18 + (i % 3) * 12, i * 40);
+      return `<text x="${x.toFixed(1)}" y="${(y + 3).toFixed(1)}" text-anchor="middle" font-size="10" fill="var(--ink-faint)" font-weight="700">+</text>`;
+    }).join("");
+    const electronDots = Array.from({ length: 6 }).map((_, i) => {
+      const [x, y] = polarPoint(cx, cy, 34, i * 60 + 20);
+      return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.6" fill="var(--gas)"></circle>`;
+    }).join("");
+    svgInner = `
+      <circle cx="${cx}" cy="${cy}" r="52" fill="var(--gas)" opacity="0.32" stroke="var(--ink-soft)" stroke-width="2"></circle>
+      ${plusMarks}
+      ${electronDots}
+    `;
+  } else if (model.type === "rutherford") {
+    const arrowTip = (x, y, angleDeg, color) => {
+      const [x1, y1] = polarPoint(x, y, 6, angleDeg - 150);
+      const [x2, y2] = polarPoint(x, y, 6, angleDeg + 150);
+      return `<polygon points="${x.toFixed(1)},${y.toFixed(1)} ${x1.toFixed(1)},${y1.toFixed(1)} ${x2.toFixed(1)},${y2.toFixed(1)}" fill="${color}"></polygon>`;
+    };
+    svgInner = `
+      <circle cx="${cx}" cy="${cy}" r="60" fill="none" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="3 4"></circle>
+      <line x1="0" y1="${(cy - 36).toFixed(1)}" x2="${(W - 4).toFixed(1)}" y2="${(cy - 36).toFixed(1)}" stroke="var(--ink-soft)" stroke-width="1.6"></line>
+      ${arrowTip(W - 4, cy - 36, 90, "var(--ink-soft)")}
+      <line x1="0" y1="${(cy + 32).toFixed(1)}" x2="${(W - 4).toFixed(1)}" y2="${(cy + 32).toFixed(1)}" stroke="var(--ink-soft)" stroke-width="1.6"></line>
+      ${arrowTip(W - 4, cy + 32, 90, "var(--ink-soft)")}
+      <path d="M0,${cy.toFixed(1)} L${(cx - 6).toFixed(1)},${cy.toFixed(1)} L4,${(cy - 46).toFixed(1)}" fill="none" stroke="var(--bad)" stroke-width="2.2"></path>
+      ${arrowTip(4, cy - 46, -18, "var(--bad)")}
+      <circle cx="${cx}" cy="${cy}" r="5.5" fill="var(--bad)"></circle>
+    `;
+  } else if (model.type === "bohr") {
+    const shells = Array.isArray(model.shells) ? model.shells : [2, 8, 1];
+    const rings = shells.map((count, si) => {
+      const r = 22 + si * 15;
+      const ring = `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="var(--line)" stroke-width="1.3"></circle>`;
+      const dots = Array.from({ length: count }).map((_, i) => {
+        const [x, y] = polarPoint(cx, cy, r, (360 / count) * i + si * 15);
+        return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.4" fill="var(--gas)"></circle>`;
+      }).join("");
+      return ring + dots;
+    }).join("");
+    svgInner = `
+      <circle cx="${cx}" cy="${cy}" r="7" fill="var(--bad)"></circle>
+      ${rings}
+    `;
+  }
+
+  const caption = model.caption ? `<div class="amodel-caption">${escapeHTML(model.caption)}</div>` : "";
+  const label = model.label ? `<div class="amodel-label">${escapeHTML(model.label)}</div>` : "";
+
+  return `
+    <div class="amodel-wrap">
+      ${caption}
+      <svg viewBox="0 0 ${W} ${H}" width="170" height="170" class="amodel-svg">${svgInner}</svg>
+      ${label}
+    </div>
+  `;
+}
+
+/* =========================================================
+   ÇEKİRDEK + ELEKTRON BULUTU — p⁺/n/e⁻ sayılarını, ders
+   kitaplarındaki evrensel gösterim biçimiyle (küçük yoğun
+   çekirdek + büyük elektron bulutu + etiketli kılavuz
+   çizgiler) özgün bir SVG üzerinde işaretler.
+   ========================================================= */
+function renderNucleusCloud(data) {
+
+  if (!data) return "";
+
+  const W = 220, H = 170, cx = 76, cy = 85;
+
+  const rows = [
+    data.protons != null ? { text: `${data.protons} p⁺`, y: 34, color: "var(--bad)" } : null,
+    data.neutrons != null ? { text: `${data.neutrons} n`, y: 85, color: "var(--ink-soft)" } : null,
+    data.electrons != null ? { text: `${data.electrons} e⁻`, y: 136, color: "var(--gas)" } : null
+  ].filter(Boolean);
+
+  const leaders = rows.map(r => `
+    <line x1="${cx + 12}" y1="${cy}" x2="154" y2="${r.y}" stroke="${r.color}" stroke-width="1.2" opacity="0.55"></line>
+    <text x="160" y="${r.y + 4}" font-size="13" font-weight="700" fill="${r.color}">${escapeHTML(r.text)}</text>
+  `).join("");
+
+  const caption = data.caption ? `<div class="ncloud-caption">${escapeHTML(data.caption)}</div>` : "";
+  const label = data.label ? `<div class="ncloud-label">${escapeHTML(data.label)}</div>` : "";
+
+  return `
+    <div class="ncloud-wrap">
+      ${caption}
+      <svg viewBox="0 0 ${W} ${H}" width="220" height="170" class="ncloud-svg">
+        <circle cx="${cx}" cy="${cy}" r="58" fill="var(--gas)" opacity="0.16" stroke="var(--gas)" stroke-width="1.3" stroke-dasharray="2 3"></circle>
+        <circle cx="${cx}" cy="${cy}" r="14" fill="var(--bad)" opacity="0.85"></circle>
+        ${leaders}
+      </svg>
+      ${label}
+    </div>
+  `;
+}
+
+/* =========================================================
+   MOLEKÜL İSKELET ÇİZİMİ — organik/polimer kimyası için
+   evrensel skeletal-formül konvansiyonu (benzen halkası veya
+   tekrar eden polimer birimi). Herhangi bir yayınevinin çizimi
+   değil, kimyada standart olarak kullanılan gösterim biçimidir.
+   ========================================================= */
+function renderMoleculeSkeleton(data) {
+
+  if (!data || !data.type) return "";
+
+  const W = 200, H = 140, cx = 100, cy = 68;
+  let svgInner = "";
+
+  if (data.type === "benzene") {
+    const pts = Array.from({ length: 6 }).map((_, i) => polarPoint(cx, cy, 42, i * 60));
+    const ring = pts.map((p, i) => {
+      const n = pts[(i + 1) % 6];
+      const isDouble = i % 2 === 0;
+      let inner = "";
+      if (isDouble) {
+        const mx1 = p[0] + (n[0] - p[0]) * 0.22, my1 = p[1] + (n[1] - p[1]) * 0.22 - 3.5;
+        const mx2 = p[0] + (n[0] - p[0]) * 0.78, my2 = p[1] + (n[1] - p[1]) * 0.78 - 3.5;
+        inner = `<line x1="${mx1.toFixed(1)}" y1="${my1.toFixed(1)}" x2="${mx2.toFixed(1)}" y2="${my2.toFixed(1)}" stroke="var(--ink)" stroke-width="1.6"></line>`;
+      }
+      return `<line x1="${p[0].toFixed(1)}" y1="${p[1].toFixed(1)}" x2="${n[0].toFixed(1)}" y2="${n[1].toFixed(1)}" stroke="var(--ink)" stroke-width="1.8"></line>${inner}`;
+    }).join("");
+    svgInner = ring;
+  } else if (data.type === "polymerChain") {
+    const unit = escapeHTML(data.unit || "CH₂-CH₂");
+    const zig = [];
+    const startX = 30, stepX = 20, baseY = cy;
+    for (let i = 0; i < 7; i++) {
+      const x = startX + i * stepX;
+      const y = baseY + (i % 2 === 0 ? -14 : 14);
+      zig.push([x, y]);
+    }
+    const path = zig.map((p, i) => (i === 0 ? "M" : "L") + p[0].toFixed(1) + "," + p[1].toFixed(1)).join(" ");
+    svgInner = `
+      <line x1="24" y1="${(baseY - 26).toFixed(1)}" x2="24" y2="${(baseY + 26).toFixed(1)}" stroke="var(--ink-soft)" stroke-width="1.6"></line>
+      <path d="${path}" fill="none" stroke="var(--ink)" stroke-width="1.8"></path>
+      <line x1="${(startX + 6 * stepX).toFixed(1)}" y1="${(baseY - 26).toFixed(1)}" x2="${(startX + 6 * stepX).toFixed(1)}" y2="${(baseY + 26).toFixed(1)}" stroke="var(--ink-soft)" stroke-width="1.6"></line>
+      <text x="${(startX + 6 * stepX + 10).toFixed(1)}" y="${(baseY + 32).toFixed(1)}" font-size="13" font-style="italic" fill="var(--ink)">n</text>
+      <text x="${cx}" y="20" text-anchor="middle" font-size="12" fill="var(--ink-faint)" font-family="var(--mono)">-${unit}-</text>
+    `;
+  }
+
+  const caption = data.caption ? `<div class="amol-caption">${escapeHTML(data.caption)}</div>` : "";
+  const label = data.label ? `<div class="amol-label">${escapeHTML(data.label)}</div>` : "";
+
+  return `
+    <div class="amol-wrap">
+      ${caption}
+      <svg viewBox="0 0 ${W} ${H}" width="200" height="140" class="amol-svg">${svgInner}</svg>
+      ${label}
+    </div>
+  `;
+}
+
+/* =========================================================
+   DÖNGÜ DİYAGRAMI — çok adımlı, döngüsel bir süreci (ör.
+   kariyer planlama döngüsü) eş dilimli bir daire üzerinde
+   gösteren jenerik/evrensel bir "süreç çemberi" gösterimidir.
+   ========================================================= */
+function renderCycleDiagram(data) {
+
+  if (!data || !Array.isArray(data.segments) || data.segments.length === 0) return "";
+
+  const n = data.segments.length;
+  const W = 260, H = 260, cx = 130, cy = 130, rOuter = 108, rInner = 46;
+  const colors = ["var(--gas)", "var(--bad)", "var(--good)", "var(--heat)", "var(--mol-a)"];
+
+  const arcPath = (startDeg, endDeg, rO, rI) => {
+    const [x1, y1] = polarPoint(cx, cy, rO, startDeg);
+    const [x2, y2] = polarPoint(cx, cy, rO, endDeg);
+    const [x3, y3] = polarPoint(cx, cy, rI, endDeg);
+    const [x4, y4] = polarPoint(cx, cy, rI, startDeg);
+    const large = endDeg - startDeg > 180 ? 1 : 0;
+    return `M${x1.toFixed(1)},${y1.toFixed(1)} A${rO},${rO} 0 ${large} 1 ${x2.toFixed(1)},${y2.toFixed(1)} L${x3.toFixed(1)},${y3.toFixed(1)} A${rI},${rI} 0 ${large} 0 ${x4.toFixed(1)},${y4.toFixed(1)} Z`;
+  };
+
+  const step = 360 / n;
+  const wedges = data.segments.map((seg, i) => {
+    const start = i * step, end = (i + 1) * step, mid = start + step / 2;
+    const path = arcPath(start, end, rOuter, rInner);
+    const [lx, ly] = polarPoint(cx, cy, (rOuter + rInner) / 2 + 4, mid);
+    const words = (seg.label || "").split(" ");
+    const tspans = words.map((w, wi) => `<tspan x="${lx.toFixed(1)}" dy="${wi === 0 ? 0 : 11}">${escapeHTML(w)}</tspan>`).join("");
+    return `
+      <path d="${path}" fill="${colors[i % colors.length]}" opacity="0.32" stroke="var(--surface)" stroke-width="2"></path>
+      <text x="${lx.toFixed(1)}" y="${(ly - (words.length - 1) * 5.5).toFixed(1)}" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--ink)">${tspans}</text>
+      <text x="${lx.toFixed(1)}" y="${(ly - (words.length - 1) * 5.5 - 14).toFixed(1)}" text-anchor="middle" font-size="10" fill="var(--ink-faint)" font-family="var(--mono)">${i + 1}</text>
+    `;
+  }).join("");
+
+  const centerLabelWords = (data.centerLabel || "").split(" ");
+  const centerTspans = centerLabelWords.map((w, wi) => `<tspan x="${cx}" dy="${wi === 0 ? 0 : 12}">${escapeHTML(w)}</tspan>`).join("");
+
+  const caption = data.caption ? `<div class="cyc-caption">${escapeHTML(data.caption)}</div>` : "";
+
+  return `
+    <div class="cyc-wrap">
+      ${caption}
+      <svg viewBox="0 0 ${W} ${H}" width="240" height="240" class="cyc-svg">
+        ${wedges}
+        <circle cx="${cx}" cy="${cy}" r="${rInner - 4}" fill="var(--surface)" stroke="var(--line)" stroke-width="1.3"></circle>
+        <text x="${cx}" y="${(cy - (centerLabelWords.length - 1) * 6 + 4).toFixed(1)}" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--ink)">${centerTspans}</text>
+      </svg>
+    </div>
+  `;
+}
+
+/* =========================================================
+   KATEGORİ HARİTASI — çok sayıda kategoriyi (ör. kariyer
+   alanlarını) renk kodlu kartlar hâlinde bir arada gösteren
+   jenerik bir grid görünümü. Öğrenci dışarıdan bir kaynağa
+   ("Bilgi Görseli X" gibi) bakmak zorunda kalmadan, sorunun
+   içinde TÜM kategorileri bir arada görebilsin diye kullanılır.
+   ========================================================= */
+function renderCareerMap(data) {
+
+  if (!data || !Array.isArray(data.areas) || data.areas.length === 0) return "";
+
+  const colors = ["var(--gas)", "var(--bad)", "var(--good)", "var(--heat)", "var(--mol-a)", "var(--mol-b)", "var(--gas-dark)", "var(--heat-dark)"];
+
+  const cards = data.areas.map((a, i) => `
+    <div class="cmap-card" style="border-left-color:${colors[i % colors.length]}">
+      <div class="cmap-label">${escapeHTML(a.label)}</div>
+      ${a.detail ? `<div class="cmap-detail">${escapeHTML(a.detail)}</div>` : ""}
+    </div>
+  `).join("");
+
+  const caption = data.caption ? `<div class="cmap-caption">${escapeHTML(data.caption)}</div>` : "";
+
+  return `
+    <div class="cmap-wrap">
+      ${caption}
+      <div class="cmap-grid">${cards}</div>
+    </div>
+  `;
+}
+
+/* =========================================================
+   LABORATUVAR MALZEMESİ ÇİZİMİ — her ders kitabında/güvenlik
+   kartında görülen, evrensel/jenerik cam malzeme siluetlerinin
+   özgün çizgi çizimleri (erlenmayer, beher, balon joje, büret,
+   deney tüpü, mezür, kroze, pipet). Herhangi bir yayınevinin
+   fotoğrafı/çizimi değil, malzemenin kendi jenerik şeklidir.
+   ========================================================= */
+const LAB_EQUIPMENT_SHAPES = {
+  erlenmayer: `
+    <path d="M42,20 L42,42 L24,78 Q22,84 30,84 L70,84 Q78,84 76,78 L58,42 L58,20 Z" fill="none" stroke="var(--ink)" stroke-width="2"></path>
+    <line x1="40" y1="20" x2="60" y2="20" stroke="var(--ink)" stroke-width="2.4"></line>
+    <path d="M32,68 L68,68" stroke="var(--ink)" stroke-width="1.4" opacity="0.5"></path>
+  `,
+  beher: `
+    <path d="M28,26 L28,80 Q28,84 32,84 L68,84 Q72,84 72,80 L72,26" fill="none" stroke="var(--ink)" stroke-width="2"></path>
+    <path d="M26,26 L62,26 L74,19 L72,26 Z" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round"></path>
+    <line x1="34" y1="46" x2="40" y2="46" stroke="var(--ink)" stroke-width="1.3" opacity="0.6"></line>
+    <line x1="34" y1="58" x2="40" y2="58" stroke="var(--ink)" stroke-width="1.3" opacity="0.6"></line>
+    <line x1="34" y1="70" x2="40" y2="70" stroke="var(--ink)" stroke-width="1.3" opacity="0.6"></line>
+  `,
+  balonjoje: `
+    <path d="M46,18 L46,38 C30,54 24,64 24,72 A26,20 0 0 0 76,72 C76,64 70,54 54,38 L54,18 Z" fill="none" stroke="var(--ink)" stroke-width="2"></path>
+    <line x1="44" y1="18" x2="56" y2="18" stroke="var(--ink)" stroke-width="2.4"></line>
+    <line x1="26" y1="58" x2="74" y2="58" stroke="var(--ink)" stroke-width="1.4" opacity="0.6"></line>
+  `,
+  buret: `
+    <line x1="42" y1="10" x2="42" y2="64" stroke="var(--ink)" stroke-width="2"></line>
+    <line x1="58" y1="10" x2="58" y2="64" stroke="var(--ink)" stroke-width="2"></line>
+    <line x1="42" y1="10" x2="58" y2="10" stroke="var(--ink)" stroke-width="2.4"></line>
+    <path d="M42,64 L58,64 L52,80 L48,80 Z" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round"></path>
+    <rect x="33" y="66" width="34" height="6" rx="2" fill="none" stroke="var(--ink)" stroke-width="1.8"></rect>
+    <circle cx="69" cy="69" r="3" fill="none" stroke="var(--ink)" stroke-width="1.6"></circle>
+    <line x1="36" y1="22" x2="42" y2="22" stroke="var(--ink)" stroke-width="1.2" opacity="0.6"></line>
+    <line x1="36" y1="34" x2="42" y2="34" stroke="var(--ink)" stroke-width="1.2" opacity="0.6"></line>
+    <line x1="36" y1="46" x2="42" y2="46" stroke="var(--ink)" stroke-width="1.2" opacity="0.6"></line>
+    <line x1="36" y1="56" x2="42" y2="56" stroke="var(--ink)" stroke-width="1.2" opacity="0.6"></line>
+  `,
+  deneytupu: `
+    <path d="M40,14 L40,66 A10,10 0 0 0 60,66 L60,14" fill="none" stroke="var(--ink)" stroke-width="2"></path>
+    <line x1="42" y1="40" x2="58" y2="40" stroke="var(--ink)" stroke-width="1.3" opacity="0.5"></line>
+  `,
+  mezur: `
+    <path d="M40,16 L58,16 L67,10 L60,16 L60,78 Q60,84 53,84 L47,84 Q40,84 40,78 Z" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round"></path>
+    <line x1="43" y1="32" x2="49" y2="32" stroke="var(--ink)" stroke-width="1.2" opacity="0.6"></line>
+    <line x1="43" y1="46" x2="49" y2="46" stroke="var(--ink)" stroke-width="1.2" opacity="0.6"></line>
+    <line x1="43" y1="60" x2="49" y2="60" stroke="var(--ink)" stroke-width="1.2" opacity="0.6"></line>
+    <line x1="43" y1="72" x2="49" y2="72" stroke="var(--ink)" stroke-width="1.2" opacity="0.6"></line>
+  `,
+  kroze: `
+    <path d="M40,82 L34,36 Q34,30 40,30 L60,30 Q66,30 66,36 L60,82 Z" fill="none" stroke="var(--ink)" stroke-width="2"></path>
+    <ellipse cx="50" cy="30" rx="16" ry="4" fill="none" stroke="var(--ink)" stroke-width="2"></ellipse>
+  `,
+  pipet: `
+    <line x1="49" y1="10" x2="49" y2="52" stroke="var(--ink)" stroke-width="2"></line>
+    <line x1="51" y1="10" x2="51" y2="52" stroke="var(--ink)" stroke-width="2"></line>
+    <path d="M46,52 L54,52 L50,84 Z" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round"></path>
+    <line x1="44" y1="24" x2="49" y2="24" stroke="var(--ink)" stroke-width="1.3" opacity="0.7"></line>
+    <line x1="44" y1="34" x2="49" y2="34" stroke="var(--ink)" stroke-width="1.3" opacity="0.7"></line>
+    <line x1="44" y1="44" x2="49" y2="44" stroke="var(--ink)" stroke-width="1.3" opacity="0.7"></line>
+  `,
+  damlalik: `
+    <path d="M40,14 Q40,8 50,8 Q60,8 60,14 L60,30 Q60,34 56,34 L44,34 Q40,34 40,30 Z" fill="none" stroke="var(--ink)" stroke-width="2"></path>
+    <line x1="46" y1="34" x2="46" y2="72" stroke="var(--ink)" stroke-width="2"></line>
+    <line x1="54" y1="34" x2="54" y2="72" stroke="var(--ink)" stroke-width="2"></line>
+    <path d="M46,72 L54,72 L50,88 Z" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round"></path>
+  `,
+  ayirmahunisi: `
+    <path d="M30,18 Q26,18 26,24 C26,46 34,54 50,66 C66,54 74,46 74,24 Q74,18 70,18 Z" fill="none" stroke="var(--ink)" stroke-width="2"></path>
+    <ellipse cx="50" cy="18" rx="10" ry="3" fill="none" stroke="var(--ink)" stroke-width="1.8"></ellipse>
+    <line x1="50" y1="66" x2="50" y2="70" stroke="var(--ink)" stroke-width="2"></line>
+    <rect x="42" y="70" width="16" height="5" rx="2" fill="none" stroke="var(--ink)" stroke-width="1.6"></rect>
+    <line x1="50" y1="75" x2="50" y2="84" stroke="var(--ink)" stroke-width="2"></line>
+  `
+};
+
+const LAB_EQUIPMENT_LABELS = {
+  erlenmayer: "Erlenmayer",
+  beher: "Beherglas",
+  balonjoje: "Balon Joje",
+  buret: "Büret",
+  deneytupu: "Deney Tüpü",
+  mezur: "Dereceli Silindir (Mezür)",
+  kroze: "Kroze",
+  pipet: "Pipet",
+  damlalik: "Damlalık",
+  ayirmahunisi: "Ayırma Hunisi"
+};
+
+function renderLabEquipment(data) {
+
+  if (!data || !data.type) return "";
+
+  const shape = LAB_EQUIPMENT_SHAPES[data.type];
+  if (!shape) return "";
+
+  const caption = data.caption ? `<div class="lequip-caption">${escapeHTML(data.caption)}</div>` : "";
+  const label = data.hideLabel ? "" : `<div class="lequip-label">${escapeHTML(LAB_EQUIPMENT_LABELS[data.type] || data.type)}</div>`;
+
+  return `
+    <div class="lequip-wrap">
+      ${caption}
+      <svg viewBox="0 0 100 96" width="120" height="115" class="lequip-svg">${shape}</svg>
+      ${label}
+    </div>
+  `;
+}
+
 function renderCircleCompare(data) {
 
   if (!data || !Array.isArray(data.items) || data.items.length === 0) return "";
@@ -370,21 +964,22 @@ const GHS_ICONS = {
     <path d="M50,40 C46,46 44,52 46,57 C47,60 49,61 50,61 C51,61 53,60 54,57 C56,52 54,46 50,40 Z" fill="#fff"></path>
   `,
   oxidizing: `
-    <circle cx="50" cy="60" r="9" fill="#000"></circle>
-    <path d="M50,26 C43,35 40,45 43,53 C45,58 48,60 50,60 C52,60 55,58 57,53 C60,45 57,35 50,26 Z" fill="#000"></path>
+    <circle cx="50" cy="62" r="10" fill="#000"></circle>
+    <path d="M50,26 C44,34 41,42 43,49 C45,53 48,54 50,54 C52,54 55,53 57,49 C59,42 56,34 50,26 Z" fill="#000"></path>
   `,
   explosive: `
-    <circle cx="50" cy="54" r="11" fill="#000"></circle>
-    <g stroke="#000" stroke-width="3.2" stroke-linecap="round">
-      <line x1="50" y1="40" x2="50" y2="30"></line>
-      <line x1="60" y1="45" x2="68" y2="37"></line>
-      <line x1="64" y1="54" x2="74" y2="54"></line>
-      <line x1="40" y1="45" x2="32" y2="37"></line>
-      <line x1="36" y1="54" x2="26" y2="54"></line>
-      <line x1="43" y1="63" x2="37" y2="70"></line>
-      <line x1="57" y1="63" x2="63" y2="70"></line>
+    <circle cx="50" cy="58" r="10" fill="#000"></circle>
+    <path d="M50,48 C52,44 51,40 47,38" fill="none" stroke="#000" stroke-width="2.4" stroke-linecap="round"></path>
+    <g stroke="#000" stroke-linecap="butt" stroke-linejoin="miter" fill="none">
+      <path d="M58,50 L67,39" stroke-width="3"></path>
+      <path d="M64,56 L77,52 L73,59" stroke-width="2.4"></path>
+      <path d="M62,64 L73,71" stroke-width="3.2"></path>
+      <path d="M54,70 L58,81" stroke-width="2.6"></path>
+      <path d="M46,71 L42,82 L48,79" stroke-width="2.4"></path>
+      <path d="M40,65 L28,69" stroke-width="3"></path>
+      <path d="M39,56 L24,53 L30,58" stroke-width="2.4"></path>
+      <path d="M43,49 L35,38" stroke-width="2.8"></path>
     </g>
-    <path d="M50,30 C52,26 50,22 46,22" fill="none" stroke="#000" stroke-width="2.4" stroke-linecap="round"></path>
   `,
   gas: `
     <rect x="42" y="34" width="16" height="34" rx="4" fill="none" stroke="#000" stroke-width="3.2"></rect>
@@ -392,28 +987,50 @@ const GHS_ICONS = {
     <line x1="46" y1="34" x2="46" y2="68" stroke="#fff" stroke-width="0"></line>
   `,
   corrosive: `
-    <g stroke="#000" stroke-width="2.6" fill="none">
-      <path d="M34,28 L28,42 L40,42 Z"></path>
-      <path d="M56,28 L50,44 L64,44 Z"></path>
+    <g transform="translate(40,22) rotate(-22)">
+      <rect x="-4.5" y="-13" width="9" height="16" rx="3" fill="none" stroke="#000" stroke-width="2.4"></rect>
+      <line x1="-4.5" y1="-6" x2="4.5" y2="-6" stroke="#000" stroke-width="2"></line>
     </g>
-    <line x1="30" y1="52" x2="70" y2="52" stroke="#000" stroke-width="3"></line>
-    <path d="M26,52 C24,58 22,62 18,66" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round"></path>
-    <path d="M40,52 C39,58 38,62 36,67" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round"></path>
-    <path d="M58,52 C58,58 59,63 61,68" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round"></path>
+    <g transform="translate(60,22) rotate(22)">
+      <rect x="-4.5" y="-13" width="9" height="16" rx="3" fill="none" stroke="#000" stroke-width="2.4"></rect>
+      <line x1="-4.5" y1="-6" x2="4.5" y2="-6" stroke="#000" stroke-width="2"></line>
+    </g>
+
+    <path d="M36,32 C34,36 32,39 30,42" stroke="#000" stroke-width="2" stroke-linecap="round" fill="none"></path>
+    <circle cx="29" cy="45" r="1.6" fill="#000"></circle>
+    <line x1="22" y1="53" x2="44" y2="53" stroke="#000" stroke-width="3.4"></line>
+    <path d="M26,53 L25,47 M32,53 L32,46 M38,53 L39,47" stroke="#000" stroke-width="1.8" stroke-linecap="round" fill="none"></path>
+
+    <path d="M64,32 C66,36 68,39 70,42" stroke="#000" stroke-width="2" stroke-linecap="round" fill="none"></path>
+    <circle cx="71" cy="45" r="1.6" fill="#000"></circle>
+    <g fill="#000">
+      <rect x="58" y="55" width="18" height="8" rx="3"></rect>
+      <rect x="59" y="48" width="3.6" height="9" rx="1.8"></rect>
+      <rect x="63.5" y="45.5" width="3.6" height="11.5" rx="1.8"></rect>
+      <rect x="68" y="46.5" width="3.6" height="10.5" rx="1.8"></rect>
+      <rect x="72.4" y="49.5" width="3.2" height="7.5" rx="1.6"></rect>
+    </g>
   `,
   toxic: `
-    <circle cx="50" cy="42" r="14" fill="none" stroke="#000" stroke-width="3.2"></circle>
-    <circle cx="44" cy="40" r="2.6" fill="#000"></circle>
-    <circle cx="56" cy="40" r="2.6" fill="#000"></circle>
-    <path d="M46,48 C48,50 52,50 54,48" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round"></path>
-    <g stroke="#000" stroke-width="2.4" stroke-linecap="round">
-      <line x1="34" y1="60" x2="66" y2="68"></line>
-      <line x1="34" y1="68" x2="66" y2="60"></line>
+    <path d="M50,25 C38,25 29,34 29,45 C29,53 34,58 40,60 L60,60 C66,58 71,53 71,45 C71,34 62,25 50,25 Z" fill="#000"></path>
+    <g stroke="#fff" stroke-width="1.6">
+      <line x1="45" y1="58" x2="45" y2="60.5"></line>
+      <line x1="50" y1="58" x2="50" y2="60.5"></line>
+      <line x1="55" y1="58" x2="55" y2="60.5"></line>
     </g>
-    <circle cx="34" cy="60" r="2" fill="#000"></circle>
-    <circle cx="66" cy="68" r="2" fill="#000"></circle>
-    <circle cx="34" cy="68" r="2" fill="#000"></circle>
-    <circle cx="66" cy="60" r="2" fill="#000"></circle>
+    <ellipse cx="40" cy="42" rx="4.4" ry="5.8" fill="#fff" transform="rotate(-14 40 42)"></ellipse>
+    <ellipse cx="60" cy="42" rx="4.4" ry="5.8" fill="#fff" transform="rotate(14 60 42)"></ellipse>
+    <path d="M50,45 L46,52 L54,52 Z" fill="#fff"></path>
+    <g stroke="#000" stroke-width="3" stroke-linecap="round">
+      <line x1="30" y1="66" x2="70" y2="78"></line>
+      <line x1="70" y1="66" x2="30" y2="78"></line>
+    </g>
+    <g fill="#000">
+      <circle cx="30" cy="66" r="3.4"></circle>
+      <circle cx="70" cy="66" r="3.4"></circle>
+      <circle cx="30" cy="78" r="3.4"></circle>
+      <circle cx="70" cy="78" r="3.4"></circle>
+    </g>
   `,
   irritant: `
     <rect x="46.5" y="26" width="7" height="26" rx="3" fill="#000"></rect>
@@ -445,20 +1062,58 @@ const GHS_LABELS = {
   environment: "Çevreye zararlı"
 };
 
-function renderGHSPictogram(code) {
+function renderGHSIcon(code) {
 
   const icon = GHS_ICONS[code];
   if (!icon) return "";
 
-  const label = escapeHTML(GHS_LABELS[code] || code);
+  return `
+    <img
+      src="${GHS_IMG_BASE}${code}.svg"
+      alt="${escapeHTML(GHS_LABELS[code] || code)}"
+      width="64" height="64"
+      style="display:block"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='block';"
+    >
+    <svg viewBox="0 0 100 100" width="64" height="64" style="display:none">
+      <rect x="18" y="18" width="64" height="64" rx="7" fill="#fff" stroke="#dc2626" stroke-width="6" transform="rotate(45 50 50)"></rect>
+      ${icon}
+    </svg>
+  `;
+}
+
+/* ISO 361 radyasyon (trefoil) uyarı simgesi — GHS'in 9 piktogramına dahil
+   değildir, ayrı bir uluslararası standarttır; sarı üçgen üzerinde siyah
+   üç yapraklı trefoil. */
+const RADIATION_ICON = `
+  <path d="M50,8 L92,86 L8,86 Z" fill="#ffd400" stroke="#000" stroke-width="4" stroke-linejoin="round"></path>
+  <g transform="translate(50,60)">
+    <circle r="8" fill="#000"></circle>
+    <g fill="#000">
+      <path d="M6.93,-4 L24.25,-14 A28,28 0 0 1 24.25,14 L6.93,4 A8,8 0 0 0 6.93,-4 Z"></path>
+      <path d="M6.93,-4 L24.25,-14 A28,28 0 0 1 24.25,14 L6.93,4 A8,8 0 0 0 6.93,-4 Z" transform="rotate(120)"></path>
+      <path d="M6.93,-4 L24.25,-14 A28,28 0 0 1 24.25,14 L6.93,4 A8,8 0 0 0 6.93,-4 Z" transform="rotate(240)"></path>
+    </g>
+  </g>
+`;
+
+function renderRadiationIcon() {
+  return `<svg viewBox="0 0 100 100" width="64" height="64">${RADIATION_ICON}</svg>`;
+}
+
+function renderGHSPictogram(code, tagLetter) {
+
+  const icon = GHS_ICONS[code];
+  if (!icon) return "";
+
+  const label = tagLetter
+    ? `<div class="ghs-label ghs-tag">${escapeHTML(tagLetter)}</div>`
+    : `<div class="ghs-label">${escapeHTML(GHS_LABELS[code] || code)}</div>`;
 
   return `
     <div class="ghs-item">
-      <svg viewBox="0 0 100 100" width="64" height="64">
-        <rect x="18" y="18" width="64" height="64" rx="7" fill="#fff" stroke="#dc2626" stroke-width="6" transform="rotate(45 50 50)"></rect>
-        ${icon}
-      </svg>
-      <div class="ghs-label">${label}</div>
+      ${renderGHSIcon(code)}
+      ${label}
     </div>
   `;
 }
@@ -472,7 +1127,8 @@ function renderGHSPictograms(data) {
     ? `<div class="ghs-title">${escapeHTML(data.title)}</div>`
     : "";
 
-  const items = codes.map(c => renderGHSPictogram(c)).join("");
+  const hideLabels = !Array.isArray(data) && data && data.hideLabels;
+  const items = codes.map((c, i) => renderGHSPictogram(c, hideLabels ? String.fromCharCode(97 + i) : null)).join("");
 
   return `
     <div class="ghs-wrap">
@@ -598,6 +1254,83 @@ function renderObjectIcons(data) {
       <div class="oicon-row">${rendered}</div>
     </div>
   `;
+}
+
+/* =========================================================
+   ÇOKLU İFADE LİSTESİ (I, II, III...) — kombinasyon sorularının
+   ("Yalnız I", "I ve II", "I, II ve III" gibi) bağlam kutusu.
+   ========================================================= */
+const ROMAN = ["I","II","III","IV","V","VI","VII"];
+
+function renderStatementList(statements) {
+
+  if (!Array.isArray(statements) || statements.length === 0) return "";
+
+  const items = statements.map((s, i) => `
+    <div class="qstate-item">
+      <span class="qstate-num">${ROMAN[i] || (i + 1)}.</span>
+      <span>${escapeHTML(s)}</span>
+    </div>
+  `).join("");
+
+  return `<div class="qstate-wrap">${items}</div>`;
+}
+
+/* =========================================================
+   ÖĞRENCİ GÖRÜŞLERİ — farklı akıl yürütmeleri karşılaştırarak
+   kavram yanılgısı ayıklama amaçlı konuşma balonu bağlamı.
+   ========================================================= */
+function renderDialogue(dialogue) {
+
+  if (!Array.isArray(dialogue) || dialogue.length === 0) return "";
+
+  const bubbles = dialogue.map((d, i) => `
+    <div class="qdlg-bubble ${i % 2 === 0 ? "qdlg-a" : "qdlg-b"}">
+      <span class="qdlg-who">${escapeHTML(d.who || `Öğrenci ${i + 1}`)}</span>
+      <p>${escapeHTML(d.text || "")}</p>
+    </div>
+  `).join("");
+
+  return `<div class="qdlg-wrap">${bubbles}</div>`;
+}
+
+/* =========================================================
+   EŞLEŞTİRME — iki sütunlu (numaralı / harfli) eşleştirme
+   bağlamı. Gerçek "doğru eşleşme" sonraki MC soruda sorulur.
+   ========================================================= */
+function renderMatchTable(match) {
+
+  if (!match || !Array.isArray(match.left) || !Array.isArray(match.right)) return "";
+
+  const leftItems = match.left.map((t, i) => `
+    <div class="qmatch-item"><span class="qmatch-tag">${i + 1}</span><span>${escapeHTML(t)}</span></div>
+  `).join("");
+
+  const rightItems = match.right.map((t, i) => `
+    <div class="qmatch-item"><span class="qmatch-tag qmatch-tag-alt">${String.fromCharCode(97 + i)}</span><span>${escapeHTML(t)}</span></div>
+  `).join("");
+
+  return `
+    <div class="qmatch-wrap">
+      <div class="qmatch-col">${leftItems}</div>
+      <div class="qmatch-col">${rightItems}</div>
+    </div>
+  `;
+}
+
+/* =========================================================
+   DOĞRU/YANLIŞ KONTROL LİSTESİ — işaretlenecek ifade grubu
+   (görsel bağlam; puanlanan soru ayrıca sorulur).
+   ========================================================= */
+function renderChecklist(items) {
+
+  if (!Array.isArray(items) || items.length === 0) return "";
+
+  const rows = items.map(t => `
+    <div class="qchk-item"><span class="qchk-box"></span><span>${escapeHTML(t)}</span></div>
+  `).join("");
+
+  return `<div class="qchk-wrap">${rows}</div>`;
 }
 
 function renderChart(chart) {
@@ -2375,13 +3108,39 @@ export function renderQuiz(
 
       ${renderChart(question.chart)}
 
+      ${renderStatementList(question.statements)}
+
+      ${renderDialogue(question.dialogue)}
+
+      ${renderMatchTable(question.matchPairs)}
+
+      ${renderChecklist(question.checklist)}
+
       ${renderOrbitalBoxes(question.orbitalBoxes)}
+
+      ${renderOrbitalBoxSet(question.orbitalBoxSet)}
+
+      ${renderAtomModel(question.atomModel)}
+
+      ${renderNucleusCloud(question.nucleusCloud)}
+
+      ${renderMoleculeSkeleton(question.moleculeSkeleton)}
+
+      ${renderCycleDiagram(question.cycleDiagram)}
+
+      ${renderCareerMap(question.careerMap)}
+
+      ${renderLabEquipment(question.labEquipment)}
 
       ${renderCircleCompare(question.circleCompare)}
 
       ${renderPeriodicHighlight(question.periodicHighlight)}
 
       ${renderGHSPictograms(question.pictograms)}
+
+      ${renderCompareLineChart(question.compareChart)}
+
+      ${renderOrbitalShapes(question.orbitalShapes)}
 
       ${renderObjectIcons(question.objectIcons)}
 
@@ -2968,9 +3727,28 @@ export {
   escapeHTML,
   renderDataTable,
   renderChart,
+  renderBarChart,
+  renderLineChart,
+  renderCompareLineChart,
+  renderOrbitalShapes,
+  renderDiagonalDiagram,
+  renderPhScale,
   renderOrbitalBoxes,
+  renderOrbitalBoxSet,
+  renderAtomModel,
+  renderNucleusCloud,
+  renderCycleDiagram,
+  renderCareerMap,
+  renderLabEquipment,
+  renderMoleculeSkeleton,
   renderCircleCompare,
   renderPeriodicHighlight,
   renderGHSPictograms,
-  renderObjectIcons
+  renderGHSIcon,
+  renderRadiationIcon,
+  renderObjectIcons,
+  renderStatementList,
+  renderDialogue,
+  renderMatchTable,
+  renderChecklist
 };

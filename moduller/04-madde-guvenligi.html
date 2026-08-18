@@ -119,7 +119,7 @@
     <div class="section-head">
       <span class="eyebrow">🔍 Keşfet</span>
       <h2>Etkinlik — Kimyasal Depolama Matrisi</h2>
-      <p>Bir depoda iki farklı tehlike sınıfından madde bulunuyor. Birlikte depolanıp depolanamayacağını önce tahmin et, sonra "Cevabı Gör" ile ders kitabındaki gerçek depolama matrisinden kontrol et.</p>
+      <p>Bir depoda iki farklı tehlike sınıfından madde bulunuyor. Birlikte depolanıp depolanamayacağını önce tahmin et, sonra "Cevabı Gör" ile gerçek depolama matrisinden kontrol et.</p>
     </div>
     <div class="card">
       <div class="controls" style="grid-template-columns:1fr 1fr; max-width:520px">
@@ -143,7 +143,7 @@
     </div>
 
     <div class="card" style="margin-top:16px; overflow-x:auto">
-      <div class="small" style="margin-bottom:10px">Tam Depolama Matrisi (ders kitabından)</div>
+      <div class="small" style="margin-bottom:10px">Tam Depolama Matrisi</div>
       <div id="storage-matrix" class="storage-matrix"></div>
       <div class="storage-legend" id="storage-legend"></div>
     </div>
@@ -164,7 +164,7 @@
 
 <script type="module">
   import { mountNav, mountFooter } from "../assets/js/nav.js?v=1";
-  import { renderQuiz, markVisited, bindJournal } from "../assets/js/quiz-engine.js?v=3";
+  import { renderQuiz, markVisited, bindJournal, renderGHSIcon, renderRadiationIcon } from "../assets/js/quiz-engine.js?v=4";
   import { QUIZ } from "../assets/js/quiz-data.js?v=5";
 
   mountNav("guvenlik");
@@ -232,21 +232,23 @@
   });
 
   /* ---- GHS piktogram eşleştirme ----
-     İkonlar, ders kitabının "Temel Güvenlik Uyarı İşaretleri" sayfasından (s. 38-39)
-     birebir kırpılmış görsellerdir — değiştirilmeden kullanılmıştır. Kitapta GHS'in
-     9 standart piktogramına ek olarak "Radyoaktif Maddeler" işareti de (sarı üçgen
-     trefoil) yer aldığından, toplam 10 piktogram kullanılmıştır. */
+     İkonlar quiz-engine.js'teki özgün SVG çizimlerinden (renderGHSIcon) gelir;
+     assets/img/ghs/<kod>.svg konursa (bkz. o klasördeki README) otomatik olarak
+     resmi/kamu malı piktogram kullanılır, yoksa elle çizilmiş SVG'ye döner.
+     GHS'in 9 standart piktogramına ek olarak, kazanım kapsamı gereği ayrı bir
+     uluslararası standart olan "Radyoaktif Maddeler" (ISO 361 trefoil) işareti
+     de eklenmiştir — renderRadiationIcon() ile ayrıca çizilir. */
   const ICONS = {
-    patlayici:   `<img src="../assets/img/ghs/patlayici.png" alt="Patlayıcı">`,
-    oksitleyici: `<img src="../assets/img/ghs/oksitleyici.png" alt="Oksitleyici">`,
-    zehirli:     `<img src="../assets/img/ghs/zehirli.png" alt="Zehirli">`,
-    yanici:      `<img src="../assets/img/ghs/yanici.png" alt="Yanıcı, Parlayıcı">`,
-    korozif:     `<img src="../assets/img/ghs/korozif.png" alt="Korozif">`,
-    tahris:      `<img src="../assets/img/ghs/tahris.png" alt="Tahriş Edici">`,
-    cevre:       `<img src="../assets/img/ghs/cevre.png" alt="Çevreye Zararlı Maddeler">`,
-    saglik:      `<img src="../assets/img/ghs/saglik.png" alt="Sağlık Etkisi">`,
-    gaz:         `<img src="../assets/img/ghs/gaz.png" alt="Gaz">`,
-    radyoaktif:  `<img src="../assets/img/ghs/radyoaktif.png" alt="Radyoaktif Maddeler">`,
+    patlayici:   renderGHSIcon("explosive"),
+    oksitleyici: renderGHSIcon("oxidizing"),
+    zehirli:     renderGHSIcon("toxic"),
+    yanici:      renderGHSIcon("flame"),
+    korozif:     renderGHSIcon("corrosive"),
+    tahris:      renderGHSIcon("irritant"),
+    cevre:       renderGHSIcon("environment"),
+    saglik:      renderGHSIcon("health-hazard"),
+    gaz:         renderGHSIcon("gas"),
+    radyoaktif:  renderRadiationIcon(),
   };
   const PICTOGRAMS = [
     { key:"patlayici", name:"Patlayıcı" },
@@ -327,9 +329,9 @@
   });
 
   /* ---- Kimyasal Depolama Matrisi ----
-     Değerler, ders kitabının "Kimyasal Maddelerin Depolanması" matris sayfasından
-     (s. 40) birebir okunmuştur — 9 GHS piktogram sınıfı arasındaki depolama
-     uyumluluğunu gösterir. Matris simetriktir. */
+     9 GHS piktogram sınıfı arasındaki genel kimyasal güvenlik/depolama
+     uyumluluk ilkelerini (bilimsel olgu, kaynağa özgü değil) gösterir.
+     Matris simetriktir. */
   const STORAGE_CLASSES = [
     { key:"yanici",      name:"Yanıcı, Parlayıcı" },
     { key:"patlayici",   name:"Patlayıcı" },
