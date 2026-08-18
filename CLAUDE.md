@@ -1,65 +1,90 @@
 # AtomLab 9 — Kalıcı Kurallar
 
-Bu dosya her oturumun başında otomatik okunur. Buradaki kurallar
-kullanıcının (Saadettin) tekrar tekrar yazmak zorunda kalmaması için
-kalıcı hale getirilmiştir ve benim kendi varsayılan alışkanlıklarımdan
-**önceliklidir**. Yeni bir standing-rule (tek seferlik görev değil, kalıcı
-tercih) verildiğinde, aynı oturumda bu dosyaya eklenmelidir.
+Bu dosya her oturumun başında otomatik okunur. Buradaki kurallar,
+kullanıcının (Saadettin) aynı talimatları tekrar tekrar yazmak zorunda
+kalmaması için kalıcı hale getirilmiştir ve benim kendi varsayılan
+alışkanlıklarımdan **önceliklidir**. Yeni bir standing-rule (tek
+seferlik görev değil, kalıcı tercih) verildiğinde, aynı oturumda bu
+dosyaya eklenir.
 
-## 1. Referans materyal disiplini
+## 1. PİKTOGRAM OLAYI — somut ders çıkarılan vaka (telif + doğruluk)
 
-- Her modül/soru üzerinde çalışmadan ÖNCE, o modülün konusuyla ilgili
-  kullanıcının paylaştığı TÜM örnekler ve `kimya_9 1. tema.pdf` (MEB
-  kitabı) yeniden taranır. Körü körüne önceki modülde işe yarayan bir
-  kalıbı yeni modüle uygulamak YASAK — bu, kullanıcının en çok
-  şikayet ettiği "yapmacık/tekdüze" sorunun ta kendisidir.
-- Kitaptaki şekiller/görseller/grafikler referans alınır, onlardan
-  ilham alınarak ÖZGÜN görseller tasarlanır. "Referans al ve daha
-  iyisini yap" — birebir kopya değil, kavramsal olarak daha zengin.
+Ne oldu: Kullanıcı "evrensel sembolleri (GHS piktogramları) direkt
+kullan" dedi. Ben önce MEB kitabından görsel kırpıp kullandım —
+YANLIŞ (yayınevi telifi). Uyarılınca "kopya etmiyorum" diyerek bu
+kez GERÇEK GHS standardına benzemeyen, anlamsız, kendi uydurduğum
+elle-çizim semboller koydum — bu da YANLIŞ (artık doğruluk/işlevsellik
+sorunu: piktogram gerçek GHS'yi temsil etmiyor). Doğru çözüm: piktogramın
+GERÇEK RESMİ/EVRENSEL kaynağını (GHS Purple Book / Wikimedia'nın resmi
+SVG'leri) bulup onu kullanmaktı — ne kopya ne uydurma, standardın
+kendisi.
 
-## 2. Telif hakkı
+**Genel kural:** "Yayınevi çizimini kopyalama" talimatı ASLA "o zaman
+ben uydururum, gerçeğe benzemesi şart değil" anlamına gelmez.
+- Evrensel/standart/resmi bir kaynağı olan bir şey (GHS piktogramı,
+  periyodik tablo formatı, SI birimleri vb.) varsa → o GERÇEK kaynak
+  bulunup kullanılır (`assets/img/ghs/` içindeki resmi SVG'ler gibi).
+- Resmi bir kaynağı olmayan ama bilimsel/tarihsel bir gerçekliği
+  temsil eden şey (atom modelleri, deney düzenekleri vb.) varsa →
+  özgün ama BİLİMSEL OLARAK DOĞRU ve tanınabilir çizilir.
+- "Kopya etmemek" hiçbir zaman "yanlış/anlamsız bir şey uydurmak"
+  için bahane olamaz.
 
-- Hiçbir yayınevinin (MEB dahil) özgün çizimi/kitap taraması/kırpılmış
-  görseli KULLANILMAZ.
-- Yalnızca şunlar serbesttir: (a) evrensel/standart ders kitabı
-  gösterim konvansiyonları (örn. çekirdek+elektron bulutu diyagramı,
-  orbital kutu gösterimi) — bunlar özgün SVG olarak yeniden çizilir;
-  (b) resmi/kamuya açık standart kaynaklar (örn. GHS Purple Book
-  piktogramları) — birebir kullanılabilir ama KAYNAĞI resmi olmalı,
-  uydurma/kendi çizimim olmamalı.
-- GHS piktogramları: `assets/img/ghs/` altındaki resmi SVG'ler
-  kullanılır (bkz. o klasördeki README). Bunların yerine kendi elle
-  çizilmiş yaklaşık versiyonumu koymak YASAK — bu daha önce yaşanmış
-  ve düzeltilmiş bir hata, tekrar edilmeyecek.
+## 2. Paylaşılan örnekler = TARZ REHBERİ, ne kopya ne görmezden gelme
 
-## 3. Görsellik zorunluluğu
+Kullanıcı farklı yayınların ve MEB kitabının çizgi grafiklerini, kap/
+beher şekillerini, atom modellerini, soru köklerini paylaştığında
+amacı **"bunu birebir kopyala"** DEĞİL, **"bu TARZI/yaklaşımı referans
+al, daha da geliştirilmiş, daha ileri seviye soru kökleri/önermeler
+üret"** demektir. Buna "tamam" dedikten sonra sessizce eski
+alışkanlığıma dönmek — tekrarlanan, kabul edilemez bir hata.
+
+Somut adım: paylaşılan örneği aç, incele, hangi TASARIM İLKESİNİ
+gösterdiğini çıkar (örn. "çoklu örnekle karşılaştırmalı öğretme",
+"gerçekçi laboratuvar bağlamı", "kavram yanılgısı hedefleyen
+çeldirici" gibi) — sonra o ilkeyi kullanarak ÖZGÜN ve DAHA İLERİ bir
+versiyon üret. Kopyalamamak = ilkeyi görmezden gelmek değildir.
+
+## 3. Kimya öğretmeni + yazılım uzmanı gibi düşün — FORMÜL YASAK
+
+Her soru/görsel kararı, konuyu en iyi nasıl anlatacağını bilen bir
+kimya öğretmeni ile bunu yazılımla en iyi nasıl göstereceğini bilen
+bir uzmanın ortak kararıymış gibi, TEK TEK değerlendirilir.
+- Her soruda görsel şart DEĞİL. Ama görsel kullanılsın/kullanılmasın,
+  bu karar o sorunun içeriğinden gelir — önceden belirlenmiş bir
+  "formül/tarif" değil (örn. "her modülde 2 dialogue + 2 matchPairs +
+  2 statements + 2 checklist" gibi mekanik dağıtım YASAK).
+- Bir kalıp bulup onu tüm sorulara/modüllere mekanik olarak
+  uygulamak — biçim çeşitlendirmede bile — düzeltilmeye çalışılan
+  yapmacıklığın ta kendisidir.
+- Her modülün mevcut içeriği önce okunur; gerçekten tekdüze olan
+  kısımlar hedeflenir, zaten çeşitli/iyi olan kısımlara dokunulmaz.
+
+## 4. "Tamam" sonrası sessiz geri dönüş — ZORUNLU ÖZ-DENETİM
+
+Bir yaklaşım değişikliğini kabul ettikten ("tamam" dedikten) SONRA,
+işi teslim etmeden/commit etmeden önce kısaca kendimi denetlerim:
+"Bu çıktı, kullanıcının az önce tarif ettiği yaklaşımı gerçekten
+yansıtıyor mu, yoksa ben yine eski alışkanlığıma mı döndüm?" Şüphe
+varsa, commit etmeden ÖNCE somut bir örnekle gösterip onay isterim —
+sessizce ilerlemem ve "tamam" demiş olmayı yeterli saymam.
+
+## 5. Görsellik
 
 - Doğası gereği görsel olan konular (atom modelleri, orbitaller,
-  periyodik tablo, grafikler vb.) SADECE metinle anlatılmaz. Gerçek,
-  özgün bir görsel/diyagram bileşeni kullanılır
-  (`assets/js/quiz-engine.js` içindeki render* fonksiyonları).
-- Yeni bir görsel ihtiyaç ortaya çıkarsa, mevcut bileşenlerden biri
-  uymuyorsa yeni bir render fonksiyonu yazılır (var olanı zorlamak
-  yerine).
+  periyodik tablo, grafikler vb.) SADECE metinle anlatılmaz — ama
+  madde 3'teki formül yasağı geçerli: her soruya zorla görsel
+  eklenmez, gerçekten görsel gerektiren yerlere eklenir.
+- Mevcut render bileşenleri yetmiyorsa (`assets/js/quiz-engine.js`
+  içindeki render* fonksiyonları), var olanı zorlamak yerine yeni
+  bir bileşen yazılır.
 
-## 4. Format çeşitliliği — TEK KALIP YASAK
+## 6. Açıklama (explain) kalitesi
 
-- "Kitap-tarzı" soru formatları (`statements`, `dialogue`,
-  `matchPairs`, `checklist`) her modüle otomatik/eşit oranda
-  dağıtılmaz. Hangi formatın kullanılacağı o modülün/o sorunun
-  içeriğine göre belirlenir. Bir modülde 2 dialogue + 2 matchPairs +
-  2 statements + 2 checklist gibi mekanik bir "tarif" uygulamak,
-  düzeltmeye çalıştığımız tekdüzeliğin yeni bir versiyonudur.
-- Her modülün mevcut içeriği önce okunur; gerçekten tekdüze/kalıplaşmış
-  olan kısımlar hedeflenir, zaten çeşitli olan kısımlara dokunulmaz.
+- `explain` alanları yalnızca "doğru cevap bu çünkü X" değil,
+  öğretici/eğitsel bir anlatım içerir — kavramı gerçekten öğretir.
 
-## 5. Açıklama (explain) kalitesi
-
-- `explain` alanları yalnızca "doğru cevap bu çünkü X" değil, öğretici/
-  eğitsel bir anlatım içerir — kavramı gerçekten öğretir, sınav
-  gerekçesi gibi kuru geçmez.
-
-## 6. Soru bankası kalite kontrolü (her değişiklikten sonra ZORUNLU)
+## 7. Soru bankası kalite kontrolü (her değişiklikten sonra ZORUNLU)
 
 ```
 node sablon/scripts/verify-quiz-data.mjs assets/js/quiz-data.js --count=50
@@ -70,28 +95,28 @@ node sablon/scripts/verify-quiz-data.mjs assets/js/quiz-data.js --count=50
   dengeli VE gerçekten karışık (bloklar halinde değil).
 - Commit/push ÖNCESİ bu script mutlaka çalıştırılır ve temiz çıkmalıdır.
 
-## 7. Test disiplini
+## 8. Test disiplini
 
 - Yeni bir görsel bileşen veya soru değişikliği, geçici bir test
   harness (`_t.html` + `python3 -m http.server` + Playwright
   screenshot) ile GÖRSEL olarak doğrulanır, commit'ten önce. Test
   dosyaları commit edilmeden silinir.
 
-## 8. Motor dosyalarının çifte bakımı
+## 9. Motor dosyalarının çifte bakımı
 
 - `assets/js/quiz-engine.js` ve `assets/css/style.css` içine yapılan
   her motor değişikliği, `sablon/assets/js/quiz-engine.js` ve
   `sablon/assets/css/style.css` içine de aynen yansıtılır (şablon
   sistemi senkron kalmalı).
 
-## 9. Belirsizlik anında
+## 10. Belirsizlik anında
 
 - Bir talimat yoruma açıksa veya önceki bir kararla çelişiyor
   gözüküyorsa, VARSAYIM YAPIP DEVAM ETMEK yerine anlayışımı kısaca
   (1-2 cümle) özetleyip onay istenir. Özellikle bu dosyadaki
   kurallardan birinden sapma gerektiren bir durum varsa.
 
-## 10. Genel iş akışı
+## 11. Genel iş akışı
 
 - Branch: `claude/burdan-devam-a2wg3u`.
 - Küçük, odaklı commit'ler, açıklayıcı Türkçe commit mesajlarıyla.
