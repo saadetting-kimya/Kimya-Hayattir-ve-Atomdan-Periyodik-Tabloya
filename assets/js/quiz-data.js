@@ -145,11 +145,15 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir tarifte kabartma tozu, sirke ile karıştırıldığında anında köpürme ve kabarcıklanma gözlemlenir.",
-    text: "Bu gözlem en doğrudan hangi çıkarımı destekler?",
-    options: ["Yalnızca sıcaklık artışı gözlemlenmiştir", "İki madde birbiriyle hiçbir etkileşime girmemiştir", "Kabartma tozu sirkede fiziksel olarak çözünmüştür, başka bir şey olmamıştır", "İki madde arasında bir kimyasal tepkime gerçekleşmiş, gaz açığa çıkmıştır", "Bu, yalnızca renk değişimidir"],
-    correct: 3,
-    explain: "Kabartma tozu (sodyum bikarbonat) ile sirkedeki asetik asit arasındaki tepkime karbondioksit gazı açığa çıkarır; ortaya çıkan köpürme, yeni bir maddenin (gazın) oluştuğu kimyasal bir tepkimenin göstergesidir."
+    dialogue: [
+      { who: "Öğrenci A", text: "Kabartma tozu sirkenin içinde eridi, tıpkı şekerin suda erimesi gibi; sadece fiziksel bir olay bu." },
+      { who: "Öğrenci B", text: "Köpürüp gaz çıkardığına göre iki madde birbiriyle tepkimeye girip yeni bir madde (gaz) oluşturmuş olmalı; bu kimyasal bir değişim." },
+      { who: "Öğrenci C", text: "Köpürme sadece sıcaklığın aniden artmasından kaynaklanıyor, madde değişimiyle ilgisi yok." }
+    ],
+    text: "Kabartma tozu ile sirke karıştırıldığında gözlenen köpürmeyle ilgili hangi öğrencinin görüşü doğrudur?",
+    options: ["Öğrenci A", "Öğrenci B", "Öğrenci C", "Üçü de kısmen haklıdır", "Hiçbiri, çünkü hiçbir değişim gerçekleşmemiştir"],
+    correct: 1,
+    explain: "Kabartma tozu (sodyum bikarbonat) ile sirkedeki asetik asit arasındaki tepkime karbondioksit gazı açığa çıkarır; ortaya çıkan köpürme, yeni bir maddenin (gazın) oluştuğu kimyasal bir tepkimenin göstergesidir — Öğrenci B haklıdır."
   },
   {
     difficulty: "kolay",
@@ -184,7 +188,8 @@ export const QUIZ = {
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.1 — Kimya biliminin günlük hayata katkısına ilişkin bilimsel çıkarım yapabilme",
-    context: "Bir çamaşır suyu şişesinin etiketinde 'tahriş edici' uyarı sembolü bulunurken, aynı raftaki bir tuvalet açıcısının etiketinde 'aşındırıcı ve tahriş edici' sembolleri birlikte yer almaktadır.",
+    pictograms: { codes: ["irritant", "corrosive"], title: "Solda çamaşır suyu, sağda tuvalet açıcısı etiketindeki simgeler" },
+    context: "Bir çamaşır suyu şişesinin etiketinde yalnızca 'tahriş edici' uyarı sembolü bulunurken, aynı raftaki bir tuvalet açıcısının etiketinde 'aşındırıcı ve tahriş edici' sembolleri birlikte yer almaktadır.",
     text: "Bu iki üründeki farklı sembol kombinasyonu göz önüne alındığında, tuvalet açıcısı için en doğru güvenlik yaklaşımı hangisidir?",
     options: ["Sembol sayısı fazla olduğu için ürün daha güvenlidir", "İki ürün aynı tehlikeye sahip olduğundan aynı şekilde kullanılabilir", "Metal/cilt gibi yüzeylere zarar verme riski çamaşır suyundan daha yüksek olduğundan, ekstra dikkatli (eldiven, iyi havalandırma) kullanılmalıdır", "Aşındırıcı sembolü yalnızca ambalajın dayanıklılığıyla ilgilidir", "Bu sembollerin kullanım güvenliğiyle hiçbir ilgisi yoktur"],
     correct: 2,
