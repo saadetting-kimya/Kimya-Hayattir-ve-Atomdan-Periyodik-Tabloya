@@ -446,12 +446,14 @@ const GHS_LABELS = {
   environment: "Çevreye zararlı"
 };
 
-function renderGHSPictogram(code) {
+function renderGHSPictogram(code, tagLetter) {
 
   const icon = GHS_ICONS[code];
   if (!icon) return "";
 
-  const label = escapeHTML(GHS_LABELS[code] || code);
+  const label = tagLetter
+    ? `<div class="ghs-label ghs-tag">${escapeHTML(tagLetter)}</div>`
+    : `<div class="ghs-label">${escapeHTML(GHS_LABELS[code] || code)}</div>`;
 
   return `
     <div class="ghs-item">
@@ -459,7 +461,7 @@ function renderGHSPictogram(code) {
         <rect x="18" y="18" width="64" height="64" rx="7" fill="#fff" stroke="#dc2626" stroke-width="6" transform="rotate(45 50 50)"></rect>
         ${icon}
       </svg>
-      <div class="ghs-label">${label}</div>
+      ${label}
     </div>
   `;
 }
@@ -473,7 +475,8 @@ function renderGHSPictograms(data) {
     ? `<div class="ghs-title">${escapeHTML(data.title)}</div>`
     : "";
 
-  const items = codes.map(c => renderGHSPictogram(c)).join("");
+  const hideLabels = !Array.isArray(data) && data && data.hideLabels;
+  const items = codes.map((c, i) => renderGHSPictogram(c, hideLabels ? String.fromCharCode(97 + i) : null)).join("");
 
   return `
     <div class="ghs-wrap">
@@ -599,6 +602,83 @@ function renderObjectIcons(data) {
       <div class="oicon-row">${rendered}</div>
     </div>
   `;
+}
+
+/* =========================================================
+   ÇOKLU İFADE LİSTESİ (I, II, III...) — kombinasyon sorularının
+   ("Yalnız I", "I ve II", "I, II ve III" gibi) bağlam kutusu.
+   ========================================================= */
+const ROMAN = ["I","II","III","IV","V","VI","VII"];
+
+function renderStatementList(statements) {
+
+  if (!Array.isArray(statements) || statements.length === 0) return "";
+
+  const items = statements.map((s, i) => `
+    <div class="qstate-item">
+      <span class="qstate-num">${ROMAN[i] || (i + 1)}.</span>
+      <span>${escapeHTML(s)}</span>
+    </div>
+  `).join("");
+
+  return `<div class="qstate-wrap">${items}</div>`;
+}
+
+/* =========================================================
+   ÖĞRENCİ GÖRÜŞLERİ — farklı akıl yürütmeleri karşılaştırarak
+   kavram yanılgısı ayıklama amaçlı konuşma balonu bağlamı.
+   ========================================================= */
+function renderDialogue(dialogue) {
+
+  if (!Array.isArray(dialogue) || dialogue.length === 0) return "";
+
+  const bubbles = dialogue.map((d, i) => `
+    <div class="qdlg-bubble ${i % 2 === 0 ? "qdlg-a" : "qdlg-b"}">
+      <span class="qdlg-who">${escapeHTML(d.who || `Öğrenci ${i + 1}`)}</span>
+      <p>${escapeHTML(d.text || "")}</p>
+    </div>
+  `).join("");
+
+  return `<div class="qdlg-wrap">${bubbles}</div>`;
+}
+
+/* =========================================================
+   EŞLEŞTİRME — iki sütunlu (numaralı / harfli) eşleştirme
+   bağlamı. Gerçek "doğru eşleşme" sonraki MC soruda sorulur.
+   ========================================================= */
+function renderMatchTable(match) {
+
+  if (!match || !Array.isArray(match.left) || !Array.isArray(match.right)) return "";
+
+  const leftItems = match.left.map((t, i) => `
+    <div class="qmatch-item"><span class="qmatch-tag">${i + 1}</span><span>${escapeHTML(t)}</span></div>
+  `).join("");
+
+  const rightItems = match.right.map((t, i) => `
+    <div class="qmatch-item"><span class="qmatch-tag qmatch-tag-alt">${String.fromCharCode(97 + i)}</span><span>${escapeHTML(t)}</span></div>
+  `).join("");
+
+  return `
+    <div class="qmatch-wrap">
+      <div class="qmatch-col">${leftItems}</div>
+      <div class="qmatch-col">${rightItems}</div>
+    </div>
+  `;
+}
+
+/* =========================================================
+   DOĞRU/YANLIŞ KONTROL LİSTESİ — işaretlenecek ifade grubu
+   (görsel bağlam; puanlanan soru ayrıca sorulur).
+   ========================================================= */
+function renderChecklist(items) {
+
+  if (!Array.isArray(items) || items.length === 0) return "";
+
+  const rows = items.map(t => `
+    <div class="qchk-item"><span class="qchk-box"></span><span>${escapeHTML(t)}</span></div>
+  `).join("");
+
+  return `<div class="qchk-wrap">${rows}</div>`;
 }
 
 function renderChart(chart) {
@@ -2376,6 +2456,14 @@ export function renderQuiz(
 
       ${renderChart(question.chart)}
 
+      ${renderStatementList(question.statements)}
+
+      ${renderDialogue(question.dialogue)}
+
+      ${renderMatchTable(question.matchPairs)}
+
+      ${renderChecklist(question.checklist)}
+
       ${renderOrbitalBoxes(question.orbitalBoxes)}
 
       ${renderCircleCompare(question.circleCompare)}
@@ -2973,5 +3061,9 @@ export {
   renderCircleCompare,
   renderPeriodicHighlight,
   renderGHSPictograms,
-  renderObjectIcons
+  renderObjectIcons,
+  renderStatementList,
+  renderDialogue,
+  renderMatchTable,
+  renderChecklist
 };

@@ -31,10 +31,18 @@ const targetCount = Number((args.find(a => a.startsWith("--count=")) || "").spli
 // "bir öğrenci ... yapıyor" / "bir kişi ... yapıyor" kalıbına bağımlı
 // kalınmamalı. Kendi dilinize/isim listenize göre genişletin.
 const FORBIDDEN_NAME_TOKENS = [
-  "Ayşe", "Mehmet", "Elif", "Can ", "Zeynep", "Emre", "Deniz", "Selin",
-  "Burak", "Ali ", "Merve", "Kerem", "Aslı", "Onur", "Buse",
-  "öğrenci", "kişi "
+  "Ayşe", "Mehmet", "Elif", "Can", "Zeynep", "Emre", "Deniz", "Selin",
+  "Burak", "Ali", "Merve", "Kerem", "Aslı", "Onur", "Buse",
+  "öğrenci", "kişi"
 ];
+
+// Türkçe harfleri "kelime karakteri" sayan, tam kelime eşleşmesi arayan yardımcı
+// (basit .includes() "metali" içindeki "ali" gibi sahte eşleşmeler üretiyordu).
+function hasWholeWord(haystack, needle) {
+  const esc = needle.trim().replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const re = new RegExp(`(^|[^a-zçğıöşü])${esc}([^a-zçğıöşü]|$)`, "i");
+  return re.test(haystack);
+}
 
 const absPath = path.resolve(process.cwd(), filePathArg);
 const mod = await import(pathToFileURL(absPath).href);
@@ -86,9 +94,16 @@ for (const key of Object.keys(QUIZ)) {
     if (textSet.has(norm)) dupTexts.push({ i, text: q.text });
     textSet.add(norm);
 
-    const combined = ((q.context || "") + " " + (q.text || "")).toLowerCase();
+    const combined = (q.context || "") + " " + (q.text || "");
+    // "dialogue" formatındaki sorular kasıtlı olarak "Öğrenci A/B/C" gibi
+    // etiketler ve "öğrencinin görüşü" gibi ifadeler kullanır — bu, REHBER'in
+    // yasakladığı "bir öğrenci ... yapıyor" tek-anlatıcı tembelliğinden farklı,
+    // kavram yanılgısı ayıklamaya yönelik meşru bir format; bu ikisini
+    // istisna tutuyoruz.
+    const isDialogue = Array.isArray(q.dialogue) && q.dialogue.length > 0;
     FORBIDDEN_NAME_TOKENS.forEach(tok => {
-      if (combined.includes(tok.toLowerCase())) {
+      if (isDialogue && (tok === "öğrenci" || tok === "kişi")) return;
+      if (hasWholeWord(combined, tok)) {
         nameHits.push({ i, tok, text: (q.text || "").slice(0, 60) });
       }
     });

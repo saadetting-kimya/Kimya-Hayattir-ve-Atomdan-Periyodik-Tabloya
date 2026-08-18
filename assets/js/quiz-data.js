@@ -1532,7 +1532,7 @@ export const QUIZ = {
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir kişi, kariyerinin ilk yıllarında bir ilaç şirketinde saf laboratuvar Ar-Ge işiyle uğraşmış; birkaç yıl sonra ekip yöneticiliğine geçmiş ve artık zamanının çoğunu bütçe planlama, ekip koordinasyonu ve üst yönetime rapor sunmaya ayırıyor; laboratuvara doğrudan girme sıklığı belirgin biçimde azalmıştır.",
+    context: "Bir ilaç şirketindeki analitik kimyager, kariyerinin ilk yıllarında saf laboratuvar Ar-Ge işiyle uğraşmış; birkaç yıl sonra ekip yöneticiliğine geçmiş ve artık zamanının çoğunu bütçe planlama, ekip koordinasyonu ve üst yönetime rapor sunmaya ayırıyor; laboratuvara doğrudan girme sıklığı belirgin biçimde azalmıştır.",
     text: "Bu kariyer gelişimi, aşağıdaki genellemelerden hangisini EN İYİ örnekler?",
     options: ["Bu geçiş yalnızca ilaç sektöründe görülen istisnai bir durumdur", "Bir kimyagerin kariyeri boyunca laboratuvar dışına çıkması mesleki başarısızlık göstergesidir", "Yönetsel pozisyona geçen biri artık kimya bilgisini hiç kullanmaz", "Teknik bir alanda derinleşen bir kariyer, zamanla yönetsel/liderlik yetkinliklerinin öne çıktığı bir role dönüşebilir", "Ekip yöneticiliği, laboratuvar Ar-Ge deneyimi olmadan da aynı etkinlikte yürütülebilir"],
     correct: 3,
@@ -1598,11 +1598,16 @@ export const QUIZ = {
     difficulty: "kolay",
     kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
     pictograms: ["flame"],
-    context: "Bir depolama alanındaki varilin etiketinde yukarıdaki uyarı simgesi bulunmaktadır.",
-    text: "Bu simge, madde ile ilgili en doğrudan hangi tehlikeyi bildirir?",
-    options: ["Aşındırıcılık", "Oksitleyicilik", "Çevreye zararlılık", "Basınçlı gaz içerme", "Kolay tutuşabilirlik"],
-    correct: 4,
-    explain: "Alev simgesi, maddenin kolay tutuşabilir (yanıcı) olduğunu bildiren GHS piktogramıdır."
+    context: "Bir depolama alanındaki varilin etiketinde yukarıdaki uyarı simgesi bulunmaktadır. Depo sorumlusu varille ilgili şu önlemleri değerlendiriyor:",
+    statements: [
+      "Varili doğrudan güneş ışığı alan, sıcak bir bölgeden uzak tutmak",
+      "Varilin yanında kaynak/kesme gibi kıvılcım oluşturan işlemler yapılmasını yasaklamak",
+      "Varili yalnızca metal olduğu için nemli bir zeminde bekletmek"
+    ],
+    text: "Yukarıdaki önlemlerden hangileri, bu uyarı simgesinin işaret ettiği tehlikeye karşı doğru bir yaklaşımdır?",
+    options: ["Yalnız I", "Yalnız III", "I ve II", "II ve III", "I, II ve III"],
+    correct: 2,
+    explain: "Alev simgesi maddenin kolay tutuşabilir olduğunu bildirir; bu nedenle ısı/güneşten uzak tutulması (I) ve kıvılcım kaynaklarından kaçınılması (II) doğru önlemlerdir. Zeminin nemli olması yanıcılıkla ilgili değildir (III yanlış)."
   },
   {
     difficulty: "kolay",
@@ -1627,12 +1632,16 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    objectIcons: { title: "Bir laboratuvarda kullanılan iki malzeme", items: [{ type: "detergent", label: "Çamaşır suyu (hipoklorit)" }, { type: "beaker", label: "Amonyaklı temizlik solüsyonu" }] },
-    context: "Görseldeki iki temizlik ürünü aynı kapta karıştırılırsa zehirli klor gazı benzeri bileşikler açığa çıkabilmektedir; bu nedenle üreticiler etiketlerde bu iki tür ürünün birlikte kullanılmamasını belirtmektedir.",
-    text: "Bu durumda güvenli kullanım için en doğru yaklaşım hangisidir?",
-    options: ["İki ürünü daha hızlı temizlik için birlikte dökmek", "İki ürünü asla aynı anda veya karıştırarak kullanmamak", "Yalnızca havalandırma varsa karıştırmak yeterlidir", "Karışım sadece cilde değerse tehlikelidir", "Karıştırma miktarı azsa risk oluşmaz"],
+    objectIcons: { title: "Bir mutfakta bulunan iki temizlik ürünü", items: [{ type: "detergent", label: "Çamaşır suyu (hipoklorit)" }, { type: "beaker", label: "Amonyaklı temizlik solüsyonu" }] },
+    dialogue: [
+      { who: "Öğrenci A", text: "İkisi de temizlik ürünü olduğuna göre birlikte kullanmak temizliği daha da güçlendirir." },
+      { who: "Öğrenci B", text: "Etikette birlikte kullanılmaması yazıyorsa, ikisi karıştığında tehlikeli bir gaz açığa çıkabilir; bu yüzden asla birlikte kullanmamalıyım." },
+      { who: "Öğrenci C", text: "Pencereyi açık tutarsam ikisini birlikte kullansam bile risk ortadan kalkar." }
+    ],
+    text: "Hipoklorit ve amonyak içeren ürünlerin birlikte kullanımıyla ilgili hangi öğrencinin görüşü bilimsel olarak doğrudur?",
+    options: ["Öğrenci A", "Öğrenci B", "Öğrenci C", "Üçü de haklıdır, ürün türü fark etmez", "Hiçbiri haklı değildir, karışım tamamen zararsızdır"],
     correct: 1,
-    explain: "Hipoklorit içeren ürünlerle amonyak içeren ürünlerin karıştırılması toksik gaz oluşumuna yol açabileceğinden bu iki tür ürün asla birlikte kullanılmamalıdır."
+    explain: "Hipoklorit ile amonyak birleştiğinde toksik klor bileşikleri açığa çıkabilir; havalandırma bu riski ortadan kaldırmaz, bu iki tür ürün hiçbir koşulda birlikte kullanılmamalıdır — Öğrenci B'nin görüşü doğrudur."
   },
   {
     difficulty: "kolay",
@@ -1657,32 +1666,44 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    pictograms: ["toxic"],
-    context: "Bir zirai ilaç kutusunun etiketinde yukarıdaki simge bulunmaktadır.",
-    text: "Bu simge en doğrudan hangi tehlikeyi bildirir?",
-    options: ["Yalnızca uzun vadede hafif tahriş riski", "Yalnızca yangın riski", "Az miktarda maruziyette bile ölümcül veya ciddi zehirlenme riski", "Yalnızca çevre kirliliği riski", "Yalnızca basınçlı kap riski"],
+    pictograms: { codes: ["toxic", "gas", "explosive"], hideLabels: true },
+    statements: [
+      "İçeriği basınç altındadır; ısıtıldığında patlama riski taşır.",
+      "Darbe, sürtünme veya ısı etkisiyle patlayabilir.",
+      "Az miktarda maruziyette bile ölümcül veya ciddi zehirlenmeye yol açabilir."
+    ],
+    context: "Yukarıda üç uyarı işareti (a, b, c) ve bu işaretlerle ilgili üç tanım (I, II, III) verilmiştir.",
+    text: "'a' işaretiyle eşleşen tanım hangisidir?",
+    options: ["I", "II", "III", "Hem I hem III", "Hiçbiri"],
     correct: 2,
-    explain: "Toksik (kafatası-kemik) piktogramı, maddenin az miktarda maruziyette bile ölümcül veya ciddi zehirlenmeye yol açabileceğini bildiren en yüksek düzey akut toksisite uyarısıdır."
+    explain: "'a' harfli işaret toksik (kafatası-kemik) piktogramıdır; bu piktogram maddenin az miktarda maruziyette bile ölümcül veya ciddi zehirlenmeye yol açabileceğini bildirir (III numaralı tanım)."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    pictograms: ["gas"],
-    context: "Bir kaynak atölyesindeki tüpün etiketinde yukarıdaki simge yer almaktadır.",
-    text: "Bu simge, maddeyle ilgili hangi tehlikeyi bildirmektedir?",
-    options: ["İçeriğin aşındırıcı sıvı olduğu", "İçeriğin yalnızca tahriş edici olduğu", "İçeriğin radyoaktif olduğu", "İçeriğin çevreye zararlı olduğu", "İçeriğin basınç altında olduğu ve ısıtıldığında patlayabileceği"],
-    correct: 4,
-    explain: "Basınçlı gaz piktogramı, kabın içeriğinin basınç altında olduğunu ve ısıya maruz kaldığında patlama riski taşıdığını bildirir."
+    checklist: [
+      "Kullanılmayan kimyasal şişelerin kapağı sıkıca kapatılır.",
+      "Farklı kimyasallar 'daha güçlü temizlik' için aynı kapta karıştırılabilir.",
+      "Kimyasal döküntüsü olduğunda önce yetkili kişiye haber verilir.",
+      "Etiketi silinmiş/okunaksız bir şişenin içeriği koklanarak tahmin edilebilir."
+    ],
+    text: "Yukarıdaki ifadelerden kaç tanesi doğru bir güvenlik uygulamasıdır?",
+    options: ["1", "2", "3", "4", "Hiçbiri"],
+    correct: 1,
+    explain: "Yalnızca 1. ve 3. ifadeler doğru güvenlik uygulamasıdır. Farklı kimyasalları karıştırmak ve etiketsiz bir şişeyi koklamak tehlikeli ve yanlış uygulamalardır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    pictograms: ["explosive"],
-    context: "Bir fabrikadaki maddenin ambalajında yukarıdaki simge bulunmaktadır.",
-    text: "Bu uyarı simgesi en doğrudan hangi tehlikeye işaret eder?",
-    options: ["Yalnızca hafif cilt tahrişi riski", "Yalnızca çevreye yayılma riski", "Darbe, sürtünme veya ısıyla patlama riski", "Uzun vadeli sağlık hasarı riski", "Yalnızca elektrik iletkenliği riski"],
-    correct: 2,
-    explain: "Patlayıcı piktogramı, maddenin darbe, sürtünme veya ısı etkisiyle patlayabileceğini bildiren en yüksek düzey fiziksel tehlike uyarısıdır."
+    statements: [
+      "Kimyasallar, etiketleri kolayca okunabilecek şekilde raflara yerleştirilmelidir.",
+      "Yanıcı ve oksitleyici özellikteki kimyasallar aynı dolapta yan yana tutulabilir.",
+      "Ağır kimyasal kaplar, düşme riskini azaltmak için alt raflarda tutulmalıdır."
+    ],
+    text: "Kimyasal depolama ile ilgili yukarıdaki ifadelerden hangileri doğrudur?",
+    options: ["Yalnız I", "Yalnız II", "I ve II", "I ve III", "I, II ve III"],
+    correct: 3,
+    explain: "Etiketlerin görünür olması (I) ve ağır kapların alt raflarda tutulması (III) doğru depolama ilkeleridir. Yanıcı maddeler oksitleyicilerden uzak tutulmalıdır; bu nedenle II yanlıştır."
   },
   {
     difficulty: "kolay",
