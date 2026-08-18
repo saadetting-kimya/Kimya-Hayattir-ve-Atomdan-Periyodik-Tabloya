@@ -374,17 +374,18 @@ const GHS_ICONS = {
     <path d="M50,26 C43,35 40,45 43,53 C45,58 48,60 50,60 C52,60 55,58 57,53 C60,45 57,35 50,26 Z" fill="#000"></path>
   `,
   explosive: `
-    <circle cx="50" cy="54" r="11" fill="#000"></circle>
-    <g stroke="#000" stroke-width="3.2" stroke-linecap="round">
-      <line x1="50" y1="40" x2="50" y2="30"></line>
-      <line x1="60" y1="45" x2="68" y2="37"></line>
-      <line x1="64" y1="54" x2="74" y2="54"></line>
-      <line x1="40" y1="45" x2="32" y2="37"></line>
-      <line x1="36" y1="54" x2="26" y2="54"></line>
-      <line x1="43" y1="63" x2="37" y2="70"></line>
-      <line x1="57" y1="63" x2="63" y2="70"></line>
+    <circle cx="50" cy="58" r="10" fill="#000"></circle>
+    <path d="M50,48 C52,44 51,40 47,38" fill="none" stroke="#000" stroke-width="2.4" stroke-linecap="round"></path>
+    <g stroke="#000" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <path d="M58,50 L67,39" stroke-width="3.4"></path>
+      <path d="M64,56 L77,52 L73,59" stroke-width="2.8"></path>
+      <path d="M62,64 L73,71" stroke-width="3.6"></path>
+      <path d="M54,70 L58,81" stroke-width="3"></path>
+      <path d="M46,71 L42,82 L48,79" stroke-width="2.8"></path>
+      <path d="M40,65 L28,69" stroke-width="3.4"></path>
+      <path d="M39,56 L24,53 L30,58" stroke-width="2.8"></path>
+      <path d="M43,49 L35,38" stroke-width="3.2"></path>
     </g>
-    <path d="M50,30 C52,26 50,22 46,22" fill="none" stroke="#000" stroke-width="2.4" stroke-linecap="round"></path>
   `,
   gas: `
     <rect x="42" y="34" width="16" height="34" rx="4" fill="none" stroke="#000" stroke-width="3.2"></rect>
