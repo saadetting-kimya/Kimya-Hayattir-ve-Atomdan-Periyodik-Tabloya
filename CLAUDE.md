@@ -30,6 +30,13 @@ ben uydururum, gerçeğe benzemesi şart değil" anlamına gelmez.
 - "Kopya etmemek" hiçbir zaman "yanlış/anlamsız bir şey uydurmak"
   için bahane olamaz.
 
+**"Kullan" demek "atıf yap/metinle tarif et" demek DEĞİLDİR.** Bir
+soruda görsel gerekiyorsa, gerçek görsel bileşeni (render fonksiyonu)
+o sorunun İÇİNE konur — "Kaynak: MEB Görsel X" gibi bir metin notu
+veya sadece context içinde sözel tarif YETERLİ DEĞİLDİR, bu da bir
+tür kaçamaktır. Her soruda görsel şart değildir (madde 3), ama
+gerektiğinde gerçek, render edilen bir görsel kullanılır.
+
 ## 2. Paylaşılan örnekler = TARZ REHBERİ, ne kopya ne görmezden gelme
 
 Kullanıcı farklı yayınların ve MEB kitabının çizgi grafiklerini, kap/
