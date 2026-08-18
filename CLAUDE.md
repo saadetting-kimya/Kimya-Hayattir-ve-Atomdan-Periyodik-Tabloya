@@ -86,6 +86,19 @@ hazırlamak; kapsam dışına taşarak "zenginleştirmek" değil.
 
 ## 6. Görsellik ve grafik/şekil türü — PİYASA UYUMU
 
+**"Özgünlük" ne demek, ne demek DEĞİL:** Özgün olmak, öğrencinin
+anlamasını zorlaştırmak veya piyasadaki/MEB'deki alışılmış gösterim
+biçimlerinden bilerek FARKLI/tuhaf bir şey üretmek anlamına GELMEZ.
+Piyasa kitapları MEB'in sınav formatına uygun hazırlanıyor; öğrenci
+o görsel dile aşina. Amacımız bu dilden SAPMAK değil, aynı dili
+konuşup içeriğini/derinliğini/soru kurgusunu DAHA GELİŞMİŞ hâle
+getirmektir. "Özgün" burada yalnızca "birebir kopya/tarama değil,
+kendi çizdiğimiz/kendi kurguladığımız" anlamına gelir — "alışılmadık
+görünsün" anlamına gelmez. Şüphe anında ölçüt: bu görsel/soru tipi,
+piyasadaki bir öğrencinin/öğretmenin ilk bakışta tanıyıp rahatça
+okuyabileceği bir şey mi? Değilse, "özgünlük" yanlış anlaşılmış
+demektir.
+
 - Doğası gereği görsel olan konular (atom modelleri, orbitaller,
   periyodik tablo, grafikler vb.) SADECE metinle anlatılmaz — ama
   madde 3'teki formül yasağı geçerli: her soruya zorla görsel
