@@ -283,7 +283,14 @@ tutucuları doldurun). Diğerlerini konunuza göre yeniden yazın.
    Bilinçli çeşitlendirme (Bölüm 3) olmadan yazmayın.
 6. **Telif materyalini asla birebir/yakın parafraz kopyalamayın** —
    yalnızca konu kapsamı ve stil için referans alın, tüm metni ve
-   görselleri sıfırdan, özgün olarak yazın/çizin.
+   görselleri sıfırdan, özgün olarak yazın/çizin. Bu projede gerçekten
+   yaşandı: bir PR, GHS piktogramlarını "ders kitabının s. 38-39
+   sayfasından birebir kırpılmış" PNG'lerle değiştirmişti (commit mesajı
+   bunu açıkça itiraf ediyordu) — aylar sonra fark edilip elle çizilmiş
+   özgün SVG'lerle değiştirildi. Standart/düzenleyici semboller (GHS,
+   ISO trefoil vb.) kullanılabilir ama KAYNAK, ilgili resmi kurumun
+   (örn. BM GHS Purple Book, Wikimedia Commons'ın kamu malı sürümleri)
+   kendisi olmalı — bir yayınevinin SAYFA GÖRÜNTÜSÜ değil.
 
 ---
 

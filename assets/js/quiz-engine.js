@@ -473,6 +473,45 @@ const GHS_LABELS = {
   environment: "Çevreye zararlı"
 };
 
+function renderGHSIcon(code) {
+
+  const icon = GHS_ICONS[code];
+  if (!icon) return "";
+
+  return `
+    <img
+      src="${GHS_IMG_BASE}${code}.svg"
+      alt="${escapeHTML(GHS_LABELS[code] || code)}"
+      width="64" height="64"
+      style="display:block"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='block';"
+    >
+    <svg viewBox="0 0 100 100" width="64" height="64" style="display:none">
+      <rect x="18" y="18" width="64" height="64" rx="7" fill="#fff" stroke="#dc2626" stroke-width="6" transform="rotate(45 50 50)"></rect>
+      ${icon}
+    </svg>
+  `;
+}
+
+/* ISO 361 radyasyon (trefoil) uyarı simgesi — GHS'in 9 piktogramına dahil
+   değildir, ayrı bir uluslararası standarttır; sarı üçgen üzerinde siyah
+   üç yapraklı trefoil. */
+const RADIATION_ICON = `
+  <path d="M50,8 L92,86 L8,86 Z" fill="#ffd400" stroke="#000" stroke-width="4" stroke-linejoin="round"></path>
+  <g transform="translate(50,60)">
+    <circle r="8" fill="#000"></circle>
+    <g fill="#000">
+      <path d="M6.93,-4 L24.25,-14 A28,28 0 0 1 24.25,14 L6.93,4 A8,8 0 0 0 6.93,-4 Z"></path>
+      <path d="M6.93,-4 L24.25,-14 A28,28 0 0 1 24.25,14 L6.93,4 A8,8 0 0 0 6.93,-4 Z" transform="rotate(120)"></path>
+      <path d="M6.93,-4 L24.25,-14 A28,28 0 0 1 24.25,14 L6.93,4 A8,8 0 0 0 6.93,-4 Z" transform="rotate(240)"></path>
+    </g>
+  </g>
+`;
+
+function renderRadiationIcon() {
+  return `<svg viewBox="0 0 100 100" width="64" height="64">${RADIATION_ICON}</svg>`;
+}
+
 function renderGHSPictogram(code, tagLetter) {
 
   const icon = GHS_ICONS[code];
@@ -484,17 +523,7 @@ function renderGHSPictogram(code, tagLetter) {
 
   return `
     <div class="ghs-item">
-      <img
-        src="${GHS_IMG_BASE}${code}.svg"
-        alt="${escapeHTML(GHS_LABELS[code] || code)}"
-        width="64" height="64"
-        style="display:block"
-        onerror="this.style.display='none';this.nextElementSibling.style.display='block';"
-      >
-      <svg viewBox="0 0 100 100" width="64" height="64" style="display:none">
-        <rect x="18" y="18" width="64" height="64" rx="7" fill="#fff" stroke="#dc2626" stroke-width="6" transform="rotate(45 50 50)"></rect>
-        ${icon}
-      </svg>
+      ${renderGHSIcon(code)}
       ${label}
     </div>
   `;
@@ -3095,6 +3124,8 @@ export {
   renderCircleCompare,
   renderPeriodicHighlight,
   renderGHSPictograms,
+  renderGHSIcon,
+  renderRadiationIcon,
   renderObjectIcons,
   renderStatementList,
   renderDialogue,

@@ -545,7 +545,8 @@ footer a{ color:var(--gas-dark); text-decoration:none; font-weight:700; }
 .storage-matrix .sm-head, .storage-matrix .sm-row-label{
   width:40px; height:40px; display:flex; align-items:center; justify-content:center;
 }
-.storage-matrix .sm-head img, .storage-matrix .sm-row-label img{ width:28px; height:28px; object-fit:contain; }
+.storage-matrix .sm-head img, .storage-matrix .sm-row-label img,
+.storage-matrix .sm-head svg, .storage-matrix .sm-row-label svg{ width:28px; height:28px; object-fit:contain; }
 .storage-cell{
   width:40px; height:40px; border-radius:7px; display:flex; align-items:center; justify-content:center;
   font-weight:800; font-size:15px; color:#fff; transition:.15s;
@@ -570,7 +571,7 @@ footer a{ color:var(--gas-dark); text-decoration:none; font-weight:700; }
 .ghs-card.correct{ border-color:var(--good); background:rgba(47,191,110,.08); }
 .ghs-card.wrong{ border-color:var(--bad); background:rgba(229,72,77,.08); }
 .ghs-icon{ width:56px; height:56px; margin:0 auto 6px; }
-.ghs-icon img{ width:100%; height:100%; object-fit:contain; display:block; }
+.ghs-icon img, .ghs-icon svg{ width:100%; height:100%; object-fit:contain; display:block; }
 .ghs-label{ font-size:11px; font-weight:700; color:var(--ink-soft); }
 
 /* ---------- Zaman tüneli (atom modelleri) ---------- */
