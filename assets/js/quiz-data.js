@@ -2694,7 +2694,7 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "MEB'in orbital enerji karşılaştırma etkinliğinde (Etkinlik-1.8), aynı enerji seviyesindeki farklı türden alt kabukların (2s ve 2p gibi) enerjilerinin birbirinden farklı olduğu, s alt kabuğunun her zaman aynı seviyedeki p alt kabuğundan daha düşük enerjili olduğu gösterilmiştir.",
+    context: "Orbital enerji karşılaştırmalarında, aynı enerji seviyesindeki farklı türden alt kabukların (2s ve 2p gibi) enerjilerinin birbirinden farklı olduğu, s alt kabuğunun her zaman aynı seviyedeki p alt kabuğundan daha düşük enerjili olduğu gösterilmiştir.",
     text: "Bu örüntüye göre, 3s ve 3p alt kabukları karşılaştırıldığında hangisi daha düşük enerjilidir?",
     options: ["3p", "3s", "İkisi de eşit enerjilidir", "Karşılaştırma yapılamaz", "3p her zaman 3s'den düşüktür"],
     correct: 1,
@@ -2767,7 +2767,7 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "MEB'in orbital enerji karşılaştırmalarında (Etkinlik-1.8), aynı enerji seviyesindeki farklı türden alt kabukların birbirinden farklı bağıl enerjilere sahip olduğu, s alt kabuğunun her zaman en düşük enerjili olduğu gösterilmiştir.",
+    context: "Orbital enerji karşılaştırmalarında, aynı enerji seviyesindeki farklı türden alt kabukların birbirinden farklı bağıl enerjilere sahip olduğu, s alt kabuğunun her zaman en düşük enerjili olduğu gösterilmiştir.",
     text: "Aynı temel enerji seviyesine (n) sahip s, p, d alt kabukları enerjilerine göre nasıl sıralanır?",
     options: ["d < p < s", "s = p = d", "p < s < d", "s < p < d", "d < s < p"],
     correct: 3,
@@ -3010,7 +3010,7 @@ export const QUIZ = {
     text: "Bu üç orbitalin özdeş enerjiye sahip olmasının en iyi açıklaması hangisidir?",
     options: ["Üçünün farklı çekirdek yüküne sahip olması", "Üçünün farklı sayıda elektron içermesi", "Bu üç orbitalin gerçekte tek bir orbital olması", "Üçü de aynı alt kabuğa (2p) ait olduğu için özdeş enerjilidir; aralarındaki tek fark uzaydaki yönelim eksenidir", "Orbitallerin rengi enerjiyi belirler"],
     correct: 3,
-    explain: "2px, 2py, 2pz orbitalleri aynı alt kabuğa (2p) aittir ve enerjileri özdeştir (dejenere); MEB'in Etkinlik-1.8 görsellerinde de görüldüğü gibi aralarındaki tek fark, uzayda hangi eksen boyunca yönlendikleridir."
+    explain: "2px, 2py, 2pz orbitalleri aynı alt kabuğa (2p) aittir ve enerjileri özdeştir (dejenere); aralarındaki tek fark, uzayda hangi eksen boyunca yönlendikleridir."
   },
   {
     difficulty: "orta",
@@ -3024,11 +3024,11 @@ export const QUIZ = {
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Aynı temel enerji seviyesine (n=4) sahip 4s, 4p, 4d ve 4f alt kabukları söz konusudur; MEB'in orbital enerji karşılaştırmalarında aynı seviyedeki alt kabukların s'den f'ye doğru artan enerjiye sahip olduğu gösterilir.",
+    context: "Aynı temel enerji seviyesine (n=4) sahip 4s, 4p, 4d ve 4f alt kabukları söz konusudur; aynı seviyedeki alt kabukların s'den f'ye doğru artan enerjiye sahip olduğu bilinmektedir.",
     text: "Bu dört alt kabuk enerjilerine göre küçükten büyüğe nasıl sıralanır?",
     options: ["Dördü de eşit enerjilidir", "4f < 4d < 4p < 4s", "4s < 4d < 4p < 4f", "4s < 4p < 4d < 4f", "4p < 4s < 4f < 4d"],
     correct: 3,
-    explain: "Aynı enerji seviyesinde alt kabuklar s < p < d < f şeklinde artan enerjiye sahiptir; bu sıralama diyagonal diyagram ve orbital enerji karşılaştırma etkinliklerinde (Etkinlik-1.8) gözlemlenen örüntüyle tutarlıdır."
+    explain: "Aynı enerji seviyesinde alt kabuklar s < p < d < f şeklinde artan enerjiye sahiptir; bu sıralama diyagonal diyagram ve orbital enerji karşılaştırmalarında gözlemlenen örüntüyle tutarlıdır."
   },
   {
     difficulty: "orta",
@@ -3053,11 +3053,11 @@ export const QUIZ = {
       { type: "d", label: "Şekil 2" },
       { type: "p", label: "Şekil 3" }
     ],
-    context: "Görseldeki üç şekil, MEB'in Etkinlik-1.8'inde gösterilen orbital sınır yüzeylerinden alınmıştır: küresel, yonca yapraklı (dört loblu) ve halter (iki loblu) şekiller.",
+    context: "Görseldeki üç şekil, orbital sınır yüzeylerini temsil etmektedir: küresel, yonca yapraklı (dört loblu) ve halter (iki loblu) şekiller.",
     text: "Şekil 2'deki yonca yapraklı (dört loblu) görünüm hangi orbital türüne aittir?",
     options: ["s orbitaline", "p orbitaline", "d orbitaline", "Bu şekil hiçbir orbital türüne ait değildir", "Yalnızca iyonlarda görülen özel bir şekildir"],
     correct: 2,
-    explain: "d orbitalleri, MEB'in Etkinlik-1.8 görsellerinde de gösterildiği gibi çoğunlukla dört loblu (yonca yapraklı) bir sınır yüzeyine sahiptir; s orbitali küresel, p orbitali ise iki loblu (halter) şekildedir."
+    explain: "d orbitalleri çoğunlukla dört loblu (yonca yapraklı) bir sınır yüzeyine sahiptir; s orbitali küresel, p orbitali ise iki loblu (halter) şekildedir."
   },
   {
     difficulty: "orta",
@@ -3091,7 +3091,7 @@ export const QUIZ = {
     difficulty: "zor",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
     compareChart: {
-      title: "Atom Orbitallerinin Bağıl Enerjileri (Etkinlik-1.8)",
+      title: "Atom Orbitallerinin Bağıl Enerjileri",
       yLabel: "Bağıl Enerji (kJ/mol)",
       labels: ["B", "C", "N", "O", "F"],
       series: [
@@ -3158,7 +3158,7 @@ export const QUIZ = {
     difficulty: "zor",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
     compareChart: {
-      title: "Atom Orbitallerinin Bağıl Enerjileri (Etkinlik-1.8)",
+      title: "Atom Orbitallerinin Bağıl Enerjileri",
       yLabel: "Bağıl Enerji (kJ/mol)",
       labels: ["B", "C", "N", "O", "F"],
       series: [
@@ -3166,7 +3166,7 @@ export const QUIZ = {
         { label: "2s", values: [-1300, -1750, -2150, -2900, -4500], color: "var(--mol-b)" }
       ]
     },
-    context: "MEB'in Etkinlik-1.8 grafiği iki ayrı karşılaştırma sunar: (1) aynı türden alt kabuğun (2s veya 2p) farklı atomlardaki (B→F) enerjisi nasıl değişir; (2) aynı atomda farklı türden alt kabukların (2s ile 2p) enerjisi birbirine göre nasıldır.",
+    context: "Aşağıdaki grafik iki ayrı karşılaştırma sunar: (1) aynı türden alt kabuğun (2s veya 2p) farklı atomlardaki (B→F) enerjisi nasıl değişir; (2) aynı atomda farklı türden alt kabukların (2s ile 2p) enerjisi birbirine göre nasıldır.",
     text: "Grafikteki iki eğriyi birlikte değerlendirdiğimizde, aşağıdaki önermelerden hangisi HER İKİ karşılaştırmayı da doğru şekilde özetler?",
     options: [
       "(1) Atom numarası arttıkça hem 2s hem 2p enerjisi azalır (daha negatif olur); (2) her element için 2p her zaman 2s'den daha yüksek enerjilidir",
@@ -3206,7 +3206,7 @@ export const QUIZ = {
         { type: "d", label: "3d_z²" }
       ]
     },
-    context: "Görseldeki beş şekil, MEB'in Etkinlik-1.8'inde gösterildiği gibi bir d alt kabuğuna ait beş ayrı orbitali (farklı yönelimlerdeki yonca yapraklı sınır yüzeylerini) temsil etmektedir.",
+    context: "Görseldeki beş şekil, bir d alt kabuğuna ait beş ayrı orbitali (farklı yönelimlerdeki yonca yapraklı sınır yüzeylerini) temsil etmektedir.",
     text: "Bir 3d alt kabuğu tam dolu olduğunda, bu beş orbitalin toplamda alabileceği elektron sayısı ile bu beş orbitalin şekil/enerji ilişkisi hakkında en doğru ve kapsamlı ifade hangisidir?",
     options: [
       "Beş orbital toplam 10 elektron alabilir; şekilleri farklı yönelimlerde olsa da hepsi aynı alt kabuğa ait olduğundan enerjileri özdeştir (dejenere)",

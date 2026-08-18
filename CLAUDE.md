@@ -37,6 +37,26 @@ veya sadece context içinde sözel tarif YETERLİ DEĞİLDİR, bu da bir
 tür kaçamaktır. Her soruda görsel şart değildir (madde 3), ama
 gerektiğinde gerçek, render edilen bir görsel kullanılır.
 
+**ATIF/KAYNAK GÖSTERME OLAYI — somut ders çıkarılan vaka:** MEB'in
+Etkinlik-1.8 grafiğini (orbital enerjisi karşılaştırması) hem
+uygulamaya hem sorulara işlerken, render bileşenini doğru şekilde
+kullanmama rağmen soru metinlerinin İÇİNE "MEB'in Etkinlik-1.8'inde
+gösterildiği gibi...", "MEB'in orbital enerji karşılaştırma
+etkinliğinde..." gibi ifadeler yazdım — yani kaynağı öğrenciye
+görünen metinde açıkça isimlendirdim. Bu, "render et, atıf yapma"
+kuralının farklı bir kılığa bürünmüş ihlaliydi: görsel gerçekten
+render edilmiş olsa bile, MEB'i/kitabı/etkinlik adını soru
+context/text/explain alanlarında ismen anmak yine bir tür kaçamaktır
+— sanki içerik bize değil, dışarıdan alıntılanan bir kaynağa aitmiş
+izlenimi verir. **Doğru yaklaşım:** İçerik (grafik, şekil, kavram)
+MEB'in müfredat kapsamına sadık kalınarak KENDİ özgün öğretim
+materyalimizmiş gibi sunulur — "Aşağıdaki grafikte...", "Görseldeki
+üç şekil..." gibi doğrudan ifadelerle, hiçbir yerde "MEB", "MEB
+kitabı", "Etkinlik-X.Y" gibi kaynak adı geçmeden. Kapsamın MEB'e
+sadık kalması (madde 5) ile içeriğin metinde MEB'e atfedilmemesi
+(bu madde) birbirinden bağımsız iki kuraldır, ikisi de aynı anda
+uygulanır.
+
 ## 2. Paylaşılan örnekler = TARZ REHBERİ, ne kopya ne görmezden gelme
 
 Kullanıcı farklı yayınların ve MEB kitabının çizgi grafiklerini, kap/
