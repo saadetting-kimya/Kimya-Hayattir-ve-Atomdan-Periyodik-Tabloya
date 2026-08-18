@@ -2278,11 +2278,19 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Dalton'ın 1808'de öne sürdüğü atom teorisinin temel varsayımlarından biri, aynı elementin tüm atomlarının kütle ve özellik bakımından birbirinin aynısı olduğudur.",
-    text: "Dalton'ın atom teorisine göre atomlar için aşağıdakilerden hangisi doğrudur?",
-    options: ["İçlerinde elektron bulutu vardır", "Merkezlerinde yoğun bir çekirdek bulunur", "Bölünemez ve yok edilemez taneciklerdir", "Kütleleri sürekli değişir", "Farklı elementlerin atomları birbirinin aynısıdır"],
+    matchPairs: {
+      left: [
+        "Aynı elementin tüm atomlarının kütlece ve özellik bakımından birbirinin aynısı olduğunu, atomların bölünemez taneciklerden ibaret olduğunu öne sürmüştür.",
+        "Katot ışını tüpü deneyinde ışınların pozitif levhaya doğru saptığını gözlemleyip elektronu keşfetmiştir.",
+        "Atomun pozitif yüklü bir küre içine gömülü elektronlardan oluştuğunu öne sürmüş, bu model bir tatlıya benzetilmiştir.",
+        "Altın levha deneyinde alfa taneciklerinin bir kısmının büyük açılarla geri sıçradığını gözlemleyip atom çekirdeğini keşfetmiştir."
+      ],
+      right: ["Rutherford", "Dalton", "Thomson", "Chadwick"]
+    },
+    text: "Yukarıdaki eşleştirmede, 2 numaralı katkı hangi harfteki bilim insanına aittir?",
+    options: ["a", "b", "c", "d", "Hiçbiriyle ilişkili değildir"],
     correct: 2,
-    explain: "Dalton'ın teorisine göre atomlar, daha küçük parçalara bölünemeyen ve yok edilemeyen temel taneciklerdir."
+    explain: "Katot ışını deneyiyle elektronu keşfeden bilim insanı Thomson'dır; bu da 'c' harfindeki seçenekle eşleşir."
   },
   {
     difficulty: "kolay",
@@ -2296,38 +2304,57 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Thomson, elektronu keşfettikten sonra atomun pozitif yüklü bir küre içine gömülü elektronlardan oluştuğunu öne sürmüştür; bu model günlük hayattan bir tatlıya benzetilerek anılır.",
-    text: "Thomson'ın modeli hangi popüler adla anılır?",
-    options: ["Bilardo topu modeli", "Güneş sistemi modeli", "Üzümlü kek (kuru üzümlü puding) modeli", "Bulut modeli", "Katmanlı soğan modeli"],
-    correct: 2,
-    explain: "Pozitif yüklü kütle içine gömülü elektronlar fikri, üzümlerin hamura gömülü olduğu bir kek görüntüsüne benzetilerek 'üzümlü kek modeli' adıyla anılmıştır."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Rutherford, 1911'de ince bir altın levhaya pozitif yüklü, hızlı hareket eden alfa tanecikleri göndererek levhanın arkasındaki ekranda oluşan saçılma desenini incelemiştir.",
-    text: "Bu deneyde ince altın levhaya hangi tanecikler gönderilmiştir?",
-    options: ["Elektronlar", "Alfa tanecikleri", "Fotonlar", "Nötronlar", "Protonlar tek başına"],
+    dialogue: [
+      { who: "Öğrenci A", text: "Dalton'ın atom teorisi yanlış çıktığına göre, o dönemki bilim insanları hata yapmış demektir; teorisinin hiçbir değeri yoktu." },
+      { who: "Öğrenci B", text: "Bence Dalton'ın teorisi, elindeki sınırlı deneysel kanıtlarla mantıklı bir açıklamaydı; yeni kanıtlar (elektron, çekirdek keşfi) biriktikçe model geliştirildi, bu bilimin doğal işleyişidir." },
+      { who: "Öğrenci C", text: "Atom modelleri değiştiğine göre bilim güvenilir değildir, hiçbir atom teorisine güvenilmemeli." }
+    ],
+    text: "Atom modellerinin Dalton'dan günümüze değişmesiyle ilgili hangi öğrencinin görüşü bilimin doğasını en doğru yansıtır?",
+    options: ["Öğrenci A", "Öğrenci B", "Öğrenci C", "A ve C birlikte", "Hiçbiri"],
     correct: 1,
-    explain: "Rutherford'ın deneyinde kaynak olarak radyoaktif bir maddeden yayılan pozitif yüklü alfa tanecikleri kullanılmıştır."
+    explain: "Bilimsel modeller, yeni deneysel kanıtlar biriktikçe geliştirilir/revize edilir; bu, bilimin güvenilmez olduğu değil, kendi kendini düzelten doğası gereğidir. Öğrenci B haklıdır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Rutherford'ın altın levha deneyinde, gönderilen alfa taneciklerinin büyük çoğunluğu sapmadan geçerken, çok küçük bir kısmı büyük açılarla geri sıçramıştır; bu gözlem atomun merkezinde küçük ve yoğun bir yapı bulunduğunu göstermiştir.",
-    text: "Rutherford'ın bu deneyle keşfettiği yapı hangisidir?",
-    options: ["Elektron bulutu", "Elektron kabuğu", "Foton demeti", "Atom çekirdeği", "Nötr atom yüzeyi"],
-    correct: 3,
-    explain: "Bazı alfa taneciklerinin büyük açılarla geri sıçraması, atomun merkezinde küçük hacimde yoğunlaşmış pozitif yüklü ve kütleli bir çekirdek bulunduğunu ortaya koymuştur."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Chadwick, 1932'de gerçekleştirdiği deneyle atom çekirdeğinde protonlarla yaklaşık aynı kütleye sahip fakat elektrik yükü taşımayan bir tanecik keşfetmiştir.",
-    text: "Chadwick'in keşfettiği bu tanecik hangisidir?",
-    options: ["Elektron", "Pozitron", "Nötron", "Foton", "Alfa taneciği"],
+    context: "Bohr modeli, hidrojen atomunun çizgi spektrumunu başarıyla açıklamasına rağmen zamanla yetersiz bulunarak modern kuantum mekaniksel modelle değiştirilmiştir.",
+    statements: [
+      "Bohr modeli çok elektronlu atomların spektrumlarını yeterince açıklayamamıştır.",
+      "Bohr modelindeki 'kesin yörünge' fikri, elektronun konumunun kesin olarak bilinemeyeceğini gösteren daha sonraki bulgularla çelişmiştir.",
+      "Bohr modeli tamamen hatalı olduğu için hidrojen atomunun spektrumunu da açıklayamaz."
+    ],
+    text: "Yukarıdaki ifadelerden hangileri Bohr modelinin neden değiştirildiğini doğru açıklar?",
+    options: ["Yalnız I", "Yalnız III", "I ve II", "II ve III", "I, II ve III"],
     correct: 2,
-    explain: "Chadwick'in keşfettiği, elektrik yükü taşımayan ve çekirdekte protonlarla birlikte bulunan tanecik nötrondur."
+    explain: "Bohr modeli çok elektronlu atomlarda yetersiz kalmış ve 'kesin yörünge' fikri kuantum mekaniğinin belirsizlik ilkesiyle çelişmiştir (I ve II doğru); ancak model hidrojenin spektrumunu başarıyla açıkladığından III yanlıştır — bilimsel modeller tamamen 'yanlış' oldukları için değil, daha kapsamlı açıklama gerektiği için değişir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
+    context: "Rutherford, 1911'de ince bir altın levhaya pozitif yüklü, hızlı hareket eden alfa tanecikleri göndererek levhanın arkasındaki ekranda oluşan saçılma desenini incelemiştir; taneciklerin büyük çoğunluğu sapmadan geçerken, çok küçük bir kısmı büyük açılarla geri sıçramıştır.",
+    checklist: [
+      "Deneyde kaynak olarak kullanılan tanecikler pozitif yüklüdür.",
+      "Taneciklerin tamamı levhadan sapmadan geçmiştir, hiçbiri geri sıçramamıştır.",
+      "Bazı taneciklerin geri sıçraması, atomun merkezinde küçük ve yoğun bir yapı olduğunu göstermiştir.",
+      "Bu deney, elektronun keşfedilmesini sağlamıştır."
+    ],
+    text: "Yukarıdaki ifadelerden kaç tanesi doğrudur?",
+    options: ["3", "1", "2", "4", "Hiçbiri"],
+    correct: 2,
+    explain: "Yalnızca 1. ve 3. ifadeler doğrudur: kaynak tanecikler alfa (pozitif yüklü) tanecikleridir (1. doğru), taneciklerin geri sıçraması atomun merkezinde yoğun bir yapı olduğunu göstermiştir (3. doğru). Taneciklerin küçük bir kısmı gerçekten geri sıçramıştır (2. yanlış, çünkü ifade 'hiçbiri sıçramadı' diyor); elektron bu deneyden değil Thomson'ın katot ışını deneyinden keşfedilmiştir (4. yanlış). Doğru ifade sayısı 2'dir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
+    dialogue: [
+      { who: "Öğrenci A", text: "Chadwick nötronu keşfettiğinde, nötronun elektrik yükü olmadığı için kütlesinin de olmadığını düşünmüş olmalı." },
+      { who: "Öğrenci B", text: "Hayır; nötron yüksüzdür ama protonla yaklaşık aynı kütleye sahiptir, yüksüz olmak kütlesiz olmak anlamına gelmez." },
+      { who: "Öğrenci C", text: "Bence nötron da elektron gibi çekirdeğin dışında, çekirdek etrafında bulunur." }
+    ],
+    text: "Nötronun özellikleriyle ilgili hangi öğrencinin görüşü doğrudur?",
+    options: ["Öğrenci A", "Öğrenci C", "Öğrenci B", "A ve C birlikte", "Hiçbiri"],
+    correct: 2,
+    explain: "Nötron elektrik yükü taşımaz ama protonla yaklaşık aynı kütleye sahiptir ve çekirdekte protonlarla birlikte bulunur; Öğrenci B haklıdır."
   },
   {
     difficulty: "kolay",
