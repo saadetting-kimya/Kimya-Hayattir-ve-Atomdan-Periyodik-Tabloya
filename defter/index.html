@@ -24,7 +24,7 @@
     padding:16mm 15mm; position:relative; box-shadow:0 2px 10px rgba(0,0,0,.12);
   }
   /* Sayfa kenar boşlukları @page üzerinden ayarlanır (padding üzerinden değil):
-     bir ünite tek bir .page div'i olarak birden fazla fiziksel A4 sayfasına
+     bir konu tek bir .page div'i olarak birden fazla fiziksel A4 sayfasına
      taşabildiğinden (uzun konu anlatımı + çok etkinlikli çalışma sayfaları),
      kenar boşluğu .page'in kendi padding'i olsaydı yalnızca taştığı ilk ve son
      fiziksel sayfada uygulanır, aradaki tüm sayfalar kenar boşluksuz (kağıda
@@ -61,11 +61,11 @@
   h1,h2,h3,h4{ font-family: Arial, Helvetica, sans-serif; font-weight:800; color:var(--ink); margin:0 0 .4em; }
   p{ margin:0 0 .6em; }
   /* footer-tag KASITLI OLARAK normal akışta (position:absolute DEĞİL): bir .page
-     div'i (bir ünitenin tamamı) birden fazla fiziksel A4 sayfasına taşabildiğinden,
+     div'i (bir konunun tamamı) birden fazla fiziksel A4 sayfasına taşabildiğinden,
      mutlak konumlandırma toplam (çok sayfalı) kutunun sonuna göre hesaplanır ve bu
      nokta çoğunlukla son fiziksel sayfanın ortasına denk gelip canlı metnin üzerine
-     biner. Normal akışta ise ünitenin son sorusundan hemen sonra, üstte kalıp asla
-     başka içerikle çakışmayan bir "ünite sonu" etiketi olarak görünür. */
+     biner. Normal akışta ise konunun son sorusundan hemen sonra, üstte kalıp asla
+     başka içerikle çakışmayan bir "konu sonu" etiketi olarak görünür. */
   .footer-tag{ display:flex; justify-content:space-between; margin-top:14px; font-family:Arial,sans-serif; font-size:9.5px; color:#8a8ea8; border-top:1px solid var(--line); padding-top:6px; }
 
   /* ---- Kapak ---- */
@@ -93,7 +93,7 @@
   .soru-turleri{ display:flex; gap:10px; flex-wrap:wrap; margin:10px 0; }
   .st-chip{ font-family:Arial,sans-serif; font-size:10.5px; font-weight:800; border:1.5px solid var(--ink); padding:4px 10px; border-radius:999px; }
 
-  /* ---- Ünite başlığı ---- */
+  /* ---- Konu başlığı ---- */
   .unit-kicker{ font-family:Arial,sans-serif; font-weight:800; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); margin-bottom:5px; }
   .unit-title{ font-family:Arial,sans-serif; font-size:23px; margin-bottom:10px; }
   .lo-box{ border:2px solid var(--ink); border-radius:6px; padding:10px 14px; margin-bottom:12px; font-family:Arial,sans-serif; font-size:12px; }
@@ -105,7 +105,7 @@
   h4.alt-h{ font-family:Arial,sans-serif; font-size:13px; margin-top:12px; color:var(--accent); }
 
   /* ---- İki sütunlu dizgi (defter ailesindeki diğer kitaplarla tutarlı) ----
-     CSS Grid yerine multi-column (columns) kullanılır: konu anlatımı bir üniteyi
+     CSS Grid yerine multi-column (columns) kullanılır: konu anlatımı bir konuyu
      tek .page div'i olarak akışkan biçimde birden fazla fiziksel sayfaya
      taşabildiğinden, Grid öğeleri sayfa sınırında güvenilir bölünmez (taşma/boş
      sayfa hatası riski); multi-column ise içeriği sütun sütun, sayfa kırılımına
@@ -282,27 +282,27 @@
   <h2 style="font-family:Arial,sans-serif; font-size:22px;">İçindekiler</h2>
 
   <div class="toc-bolum">Bölüm I · Kimya Hayattır</div>
-  <div class="toc-item"><span><b>Ünite 1</b> — Günlük Hayatta Kimya <span class="kod">(KİM.9.1.1)</span></span></div>
-  <div class="toc-item"><span><b>Ünite 2</b> — Kimyanın Alt Disiplinleri <span class="kod">(KİM.9.1.2)</span></span></div>
-  <div class="toc-item"><span><b>Ünite 3</b> — Kimya Alanında Kariyer Olanakları <span class="kod">(KİM.9.1.3)</span></span></div>
-  <div class="toc-item"><span><b>Ünite 4</b> — Kimyasal Maddelerin Kullanımı ve Güvenlik <span class="kod">(KİM.9.1.4)</span></span></div>
+  <div class="toc-item"><span><b>Konu 1</b> — Günlük Hayatta Kimya <span class="kod">(KİM.9.1.1)</span></span></div>
+  <div class="toc-item"><span><b>Konu 2</b> — Kimyanın Alt Disiplinleri <span class="kod">(KİM.9.1.2)</span></span></div>
+  <div class="toc-item"><span><b>Konu 3</b> — Kimya Alanında Kariyer Olanakları <span class="kod">(KİM.9.1.3)</span></span></div>
+  <div class="toc-item"><span><b>Konu 4</b> — Kimyasal Maddelerin Kullanımı ve Güvenlik <span class="kod">(KİM.9.1.4)</span></span></div>
 
   <div class="toc-bolum">Bölüm II · Atomdan Periyodik Tabloya</div>
-  <div class="toc-item"><span><b>Ünite 5</b> — Atom Teorileri ve Atomun Yapısı <span class="kod">(KİM.9.1.5)</span></span></div>
-  <div class="toc-item"><span><b>Ünite 6</b> — Atom Orbitalleri ve Elektron Dizilimi <span class="kod">(KİM.9.1.6)</span></span></div>
-  <div class="toc-item"><span><b>Ünite 7</b> — Periyodik Tabloda Yer Bulma <span class="kod">(KİM.9.1.7)</span></span></div>
-  <div class="toc-item"><span><b>Ünite 8</b> — Periyodik Özellikler <span class="kod">(KİM.9.1.8)</span></span></div>
+  <div class="toc-item"><span><b>Konu 5</b> — Atom Teorileri ve Atomun Yapısı <span class="kod">(KİM.9.1.5)</span></span></div>
+  <div class="toc-item"><span><b>Konu 6</b> — Atom Orbitalleri ve Elektron Dizilimi <span class="kod">(KİM.9.1.6)</span></span></div>
+  <div class="toc-item"><span><b>Konu 7</b> — Periyodik Tabloda Yer Bulma <span class="kod">(KİM.9.1.7)</span></span></div>
+  <div class="toc-item"><span><b>Konu 8</b> — Periyodik Özellikler <span class="kod">(KİM.9.1.8)</span></span></div>
 
   <div class="toc-bolum">Ek</div>
   <div class="toc-item"><span><b>Cevap Anahtarı</b></span></div>
 
   <h2 style="font-family:Arial,sans-serif; font-size:20px; margin-top:20px;">Bu Defter Nasıl Kullanılır?</h2>
-  <p style="font-family:Arial,sans-serif; font-size:12px;">Bu ders defteri, AtomLab 9 dijital uygulamasıyla birlikte, sınıfta ya da evde kullanılmak üzere tasarlanmıştır. Her ünite aynı dört aşamayı izler — tıpkı uygulamadaki gibi:</p>
+  <p style="font-family:Arial,sans-serif; font-size:12px;">Bu ders defteri, AtomLab 9 dijital uygulamasıyla birlikte, sınıfta ya da evde kullanılmak üzere tasarlanmıştır. Her konu aynı dört aşamayı izler — tıpkı uygulamadaki gibi:</p>
   <table class="usage">
     <tr><th>Aşama</th><th>Bu defterde karşılığı</th></tr>
     <tr><td>🔍 Merak Et</td><td>Konu anlatımının giriş paragrafı, günlük hayattan bir soruyla başlar.</td></tr>
     <tr><td>🧪 Keşfet</td><td>"Uygulamada Dene" kutusu — uygulamadaki etkinliği yaparken doldurulur.</td></tr>
-    <tr><td>📘 Açıklayalım</td><td>Konu Anlatımı, Kavram/Örnek Çözüm kutuları ve Bu Ünitenin Kavramları.</td></tr>
+    <tr><td>📘 Açıklayalım</td><td>Konu Anlatımı, Kavram/Örnek Çözüm kutuları ve Bu Konunun Kavramları.</td></tr>
     <tr><td>🎯 Değerlendir</td><td>Sürekli numaralanmış Açık Uçlu, Çoktan Seçmeli ve Bağlam Temelli Sorular.</td></tr>
   </table>
 
@@ -311,7 +311,7 @@
     <span class="st-chip">AÇIK UÇLU</span><span class="st-chip">ÇOKTAN SEÇMELİ</span><span class="st-chip">BAĞLAM TEMELLİ</span>
   </div>
   <p style="font-family:Arial,sans-serif; font-size:12px;">AÇIK UÇLU sorularda kendi cümlelerinle, gerekçeli bir açıklama yazman istenir; cevap satırlarına yaz. ÇOKTAN SEÇMELİ sorularda 5 seçenek (A–E) bulunur. BAĞLAM TEMELLİ sorular bir okuma parçasıyla (bağlamla) başlar ve o bağlamla ilgili birkaç alt soru içerir; doğru cevaba ulaşmak için parçayı dikkatle okuyup derste öğrendiğin kavramı o duruma uygulaman gerekir — cevap parçanın içinde doğrudan yazmaz.</p>
-  <p style="font-family:Arial,sans-serif; font-size:12px;">Her ünitenin sonunda çözdüğün soruları, kitabın en sonundaki Cevap Anahtarı ile kontrol edebilirsin.</p>
+  <p style="font-family:Arial,sans-serif; font-size:12px;">Her konunun sonunda çözdüğün soruları, kitabın en sonundaki Cevap Anahtarı ile kontrol edebilirsin.</p>
   <p style="font-family:Arial,sans-serif; font-size:11.5px; color:#5a5e78;"><strong>Öğretmene not:</strong> Defter, siyah-beyaz fotokopi/baskıda da okunaklı olacak şekilde tasarlanmıştır. Sayfa içindeki kutular (kavram, uygulama, notlarım, örnek çözüm, bağlam) çerçeve stiliyle ve etiket simgesiyle birbirinden ayrılır, yalnızca renge dayanmaz.</p>
 
   <p style="font-family:Arial,sans-serif; font-size:12.5px; margin-top:18px;">Ad Soyad: _________________________________________ &nbsp;&nbsp;&nbsp; Sınıf / No: _______________</p>
@@ -319,7 +319,7 @@
 
 <!-- ============ ÜNİTE 1 ============ -->
 <div class="page">
-  <div class="unit-kicker">Bölüm I · Kimya Hayattır · Ünite 1 · KİM.9.1.1</div>
+  <div class="unit-kicker">Bölüm I · Kimya Hayattır · Konu 1 · KİM.9.1.1</div>
   <h2 class="unit-title">1. Günlük Hayatta Kimya</h2>
   <div class="lo-box">
     <b>Öğrenme Çıktısı</b> Kimya biliminin günlük hayata katkısına ilişkin çıkarım yapabilme
@@ -334,7 +334,7 @@
   <h3 class="konu-h">Konu Anlatımı</h3>
   <div class="konu-cols">
   <p>Sabah yüzünü yıkamandan akşam telefonunu şarj etmene kadar geçen her an, aslında görünmez bir kimya laboratuvarındasın. El ve yüz temizlemede kullanılan su ve sabun, hastalıklarla mücadelede kullanılan ilaçlar, bilgisayardaki silisyum çipi, günümüzde önemli bir sorun hâline gelen plastik atıkların giderilmesi — bu örneklerin tamamı kimyasal maddeleri ve olayları içerir. Kimya bilimi; temizlik, ilaç, gıda, enerji ve tarım gibi pek çok sektörü etkiler ve insanların maddeleri nasıl etkileşime geçirebileceğini, bu süreçlerin günlük hayatta nasıl uygulanabileceğini anlamalarına yardımcı olur.</p>
-  <p>Bilgisayarların işlemesi, telefonların şarj olması ve televizyon ekranlarının ışıldaması gibi olaylar, atomun yapısındaki elektronların hareketine dayanır — bu defterin ikinci bölümünde (Ünite 5-8) tam olarak bu atom yapısını inceleyeceksin. Kimya bilgisi, doğada hayatta kalma becerilerini bile güçlendirir: kolonya, aseton veya yağ gibi maddeler yanıcı özellikleri sayesinde ateş yakmakta kullanılabilir; çakıl-kum-kömür katmanlarından geçirilen su, fiziksel bir süzme işlemiyle temizlenebilir.</p>
+  <p>Bilgisayarların işlemesi, telefonların şarj olması ve televizyon ekranlarının ışıldaması gibi olaylar, atomun yapısındaki elektronların hareketine dayanır — bu defterin ikinci bölümünde (Konu 5-8) tam olarak bu atom yapısını inceleyeceksin. Kimya bilgisi, doğada hayatta kalma becerilerini bile güçlendirir: kolonya, aseton veya yağ gibi maddeler yanıcı özellikleri sayesinde ateş yakmakta kullanılabilir; çakıl-kum-kömür katmanlarından geçirilen su, fiziksel bir süzme işlemiyle temizlenebilir.</p>
 
   <div class="box kavram">
     <div class="lbl">💡 Kavram · Kimya Bilimi</div>
@@ -406,7 +406,7 @@
   </div>
 
   <div class="kavramlar-list">
-    <div class="lbl">📚 Bu Ünitenin Kavramları</div>
+    <div class="lbl">📚 Bu Konunun Kavramları</div>
     <dt>Kimyasal Madde</dt><dd>Belirli bir bileşime ve karakteristik özelliklere sahip, doğal ya da üretilmiş her türlü madde.</dd>
     <dt>Çıkarım</dt><dd>Gözlemlenen örneklerden yola çıkarak genel bir sonuca ulaşma süreci.</dd>
     <dt>pH</dt><dd>Bir çözeltinin asitlik/bazlık derecesini gösteren, 0-14 arasında değişen ölçek; 7 nötrdür.</dd>
@@ -474,12 +474,12 @@
     <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
 
   </div>
-  <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Ünite 1 — KİM.9.1.1</span></div>
+  <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Konu 1 — KİM.9.1.1</span></div>
 </div>
 
 <!-- ============ ÜNİTE 2 ============ -->
 <div class="page">
-  <div class="unit-kicker">Bölüm I · Kimya Hayattır · Ünite 2 · KİM.9.1.2</div>
+  <div class="unit-kicker">Bölüm I · Kimya Hayattır · Konu 2 · KİM.9.1.2</div>
   <h2 class="unit-title">2. Kimyanın Alt Disiplinleri</h2>
   <div class="lo-box">
     <b>Öğrenme Çıktısı</b> Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme
@@ -558,7 +558,7 @@
   </div>
 
   <div class="kavramlar-list">
-    <div class="lbl">📚 Bu Ünitenin Kavramları</div>
+    <div class="lbl">📚 Bu Konunun Kavramları</div>
     <dt>Analitik Kimya</dt><dd>Maddelerin bileşenlerini ve miktarlarını belirleyen disiplin.</dd>
     <dt>Organik Kimya</dt><dd>Karbon içeren bileşikleri inceleyen disiplin.</dd>
     <dt>Anorganik Kimya</dt><dd>Karbon temelli olmayan bileşiklerin yapısını ve özelliklerini inceleyen disiplin.</dd>
@@ -609,12 +609,12 @@
     <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
 
   </div>
-  <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Ünite 2 — KİM.9.1.2</span></div>
+  <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Konu 2 — KİM.9.1.2</span></div>
 </div>
 
 <!-- ============ ÜNİTE 3 ============ -->
 <div class="page">
-  <div class="unit-kicker">Bölüm I · Kimya Hayattır · Ünite 3 · KİM.9.1.3</div>
+  <div class="unit-kicker">Bölüm I · Kimya Hayattır · Konu 3 · KİM.9.1.3</div>
   <h2 class="unit-title">3. Kimya Alanında Kariyer Olanakları</h2>
   <div class="lo-box">
     <b>Öğrenme Çıktısı</b> Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme
@@ -721,7 +721,7 @@
   </div>
 
   <div class="kavramlar-list">
-    <div class="lbl">📚 Bu Ünitenin Kavramları</div>
+    <div class="lbl">📚 Bu Konunun Kavramları</div>
     <dt>Kimya Teknikeri</dt><dd>Kimya teknolojisi ön lisans programını tamamlayan, laboratuvar/kalite kontrol alanında çalışan kişi.</dd>
     <dt>Kariyer Planlama Döngüsü</dt><dd>Öz farkındalık, fırsat araştırma, karar/plan yapma ve planı uygulama basamaklarından oluşan döngü.</dd>
   </div>
@@ -781,12 +781,12 @@
     <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
 
   </div>
-  <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Ünite 3 — KİM.9.1.3</span></div>
+  <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Konu 3 — KİM.9.1.3</span></div>
 </div>
 
 <!-- ============ ÜNİTE 4 ============ -->
 <div class="page">
-  <div class="unit-kicker">Bölüm I · Kimya Hayattır · Ünite 4 · KİM.9.1.4</div>
+  <div class="unit-kicker">Bölüm I · Kimya Hayattır · Konu 4 · KİM.9.1.4</div>
   <h2 class="unit-title">4. Kimyasal Maddelerin Kullanımı ve Güvenlik</h2>
   <div class="lo-box">
     <b>Öğrenme Çıktısı</b> Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme
@@ -918,7 +918,7 @@
   </div>
 
   <div class="kavramlar-list">
-    <div class="lbl">📚 Bu Ünitenin Kavramları</div>
+    <div class="lbl">📚 Bu Konunun Kavramları</div>
     <dt>Korozif Madde</dt><dd>Canlı dokuyu tahrip eden ya da metali aşındıran madde.</dd>
     <dt>Kimyasal Depolama Matrisi</dt><dd>Kimyasal maddelerin hangi koşullarda birlikte/ayrı depolanacağını belirleyen plan sistemi.</dd>
     <dt>Erlenmayer</dt><dd>Koni biçimli, dar boyunlu; titrasyon ve çözelti hazırlama/karıştırma işlemlerinde kullanılan cam kap.</dd>
@@ -975,12 +975,12 @@
     <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
 
   </div>
-  <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Ünite 4 — KİM.9.1.4</span></div>
+  <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Konu 4 — KİM.9.1.4</span></div>
 </div>
 
 <!-- ============ ÜNİTE 5 ============ -->
 <div class="page">
-  <div class="unit-kicker">Bölüm II · Atomdan Periyodik Tabloya · Ünite 5 · KİM.9.1.5</div>
+  <div class="unit-kicker">Bölüm II · Atomdan Periyodik Tabloya · Konu 5 · KİM.9.1.5</div>
   <h2 class="unit-title">5. Atom Teorileri ve Atomun Yapısı</h2>
   <div class="lo-box">
     <b>Öğrenme Çıktısı</b> Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme
@@ -1122,7 +1122,7 @@
   </div>
 
   <div class="kavramlar-list">
-    <div class="lbl">📚 Bu Ünitenin Kavramları</div>
+    <div class="lbl">📚 Bu Konunun Kavramları</div>
     <dt>Atom Numarası (Z)</dt><dd>Bir atomun çekirdeğindeki proton sayısı; elementin kimliğini belirler.</dd>
     <dt>Absorbsiyon / Emisyon</dt><dd>Elektronun üst enerji seviyesine çıkarken enerji soğurması / alt seviyeye inerken enerji yayması.</dd>
     <dt>Belirsizlik İlkesi</dt><dd>Bir elektronun konumu ve hızının aynı anda kesin olarak belirlenemeyeceğini ifade eden ilke (Heisenberg).</dd>
@@ -1185,12 +1185,12 @@
     <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
 
   </div>
-  <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Ünite 5 — KİM.9.1.5</span></div>
+  <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Konu 5 — KİM.9.1.5</span></div>
 </div>
 
 <!-- ============ ÜNİTE 6 ============ -->
 <div class="page">
-  <div class="unit-kicker">Bölüm II · Atomdan Periyodik Tabloya · Ünite 6 · KİM.9.1.6</div>
+  <div class="unit-kicker">Bölüm II · Atomdan Periyodik Tabloya · Konu 6 · KİM.9.1.6</div>
   <h2 class="unit-title">6. Atom Orbitalleri ve Elektron Dizilimi</h2>
   <div class="lo-box">
     <b>Öğrenme Çıktısı</b> Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme
@@ -1281,7 +1281,7 @@
       <div class="draw-box"><div class="dcap">d (3dxy)</div><div class="darea"></div></div>
     </div>
     <table class="wk">
-      <tr><th>Orbital</th><th>Şekli (biçimi)</th><th>Kaç Elektron Alır?</th><th>Eş Enerjili (Dejenere) Orbitaller</th></tr>
+      <tr><th>Orbital</th><th>Şekli (biçimi)</th><th>Kaç Elektron Alır?</th><th>Eş Enerjili Orbitaller</th></tr>
       <tr><td>1s</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
       <tr><td>2pz</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
       <tr><td>3dxy</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
@@ -1309,7 +1309,7 @@
   </div>
 
   <div class="kavramlar-list">
-    <div class="lbl">📚 Bu Ünitenin Kavramları</div>
+    <div class="lbl">📚 Bu Konunun Kavramları</div>
     <dt>Orbital</dt><dd>Elektronun bulunma olasılığının yüksek olduğu üç boyutlu bölge.</dd>
     <dt>Diyagonal Kural</dt><dd>Alt kabukları katman/tür ızgarasına yazıp sağ üstten sol alta çapraz çizgiler çekerek Aufbau dolum sırasını bulma yöntemi.</dd>
     <dt>Aufbau İlkesi</dt><dd>Elektronların en düşük enerjili boş orbitalden başlayarak yerleşmesi.</dd>
@@ -1373,12 +1373,12 @@
     <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
 
   </div>
-  <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Ünite 6 — KİM.9.1.6</span></div>
+  <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Konu 6 — KİM.9.1.6</span></div>
 </div>
 
 <!-- ============ ÜNİTE 7 ============ -->
 <div class="page">
-  <div class="unit-kicker">Bölüm II · Atomdan Periyodik Tabloya · Ünite 7 · KİM.9.1.7</div>
+  <div class="unit-kicker">Bölüm II · Atomdan Periyodik Tabloya · Konu 7 · KİM.9.1.7</div>
   <h2 class="unit-title">7. Periyodik Tabloda Yer Bulma</h2>
   <div class="lo-box">
     <b>Öğrenme Çıktısı</b> Elektronların atom orbitallerine yerleşimine, elementlerin periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme
@@ -1429,7 +1429,7 @@
   </div>
 
   <div class="kavramlar-list">
-    <div class="lbl">📚 Bu Ünitenin Kavramları</div>
+    <div class="lbl">📚 Bu Konunun Kavramları</div>
     <dt>İzoelektronik</dt><dd>Aynı sayıda elektrona (ve aynı elektron dizilimine) sahip atom/iyonlar.</dd>
     <dt>Katyon / Anyon</dt><dd>Elektron vererek oluşan pozitif iyon / elektron alarak oluşan negatif iyon.</dd>
     <dt>Baş Grup / Yan Grup</dt><dd>A grubu elementleri (baş grup) / B grubu elementleri (yan grup, geçiş metalleri).</dd>
@@ -1484,12 +1484,12 @@
     <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
 
   </div>
-  <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Ünite 7 — KİM.9.1.7</span></div>
+  <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Konu 7 — KİM.9.1.7</span></div>
 </div>
 
 <!-- ============ ÜNİTE 8 ============ -->
 <div class="page">
-  <div class="unit-kicker">Bölüm II · Atomdan Periyodik Tabloya · Ünite 8 · KİM.9.1.8</div>
+  <div class="unit-kicker">Bölüm II · Atomdan Periyodik Tabloya · Konu 8 · KİM.9.1.8</div>
   <h2 class="unit-title">8. Periyodik Özellikler</h2>
   <div class="lo-box">
     <b>Öğrenme Çıktısı</b> Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme
@@ -1642,7 +1642,7 @@
   </div>
 
   <div class="kavramlar-list">
-    <div class="lbl">📚 Bu Ünitenin Kavramları</div>
+    <div class="lbl">📚 Bu Konunun Kavramları</div>
     <dt>Atom Yarıçapı</dt><dd>Çekirdek ile en dış elektron katmanı arasındaki uzaklık.</dd>
     <dt>Elektronegatiflik</dt><dd>Bir atomun kimyasal bağdaki ortak elektron çiftini kendine çekme eğiliminin ölçüsü.</dd>
     <dt>Sıçrama (İyonlaşma Enerjisinde)</dt><dd>Valans elektronlar tükendikten sonra bir alt, kararlı enerji seviyesinden elektron koparmanın gerektirdiği ani büyük enerji artışı.</dd>
@@ -1698,7 +1698,7 @@
     <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
 
   </div>
-  <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Ünite 8 — KİM.9.1.8</span></div>
+  <div class="footer-tag"><span>Kimya 9 · Ders Defteri</span><span>Konu 8 — KİM.9.1.8</span></div>
 </div>
 
 <!-- ============ CEVAP ANAHTARI ============ -->
@@ -1708,7 +1708,7 @@
 
   <div class="ca-cols">
   <div class="ca-unit">
-    <h4>Ünite 1 — Günlük Hayatta Kimya (KİM.9.1.1)</h4>
+    <h4>Konu 1 — Günlük Hayatta Kimya (KİM.9.1.1)</h4>
     <div class="ca-item">1-4. Cevaplar, ilgili "Konu Anlatımı" bölümündeki kavram ve ilişkilerle tutarlı, gerekçeli bir açıklama içermelidir.</div>
     <div class="ca-item"><b>5. C</b> — X noktası pH skalasında 0'a yakın (≈2), yani kuvvetli asit bölgesindedir.</div>
     <div class="ca-item"><b>6. A</b> — Bilgisayar, telefon ve ekran teknolojileri atomdaki elektronların hareketine dayanır.</div>
@@ -1718,7 +1718,7 @@
   </div>
 
   <div class="ca-unit">
-    <h4>Ünite 2 — Kimyanın Alt Disiplinleri (KİM.9.1.2)</h4>
+    <h4>Konu 2 — Kimyanın Alt Disiplinleri (KİM.9.1.2)</h4>
     <div class="ca-item">1-4. Cevaplar, ilgili "Konu Anlatımı" bölümündeki kavram ve ilişkilerle tutarlı, gerekçeli bir açıklama içermelidir.</div>
     <div class="ca-item"><b>5. A</b> — Bir bileşenin miktarının sayısal olarak (mg/dL) belirlenmesi nicel analizdir.</div>
     <div class="ca-item"><b>6. C</b> — DNA ve protein yapısı, canlı organizmalardaki kimyasal yapıları inceleyen biyokimyanın konusudur.</div>
@@ -1728,7 +1728,7 @@
   </div>
 
   <div class="ca-unit">
-    <h4>Ünite 3 — Kimya Alanında Kariyer Olanakları (KİM.9.1.3)</h4>
+    <h4>Konu 3 — Kimya Alanında Kariyer Olanakları (KİM.9.1.3)</h4>
     <div class="ca-item">1-4. Cevaplar, ilgili "Konu Anlatımı" bölümündeki kavram ve ilişkilerle tutarlı, gerekçeli bir açıklama içermelidir.</div>
     <div class="ca-item"><b>5. A</b> — Kimya teknolojisi ön lisans programı, kimya teknikeri unvanı kazandırır.</div>
     <div class="ca-item"><b>6. B</b> — Su arıtma ve atık yönetimi, çevre ve sürdürülebilirlik sektörünün kapsamındadır.</div>
@@ -1738,7 +1738,7 @@
   </div>
 
   <div class="ca-unit">
-    <h4>Ünite 4 — Kimyasal Maddelerin Kullanımı ve Güvenlik (KİM.9.1.4)</h4>
+    <h4>Konu 4 — Kimyasal Maddelerin Kullanımı ve Güvenlik (KİM.9.1.4)</h4>
     <div class="ca-item">1-4. Cevaplar, ilgili "Konu Anlatımı" bölümündeki kavram ve ilişkilerle tutarlı, gerekçeli bir açıklama içermelidir.</div>
     <div class="ca-item"><b>5. E</b> — Kullanmadan önce etiketi okumak temel güvenlik kuralıdır; diğer seçenekler ihlaldir.</div>
     <div class="ca-item"><b>6. E</b> — Canlı dokuyu tahrip eden/metali aşındıran maddeleri belirten piktogram korozif işaretidir.</div>
@@ -1748,7 +1748,7 @@
   </div>
 
   <div class="ca-unit">
-    <h4>Ünite 5 — Atom Teorileri ve Atomun Yapısı (KİM.9.1.5)</h4>
+    <h4>Konu 5 — Atom Teorileri ve Atomun Yapısı (KİM.9.1.5)</h4>
     <div class="ca-item">1-4. Cevaplar, ilgili "Konu Anlatımı" bölümündeki kavram ve ilişkilerle tutarlı, gerekçeli bir açıklama içermelidir.</div>
     <div class="ca-item"><b>5. E</b> — Elektronu ilk kez Thomson keşfetmiştir (katot ışını deneyleri).</div>
     <div class="ca-item"><b>6. C</b> — Alfa parçacıklarının bir kısmının büyük açıyla sapması, pozitif yükün ve kütlenin küçük, yoğun bir çekirdekte toplandığını gösterir.</div>
@@ -1758,7 +1758,7 @@
   </div>
 
   <div class="ca-unit">
-    <h4>Ünite 6 — Atom Orbitalleri ve Elektron Dizilimi (KİM.9.1.6)</h4>
+    <h4>Konu 6 — Atom Orbitalleri ve Elektron Dizilimi (KİM.9.1.6)</h4>
     <div class="ca-item">1-4. Cevaplar, ilgili "Konu Anlatımı" bölümündeki kavram ve ilişkilerle tutarlı, gerekçeli bir açıklama içermelidir.</div>
     <div class="ca-item"><b>5. B</b> — Pauli dışlama ilkesine göre bir orbitalde en fazla 2 (zıt spinli) elektron bulunabilir.</div>
     <div class="ca-item"><b>6. D</b> — Doğru bağıl enerji sıralaması 1s &lt; 2s &lt; 2p &lt; 3s şeklindedir.</div>
@@ -1768,7 +1768,7 @@
   </div>
 
   <div class="ca-unit">
-    <h4>Ünite 7 — Periyodik Tabloda Yer Bulma (KİM.9.1.7)</h4>
+    <h4>Konu 7 — Periyodik Tabloda Yer Bulma (KİM.9.1.7)</h4>
     <div class="ca-item">1-4. Cevaplar, ilgili "Konu Anlatımı" bölümündeki kavram ve ilişkilerle tutarlı, gerekçeli bir açıklama içermelidir.</div>
     <div class="ca-item"><b>5. C</b> — ns²(n-1)d⁶ dizilimi 8B grubuna karşılık gelir.</div>
     <div class="ca-item"><b>6. D</b> — Yalnızca +1 iyon oluşturan, su ile şiddetli tepkimeye giren grup 1A (alkali metaller)dir.</div>
@@ -1778,7 +1778,7 @@
   </div>
 
   <div class="ca-unit">
-    <h4>Ünite 8 — Periyodik Özellikler (KİM.9.1.8)</h4>
+    <h4>Konu 8 — Periyodik Özellikler (KİM.9.1.8)</h4>
     <div class="ca-item">1-4. Cevaplar, ilgili "Konu Anlatımı" bölümündeki kavram ve ilişkilerle tutarlı, gerekçeli bir açıklama içermelidir.</div>
     <div class="ca-item"><b>5. E</b> — Bir periyotta soldan sağa gidildikçe artan çekirdek yükü nedeniyle atom yarıçapı azalır.</div>
     <div class="ca-item"><b>6. A</b> — Flor (F), 4,0 değeriyle en yüksek elektronegatifliğe sahip elementtir.</div>
@@ -1795,7 +1795,7 @@
 <div class="page cover" style="background:linear-gradient(160deg,#0c0a1f,#211f47 55%,#14122c);">
   <div class="emoji">⚛️ 🧪 🔬</div>
   <h1 style="font-size:28px">Tebrikler!</h1>
-  <div class="sub">Kimya Hayattır ve Atomdan Periyodik Tabloya temasının 8 ünitesini tamamladın.</div>
+  <div class="sub">Kimya Hayattır ve Atomdan Periyodik Tabloya temasının 8 konusunu tamamladın.</div>
   <div class="badges" style="max-width:520px">
     <span class="badge">1 Günlük Hayatta Kimya</span><span class="badge">2 Alt Disiplinler</span>
     <span class="badge">3 Kariyer Olanakları</span><span class="badge">4 Madde Güvenliği</span>

@@ -210,10 +210,8 @@ function renderLineChart(chart) {
 /* =========================================================
    ÇOKLU SERİLİ ÇİZGİ GRAFİĞİ — aynı x ekseninde (ör. atom
    numarası) birden fazla seriyi (ör. 2s ve 2p alt kabuklarının
-   bağıl enerjisi) karşılaştırmak için. MEB kitabındaki
-   "Etkinlik-1.8: Atom Orbitallerinin Bağıl Enerjileri"
-   grafiğiyle aynı mantık: farklı orbital türlerinin enerjisi,
-   artan atom numarasıyla nasıl değiştiğini karşılaştırmalı
+   bağıl enerjisi) karşılaştırmak için. Farklı orbital türlerinin
+   enerjisi, artan atom numarasıyla nasıl değiştiğini karşılaştırmalı
    gösterir (kuantum sayısı formülü değil, veriye dayalı okuma).
    ========================================================= */
 function renderCompareLineChart(chart) {
@@ -283,9 +281,8 @@ function renderCompareLineChart(chart) {
 }
 
 /* =========================================================
-   ORBİTAL ŞEKİLLERİ (s, p, d) — MEB kitabındaki "Etkinlik-1.8"
-   görselinde gösterilen evrensel/standart orbital sınır yüzey
-   şekillerinin özgün, sadeleştirilmiş 2B çizimleri (s: küresel,
+   ORBİTAL ŞEKİLLERİ (s, p, d) — evrensel/standart orbital sınır
+   yüzey şekillerinin özgün, sadeleştirilmiş 2B çizimleri (s: küresel,
    p: iki loblu/dambıl, d: dört loblu/yonca). Herhangi bir
    yayınevinin 3B render'ı değil, kimyada standart olan geometrik
    temsildir.
@@ -494,9 +491,8 @@ function renderOrbitalBoxes(diagram) {
 /* =========================================================
    ORBİTAL KUTU SETİ — aynı soruda birden fazla etiketli
    ("A", "B", "C"...) elektron dizilimini yan yana gösterir.
-   MEB kitabındaki "Elektronlar Orbitallere Nasıl Yerleşir?"
-   etkinliğindeki gibi, Pauli/Hund/Aufbau kuralına UYAN ve
-   UYMAYAN dizilimleri karşılaştırarak buldurmaya yöneliktir.
+   Pauli/Hund/Aufbau kuralına UYAN ve UYMAYAN dizilimleri
+   karşılaştırarak buldurmaya yöneliktir.
    ========================================================= */
 function renderOrbitalBoxSet(items) {
 

@@ -19,7 +19,7 @@
     padding:16mm 15mm; position:relative; box-shadow:0 2px 10px rgba(0,0,0,.12);
   }
   /* Sayfa kenar boşlukları @page üzerinden ayarlanır (padding üzerinden değil):
-     bir ünite tek bir .page div'i olarak birden fazla fiziksel A4 sayfasına
+     bir konu tek bir .page div'i olarak birden fazla fiziksel A4 sayfasına
      taşabildiğinden (uzun konu anlatımı + çok etkinlikli çalışma sayfaları),
      kenar boşluğu .page'in kendi padding'i olsaydı yalnızca taştığı ilk ve son
      fiziksel sayfada uygulanır, aradaki tüm sayfalar kenar boşluksuz (kağıda
@@ -54,11 +54,11 @@
   h1,h2,h3,h4{ font-family: Arial, Helvetica, sans-serif; font-weight:800; color:var(--ink); margin:0 0 .4em; }
   p{ margin:0 0 .6em; }
   /* footer-tag KASITLI OLARAK normal akışta (position:absolute DEĞİL): bir .page
-     div'i (bir ünitenin tamamı) birden fazla fiziksel A4 sayfasına taşabildiğinden,
+     div'i (bir konunun tamamı) birden fazla fiziksel A4 sayfasına taşabildiğinden,
      mutlak konumlandırma toplam (çok sayfalı) kutunun sonuna göre hesaplanır ve bu
      nokta çoğunlukla son fiziksel sayfanın ortasına denk gelip canlı metnin üzerine
-     biner. Normal akışta ise ünitenin son sorusundan hemen sonra, üstte kalıp asla
-     başka içerikle çakışmayan bir "ünite sonu" etiketi olarak görünür. */
+     biner. Normal akışta ise konunun son sorusundan hemen sonra, üstte kalıp asla
+     başka içerikle çakışmayan bir "konu sonu" etiketi olarak görünür. */
   .footer-tag{ display:flex; justify-content:space-between; margin-top:14px; font-family:Arial,sans-serif; font-size:9.5px; color:#8a8ea8; border-top:1px solid var(--line); padding-top:6px; }
 
   /* ---- Kapak ---- */
@@ -86,7 +86,7 @@
   .soru-turleri{ display:flex; gap:10px; flex-wrap:wrap; margin:10px 0; }
   .st-chip{ font-family:Arial,sans-serif; font-size:10.5px; font-weight:800; border:1.5px solid var(--ink); padding:4px 10px; border-radius:999px; }
 
-  /* ---- Ünite başlığı ---- */
+  /* ---- Konu başlığı ---- */
   .unit-kicker{ font-family:Arial,sans-serif; font-weight:800; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); margin-bottom:5px; }
   .unit-title{ font-family:Arial,sans-serif; font-size:23px; margin-bottom:10px; }
   .lo-box{ border:2px solid var(--ink); border-radius:6px; padding:10px 14px; margin-bottom:12px; font-family:Arial,sans-serif; font-size:12px; }
@@ -98,7 +98,7 @@
   h4.alt-h{ font-family:Arial,sans-serif; font-size:13px; margin-top:12px; color:var(--accent); }
 
   /* ---- İki sütunlu dizgi (defter ailesindeki diğer kitaplarla tutarlı) ----
-     CSS Grid yerine multi-column (columns) kullanılır: konu anlatımı bir üniteyi
+     CSS Grid yerine multi-column (columns) kullanılır: konu anlatımı bir konuyu
      tek .page div'i olarak akışkan biçimde birden fazla fiziksel sayfaya
      taşabildiğinden, Grid öğeleri sayfa sınırında güvenilir bölünmez (taşma/boş
      sayfa hatası riski); multi-column ise içeriği sütun sütun, sayfa kırılımına
@@ -217,24 +217,24 @@
 <div class="page">
   <h2 style="font-family:Arial,sans-serif; font-size:22px;">İçindekiler</h2>
 
-  <!-- Her ünite için bir .toc-item satırı ekleyin; birden fazla
+  <!-- Her konu için bir .toc-item satırı ekleyin; birden fazla
        bölüm varsa .toc-bolum ile gruplandırın (AtomLab 9'da olduğu
        gibi "Bölüm I / Bölüm II"). Tek bölümlü bir ders defterinde
        .toc-bolum satırını hiç kullanmayabilirsiniz. -->
   <div class="toc-bolum">[Bölüm Adı]</div>
-  <div class="toc-item"><span><b>Ünite 1</b> — [Örnek Ünite] <span class="kod">([KAZANIM KODU])</span></span></div>
-  <!-- <div class="toc-item"><span><b>Ünite 2</b> — ... <span class="kod">(...)</span></span></div> -->
+  <div class="toc-item"><span><b>Konu 1</b> — [Örnek Konu] <span class="kod">([KAZANIM KODU])</span></span></div>
+  <!-- <div class="toc-item"><span><b>Konu 2</b> — ... <span class="kod">(...)</span></span></div> -->
 
   <div class="toc-bolum">Ek</div>
   <div class="toc-item"><span><b>Cevap Anahtarı</b></span></div>
 
   <h2 style="font-family:Arial,sans-serif; font-size:20px; margin-top:20px;">Bu Defter Nasıl Kullanılır?</h2>
-  <p style="font-family:Arial,sans-serif; font-size:12px;">Bu ders defteri, [SİTE ADI] dijital uygulamasıyla birlikte, sınıfta ya da evde kullanılmak üzere tasarlanmıştır. Her ünite aynı dört aşamayı izler — tıpkı uygulamadaki gibi:</p>
+  <p style="font-family:Arial,sans-serif; font-size:12px;">Bu ders defteri, [SİTE ADI] dijital uygulamasıyla birlikte, sınıfta ya da evde kullanılmak üzere tasarlanmıştır. Her konu aynı dört aşamayı izler — tıpkı uygulamadaki gibi:</p>
   <table class="usage">
     <tr><th>Aşama</th><th>Bu defterde karşılığı</th></tr>
     <tr><td>🔍 Merak Et</td><td>Konu anlatımının giriş paragrafı, günlük hayattan bir soruyla başlar.</td></tr>
     <tr><td>🧪 Keşfet</td><td>"Uygulamada Dene" kutusu — uygulamadaki etkinliği yaparken doldurulur.</td></tr>
-    <tr><td>📘 Açıklayalım</td><td>Konu Anlatımı, Kavram/Örnek Çözüm kutuları ve Bu Ünitenin Kavramları.</td></tr>
+    <tr><td>📘 Açıklayalım</td><td>Konu Anlatımı, Kavram/Örnek Çözüm kutuları ve Bu Konunun Kavramları.</td></tr>
     <tr><td>🎯 Değerlendir</td><td>Sürekli numaralanmış Açık Uçlu, Çoktan Seçmeli ve Bağlam Temelli Sorular.</td></tr>
   </table>
 
@@ -243,21 +243,21 @@
     <span class="st-chip">AÇIK UÇLU</span><span class="st-chip">ÇOKTAN SEÇMELİ</span><span class="st-chip">BAĞLAM TEMELLİ</span>
   </div>
   <p style="font-family:Arial,sans-serif; font-size:12px;">AÇIK UÇLU sorularda kendi cümlelerinle, gerekçeli bir açıklama yazman istenir; cevap satırlarına yaz. ÇOKTAN SEÇMELİ sorularda 5 seçenek (A–E) bulunur. BAĞLAM TEMELLİ sorular bir okuma parçasıyla (bağlamla) başlar ve o bağlamla ilgili birkaç alt soru içerir; doğru cevaba ulaşmak için parçayı dikkatle okuyup derste öğrendiğin kavramı o duruma uygulaman gerekir — cevap parçanın içinde doğrudan yazmaz.</p>
-  <p style="font-family:Arial,sans-serif; font-size:12px;">Her ünitenin sonunda çözdüğün soruları, kitabın en sonundaki Cevap Anahtarı ile kontrol edebilirsin.</p>
+  <p style="font-family:Arial,sans-serif; font-size:12px;">Her konunun sonunda çözdüğün soruları, kitabın en sonundaki Cevap Anahtarı ile kontrol edebilirsin.</p>
   <p style="font-family:Arial,sans-serif; font-size:11.5px; color:#5a5e78;"><strong>Öğretmene not:</strong> Defter, siyah-beyaz fotokopi/baskıda da okunaklı olacak şekilde tasarlanmıştır. Sayfa içindeki kutular (kavram, uygulama, notlarım, örnek çözüm, bağlam) çerçeve stiliyle ve etiket simgesiyle birbirinden ayrılır, yalnızca renge dayanmaz.</p>
 
   <p style="font-family:Arial,sans-serif; font-size:12.5px; margin-top:18px;">Ad Soyad: _________________________________________ &nbsp;&nbsp;&nbsp; Sınıf / No: _______________</p>
 </div>
 
-<!-- ============ ÜNİTE 1 (ÖRNEK) ============
-     Bu ünitenin tüm içeriği AtomLab 9'dan alınmış, ÇALIŞAN GERÇEK BİR
+<!-- ============ KONU 1 (ÖRNEK) ============
+     Bu konunun tüm içeriği AtomLab 9'dan alınmış, ÇALIŞAN GERÇEK BİR
      ÖRNEKTİR — amaç, aşağıdaki kutu tiplerinin (kavram/örnek çözüm/
      notlarım/worksheet/kavramlar-list/soru türleri/bağlam temelli/
      cevap anahtarı) nasıl bir arada kullanıldığını somut biçimde
-     göstermektir. Kendi konunuz için bu ünitenin tamamını silip aynı
+     göstermektir. Kendi konunuz için bu konunun tamamını silip aynı
      kutu yapısını koruyarak yeniden yazın. -->
 <div class="page">
-  <div class="unit-kicker">[Bölüm Adı] · Ünite 1 · [KAZANIM KODU]</div>
+  <div class="unit-kicker">[Bölüm Adı] · Konu 1 · [KAZANIM KODU]</div>
   <h2 class="unit-title">1. Günlük Hayatta Kimya (örnek)</h2>
   <div class="lo-box">
     <b>Öğrenme Çıktısı</b> Kimya biliminin günlük hayata katkısına ilişkin çıkarım yapabilme
@@ -272,7 +272,7 @@
   <h3 class="konu-h">Konu Anlatımı</h3>
   <div class="konu-cols">
   <p>Sabah yüzünü yıkamandan akşam telefonunu şarj etmene kadar geçen her an, aslında görünmez bir kimya laboratuvarındasın. El ve yüz temizlemede kullanılan su ve sabun, hastalıklarla mücadelede kullanılan ilaçlar, bilgisayardaki silisyum çipi, günümüzde önemli bir sorun hâline gelen plastik atıkların giderilmesi — bu örneklerin tamamı kimyasal maddeleri ve olayları içerir. Kimya bilimi; temizlik, ilaç, gıda, enerji ve tarım gibi pek çok sektörü etkiler ve insanların maddeleri nasıl etkileşime geçirebileceğini, bu süreçlerin günlük hayatta nasıl uygulanabileceğini anlamalarına yardımcı olur.</p>
-  <p>Bilgisayarların işlemesi, telefonların şarj olması ve televizyon ekranlarının ışıldaması gibi olaylar, atomun yapısındaki elektronların hareketine dayanır — bu defterin ikinci bölümünde (Ünite 5-8) tam olarak bu atom yapısını inceleyeceksin. Kimya bilgisi, doğada hayatta kalma becerilerini bile güçlendirir: kolonya, aseton veya yağ gibi maddeler yanıcı özellikleri sayesinde ateş yakmakta kullanılabilir; çakıl-kum-kömür katmanlarından geçirilen su, fiziksel bir süzme işlemiyle temizlenebilir.</p>
+  <p>Bilgisayarların işlemesi, telefonların şarj olması ve televizyon ekranlarının ışıldaması gibi olaylar, atomun yapısındaki elektronların hareketine dayanır — bu defterin ikinci bölümünde (Konu 5-8) tam olarak bu atom yapısını inceleyeceksin. Kimya bilgisi, doğada hayatta kalma becerilerini bile güçlendirir: kolonya, aseton veya yağ gibi maddeler yanıcı özellikleri sayesinde ateş yakmakta kullanılabilir; çakıl-kum-kömür katmanlarından geçirilen su, fiziksel bir süzme işlemiyle temizlenebilir.</p>
 
   <div class="box kavram">
     <div class="lbl">💡 Kavram · Kimya Bilimi</div>
@@ -316,7 +316,7 @@
   </div>
 
   <div class="kavramlar-list">
-    <div class="lbl">📚 Bu Ünitenin Kavramları</div>
+    <div class="lbl">📚 Bu Konunun Kavramları</div>
     <dt>Kimyasal Madde</dt><dd>Belirli bir bileşime ve karakteristik özelliklere sahip, doğal ya da üretilmiş her türlü madde.</dd>
     <dt>Çıkarım</dt><dd>Gözlemlenen örneklerden yola çıkarak genel bir sonuca ulaşma süreci.</dd>
     <dt>pH</dt><dd>Bir çözeltinin asitlik/bazlık derecesini gösteren, 0-14 arasında değişen ölçek; 7 nötrdür.</dd>
@@ -369,15 +369,15 @@
     <div class="cevap-satir"></div><div class="cevap-satir"></div></div>
 
   </div>
-  <div class="footer-tag"><span>[Ders Adı] · Ders Defteri</span><span>Ünite 1 — [KAZANIM KODU]</span></div>
+  <div class="footer-tag"><span>[Ders Adı] · Ders Defteri</span><span>Konu 1 — [KAZANIM KODU]</span></div>
 </div>
 
 <!-- ============ [BURADAN SONRA KENDİ ÜNİTELERİNİZİ EKLEYİN] ============
-     Her yeni ünite için yukarıdaki "ÜNİTE 1 (ÖRNEK)" bloğunun tamamını
+     Her yeni konu için yukarıdaki "KONU 1 (ÖRNEK)" bloğunun tamamını
      kopyalayıp aşağıya yapıştırın; unit-kicker/unit-title/lo-box/
      konu-h/box'ları/kavramlar-list/sorular-cols/footer-tag içeriğini
-     değiştirin. Soru numaralarını üniteler arasında SIFIRLAMAYIN gerek
-     yok — her ünite kendi içinde 1'den başlar (defterin tamamı için
+     değiştirin. Soru numaralarını konular arasında SIFIRLAMAYIN gerek
+     yok — her konu kendi içinde 1'den başlar (defterin tamamı için
      tek bir numaralandırma şart değildir, AtomLab 9'da da böyleydi).
      ======================================================================= -->
 
@@ -388,7 +388,7 @@
 
   <div class="ca-cols">
   <div class="ca-unit">
-    <h4>Ünite 1 — [Örnek Ünite] ([KAZANIM KODU])</h4>
+    <h4>Konu 1 — [Örnek Konu] ([KAZANIM KODU])</h4>
     <div class="ca-item">1-4. Cevaplar, ilgili "Konu Anlatımı" bölümündeki kavram ve ilişkilerle tutarlı, gerekçeli bir açıklama içermelidir.</div>
     <div class="ca-item"><b>5. D</b> — [Kısa gerekçe.]</div>
     <div class="ca-item"><b>6. A</b> — [Kısa gerekçe.]</div>
@@ -396,7 +396,7 @@
     <div class="ca-item"><b>8. B</b> — [Kısa gerekçe.]</div>
     <div class="ca-item">9-10. Açık uçlu — konu anlatımındaki ilgili kavramla değerlendirilir.</div>
   </div>
-  <!-- Her yeni ünite için bir .ca-unit bloğu daha ekleyin. -->
+  <!-- Her yeni konu için bir .ca-unit bloğu daha ekleyin. -->
   </div>
 
   <div class="footer-tag"><span>[Ders Adı] · Ders Defteri</span><span>Cevap Anahtarı</span></div>
@@ -406,10 +406,10 @@
 <div class="page cover" style="background:linear-gradient(160deg,#0c0a1f,#211f47 55%,#14122c);">
   <div class="emoji">🎓</div>
   <h1 style="font-size:28px">Tebrikler!</h1>
-  <div class="sub">[Tema adı] temasının [N] ünitesini tamamladın.</div>
+  <div class="sub">[Tema adı] temasının [N] konusunu tamamladın.</div>
   <div class="badges" style="max-width:520px">
-    <span class="badge">1 [Ünite adı]</span>
-    <!-- Her ünite için bir .badge span'i ekleyin. -->
+    <span class="badge">1 [Konu adı]</span>
+    <!-- Her konu için bir .badge span'i ekleyin. -->
   </div>
   <div class="sub" style="font-style:italic; max-width:480px;">[Kapanış cümlesi — öğrencinin neler öğrendiğini özetleyen 1-2 cümle.]</div>
   <div class="site" style="margin-top:20px">[Ders Adı] · [Tema Adı] Ders Defteri</div>

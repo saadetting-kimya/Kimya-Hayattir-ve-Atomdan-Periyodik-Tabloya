@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Örnek Ünite — [SİTE ADI]</title>
+<title>Örnek Konu — [SİTE ADI]</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2246%22 fill=%22%236d5bff%22/></svg>">
 <link rel="stylesheet" href="../assets/css/style.css?v=1" />
 </head>
@@ -11,10 +11,10 @@
 <div id="nav-root"></div>
 
 <!--
-  BU DOSYA BİR ÖRNEKTİR. Her yeni ünite için bu dosyayı kopyalayıp
+  BU DOSYA BİR ÖRNEKTİR. Her yeni konu için bu dosyayı kopyalayıp
   (01-..., 02-... şeklinde adlandırıp) içeriği değiştirin, sonra
   nav.js'teki LINKS dizisine ekleyin. Aşağıdaki bölümler tipik bir
-  ünite sayfasının iskeletidir:
+  konu sayfasının iskeletidir:
     1) hero  — başlık + kısa giriş
     2) callout.concept — "Merak Et" kutusu (meraklandırıcı soru)
     3) bir veya iki etkinlik (bespoke — konuya özel tasarlanır)
@@ -25,7 +25,7 @@
 <header class="hero">
   <div class="container">
     <span class="eyebrow">Modül 1 · [KAZANIM KODU]</span>
-    <h1 style="max-width:760px">[Ünite Başlığı]</h1>
+    <h1 style="max-width:760px">[Konu Başlığı]</h1>
     <p class="lead" style="max-width:680px">[Öğrenciyi konuya çeken, günlük hayattan/meraklandırıcı bir girizgâh — 1-2 cümle.]</p>
   </div>
 </header>
@@ -85,14 +85,17 @@
   </div>
 </section>
 
+<div id="next-module-root"></div>
+
 <div id="footer-root"></div>
 
 <script type="module">
-  import { mountNav, mountFooter } from "../assets/js/nav.js?v=1";
+  import { mountNav, mountFooter, mountNextModule } from "../assets/js/nav.js?v=1";
   import { renderQuiz, markVisited } from "../assets/js/quiz-engine.js?v=1";
   import { QUIZ } from "../assets/js/quiz-data.js?v=1";
 
   mountNav("ornek");
+  mountNextModule("ornek");
   mountFooter();
   markVisited("ornek");
   renderQuiz(document.getElementById("quiz-host"), QUIZ.ornek, "ornek");

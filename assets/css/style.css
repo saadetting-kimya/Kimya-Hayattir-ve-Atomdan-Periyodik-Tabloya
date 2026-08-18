@@ -469,6 +469,21 @@ input[type=range]::-moz-range-thumb{
 footer{ padding:40px 0 70px; color:var(--ink-faint); font-size:13px; border-top:1px solid var(--line); margin-top:20px; }
 footer a{ color:var(--gas-dark); text-decoration:none; font-weight:700; }
 
+/* ---------- Sonraki Modül butonu ---------- */
+.next-module-btn{
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+  margin-top:28px; padding:18px 24px; border-radius:14px;
+  background:linear-gradient(135deg,var(--gas),var(--gas-dark)); color:#fff;
+  text-decoration:none; transition:transform .15s, box-shadow .15s;
+  box-shadow:0 4px 16px rgba(74,63,209,.25);
+}
+.next-module-btn:hover{ transform:translateY(-2px); box-shadow:0 8px 22px rgba(74,63,209,.32); }
+.next-module-btn .nm-label{ display:block; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.04em; opacity:.85; margin-bottom:2px; }
+.next-module-btn .nm-title{ display:block; font-size:18px; font-weight:800; }
+@media (max-width:520px){
+  .next-module-btn{ flex-direction:column; align-items:flex-start; gap:2px; }
+}
+
 /* ---------- Kazanım strip ---------- */
 .kazanim-strip{
   display:flex; gap:10px; overflow-x:auto; padding:4px 0 8px;
