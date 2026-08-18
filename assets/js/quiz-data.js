@@ -589,74 +589,118 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir laboratuvarda, canlı hücrelerdeki enzimlerin yapısı ve metabolik tepkimelerdeki rolü incelenmektedir.",
-    text: "Bu çalışma kimyanın hangi alt disipliniyle en doğrudan ilişkilidir?",
-    options: ["Jeokimya", "Elektrokimya", "Nükleer kimya", "Polimer kimyası", "Biyokimya"],
-    correct: 4,
-    explain: "Canlı sistemlerdeki moleküler yapıları ve metabolik süreçleri inceleyen alt disiplin biyokimyadır."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir araştırmada, karbon atomlarının birbirine bağlanarak oluşturduğu uzun zincirli bileşiklerin (örneğin yakıtlar ve plastikler) yapısı incelenmektedir.",
-    text: "Bu araştırma en doğrudan kimyanın hangi alt disipliniyle ilişkilendirilebilir?",
-    options: ["Anorganik kimya", "Gıda kimyası", "Jeokimya", "Nükleer kimya", "Organik kimya"],
-    correct: 4,
-    explain: "Karbon temelli bileşiklerin (hidrokarbonlar, polimerler vb.) yapısını inceleyen alt disiplin organik kimyadır."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir madencilik şirketinin laboratuvarında, çıkarılan cevherlerdeki metal oksit ve tuz bileşiklerinin kimyasal yapısı analiz edilmektedir.",
-    text: "Bu inceleme kimyanın hangi alt disiplininin kapsamına girer?",
-    options: ["Organik kimya", "Anorganik kimya", "Biyokimya", "Gıda kimyası", "Polimer kimyası"],
-    correct: 1,
-    explain: "Metaller, mineraller ve karbon içermeyen (genel olarak) bileşiklerin incelenmesi anorganik kimyanın konusudur."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir kalite kontrol biriminde, bir gıda örneğindeki katkı maddesinin miktarı hassas ölçüm cihazlarıyla belirlenmektedir.",
-    text: "Bu faaliyet en doğrudan kimyanın hangi alt disipliniyle ilişkilidir?",
-    options: ["Analitik kimya", "Nükleer kimya", "Jeokimya", "Organik kimya", "Elektrokimya"],
+    matchPairs: {
+      left: [
+        "Çıkarılan cevherlerdeki metal oksit ve tuz bileşiklerinin yapısını analiz etmek",
+        "Bir gıda örneğindeki katkı maddesi miktarını hassas cihazlarla belirlemek",
+        "Canlı hücrelerdeki enzimlerin yapısını ve metabolik rolünü incelemek",
+        "Yakıt ve plastiklerde bulunan, karbon atomlarının oluşturduğu uzun zincirli bileşikleri incelemek"
+      ],
+      right: ["Organik kimya", "Analitik kimya", "Biyokimya", "Anorganik kimya"]
+    },
+    text: "Yukarıdaki eşleştirmede, 3 numaralı uygulama hangi harfteki alt disiplinle ilişkilidir?",
+    options: ["c", "a", "b", "d", "Hiçbiriyle ilişkili değildir"],
     correct: 0,
-    explain: "Bir örnekteki madde miktarının ve bileşiminin belirlenmesi (nitel/nicel analiz) analitik kimyanın temel çalışma alanıdır."
+    explain: "3 numaralı uygulama (canlı hücrelerdeki enzim yapısı ve metabolik rol) biyokimyanın konusudur; bu da 'c' harfindeki seçenekle eşleşir."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir araştırma grubu, kimyasal tepkimelerin hızını ve tepkime sırasında açığa çıkan/soğurulan enerji miktarını ölçmektedir.",
-    text: "Bu çalışma alanı kimyanın hangi alt disiplinini yansıtır?",
-    options: ["Biyokimya", "Fizikokimya", "Jeokimya", "Gıda kimyası", "Polimer kimyası"],
+    matchPairs: {
+      left: [
+        "Kimyasal tepkimelerin hızını ve açığa çıkan/soğurulan enerji miktarını ölçmek",
+        "Bir akarsudaki ağır metal ve kirletici madde derişimlerini düzenli ölçmek",
+        "Hastalık teşhisi için radyoaktif işaretleyici maddelerle görüntüleme yapmak",
+        "Tekstil ve ambalajda kullanılan, uzun zincirli tekrar eden birimlerden oluşan yapılar geliştirmek"
+      ],
+      right: ["Nükleer kimya", "Fizikokimya", "Polimer kimyası", "Çevre kimyası"]
+    },
+    text: "Yukarıdaki eşleştirmede, 2 numaralı uygulama hangi harfteki alt disiplinle ilişkilidir?",
+    options: ["a", "b", "c", "d", "Hiçbiriyle ilişkili değildir"],
+    correct: 3,
+    explain: "2 numaralı uygulama (akarsudaki kirletici derişimi ölçümü) çevre kimyasının konusudur; bu da 'd' harfindeki seçenekle eşleşir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    dialogue: [
+      { who: "Öğrenci A", text: "Bir pilin zamanla neden tükendiğini araştırmak bence anorganik kimyanın konusu, çünkü piller metal içerir." },
+      { who: "Öğrenci B", text: "Bence elektrokimyanın konusu; çünkü asıl soru elektrik akımı ile kimyasal tepkime arasındaki ilişkiyle ilgili." },
+      { who: "Öğrenci C", text: "Bence biyokimyanın konusu, çünkü piller de canlı hücreler gibi enerji depolar." }
+    ],
+    text: "Bir pilin zamanla tükenmesinin nedenini araştırmak, kimyanın hangi alt disiplininin en doğrudan konusudur?",
+    options: ["Öğrenci A", "Öğrenci B", "Öğrenci C", "Üçü de eşit derecede haklıdır", "Bu soru hiçbir alt disiplinin konusu değildir"],
     correct: 1,
-    explain: "Tepkime hızı, enerji değişimi ve denge gibi fiziksel-kimyasal ilkeleri inceleyen alt disiplin fizikokimyadır."
+    explain: "Elektrik akımı ile kimyasal tepkime (pil, akü, korozyon vb.) arasındaki ilişkiyi inceleyen alt disiplin elektrokimyadır; Öğrenci B haklıdır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir üretim tesisinde, tekstil liflerinde ve ambalaj malzemelerinde kullanılan uzun zincirli, tekrar eden birimlerden oluşan yapılar geliştirilmektedir.",
-    text: "Bu iş, kimyanın hangi alt disipliniyle en doğrudan örtüşür?",
-    options: ["Nükleer kimya", "Jeokimya", "Polimer kimyası", "Analitik kimya", "Elektrokimya"],
+    context: "Petrolden elde edilen ham maddelerin işlenip plastik ambalaj malzemesine dönüştürülmesi ve bu ambalajların doğadaki bozunma süresinin incelenmesi süreci ele alınmaktadır.",
+    statements: [
+      "Bu süreç yalnızca organik kimyanın ilgi alanındadır, başka hiçbir disiplinle ilişkisi yoktur.",
+      "Petrolden plastiğe dönüşüm organik kimyanın, ambalajın doğadaki etkisi ise çevre kimyasının konusudur.",
+      "Ambalajın uzun, tekrar eden zincirli yapısının incelenmesi, sürece polimer kimyasının da dahil olduğunu gösterir."
+    ],
+    text: "Yukarıdaki ifadelerden hangileri doğrudur?",
+    options: ["Yalnız I", "Yalnız II", "II ve III", "I ve II", "I, II ve III"],
     correct: 2,
-    explain: "Monomerlerin bir araya gelerek oluşturduğu uzun zincirli polimer yapılarını inceleyen ve geliştiren alt disiplin polimer kimyasıdır."
+    explain: "Petrolün plastiğe dönüştürülmesi organik kimyanın, ambalajın çevredeki etkisi çevre kimyasının, uzun zincirli yapının incelenmesi ise polimer kimyasının konusudur — süreç birden fazla alt disiplini bir arada kapsar, bu yüzden I yanlıştır."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir çevre izleme biriminde, bir akarsudaki ağır metal ve kirletici madde derişimleri düzenli olarak ölçülmektedir.",
-    text: "Bu uygulama en doğrudan hangi alt disiplinin kapsamına girer?",
-    options: ["Çevre kimyası", "Biyokimya", "Nükleer kimya", "Polimer kimyası", "Organik kimya"],
-    correct: 0,
-    explain: "Doğal ortamlardaki (su, hava, toprak) kimyasal maddelerin kaynağı, davranışı ve etkisini inceleyen alt disiplin çevre kimyasıdır."
+    checklist: [
+      "Anorganik kimya yalnızca metalleri inceler, başka hiçbir bileşik türüyle ilgilenmez.",
+      "Analitik kimya, bir örnekteki maddenin türünü ve miktarını belirlemekle ilgilenir.",
+      "Biyokimya yalnızca hastanelerde kullanılan bir alandır, günlük hayatla ilgisi yoktur.",
+      "Jeokimya, yer kabuğundaki kayaç ve minerallerin kimyasal bileşimini inceler."
+    ],
+    text: "Yukarıdaki ifadelerden kaç tanesi doğrudur?",
+    options: ["1", "2", "3", "4", "Hiçbiri"],
+    correct: 1,
+    explain: "Yalnızca 2. ve 4. ifadeler doğrudur. Anorganik kimya metaller dışında karbon içermeyen geniş bir bileşik sınıfını kapsar (1. yanlış); biyokimya gıda, ilaç, kozmetik gibi pek çok günlük alanla ilgilidir (3. yanlış)."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
-    context: "Bir hastane laboratuvarında, hastalıkların teşhisi için radyoaktif işaretleyici maddeler kullanılarak görüntüleme yapılmaktadır.",
-    text: "Bu uygulama kimyanın hangi alt disipliniyle en doğrudan ilişkilidir?",
-    options: ["Nükleer kimya", "Organik kimya", "Gıda kimyası", "Polimer kimyası", "Anorganik kimya"],
-    correct: 0,
-    explain: "Radyoaktif izotopların özelliklerini ve tıbbi/endüstriyel uygulamalarını inceleyen alt disiplin nükleer kimyadır."
+    dialogue: [
+      { who: "Öğrenci A", text: "Kozmetik ürünlerdeki nemlendirici bileşenlerin sentezlenmesi organik kimyanın konusu, çünkü bu bileşenler karbon temelli." },
+      { who: "Öğrenci B", text: "Bence bu tamamen biyokimyanın konusu, çünkü cilt canlı bir dokudur." },
+      { who: "Öğrenci C", text: "İkisi de haklı olabilir: bileşenin sentezlenmesi organik kimyayla, cilt üzerindeki etkisinin incelenmesi ise biyokimyayla ilgilidir." }
+    ],
+    text: "Kozmetik ürün geliştirme süreciyle ilgili hangi öğrencinin görüşü en doğru ve kapsamlıdır?",
+    options: ["Öğrenci A", "Öğrenci B", "Öğrenci C", "Hiçbiri", "Yalnızca A ve B birlikte tam doğrudur"],
+    correct: 2,
+    explain: "Kozmetik ürün geliştirme, hem bileşenin sentezlendiği organik kimyayı hem de bileşenin canlı doku üzerindeki etkisinin incelendiği biyokimyayı bir arada gerektirir; Öğrenci C'nin disiplinler arası bakışı en kapsamlı olandır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    context: "Bir adli olay yerinde bulunan iz miktardaki bir toz örneğinin hangi maddeden oluştuğu belirlenmeye, ardından örnekte radyoaktif iz olup olmadığı kontrol edilmeye çalışılmaktadır.",
+    statements: [
+      "Örnekteki maddenin türünün belirlenmesi analitik kimyanın konusudur.",
+      "Radyoaktif izin kontrol edilmesi nükleer kimyanın konusudur.",
+      "Bu iki adım birlikte yalnızca tek bir alt disiplinin kapsamındadır, başka disiplinle ilgisi yoktur."
+    ],
+    text: "Yukarıdaki ifadelerden hangileri doğrudur?",
+    options: ["Yalnız I", "I ve II", "Yalnız III", "II ve III", "I, II ve III"],
+    correct: 1,
+    explain: "Madde türünün belirlenmesi analitik kimyanın, radyoaktif iz kontrolü nükleer kimyanın konusudur; adli inceleme birden fazla temel disiplinin uygulamalı bir kesişimidir, bu yüzden III yanlıştır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    checklist: [
+      "Elektrokimya yalnızca pil teknolojileriyle ilgilenir, korozyonla ilgisi yoktur.",
+      "Gıda kimyası, bir ürünün saklama koşullarının besin değerine etkisini inceleyebilir.",
+      "Farmasötik (ilaç) kimya, yeni ilaç moleküllerinin tasarlanıp test edilmesiyle ilgilenir.",
+      "Polimer kimyası yalnızca yapay/sentetik plastiklerle ilgilenir, doğal liflerle ilgisi yoktur."
+    ],
+    text: "Yukarıdaki ifadelerden kaç tanesi doğrudur?",
+    options: ["1", "3", "4", "Hiçbiri", "2"],
+    correct: 4,
+    explain: "Yalnızca 2. ve 3. ifadeler doğrudur. Elektrokimya korozyonu da kapsar (1. yanlış); polimer kimyası selüloz, protein gibi doğal polimerleri de inceler (4. yanlış)."
   },
   {
     difficulty: "kolay",

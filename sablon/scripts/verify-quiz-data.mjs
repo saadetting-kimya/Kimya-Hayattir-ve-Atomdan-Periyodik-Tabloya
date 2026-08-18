@@ -90,7 +90,18 @@ for (const key of Object.keys(QUIZ)) {
       dist[q.correct]++;
     }
 
-    const norm = (q.text || "").toLowerCase().trim();
+    // Dedup anahtarı: yalnızca "text" değil, statements/checklist/matchPairs/dialogue/context
+    // içeriğini de ekliyoruz — yeni formatlarda (I-II-III, D/Y, eşleştirme) aynı kalıp
+    // kapanış cümlesi ("Yukarıdaki ifadelerden hangileri doğrudur?" vb.) FARKLI içerikle
+    // kasıtlı olarak tekrar kullanılır; bu durum gerçek bir kopya değildir.
+    const extra = [
+      q.context,
+      Array.isArray(q.statements) ? q.statements.join("|") : "",
+      Array.isArray(q.checklist) ? q.checklist.join("|") : "",
+      q.matchPairs ? JSON.stringify(q.matchPairs) : "",
+      Array.isArray(q.dialogue) ? q.dialogue.map(d => d.text).join("|") : ""
+    ].join(" ");
+    const norm = ((q.text || "") + " " + extra).toLowerCase().trim();
     if (textSet.has(norm)) dupTexts.push({ i, text: q.text });
     textSet.add(norm);
 
