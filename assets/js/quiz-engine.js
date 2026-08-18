@@ -3539,6 +3539,7 @@ export {
   renderCycleDiagram,
   renderCareerMap,
   renderLabEquipment,
+  renderMoleculeSkeleton,
   renderCircleCompare,
   renderPeriodicHighlight,
   renderGHSPictograms,
