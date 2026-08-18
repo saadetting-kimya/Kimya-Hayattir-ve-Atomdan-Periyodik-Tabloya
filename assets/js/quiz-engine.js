@@ -408,12 +408,13 @@ const GHS_ICONS = {
     <circle cx="77" cy="51" r="1.8" fill="#000"></circle>
 
     <g fill="#000">
-      <rect x="14" y="59" width="20" height="11" rx="4"></rect>
-      <circle cx="18" cy="58" r="3.6"></circle>
-      <circle cx="24" cy="56.5" r="4"></circle>
-      <circle cx="30" cy="58" r="3.6"></circle>
+      <rect x="14" y="61" width="20" height="9" rx="3"></rect>
+      <rect x="15" y="53" width="4" height="10" rx="2"></rect>
+      <rect x="20.3" y="50" width="4" height="13" rx="2"></rect>
+      <rect x="25.6" y="51" width="4" height="12" rx="2"></rect>
+      <rect x="30.5" y="54.5" width="3.6" height="8.5" rx="1.8"></rect>
     </g>
-    <path d="M17,71 L15,80 M23,72 L22,82 M29,71 L29,80" stroke="#000" stroke-width="2" stroke-linecap="round" fill="none"></path>
+    <path d="M17,71 L15,80 M23,71 L22,81 M29,71 L29,80" stroke="#000" stroke-width="2" stroke-linecap="round" fill="none"></path>
 
     <line x1="58" y1="58" x2="86" y2="58" stroke="#000" stroke-width="3.4"></line>
     <path d="M61,58 L59,68 M67,58 L66,70 M73,58 L74,67 M79,58 L81,69" stroke="#000" stroke-width="2" stroke-linecap="round" fill="none"></path>
