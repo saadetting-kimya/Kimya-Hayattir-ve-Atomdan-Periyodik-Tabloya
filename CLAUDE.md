@@ -5,7 +5,7 @@ kullanıcının (Saadettin) aynı talimatları tekrar tekrar yazmak zorunda
 kalmaması için kalıcı hale getirilmiştir ve benim kendi varsayılan
 alışkanlıklarımdan **önceliklidir**. Yeni bir standing-rule (tek
 seferlik görev değil, kalıcı tercih) verildiğinde, aynı oturumda bu
-dosyaya eklenir.
+dosyaya eklenir (bkz. madde 13).
 
 ## 1. PİKTOGRAM OLAYI — somut ders çıkarılan vaka (telif + doğruluk)
 
@@ -69,22 +69,61 @@ yansıtıyor mu, yoksa ben yine eski alışkanlığıma mı döndüm?" Şüphe
 varsa, commit etmeden ÖNCE somut bir örnekle gösterip onay isterim —
 sessizce ilerlemem ve "tamam" demiş olmayı yeterli saymam.
 
-## 5. Görsellik
+## 5. Kavram kapsamı — YALNIZCA MEB kitabı
+
+Konu içerikleri (kavramlar, tanımlar, sınıflandırmalar, örnekler)
+**MEB kitabı (`kimya_9 1. tema.pdf`) taranarak** oluşturulur. MEB
+kitabının dışında, müfredat kapsamını aşan yeni kavram/terim/detay
+EKLENMEZ — bilimsel olarak doğru ve ilginç olsa bile, 9. sınıf MEB
+müfredatının kapsamadığı bir kavramı soruya/açıklamaya sokmak
+YASAK. Amaç öğrenciyi MEB'in sınav ve müfredat çerçevesinde
+hazırlamak; kapsam dışına taşarak "zenginleştirmek" değil.
+- Yeni bir modül/soru grubuna başlamadan önce, o konuya karşılık
+  gelen MEB kitabı sayfaları yeniden taranır (bkz. madde 2).
+- Bir kavramın MEB kitabında geçip geçmediğinden emin değilsem,
+  varsayıp eklemek yerine kitaptan doğrulanır veya kullanıcıya
+  sorulur.
+
+## 6. Görsellik ve grafik/şekil türü — PİYASA UYUMU
 
 - Doğası gereği görsel olan konular (atom modelleri, orbitaller,
   periyodik tablo, grafikler vb.) SADECE metinle anlatılmaz — ama
   madde 3'teki formül yasağı geçerli: her soruya zorla görsel
   eklenmez, gerçekten görsel gerektiren yerlere eklenir.
+- **Grafik çeşitliliği:** Sütun (bar) grafiklerinin yanında **çizgi
+  (line) grafikleri de**, konu buna uygun olduğunda **mutlaka**
+  kullanılır — yalnızca bar chart'a saplanıp kalınmaz. Hangi grafik
+  türünün kullanılacağı, piyasadaki ders kitaplarının o konuyu hangi
+  grafik türüyle işlediğine bakılarak seçilir.
+- **Şekil/görsel benzerliği:** Yeni bir şekil/diyagram oluşturulacaksa,
+  **piyasadaki (farklı yayınevlerinin ve MEB'in) ders kitaplarında o
+  konu için kullanılan şekillerden ÇOK FARKLI olmayacak** — aynı
+  gösterim mantığı, aynı eksen/etiketleme yaklaşımı, aynı genel görsel
+  dili korunur. Sebep: piyasadaki tüm kitaplar MEB'in sınav
+  formatına/görsel diline uygun hazırlanıyor; öğrenci MEB sınavında
+  bu görsel dile aşina karşılaşmalı. Bu, madde 1'deki telif kuralıyla
+  ÇELİŞMEZ: birebir çizim/dosya kopyalanmaz, ama şeklin TÜRÜ,
+  YAPISI ve GÖSTERİM KONVANSİYONU kasıtlı olarak tanıdık/benzer
+  tutulur — rastgele farklı, alışılmadık bir gösterim icat etmek
+  YASAK.
 - Mevcut render bileşenleri yetmiyorsa (`assets/js/quiz-engine.js`
   içindeki render* fonksiyonları), var olanı zorlamak yerine yeni
-  bir bileşen yazılır.
+  bir bileşen yazılır — ama yine piyasadaki örneklere sadık kalınarak.
 
-## 6. Açıklama (explain) kalitesi
+## 7. Açıklama (explain) kalitesi
 
 - `explain` alanları yalnızca "doğru cevap bu çünkü X" değil,
   öğretici/eğitsel bir anlatım içerir — kavramı gerçekten öğretir.
 
-## 7. Soru bankası kalite kontrolü (her değişiklikten sonra ZORUNLU)
+## 8. Ders Defteri de aynı kurallara tabidir
+
+Yukarıdaki tüm kurallar (1-7) yalnızca uygulama/quiz içeriği için
+değil, **Ders Defteri** (basılabilir HTML/PDF) içeriği oluşturulurken
+de birebir geçerlidir: MEB kapsamı, telif/piyasa-uyumu, tarz
+referansı, formül yasağı, öğretici açıklama — hepsi defter için de
+geçerlidir. Defter, uygulamadan ayrı bir kural setine sahip değildir.
+
+## 9. Soru bankası kalite kontrolü (her değişiklikten sonra ZORUNLU)
 
 ```
 node sablon/scripts/verify-quiz-data.mjs assets/js/quiz-data.js --count=50
@@ -95,28 +134,40 @@ node sablon/scripts/verify-quiz-data.mjs assets/js/quiz-data.js --count=50
   dengeli VE gerçekten karışık (bloklar halinde değil).
 - Commit/push ÖNCESİ bu script mutlaka çalıştırılır ve temiz çıkmalıdır.
 
-## 8. Test disiplini
+## 10. Test disiplini
 
 - Yeni bir görsel bileşen veya soru değişikliği, geçici bir test
   harness (`_t.html` + `python3 -m http.server` + Playwright
   screenshot) ile GÖRSEL olarak doğrulanır, commit'ten önce. Test
   dosyaları commit edilmeden silinir.
 
-## 9. Motor dosyalarının çifte bakımı
+## 11. Motor dosyalarının çifte bakımı
 
 - `assets/js/quiz-engine.js` ve `assets/css/style.css` içine yapılan
   her motor değişikliği, `sablon/assets/js/quiz-engine.js` ve
   `sablon/assets/css/style.css` içine de aynen yansıtılır (şablon
   sistemi senkron kalmalı).
 
-## 10. Belirsizlik anında
+## 12. Belirsizlik anında
 
 - Bir talimat yoruma açıksa veya önceki bir kararla çelişiyor
   gözüküyorsa, VARSAYIM YAPIP DEVAM ETMEK yerine anlayışımı kısaca
   (1-2 cümle) özetleyip onay istenir. Özellikle bu dosyadaki
   kurallardan birinden sapma gerektiren bir durum varsa.
 
-## 11. Genel iş akışı
+## 13. Bu dosya CANLI bir belgedir
+
+Kullanıcı yeni bir standing-rule (tek seferlik görev değil, kalıcı
+tercih/kural) belirttiğinde, o talimat sözlü kalmaz — **aynı oturumda,
+hemen** bu dosyaya yeni bir madde olarak eklenir. Kural eklenirken:
+- Mevcut maddelerle çelişip çelişmediği kontrol edilir; çelişiyorsa
+  kullanıcıya kısaca sorulur (madde 12).
+- Somut bir olay/örnek varsa (piktogram olayında olduğu gibi), o
+  örnek kısaca madde içine yazılır — ileride "neden bu kural var"
+  sorusu tekrar sorulmasın diye.
+- Dosya güncellemesi commit + push edilir.
+
+## 14. Genel iş akışı
 
 - Branch: `claude/burdan-devam-a2wg3u`.
 - Küçük, odaklı commit'ler, açıklayıcı Türkçe commit mesajlarıyla.
