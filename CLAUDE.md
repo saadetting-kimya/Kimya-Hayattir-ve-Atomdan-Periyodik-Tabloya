@@ -91,6 +91,37 @@ hazırlamak; kapsam dışına taşarak "zenginleştirmek" değil.
   varsayıp eklemek yerine kitaptan doğrulanır veya kullanıcıya
   sorulur.
 
+**KUANTUM SAYISI OLAYI — somut ders çıkarılan vaka:** "Atom
+Orbitalleri ve Elektron Dizilimi" (KİM.9.1.6) ve "Periyodik Tabloda
+Yer Bulma" (KİM.9.1.7) modüllerinde, kazanımın "orbitallerin bağıl
+enerjilerine ilişkin TAHMİNDE bulunabilme" (yani diyagonal kural
+diyagramını okuyup ezberleme/tahmin becerisi) olmasına rağmen, ben
+kendi genel kimya bilgimden "baş kuantum sayısı (n)", "açısal
+momentum kuantum sayısı (l)" ve bunların toplamı olan "n+l kuralı"
+(Madelung kuralı) gibi MEB'in bu kazanımda hiç geçmeyen, üniversite
+düzeyi bir formalizmi soruların ANA MANTIĞI hâline getirdim — bu
+tek bir hata değil, orbital modülünün 50 sorusundan 29'una,
+teori modülünün 6'sına ve yerbulma modülünün 5'ine sistematik olarak
+sızmış bir kapsam ihlaliydi. Neden oldu: Kazanımın genel başlığından
+("orbitallerin bağıl enerjisi") yola çıkıp, MEB'in kitapta gerçekte
+NASIL öğrettiğini (diyagonal kural diyagramı, hazır sıralama: 1s<2s<
+2p<3s...) tekrar kontrol etmeden, kendi bildiğim "doğru ve tam"
+açıklamayı (gerçek kuantum mekaniği) sorulara döktüm. Aynı mantıkla
+Millikan'ın yağ damlası deneyi ve kanal ışını/e-m oranı karşılaştırma
+tabloları da (atom teorileri modülünde) MEB'in beş temel modeli
+(Dalton/Thomson/Rutherford/Bohr/Modern) dışına taşan, kitapta
+geçmeyen içerikti.
+
+**GENEL KURAL:** Bir kazanımın BAŞLIĞI/genel konusu bilindiğinde bile,
+o kazanımın MEB kitabında GERÇEKTE hangi terimlerle, hangi derinlikte
+işlendiği önceden ayrıca doğrulanmadan soru/açıklama yazılmaz. MEB
+kitabında ve müfredatta (kazanım metninde) hiç geçmeyen hiçbir
+kavram, terim veya formalizm — bilimsel olarak doğru, standart ders
+kitabı bilgisi veya "zaten herkesin bildiği" görünse bile —
+kullanılmaz. Şüphe anında (madde 12) kitaptan sayfa taranır veya
+kullanıcıya sorulur; "genel kazanımdan mantık yürütüp" kendi bilgimle
+doldurmak YASAK.
+
 ## 6. Görsellik ve grafik/şekil türü — PİYASA UYUMU
 
 **"Özgünlük" ne demek, ne demek DEĞİL:** Özgün olmak, öğrencinin
