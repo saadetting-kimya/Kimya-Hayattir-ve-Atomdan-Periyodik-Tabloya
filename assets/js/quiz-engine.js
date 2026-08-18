@@ -297,6 +297,153 @@ function renderOrbitalBoxes(diagram) {
   `;
 }
 
+/* =========================================================
+   ORBİTAL KUTU SETİ — aynı soruda birden fazla etiketli
+   ("A", "B", "C"...) elektron dizilimini yan yana gösterir.
+   MEB kitabındaki "Elektronlar Orbitallere Nasıl Yerleşir?"
+   etkinliğindeki gibi, Pauli/Hund/Aufbau kuralına UYAN ve
+   UYMAYAN dizilimleri karşılaştırarak buldurmaya yöneliktir.
+   ========================================================= */
+function renderOrbitalBoxSet(items) {
+
+  if (!Array.isArray(items) || items.length === 0) return "";
+
+  const cards = items.map((item, i) => {
+    const tag = item.tag || String.fromCharCode(65 + i);
+    const diagram = renderOrbitalBoxes({ subshells: item.subshells, caption: item.caption });
+    return `
+      <div class="oset-item">
+        <div class="oset-tag">${escapeHTML(tag)}</div>
+        ${diagram}
+      </div>
+    `;
+  }).join("");
+
+  return `<div class="oset-wrap">${cards}</div>`;
+}
+
+function polarPoint(cx, cy, r, angleDeg) {
+  const a = (angleDeg - 90) * Math.PI / 180;
+  return [cx + r * Math.cos(a), cy + r * Math.sin(a)];
+}
+
+/* =========================================================
+   ATOM MODELLERİ — Dalton (bölünemez küre), Thomson (üzümlü
+   kek), Rutherford (yoğun çekirdek + boşluk + saçılma) ve
+   Bohr (katmanlı yörünge) modellerinin özgün SVG çizimleri.
+   Yalnızca evrensel/standart ders kitabı gösterim biçimini
+   (herhangi bir yayınevinin çizimini değil) yeniden üretir.
+   ========================================================= */
+function renderAtomModel(model) {
+
+  if (!model || !model.type) return "";
+
+  const W = 180, H = 180, cx = W / 2, cy = H / 2;
+  let svgInner = "";
+
+  if (model.type === "dalton") {
+    svgInner = `
+      <circle cx="${cx}" cy="${cy}" r="52" fill="var(--gas)" opacity="0.55" stroke="var(--ink-soft)" stroke-width="2"></circle>
+      <text x="${cx}" y="${cy + 5}" text-anchor="middle" font-size="11" fill="var(--ink)" font-weight="700">bölünemez</text>
+    `;
+  } else if (model.type === "thomson") {
+    const plusMarks = Array.from({ length: 9 }).map((_, i) => {
+      const [x, y] = polarPoint(cx, cy, 18 + (i % 3) * 12, i * 40);
+      return `<text x="${x.toFixed(1)}" y="${(y + 3).toFixed(1)}" text-anchor="middle" font-size="10" fill="var(--ink-faint)" font-weight="700">+</text>`;
+    }).join("");
+    const electronDots = Array.from({ length: 6 }).map((_, i) => {
+      const [x, y] = polarPoint(cx, cy, 34, i * 60 + 20);
+      return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.6" fill="var(--stop)"></circle>`;
+    }).join("");
+    svgInner = `
+      <circle cx="${cx}" cy="${cy}" r="52" fill="var(--gas)" opacity="0.32" stroke="var(--ink-soft)" stroke-width="2"></circle>
+      ${plusMarks}
+      ${electronDots}
+    `;
+  } else if (model.type === "rutherford") {
+    const arrowTip = (x, y, angleDeg, color) => {
+      const [x1, y1] = polarPoint(x, y, 6, angleDeg - 150);
+      const [x2, y2] = polarPoint(x, y, 6, angleDeg + 150);
+      return `<polygon points="${x.toFixed(1)},${y.toFixed(1)} ${x1.toFixed(1)},${y1.toFixed(1)} ${x2.toFixed(1)},${y2.toFixed(1)}" fill="${color}"></polygon>`;
+    };
+    svgInner = `
+      <circle cx="${cx}" cy="${cy}" r="60" fill="none" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="3 4"></circle>
+      <line x1="0" y1="${(cy - 36).toFixed(1)}" x2="${(W - 4).toFixed(1)}" y2="${(cy - 36).toFixed(1)}" stroke="var(--ink-soft)" stroke-width="1.6"></line>
+      ${arrowTip(W - 4, cy - 36, 90, "var(--ink-soft)")}
+      <line x1="0" y1="${(cy + 32).toFixed(1)}" x2="${(W - 4).toFixed(1)}" y2="${(cy + 32).toFixed(1)}" stroke="var(--ink-soft)" stroke-width="1.6"></line>
+      ${arrowTip(W - 4, cy + 32, 90, "var(--ink-soft)")}
+      <path d="M0,${cy.toFixed(1)} L${(cx - 6).toFixed(1)},${cy.toFixed(1)} L4,${(cy - 46).toFixed(1)}" fill="none" stroke="var(--stop)" stroke-width="2.2"></path>
+      ${arrowTip(4, cy - 46, -18, "var(--stop)")}
+      <circle cx="${cx}" cy="${cy}" r="5.5" fill="var(--stop)"></circle>
+    `;
+  } else if (model.type === "bohr") {
+    const shells = Array.isArray(model.shells) ? model.shells : [2, 8, 1];
+    const rings = shells.map((count, si) => {
+      const r = 22 + si * 15;
+      const ring = `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="var(--line)" stroke-width="1.3"></circle>`;
+      const dots = Array.from({ length: count }).map((_, i) => {
+        const [x, y] = polarPoint(cx, cy, r, (360 / count) * i + si * 15);
+        return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.4" fill="var(--gas)"></circle>`;
+      }).join("");
+      return ring + dots;
+    }).join("");
+    svgInner = `
+      <circle cx="${cx}" cy="${cy}" r="7" fill="var(--stop)"></circle>
+      ${rings}
+    `;
+  }
+
+  const caption = model.caption ? `<div class="amodel-caption">${escapeHTML(model.caption)}</div>` : "";
+  const label = model.label ? `<div class="amodel-label">${escapeHTML(model.label)}</div>` : "";
+
+  return `
+    <div class="amodel-wrap">
+      ${caption}
+      <svg viewBox="0 0 ${W} ${H}" width="170" height="170" class="amodel-svg">${svgInner}</svg>
+      ${label}
+    </div>
+  `;
+}
+
+/* =========================================================
+   ÇEKİRDEK + ELEKTRON BULUTU — p⁺/n/e⁻ sayılarını, ders
+   kitaplarındaki evrensel gösterim biçimiyle (küçük yoğun
+   çekirdek + büyük elektron bulutu + etiketli kılavuz
+   çizgiler) özgün bir SVG üzerinde işaretler.
+   ========================================================= */
+function renderNucleusCloud(data) {
+
+  if (!data) return "";
+
+  const W = 220, H = 170, cx = 76, cy = 85;
+
+  const rows = [
+    data.protons != null ? { text: `${data.protons} p⁺`, y: 34, color: "var(--stop)" } : null,
+    data.neutrons != null ? { text: `${data.neutrons} n`, y: 85, color: "var(--ink-soft)" } : null,
+    data.electrons != null ? { text: `${data.electrons} e⁻`, y: 136, color: "var(--gas)" } : null
+  ].filter(Boolean);
+
+  const leaders = rows.map(r => `
+    <line x1="${cx + 12}" y1="${cy}" x2="154" y2="${r.y}" stroke="${r.color}" stroke-width="1.2" opacity="0.55"></line>
+    <text x="160" y="${r.y + 4}" font-size="13" font-weight="700" fill="${r.color}">${escapeHTML(r.text)}</text>
+  `).join("");
+
+  const caption = data.caption ? `<div class="ncloud-caption">${escapeHTML(data.caption)}</div>` : "";
+  const label = data.label ? `<div class="ncloud-label">${escapeHTML(data.label)}</div>` : "";
+
+  return `
+    <div class="ncloud-wrap">
+      ${caption}
+      <svg viewBox="0 0 ${W} ${H}" width="220" height="170" class="ncloud-svg">
+        <circle cx="${cx}" cy="${cy}" r="58" fill="var(--gas)" opacity="0.16" stroke="var(--gas)" stroke-width="1.3" stroke-dasharray="2 3"></circle>
+        <circle cx="${cx}" cy="${cy}" r="14" fill="var(--stop)" opacity="0.85"></circle>
+        ${leaders}
+      </svg>
+      ${label}
+    </div>
+  `;
+}
+
 function renderCircleCompare(data) {
 
   if (!data || !Array.isArray(data.items) || data.items.length === 0) return "";
@@ -2528,6 +2675,12 @@ export function renderQuiz(
       ${renderChecklist(question.checklist)}
 
       ${renderOrbitalBoxes(question.orbitalBoxes)}
+
+      ${renderOrbitalBoxSet(question.orbitalBoxSet)}
+
+      ${renderAtomModel(question.atomModel)}
+
+      ${renderNucleusCloud(question.nucleusCloud)}
 
       ${renderCircleCompare(question.circleCompare)}
 

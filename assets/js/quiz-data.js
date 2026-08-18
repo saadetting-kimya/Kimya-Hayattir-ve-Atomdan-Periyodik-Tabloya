@@ -2278,6 +2278,7 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
+    atomModel: { type: "dalton", caption: "1808 — Dalton'ın atom modeli", label: "İçi dolu, bölünemez katı küre" },
     matchPairs: {
       left: [
         "Aynı elementin tüm atomlarının kütlece ve özellik bakımından birbirinin aynısı olduğunu, atomların bölünemez taneciklerden ibaret olduğunu öne sürmüştür.",
@@ -2295,6 +2296,7 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
+    atomModel: { type: "thomson", caption: "1897 — Thomson'ın 'üzümlü kek' modeli", label: "Pozitif yüklü küre içine gömülü elektronlar" },
     context: "Thomson, katot ışını tüpü deneylerinde ışınların negatif yüklü levhadan uzaklaşıp pozitif yüklü levhaya doğru saptığını gözlemlemiştir.",
     text: "Thomson'ın bu deneyle keşfettiği tanecik hangisidir?",
     options: ["Nötron", "Proton", "Foton", "Elektron", "Alfa taneciği"],
@@ -2331,6 +2333,7 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
+    atomModel: { type: "rutherford", caption: "1911 — Rutherford'ın altın levha deneyi", label: "Alfa tanecikleri: çoğu sapmadan geçer, çok azı geri sıçrar" },
     context: "Rutherford, 1911'de ince bir altın levhaya pozitif yüklü, hızlı hareket eden alfa tanecikleri göndererek levhanın arkasındaki ekranda oluşan saçılma desenini incelemiştir; taneciklerin büyük çoğunluğu sapmadan geçerken, çok küçük bir kısmı büyük açılarla geri sıçramıştır.",
     checklist: [
       "Deneyde kaynak olarak kullanılan tanecikler pozitif yüklüdür.",
@@ -2359,6 +2362,7 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
+    atomModel: { type: "bohr", shells: [2, 8, 1], caption: "1913 — Bohr'un yörünge modeli (örnek: 2-8-1 katman dizilimi)", label: "Elektronlar sabit enerji düzeylerinde (katmanlarda) dolanır" },
     context: "Bohr, 1913'te hidrojen atomunun çizgi spektrumunu açıklamak için elektronların çekirdek etrafında belirli enerji düzeylerinde (kabuklarda) dairesel yörüngelerde dolandığını öne sürmüştür.",
     text: "Bohr modeline göre elektronlar atom çekirdeği etrafında nasıl bulunur?",
     options: ["Rastgele, her noktada eşit olasılıkla", "Çekirdeğin içinde protonlarla iç içe", "Yalnızca çekirdeğin yüzeyinde sabit durarak", "Belirli enerji düzeylerinde, sabit yörüngelerde", "Yörüngesiz, bulut şeklinde dağılmış olarak"],
@@ -2431,6 +2435,7 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
+    nucleusCloud: { protons: 9, neutrons: 10, electrons: 9, caption: "Örnek: nötr bir flor (F) atomu", label: "p⁺ ve n çekirdekte, e⁻ çekirdek etrafındaki bulutta" },
     context: "Günümüzde bir atomun proton, nötron ve elektron adı verilen üç temel tanecikten oluştuğu, proton ve nötronların çekirdekte, elektronların ise çekirdek etrafındaki bölgede bulunduğu bilinmektedir.",
     text: "Bir atomun temel yapı taşları hangi seçenekte doğru verilmiştir?",
     options: ["Yalnızca nötron ve foton", "Proton, nötron, elektron", "Yalnızca proton ve elektron", "Proton, foton, pozitron", "Yalnızca elektron ve foton"],
@@ -2860,11 +2865,19 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir p alt kabuğu (örneğin 2p), aynı enerjiye sahip üç ayrı orbitalden (2px, 2py, 2pz) oluşur; bu orbitaller uzayda farklı yönlerde uzanır fakat enerjileri özdeştir.",
-    text: "Aynı enerjiye sahip bu tür orbitaller için kullanılan terim hangisidir?",
-    options: ["Hibrit orbitaller", "Yozlaşmış (dejenere) orbitaller", "İyonik orbitaller", "Bağ orbitalleri", "Çekirdek orbitalleri"],
-    correct: 1,
-    explain: "Aynı alt kabuk içinde bulunan ve enerjileri eşit olan orbitaller (örneğin px, py, pz) 'yozlaşmış (dejenere) orbitaller' olarak adlandırılır."
+    matchPairs: {
+      left: [
+        "Bir orbitalde en fazla iki elektron bulunabilir ve bu iki elektronun spinleri zıt yönde olmalıdır.",
+        "Eşit enerjili (dejenere) orbitaller doldurulurken elektronlar önce her orbitale birer tane, aynı yönde spinle yerleştirilir.",
+        "Elektronlar, atomun temel hâlinde önce en düşük enerjili boş orbitalden başlayarak sırayla yerleşir.",
+        "Aynı alt kabuk içinde enerjileri eşit olan orbitallere (örneğin px, py, pz) verilen isim."
+      ],
+      right: ["Hund kuralı", "Yozlaşmış (dejenere) orbitaller", "Pauli dışlama ilkesi", "Aufbau ilkesi"]
+    },
+    text: "Yukarıdaki eşleştirmede, 3 numaralı tanım hangi harfteki kavrama aittir?",
+    options: ["a", "b", "c", "d", "Hiçbiriyle ilişkili değildir"],
+    correct: 3,
+    explain: "Elektronların en düşük enerjili boş orbitalden başlayarak sırayla yerleşmesi Aufbau ilkesidir; bu da 'd' harfindeki seçenekle eşleşir."
   },
   {
     difficulty: "kolay",
@@ -2887,11 +2900,15 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Aufbau (yapılandırma) ilkesine göre elektronlar, atomun temel hâlinde önce en düşük enerjili boş orbitalleri doldurur, sonra sırayla daha yüksek enerjili orbitallere yerleşir.",
-    text: "Bu ilkeye göre bir atomdaki elektron yerleşim sırasının temel mantığı hangisidir?",
-    options: ["Elektronlar, mevcut en düşük enerjili boş orbitalden başlayarak yerleşir", "Elektronlar önce en yüksek enerjili orbitali doldurur", "Elektronlar rastgele herhangi bir orbitale yerleşebilir", "Elektronlar yalnızca s orbitallerine yerleşir", "Elektron yerleşim sırasının enerjiyle hiçbir ilgisi yoktur"],
-    correct: 0,
-    explain: "Aufbau ilkesi, elektronların enerji açısından en kararlı (en düşük enerjili) boş orbitalden başlayarak sırayla yerleştiğini belirtir."
+    dialogue: [
+      { who: "Öğrenci A", text: "Aufbau ilkesi ile Hund kuralı aynı şeyi söylüyor bence; ikisi de elektronların rastgele yerleştiğini anlatıyor." },
+      { who: "Öğrenci B", text: "Bence farklı: Aufbau, orbitallerin HANGİ SIRAYLA doldurulacağını (enerjiye göre); Hund ise eşit enerjili orbitaller arasında elektronların nasıl PAYLAŞTIRILACAĞINI anlatır." },
+      { who: "Öğrenci C", text: "İkisi de yalnızca d ve f orbitalleri için geçerlidir, s ve p orbitalleri için geçerli değildir." }
+    ],
+    text: "Aufbau ilkesi ile Hund kuralı arasındaki farkla ilgili hangi öğrencinin görüşü doğrudur?",
+    options: ["Öğrenci A", "Öğrenci C", "Öğrenci B", "A ve C birlikte", "Hiçbiri"],
+    correct: 2,
+    explain: "Aufbau ilkesi orbitallerin enerjiye göre doldurulma SIRASINI, Hund kuralı ise eşit enerjili (dejenere) orbitaller arasında elektronların nasıl dağıtılacağını belirler; ikisi de tüm alt kabuk türleri (s, p, d, f) için geçerlidir. Öğrenci B haklıdır."
   },
   {
     difficulty: "kolay",
@@ -2930,26 +2947,30 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Pauli dışlama ilkesine göre bir orbitalde en fazla iki elektron bulunabilir ve bu iki elektronun spinleri zıt yönde olmalıdır (biri yukarı, biri aşağı).",
-    text: "Bu ilkeye göre tek bir orbitalde aynı yönde spine sahip iki elektron bulunması mümkün müdür?",
-    options: ["Evet, spin yönü orbital doluluğunu etkilemez", "Yalnızca yüksek enerjili orbitallerde mümkündür", "Yalnızca s orbitalinde mümkündür", "Yalnızca d orbitalinde mümkündür", "Hayır, aynı orbitalde iki elektronun spinleri zıt olmalıdır"],
+    context: "Bir 2p alt kabuğuna elektron yerleştirilirken üç farklı öneri değerlendirilmektedir.",
+    statements: [
+      "İlk elektronu herhangi bir 2p orbitaline, ikinci elektronu da aynı orbitale zıt spinli olarak yerleştirmek Pauli ilkesine aykırı değildir.",
+      "Üç elektronu üç ayrı 2p orbitaline, hepsi aynı yönde spinli olacak şekilde tek tek yerleştirmek Hund kuralına uygundur.",
+      "Dördüncü bir elektron gelirse, zaten dolu olan orbitallerden birine zıt spinli olarak eklenir."
+    ],
+    text: "Yukarıdaki ifadelerden hangileri doğrudur?",
+    options: ["Yalnız I", "Yalnız II", "I ve III", "II ve III", "I, II ve III"],
     correct: 4,
-    explain: "Pauli dışlama ilkesine göre bir orbitalde bulunan iki elektronun spinleri mutlaka zıt yönde olmalıdır; aynı yönde spine sahip iki elektron aynı orbitalde bulunamaz."
+    explain: "Bir orbitalde en fazla iki elektron, zıt spinli olarak bulunabilir (I doğru, Pauli ilkesi); eşit enerjili orbitallere önce tek tek aynı yönde spinle yerleşim Hund kuralıdır (II doğru); orbitaller tek elektronla dolduktan sonra gelen elektronlar zıt spinli eşleşerek doldurmaya devam eder (III doğru)."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    orbitalBoxes: {
-      subshells: [
-        { label: "2p", electrons: [1, 1, 1] }
-      ],
-      caption: "Üç eşit enerjili orbitale tek tek yerleştirilmiş elektronlar (Hund kuralı)"
-    },
-    context: "Görseldeki 2p alt kabuğunda üç elektron, önce her orbitale birer tane olacak şekilde, aynı yönde spinle yerleştirilmiştir.",
-    text: "Bu yerleşim, hangi kuralın bir uygulamasıdır?",
-    options: ["Pauli dışlama ilkesi", "Hund kuralı (en düşük enerjili düzenleme için orbitallere önce tek tek yerleşme)", "Aufbau ilkesi", "Heisenberg belirsizlik ilkesi", "Kütlenin korunumu yasası"],
+    orbitalBoxSet: [
+      { tag: "I", subshells: [{ label: "2p", electrons: [2, 1, 1] }] },
+      { tag: "II", subshells: [{ label: "2p", electrons: [2, 2, 0] }] },
+      { tag: "III", subshells: [{ label: "2p", electrons: [1, 2, 1] }] }
+    ],
+    context: "Yukarıda, temel hâldeki bir atomun 2p⁴ alt kabuğu için önerilen üç farklı elektron dağılımı gösterilmektedir.",
+    text: "Bu üç dağılımdan hangisi Hund kuralına AYKIRIDIR?",
+    options: ["Dağılım I", "Dağılım II", "Dağılım III", "I ve III birlikte", "Üçü de kurala uygundur"],
     correct: 1,
-    explain: "Hund kuralına göre eşit enerjili (dejenere) orbitaller doldurulurken, elektronlar önce her orbitale birer tane, aynı yönde spinle yerleştirilir; bu düzenleme enerji açısından en kararlı olanıdır."
+    explain: "Hund kuralına göre, bir orbital ikinci kez elektron alıp eşleşmeden önce alt kabuktaki TÜM orbitaller birer elektronla doldurulmalıdır. Dağılım II'de bir orbital hâlâ boşken (0) başka bir orbital zaten eşleşmiştir (2); bu kurala aykırıdır. Dağılım I ve III ise orbitallerin ÇİZİMDEKİ sırası farklı görünse de, ikisinde de üç orbital de önce birer elektron almış ve dördüncü elektron ancak ondan sonra bunlardan birinde eşleşmiştir — orbitaller eş enerjili (dejenere) olduğundan hangisinin 'önce' çizildiği önemli değildir; önemli olan hiçbir orbitalin boş kalmamasıdır."
   },
   {
     difficulty: "kolay",
