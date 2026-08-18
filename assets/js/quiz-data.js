@@ -1137,74 +1137,118 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir görev tanımında şu ifade yer almaktadır: gıda üretim hattından alınan örneklerde katkı maddesi miktarı ve mikrobiyolojik güvenlik ölçümleri düzenli olarak yapılır, sonuçlar standartlarla karşılaştırılır.",
-    text: "Bu görev tanımı en doğrudan hangi kariyer alanına örnektir?",
-    options: ["Astrokimya araştırmacısı", "Patent avukatı", "Gıda kalite kontrol uzmanı", "Bilim gazeteciliği", "Müze koruma kimyageri"],
-    correct: 2,
-    explain: "Gıda örneklerinde katkı maddesi ve güvenlik ölçümü yapıp standartlarla karşılaştırma, gıda kalite kontrol uzmanının temel işidir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir laboratuvarda, olay yerinden toplanan iz miktardaki maddeler analiz edilerek bir suçun aydınlatılmasına yardımcı kanıtlar üretilmektedir.",
-    text: "Bu çalışma alanı hangi kariyerle en doğrudan ilişkilidir?",
-    options: ["Kozmetik Ar-Ge uzmanı", "Adli (forensic) kimyager", "Petrokimya mühendisi", "Tarım kimyası araştırmacısı", "Elektrokimya mühendisi"],
-    correct: 1,
-    explain: "Olay yerinden alınan iz maddelerin analiz edilerek adli sürece kanıt sunulması adli kimyagerin görev alanıdır."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir ilaç şirketinde, yeni geliştirilen bir molekülün hedef hastalıktaki etkinliği ve olası yan etkileri klinik öncesi aşamada sistematik olarak test edilmektedir.",
-    text: "Bu görev en doğrudan hangi kariyer alanına aittir?",
-    options: ["Jeokimya uzmanı", "Farmasötik Ar-Ge kimyageri", "Bilim müzesi küratörü", "Gıda mühendisi", "Metalurji uzmanı"],
-    correct: 1,
-    explain: "Yeni moleküllerin etkinlik ve güvenliğinin test edilmesi ilaç (farmasötik) Ar-Ge kimyagerinin işidir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir fabrikada çalışanların kullandığı kimyasal maddelerin güvenli depolanması, etiketlenmesi ve olası kaza risklerinin önlenmesi için prosedürler hazırlanmaktadır.",
-    text: "Bu görev tanımı hangi kariyer alanına en uygun düşer?",
-    options: ["Astrokimya araştırmacısı", "İş sağlığı ve güvenliği (EHS) uzmanı", "Bilim gazetecisi", "Patent uzmanı", "Sanat eseri restoratörü"],
-    correct: 1,
-    explain: "Kimyasal madde güvenliği, depolama ve risk önleme prosedürleri hazırlamak EHS (iş sağlığı ve güvenliği) uzmanının görevidir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir üniversitede, lisans öğrencilerine atomun yapısı ve kimyasal bağlar konuları haftalık ders programına göre anlatılmakta, laboratuvar uygulamaları yürütülmektedir.",
-    text: "Bu görev en çok hangi kariyer alanıyla örtüşür?",
-    options: ["Adli kimyager", "Kimya öğretmenliği/akademisyenliği", "Petrokimya mühendisi", "Kozmetik Ar-Ge uzmanı", "Malzeme test mühendisi"],
-    correct: 1,
-    explain: "Ders anlatma ve laboratuvar uygulaması yürütme, öğretmenlik/akademisyenlik kariyerinin temel unsurlarıdır."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir akarsuyun farklı noktalarından alınan su örneklerinde ağır metal ve kirletici madde derişimleri ölçülerek bölgedeki su kalitesi haritalanmaktadır.",
-    text: "Bu görev, kariyer alanları arasında en doğrudan hangisiyle eşleşir?",
-    options: ["Kozmetik formülasyon uzmanı", "Çevre kimyageri", "Patent avukatı", "Malzeme bilimci", "Nükleer güvenlik uzmanı"],
-    correct: 1,
-    explain: "Su kaynaklarındaki kirletici madde düzeylerinin izlenmesi ve haritalanması çevre kimyagerinin görev alanına girer."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir kozmetik firmasında, yeni bir nemlendirici kremin cilt üzerindeki etkisi test edilmekte, formülasyondaki bileşen oranları optimize edilmektedir.",
-    text: "Tarif edilen bu görev hangi kariyer alanının kapsamına girer?",
-    options: ["Kozmetik Ar-Ge kimyageri", "Adli kimyager", "Astrokimya araştırmacısı", "İş güvenliği uzmanı", "Jeokimyager"],
+    matchPairs: {
+      left: [
+        "Gıda üretim hattından alınan örneklerde katkı maddesi ve mikrobiyolojik güvenlik ölçümü yapıp standartlarla karşılaştırmak",
+        "Olay yerinden toplanan iz miktardaki maddeleri analiz ederek adli sürece kanıt üretmek",
+        "Yeni geliştirilen bir ilaç molekülünün etkinliğini ve yan etkilerini klinik öncesi test etmek",
+        "Fabrikadaki kimyasalların güvenli depolanması ve etiketlenmesi için prosedür hazırlamak"
+      ],
+      right: ["Farmasötik Ar-Ge kimyageri", "İş sağlığı ve güvenliği (EHS) uzmanı", "Gıda kalite kontrol uzmanı", "Adli (forensic) kimyager"]
+    },
+    text: "Yukarıdaki eşleştirmede, 3 numaralı görev tanımı hangi harfteki kariyerle ilişkilidir?",
+    options: ["a", "b", "c", "d", "Hiçbiriyle ilişkili değildir"],
     correct: 0,
-    explain: "Kozmetik ürün formülasyonu geliştirme ve optimize etme kozmetik Ar-Ge kimyagerinin işidir."
+    explain: "3 numaralı görev (yeni ilaç molekülünün etkinlik/yan etki testi) farmasötik Ar-Ge kimyagerinin işidir; bu da 'a' harfindeki seçenekle eşleşir."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bir rafineride ham petrolün damıtılarak benzin, mazot ve diğer yakıt türlerine ayrıştırılması süreci planlanıp izlenmektedir.",
-    text: "Bu görev tanımı en doğrudan hangi kariyer alanına aittir?",
-    options: ["Bilim müzesi küratörü", "Gıda mühendisi", "Adli kimyager", "Petrokimya mühendisi", "Kozmetik uzmanı"],
+    matchPairs: {
+      left: [
+        "Üniversitede lisans öğrencilerine atomun yapısı ve kimyasal bağları anlatıp laboratuvar uygulaması yürütmek",
+        "Akarsudan alınan su örneklerinde ağır metal ve kirletici derişimini ölçüp su kalitesini haritalamak",
+        "Yeni bir nemlendirici kremin cilt üzerindeki etkisini test edip formülasyonu optimize etmek",
+        "Ham petrolü damıtarak benzin, mazot gibi yakıt türlerine ayrıştırma sürecini planlayıp izlemek"
+      ],
+      right: ["Petrokimya mühendisi", "Kozmetik Ar-Ge kimyageri", "Çevre kimyageri", "Kimya öğretmenliği/akademisyenliği"]
+    },
+    text: "Yukarıdaki eşleştirmede, 1 numaralı görev tanımı hangi harfteki kariyerle ilişkilidir?",
+    options: ["a", "b", "c", "d", "Hiçbiriyle ilişkili değildir"],
+    correct: 1,
+    explain: "1 numaralı görev (ders anlatma + laboratuvar uygulaması) kimya öğretmenliği/akademisyenliğinin işidir; bu da 'b' harfindeki seçenekle eşleşir."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    dialogue: [
+      { who: "Öğrenci A", text: "Kimya kariyeri demek mutlaka beyaz önlükle laboratuvarda çalışmak demektir, başka bir seçenek yoktur." },
+      { who: "Öğrenci C", text: "Bence öyle değil; bilim gazeteciliği, patent uzmanlığı gibi laboratuvar dışı kariyerler de kimya bilgisi gerektirir." },
+      { who: "Öğrenci B", text: "Kimya kariyeri sadece lisansüstü eğitimle mümkündür, teknik/meslek eğitimiyle bu alanda çalışılamaz." }
+    ],
+    text: "Kimya alanındaki kariyer olanaklarıyla ilgili hangi öğrencinin görüşü en doğrudur?",
+    options: ["Öğrenci A", "Öğrenci C", "Öğrenci B", "A ve B birlikte haklıdır", "Hiçbiri"],
+    correct: 1,
+    explain: "Kimya kariyer alanları laboratuvar dışına da (bilim iletişimi, patent/fikri mülkiyet, EHS vb.) uzanır ve farklı eğitim seviyelerinden kariyer yollarına açıktır; Öğrenci C haklıdır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bir üniversite öğrencisi kimya kariyeri planlaması yaparken aşağıdaki ifadeleri değerlendirmektedir.",
+    statements: [
+      "Kimya lisans mezunu yalnızca akademisyen olabilir, sanayide çalışamaz.",
+      "Kimya bilgisi, gıda, ilaç, kozmetik, çevre gibi birçok farklı sektörde istihdam olanağı sağlar.",
+      "Kimya kariyeri planlarken kişisel ilgi alanları (örneğin çevre, sağlık, sanat) kariyer seçimini yönlendirebilir."
+    ],
+    text: "Yukarıdaki ifadelerden hangileri doğrudur?",
+    options: ["Yalnız I", "Yalnız II", "I ve III", "II ve III", "I, II ve III"],
     correct: 3,
-    explain: "Ham petrolün işlenerek yakıt ürünlerine dönüştürülmesi süreçlerinin yönetimi petrokimya mühendisliğinin çalışma alanıdır."
+    explain: "Kimya lisans mezunları sanayi, hastane, müze, hukuk bürosu gibi çok çeşitli alanlarda çalışabilir (I yanlış); kimya bilgisi birçok sektöre yayılır ve kişisel ilgi alanları kariyer seçiminde etkilidir (II ve III doğru)."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    checklist: [
+      "Adli kimyager yalnızca cinayet davalarında çalışır, başka suç/kaza türleriyle ilgilenmez.",
+      "Kültürel miras koruma kimyageri, sanat eserlerindeki malzemeleri kimyasal yöntemlerle inceleyebilir.",
+      "Bilim iletişimi/gazeteciliği kariyeri, kimya bilgisi gerektirmeyen tamamen ayrı bir alandır.",
+      "Metalurji/malzeme mühendisi, alaşım oluşturma ve saflaştırma süreçleriyle ilgilenebilir."
+    ],
+    text: "Yukarıdaki ifadelerden kaç tanesi doğrudur?",
+    options: ["4", "2", "1", "Hiçbiri", "3"],
+    correct: 1,
+    explain: "Yalnızca 2. ve 4. ifadeler doğrudur. Adli kimyager pek çok suç/kaza türünde kanıt analiz eder (1. yanlış); bilim iletişimi kimya bilgisini geniş kitleye doğru aktarmayı gerektirir (3. yanlış)."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    dialogue: [
+      { who: "Öğrenci A", text: "Tarım kimyası araştırmacısı sadece gübre üretir, toprak analiziyle ilgilenmez." },
+      { who: "Öğrenci C", text: "Bence bu iş tamamen çevre kimyagerinin görevidir, tarım kimyasıyla ilgisi yoktur." },
+      { who: "Öğrenci B", text: "Bence tarım kimyası araştırmacısı hem toprağın besin içeriğini analiz eder hem de verimi artıracak gübre formülasyonu geliştirir." }
+    ],
+    text: "Tarım kimyası araştırmacısının görev tanımıyla ilgili hangi öğrencinin görüşü doğrudur?",
+    options: ["Öğrenci A", "Öğrenci C", "A ve C birlikte", "Öğrenci B", "Hiçbiri"],
+    correct: 3,
+    explain: "Tarım kimyası araştırmacısı hem toprağın besin madde içeriğini analiz eder hem de verimi artıracak gübre formülasyonları geliştirir; Öğrenci B haklıdır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    context: "Bir patent/fikri mülkiyet uzmanının (kimya arka planlı) günlük işinde aşağıdaki görevler yer alabilir.",
+    statements: [
+      "Yeni bir kimyasal sürecin daha önceki buluşlarla örtüşüp örtüşmediğini teknik dokümanlardan değerlendirmek.",
+      "Hukuki süreçlerde kullanılacak teknik raporları hazırlamak.",
+      "Bu görev yalnızca hukuk eğitimi gerektirir, kimya bilgisine hiç ihtiyaç duyulmaz."
+    ],
+    text: "Yukarıdaki ifadelerden hangileri doğrudur?",
+    options: ["Yalnız I", "Yalnız III", "I ve II", "II ve III", "I, II ve III"],
+    correct: 2,
+    explain: "Patent/fikri mülkiyet uzmanı teknik dokümanları değerlendirir ve hukuki süreçlere teknik rapor hazırlar (I ve II doğru); bu kariyer hem hukuk hem kimya arka planı gerektirdiğinden III yanlıştır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    checklist: [
+      "Klinik biyokimya uzmanı, hastalardan alınan kan örneklerindeki biyokimyasal parametreleri ölçebilir.",
+      "Elektrokimya/batarya mühendisi yalnızca güneş panelleriyle ilgilenir, pil teknolojisiyle ilgisi yoktur.",
+      "Astrokimya araştırmacısı, göktaşı örneklerindeki element bileşimini inceleyebilir.",
+      "Kariyer seçiminde yalnızca maaş miktarı dikkate alınmalıdır, ilgi alanı önemli değildir."
+    ],
+    text: "Yukarıdaki ifadelerden kaç tanesi doğrudur?",
+    options: ["3", "2", "4", "1", "Hiçbiri"],
+    correct: 1,
+    explain: "Yalnızca 1. ve 3. ifadeler doğrudur. Elektrokimya/batarya mühendisi asıl olarak pil teknolojisiyle ilgilenir (2. yanlış); ilgi alanı da kariyer seçiminde önemli bir etkendir (4. yanlış)."
   },
   {
     difficulty: "kolay",
