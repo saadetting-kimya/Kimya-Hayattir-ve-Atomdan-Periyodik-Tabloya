@@ -2168,13 +2168,13 @@ export const QUIZ = {
     context: "Bohr modeli, hidrojen atomunun çizgi spektrumunu başarıyla açıklamasına rağmen zamanla yetersiz bulunarak modern kuantum mekaniksel modelle değiştirilmiştir.",
     statements: [
       "Bohr modeli çok elektronlu atomların spektrumlarını yeterince açıklayamamıştır.",
-      "Bohr modelindeki 'kesin yörünge' fikri, elektronun konumunun kesin olarak bilinemeyeceğini gösteren daha sonraki bulgularla çelişmiştir.",
+      "Bohr modelindeki 'kesin yörünge' fikri, Heisenberg'in belirsizlik ilkesiyle (bir parçacığın hızı ve konumunun aynı anda kesin olarak belirlenemeyeceği ilkesiyle) çelişmiştir.",
       "Bohr modeli tamamen hatalı olduğu için hidrojen atomunun spektrumunu da açıklayamaz."
     ],
     text: "Yukarıdaki ifadelerden hangileri Bohr modelinin neden değiştirildiğini doğru açıklar?",
     options: ["Yalnız I", "Yalnız III", "I ve II", "II ve III", "I, II ve III"],
     correct: 2,
-    explain: "Bohr modeli çok elektronlu atomlarda yetersiz kalmış ve 'kesin yörünge' fikri kuantum mekaniğinin belirsizlik ilkesiyle çelişmiştir (I ve II doğru); ancak model hidrojenin spektrumunu başarıyla açıkladığından III yanlıştır — bilimsel modeller tamamen 'yanlış' oldukları için değil, daha kapsamlı açıklama gerektiği için değişir."
+    explain: "Bohr modeli çok elektronlu atomlarda yetersiz kalmış ve 'kesin yörünge' fikri Heisenberg'in belirsizlik ilkesiyle çelişmiştir (I ve II doğru); ancak model hidrojenin spektrumunu başarıyla açıkladığından III yanlıştır — bilimsel modeller tamamen 'yanlış' oldukları için değil, daha kapsamlı açıklama gerektiği için değişir."
   },
   {
     difficulty: "kolay",
