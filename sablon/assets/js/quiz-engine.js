@@ -585,6 +585,107 @@ function renderCareerMap(data) {
   `;
 }
 
+/* =========================================================
+   LABORATUVAR MALZEMESİ ÇİZİMİ — her ders kitabında/güvenlik
+   kartında görülen, evrensel/jenerik cam malzeme siluetlerinin
+   özgün çizgi çizimleri (erlenmayer, beher, balon joje, büret,
+   deney tüpü, mezür, kroze, pipet). Herhangi bir yayınevinin
+   fotoğrafı/çizimi değil, malzemenin kendi jenerik şeklidir.
+   ========================================================= */
+const LAB_EQUIPMENT_SHAPES = {
+  erlenmayer: `
+    <path d="M42,20 L42,42 L24,78 Q22,84 30,84 L70,84 Q78,84 76,78 L58,42 L58,20 Z" fill="none" stroke="var(--ink)" stroke-width="2"></path>
+    <line x1="40" y1="20" x2="60" y2="20" stroke="var(--ink)" stroke-width="2.4"></line>
+    <path d="M32,68 L68,68" stroke="var(--ink)" stroke-width="1.4" opacity="0.5"></path>
+  `,
+  beher: `
+    <path d="M30,26 L30,76 Q30,84 38,84 L66,84 Q74,84 74,76 L74,26" fill="none" stroke="var(--ink)" stroke-width="2"></path>
+    <path d="M74,30 L84,24" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"></path>
+    <line x1="26" y1="26" x2="78" y2="26" stroke="var(--ink)" stroke-width="2.4"></line>
+    <line x1="35" y1="46" x2="41" y2="46" stroke="var(--ink)" stroke-width="1.3" opacity="0.6"></line>
+    <line x1="35" y1="58" x2="41" y2="58" stroke="var(--ink)" stroke-width="1.3" opacity="0.6"></line>
+    <line x1="35" y1="70" x2="41" y2="70" stroke="var(--ink)" stroke-width="1.3" opacity="0.6"></line>
+  `,
+  balonjoje: `
+    <path d="M46,18 L46,38 C30,54 24,64 24,72 A26,20 0 0 0 76,72 C76,64 70,54 54,38 L54,18 Z" fill="none" stroke="var(--ink)" stroke-width="2"></path>
+    <line x1="44" y1="18" x2="56" y2="18" stroke="var(--ink)" stroke-width="2.4"></line>
+    <line x1="26" y1="58" x2="74" y2="58" stroke="var(--ink)" stroke-width="1.4" opacity="0.6"></line>
+  `,
+  buret: `
+    <line x1="44" y1="12" x2="44" y2="72" stroke="var(--ink)" stroke-width="2"></line>
+    <line x1="56" y1="12" x2="56" y2="72" stroke="var(--ink)" stroke-width="2"></line>
+    <line x1="44" y1="12" x2="56" y2="12" stroke="var(--ink)" stroke-width="2"></line>
+    <path d="M44,72 L44,78 L50,86 L56,78 L56,72" fill="none" stroke="var(--ink)" stroke-width="2"></path>
+    <circle cx="50" cy="80" r="3" fill="none" stroke="var(--ink)" stroke-width="1.6"></circle>
+    <line x1="38" y1="24" x2="44" y2="24" stroke="var(--ink)" stroke-width="1.2" opacity="0.6"></line>
+    <line x1="38" y1="36" x2="44" y2="36" stroke="var(--ink)" stroke-width="1.2" opacity="0.6"></line>
+    <line x1="38" y1="48" x2="44" y2="48" stroke="var(--ink)" stroke-width="1.2" opacity="0.6"></line>
+    <line x1="38" y1="60" x2="44" y2="60" stroke="var(--ink)" stroke-width="1.2" opacity="0.6"></line>
+  `,
+  deneytupu: `
+    <path d="M40,14 L40,66 A10,10 0 0 0 60,66 L60,14" fill="none" stroke="var(--ink)" stroke-width="2"></path>
+    <line x1="38" y1="14" x2="62" y2="14" stroke="var(--ink)" stroke-width="2.4"></line>
+    <line x1="42" y1="40" x2="58" y2="40" stroke="var(--ink)" stroke-width="1.3" opacity="0.5"></line>
+  `,
+  mezur: `
+    <path d="M40,14 L40,78 Q40,84 47,84 L53,84 Q60,84 60,78 L60,14" fill="none" stroke="var(--ink)" stroke-width="2"></path>
+    <path d="M60,18 L68,13" fill="none" stroke="var(--ink)" stroke-width="1.8" stroke-linecap="round"></path>
+    <line x1="37" y1="14" x2="63" y2="14" stroke="var(--ink)" stroke-width="2.4"></line>
+    <line x1="43" y1="30" x2="49" y2="30" stroke="var(--ink)" stroke-width="1.2" opacity="0.6"></line>
+    <line x1="43" y1="44" x2="49" y2="44" stroke="var(--ink)" stroke-width="1.2" opacity="0.6"></line>
+    <line x1="43" y1="58" x2="49" y2="58" stroke="var(--ink)" stroke-width="1.2" opacity="0.6"></line>
+    <line x1="43" y1="72" x2="49" y2="72" stroke="var(--ink)" stroke-width="1.2" opacity="0.6"></line>
+  `,
+  kroze: `
+    <path d="M36,34 L40,74 Q42,82 50,82 Q58,82 60,74 L64,34" fill="none" stroke="var(--ink)" stroke-width="2"></path>
+    <ellipse cx="50" cy="34" rx="17" ry="5" fill="none" stroke="var(--ink)" stroke-width="2"></ellipse>
+    <ellipse cx="50" cy="24" rx="20" ry="5" fill="none" stroke="var(--ink)" stroke-width="1.6"></ellipse>
+  `,
+  pipet: `
+    <line x1="49" y1="10" x2="49" y2="52" stroke="var(--ink)" stroke-width="2"></line>
+    <line x1="51" y1="10" x2="51" y2="52" stroke="var(--ink)" stroke-width="2"></line>
+    <path d="M46,52 L54,52 L50,84 Z" fill="none" stroke="var(--ink)" stroke-width="2"></path>
+    <line x1="44" y1="26" x2="49" y2="26" stroke="var(--ink)" stroke-width="1.2" opacity="0.6"></line>
+    <line x1="44" y1="36" x2="49" y2="36" stroke="var(--ink)" stroke-width="1.2" opacity="0.6"></line>
+  `,
+  ayirmahunisi: `
+    <path d="M32,16 L68,16 L68,26 L54,44 L54,66 A6,6 0 0 1 46,66 L46,44 L32,26 Z" fill="none" stroke="var(--ink)" stroke-width="2"></path>
+    <circle cx="50" cy="30" r="4" fill="none" stroke="var(--ink)" stroke-width="1.6"></circle>
+    <line x1="47" y1="72" x2="53" y2="72" stroke="var(--ink)" stroke-width="2"></line>
+  `
+};
+
+const LAB_EQUIPMENT_LABELS = {
+  erlenmayer: "Erlenmayer",
+  beher: "Beherglas",
+  balonjoje: "Balon Joje",
+  buret: "Büret",
+  deneytupu: "Deney Tüpü",
+  mezur: "Dereceli Silindir (Mezür)",
+  kroze: "Kroze",
+  pipet: "Pipet",
+  ayirmahunisi: "Ayırma Hunisi"
+};
+
+function renderLabEquipment(data) {
+
+  if (!data || !data.type) return "";
+
+  const shape = LAB_EQUIPMENT_SHAPES[data.type];
+  if (!shape) return "";
+
+  const caption = data.caption ? `<div class="lequip-caption">${escapeHTML(data.caption)}</div>` : "";
+  const label = data.hideLabel ? "" : `<div class="lequip-label">${escapeHTML(LAB_EQUIPMENT_LABELS[data.type] || data.type)}</div>`;
+
+  return `
+    <div class="lequip-wrap">
+      ${caption}
+      <svg viewBox="0 0 100 96" width="120" height="115" class="lequip-svg">${shape}</svg>
+      ${label}
+    </div>
+  `;
+}
+
 function renderCircleCompare(data) {
 
   if (!data || !Array.isArray(data.items) || data.items.length === 0) return "";
@@ -2828,6 +2929,8 @@ export function renderQuiz(
       ${renderCycleDiagram(question.cycleDiagram)}
 
       ${renderCareerMap(question.careerMap)}
+
+      ${renderLabEquipment(question.labEquipment)}
 
       ${renderCircleCompare(question.circleCompare)}
 

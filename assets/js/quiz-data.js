@@ -1646,12 +1646,20 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    objectIcons: ["battery"],
-    context: "Görseldeki tükenmiş pil, ev çöpüne atılmak yerine belediyenin belirlediği özel toplama kutusuna bırakılmalıdır; çünkü içeriğindeki ağır metaller toprağa karıştığında uzun süre kirlilik yaratabilir.",
-    text: "Bu bilgiye göre, pillerin yanlış bertarafının başlıca riski nedir?",
-    options: ["Pillerin geri dönüştürülemeyecek kadar ucuz olması", "Ağır metallerin toprak ve su kaynaklarını kirletmesi", "Pillerin kendiliğinden patlayarak yangın çıkarması", "Pillerin havada hızla buharlaşması", "Pillerin yalnızca görsel kirliliğe yol açması"],
+    labEquipment: { type: "erlenmayer", caption: "Bir laboratuvarda sıkça kullanılan bu cam malzeme" },
+    text: "Görseldeki koni biçimli, dar boyunlu cam malzemenin adı ve temel kullanım amacı nedir?",
+    options: ["Büret — sıcaklık ölçmek için kullanılır", "Erlenmayer — titrasyon ve çözelti hazırlama/karıştırma işlemlerinde kullanılır", "Kroze — sıvı hacmi ölçmek için kullanılır", "Balon joje — katı madde ezmek için kullanılır", "Deney tüpü — büyük hacimli sıvı depolamak için kullanılır"],
     correct: 1,
-    explain: "Pillerdeki ağır metaller (kurşun, kadmiyum vb.) yanlış bertaraf edildiğinde toprağa ve su kaynaklarına karışarak uzun süreli kirliliğe yol açar."
+    explain: "Koni (dar boyunlu) biçimli bu malzemenin adı erlenmayerdir; titrasyon, çözelti hazırlama/saklama ve karıştırma gibi işlemlerde kullanılır. Dar boynu, çalkalarken sıçramayı azaltır."
+  },
+  {
+    difficulty: "kolay",
+    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
+    labEquipment: { type: "balonjoje", caption: "Belirli bir hacimde, kesin derişimli çözelti hazırlanırken kullanılan cam malzeme" },
+    text: "Görseldeki, boyun kısmında tek bir ölçü çizgisi bulunan bu cam malzemenin adı ve kullanım amacı nedir?",
+    options: ["Balon joje — belirli hacimde, derişimi belli çözeltiler hazırlamak ve saklamak için kullanılır", "Erlenmayer — katı-sıvı ayırmak için kullanılır", "Puar — ısıtma işlemlerinde kullanılır", "Kroze — sıcaklık ölçmek için kullanılır", "Süzgeç kâğıdı — sıvı aktarmak için kullanılır"],
+    correct: 0,
+    explain: "Boyun kısmında tek bir ölçü çizgisi bulunan bu malzeme balon jojedir; belirli bir hacimde ve derişimi kesin olarak bilinen çözeltilerin hazırlanması ve saklanmasında kullanılır."
   },
   {
     difficulty: "kolay",
@@ -1665,31 +1673,33 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    objectIcons: ["foil"],
-    context: "Asitli bir yiyeceğin (örneğin domates sosunun) uzun süre alüminyum folyoyla doğrudan temas hâlinde saklanması önerilmez; çünkü asidik ortam folyonun yüzeyindeki metali yavaşça çözebilir.",
-    text: "Bu durumda oluşabilecek risk en doğrudan hangisidir?",
-    options: ["Gıdanın radyoaktif hâle gelmesi", "Folyonun aniden alev alması", "Az miktarda alüminyum iyonunun gıdaya geçmesi", "Folyonun patlayıcı gaz üretmesi", "Gıdanın hacminin aniden artması"],
-    correct: 2,
-    explain: "Asidik gıdaların alüminyum folyoyla uzun süre teması, folyo yüzeyinin yavaşça çözünerek az miktarda alüminyum iyonunun gıdaya geçmesine yol açabilir."
-  },
-  {
-    difficulty: "kolay",
-    kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    context: "Bir ilaç kutusunun üzerinde 'Çocukların erişemeyeceği yerde saklayınız' uyarısı yer almaktadır.",
-    text: "Bu uyarının temel amacı en doğrudan hangisidir?",
-    options: ["İlacın son kullanma tarihini uzatmak", "İlacın etkisini artırmak", "İlacın rengini korumak", "Kazara yutma/zehirlenme riskini azaltmak", "İlacın kokusunu azaltmak"],
+    matchPairs: {
+      left: [
+        "Küçük hacimlerdeki sıvıları damla damla aktarmak için kullanılır.",
+        "Sıvıların hacmini hassas biçimde ölçmek için kullanılır; boyunca dereceli işaretler bulunur.",
+        "Katı maddeleri yüksek sıcaklıkta ısıtma ve yakma işlemlerinde kullanılan küçük, ısıya dayanıklı kap.",
+        "Maddelerin karıştırılması, ısıtılması ve soğutulması gibi genel amaçlarla kullanılan ince, uzun cam kap."
+      ],
+      right: ["Deney tüpü", "Damlalık", "Dereceli silindir (mezür)", "Kroze"]
+    },
+    text: "Yukarıdaki eşleştirmede, 3 numaralı tanım hangi harfteki malzemeye aittir?",
+    options: ["a", "b", "c", "d", "Hiçbiriyle ilişkili değildir"],
     correct: 3,
-    explain: "Çocukların erişemeyeceği yerde saklama uyarısı, ilacın kazara yutulmasından kaynaklanabilecek zehirlenme riskini azaltmayı amaçlar."
+    explain: "Katı maddeleri yüksek sıcaklıkta ısıtıp yakma işleminde kullanılan, ısıya dayanıklı küçük kap krozedir; bu da 'd' harfindeki seçenekle eşleşir."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.4 — Farklı ortamlarda kimyasal maddelerin kullanımından kaynaklanan güvenlik problemlerini çözebilme",
-    objectIcons: ["vinegar", "detergent"],
-    context: "Görseldeki iki üründen sirke asidik, çamaşır suyu ise bazik (alkali) özelliktedir. Bu iki ürünün karıştırılması, güçlü bir asit-baz tepkimesiyle ısı açığa çıkmasına ve klor gazı benzeri tahriş edici buharların oluşmasına yol açabilir.",
-    text: "Bu bilgiye göre en güvenli kullanım yaklaşımı hangisidir?",
-    options: ["Karışımı sadece dışarıda kullanmak yeterlidir", "İki ürünü aynı kapta karıştırarak daha güçlü bir temizleyici elde etmek", "Bu iki ürün arasında herhangi bir tepkime riski yoktur", "Karışımı sadece az miktarda yapmak güvenlidir", "İki ürünü ayrı zamanlarda ve iyi havalandırılmış ortamda kullanmak, karıştırmamak"],
+    context: "Bir öğretmen, masasındaki etiketi silinmiş bir şişedeki maddenin ne olduğunu öğrencilerine sormuştur.",
+    dialogue: [
+      { who: "Öğrenci A", text: "Bu madde amonyak gibi kokuyor, kokusuna göre ayırt edebiliriz." },
+      { who: "Öğrenci B", text: "Asitlerin tadı ekşidir, maddenin tadına bakarak asit olup olmadığını anlayabiliriz." },
+      { who: "Öğrenci C", text: "Bence üzerindeki etikete bakalım, maddenin ne olduğunu ancak etiketten anlayabiliriz; etiket yoksa/okunaksızsa bu maddeyi güvenle kullanamayız." }
+    ],
+    text: "Etiketi silinmiş/okunaksız bir maddeyi tanımaya çalışırken hangi öğrencinin yaklaşımı güvenlik açısından doğrudur?",
+    options: ["Öğrenci A", "Öğrenci B", "A ve B birlikte", "Üçü de eşit derecede güvenlidir", "Öğrenci C"],
     correct: 4,
-    explain: "Asidik ve bazik/oksitleyici temizlik ürünlerinin karıştırılması tehlikeli gaz oluşumuna yol açabileceğinden, bu tür ürünler ayrı zamanlarda ve havalandırılmış ortamda, karıştırılmadan kullanılmalıdır."
+    explain: "Bilinmeyen bir kimyasalı koklamak veya tatmak ciddi sağlık riski taşır; bu yöntemler asla kullanılmamalıdır. Bir maddenin kimliği yalnızca etiketinden veya güvenilir bir analizden öğrenilmelidir. Etiketi okunaksızsa madde güvenle tanımlanana kadar kullanılmamalıdır. Öğrenci C haklıdır."
   },
   {
     difficulty: "kolay",
