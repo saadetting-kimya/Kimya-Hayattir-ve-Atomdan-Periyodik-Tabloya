@@ -45,7 +45,7 @@ assets/
   js/quiz-data.js                         Modül başına 5 bağlam temelli değerlendirme sorusu (toplam 40)
   js/nav.js                               Paylaşılan üst menü / altbilgi enjeksiyonu
 defter/index.html                         Ders Defteri kaynağı (print-optimized HTML)
-Kimya 9 Ders Defteri.pdf                  Basılı eşlikçi: 8 ünite, 80 soru, cevap anahtarı
+Kimya 9 Ders Defteri.pdf                  Basılı eşlikçi: 8 konu, 80 soru, cevap anahtarı
 ```
 
 ## Tasarım ilkeleri

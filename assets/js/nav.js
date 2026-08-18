@@ -50,6 +50,35 @@ export function mountNav(activeKey) {
   `;
 }
 
+export function mountNextModule(activeKey) {
+  const host = document.getElementById("next-module-root");
+  if (!host) return;
+  const modules = LINKS.filter(l => l.num !== "");
+  const idx = modules.findIndex(l => l.key === activeKey);
+  if (idx === -1) return;
+
+  if (idx < modules.length - 1) {
+    const next = modules[idx + 1];
+    host.innerHTML = `
+      <div class="container">
+        <a class="next-module-btn" href="${next.href}">
+          <span class="nm-label">Sonraki Modül</span>
+          <span class="nm-title">${next.num}. ${next.label} →</span>
+        </a>
+      </div>
+    `;
+  } else {
+    host.innerHTML = `
+      <div class="container">
+        <a class="next-module-btn" href="${link("index.html")}">
+          <span class="nm-label">Tüm Modülleri Tamamladın 🎉</span>
+          <span class="nm-title">Ana Sayfaya Dön →</span>
+        </a>
+      </div>
+    `;
+  }
+}
+
 export function mountFooter() {
   const host = document.getElementById("footer-root");
   if (!host) return;

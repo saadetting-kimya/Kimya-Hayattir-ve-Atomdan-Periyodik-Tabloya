@@ -176,7 +176,7 @@ gereken bir tekniktir; her sorunun varsayılanı yapmayın.
 ├── index.html                    Ana sayfa (nav.js'i kullanır)
 ├── yanlislarim.html               "Yanlışlarım" tekrar sayfası
 ├── moduller/
-│   └── 0N-unite-adi.html          Her ünite için bir sayfa
+│   └── 0N-konu-adi.html           Her konu için bir sayfa
 ├── defter/
 │   └── index.html                 Basılabilir Ders Defteri (kendi <style>'ını taşır)
 ├── assets/
@@ -199,7 +199,7 @@ tutucuları doldurun). Diğerlerini konunuza göre yeniden yazın.
 
 ---
 
-## 7. İş Akışı (Yeni Bir Ünite/Modül Eklerken)
+## 7. İş Akışı (Yeni Bir Konu/Modül Eklerken)
 
 1. **Kazanım kodlarını toplayın.** Hangi müfredat/programa göre
    çalışıyorsanız oradan kazanım kodu + açıklamasını alın.
@@ -237,13 +237,13 @@ tutucuları doldurun). Diğerlerini konunuza göre yeniden yazın.
    tahmin edilebilir bir örüntü yaratır (bkz. Bölüm 8 tuzak #4).
 6. **Ana dosyaya entegre edin** (`assets/js/quiz-data.js`'teki ilgili
    `QUIZ.<anahtar>` dizisine ekleyin/değiştirin), `nav.js`'teki `LINKS`
-   dizisine ve `index.html`'deki `cards` dizisine ünitenizi ekleyin.
+   dizisine ve `index.html`'deki `cards` dizisine konunuzu ekleyin.
 7. **Tarayıcıda test edin** (Playwright veya elle): modül sayfası
    konsol hatasız açılmalı, her görsel türü doğru render olmalı, bir
    soruyu cevaplayıp geri bildirim (doğru/yanlış vurgusu) çalıştığını
    doğrulayın.
 8. **Ders Defterini güncelleyin** (isteğe bağlı ama önerilir) —
-   `defter/index.html`'e yeni ünite bloğunu ekleyin (Bölüm 6'daki
+   `defter/index.html`'e yeni konu bloğunu ekleyin (Bölüm 6'daki
    dosya yapısında `defter/index.html`'in kendi CSS'ini taşıdığını
    unutmayın), cevap anahtarı bölümünü güncelleyin.
 9. **PDF üretin** (Playwright `page.pdf()` ile — bkz. mevcut projede

@@ -6,7 +6,7 @@
    dosyayı SİLİP kendi 50 soruluk modül dosyalarınızla
    değiştireceksiniz (bkz. docs/ICERIK-URETIM-REHBERI.md).
 
-   QUIZ nesnesinin her anahtarı bir "modül"e (üniteye) karşılık
+   QUIZ nesnesinin her anahtarı bir "modül"e (konuye) karşılık
    gelir ve moduller/*.html sayfalarındaki `QUIZ.<anahtar>`
    çağrısıyla eşleşmelidir (bkz. nav.js'teki LINKS dizisi).
 

@@ -101,14 +101,17 @@
   </div>
 </section>
 
+<div id="next-module-root"></div>
+
 <div id="footer-root"></div>
 
 <script type="module">
-  import { mountNav, mountFooter } from "../assets/js/nav.js?v=1";
+  import { mountNav, mountFooter, mountNextModule } from "../assets/js/nav.js?v=1";
   import { renderQuiz, markVisited, bindJournal } from "../assets/js/quiz-engine.js?v=4";
   import { QUIZ } from "../assets/js/quiz-data.js?v=5";
 
   mountNav("disiplin");
+  mountNextModule("disiplin");
   mountFooter();
   markVisited("disiplin");
   bindJournal(document.getElementById("journal2"), "disiplin-1");

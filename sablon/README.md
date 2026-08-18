@@ -22,7 +22,7 @@ için başlangıç noktasıdır.
 4. `assets/js/quiz-data.js` dosyasını **silip** kendi soru bankanızla
    değiştirin — mevcut içerik yalnızca şema referansıdır (her görsel
    türünden birer örnek).
-5. Her yeni modül/ünite için `docs/ICERIK-URETIM-REHBERI.md`'deki
+5. Her yeni modül/konu için `docs/ICERIK-URETIM-REHBERI.md`'deki
    "İş Akışı" bölümünü izleyin.
 6. `node scripts/verify-quiz-data.mjs assets/js/quiz-data.js --count=50`
    ile doğrulayın.

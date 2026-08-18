@@ -2706,11 +2706,11 @@ export const QUIZ = {
     matchPairs: {
       left: [
         "Bir orbitalde en fazla iki elektron bulunabilir ve bu iki elektronun spinleri zıt yönde olmalıdır.",
-        "Eşit enerjili (dejenere) orbitaller doldurulurken elektronlar önce her orbitale birer tane, aynı yönde spinle yerleştirilir.",
+        "Eş enerjili orbitaller doldurulurken elektronlar önce her orbitale birer tane, aynı yönde spinle yerleştirilir.",
         "Elektronlar, atomun temel hâlinde önce en düşük enerjili boş orbitalden başlayarak sırayla yerleşir.",
         "Aynı alt kabuk içinde enerjileri eşit olan orbitallere (örneğin px, py, pz) verilen isim."
       ],
-      right: ["Hund kuralı", "Yozlaşmış (dejenere) orbitaller", "Pauli dışlama ilkesi", "Aufbau ilkesi"]
+      right: ["Hund kuralı", "Eş enerjili orbitaller", "Pauli dışlama ilkesi", "Aufbau ilkesi"]
     },
     text: "Yukarıdaki eşleştirmede, 3 numaralı tanım hangi harfteki kavrama aittir?",
     options: ["a", "b", "c", "d", "Hiçbiriyle ilişkili değildir"],
@@ -2746,7 +2746,7 @@ export const QUIZ = {
     text: "Aufbau ilkesi ile Hund kuralı arasındaki farkla ilgili hangi öğrencinin görüşü doğrudur?",
     options: ["Öğrenci A", "Öğrenci C", "Öğrenci B", "A ve C birlikte", "Hiçbiri"],
     correct: 2,
-    explain: "Aufbau ilkesi orbitallerin enerjiye göre doldurulma SIRASINI, Hund kuralı ise eşit enerjili (dejenere) orbitaller arasında elektronların nasıl dağıtılacağını belirler; ikisi de tüm alt kabuk türleri (s, p, d, f) için geçerlidir. Öğrenci B haklıdır."
+    explain: "Aufbau ilkesi orbitallerin enerjiye göre doldurulma SIRASINI, Hund kuralı ise eş enerjili orbitaller arasında elektronların nasıl dağıtılacağını belirler; ikisi de tüm alt kabuk türleri (s, p, d, f) için geçerlidir. Öğrenci B haklıdır."
   },
   {
     difficulty: "kolay",
@@ -2808,7 +2808,7 @@ export const QUIZ = {
     text: "Bu üç dağılımdan hangisi Hund kuralına AYKIRIDIR?",
     options: ["Dağılım I", "Dağılım II", "Dağılım III", "I ve III birlikte", "Üçü de kurala uygundur"],
     correct: 1,
-    explain: "Hund kuralına göre, bir orbital ikinci kez elektron alıp eşleşmeden önce alt kabuktaki TÜM orbitaller birer elektronla doldurulmalıdır. Dağılım II'de bir orbital hâlâ boşken (0) başka bir orbital zaten eşleşmiştir (2); bu kurala aykırıdır. Dağılım I ve III ise orbitallerin ÇİZİMDEKİ sırası farklı görünse de, ikisinde de üç orbital de önce birer elektron almış ve dördüncü elektron ancak ondan sonra bunlardan birinde eşleşmiştir — orbitaller eş enerjili (dejenere) olduğundan hangisinin 'önce' çizildiği önemli değildir; önemli olan hiçbir orbitalin boş kalmamasıdır."
+    explain: "Hund kuralına göre, bir orbital ikinci kez elektron alıp eşleşmeden önce alt kabuktaki TÜM orbitaller birer elektronla doldurulmalıdır. Dağılım II'de bir orbital hâlâ boşken (0) başka bir orbital zaten eşleşmiştir (2); bu kurala aykırıdır. Dağılım I ve III ise orbitallerin ÇİZİMDEKİ sırası farklı görünse de, ikisinde de üç orbital de önce birer elektron almış ve dördüncü elektron ancak ondan sonra bunlardan birinde eşleşmiştir — orbitaller eş enerjili olduğundan hangisinin 'önce' çizildiği önemli değildir; önemli olan hiçbir orbitalin boş kalmamasıdır."
   },
   {
     difficulty: "kolay",
@@ -2954,7 +2954,7 @@ export const QUIZ = {
     text: "Bu yerleşim biçimi hangi kuralın doğrudan bir uygulamasıdır?",
     options: ["Hund kuralı: eş enerjili orbitallere elektronlar önce ayrı ayrı, mümkün olduğunca az eşleşerek yerleşir", "Pauli dışlama ilkesi: bir orbitalde en fazla 2 elektron bulunabilir", "Aufbau ilkesi: elektronlar en düşük enerjili boş orbitale önce yerleşir", "Bu yerleşim hiçbir kurala uymamaktadır", "Bu yerleşim yalnızca iyonlarda görülür"],
     correct: 0,
-    explain: "Hund kuralına göre eş enerjili (dejenere) orbitallere elektronlar önce teker teker, aynı yönde spinle yerleşir; ancak bu üç orbitalin hepsi dolduktan sonra eşleşme başlar. Görseldeki 2p³ dizilimi bu kuralın doğrudan bir örneğidir."
+    explain: "Hund kuralına göre eş enerjili orbitallere elektronlar önce teker teker, aynı yönde spinle yerleşir; ancak bu üç orbitalin hepsi dolduktan sonra eşleşme başlar. Görseldeki 2p³ dizilimi bu kuralın doğrudan bir örneğidir."
   },
   {
     difficulty: "orta",
@@ -3008,7 +3008,7 @@ export const QUIZ = {
     text: "Bu üç orbitalin özdeş enerjiye sahip olmasının en iyi açıklaması hangisidir?",
     options: ["Üçünün farklı çekirdek yüküne sahip olması", "Üçünün farklı sayıda elektron içermesi", "Bu üç orbitalin gerçekte tek bir orbital olması", "Üçü de aynı alt kabuğa (2p) ait olduğu için özdeş enerjilidir; aralarındaki tek fark uzaydaki yönelim eksenidir", "Orbitallerin rengi enerjiyi belirler"],
     correct: 3,
-    explain: "2px, 2py, 2pz orbitalleri aynı alt kabuğa (2p) aittir ve enerjileri özdeştir (dejenere); aralarındaki tek fark, uzayda hangi eksen boyunca yönlendikleridir."
+    explain: "2px, 2py, 2pz orbitalleri aynı alt kabuğa (2p) aittir ve enerjileri özdeştir; aralarındaki tek fark, uzayda hangi eksen boyunca yönlendikleridir."
   },
   {
     difficulty: "orta",
@@ -3208,7 +3208,7 @@ export const QUIZ = {
     context: "Görseldeki beş şekil, bir d alt kabuğuna ait beş ayrı orbitali (farklı yönelimlerdeki yonca yapraklı sınır yüzeylerini) temsil etmektedir.",
     text: "Bir 3d alt kabuğu tam dolu olduğunda, bu beş orbitalin toplamda alabileceği elektron sayısı ile bu beş orbitalin şekil/enerji ilişkisi hakkında en doğru ve kapsamlı ifade hangisidir?",
     options: [
-      "Beş orbital toplam 10 elektron alabilir; şekilleri farklı yönelimlerde olsa da hepsi aynı alt kabuğa ait olduğundan enerjileri özdeştir (dejenere)",
+      "Beş orbital toplam 10 elektron alabilir; şekilleri farklı yönelimlerde olsa da hepsi aynı alt kabuğa ait olduğundan enerjileri özdeştir",
       "Beş orbital toplam 5 elektron alabilir; her biri farklı enerjiye sahiptir",
       "Beş orbital toplam 14 elektron alabilir; hepsi aynı şekle sahiptir",
       "Orbital sayısı ile alabileceği elektron sayısı arasında hiçbir ilişki yoktur",
