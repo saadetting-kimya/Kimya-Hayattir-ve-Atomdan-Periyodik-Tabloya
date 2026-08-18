@@ -335,6 +335,72 @@ function renderOrbitalShapes(data) {
   `;
 }
 
+/* =========================================================
+   DİYAGONAL DİYAGRAM (köşegen kuralı) — alt kabukların hangi
+   sırayla dolduğunu görsel olarak izleten ızgara + köşegen ok
+   diyagramı (Z≤36 müfredat sınırı: 1s..4p, 8 alt kabuk).
+   ========================================================= */
+const DIAG_CELLS = [
+  { label: "1s", order: 1, col: 0, row: 0 },
+  { label: "2s", order: 2, col: 0, row: 1 },
+  { label: "2p", order: 3, col: 1, row: 1 },
+  { label: "3s", order: 4, col: 0, row: 2 },
+  { label: "3p", order: 5, col: 1, row: 2 },
+  { label: "3d", order: 7, col: 2, row: 2 },
+  { label: "4s", order: 6, col: 0, row: 3 },
+  { label: "4p", order: 8, col: 1, row: 3 }
+];
+const DIAG_ARROWS = [
+  ["2p", "3s"],
+  ["3p", "4s"],
+  ["3d", "4p"]
+];
+
+function renderDiagonalDiagram() {
+  const colX = [70, 160, 250];
+  const rowY = [40, 85, 130, 175];
+  const byLabel = {};
+  DIAG_CELLS.forEach(c => { byLabel[c.label] = c; });
+  const xy = c => [colX[c.col], rowY[c.row]];
+
+  let svg = `<defs><marker id="diag-arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="var(--gas)"></path></marker></defs>`;
+
+  svg += `<text x="${colX[0]}" y="16" text-anchor="middle" font-size="12" font-weight="700" fill="currentColor">s</text>`;
+  svg += `<text x="${colX[1]}" y="16" text-anchor="middle" font-size="12" font-weight="700" fill="currentColor">p</text>`;
+  svg += `<text x="${colX[2]}" y="16" text-anchor="middle" font-size="12" font-weight="700" fill="currentColor">d</text>`;
+  rowY.forEach((y, i) => {
+    svg += `<text x="20" y="${y + 4}" text-anchor="middle" font-size="11" fill="currentColor" opacity="0.65">n=${i + 1}</text>`;
+  });
+
+  DIAG_ARROWS.forEach(([fromLabel, toLabel]) => {
+    const [x1, y1] = xy(byLabel[fromLabel]);
+    const [x2, y2] = xy(byLabel[toLabel]);
+    const dx = x2 - x1, dy = y2 - y1;
+    const len = Math.hypot(dx, dy);
+    const shrink = 22;
+    const ex = x1 + dx * (1 - shrink / len);
+    const ey = y1 + dy * (1 - shrink / len);
+    const sx = x1 + dx * (shrink / len * 0.5);
+    const sy = y1 + dy * (shrink / len * 0.5);
+    svg += `<line x1="${sx.toFixed(1)}" y1="${sy.toFixed(1)}" x2="${ex.toFixed(1)}" y2="${ey.toFixed(1)}" stroke="var(--gas)" stroke-width="2" marker-end="url(#diag-arrow)" opacity="0.75"></line>`;
+  });
+
+  DIAG_CELLS.forEach(c => {
+    const [x, y] = xy(c);
+    svg += `<circle cx="${x}" cy="${y}" r="20" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1.5"></circle>`;
+    svg += `<text x="${x}" y="${y + 4}" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">${c.label}</text>`;
+    svg += `<circle cx="${x + 16}" cy="${y - 14}" r="9" fill="var(--gas)"></circle>`;
+    svg += `<text x="${x + 16}" y="${y - 10.5}" text-anchor="middle" font-size="9.5" font-weight="700" fill="#fff">${c.order}</text>`;
+  });
+
+  return `
+    <div class="diagonal-diagram-wrap">
+      <svg viewBox="0 0 300 200" class="diagonal-diagram-svg">${svg}</svg>
+      <div class="diagonal-diagram-note">Her alt kabuğun üstündeki mor rakam, o alt kabuğun dolma sırasındaki yerini gösterir: <strong>1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p</strong>.</div>
+    </div>
+  `;
+}
+
 function renderPhScale(chart) {
 
   const W = 480;
@@ -3665,6 +3731,7 @@ export {
   renderLineChart,
   renderCompareLineChart,
   renderOrbitalShapes,
+  renderDiagonalDiagram,
   renderPhScale,
   renderOrbitalBoxes,
   renderOrbitalBoxSet,

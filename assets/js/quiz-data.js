@@ -657,7 +657,7 @@ export const QUIZ = {
     text: "Elektronik çip üretiminde kullanılan yarı iletken teknolojisi, en doğrudan hangi disiplinin uygulama alanına girer?",
     options: ["Anorganik kimya","Organik kimya","Biyokimya","Analitik kimya","Fizikokimya"],
     correct: 0,
-    explain: "Yarı iletken teknolojisi, anorganik kimyanın MEB kitabında sayılan uygulama alanlarından biridir."
+    explain: "Yarı iletken teknolojisi, anorganik kimyanın uygulama alanlarından biridir."
   },
   {
     difficulty: "kolay",
@@ -675,7 +675,7 @@ export const QUIZ = {
     text: "Bir küp şekerin suda ÇÖZÜNME sürecini enerji ve moleküler davranış açısından incelemek, hangi disiplinin doğrudan kapsamına girer?",
     options: ["Biyokimya","Polimer kimyası","Yalnızca anorganik kimya","Fizikokimya","Yalnızca organik kimya"],
     correct: 3,
-    explain: "Bir maddenin çözünme sürecindeki enerji değişimi ve davranışı fizikokimyanın MEB kitabında verilen örneklerinden biridir."
+    explain: "Bir maddenin çözünme sürecindeki enerji değişimi ve davranışı fizikokimyanın temel inceleme alanlarından biridir."
   },
   {
     difficulty: "kolay",
@@ -776,7 +776,7 @@ export const QUIZ = {
     text: "Bu inceleme en doğrudan hangi disiplinin uygulama alanına girer?",
     options: ["Biyokimya","Organik kimya","Anorganik kimya","Polimer kimyası","Fizikokimya"],
     correct: 2,
-    explain: "Mineral bileşimlerinin incelenmesi ve inşaat mühendisliğinde uygulanması anorganik kimyanın MEB kitabında verilen uygulama alanlarından biridir."
+    explain: "Mineral bileşimlerinin incelenmesi ve inşaat mühendisliğinde uygulanması anorganik kimyanın uygulama alanlarından biridir."
   },
   {
     difficulty: "orta",
@@ -785,7 +785,7 @@ export const QUIZ = {
     text: "Bu inceleme en doğrudan hangi disiplinin uygulama alanına girer?",
     options: ["Fizikokimya","Yalnızca organik kimya","Yalnızca anorganik kimya","Biyokimya","Analitik kimya"],
     correct: 0,
-    explain: "Araç motorlarındaki ısıyla ilgili süreçler, MEB kitabında fizikokimyanın örnek uygulama alanı olarak verilmiştir."
+    explain: "Araç motorlarındaki ısıyla ilgili süreçler, fizikokimyanın uygulama alanlarından biridir."
   },
   {
     difficulty: "orta",
@@ -794,7 +794,7 @@ export const QUIZ = {
     text: "Bu test en doğrudan hangi disiplinin uygulama alanına girer?",
     options: ["Anorganik kimya","Polimer kimyası","Yalnızca analitik kimya","Yalnızca fizikokimya","Biyokimya"],
     correct: 1,
-    explain: "Biyopolimerlerin incelenmesi, polimer kimyasının MEB kitabında açıkça sayılan konularından biridir."
+    explain: "Biyopolimerlerin incelenmesi, polimer kimyasının konularından biridir."
   },
   {
     difficulty: "orta",
@@ -921,7 +921,7 @@ export const QUIZ = {
     text: "Protein molekülünün sentezlenmesi ile vücuttaki etkisinin test edilmesi süreçleri sırasıyla hangi disiplinle en doğrudan ilişkilidir?",
     options: ["Yalnızca organik kimya, biyokimyanın ilgisi yoktur","Biyokimya (protein, canlı sistemdeki etkisiyle birlikte) her iki aşamada da temel disiplindir","Yalnızca anorganik kimya","Yalnızca fizikokimya","Yalnızca polimer kimyası"],
     correct: 1,
-    explain: "Protein, biyokimyanın MEB kitabında sayılan temel molekül gruplarından biridir; hem sentezi hem canlı sistemdeki etkisi biyokimyanın kapsamındadır."
+    explain: "Protein, biyokimyanın temel molekül gruplarından biridir; hem sentezi hem canlı sistemdeki etkisi biyokimyanın kapsamındadır."
   },
   {
     difficulty: "zor",
@@ -1064,7 +1064,7 @@ export const QUIZ = {
     text: "Yukarıda tanımlanan kariyer alanı hangisidir?",
     options: ["Sağlık ve Biyoteknoloji","Kimya Endüstrisi","Enerji Sektörü","Malzeme ve Nanoteknoloji","Agronomi ve Tarım"],
     correct: 1,
-    explain: "Boya, plastik, gübre, reçine, petrokimya, deterjan ve kozmetik ürünlerin üretimi MEB kitabında 'Kimya Endüstrisi' alanı olarak tanımlanmıştır."
+    explain: "Boya, plastik, gübre, reçine, petrokimya, deterjan ve kozmetik ürünlerin üretimi 'Kimya Endüstrisi' alanının kapsamına girer."
   },
   {
     difficulty: "kolay",
@@ -1073,7 +1073,7 @@ export const QUIZ = {
     text: "Yukarıda tanımlanan kariyer alanı hangisidir?",
     options: ["Çevre ve Sürdürülebilirlik","Kimya Endüstrisi","Sağlık ve Biyoteknoloji","Eğitim ve Akademik Çalışma","Gıda ve İçecek Endüstrisi"],
     correct: 2,
-    explain: "Adli kimya, ilaç geliştirme, biyoteknoloji ve biyomedikal araştırma/uygulama MEB kitabında 'Sağlık ve Biyoteknoloji' alanı olarak tanımlanmıştır."
+    explain: "Adli kimya, ilaç geliştirme, biyoteknoloji ve biyomedikal araştırma/uygulama 'Sağlık ve Biyoteknoloji' alanının kapsamına girer."
   },
   {
     difficulty: "kolay",
@@ -1082,7 +1082,7 @@ export const QUIZ = {
     text: "Yukarıda tanımlanan kariyer alanı hangisidir?",
     options: ["Kimya Endüstrisi","Enerji Sektörü","Çevre ve Sürdürülebilirlik","Agronomi ve Tarım","Malzeme ve Nanoteknoloji"],
     correct: 2,
-    explain: "Atık yönetimi, su arıtma teknolojileri ve yeşil teknolojiler MEB kitabında 'Çevre ve Sürdürülebilirlik' alanı olarak tanımlanmıştır."
+    explain: "Atık yönetimi, su arıtma teknolojileri ve yeşil teknolojiler 'Çevre ve Sürdürülebilirlik' alanının kapsamına girer."
   },
   {
     difficulty: "kolay",
@@ -1091,7 +1091,7 @@ export const QUIZ = {
     text: "Yukarıda tanımlanan kariyer alanı hangisidir?",
     options: ["Sağlık ve Biyoteknoloji","Çevre ve Sürdürülebilirlik","Enerji Sektörü","Gıda ve İçecek Endüstrisi","Malzeme ve Nanoteknoloji"],
     correct: 2,
-    explain: "Enerji üretimi, yenilenebilir enerji, pil teknolojileri ve yakıt hücreleri MEB kitabında 'Enerji Sektörü' alanı olarak tanımlanmıştır."
+    explain: "Enerji üretimi, yenilenebilir enerji, pil teknolojileri ve yakıt hücreleri 'Enerji Sektörü' alanının kapsamına girer."
   },
   {
     difficulty: "kolay",
@@ -1100,7 +1100,7 @@ export const QUIZ = {
     text: "Yukarıda tanımlanan kariyer alanı hangisidir?",
     options: ["Gıda ve İçecek Endüstrisi","Agronomi ve Tarım","Kimya Endüstrisi","Sağlık ve Biyoteknoloji","Eğitim ve Akademik Çalışma"],
     correct: 0,
-    explain: "Gıda güvenliği, besin analizi, aroma geliştirme ve moleküler gastronomi MEB kitabında 'Gıda ve İçecek Endüstrisi' alanı olarak tanımlanmıştır."
+    explain: "Gıda güvenliği, besin analizi, aroma geliştirme ve moleküler gastronomi 'Gıda ve İçecek Endüstrisi' alanının kapsamına girer."
   },
   {
     difficulty: "kolay",
@@ -1109,7 +1109,7 @@ export const QUIZ = {
     text: "Yukarıda tanımlanan kariyer alanı hangisidir?",
     options: ["Agronomi ve Tarım","Malzeme ve Nanoteknoloji","Sağlık ve Biyoteknoloji","Kimya Endüstrisi","Eğitim ve Akademik Çalışma"],
     correct: 4,
-    explain: "Öğretmenlik ve üniversite öğretim üyeliği MEB kitabında 'Eğitim ve Akademik Çalışma' alanı olarak tanımlanmıştır."
+    explain: "Öğretmenlik ve üniversite öğretim üyeliği 'Eğitim ve Akademik Çalışma' alanının kapsamına girer."
   },
   {
     difficulty: "kolay",
@@ -1118,7 +1118,7 @@ export const QUIZ = {
     text: "Yukarıda tanımlanan kariyer alanı hangisidir?",
     options: ["Eğitim ve Akademik Çalışma","Enerji Sektörü","Çevre ve Sürdürülebilirlik","Gıda ve İçecek Endüstrisi","Malzeme ve Nanoteknoloji"],
     correct: 4,
-    explain: "Malzeme bilimi, nanoteknoloji, elektronik ve kompozit malzeme geliştirme MEB kitabında 'Malzeme ve Nanoteknoloji' alanı olarak tanımlanmıştır."
+    explain: "Malzeme bilimi, nanoteknoloji, elektronik ve kompozit malzeme geliştirme 'Malzeme ve Nanoteknoloji' alanının kapsamına girer."
   },
   {
     difficulty: "kolay",
@@ -1127,7 +1127,7 @@ export const QUIZ = {
     text: "Yukarıda tanımlanan kariyer alanı hangisidir?",
     options: ["Agronomi ve Tarım","Kimya Endüstrisi","Enerji Sektörü","Sağlık ve Biyoteknoloji","Malzeme ve Nanoteknoloji"],
     correct: 0,
-    explain: "Gübre, pestisit ve tarım kimyasalları üretimiyle tarım verimliliğini artırma MEB kitabında 'Agronomi ve Tarım' alanı olarak tanımlanmıştır."
+    explain: "Gübre, pestisit ve tarım kimyasalları üretimiyle tarım verimliliğini artırma 'Agronomi ve Tarım' alanının kapsamına girer."
   },
   {
     difficulty: "kolay",
@@ -1163,7 +1163,7 @@ export const QUIZ = {
     text: "'Kariyer planlaması' kavramı en doğru şekilde nasıl tanımlanır?",
     options: ["Bir kişinin doğduğu andan itibaren sahip olduğu, değiştirilemeyen bir yazgı","Yalnızca bir iş başvuru formunu doldurma süreci","Bireyin kariyer yolunu belirlemesi, hedeflerini tanımlaması ve strateji geliştirmesi","Yalnızca maaş miktarını karşılaştırma süreci","Kariyer planlamasının bilimsel bir tanımı yoktur"],
     correct: 2,
-    explain: "MEB kitabına göre kariyer planlaması, bireyin kariyer yolunu belirlemesi, hedeflerini tanımlaması ve bu hedeflere ulaşmak için strateji geliştirmesidir."
+    explain: "Kariyer planlaması, bireyin kariyer yolunu belirlemesi, hedeflerini tanımlaması ve bu hedeflere ulaşmak için strateji geliştirmesidir."
   },
   {
     difficulty: "kolay",
@@ -1182,7 +1182,7 @@ export const QUIZ = {
     text: "Kariyer Planlama Döngüsü'nün ilk evresi olan 'Kişisel Özelliklerini Tanı' evresi başka hangi isimle de anılır?",
     options: ["Bu evrenin başka bir ismi yoktur","Kariyer Fırsatları","Karar Verme","Planları Uygulama","Öz Farkındalık"],
     correct: 4,
-    explain: "MEB kitabındaki Kariyer Planlama Döngüsü şemasında 'Kişisel Özelliklerini Tanı' evresi 'Öz Farkındalık' olarak da adlandırılmıştır."
+    explain: "Kariyer Planlama Döngüsü şemasında 'Kişisel Özelliklerini Tanı' evresi 'Öz Farkındalık' olarak da adlandırılır."
   },
   {
     difficulty: "kolay",
@@ -1227,7 +1227,7 @@ export const QUIZ = {
     text: "Su arıtma teknolojileriyle ilgilenmek isteyen biri için en uygun kariyer alanı hangisidir?",
     options: ["Öğrenci A haklıdır","Öğrenci C haklıdır","Hiçbiri haklı değildir","A ve C birlikte haklıdır","Öğrenci B haklıdır"],
     correct: 4,
-    explain: "Su arıtma teknolojileri, MEB kitabında açıkça 'Çevre ve Sürdürülebilirlik' alanının tanımında sayılmıştır. Öğrenci B haklıdır."
+    explain: "Su arıtma teknolojileri, açıkça 'Çevre ve Sürdürülebilirlik' alanının tanımında yer alır. Öğrenci B haklıdır."
   },
   {
     difficulty: "orta",
@@ -1309,16 +1309,16 @@ export const QUIZ = {
     text: "Bu birimin sunduğu fırsatlardan yararlanan öğrenciler AR-GE faaliyetleri sayesinde en doğrudan neyi geliştirme şansı bulur?",
     options: ["Kendi alanlarında uzmanlaşma ve liderlik becerileri","Yalnızca yabancı dil becerileri","Yalnızca spor becerileri","Bu birimin öğrencilere hiçbir katkısı yoktur","Yalnızca sosyal medya kullanım becerileri"],
     correct: 0,
-    explain: "MEB kitabına göre AR-GE faaliyetleri sayesinde öğrenciler kendi alanlarında uzmanlaşma ve liderlik becerilerini geliştirme şansına sahip olur."
+    explain: "AR-GE faaliyetleri sayesinde öğrenciler kendi alanlarında uzmanlaşma ve liderlik becerilerini geliştirme şansına sahip olur."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
     dialogue: [{"who":"Öğrenci A","text":"Kozmetik ürün formülasyonu geliştirmek istiyorum; bu Kimya Endüstrisi alanına girer, çünkü kozmetik ürünler açıkça bu alanın tanımında sayılmış."},{"who":"Öğrenci B","text":"Bence Sağlık ve Biyoteknoloji alanına girer, çünkü kozmetik cilt üzerinde kullanılıyor."},{"who":"Öğrenci C","text":"Bence bu, sekiz kariyer alanının hiçbirine girmez."}],
-    text: "Kozmetik ürün formülasyonu geliştirmek isteyen biri için MEB'in sınıflandırmasına göre en uygun kariyer alanı hangisidir?",
+    text: "Kozmetik ürün formülasyonu geliştirmek isteyen biri için en uygun kariyer alanı hangisidir?",
     options: ["B ve C birlikte haklıdır","Öğrenci B haklıdır","Öğrenci C haklıdır","Öğrenci A haklıdır","Hiçbiri haklı değildir"],
     correct: 3,
-    explain: "MEB kitabındaki Kimya Endüstrisi tanımı açıkça 'kozmetik' ürünleri saymıştır; Öğrenci A haklıdır."
+    explain: "Kimya Endüstrisi tanımı açıkça 'kozmetik' ürünleri kapsar; Öğrenci A haklıdır."
   },
   {
     difficulty: "orta",
@@ -1388,19 +1388,19 @@ export const QUIZ = {
     difficulty: "zor",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
     context: "Bir uzman, olay yerinden toplanan iz miktardaki maddeleri analiz ederek adli sürece bilimsel kanıt sunmaktadır.",
-    text: "Bu görev, MEB'in kariyer alanları sınıflandırmasına göre hangi geniş kariyer alanının İÇİNDE yer alır?",
+    text: "Bu görev hangi geniş kariyer alanının İÇİNDE yer alır?",
     options: ["Sağlık ve Biyoteknoloji (adli kimya bu alanın kapsamında sayılmıştır)","Kimya Endüstrisi","Agronomi ve Tarım","Eğitim ve Akademik Çalışma","Bu görev sekiz kariyer alanından hiçbirinin kapsamında değildir"],
     correct: 0,
-    explain: "Adli kimya, MEB kitabında 'Sağlık ve Biyoteknoloji' alanının açıklamasında açıkça sayılmıştır."
+    explain: "Adli kimya, 'Sağlık ve Biyoteknoloji' alanının açıklamasında açıkça yer alır."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
     context: "Kimya bilgisi, son dönemlerde gastronominin bilimsel bir alan olma sürecine katkıda bulunarak 'moleküler gastronomi' kavramının gelişimine yardımcı olmuştur.",
-    text: "Moleküler gastronomi, MEB'in kariyer alanları sınıflandırmasına göre hangi geniş alanın kapsamına girer?",
+    text: "Moleküler gastronomi hangi geniş alanın kapsamına girer?",
     options: ["Enerji Sektörü","Malzeme ve Nanoteknoloji","Gıda ve İçecek Endüstrisi","Eğitim ve Akademik Çalışma","Bu kavram sekiz kariyer alanından hiçbirinin kapsamında değildir"],
     correct: 2,
-    explain: "MEB kitabı, moleküler gastronomiyi açıkça 'Gıda ve İçecek Endüstrisi' alanının tanımı içinde saymıştır."
+    explain: "Moleküler gastronomi, açıkça 'Gıda ve İçecek Endüstrisi' alanının tanımı içinde yer alır."
   },
   {
     difficulty: "zor",
@@ -1437,7 +1437,7 @@ export const QUIZ = {
     text: "Bu bilgiye göre Kimya Teknoloji Merkezi'nin nihai stratejik hedefi en doğru şekilde nasıl özetlenebilir?",
     options: ["Yalnızca yurt dışından ürün ithal etmek","Yalnızca üniversite öğrencilerine staj imkânı sunmak","Yerli, yüksek katma değerli kimyasal ürünler geliştirerek Türkiye'yi küresel kimya ticaretinde öne çıkarmak","Kimya sektörünü tamamen kapatmak","Bu merkezin herhangi bir stratejik hedefi yoktur"],
     correct: 2,
-    explain: "MEB kitabına göre merkez, yerli/yüksek katma değerli ürünler geliştirerek küresel ticarette Türk kimya sektörünü öne çıkarmayı hedeflemektedir."
+    explain: "Merkez, yerli/yüksek katma değerli ürünler geliştirerek küresel ticarette Türk kimya sektörünü öne çıkarmayı hedeflemektedir."
   },
   {
     difficulty: "zor",
@@ -1469,7 +1469,7 @@ export const QUIZ = {
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "MEB'in kariyer alanları sınıflandırması sekiz geniş alan sunar; ancak gerçek iş tanımları genellikle birden fazla alanın kesişiminde yer alabilir (örneğin biyoyakıt Ar-Ge'si hem Enerji Sektörü hem Agronomi ve Tarım'la ilişkili olabilir).",
+    context: "Kariyer alanları sınıflandırması sekiz geniş alan sunar; ancak gerçek iş tanımları genellikle birden fazla alanın kesişiminde yer alabilir (örneğin biyoyakıt Ar-Ge'si hem Enerji Sektörü hem Agronomi ve Tarım'la ilişkili olabilir).",
     statements: ["Sekiz kariyer alanı, olası tüm kimya kariyerlerini kesin ve örtüşmeyen kutulara ayırır.","Gerçek dünyadaki bir iş, birden fazla kariyer alanının özelliklerini aynı anda taşıyabilir.","Sınıflandırma, kariyer seçeneklerini tanımaya yardımcı bir çerçevedir; katı, değişmez bir kural değildir."],
     text: "Yukarıdaki ifadelerden hangileri doğrudur?",
     options: ["II ve III","I ve II","Yalnız I","I ve III","I, II ve III"],
@@ -1501,7 +1501,7 @@ export const QUIZ = {
     text: "Kimya alanında kariyer imkânlarıyla ilgili hangi öğrencinin görüşü doğrudur?",
     options: ["Öğrenci A","Öğrenci C","Hiçbiri","A ve C birlikte","Öğrenci B"],
     correct: 4,
-    explain: "MEB kitabına göre ön lisans mezunları da laboratuvar teknikeri, kalite kontrol analisti, araştırma asistanı gibi pozisyonlarda çalışabilir; kariyer yalnızca lisans/akademik unvanla sınırlı değildir. Öğrenci B haklıdır."
+    explain: "Ön lisans mezunları da laboratuvar teknikeri, kalite kontrol analisti, araştırma asistanı gibi pozisyonlarda çalışabilir; kariyer yalnızca lisans/akademik unvanla sınırlı değildir. Öğrenci B haklıdır."
   },
   {
     difficulty: "zor",
@@ -2873,17 +2873,15 @@ export const QUIZ = {
     table: {
       headers: ["Alt kabuk", "Diyagonal diyagramdaki dolma sırası"],
       rows: [
-        ["4s", "6."],
-        ["3d", "7."],
-        ["4p", "8."],
-        ["5s", "9."]
+        ["1s", "1."], ["2s", "2."], ["2p", "3."], ["3s", "4."],
+        ["3p", "5."], ["4s", "6."], ["3d", "7."], ["4p", "8."]
       ],
-      caption: "Diyagonal diyagramda dört alt kabuğun dolma sırasındaki yeri"
+      caption: "Diyagonal diyagramda sekiz alt kabuğun dolma sırasındaki yeri (Z≤36)"
     },
-    text: "Tablodaki dolma sırasına göre 3d, 4p ve 5s alt kabukları arasındaki enerji sıralaması nasıldır?",
-    options: ["3d < 4p < 5s", "5s < 4p < 3d", "Bu üç alt kabuk karşılaştırılamaz", "Üçü de eşit enerjilidir", "Yalnızca ilk iki alt kabuk karşılaştırılabilir"],
-    correct: 0,
-    explain: "Diyagonal diyagramda önce dolan alt kabuk daha düşük enerjilidir; tabloya göre sıralama 3d < 4p < 5s şeklindedir."
+    text: "Tabloya göre, 3p alt kabuğundan hemen sonra hangi alt kabuk dolar?",
+    options: ["3d", "4p", "4s", "3s", "2p"],
+    correct: 2,
+    explain: "Tabloya göre 3p'nin dolma sırası 5'tir; ondan hemen sonraki (6.) alt kabuk 4s'dir. Bu, diyagonal diyagramın en dikkat çekici özelliğidir — 3p'den sonra beklenen 3d değil, 4s dolar."
   },
   {
     difficulty: "orta",
@@ -2904,11 +2902,11 @@ export const QUIZ = {
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir atomun elektron dizilimi belirlenirken, alt kabuklar diyagonal diyagramda izlenen şu sırayla doldurulur: 1s, 2s, 2p, 3s, 3p, 4s, 3d, 4p, 5s, 4d, 5p, 6s, 4f, 5d...",
-    text: "Bu sıralamada, 4f alt kabuğunun 6s'den sonra gelmesi, hangi genellemeyle en iyi açıklanır?",
-    options: ["f alt kabuklarının her zaman en düşük enerjili olması", "6s alt kabuğunun elektron alamaması", "Sıralamanın rastgele belirlenmiş olması", "4f alt kabuğunun 6s'den daha yüksek enerjili olması ve diyagonal diyagramda daha sonra izlenmesi", "4f'nin temel enerji seviyesinin 6s'den büyük olması"],
-    correct: 3,
-    explain: "Diyagonal diyagramda izlenen dolma sırasında 4f, 6s'den sonra gelir; bu, 4f alt kabuğunun 6s'den daha yüksek enerjili olduğu ve daha sonra dolduğu anlamına gelir."
+    context: "Alt kabuklar diyagonal diyagramda izlenen şu sırayla doldurulur: 1s, 2s, 2p, 3s, 3p, 4s, 3d, 4p (Z≤36 için tüm elementlerde geçerli sıra budur).",
+    text: "Bu sıralamada, 3d alt kabuğunun 4s'den sonra fakat 4p'den önce gelmesi, hangi genellemeyle en iyi açıklanır?",
+    options: ["3d alt kabuğunun enerjisi 4s'den yüksek, fakat 4p'den düşüktür; diyagonal diyagramda bu iki alt kabuk arasında izlenir", "3d her zaman en düşük enerjili alt kabuktur", "4p alt kabuğu hiçbir zaman elektron alamaz", "Sıralama tamamen rastgele belirlenmiştir", "3d'nin temel enerji seviyesi her zaman 4p'den küçüktür, bu yüzden sıralamanın önemi yoktur"],
+    correct: 0,
+    explain: "Diyagonal diyagramda izlenen sırada 3d, 4s'den sonra fakat 4p'den önce gelir; bu, 3d'nin enerjisinin 4s'den yüksek, 4p'den düşük olduğu anlamına gelir — n=3 kabuğuna ait olmasına rağmen n=4 kabuğunun ilk alt kabuğundan (4s) daha yüksek enerjilidir."
   },
   {
     difficulty: "orta",
@@ -2961,11 +2959,11 @@ export const QUIZ = {
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Diyagonal diyagramda alt kabuklar izlendiğinde 5s alt kabuğunun 4d'den önce, 4d'nin ise 5p'den önce dolduğu görülür (5s < 4d < 5p).",
+    context: "Diyagonal diyagramda alt kabuklar izlendiğinde 3p alt kabuğunun 4s'den önce, 4s'in ise 3d'den önce dolduğu görülür (3p < 4s < 3d).",
     text: "Bu sıralama, diyagonal diyagramın genel işleyişiyle tutarlı mıdır?",
-    options: ["Hayır; diyagramda 4d her zaman 5s'den önce gelir", "Evet; diyagonal diyagram alt kabukları köşegenler boyunca izleyerek tam olarak bu sırayı (5s, 4d, 5p) verir", "Hayır; diyagram yalnızca ilk 3 enerji düzeyi için tanımlıdır", "Diyagram bu üç alt kabuk için hiçbir sıralama vermez", "Sıralama diyagramla hiçbir ilişki taşımaz"],
+    options: ["Hayır; diyagramda 3d her zaman 3p'den önce gelir", "Evet; diyagonal diyagram alt kabukları köşegenler boyunca izleyerek tam olarak bu sırayı (3p, 4s, 3d) verir", "Hayır; diyagram yalnızca ilk 2 enerji düzeyi için tanımlıdır", "Diyagram bu üç alt kabuk için hiçbir sıralama vermez", "Sıralama diyagramla hiçbir ilişki taşımaz"],
     correct: 1,
-    explain: "Diyagonal diyagramda köşegenler boyunca izlenen dolma sırası tam olarak 5s, 4d, 5p şeklindedir; verilen sıralama diyagramın işleyişiyle birebir tutarlıdır."
+    explain: "Diyagonal diyagramda köşegenler boyunca izlenen dolma sırası tam olarak 3p, 4s, 3d şeklindedir; verilen sıralama diyagramın işleyişiyle birebir tutarlıdır."
   },
   {
     difficulty: "orta",
@@ -3024,11 +3022,11 @@ export const QUIZ = {
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Aynı temel enerji seviyesine (n=4) sahip 4s, 4p, 4d ve 4f alt kabukları söz konusudur; aynı seviyedeki alt kabukların s'den f'ye doğru artan enerjiye sahip olduğu bilinmektedir.",
-    text: "Bu dört alt kabuk enerjilerine göre küçükten büyüğe nasıl sıralanır?",
-    options: ["Dördü de eşit enerjilidir", "4f < 4d < 4p < 4s", "4s < 4d < 4p < 4f", "4s < 4p < 4d < 4f", "4p < 4s < 4f < 4d"],
+    context: "Aynı temel enerji seviyesine (n=3) sahip 3s, 3p ve 3d alt kabukları söz konusudur; aynı seviyedeki alt kabukların s'den d'ye doğru artan enerjiye sahip olduğu bilinmektedir.",
+    text: "Bu üç alt kabuk enerjilerine göre küçükten büyüğe nasıl sıralanır?",
+    options: ["Üçü de eşit enerjilidir", "3d < 3p < 3s", "3s < 3d < 3p", "3s < 3p < 3d", "3p < 3s < 3d"],
     correct: 3,
-    explain: "Aynı enerji seviyesinde alt kabuklar s < p < d < f şeklinde artan enerjiye sahiptir; bu sıralama diyagonal diyagram ve orbital enerji karşılaştırmalarında gözlemlenen örüntüyle tutarlıdır."
+    explain: "Aynı enerji seviyesinde alt kabuklar s < p < d şeklinde artan enerjiye sahiptir; bu sıralama diyagonal diyagram ve orbital enerji karşılaştırmalarında gözlemlenen örüntüyle tutarlıdır."
   },
   {
     difficulty: "orta",
@@ -3111,14 +3109,15 @@ export const QUIZ = {
     table: {
       headers: ["Sıra", "Alt kabuk"],
       rows: [
-        ["9.", "5s"], ["10.", "4d"], ["11.", "5p"], ["12.", "6s"], ["13.", "4f"]
+        ["1.", "1s"], ["2.", "2s"], ["3.", "2p"], ["4.", "3s"],
+        ["5.", "3p"], ["6.", "4s"], ["7.", "3d"], ["8.", "4p"]
       ],
-      caption: "Diyagonal diyagramda beş alt kabuğun dolma sırasındaki yeri"
+      caption: "Diyagonal diyagramda sekiz alt kabuğun dolma sırasındaki yeri (Z≤36)"
     },
-    text: "Tabloya göre, 4d, 5p ve 6s alt kabuklarının doğru enerji sıralaması ile 4f'nin bu üçlü ile karşılaştırması sırasıyla en doğru hangisidir?",
-    options: ["4d < 5p < 6s; 4f bu üçünün hepsinden daha yüksek enerjilidir", "6s < 5p < 4d; 4f üçünden de düşük enerjilidir", "5p < 4d < 6s; 4f ile karşılaştırma yapılamaz", "Üç alt kabuk da birebir eşit enerjilidir, 4f de bunlarla eşittir", "4d < 5p < 6s; 4f, 6s'den daha düşük enerjilidir"],
+    text: "Argonun (Ar, Z=18) dizilimi [Ne] 3s² 3p⁶'dır. Tabloya göre, kalsiyuma (Ca, Z=20) ulaşana kadar eklenen son 2 elektron hangi alt kabuğa yerleşir; skandiyuma (Sc, Z=21) geçerken eklenen bir sonraki elektron ise hangi alt kabuğa gider?",
+    options: ["Son 2 elektron 4s'ye yerleşir ([Ar] 4s²); Sc'deki elektron ise 3d'ye gider ([Ar] 4s² 3d¹)", "Son 2 elektron 3d'ye yerleşir; Sc'deki elektron 4p'ye gider", "Son 2 elektron 3p'ye yerleşir; Sc'deki elektron 4s'ye gider", "Tüm elektronlar 4p'ye yerleşir", "Bu elementler için diyagram geçerli değildir"],
     correct: 0,
-    explain: "Diyagonal diyagramda dolma sırasına göre 4d, 5p'den; 5p de 6s'den önce gelir: 4d < 5p < 6s. Tablodaki sırada en son gelen 4f ise bu üç alt kabuktan da daha yüksek enerjilidir."
+    explain: "Tabloya göre 4s (sıra 6), 3d'den (sıra 7) önce gelir; bu yüzden argon konfigürasyonundan sonraki 2 elektron (Ca, Z=20) 4s'ye yerleşerek [Ar] 4s² dizilimini oluşturur. Bir sonraki element olan skandiyumda (Z=21) eklenen elektron ise sıradaki alt kabuk olan 3d'ye gider: [Ar] 4s² 3d¹."
   },
   {
     difficulty: "zor",

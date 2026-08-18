@@ -190,9 +190,26 @@
 <section class="section tight">
   <div class="container">
     <div class="section-head">
+      <span class="eyebrow">📖 Öğren</span>
+      <h2>Alt Kabuklar Hangi Sırayla Dolar? — Diyagonal Diyagram</h2>
+      <p>Bir alt kabuğun enerjisi doğrudan hesaplanmaz; bunun yerine, alt kabukları enerji sırasına göre gösteren hazır bir diyagramdan okunur/ezberlenir. Bu diyagrama <strong>diyagonal diyagram (köşegen kuralı)</strong> denir.</p>
+    </div>
+    <div class="card">
+      <div id="diagonal-diagram-host"></div>
+      <div class="callout model" style="margin-top:10px">
+        <h5>Nasıl okunur?</h5>
+        <p>Alt kabuklar, temel enerji seviyesine (satır) ve türüne (sütun: s, p, d) göre bir ızgaraya yerleştirilir. Izgarada sağ üstten sol alta doğru <strong>köşegen oklar</strong> çizilir; bu okları soldan sağa, her okun içinde de yukarıdan aşağıya izlersen dolma sırasını (1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p) elde edersin. Dikkat: 4s, 3d'den önce dolar — bu diyagramın en çok şaşırtan ama ezberlenmesi gereken noktasıdır.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="container">
+    <div class="section-head">
       <span class="eyebrow">🔍 Keşfet</span>
-      <h2>Önce Sırala: Orbitaller Hangi Sırayla Dolar?</h2>
-      <p>Elektronlar orbitallere enerjilerine göre, en düşükten en yükseğe doğru yerleşir. Aşağıdaki 8 orbitali tıklayarak <strong>artan enerji sırasına</strong> diz — Z≤36 arası tüm elementler için gereken sıralamanın tamamı bu.</p>
+      <h2>Şimdi Sen Sırala: Orbitaller Hangi Sırayla Dolar?</h2>
+      <p>Elektronlar orbitallere enerjilerine göre, en düşükten en yükseğe doğru yerleşir. Yukarıda okuduğun diyagonal diyagramı kullanarak aşağıdaki 8 orbitali tıklayıp <strong>artan enerji sırasına</strong> diz — Z≤36 arası tüm elementler için gereken sıralamanın tamamı bu.</p>
     </div>
     <div class="card">
       <div class="small" style="margin-bottom:8px">Havuz — sırayla tıkla (doğru sıraya göre)</div>
@@ -381,7 +398,7 @@
 
 <script type="module">
   import { mountNav, mountFooter } from "../assets/js/nav.js?v=1";
-  import { renderQuiz, markVisited, bindJournal } from "../assets/js/quiz-engine.js?v=4";
+  import { renderQuiz, markVisited, bindJournal, renderDiagonalDiagram } from "../assets/js/quiz-engine.js?v=4";
   import { QUIZ } from "../assets/js/quiz-data.js?v=5";
   import { QUESTION_BANK } from "../question-bank.js?v=2";
   import { EL_BY_Z, buildConfig, toConventionalOrder, configString, nobleGasShorthand } from "../assets/js/periodic-data.js?v=1";
@@ -392,6 +409,7 @@
   markVisited("orbital");
   bindJournal(document.getElementById("journal6"), "orbital-1");
   renderQuiz(document.getElementById("quiz-host"), QUIZ.orbital, "orbital", QUESTION_BANK.kim916);
+  document.getElementById("diagonal-diagram-host").innerHTML = renderDiagonalDiagram();
 
   /* ---- Önce Sırala: Orbitalleri Enerjiye Göre Diz ----
    * Z≤36 müfredat sınırı için Aufbau dolum sırasının tamamı bu 8 alt
