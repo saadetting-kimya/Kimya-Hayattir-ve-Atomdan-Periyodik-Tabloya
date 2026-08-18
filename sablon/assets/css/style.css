@@ -413,6 +413,13 @@ input[type=range]::-moz-range-thumb{
 .oicon-item svg{ background:var(--surface); border:1px solid var(--line); border-radius:8px; }
 .oicon-label{ font-size:10.5px; text-align:center; color:var(--ink-soft); font-weight:600; line-height:1.25; }
 
+.oshape-wrap{ background:var(--bg); border:1px solid var(--line); border-radius:10px; padding:12px 14px; margin-bottom:14px; }
+.oshape-title{ font-size:12.5px; font-weight:700; color:var(--ink); margin-bottom:10px; }
+.oshape-row{ display:flex; gap:16px; flex-wrap:wrap; justify-content:center; }
+.oshape-item{ display:flex; flex-direction:column; align-items:center; gap:4px; width:100px; }
+.oshape-item svg{ background:var(--surface); border:1px solid var(--line); border-radius:8px; }
+.oshape-label{ font-size:10.5px; text-align:center; color:var(--ink-soft); font-weight:600; line-height:1.25; }
+
 .qopts{ display:grid; gap:8px; }
 .qopt{
   display:flex; gap:10px; align-items:flex-start; padding:10px 12px; border-radius:10px;

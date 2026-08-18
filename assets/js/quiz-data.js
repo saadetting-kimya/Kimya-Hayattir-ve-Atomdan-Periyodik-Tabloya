@@ -3260,7 +3260,7 @@ export const QUIZ = {
     text: "Bu elementin periyodik tablodaki periyodu ve grubu sırasıyla nedir?",
     options: ["3. periyot, 15. grup (VA)", "2. periyot, 15. grup", "3. periyot, 13. grup", "4. periyot, 15. grup", "3. periyot, 5. grup"],
     correct: 0,
-    explain: "En yüksek baş kuantum sayısı (n=3) periyodu, değerlik elektron sayısı (3s²3p³ = 5 elektron) ise 15. grubu (VA) belirler."
+    explain: "En yüksek temel enerji seviyesi (n=3) periyodu, değerlik elektron sayısı (3s²3p³ = 5 elektron) ise 15. grubu (VA) belirler."
   },
   {
     difficulty: "kolay",
@@ -3269,7 +3269,7 @@ export const QUIZ = {
     text: "Bu elementin değerlik kabuğu elektron dizilimi hangisidir?",
     options: ["2s² 2p²", "2s¹ 2p⁵", "3s² 3p⁴", "2s² 2p⁶", "2s² 2p⁴"],
     correct: 4,
-    explain: "2. periyot, baş kuantum sayısının n=2 olduğunu; 16. grup ise değerlik kabuğunda 6 elektron bulunduğunu gösterir; bu nedenle dizilim 2s²2p⁴'tür."
+    explain: "2. periyot, temel enerji seviyesinin n=2 olduğunu; 16. grup ise değerlik kabuğunda 6 elektron bulunduğunu gösterir; bu nedenle dizilim 2s²2p⁴'tür."
   },
   {
     difficulty: "kolay",
@@ -3319,11 +3319,11 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.7 — Elektronların orbitallere yerleşimine, periyodik tablodaki yerlerine ve iyon oluşumuna ilişkin tümevarımsal akıl yürütebilme",
-    context: "Periyodik tabloda bir elementin bulunduğu periyot numarası, o elementin değerlik kabuğundaki baş kuantum sayısına (n) eşittir.",
+    context: "Periyodik tabloda bir elementin bulunduğu periyot numarası, o elementin değerlik kabuğundaki temel enerji seviyesine (n) eşittir.",
     text: "Değerlik kabuğunda n=4 olan bir element hangi periyottadır?",
     options: ["4. periyot", "3. periyot", "5. periyot", "2. periyot", "Periyot numarası n ile ilişkili değildir"],
     correct: 0,
-    explain: "Periyot numarası doğrudan değerlik kabuğunun baş kuantum sayısına eşittir; n=4 olduğundan element 4. periyottadır."
+    explain: "Periyot numarası doğrudan değerlik kabuğunun temel enerji seviyesine eşittir; n=4 olduğundan element 4. periyottadır."
   },
   {
     difficulty: "kolay",
@@ -3634,7 +3634,7 @@ export const QUIZ = {
     text: "X³⁺ iyonunun elektron dizilimi hangisidir ve bu dizilimde önce hangi elektronlar kaybedilmiştir?",
     options: ["Bu iyonun dizilimi belirlenemez", "[Ar] 4s² 3d⁷; önce 3d'deki 3 elektron kaybedilmiştir", "[Ar] 3d⁷; önce 4s²'deki 2 ve 4p'deki 1 elektron kaybedilmiştir", "[Ar] 3d¹⁰; önce 4p³'teki 3 elektron kaybedilmiştir (4s ve 3d dolu kalır)", "[Ar] 4p³; önce 4s ve 3d'deki tüm elektronlar kaybedilmiştir"],
     correct: 3,
-    explain: "İyonlaşırken elektronlar en yüksek baş kuantum sayısına sahip, en dıştaki alt kabuktan (burada 4p) kaybedilir; 4p³'teki 3 elektron kaybedilince geriye [Ar] 4s² 3d¹⁰ = [Ar] 3d¹⁰4s² kalır — ancak 3 elektron tam olarak 4p'yi boşalttığından sonuç [Ar] 4s²3d¹⁰'dur; sorudaki seçenek bunu [Ar]3d¹⁰ olarak sadeleştirmiştir (4s² dahil, çekirdek gösteriminde d blok sonrası s elektronları bazen ayrı yazılmayabilir)."
+    explain: "İyonlaşırken elektronlar en yüksek temel enerji seviyesine sahip, en dıştaki alt kabuktan (burada 4p) kaybedilir; 4p³'teki 3 elektron kaybedilince geriye [Ar] 4s² 3d¹⁰ = [Ar] 3d¹⁰4s² kalır — ancak 3 elektron tam olarak 4p'yi boşalttığından sonuç [Ar] 4s²3d¹⁰'dur; sorudaki seçenek bunu [Ar]3d¹⁰ olarak sadeleştirmiştir (4s² dahil, çekirdek gösteriminde d blok sonrası s elektronları bazen ayrı yazılmayabilir)."
   },
   {
     difficulty: "zor",

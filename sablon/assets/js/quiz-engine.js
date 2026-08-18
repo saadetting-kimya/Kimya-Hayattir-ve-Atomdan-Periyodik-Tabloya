@@ -207,6 +207,134 @@ function renderLineChart(chart) {
   `;
 }
 
+/* =========================================================
+   ÇOKLU SERİLİ ÇİZGİ GRAFİĞİ — aynı x ekseninde (ör. atom
+   numarası) birden fazla seriyi (ör. 2s ve 2p alt kabuklarının
+   bağıl enerjisi) karşılaştırmak için. MEB kitabındaki
+   "Etkinlik-1.8: Atom Orbitallerinin Bağıl Enerjileri"
+   grafiğiyle aynı mantık: farklı orbital türlerinin enerjisi,
+   artan atom numarasıyla nasıl değiştiğini karşılaştırmalı
+   gösterir (kuantum sayısı formülü değil, veriye dayalı okuma).
+   ========================================================= */
+function renderCompareLineChart(chart) {
+  if (!chart) return "";
+  const labels = Array.isArray(chart.labels) ? chart.labels : [];
+  const series = Array.isArray(chart.series) ? chart.series : [];
+  if (labels.length === 0 || series.length === 0) return "";
+
+  const W = 480, H = 270;
+  const padL = 56, padR = 20, padT = 30, padB = 50;
+  const plotW = W - padL - padR;
+  const plotH = H - padT - padB;
+
+  const allValues = series.flatMap(s => (s.values || []).map(Number));
+  const minVal = Math.min(...allValues);
+  const maxVal = Math.max(...allValues);
+  const range = (maxVal - minVal) || 1;
+  const step = labels.length > 1 ? plotW / (labels.length - 1) : 0;
+
+  const colors = ["var(--gas)", "var(--bad)", "var(--mol-a)"];
+
+  const seriesSvg = series.map((s, si) => {
+    const color = s.color || colors[si % colors.length];
+    const values = (s.values || []).map(Number);
+    const points = values.map((v, i) => {
+      const x = padL + i * step;
+      const y = padT + plotH - ((v - minVal) / range) * plotH;
+      return { x, y };
+    });
+    const polyline = points.map(p => `${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(" ");
+    const dots = points.map(p => `<circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="3.2" fill="${color}"></circle>`).join("");
+    return `<polyline points="${polyline}" fill="none" stroke="${color}" stroke-width="2.4"></polyline>${dots}`;
+  }).join("");
+
+  const xLabels = labels.map((l, i) => {
+    const x = padL + i * step;
+    return `<text x="${x.toFixed(1)}" y="${(padT + plotH + 18).toFixed(1)}" text-anchor="middle" font-size="10.5" fill="currentColor">${escapeHTML(String(l))}</text>`;
+  }).join("");
+
+  const legend = series.map((s, si) => {
+    const color = s.color || colors[si % colors.length];
+    const lx = padL + si * 90;
+    return `<rect x="${lx}" y="${(H - 14).toFixed(1)}" width="10" height="10" fill="${color}"></rect><text x="${(lx + 14).toFixed(1)}" y="${(H - 5).toFixed(1)}" font-size="10.5" fill="currentColor">${escapeHTML(s.label || "")}</text>`;
+  }).join("");
+
+  const title = chart.title
+    ? `<text x="${(W / 2).toFixed(1)}" y="16" text-anchor="middle" font-size="12" font-weight="600" fill="currentColor">${escapeHTML(chart.title)}</text>`
+    : "";
+
+  const yLabel = chart.yLabel
+    ? `<text x="12" y="${(padT + plotH / 2).toFixed(1)}" text-anchor="middle" font-size="9.5" fill="currentColor" transform="rotate(-90 12 ${(padT + plotH / 2).toFixed(1)})">${escapeHTML(chart.yLabel)}</text>`
+    : "";
+
+  return `
+    <div class="qchart-wrap">
+      <svg class="qchart-svg" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
+        ${title}
+        ${yLabel}
+        <line x1="${padL}" y1="${padT}" x2="${padL}" y2="${padT + plotH}" stroke="currentColor" stroke-opacity="0.35"></line>
+        <line x1="${padL}" y1="${padT + plotH}" x2="${padL + plotW}" y2="${padT + plotH}" stroke="currentColor" stroke-opacity="0.35"></line>
+        ${seriesSvg}
+        ${xLabels}
+        ${legend}
+      </svg>
+    </div>
+  `;
+}
+
+/* =========================================================
+   ORBİTAL ŞEKİLLERİ (s, p, d) — MEB kitabındaki "Etkinlik-1.8"
+   görselinde gösterilen evrensel/standart orbital sınır yüzey
+   şekillerinin özgün, sadeleştirilmiş 2B çizimleri (s: küresel,
+   p: iki loblu/dambıl, d: dört loblu/yonca). Herhangi bir
+   yayınevinin 3B render'ı değil, kimyada standart olan geometrik
+   temsildir.
+   ========================================================= */
+const ORBITAL_SHAPES = {
+  s: `<circle cx="50" cy="50" r="30" fill="var(--gas)" opacity="0.38" stroke="var(--gas-dark)" stroke-width="2"></circle>`,
+  p: `
+    <ellipse cx="28" cy="50" rx="22" ry="13" fill="var(--gas)" opacity="0.38" stroke="var(--gas-dark)" stroke-width="2"></ellipse>
+    <ellipse cx="72" cy="50" rx="22" ry="13" fill="var(--gas)" opacity="0.38" stroke="var(--gas-dark)" stroke-width="2"></ellipse>
+  `,
+  d: `
+    <ellipse cx="32" cy="32" rx="17" ry="9" fill="var(--good)" opacity="0.4" stroke="#0d5c33" stroke-width="1.8" transform="rotate(45 32 32)"></ellipse>
+    <ellipse cx="68" cy="32" rx="17" ry="9" fill="var(--good)" opacity="0.4" stroke="#0d5c33" stroke-width="1.8" transform="rotate(-45 68 32)"></ellipse>
+    <ellipse cx="32" cy="68" rx="17" ry="9" fill="var(--good)" opacity="0.4" stroke="#0d5c33" stroke-width="1.8" transform="rotate(-45 32 68)"></ellipse>
+    <ellipse cx="68" cy="68" rx="17" ry="9" fill="var(--good)" opacity="0.4" stroke="#0d5c33" stroke-width="1.8" transform="rotate(45 68 68)"></ellipse>
+  `
+};
+
+const ORBITAL_SHAPE_LABELS = { s: "s orbitali", p: "p orbitali", d: "d orbitali" };
+
+function renderOrbitalShape(item) {
+  const type = typeof item === "string" ? item : item.type;
+  const shape = ORBITAL_SHAPES[type];
+  if (!shape) return "";
+  const customLabel = typeof item === "object" ? item.label : null;
+  const label = escapeHTML(customLabel || ORBITAL_SHAPE_LABELS[type] || type);
+  return `
+    <div class="oshape-item">
+      <svg viewBox="0 0 100 100" width="86" height="86">${shape}</svg>
+      <div class="oshape-label">${label}</div>
+    </div>
+  `;
+}
+
+function renderOrbitalShapes(data) {
+  const items = Array.isArray(data) ? data : (data && Array.isArray(data.items) ? data.items : null);
+  if (!items || items.length === 0) return "";
+  const title = (!Array.isArray(data) && data && data.title)
+    ? `<div class="oshape-title">${escapeHTML(data.title)}</div>`
+    : "";
+  const rendered = items.map(renderOrbitalShape).join("");
+  return `
+    <div class="oshape-wrap">
+      ${title}
+      <div class="oshape-row">${rendered}</div>
+    </div>
+  `;
+}
+
 function renderPhScale(chart) {
 
   const W = 480;
@@ -2944,6 +3072,10 @@ export function renderQuiz(
 
       ${renderGHSPictograms(question.pictograms)}
 
+      ${renderCompareLineChart(question.compareChart)}
+
+      ${renderOrbitalShapes(question.orbitalShapes)}
+
       ${renderObjectIcons(question.objectIcons)}
 
 
@@ -3531,6 +3663,8 @@ export {
   renderChart,
   renderBarChart,
   renderLineChart,
+  renderCompareLineChart,
+  renderOrbitalShapes,
   renderPhScale,
   renderOrbitalBoxes,
   renderOrbitalBoxSet,
