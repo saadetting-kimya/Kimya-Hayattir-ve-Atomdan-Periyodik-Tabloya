@@ -370,8 +370,8 @@ const GHS_ICONS = {
     <path d="M50,40 C46,46 44,52 46,57 C47,60 49,61 50,61 C51,61 53,60 54,57 C56,52 54,46 50,40 Z" fill="#fff"></path>
   `,
   oxidizing: `
-    <circle cx="50" cy="60" r="9" fill="#000"></circle>
-    <path d="M50,26 C43,35 40,45 43,53 C45,58 48,60 50,60 C52,60 55,58 57,53 C60,45 57,35 50,26 Z" fill="#000"></path>
+    <circle cx="50" cy="62" r="10" fill="#000"></circle>
+    <path d="M50,26 C44,34 41,42 43,49 C45,53 48,54 50,54 C52,54 55,53 57,49 C59,42 56,34 50,26 Z" fill="#000"></path>
   `,
   explosive: `
     <circle cx="50" cy="58" r="10" fill="#000"></circle>
@@ -403,18 +403,25 @@ const GHS_ICONS = {
     <path d="M58,52 C58,58 59,63 61,68" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round"></path>
   `,
   toxic: `
-    <circle cx="50" cy="42" r="14" fill="none" stroke="#000" stroke-width="3.2"></circle>
-    <circle cx="44" cy="40" r="2.6" fill="#000"></circle>
-    <circle cx="56" cy="40" r="2.6" fill="#000"></circle>
-    <path d="M46,48 C48,50 52,50 54,48" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round"></path>
-    <g stroke="#000" stroke-width="2.4" stroke-linecap="round">
-      <line x1="34" y1="60" x2="66" y2="68"></line>
-      <line x1="34" y1="68" x2="66" y2="60"></line>
+    <path d="M50,25 C38,25 29,34 29,45 C29,53 34,58 40,60 L60,60 C66,58 71,53 71,45 C71,34 62,25 50,25 Z" fill="#000"></path>
+    <g stroke="#fff" stroke-width="1.6">
+      <line x1="45" y1="58" x2="45" y2="60.5"></line>
+      <line x1="50" y1="58" x2="50" y2="60.5"></line>
+      <line x1="55" y1="58" x2="55" y2="60.5"></line>
     </g>
-    <circle cx="34" cy="60" r="2" fill="#000"></circle>
-    <circle cx="66" cy="68" r="2" fill="#000"></circle>
-    <circle cx="34" cy="68" r="2" fill="#000"></circle>
-    <circle cx="66" cy="60" r="2" fill="#000"></circle>
+    <ellipse cx="40" cy="42" rx="4.4" ry="5.8" fill="#fff" transform="rotate(-14 40 42)"></ellipse>
+    <ellipse cx="60" cy="42" rx="4.4" ry="5.8" fill="#fff" transform="rotate(14 60 42)"></ellipse>
+    <path d="M50,45 L46,52 L54,52 Z" fill="#fff"></path>
+    <g stroke="#000" stroke-width="3" stroke-linecap="round">
+      <line x1="30" y1="66" x2="70" y2="78"></line>
+      <line x1="70" y1="66" x2="30" y2="78"></line>
+    </g>
+    <g fill="#000">
+      <circle cx="30" cy="66" r="3.4"></circle>
+      <circle cx="70" cy="66" r="3.4"></circle>
+      <circle cx="30" cy="78" r="3.4"></circle>
+      <circle cx="70" cy="78" r="3.4"></circle>
+    </g>
   `,
   irritant: `
     <rect x="46.5" y="26" width="7" height="26" rx="3" fill="#000"></rect>
