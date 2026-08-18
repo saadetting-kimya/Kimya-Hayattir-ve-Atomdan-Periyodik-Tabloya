@@ -6,17 +6,23 @@ uygulama elle çizilmiş SVG yerine otomatik olarak bu dosyayı kullanır
 sessizce elle çizilmiş versiyona geri döner, hiçbir kod değişikliği
 gerekmez).
 
-| Dosya adı (bu klasöre böyle kaydedin) | GHS sınıfı | Kaynak (Wikimedia Commons, kamu malı) |
+| Dosya adı | GHS sınıfı | Durum |
 |---|---|---|
-| `flame.svg` | Alevlenir (GHS02) | https://commons.wikimedia.org/wiki/File:GHS-pictogram-flamme.svg |
-| `oxidizing.svg` | Oksitleyici (GHS03) | https://commons.wikimedia.org/wiki/File:GHS-pictogram-rondflam.svg |
-| `explosive.svg` | Patlayıcı (GHS01) | https://commons.wikimedia.org/wiki/File:GHS-pictogram-explos.svg |
-| `gas.svg` | Basınçlı gaz (GHS04) | https://commons.wikimedia.org/wiki/File:GHS-pictogram-bottle.svg |
-| `corrosive.svg` | Aşındırıcı (GHS05) | https://commons.wikimedia.org/wiki/File:GHS-pictogram-acid.svg |
-| `toxic.svg` | Toksik (GHS06) | https://commons.wikimedia.org/wiki/File:GHS-pictogram-skull.svg |
-| `irritant.svg` | Zararlı/Tahriş (GHS07) | https://commons.wikimedia.org/wiki/File:GHS-pictogram-exclam.svg |
-| `health-hazard.svg` | Sağlığa zararlı (GHS08) | https://commons.wikimedia.org/wiki/File:GHS-pictogram-silhouette.svg |
-| `environment.svg` | Çevreye zararlı (GHS09) | https://commons.wikimedia.org/wiki/File:GHS-pictogram-pollu.svg |
+| `flame.svg` | Alevlenir (GHS02) | ✅ Eklendi (kullanıcının EPS'inden) |
+| `oxidizing.svg` | Oksitleyici (GHS03) | ✅ Eklendi (kullanıcının EPS'inden) |
+| `explosive.svg` | Patlayıcı (GHS01) | ✅ Eklendi (kullanıcının EPS'inden) |
+| `gas.svg` | Basınçlı gaz (GHS04) | ✅ Eklendi (kullanıcının EPS'inden) |
+| `irritant.svg` | Zararlı/Tahriş (GHS07) | ✅ Eklendi (kullanıcının EPS'inden) |
+| `corrosive.svg` | Aşındırıcı (GHS05) | ⏳ Bekleniyor — https://commons.wikimedia.org/wiki/File:GHS-pictogram-acid.svg |
+| `toxic.svg` | Toksik (GHS06) | ⏳ Bekleniyor — https://commons.wikimedia.org/wiki/File:GHS-pictogram-skull.svg |
+| `health-hazard.svg` | Sağlığa zararlı (GHS08) | ⏳ Bekleniyor — https://commons.wikimedia.org/wiki/File:GHS-pictogram-silhouette.svg |
+| `environment.svg` | Çevreye zararlı (GHS09) | ⏳ Bekleniyor — https://commons.wikimedia.org/wiki/File:GHS-pictogram-pollu.svg |
+
+Eklenen 5 dosya, kullanıcının yüklediği resmi GHS EPS dosyalarından
+(gömülü TIFF önizlemesi, pure-Python `struct`+`zlib` ile ayrıştırılıp
+PNG'ye çevrildi, ardından bir SVG `<image>` sarmalayıcısına gömüldü)
+çıkarıldı — bkz. `/tmp/.../scratchpad/eps_extract.py` (bu depoya dahil
+değil, yalnızca oturum notudur).
 
 ## Neden bu dosyalar ve neden ben indiremiyorum
 
