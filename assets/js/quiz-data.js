@@ -625,6 +625,7 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    moleculeSkeleton: { type: "benzene", caption: "Karbon iskeletli bir bileşiğin skeletal (iskelet) gösterimi", label: "Her köşe bir karbon atomunu temsil eder" },
     context: "Organik kimya, karbon elementini içeren bileşiklerin yapılarını, özelliklerini ve tepkimelerini kapsamlı bir şekilde inceleyen bir kimya disiplinidir; bu nedenle 'karbon kimyası' olarak da adlandırılır.",
     text: "Organik kimyaya neden 'karbon kimyası' da denir?",
     options: ["Karbon elementini hiç incelemediği için","Yalnızca kömürle ilgilendiği için","İncelediği bütün bileşikler karbon elementi içerdiği için","Yalnızca metalik bileşikleri incelediği için","Bu isimlendirmenin bilimsel bir dayanağı yoktur"],
@@ -679,6 +680,7 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.2 — Kimyanın alt disiplinlerini günlük hayattaki uygulamalarla ilişkilendirebilme",
+    moleculeSkeleton: { type: "polymerChain", unit: "CH₂-CH₂", caption: "Bir polimer zincirinin tekrar eden birimi (örnek: polietilen)", label: "Köşeli parantez + n: birim, zincir boyunca n kez tekrarlanır" },
     context: "Polimer kimyası; makromoleküllerin (büyük moleküllerin) kimyası olup polimerlerin sentezini, yapılarını, özelliklerini, davranışlarını ve uygulamalarını inceleyen bir kimya disiplinidir.",
     text: "'Makromolekül' ifadesi polimer kimyasında en doğrudan neyi tanımlar?",
     options: ["Yalnızca sıvı hâldeki bileşikleri","Yalnızca tek bir atomdan oluşan iyonları","Radyoaktif olarak bozunan çekirdekleri","Çok sayıda küçük birimin bir araya gelmesiyle oluşan büyük molekülleri","Elektrik yükü taşımayan tüm molekülleri"],
@@ -1153,6 +1155,16 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
+    cycleDiagram: {
+      centerLabel: "Kariyer Planlama Döngüsü",
+      caption: "Kariyer Planlama Döngüsü'nün dört evresi",
+      segments: [
+        { label: "Kişisel Özelliklerini Tanı" },
+        { label: "Kariyer Fırsatlarını Araştır" },
+        { label: "Karar Ver ve Planlama Yap" },
+        { label: "Planlarını Uygula" }
+      ]
+    },
     context: "Kariyer Planlama Döngüsü dört evreden oluşur: Kişisel Özelliklerini Tanı, Kariyer Fırsatlarını Araştır, Karar Ver ve Planlama Yap, Planlarını Uygula.",
     text: "Kariyer Planlama Döngüsü'nün ilk evresi olan 'Kişisel Özelliklerini Tanı' evresi başka hangi isimle de anılır?",
     options: ["Bu evrenin başka bir ismi yoktur","Kariyer Fırsatları","Karar Verme","Planları Uygulama","Öz Farkındalık"],

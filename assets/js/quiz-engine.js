@@ -353,7 +353,7 @@ function renderAtomModel(model) {
     }).join("");
     const electronDots = Array.from({ length: 6 }).map((_, i) => {
       const [x, y] = polarPoint(cx, cy, 34, i * 60 + 20);
-      return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.6" fill="var(--stop)"></circle>`;
+      return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.6" fill="var(--gas)"></circle>`;
     }).join("");
     svgInner = `
       <circle cx="${cx}" cy="${cy}" r="52" fill="var(--gas)" opacity="0.32" stroke="var(--ink-soft)" stroke-width="2"></circle>
@@ -372,9 +372,9 @@ function renderAtomModel(model) {
       ${arrowTip(W - 4, cy - 36, 90, "var(--ink-soft)")}
       <line x1="0" y1="${(cy + 32).toFixed(1)}" x2="${(W - 4).toFixed(1)}" y2="${(cy + 32).toFixed(1)}" stroke="var(--ink-soft)" stroke-width="1.6"></line>
       ${arrowTip(W - 4, cy + 32, 90, "var(--ink-soft)")}
-      <path d="M0,${cy.toFixed(1)} L${(cx - 6).toFixed(1)},${cy.toFixed(1)} L4,${(cy - 46).toFixed(1)}" fill="none" stroke="var(--stop)" stroke-width="2.2"></path>
-      ${arrowTip(4, cy - 46, -18, "var(--stop)")}
-      <circle cx="${cx}" cy="${cy}" r="5.5" fill="var(--stop)"></circle>
+      <path d="M0,${cy.toFixed(1)} L${(cx - 6).toFixed(1)},${cy.toFixed(1)} L4,${(cy - 46).toFixed(1)}" fill="none" stroke="var(--bad)" stroke-width="2.2"></path>
+      ${arrowTip(4, cy - 46, -18, "var(--bad)")}
+      <circle cx="${cx}" cy="${cy}" r="5.5" fill="var(--bad)"></circle>
     `;
   } else if (model.type === "bohr") {
     const shells = Array.isArray(model.shells) ? model.shells : [2, 8, 1];
@@ -388,7 +388,7 @@ function renderAtomModel(model) {
       return ring + dots;
     }).join("");
     svgInner = `
-      <circle cx="${cx}" cy="${cy}" r="7" fill="var(--stop)"></circle>
+      <circle cx="${cx}" cy="${cy}" r="7" fill="var(--bad)"></circle>
       ${rings}
     `;
   }
@@ -418,7 +418,7 @@ function renderNucleusCloud(data) {
   const W = 220, H = 170, cx = 76, cy = 85;
 
   const rows = [
-    data.protons != null ? { text: `${data.protons} p⁺`, y: 34, color: "var(--stop)" } : null,
+    data.protons != null ? { text: `${data.protons} p⁺`, y: 34, color: "var(--bad)" } : null,
     data.neutrons != null ? { text: `${data.neutrons} n`, y: 85, color: "var(--ink-soft)" } : null,
     data.electrons != null ? { text: `${data.electrons} e⁻`, y: 136, color: "var(--gas)" } : null
   ].filter(Boolean);
@@ -436,10 +436,121 @@ function renderNucleusCloud(data) {
       ${caption}
       <svg viewBox="0 0 ${W} ${H}" width="220" height="170" class="ncloud-svg">
         <circle cx="${cx}" cy="${cy}" r="58" fill="var(--gas)" opacity="0.16" stroke="var(--gas)" stroke-width="1.3" stroke-dasharray="2 3"></circle>
-        <circle cx="${cx}" cy="${cy}" r="14" fill="var(--stop)" opacity="0.85"></circle>
+        <circle cx="${cx}" cy="${cy}" r="14" fill="var(--bad)" opacity="0.85"></circle>
         ${leaders}
       </svg>
       ${label}
+    </div>
+  `;
+}
+
+/* =========================================================
+   MOLEKÜL İSKELET ÇİZİMİ — organik/polimer kimyası için
+   evrensel skeletal-formül konvansiyonu (benzen halkası veya
+   tekrar eden polimer birimi). Herhangi bir yayınevinin çizimi
+   değil, kimyada standart olarak kullanılan gösterim biçimidir.
+   ========================================================= */
+function renderMoleculeSkeleton(data) {
+
+  if (!data || !data.type) return "";
+
+  const W = 200, H = 140, cx = 100, cy = 68;
+  let svgInner = "";
+
+  if (data.type === "benzene") {
+    const pts = Array.from({ length: 6 }).map((_, i) => polarPoint(cx, cy, 42, i * 60));
+    const ring = pts.map((p, i) => {
+      const n = pts[(i + 1) % 6];
+      const isDouble = i % 2 === 0;
+      let inner = "";
+      if (isDouble) {
+        const mx1 = p[0] + (n[0] - p[0]) * 0.22, my1 = p[1] + (n[1] - p[1]) * 0.22 - 3.5;
+        const mx2 = p[0] + (n[0] - p[0]) * 0.78, my2 = p[1] + (n[1] - p[1]) * 0.78 - 3.5;
+        inner = `<line x1="${mx1.toFixed(1)}" y1="${my1.toFixed(1)}" x2="${mx2.toFixed(1)}" y2="${my2.toFixed(1)}" stroke="var(--ink)" stroke-width="1.6"></line>`;
+      }
+      return `<line x1="${p[0].toFixed(1)}" y1="${p[1].toFixed(1)}" x2="${n[0].toFixed(1)}" y2="${n[1].toFixed(1)}" stroke="var(--ink)" stroke-width="1.8"></line>${inner}`;
+    }).join("");
+    svgInner = ring;
+  } else if (data.type === "polymerChain") {
+    const unit = escapeHTML(data.unit || "CH₂-CH₂");
+    const zig = [];
+    const startX = 30, stepX = 20, baseY = cy;
+    for (let i = 0; i < 7; i++) {
+      const x = startX + i * stepX;
+      const y = baseY + (i % 2 === 0 ? -14 : 14);
+      zig.push([x, y]);
+    }
+    const path = zig.map((p, i) => (i === 0 ? "M" : "L") + p[0].toFixed(1) + "," + p[1].toFixed(1)).join(" ");
+    svgInner = `
+      <line x1="24" y1="${(baseY - 26).toFixed(1)}" x2="24" y2="${(baseY + 26).toFixed(1)}" stroke="var(--ink-soft)" stroke-width="1.6"></line>
+      <path d="${path}" fill="none" stroke="var(--ink)" stroke-width="1.8"></path>
+      <line x1="${(startX + 6 * stepX).toFixed(1)}" y1="${(baseY - 26).toFixed(1)}" x2="${(startX + 6 * stepX).toFixed(1)}" y2="${(baseY + 26).toFixed(1)}" stroke="var(--ink-soft)" stroke-width="1.6"></line>
+      <text x="${(startX + 6 * stepX + 10).toFixed(1)}" y="${(baseY + 32).toFixed(1)}" font-size="13" font-style="italic" fill="var(--ink)">n</text>
+      <text x="${cx}" y="20" text-anchor="middle" font-size="12" fill="var(--ink-faint)" font-family="var(--mono)">-${unit}-</text>
+    `;
+  }
+
+  const caption = data.caption ? `<div class="amol-caption">${escapeHTML(data.caption)}</div>` : "";
+  const label = data.label ? `<div class="amol-label">${escapeHTML(data.label)}</div>` : "";
+
+  return `
+    <div class="amol-wrap">
+      ${caption}
+      <svg viewBox="0 0 ${W} ${H}" width="200" height="140" class="amol-svg">${svgInner}</svg>
+      ${label}
+    </div>
+  `;
+}
+
+/* =========================================================
+   DÖNGÜ DİYAGRAMI — çok adımlı, döngüsel bir süreci (ör.
+   kariyer planlama döngüsü) eş dilimli bir daire üzerinde
+   gösteren jenerik/evrensel bir "süreç çemberi" gösterimidir.
+   ========================================================= */
+function renderCycleDiagram(data) {
+
+  if (!data || !Array.isArray(data.segments) || data.segments.length === 0) return "";
+
+  const n = data.segments.length;
+  const W = 260, H = 260, cx = 130, cy = 130, rOuter = 108, rInner = 46;
+  const colors = ["var(--gas)", "var(--bad)", "var(--good)", "var(--heat)", "var(--mol-a)"];
+
+  const arcPath = (startDeg, endDeg, rO, rI) => {
+    const [x1, y1] = polarPoint(cx, cy, rO, startDeg);
+    const [x2, y2] = polarPoint(cx, cy, rO, endDeg);
+    const [x3, y3] = polarPoint(cx, cy, rI, endDeg);
+    const [x4, y4] = polarPoint(cx, cy, rI, startDeg);
+    const large = endDeg - startDeg > 180 ? 1 : 0;
+    return `M${x1.toFixed(1)},${y1.toFixed(1)} A${rO},${rO} 0 ${large} 1 ${x2.toFixed(1)},${y2.toFixed(1)} L${x3.toFixed(1)},${y3.toFixed(1)} A${rI},${rI} 0 ${large} 0 ${x4.toFixed(1)},${y4.toFixed(1)} Z`;
+  };
+
+  const step = 360 / n;
+  const wedges = data.segments.map((seg, i) => {
+    const start = i * step, end = (i + 1) * step, mid = start + step / 2;
+    const path = arcPath(start, end, rOuter, rInner);
+    const [lx, ly] = polarPoint(cx, cy, (rOuter + rInner) / 2 + 4, mid);
+    const words = (seg.label || "").split(" ");
+    const tspans = words.map((w, wi) => `<tspan x="${lx.toFixed(1)}" dy="${wi === 0 ? 0 : 11}">${escapeHTML(w)}</tspan>`).join("");
+    return `
+      <path d="${path}" fill="${colors[i % colors.length]}" opacity="0.32" stroke="var(--surface)" stroke-width="2"></path>
+      <text x="${lx.toFixed(1)}" y="${(ly - (words.length - 1) * 5.5).toFixed(1)}" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--ink)">${tspans}</text>
+      <text x="${lx.toFixed(1)}" y="${(ly - (words.length - 1) * 5.5 - 14).toFixed(1)}" text-anchor="middle" font-size="10" fill="var(--ink-faint)" font-family="var(--mono)">${i + 1}</text>
+    `;
+  }).join("");
+
+  const centerLabelWords = (data.centerLabel || "").split(" ");
+  const centerTspans = centerLabelWords.map((w, wi) => `<tspan x="${cx}" dy="${wi === 0 ? 0 : 12}">${escapeHTML(w)}</tspan>`).join("");
+
+  const caption = data.caption ? `<div class="cyc-caption">${escapeHTML(data.caption)}</div>` : "";
+
+  return `
+    <div class="cyc-wrap">
+      ${caption}
+      <svg viewBox="0 0 ${W} ${H}" width="240" height="240" class="cyc-svg">
+        ${wedges}
+        <circle cx="${cx}" cy="${cy}" r="${rInner - 4}" fill="var(--surface)" stroke="var(--line)" stroke-width="1.3"></circle>
+        <text x="${cx}" y="${(cy - (centerLabelWords.length - 1) * 6 + 4).toFixed(1)}" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--ink)">${centerTspans}</text>
+      </svg>
     </div>
   `;
 }
@@ -2681,6 +2792,10 @@ export function renderQuiz(
       ${renderAtomModel(question.atomModel)}
 
       ${renderNucleusCloud(question.nucleusCloud)}
+
+      ${renderMoleculeSkeleton(question.moleculeSkeleton)}
+
+      ${renderCycleDiagram(question.cycleDiagram)}
 
       ${renderCircleCompare(question.circleCompare)}
 
