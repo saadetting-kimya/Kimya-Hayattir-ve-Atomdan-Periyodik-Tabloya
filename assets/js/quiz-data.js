@@ -1047,7 +1047,20 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "MEB'in 'Bilgi Görseli 1.1' şemasına göre kimya alanında eğitim gören bireyler sekiz farklı geniş alanda çalışabilir. Bu alanlardan biri boya, plastik, gübre, reçine, petrokimya, deterjan ve kozmetik gibi çeşitli ürünlerin sentezi, formülasyonu ve üretimini kapsar.",
+    careerMap: {
+      caption: "Kimya alanında eğitim gören bireylerin çalışabileceği sekiz geniş alan",
+      areas: [
+        { label: "Kimya Endüstrisi", detail: "Boya, plastik, gübre, reçine, petrokimya, deterjan, kozmetik" },
+        { label: "Sağlık ve Biyoteknoloji", detail: "Adli kimya, ilaç geliştirme, biyoteknoloji, biyomedikal" },
+        { label: "Çevre ve Sürdürülebilirlik", detail: "Atık yönetimi, su arıtma, yeşil teknolojiler" },
+        { label: "Enerji Sektörü", detail: "Yenilenebilir enerji, pil teknolojileri, yakıt hücreleri" },
+        { label: "Gıda ve İçecek Endüstrisi", detail: "Gıda güvenliği, besin analizi, moleküler gastronomi" },
+        { label: "Eğitim ve Akademik Çalışma", detail: "Öğretmenlik, üniversite öğretim üyeliği" },
+        { label: "Malzeme ve Nanoteknoloji", detail: "Malzeme bilimi, nanoteknoloji, elektronik, kompozit malzeme" },
+        { label: "Agronomi ve Tarım", detail: "Gübre, pestisit, tarım kimyasalları" }
+      ]
+    },
+    context: "Kimya alanında eğitim gören bireyler yukarıdaki sekiz farklı geniş alanda çalışabilir. Bu alanlardan biri boya, plastik, gübre, reçine, petrokimya, deterjan ve kozmetik gibi çeşitli ürünlerin sentezi, formülasyonu ve üretimini kapsar.",
     text: "Yukarıda tanımlanan kariyer alanı hangisidir?",
     options: ["Sağlık ve Biyoteknoloji","Kimya Endüstrisi","Enerji Sektörü","Malzeme ve Nanoteknoloji","Agronomi ve Tarım"],
     correct: 1,
@@ -1056,7 +1069,7 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bilgi Görseli 1.1'deki alanlardan biri; adli kimya, ilaç geliştirme, biyoteknoloji ve biyomedikal alanlarında araştırma ve uygulama yapılmasını kapsar.",
+    context: "Kimya alanındaki sekiz geniş kariyer alanından biri; adli kimya, ilaç geliştirme, biyoteknoloji ve biyomedikal alanlarında araştırma ve uygulama yapılmasını kapsar.",
     text: "Yukarıda tanımlanan kariyer alanı hangisidir?",
     options: ["Çevre ve Sürdürülebilirlik","Kimya Endüstrisi","Sağlık ve Biyoteknoloji","Eğitim ve Akademik Çalışma","Gıda ve İçecek Endüstrisi"],
     correct: 2,
@@ -1065,7 +1078,7 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bilgi Görseli 1.1'deki alanlardan biri; atık yönetimi, su arıtma teknolojileri, biyolojik çeşitliliğin korunması ve yeşil teknolojilerin geliştirilmesini kapsar.",
+    context: "Kimya alanındaki sekiz geniş kariyer alanından biri; atık yönetimi, su arıtma teknolojileri, biyolojik çeşitliliğin korunması ve yeşil teknolojilerin geliştirilmesini kapsar.",
     text: "Yukarıda tanımlanan kariyer alanı hangisidir?",
     options: ["Kimya Endüstrisi","Enerji Sektörü","Çevre ve Sürdürülebilirlik","Agronomi ve Tarım","Malzeme ve Nanoteknoloji"],
     correct: 2,
@@ -1074,7 +1087,7 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bilgi Görseli 1.1'deki alanlardan biri; enerji üretimi, yenilenebilir enerji teknolojileri, pil teknolojileri, yakıt hücreleri ve enerji depolama sistemlerini kapsar.",
+    context: "Kimya alanındaki sekiz geniş kariyer alanından biri; enerji üretimi, yenilenebilir enerji teknolojileri, pil teknolojileri, yakıt hücreleri ve enerji depolama sistemlerini kapsar.",
     text: "Yukarıda tanımlanan kariyer alanı hangisidir?",
     options: ["Sağlık ve Biyoteknoloji","Çevre ve Sürdürülebilirlik","Enerji Sektörü","Gıda ve İçecek Endüstrisi","Malzeme ve Nanoteknoloji"],
     correct: 2,
@@ -1083,7 +1096,7 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bilgi Görseli 1.1'deki alanlardan biri; gıda güvenliği, gıda üretimi, besin analizi, aroma geliştirme, gıda teknolojisi ve moleküler gastronomi alanlarında araştırma ve uygulamayı kapsar.",
+    context: "Kimya alanındaki sekiz geniş kariyer alanından biri; gıda güvenliği, gıda üretimi, besin analizi, aroma geliştirme, gıda teknolojisi ve moleküler gastronomi alanlarında araştırma ve uygulamayı kapsar.",
     text: "Yukarıda tanımlanan kariyer alanı hangisidir?",
     options: ["Gıda ve İçecek Endüstrisi","Agronomi ve Tarım","Kimya Endüstrisi","Sağlık ve Biyoteknoloji","Eğitim ve Akademik Çalışma"],
     correct: 0,
@@ -1092,7 +1105,7 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bilgi Görseli 1.1'deki alanlardan biri; öğretmenlik ve üniversitede öğretim üyeliği yapmayı kapsar.",
+    context: "Kimya alanındaki sekiz geniş kariyer alanından biri; öğretmenlik ve üniversitede öğretim üyeliği yapmayı kapsar.",
     text: "Yukarıda tanımlanan kariyer alanı hangisidir?",
     options: ["Agronomi ve Tarım","Malzeme ve Nanoteknoloji","Sağlık ve Biyoteknoloji","Kimya Endüstrisi","Eğitim ve Akademik Çalışma"],
     correct: 4,
@@ -1101,7 +1114,7 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bilgi Görseli 1.1'deki alanlardan biri; malzeme bilimi, nanoteknoloji ve nanomalzeme üretimi, elektronik ve kompozit malzeme geliştirmeyi kapsar.",
+    context: "Kimya alanındaki sekiz geniş kariyer alanından biri; malzeme bilimi, nanoteknoloji ve nanomalzeme üretimi, elektronik ve kompozit malzeme geliştirmeyi kapsar.",
     text: "Yukarıda tanımlanan kariyer alanı hangisidir?",
     options: ["Eğitim ve Akademik Çalışma","Enerji Sektörü","Çevre ve Sürdürülebilirlik","Gıda ve İçecek Endüstrisi","Malzeme ve Nanoteknoloji"],
     correct: 4,
@@ -1110,7 +1123,7 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "Bilgi Görseli 1.1'deki alanlardan biri; gübre, pestisit ve tarım kimyasalları gibi ürünlerin üretimi ile tarım verimliliğini geliştirme çalışmalarını kapsar.",
+    context: "Kimya alanındaki sekiz geniş kariyer alanından biri; gübre, pestisit ve tarım kimyasalları gibi ürünlerin üretimi ile tarım verimliliğini geliştirme çalışmalarını kapsar.",
     text: "Yukarıda tanımlanan kariyer alanı hangisidir?",
     options: ["Agronomi ve Tarım","Kimya Endüstrisi","Enerji Sektörü","Sağlık ve Biyoteknoloji","Malzeme ve Nanoteknoloji"],
     correct: 0,
@@ -1328,7 +1341,7 @@ export const QUIZ = {
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.3 — Kimya alanındaki kariyer olanaklarını araştırıp sınıflandırabilme",
-    context: "'Bilgi Görseli 1.1' kimya alanında eğitim gören bireylerin çalışabileceği sekiz farklı alanı göstermektedir.",
+    context: "Kimya alanında eğitim gören bireylerin çalışabileceği sekiz farklı geniş alan vardır (Kimya Endüstrisi, Sağlık ve Biyoteknoloji, Çevre ve Sürdürülebilirlik, Enerji Sektörü, Gıda ve İçecek Endüstrisi, Eğitim ve Akademik Çalışma, Malzeme ve Nanoteknoloji, Agronomi ve Tarım).",
     statements: ["Bu sekiz alan birbirinden tamamen bağımsızdır, bir kişi yalnızca birinde çalışabilir.","Bu sekiz alan, kimya eğitiminin sanayi, sağlık, çevre, enerji, gıda, eğitim, malzeme ve tarım gibi çok farklı sektörlerde iş imkânı sunduğunu gösterir.","Bu sekiz alandan yalnızca 'Eğitim ve Akademik Çalışma' gerçek bir kariyer seçeneğidir, diğerleri örnek amaçlıdır."],
     text: "Yukarıdaki ifadelerden hangisi doğrudur?",
     options: ["Yalnız II","Yalnız I","I ve III","II ve III","I, II ve III"],
@@ -1378,7 +1391,7 @@ export const QUIZ = {
     text: "Bu görev, MEB'in kariyer alanları sınıflandırmasına göre hangi geniş kariyer alanının İÇİNDE yer alır?",
     options: ["Sağlık ve Biyoteknoloji (adli kimya bu alanın kapsamında sayılmıştır)","Kimya Endüstrisi","Agronomi ve Tarım","Eğitim ve Akademik Çalışma","Bu görev sekiz kariyer alanından hiçbirinin kapsamında değildir"],
     correct: 0,
-    explain: "MEB kitabındaki Bilgi Görseli 1.1'de adli kimya, 'Sağlık ve Biyoteknoloji' alanının açıklamasında açıkça sayılmıştır."
+    explain: "Adli kimya, MEB kitabında 'Sağlık ve Biyoteknoloji' alanının açıklamasında açıkça sayılmıştır."
   },
   {
     difficulty: "zor",

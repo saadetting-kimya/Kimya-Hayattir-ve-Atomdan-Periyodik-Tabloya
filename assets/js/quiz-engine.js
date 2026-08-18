@@ -555,6 +555,36 @@ function renderCycleDiagram(data) {
   `;
 }
 
+/* =========================================================
+   KATEGORİ HARİTASI — çok sayıda kategoriyi (ör. kariyer
+   alanlarını) renk kodlu kartlar hâlinde bir arada gösteren
+   jenerik bir grid görünümü. Öğrenci dışarıdan bir kaynağa
+   ("Bilgi Görseli X" gibi) bakmak zorunda kalmadan, sorunun
+   içinde TÜM kategorileri bir arada görebilsin diye kullanılır.
+   ========================================================= */
+function renderCareerMap(data) {
+
+  if (!data || !Array.isArray(data.areas) || data.areas.length === 0) return "";
+
+  const colors = ["var(--gas)", "var(--bad)", "var(--good)", "var(--heat)", "var(--mol-a)", "var(--mol-b)", "var(--gas-dark)", "var(--heat-dark)"];
+
+  const cards = data.areas.map((a, i) => `
+    <div class="cmap-card" style="border-left-color:${colors[i % colors.length]}">
+      <div class="cmap-label">${escapeHTML(a.label)}</div>
+      ${a.detail ? `<div class="cmap-detail">${escapeHTML(a.detail)}</div>` : ""}
+    </div>
+  `).join("");
+
+  const caption = data.caption ? `<div class="cmap-caption">${escapeHTML(data.caption)}</div>` : "";
+
+  return `
+    <div class="cmap-wrap">
+      ${caption}
+      <div class="cmap-grid">${cards}</div>
+    </div>
+  `;
+}
+
 function renderCircleCompare(data) {
 
   if (!data || !Array.isArray(data.items) || data.items.length === 0) return "";
@@ -2796,6 +2826,8 @@ export function renderQuiz(
       ${renderMoleculeSkeleton(question.moleculeSkeleton)}
 
       ${renderCycleDiagram(question.cycleDiagram)}
+
+      ${renderCareerMap(question.careerMap)}
 
       ${renderCircleCompare(question.circleCompare)}
 
