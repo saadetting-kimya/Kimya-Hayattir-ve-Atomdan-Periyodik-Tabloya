@@ -2168,13 +2168,13 @@ export const QUIZ = {
     context: "Bohr modeli, hidrojen atomunun çizgi spektrumunu başarıyla açıklamasına rağmen zamanla yetersiz bulunarak modern kuantum mekaniksel modelle değiştirilmiştir.",
     statements: [
       "Bohr modeli çok elektronlu atomların spektrumlarını yeterince açıklayamamıştır.",
-      "Bohr modelindeki 'kesin yörünge' fikri, Heisenberg'in belirsizlik ilkesiyle (bir parçacığın hızı ve konumunun aynı anda kesin olarak belirlenemeyeceği ilkesiyle) çelişmiştir.",
+      "Bohr modelindeki, elektronların çekirdek çevresinde kesin ve dairesel yörüngelerde dolandığı fikri, yerini elektronların orbital adı verilen olasılık bölgelerinde bulunduğu günümüz (kuantum mekaniksel) modeline bırakmıştır.",
       "Bohr modeli tamamen hatalı olduğu için hidrojen atomunun spektrumunu da açıklayamaz."
     ],
     text: "Yukarıdaki ifadelerden hangileri Bohr modelinin neden değiştirildiğini doğru açıklar?",
     options: ["Yalnız I", "Yalnız III", "I ve II", "II ve III", "I, II ve III"],
     correct: 2,
-    explain: "Bohr modeli çok elektronlu atomlarda yetersiz kalmış ve 'kesin yörünge' fikri Heisenberg'in belirsizlik ilkesiyle çelişmiştir (I ve II doğru); ancak model hidrojenin spektrumunu başarıyla açıkladığından III yanlıştır — bilimsel modeller tamamen 'yanlış' oldukları için değil, daha kapsamlı açıklama gerektiği için değişir."
+    explain: "Bohr modeli çok elektronlu atomlarda yetersiz kalmış, kesin yörünge fikri de yerini elektronların orbitallerde olasılıksal olarak bulunduğu modern modele bırakmıştır (I ve II doğru); ancak model hidrojenin spektrumunu başarıyla açıkladığından III yanlıştır — bilimsel modeller tamamen 'yanlış' oldukları için değil, daha kapsamlı açıklama gerektiği için değişir."
   },
   {
     difficulty: "kolay",
@@ -2227,20 +2227,20 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Goldstein, katot ışını tüpü deneylerinde katodun arkasına doğru hareket eden pozitif yüklü ışınlar gözlemlemiştir; bu ışınlar tüpteki gazın türüne göre farklı kütle/yük oranı göstermiştir.",
-    text: "Bu gözlemler sonucunda hangi tanecik keşfedilmiştir?",
+    context: "Tablo 1.1'e göre pozitif ışınlar 1886'da E. Goldstein tarafından gözlemlenmiş, bu ışınların atomda var olan pozitif yükten kaynaklandığı ise 1906'da J. J. Thomson tarafından gösterilmiştir.",
+    text: "Bu keşif süreci hangi taneciğin varlığına işaret etmektedir?",
     options: ["Proton", "Nötron", "Elektron", "Pozitron", "Foton"],
     correct: 0,
-    explain: "Goldstein'ın gözlemlediği pozitif yüklü ışınlar (kanal ışınları), protonun keşfine öncülük etmiştir."
+    explain: "Goldstein'ın gözlemlediği pozitif yüklü ışınlar ve Thomson'ın atomda pozitif yükün varlığını göstermesi, protonun keşif sürecinin temelini oluşturur."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Millikan, elektrik yüklü yağ damlacıklarının bir elektrik alanı içindeki hareketini dikkatle ölçerek, damlacıkların taşıdığı yükün her zaman belirli bir temel değerin tam katları şeklinde olduğunu bulmuştur.",
-    text: "Millikan'ın bu deneyle belirlediği büyüklük hangisidir?",
-    options: ["Elektronun kütlesi", "Elektronun yükü", "Protonun kütlesi", "Nötronun yükü", "Atomun toplam hacmi"],
-    correct: 1,
-    explain: "Millikan'ın yağ damlası deneyi, tek bir elektronun taşıdığı elektrik yükünün büyüklüğünü belirlemiştir."
+    context: "Tablo 1.1'e göre elektronun yükü -1,6022×10⁻¹⁹ C, protonun yükü ise +1,6022×10⁻¹⁹ C olarak belirlenmiştir.",
+    text: "Bu verilere göre elektron ve proton arasındaki ilişki için en doğru ifade hangisidir?",
+    options: ["Elektron ve protonun yük büyüklüğü eşittir, yalnızca işaretleri zıttır", "Elektronun yükü protonunkinden büyüktür", "Protonun yükü elektronunkinden büyüktür", "Elektron ve proton aynı işaretli yüke sahiptir", "Elektronun yükü protonun yarısı kadardır"],
+    correct: 0,
+    explain: "Tablodaki değerler, elektron ve protonun yük büyüklüğünün birbirine eşit (1,6022×10⁻¹⁹ C) olduğunu, yalnızca işaretlerinin (eksi/artı) farklı olduğunu gösterir."
   },
   {
     difficulty: "kolay",
@@ -2386,11 +2386,11 @@ export const QUIZ = {
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Millikan'ın yağ damlası deneyinde ölçülen tüm yük değerleri, her zaman belirli bir temel değerin (yaklaşık 1,6×10⁻¹⁹ coulomb) tam sayı katları olarak bulunmuştur; hiçbir zaman bu değerin kesirli bir katı ölçülmemiştir.",
-    text: "Bu gözlem, elektrik yükünün doğasıyla ilgili en doğru hangi çıkarımı destekler?",
-    options: ["Elektrik yükü, sürekli değil kesikli (kuantumlu) bir büyüklüktür", "Elektrik yükü her değeri sürekli olarak alabilir", "Elektrik yükünün bir alt sınırı yoktur", "Yük miktarı damlacığın büyüklüğüne göre rastgele değişir", "Bu gözlem yükün doğasıyla ilgili hiçbir bilgi vermez"],
+    context: "Tablo 1.1'deki kütle değerlerine göre bir protonun kütlesi 1,6726×10⁻²⁴ g, bir nötronun kütlesi 1,6749×10⁻²⁴ g, bir elektronun kütlesi ise yalnızca 9,1096×10⁻²⁸ g'dır (yani bir proton/nötron, bir elektronun kütlesinden yaklaşık 1836 kat daha fazladır).",
+    text: "Bu verilere göre bir atomun kütlesinin büyük kısmı hangi taneciklerden gelir?",
+    options: ["Proton ve nötrondan; çünkü elektronun kütlesi bunlara kıyasla ihmal edilebilecek kadar küçüktür", "Elektrondan; çünkü çekirdeğin dışında en geniş alanı kaplar", "Yalnızca protondan; çünkü tek başına pozitif yüklüdür", "Yalnızca nötrondan; çünkü yüksüzdür", "Üç taneciğin kütleye katkısı birbirine tamamen eşittir"],
     correct: 0,
-    explain: "Ölçülen yüklerin her zaman belirli bir temel değerin tam katları olması, elektrik yükünün sürekli değil kesikli (kuantumlu) birimler hâlinde var olduğunu gösterir."
+    explain: "Tablo 1.1'deki değerler karşılaştırıldığında proton ve nötronun kütlece birbirine çok yakın olduğu, elektronun kütlesinin ise bunlardan yaklaşık 1836 kat küçük olduğu görülür; bu nedenle bir atomun kütlesinin neredeyse tamamı çekirdekteki proton ve nötronlardan gelir."
   },
   {
     difficulty: "orta",
@@ -2550,11 +2550,11 @@ export const QUIZ = {
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir araştırmacı, farklı elementlerin katot ışını tüplerinde her zaman aynı kütle/yük oranına sahip negatif tanecikler ürettiğini; ancak pozitif kanal ışınlarının kütle/yük oranının kullanılan gaza göre değiştiğini gözlemlemiştir.",
-    text: "Bu iki gözlem birlikte değerlendirildiğinde, elektron ve pozitif tanecikler (protonlar) hakkında en doğru çıkarım hangisidir?",
-    options: ["Bu iki gözlem birbiriyle hiçbir şekilde ilişkilendirilemez", "Hem elektron hem pozitif tanecikler her elementte birebir aynıdır", "Elektronun kütle/yük oranının sabit olması, pozitif taneciklerin var olmadığını gösterir", "Elektron tüm maddelerde ortak temel bir taneciktir; pozitif taneciklerin kütlesi ise elementten elemente farklılık gösterir (çünkü farklı sayıda proton/nötron içerirler)", "Pozitif taneciklerin kütlesinin değişmesi, elektronun da değiştiğini gösterir"],
-    correct: 3,
-    explain: "Elektronun kütle/yük oranının sabit olması onun tüm maddelerde ortak temel bir tanecik olduğunu; pozitif taneciklerin (protonların, aslında farklı gazlarda farklı sayıda birleşmiş atom çekirdeklerinin) kütle/yük oranının değişmesi ise bu taneciklerin elementten elemente farklı kütlelere sahip olduğunu gösterir."
+    context: "Tablo 1.1'e göre elektron 1897'de, proton 1906'da keşfedilmişken; nötron ancak 1932'de Chadwick tarafından keşfedilmiştir (Rutherford yüksüz taneciklerin varlığını daha 1913'te öngörmüş olmasına rağmen).",
+    text: "Nötronun, elektron ve protondan onlarca yıl sonra keşfedilmesinin bilimsel nedeni en doğru şekilde hangisidir?",
+    options: ["Nötron elektriksel olarak nötrdür; dönemin elektrik ve manyetik alanlarda sapma ölçümüne dayanan deney yöntemleriyle doğrudan tespit edilemiyordu, bu yüzden varlığı ancak dolaylı yollarla kanıtlanabildi", "Nötron diğer taneciklerden çok daha büyüktür ve gözlemi zordur", "Bilim insanları nötronu aramayı hiç düşünmemiştir", "Nötron atomun dışında bulunduğu için geç fark edilmiştir", "Nötron, keşfedildiği tarihten önce atomda bulunmuyordu"],
+    correct: 0,
+    explain: "Katot ışını ve pozitif ışın gibi erken dönem deneyleri, taneciklerin elektrik/manyetik alanlarda saptırılmasına dayanıyordu. Tablo 1.1'de görüldüğü gibi nötronun bağıl yükü 0'dır; yüksüz bir tanecik bu alanlarda sapma göstermediğinden bu yöntemlerle doğrudan tespit edilemedi ve varlığı ancak Rutherford'un 1913'teki öngörüsünden Chadwick'in 1932'deki deneysel kanıtına uzanan dolaylı bir süreçle kesinleşti."
   },
   {
     difficulty: "zor",
@@ -2600,17 +2600,17 @@ export const QUIZ = {
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    context: "Bir tartışmada şu soru sorulmaktadır: 'Eğer Millikan'ın deneyinde ölçülen yük değerleri sürekli bir aralıkta (herhangi bir ondalık değeri alabilecek şekilde) dağılmış olsaydı, bu durum elektrik yükünün doğası hakkındaki mevcut anlayışı nasıl etkilerdi?'",
-    text: "Bu varsayımsal senaryoya en doğru cevap hangisidir?",
+    context: "Tablo 1.1'e göre elektronun varlığı kesin olarak 1897'de J. J. Thomson tarafından gösterilmiştir. Bu tarihten önce atom, Dalton'ın önerdiği gibi bölünemez, yekpare bir küre olarak kabul ediliyordu.",
+    text: "Elektronun keşfi, hangi yeni atom modelinin ortaya çıkmasına doğrudan zemin hazırlamıştır?",
     options: [
-      "Yükün kesikli (kuantumlu) değil, sürekli bir büyüklük olduğu sonucuna varılırdı; bu, mevcut atom altı parçacık modelini kökten değiştirirdi",
-      "Sonuç değişmezdi, çünkü yükün sürekli mi kesikli mi olduğu deneysel veriyle ilgisizdir",
-      "Bu durumda dahi yükün kesikli olduğu sonucuna varılırdı, veri şekli önemli değildir",
-      "Millikan bu durumda deneyi tamamen durdururdu, hiçbir sonuç çıkarılamazdı",
-      "Sürekli dağılım, yalnızca ölçüm cihazının bozuk olduğu anlamına gelir, teoriyle ilgisizdir"
+      "J. J. Thomson'ın, negatif yüklü elektronların pozitif yüklü bir küre içine gömülü olduğunu öne süren modeli (üzümlü kek modeli)",
+      "Dalton'ın atomu bölünemez katı bir küre olarak tanımladığı model",
+      "Rutherford'un, atomun kütlesinin çekirdekte toplandığı çekirdek modeli",
+      "Bohr'un elektronların belirli katmanlarda dolandığı model",
+      "Modern (kuantum mekaniksel) atom modeli"
     ],
     correct: 0,
-    explain: "Millikan'ın ölçtüğü yüklerin belirli bir temel değerin tam katları (kesikli) olması, elektrik yükünün kuantumlu doğasının temel kanıtıdır; eğer veriler sürekli dağılsaydı bu, yükün kesikli değil sürekli bir büyüklük olduğu sonucunu doğurur ve mevcut parçacık modelini temelden sarsardı."
+    explain: "Elektronun keşfiyle atomun artık bölünemez yekpare bir küre olmadığı, içinde negatif yüklü taneciklerin bulunduğu anlaşıldı; bu bulgu Thomson'ı, pozitif yüklü bir küre içine elektronların gömülü olduğu 'üzümlü kek' modelini önermeye yöneltti."
   },
   {
     difficulty: "zor",
@@ -2624,19 +2624,11 @@ export const QUIZ = {
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.5 — Atom teorilerindeki varsayımları kullanarak bilimsel bilginin değişebilirliğine ilişkin çıkarım yapabilme",
-    table: {
-      headers: ["Element", "Katot ışını deneyinde ölçülen e/m oranı", "Kanal ışını deneyinde ölçülen e/m oranı"],
-      rows: [
-        ["Hidrojen", "1,76 × 10¹¹ C/kg (sabit)", "9,58 × 10⁷ C/kg"],
-        ["Oksijen", "1,76 × 10¹¹ C/kg (sabit)", "6,0 × 10⁶ C/kg"],
-        ["Neon", "1,76 × 10¹¹ C/kg (sabit)", "4,8 × 10⁶ C/kg"]
-      ],
-      caption: "Farklı elementlerle yapılan katot ışını ve kanal ışını deneylerinde ölçülen yük/kütle oranları"
-    },
-    text: "Tablodaki verilere dayanarak, katot ışınları (elektron) ile kanal ışınları (pozitif tanecikler) arasındaki temel fark en doğru şekilde hangisidir?",
-    options: ["Her iki taneciğin de e/m oranı elementten elemente aynı şekilde değişmektedir", "Elektronun e/m oranı hangi element kullanılırsa kullanılsın sabit kalırken, pozitif taneciklerin e/m oranı elementten elemente değişmektedir", "Elektronun e/m oranı elementten elemente değişirken, pozitif taneciklerinki sabittir", "Tablo, iki tanecik türü arasında hiçbir fark olmadığını göstermektedir", "Kanal ışınlarının kütlesi hiçbir zaman ölçülememiştir"],
-    correct: 1,
-    explain: "Tabloda elektronun (katot ışını) e/m oranı tüm elementlerde sabit kalırken, pozitif taneciklerin (kanal ışını) e/m oranı elementten elemente değişmektedir; bu, elektronun evrensel/ortak bir tanecik olduğunu, pozitif taneciklerin ise farklı kütlelere sahip element-özgü yapılar (iyonlaşmış atomlar) olduğunu gösterir."
+    context: "Tablo 1.1'e göre elektronun bağıl yükü -1, protonun bağıl yükü +1'dir; nötron ise elektriksel olarak nötrdür (bağıl yükü 0). Nötr bir atomda proton sayısı ile elektron sayısı birbirine eşittir.",
+    text: "Buna göre nötr bir atomun toplam (net) yükü hakkında en doğru çıkarım hangisidir?",
+    options: ["Toplam yük sıfırdır; çünkü eşit sayıdaki +1 ve -1 bağıl yükler birbirini dengeler", "Toplam yük her zaman pozitiftir; çünkü protonlar çekirdekte toplanmıştır", "Toplam yük her zaman negatiftir; çünkü elektron sayısı protondan fazladır", "Nötronların sayısı toplam yükü belirler", "Toplam yük her zaman proton sayısının iki katıdır"],
+    correct: 0,
+    explain: "Nötr bir atomda proton sayısı elektron sayısına eşittir; her proton +1, her elektron -1 bağıl yük taşıdığından bu yükler birbirini tam olarak dengeler ve atomun net yükü sıfır olur. Nötronlar yüksüz olduğundan bu dengeye katkı sağlamaz."
   },
   {
     difficulty: "zor",
@@ -2697,16 +2689,16 @@ export const QUIZ = {
     text: "Bu üç alt kabuk enerjilerine göre küçükten büyüğe sıralandığında hangi sıralama doğrudur?",
     options: ["2p < 2s < 1s", "1s < 2p < 2s", "2s < 1s < 2p", "1s < 2s < 2p", "Üçü de eşit enerjilidir"],
     correct: 3,
-    explain: "Baş kuantum sayısı (n) küçük olan alt kabuk genellikle daha düşük enerjilidir; aynı n değerinde ise s alt kabuğu p'den daha düşük enerjilidir. Bu nedenle sıralama 1s < 2s < 2p şeklindedir."
+    explain: "Temel enerji seviyesi (n) küçük olan alt kabuk genellikle daha düşük enerjilidir; aynı enerji seviyesinde ise s alt kabuğu p'den daha düşük enerjilidir. Bu nedenle sıralama 1s < 2s < 2p şeklindedir."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir alt kabuğun enerjisi, baş kuantum sayısı (n) ile açısal momentum kuantum sayısının (l) toplamına (n+l kuralı) göre tahmin edilebilir; toplam ne kadar küçükse enerji genellikle o kadar düşüktür.",
-    text: "3s (n=3, l=0) ve 3p (n=3, l=1) alt kabukları karşılaştırıldığında hangisi daha düşük enerjilidir?",
+    context: "MEB'in orbital enerji karşılaştırma etkinliğinde (Etkinlik-1.8), aynı enerji seviyesindeki farklı türden alt kabukların (2s ve 2p gibi) enerjilerinin birbirinden farklı olduğu, s alt kabuğunun her zaman aynı seviyedeki p alt kabuğundan daha düşük enerjili olduğu gösterilmiştir.",
+    text: "Bu örüntüye göre, 3s ve 3p alt kabukları karşılaştırıldığında hangisi daha düşük enerjilidir?",
     options: ["3p", "3s", "İkisi de eşit enerjilidir", "Karşılaştırma yapılamaz", "3p her zaman 3s'den düşüktür"],
     correct: 1,
-    explain: "Aynı baş kuantum sayısına (n=3) sahip alt kabuklarda, açısal momentum kuantum sayısı (l) küçük olan daha düşük enerjilidir; s (l=0) alt kabuğu p'den (l=1) daha düşüktür."
+    explain: "Aynı enerji seviyesindeki (n=3) alt kabuklar arasında s alt kabuğu her zaman p alt kabuğundan daha düşük enerjilidir; diyagonal diyagramda da dolma sırası her zaman ...3s, 3p... şeklindedir."
   },
   {
     difficulty: "kolay",
@@ -2737,7 +2729,7 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir alt kabuktaki orbital sayısı, açısal momentum kuantum sayısına (l) bağlıdır: s alt kabuğunda 1, p alt kabuğunda 3, d alt kabuğunda 5 orbital bulunur.",
+    context: "Bir alt kabuktaki orbital sayısı alt kabuk türüne göre değişir: s alt kabuğunda 1, p alt kabuğunda 3, d alt kabuğunda 5 orbital bulunur.",
     text: "Bir d alt kabuğu en fazla kaç elektron alabilir?",
     options: ["2", "6", "14", "10", "18"],
     correct: 3,
@@ -2764,22 +2756,22 @@ export const QUIZ = {
         { label: "3d", electrons: [0, 0, 0, 0, 0] },
         { label: "4s", electrons: [0] }
       ],
-      caption: "3d ve 4s alt kabukları (n+l kuralına göre karşılaştırma)"
+      caption: "3d ve 4s alt kabukları (diyagonal diyagramdaki dolma sırasına göre karşılaştırma)"
     },
-    context: "3d alt kabuğu için n=3, l=2 olduğundan n+l=5; 4s alt kabuğu için n=4, l=0 olduğundan n+l=4'tür.",
-    text: "n+l kuralına göre bu iki alt kabuktan hangisi daha düşük enerjilidir?",
-    options: ["3d", "4s", "İkisi de eşit enerjilidir", "n+l kuralı bu iki alt kabuk için geçerli değildir", "3d her zaman 4s'den düşüktür"],
+    context: "Diyagonal diyagramda alt kabuklar dolma sırasına göre izlendiğinde ...3p, 4s, 3d, 4p... şeklinde bir sıra ortaya çıkar; yani 4s, 3d'den önce gelir.",
+    text: "Diyagonal diyagramdaki bu sıraya göre 3d ve 4s alt kabuklarından hangisi daha düşük enerjilidir (önce dolar)?",
+    options: ["3d", "4s", "İkisi de eşit enerjilidir", "Diyagonal diyagram bu iki alt kabuk için geçerli değildir", "3d her zaman 4s'den düşüktür"],
     correct: 1,
-    explain: "n+l kuralına göre toplamı küçük olan alt kabuk genellikle daha düşük enerjilidir; 4s'nin n+l değeri (4) 3d'ninkinden (5) küçük olduğundan 4s daha düşük enerjilidir ve önce dolar."
+    explain: "Diyagonal diyagramda izlenen dolma sırasına göre 4s, 3d'den önce gelir; bu nedenle 4s daha düşük enerjilidir ve önce dolar."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir orbitalin enerjisini belirleyen iki temel kuantum sayısı, baş kuantum sayısı (n, orbitalin büyüklüğü/enerji düzeyi) ve açısal momentum kuantum sayısıdır (l, orbitalin şekli).",
-    text: "Aynı baş kuantum sayısına (n) sahip s, p, d alt kabukları enerjilerine göre nasıl sıralanır?",
+    context: "MEB'in orbital enerji karşılaştırmalarında (Etkinlik-1.8), aynı enerji seviyesindeki farklı türden alt kabukların birbirinden farklı bağıl enerjilere sahip olduğu, s alt kabuğunun her zaman en düşük enerjili olduğu gösterilmiştir.",
+    text: "Aynı temel enerji seviyesine (n) sahip s, p, d alt kabukları enerjilerine göre nasıl sıralanır?",
     options: ["d < p < s", "s = p = d", "p < s < d", "s < p < d", "d < s < p"],
     correct: 3,
-    explain: "Aynı n değerinde açısal momentum kuantum sayısı (l) arttıkça enerji de artar; s (l=0) en düşük, p (l=1) ortada, d (l=2) en yüksek enerjilidir."
+    explain: "Aynı enerji seviyesinde s alt kabuğu her zaman en düşük enerjili, d alt kabuğu ise en yüksek enerjilidir; bu sıralama (s < p < d) diyagonal diyagram ve orbital enerji karşılaştırma etkinliklerinde doğrudan gözlemlenir."
   },
   {
     difficulty: "kolay",
@@ -2857,20 +2849,20 @@ export const QUIZ = {
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir s orbitalinin şekli, merkezinde çekirdek bulunan içi dolu bir küreye benzer ve büyüklüğü baş kuantum sayısı (n) arttıkça büyür.",
+    context: "Bir s orbitalinin şekli, merkezinde çekirdek bulunan içi dolu bir küreye benzer ve büyüklüğü temel enerji seviyesi (n) arttıkça büyür.",
     text: "Buna göre 1s ve 2s orbitalleri karşılaştırıldığında hangi ifade doğrudur?",
     options: ["İkisi tamamen aynı büyüklük ve enerjidedir", "1s orbitali 2s'den daha büyük ve daha yüksek enerjilidir", "2s orbitali küresel değil, halter şeklindedir", "2s orbitali 1s'den daha büyük ve daha yüksek enerjilidir", "1s orbitali yalnızca iyonlarda bulunur"],
     correct: 3,
-    explain: "Baş kuantum sayısı (n) arttıkça orbital hem büyür hem de enerjisi artar; bu nedenle 2s orbitali 1s'den daha büyük ve daha yüksek enerjilidir."
+    explain: "Temel enerji seviyesi (n) arttıkça orbital hem büyür hem de enerjisi artar; bu nedenle 2s orbitali 1s'den daha büyük ve daha yüksek enerjilidir."
   },
   {
     difficulty: "kolay",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
     context: "Bir atomun ikinci enerji düzeyinde (n=2) yalnızca s ve p alt kabukları bulunurken, üçüncü enerji düzeyinde (n=3) s, p ve d alt kabukları bulunabilir.",
     text: "Bu bilgiye göre, bir enerji düzeyinde bulunabilecek alt kabuk türü sayısı neye bağlıdır?",
-    options: ["Atomun sıcaklığına", "Yalnızca elektron sayısına", "Çekirdekteki nötron sayısına", "Baş kuantum sayısına (n)", "Atomun bulunduğu fiziksel hâle (katı/sıvı/gaz)"],
+    options: ["Atomun sıcaklığına", "Yalnızca elektron sayısına", "Çekirdekteki nötron sayısına", "Temel enerji seviyesine (n)", "Atomun bulunduğu fiziksel hâle (katı/sıvı/gaz)"],
     correct: 3,
-    explain: "Bir enerji düzeyinde (n) bulunabilecek alt kabuk sayısı ve türü, baş kuantum sayısına bağlıdır (n. düzeyde n farklı alt kabuk türü bulunabilir: n=1 için yalnızca s, n=2 için s ve p, n=3 için s,p,d...)."
+    explain: "Bir enerji düzeyinde (n) bulunabilecek alt kabuk sayısı ve türü, temel enerji seviyesine bağlıdır (n. düzeyde n farklı alt kabuk türü bulunabilir: n=1 için yalnızca s, n=2 için s ve p, n=3 için s,p,d...)."
   },
 
   /* ============ ORTA ============ */
@@ -2879,19 +2871,19 @@ export const QUIZ = {
     difficulty: "orta",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
     table: {
-      headers: ["Alt kabuk", "n", "l", "n + l"],
+      headers: ["Alt kabuk", "Diyagonal diyagramdaki dolma sırası"],
       rows: [
-        ["4s", "4", "0", "4"],
-        ["3d", "3", "2", "5"],
-        ["4p", "4", "1", "5"],
-        ["5s", "5", "0", "5"]
+        ["4s", "6."],
+        ["3d", "7."],
+        ["4p", "8."],
+        ["5s", "9."]
       ],
-      caption: "Dört alt kabuğun n, l ve n+l değerleri"
+      caption: "Diyagonal diyagramda dört alt kabuğun dolma sırasındaki yeri"
     },
-    text: "Tabloya göre, n+l değeri eşit olan 3d, 4p ve 5s alt kabukları arasında enerji sıralaması nasıl belirlenir?",
-    options: ["n+l değeri eşit olan alt kabukların enerjisi karşılaştırılamaz", "n+l değerleri eşit olduğunda, n değeri büyük olan alt kabuk daha düşük enerjilidir", "n+l değerleri eşit olduğunda, n değeri küçük olan alt kabuk daha düşük enerjilidir", "Bu durumda yalnızca l değeri dikkate alınır, n önemsizdir", "n+l değeri eşit olan alt kabuklar her zaman aynı enerjidedir"],
-    correct: 2,
-    explain: "n+l kuralının ikinci bölümüne göre, n+l değerleri eşit olduğunda daha küçük n değerine sahip alt kabuk daha düşük enerjilidir; bu nedenle sıralama 3d < 4p < 5s şeklindedir."
+    text: "Tablodaki dolma sırasına göre 3d, 4p ve 5s alt kabukları arasındaki enerji sıralaması nasıldır?",
+    options: ["3d < 4p < 5s", "5s < 4p < 3d", "Bu üç alt kabuk karşılaştırılamaz", "Üçü de eşit enerjilidir", "Yalnızca ilk iki alt kabuk karşılaştırılabilir"],
+    correct: 0,
+    explain: "Diyagonal diyagramda önce dolan alt kabuk daha düşük enerjilidir; tabloya göre sıralama 3d < 4p < 5s şeklindedir."
   },
   {
     difficulty: "orta",
@@ -2905,27 +2897,27 @@ export const QUIZ = {
     },
     context: "Görseldeki diyagramda 4s alt kabuğu dolu (2 elektron) iken 3d alt kabuğu henüz boştur; bu, Aufbau ilkesine göre 4s'nin 3d'den önce dolduğunu yansıtır.",
     text: "Bu durum, orbital enerjileriyle ilgili hangi genellemeyi doğrudan destekler?",
-    options: ["3d alt kabuğu her zaman 4s'den önce dolar", "Baş kuantum sayısı her zaman tek başına enerji sıralamasını belirler", "Baş kuantum sayısı büyük olan bir alt kabuk (3d), baş kuantum sayısı küçük olan başka bir alt kabuktan (4s) daha yüksek enerjili olabilir", "4s ve 3d alt kabukları her zaman eşit enerjilidir", "Bu diyagram, Aufbau ilkesiyle çelişmektedir"],
+    options: ["3d alt kabuğu her zaman 4s'den önce dolar", "Temel enerji seviyesi her zaman tek başına enerji sıralamasını belirler", "Temel enerji seviyesi büyük olan bir alt kabuk (3d), temel enerji seviyesi küçük olan başka bir alt kabuktan (4s) daha yüksek enerjili olabilir", "4s ve 3d alt kabukları her zaman eşit enerjilidir", "Bu diyagram, Aufbau ilkesiyle çelişmektedir"],
     correct: 2,
-    explain: "4s'nin (n=4) 3d'den (n=3) önce dolması, yalnızca baş kuantum sayısına bakarak enerji sıralaması yapılamayacağını; n+l kuralı gibi ek bir ölçütün gerekli olduğunu gösterir."
+    explain: "4s'nin (n=4) 3d'den (n=3) önce dolması, yalnızca temel enerji seviyesine bakarak enerji sıralaması yapılamayacağını; diyagonal diyagram gibi ek bir görsel aracın gerekli olduğunu gösterir."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir atomun elektron dizilimi belirlenirken, alt kabuklar genellikle şu sırayla doldurulur: 1s, 2s, 2p, 3s, 3p, 4s, 3d, 4p, 5s, 4d, 5p, 6s, 4f, 5d...",
+    context: "Bir atomun elektron dizilimi belirlenirken, alt kabuklar diyagonal diyagramda izlenen şu sırayla doldurulur: 1s, 2s, 2p, 3s, 3p, 4s, 3d, 4p, 5s, 4d, 5p, 6s, 4f, 5d...",
     text: "Bu sıralamada, 4f alt kabuğunun 6s'den sonra gelmesi, hangi genellemeyle en iyi açıklanır?",
-    options: ["n+l kuralına göre 4f'nin (n+l=7) enerjisinin 6s'ninkinden (n+l=6) yüksek olması", "f alt kabuklarının her zaman en düşük enerjili olması", "6s alt kabuğunun elektron alamaması", "Sıralamanın rastgele belirlenmiş olması", "4f'nin baş kuantum sayısının 6s'den büyük olması"],
-    correct: 0,
-    explain: "4f alt kabuğunun n+l değeri (4+3=7), 6s'ninkinden (6+0=6) büyük olduğundan n+l kuralına göre 4f daha yüksek enerjilidir ve 6s'den sonra dolar."
+    options: ["f alt kabuklarının her zaman en düşük enerjili olması", "6s alt kabuğunun elektron alamaması", "Sıralamanın rastgele belirlenmiş olması", "4f alt kabuğunun 6s'den daha yüksek enerjili olması ve diyagonal diyagramda daha sonra izlenmesi", "4f'nin temel enerji seviyesinin 6s'den büyük olması"],
+    correct: 3,
+    explain: "Diyagonal diyagramda izlenen dolma sırasında 4f, 6s'den sonra gelir; bu, 4f alt kabuğunun 6s'den daha yüksek enerjili olduğu ve daha sonra dolduğu anlamına gelir."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir atomun 3p alt kabuğundaki elektronlar, 3s alt kabuğundaki elektronlara göre çekirdekten ortalama olarak daha uzakta bulunma eğilimindedir ve çekirdek çekiminden daha az etkilenir (daha fazla perdelenir).",
-    text: "Bu bilgi, 3s ve 3p alt kabuklarının enerjileri arasındaki farkı en doğru şekilde nasıl açıklar?",
-    options: ["3s ve 3p alt kabukları çekirdekten aynı uzaklıkta bulunur", "Çekirdekten uzaklık, orbital enerjisini hiçbir şekilde etkilemez", "3s alt kabuğu her zaman 3p'den daha yüksek enerjilidir", "Perdelenme yalnızca d ve f orbitallerinde görülür", "Çekirdekten daha uzakta ve daha az çekim hisseden 3p, 3s'den daha yüksek enerjilidir"],
+    context: "Kalsiyumun (Ca) atom numarası 20'dir. Diyagonal diyagramdaki dolma sırası (...2s, 2p, 3s, 3p, 4s...) izlenerek 20 elektron alt kabuklara yerleştirilecektir.",
+    text: "Kalsiyumun elektron dizilimi, [Ar] (argon, 18 elektron) kısaltmasıyla nasıl yazılır?",
+    options: ["[Ar] 3d²", "[Ar] 3p⁸", "[Ar] 4s¹ 3d¹", "[Ne] 3s² 3p⁶ 4s²", "[Ar] 4s²"],
     correct: 4,
-    explain: "Çekirdekten daha uzakta bulunan ve çekirdek çekiminden daha fazla perdelenen elektronlar daha yüksek enerjiye sahiptir; bu nedenle 3p, 3s'den daha yüksek enerjilidir."
+    explain: "Argon konfigürasyonundan (18 elektron) sonra kalan 2 elektron, diyagonal diyagramdaki dolma sırasına göre 3d'den önce gelen 4s alt kabuğuna yerleşir; kalsiyumun dizilimi [Ar] 4s²'dir."
   },
   {
     difficulty: "orta",
@@ -2945,29 +2937,35 @@ export const QUIZ = {
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir atomun elektron dizilimi yazılırken bazı kaynaklar alt kabukları enerji sırasına göre (1s 2s 2p 3s 3p 4s 3d...), bazı kaynaklar ise baş kuantum sayısına göre gruplandırarak (1s 2s 2p 3s 3p 3d 4s...) yazar.",
+    context: "Bir atomun elektron dizilimi yazılırken bazı kaynaklar alt kabukları enerji sırasına göre (1s 2s 2p 3s 3p 4s 3d...), bazı kaynaklar ise temel enerji seviyesine göre gruplandırarak (1s 2s 2p 3s 3p 3d 4s...) yazar.",
     text: "Bu iki yazım biçimi arasındaki fark en doğru şekilde nasıl açıklanır?",
     options: ["Enerji sırasına göre yazım yalnızca iyonlar için kullanılır", "İki yazım biçiminden biri kesinlikle yanlıştır", "Enerji sırasına göre yazım doldurulma sırasını, n'ye göre gruplandırma ise elektronların nihai olarak hangi düzeyde bulunduğunu vurgular; ikisi de aynı elektron sayısını farklı düzenlemeyle sunar", "n'ye göre gruplandırma, farklı bir atomu tanımlar", "Bu iki biçim arasında hiçbir sistematik ilişki yoktur"],
     correct: 2,
-    explain: "Elektronlar Aufbau ilkesine göre enerji sırasıyla (...4s 3d...) doldurulur; ancak dizilim çoğu zaman okunabilirlik için baş kuantum sayısına göre gruplandırılarak (...3d 4s...) yeniden yazılır. İkisi de aynı fiziksel durumu, farklı sunum sırasıyla ifade eder."
+    explain: "Elektronlar Aufbau ilkesine göre enerji sırasıyla (...4s 3d...) doldurulur; ancak dizilim çoğu zaman okunabilirlik için temel enerji seviyesine göre gruplandırılarak (...3d 4s...) yeniden yazılır. İkisi de aynı fiziksel durumu, farklı sunum sırasıyla ifade eder."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Hidrojen atomunda (tek elektronlu sistemde) bir orbitalin enerjisi yalnızca baş kuantum sayısına (n) bağlıdır; aynı n değerine sahip s, p, d alt kabukları hidrojen atomunda eşit enerjilidir. Ancak çok elektronlu atomlarda bu alt kabuklar arasında belirgin enerji farkı oluşur.",
-    text: "Çok elektronlu atomlarda aynı n değerindeki alt kabuklar arasında enerji farkı oluşmasının temel nedeni nedir?",
-    options: ["Alt kabuk şekillerinin çok elektronlu atomlarda değişmesi", "Çok elektronlu atomlarda çekirdek yükünün sürekli değişmesi", "Hidrojen atomunda elektron-elektron etkileşimi olduğu, çok elektronlu atomlarda ise olmadığı", "Elektron-elektron itmesi ve perdelenme etkisinin farklı şekillere sahip alt kabukları farklı derecede etkilemesi", "Bu fark yalnızca ölçüm hatasından kaynaklanır"],
-    correct: 3,
-    explain: "Çok elektronlu atomlarda, iç kabuktaki elektronlar dış kabuktaki elektronları farklı derecede perdeler (s elektronları çekirdeğe daha yakın bulunma olasılığı taşıdığından daha az perdelenir); bu, aynı n değerindeki s, p, d alt kabukları arasında enerji farkı oluşturur."
+    orbitalBoxes: {
+      subshells: [
+        { label: "2p", electrons: [1, 1, 1] }
+      ],
+      caption: "Üç elektronun 2p alt kabuğuna yerleşim biçimi"
+    },
+    context: "Görseldeki 2p alt kabuğunda 3 elektron, üç orbitale de önce teker teker (eşleşmeden) ve aynı yönde yerleştirilmiştir.",
+    text: "Bu yerleşim biçimi hangi kuralın doğrudan bir uygulamasıdır?",
+    options: ["Hund kuralı: eş enerjili orbitallere elektronlar önce ayrı ayrı, mümkün olduğunca az eşleşerek yerleşir", "Pauli dışlama ilkesi: bir orbitalde en fazla 2 elektron bulunabilir", "Aufbau ilkesi: elektronlar en düşük enerjili boş orbitale önce yerleşir", "Bu yerleşim hiçbir kurala uymamaktadır", "Bu yerleşim yalnızca iyonlarda görülür"],
+    correct: 0,
+    explain: "Hund kuralına göre eş enerjili (dejenere) orbitallere elektronlar önce teker teker, aynı yönde spinle yerleşir; ancak bu üç orbitalin hepsi dolduktan sonra eşleşme başlar. Görseldeki 2p³ dizilimi bu kuralın doğrudan bir örneğidir."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir orbital enerji diyagramında 5s alt kabuğunun 4d'den önce, 4d'nin ise 5p'den önce dolduğu gösterilmektedir (5s < 4d < 5p).",
-    text: "Bu sıralama n+l kuralıyla test edildiğinde tutarlı mıdır?",
-    options: ["n+l kuralı bu üç alt kabuk için hesaplanamaz", "Evet; 5s (n+l=5), 4d (n+l=6) ve 5p (n+l=6, n=5) sıralaması n+l kuralıyla tutarlıdır (eşitlikte küçük n önce gelir)", "Hayır; n+l kuralı yalnızca ilk 3 enerji düzeyi için geçerlidir", "Hayır; n+l kuralına göre 4d, 5s'den önce dolmalıdır", "Sıralama n+l kuralıyla hiçbir ilişki taşımaz"],
+    context: "Diyagonal diyagramda alt kabuklar izlendiğinde 5s alt kabuğunun 4d'den önce, 4d'nin ise 5p'den önce dolduğu görülür (5s < 4d < 5p).",
+    text: "Bu sıralama, diyagonal diyagramın genel işleyişiyle tutarlı mıdır?",
+    options: ["Hayır; diyagramda 4d her zaman 5s'den önce gelir", "Evet; diyagonal diyagram alt kabukları köşegenler boyunca izleyerek tam olarak bu sırayı (5s, 4d, 5p) verir", "Hayır; diyagram yalnızca ilk 3 enerji düzeyi için tanımlıdır", "Diyagram bu üç alt kabuk için hiçbir sıralama vermez", "Sıralama diyagramla hiçbir ilişki taşımaz"],
     correct: 1,
-    explain: "5s: n+l=5+0=5; 4d: n+l=4+2=6; 5p: n+l=5+1=6. 5s en düşük n+l değerine sahip olduğundan ilk dolar; 4d ve 5p eşit n+l değerine sahip olduğundan küçük n'ye sahip 4d önce dolar — bu, verilen sıralamayla tam olarak örtüşür."
+    explain: "Diyagonal diyagramda köşegenler boyunca izlenen dolma sırası tam olarak 5s, 4d, 5p şeklindedir; verilen sıralama diyagramın işleyişiyle birebir tutarlıdır."
   },
   {
     difficulty: "orta",
@@ -3000,47 +2998,66 @@ export const QUIZ = {
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir atomun 2p alt kabuğundaki üç orbital (2px, 2py, 2pz), uzayda birbirine dik üç eksen boyunca yönlenmiştir; şekilleri ve enerjileri özdeştir, yalnızca yönelimleri farklıdır.",
-    text: "Bu üç orbitalin özdeş enerjiye sahip olmasının temel nedeni nedir?",
-    options: ["Enerjinin yalnızca orbital şekline değil, orbitalin rengine bağlı olması", "Üçünün farklı çekirdek yüküne sahip olması", "Üçünün farklı sayıda elektron içermesi", "Bu üç orbitalin gerçekte tek bir orbital olması", "Üçünün de aynı baş kuantum sayısı (n) ve aynı açısal momentum kuantum sayısına (l) sahip olması, yalnızca manyetik kuantum sayısının farklı olması"],
-    correct: 4,
-    explain: "px, py, pz orbitalleri aynı n ve l değerine sahiptir; yalnızca manyetik kuantum sayısı (yönelim) farklıdır. Enerji n ve l'ye bağlı olduğundan, bu üç orbital özdeş enerjilidir (dejenere)."
+    orbitalShapes: {
+      title: "2p Alt Kabuğunun Üç Orbitali",
+      items: [
+        { type: "p", label: "2pₓ" },
+        { type: "p", label: "2p_y" },
+        { type: "p", label: "2p_z" }
+      ]
+    },
+    context: "Görseldeki üç orbital aynı 2p alt kabuğuna aittir; şekilleri ve büyüklükleri özdeştir, yalnızca uzaydaki yönelimleri (x, y, z eksenleri) farklıdır.",
+    text: "Bu üç orbitalin özdeş enerjiye sahip olmasının en iyi açıklaması hangisidir?",
+    options: ["Üçünün farklı çekirdek yüküne sahip olması", "Üçünün farklı sayıda elektron içermesi", "Bu üç orbitalin gerçekte tek bir orbital olması", "Üçü de aynı alt kabuğa (2p) ait olduğu için özdeş enerjilidir; aralarındaki tek fark uzaydaki yönelim eksenidir", "Orbitallerin rengi enerjiyi belirler"],
+    correct: 3,
+    explain: "2px, 2py, 2pz orbitalleri aynı alt kabuğa (2p) aittir ve enerjileri özdeştir (dejenere); MEB'in Etkinlik-1.8 görsellerinde de görüldüğü gibi aralarındaki tek fark, uzayda hangi eksen boyunca yönlendikleridir."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir atomun elektron dizilimi belirlenirken önce alt kabuklar enerji sırasına göre doldurulur, ardından dizilim genellikle baş kuantum sayısına göre yeniden gruplandırılarak yazılır. Örneğin demirin (Fe, 26 elektron) dolma sırası ...4s 3d... iken, yazım sırası genellikle ...3d 4s... şeklindedir.",
+    context: "Bir atomun elektron dizilimi belirlenirken önce alt kabuklar enerji sırasına göre doldurulur, ardından dizilim genellikle temel enerji seviyesine göre yeniden gruplandırılarak yazılır. Örneğin demirin (Fe, 26 elektron) dolma sırası ...4s 3d... iken, yazım sırası genellikle ...3d 4s... şeklindedir.",
     text: "Bu iki farklı sıralama (dolma sırası ve yazım sırası) neden farklıdır?",
-    options: ["Dolma sırası yalnızca iyonlar için geçerlidir", "İki sıra arasındaki fark bir yazım hatasından kaynaklanır", "Dolma sırası fiziksel süreci (hangi orbitalin önce elektron aldığını) yansıtırken, yazım sırası okunabilirlik için elektronları baş kuantum sayısına göre gruplandırır", "Yazım sırası, atomun gerçek fiziksel durumunu değiştirir", "Bu iki sıralama arasında hiçbir sistematik neden yoktur"],
+    options: ["Dolma sırası yalnızca iyonlar için geçerlidir", "İki sıra arasındaki fark bir yazım hatasından kaynaklanır", "Dolma sırası fiziksel süreci (hangi orbitalin önce elektron aldığını) yansıtırken, yazım sırası okunabilirlik için elektronları temel enerji seviyesine göre gruplandırır", "Yazım sırası, atomun gerçek fiziksel durumunu değiştirir", "Bu iki sıralama arasında hiçbir sistematik neden yoktur"],
     correct: 2,
-    explain: "Elektronlar fiziksel olarak enerji sırasına göre (Aufbau ilkesi, ör. 4s önce 3d) yerleşir; ancak dizilim yazılırken genellikle okunabilirlik ve kimyasal yorumlama kolaylığı için baş kuantum sayısına göre gruplandırılır (3d, 4s'den önce yazılır). Bu, atomun fiziksel durumunu değiştirmez, yalnızca sunum biçimidir."
+    explain: "Elektronlar fiziksel olarak enerji sırasına göre (Aufbau ilkesi, ör. 4s önce 3d) yerleşir; ancak dizilim yazılırken genellikle okunabilirlik ve kimyasal yorumlama kolaylığı için temel enerji seviyesine göre gruplandırılır (3d, 4s'den önce yazılır). Bu, atomun fiziksel durumunu değiştirmez, yalnızca sunum biçimidir."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir orbital enerji karşılaştırmasında, aynı baş kuantum sayısına (n=4) sahip 4s, 4p, 4d ve 4f alt kabukları söz konusudur.",
+    context: "Aynı temel enerji seviyesine (n=4) sahip 4s, 4p, 4d ve 4f alt kabukları söz konusudur; MEB'in orbital enerji karşılaştırmalarında aynı seviyedeki alt kabukların s'den f'ye doğru artan enerjiye sahip olduğu gösterilir.",
     text: "Bu dört alt kabuk enerjilerine göre küçükten büyüğe nasıl sıralanır?",
     options: ["Dördü de eşit enerjilidir", "4f < 4d < 4p < 4s", "4s < 4d < 4p < 4f", "4s < 4p < 4d < 4f", "4p < 4s < 4f < 4d"],
     correct: 3,
-    explain: "Aynı n değerinde açısal momentum kuantum sayısı (l) arttıkça enerji artar: s(l=0) < p(l=1) < d(l=2) < f(l=3); bu nedenle sıralama 4s < 4p < 4d < 4f şeklindedir."
+    explain: "Aynı enerji seviyesinde alt kabuklar s < p < d < f şeklinde artan enerjiye sahiptir; bu sıralama diyagonal diyagram ve orbital enerji karşılaştırma etkinliklerinde (Etkinlik-1.8) gözlemlenen örüntüyle tutarlıdır."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğretim aracında, bir atomun temel hâl elektron dizilimini bulmak için 'diyagonal kural' adı verilen bir görsel yöntem kullanılır: alt kabuklar köşegen çizgiler boyunca izlenerek doğru dolma sırası elde edilir.",
-    text: "Diyagonal kuralın temelde hangi matematiksel ilkeyle örtüştüğü söylenebilir?",
-    options: ["n+l kuralıyla; her iki yöntem de aynı enerji sıralamasını farklı görsel/sayısal araçlarla ifade eder", "Yalnızca baş kuantum sayısıyla, l değerini hiç dikkate almaz", "Yalnızca elektron sayısıyla, kuantum sayılarıyla ilgisizdir", "Pauli dışlama ilkesiyle, enerji sıralamasıyla ilgisizdir", "Diyagonal kural, n+l kuralıyla çelişen farklı bir sonuç verir"],
+    orbitalBoxes: {
+      subshells: [
+        { label: "3p", electrons: [2, 1, 0] }
+      ],
+      caption: "Beş elektronun bir 3p⁵ dizilimi için önerilen (hatalı) yerleşimi"
+    },
+    context: "Görseldeki 3p⁵ dizilimi denemesinde elektronlar önce iki orbitali eşleştirip üçüncü orbitali boş bırakacak, dördüncü elektronu tek bırakacak şekilde yerleştirilmiştir.",
+    text: "Bu yerleşim hangi kuralı ihlal etmektedir?",
+    options: ["Hund kuralını; eş enerjili orbitaller doldurulurken önce her orbitale birer elektron konulmalı, eşleşme daha sonra başlamalıdır", "Pauli dışlama ilkesini; bir orbitalde ikiden fazla elektron bulunmaktadır", "Aufbau ilkesini; elektronlar 3p'den önce 3d'ye yerleştirilmiştir", "Hiçbir kuralı ihlal etmemektedir, bu geçerli bir dizilimdir", "Bu diyagram fiziksel olarak imkânsız bir durumdur"],
     correct: 0,
-    explain: "Diyagonal kural (köşegen kuralı), n+l kuralının görsel bir temsilidir; her iki yöntem de alt kabukları aynı mantıkla (küçük n+l önce, eşitlikte küçük n önce) sıralar."
+    explain: "Hund kuralına göre eş enerjili orbitaller doldurulurken elektronlar önce tüm orbitallere teker teker, aynı yönde spinle yerleştirilir; bir orbital erken eşleştirilip diğeri boş bırakılamaz. Görseldeki dizilim bu sırayı ihlal etmektedir; doğrusu 3p⁵ için [↑↓][↑][↑] şeklindedir."
   },
   {
     difficulty: "orta",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir atomun 3s orbitali, elektronun çekirdeğe çok yakın küçük bir bölgede bulunma olasılığına ek olarak, çekirdekten uzakta ikincil küçük olasılık bölgeleri de gösterir (düğüm yüzeyleri arasında); bu, 2s ve 1s orbitallerinde görülmeyen bir özelliktir.",
-    text: "Bu 'düğüm yüzeyi' sayısındaki artışın baş kuantum sayısıyla (n) ilişkisi en doğru şekilde nasıl ifade edilir?",
-    options: ["Baş kuantum sayısı arttıkça bir orbitaldeki düğüm yüzeyi sayısı da artar", "Düğüm yüzeyi sayısı, baş kuantum sayısından tamamen bağımsızdır", "Düğüm yüzeyi yalnızca p orbitallerinde bulunur, s orbitallerinde hiç bulunmaz", "Baş kuantum sayısı arttıkça düğüm yüzeyi sayısı azalır", "Düğüm yüzeyi sayısı, elektronun spinine bağlıdır"],
-    correct: 0,
-    explain: "Bir orbitaldeki düğüm yüzeyi (elektron bulunma olasılığının sıfır olduğu bölge) sayısı, baş kuantum sayısı (n) arttıkça artar; bu, orbitalin karmaşıklığının ve enerjisinin n ile birlikte arttığının bir göstergesidir."
+    orbitalShapes: [
+      { type: "s", label: "Şekil 1" },
+      { type: "d", label: "Şekil 2" },
+      { type: "p", label: "Şekil 3" }
+    ],
+    context: "Görseldeki üç şekil, MEB'in Etkinlik-1.8'inde gösterilen orbital sınır yüzeylerinden alınmıştır: küresel, yonca yapraklı (dört loblu) ve halter (iki loblu) şekiller.",
+    text: "Şekil 2'deki yonca yapraklı (dört loblu) görünüm hangi orbital türüne aittir?",
+    options: ["s orbitaline", "p orbitaline", "d orbitaline", "Bu şekil hiçbir orbital türüne ait değildir", "Yalnızca iyonlarda görülen özel bir şekildir"],
+    correct: 2,
+    explain: "d orbitalleri, MEB'in Etkinlik-1.8 görsellerinde de gösterildiği gibi çoğunlukla dört loblu (yonca yapraklı) bir sınır yüzeyine sahiptir; s orbitali küresel, p orbitali ise iki loblu (halter) şekildedir."
   },
   {
     difficulty: "orta",
@@ -3049,7 +3066,7 @@ export const QUIZ = {
     text: "Bu yaygın kavram yanılgısı neden hatalıdır?",
     options: ["Çünkü dolma sırası enerjiye göre belirlenir; bazı yüksek n'li alt kabuklar (örn. 4s), bazı düşük n'li alt kabuklardan (örn. 3d) önce dolabilir", "Çünkü bu yanılgı aslında doğrudur, tüm kabuklar sırayla tam dolar", "Çünkü elektronlar hiçbir zaman belirli bir sıraya göre dolmaz, tamamen rastgeledir", "Çünkü n=1 kabuğu hiçbir zaman tam dolamaz", "Çünkü bu yanılgı yalnızca iyonlar için geçerlidir, nötr atomlar için doğrudur"],
     correct: 0,
-    explain: "Elektron dolma sırası, kabuk (n) bazında değil alt kabuk (n+l) bazında enerjiye göre belirlenir; bu nedenle 4s gibi bir alt kabuk, 3d gibi daha düşük n'li fakat daha yüksek enerjili bir alt kabuktan önce dolabilir — n=1 kabuğunun tamamen dolması, n=2'ye geçiş için ön koşul değildir (zaten n=1 yalnızca 1s içerir ve hızla dolar)."
+    explain: "Elektron dolma sırası, temel enerji seviyesi (kabuk) bazında değil alt kabuk enerjisi bazında (diyagonal diyagramda izlenen sırayla) belirlenir; bu nedenle 4s gibi bir alt kabuk, 3d gibi daha düşük enerji seviyesine ait fakat daha yüksek enerjili bir alt kabuktan önce dolabilir — n=1 kabuğunun tamamen dolması, n=2'ye geçiş için ön koşul değildir (zaten n=1 yalnızca 1s içerir ve hızla dolar)."
   },
   {
     difficulty: "orta",
@@ -3065,7 +3082,7 @@ export const QUIZ = {
     text: "Bir sonraki elektron eklendiğinde (potasyum, K, 19. elektron) bu elektronun hangi alt kabuğa yerleşmesi beklenir?",
     options: ["4f alt kabuğuna", "3d alt kabuğuna", "4p alt kabuğuna", "3p alt kabuğuna (zaten dolu olmasına rağmen)", "4s alt kabuğuna"],
     correct: 4,
-    explain: "n+l kuralına göre 4s (n+l=4), 3d'den (n+l=5) daha düşük enerjilidir; bu nedenle argon konfigürasyonundan sonraki elektron 3d'ye değil 4s alt kabuğuna yerleşir (potasyumun dizilimi [Ar] 4s¹'dir)."
+    explain: "Diyagonal diyagramdaki dolma sırasına göre 4s, 3d'den önce gelir; bu nedenle argon konfigürasyonundan sonraki elektron 3d'ye değil 4s alt kabuğuna yerleşir (potasyumun dizilimi [Ar] 4s¹'dir)."
   },
 
   /* ============ ZOR ============ */
@@ -3073,29 +3090,35 @@ export const QUIZ = {
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Krom (Cr) atomunun beklenen elektron dizilimi [Ar] 4s² 3d⁴ olması gerekirken, gerçekte gözlemlenen dizilim [Ar] 4s¹ 3d⁵'tir; yani bir elektron 4s'den 3d'ye 'kaymış' görünmektedir.",
-    text: "Bu sapmanın en olası açıklaması hangisidir?",
-    options: ["3d alt kabuğu krom için 4s'den çok daha düşük enerjilidir, bu yüzden fark yoktur", "n+l kuralı krom için tamamen geçersizdir ve hiçbir açıklama yapılamaz", "Krom atomunda 4s alt kabuğu hiç elektron alamaz", "Bu, bir ölçüm hatasından kaynaklanmaktadır, gerçek dizilim [Ar] 4s² 3d⁴'tür", "Yarı dolu (d⁵) bir alt kabuğun, elektronların simetrik dağılımından kaynaklanan ek bir kararlılık kazanması, 4s ve 3d arasındaki küçük enerji farkını aşmaya yetmiştir"],
-    correct: 4,
-    explain: "4s ve 3d alt kabukları arasındaki enerji farkı oldukça küçüktür; yarı dolu (d⁵) veya tam dolu (d¹⁰) alt kabukların simetrik elektron dağılımından kaynaklanan ekstra kararlılık, bu küçük enerji farkını aşarak bir elektronun 4s'den 3d'ye geçmesine yol açabilir."
+    compareChart: {
+      title: "Atom Orbitallerinin Bağıl Enerjileri (Etkinlik-1.8)",
+      yLabel: "Bağıl Enerji (kJ/mol)",
+      labels: ["B", "C", "N", "O", "F"],
+      series: [
+        { label: "2p", values: [-800, -950, -1150, -1450, -1800], color: "var(--gas)" },
+        { label: "2s", values: [-1300, -1750, -2150, -2900, -4500], color: "var(--mol-b)" }
+      ]
+    },
+    context: "Grafikte, 2. periyot elementleri (B, C, N, O, F) için 2s ve 2p alt kabuklarının bağıl enerjileri atom numarasına karşı çizilmiştir. Atom numarası arttıkça her iki eğri de düşmekte (enerji azalmakta), fakat 2s eğrisi 2p eğrisinden belirgin biçimde daha dik düşmektedir.",
+    text: "Bu gözlem hangi çıkarımı en güçlü şekilde destekler?",
+    options: ["Artan atom numarasıyla birlikte artan çekirdek (proton) çekimi, 2s alt kabuğundaki elektronları 2p'dekilere göre daha güçlü şekilde etkilemektedir", "2p elektronlarının enerjisi çekirdekteki proton sayısından tamamen bağımsızdır", "İki alt kabuk atom numarasından aynı derecede etkilenir", "Atom numarasının artması orbital enerjisiyle hiçbir şekilde ilişkili değildir", "2s enerjisi atom numarasından bağımsız olarak sabit kalmaktadır"],
+    correct: 0,
+    explain: "Grafikte 2s eğrisinin B'den F'ye doğru 2p eğrisinden daha dik düşmesi, artan proton sayısının (çekirdek çekiminin) 2s alt kabuğundaki elektronları 2p'dekilere göre daha güçlü şekilde etkilediğini gösterir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
     table: {
-      headers: ["Alt kabuk", "n", "l", "n+l"],
+      headers: ["Sıra", "Alt kabuk"],
       rows: [
-        ["4d", "4", "2", "6"],
-        ["5p", "5", "1", "6"],
-        ["6s", "6", "0", "6"],
-        ["4f", "4", "3", "7"]
+        ["9.", "5s"], ["10.", "4d"], ["11.", "5p"], ["12.", "6s"], ["13.", "4f"]
       ],
-      caption: "n+l değeri eşit veya yakın olan dört alt kabuk"
+      caption: "Diyagonal diyagramda beş alt kabuğun dolma sırasındaki yeri"
     },
-    text: "Tabloya göre, n+l değeri 6 olan üç alt kabuğun (4d, 5p, 6s) doğru enerji sıralaması ile 4f'nin bu üçlü ile karşılaştırması sırasıyla en doğru hangisidir?",
-    options: ["4d < 5p < 6s (eşit n+l'de küçük n önce); 4f (n+l=7) bu üçünün hepsinden daha yüksek enerjilidir", "6s < 5p < 4d; 4f üçünden de düşük enerjilidir", "5p < 4d < 6s; 4f ile karşılaştırma yapılamaz", "Üç alt kabuk da birebir eşit enerjilidir, 4f de bunlarla eşittir", "4d < 5p < 6s; 4f, 6s'den daha düşük enerjilidir"],
+    text: "Tabloya göre, 4d, 5p ve 6s alt kabuklarının doğru enerji sıralaması ile 4f'nin bu üçlü ile karşılaştırması sırasıyla en doğru hangisidir?",
+    options: ["4d < 5p < 6s; 4f bu üçünün hepsinden daha yüksek enerjilidir", "6s < 5p < 4d; 4f üçünden de düşük enerjilidir", "5p < 4d < 6s; 4f ile karşılaştırma yapılamaz", "Üç alt kabuk da birebir eşit enerjilidir, 4f de bunlarla eşittir", "4d < 5p < 6s; 4f, 6s'den daha düşük enerjilidir"],
     correct: 0,
-    explain: "n+l değeri eşit olan alt kabuklarda küçük n önce gelir: 4d(n=4) < 5p(n=5) < 6s(n=6). n+l=7 olan 4f ise n+l=6 olan üç alt kabuktan daha yüksek enerjilidir."
+    explain: "Diyagonal diyagramda dolma sırasına göre 4d, 5p'den; 5p de 6s'den önce gelir: 4d < 5p < 6s. Tablodaki sırada en son gelen 4f ise bu üç alt kabuktan da daha yüksek enerjilidir."
   },
   {
     difficulty: "zor",
@@ -3134,62 +3157,104 @@ export const QUIZ = {
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir öğretim materyalinde şu iddia tartışılmaktadır: 'n+l kuralı, orbital enerjilerini tahmin etmede kullanışlı bir araçtır fakat mutlak bir fiziksel yasa değildir; krom ve bakır gibi istisnalar, kuralın yaklaşık bir model olduğunu gösterir.'",
-    text: "Bu değerlendirme, bilimsel modellerin doğasıyla ilgili en doğru hangi genellemeyi destekler?",
-    options: ["Bilimsel modeller istisna içerdiğinde artık kullanılmamalıdır", "Yararlı bir model, çoğu durumda doğru tahminler yapabilir; ancak bazı istisnaların varlığı modelin basitleştirilmiş/yaklaşık bir araç olduğunu, mutlak bir yasa olmadığını gösterir", "n+l kuralı hiçbir zaman istisna içermez, krom ve bakır örnekleri hatalıdır", "İstisnaların varlığı, orbital enerjisi kavramının bilimsel olmadığını gösterir", "Bir modelde herhangi bir istisna bulunması, modelin tamamen değersiz olduğu anlamına gelir"],
-    correct: 1,
-    explain: "n+l kuralı, elektron-elektron itmesi gibi ek etkileri basitleştirerek çoğu element için doğru sıralama tahmini yapar; ancak krom/bakır gibi istisnaların varlığı, kuralın yaklaşık bir model olduğunu, atomun gerçek davranışının daha karmaşık etkileşimlere bağlı olduğunu gösterir — bu, bilimsel modellerin genellikle basitleştirilmiş açıklayıcı araçlar olduğunu örnekler."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir karşılaştırmada, hidrojen atomunun 2s ve 2p orbitalleri tam olarak eşit enerjiye sahipken, lityum atomunun 2s orbitali 2p'den belirgin şekilde daha düşük enerjilidir.",
-    text: "Bu farkın en olası nedeni nedir?",
-    options: ["Lityum atomunda 2p orbitalinin bulunmaması", "Hidrojen ve lityum atomlarının çekirdek yükünün aynı olması", "Lityumda 1s elektronlarının 2s ve 2p elektronlarını farklı derecede perdelemesi; 2s elektronunun çekirdeğe yakın bulunma olasılığı daha yüksek olduğundan daha az perdelenip daha düşük enerjili kalması", "Hidrojende elektron-elektron etkileşimi olduğu, lityumda ise olmadığı", "Bu fark yalnızca ölçüm belirsizliğinden kaynaklanmaktadır"],
-    correct: 2,
-    explain: "Hidrojende tek elektron olduğundan perdeleme etkisi yoktur ve 2s-2p enerjileri eşittir. Lityumda ise iç kabuktaki (1s) elektronlar dış kabuk elektronlarını perdeler; 2s elektronunun çekirdeğe yaklaşma olasılığı 2p'den yüksek olduğundan daha az perdelenir ve daha düşük enerjili kalır — bu, çok elektronlu atomlarda alt kabuk ayrımının kaynağıdır."
-  },
-  {
-    difficulty: "zor",
-    kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir atomun elektron dizilimini n+l kuralıyla tahmin eden bir öğretim aracı, molibden (Mo, 42 elektron) için beklenen [Kr] 5s² 4d⁴ dizilimini önermektedir; ancak molibdenin gerçek dizilimi [Kr] 5s¹ 4d⁵'tir.",
-    text: "Bu örnek, krom örneğiyle (aynı grupta, bir üst periyotta) karşılaştırıldığında hangi çıkarımı destekler?",
+    compareChart: {
+      title: "Atom Orbitallerinin Bağıl Enerjileri (Etkinlik-1.8)",
+      yLabel: "Bağıl Enerji (kJ/mol)",
+      labels: ["B", "C", "N", "O", "F"],
+      series: [
+        { label: "2p", values: [-800, -950, -1150, -1450, -1800], color: "var(--gas)" },
+        { label: "2s", values: [-1300, -1750, -2150, -2900, -4500], color: "var(--mol-b)" }
+      ]
+    },
+    context: "MEB'in Etkinlik-1.8 grafiği iki ayrı karşılaştırma sunar: (1) aynı türden alt kabuğun (2s veya 2p) farklı atomlardaki (B→F) enerjisi nasıl değişir; (2) aynı atomda farklı türden alt kabukların (2s ile 2p) enerjisi birbirine göre nasıldır.",
+    text: "Grafikteki iki eğriyi birlikte değerlendirdiğimizde, aşağıdaki önermelerden hangisi HER İKİ karşılaştırmayı da doğru şekilde özetler?",
     options: [
-      "Yarı dolu d alt kabuğunun kazandırdığı ekstra kararlılık eğilimi, aynı grupta farklı periyotlarda da (krom ve molibdende) tutarlı bir örüntü olarak tekrarlanabilir",
-      "Molibden ve krom arasında hiçbir ortak örüntü yoktur, tamamen farklı elementlerdir",
-      "n+l kuralı yalnızca 3. periyot elementleri için tanımlanmıştır, 5. periyotta geçersizdir",
-      "Molibdendeki sapma, krom örneğinden tamamen farklı bir nedenden kaynaklanmaktadır",
-      "Bu örnek, n+l kuralının hiçbir zaman doğru sonuç vermediğini kanıtlar"
+      "(1) Atom numarası arttıkça hem 2s hem 2p enerjisi azalır (daha negatif olur); (2) her element için 2p her zaman 2s'den daha yüksek enerjilidir",
+      "(1) Atom numarası arttıkça hem 2s hem 2p enerjisi artar; (2) 2s her zaman 2p'den daha yüksek enerjilidir",
+      "(1) Atom numarasının enerjiyle hiçbir ilişkisi yoktur; (2) 2s ve 2p her zaman eşit enerjilidir",
+      "(1) Yalnızca 2p enerjisi atom numarasıyla değişir, 2s sabittir; (2) 2s ve 2p karşılaştırılamaz",
+      "(1) Atom numarası arttıkça enerji azalır; (2) hangi alt kabuğun daha yüksek enerjili olduğu elementten elemente değişir"
     ],
     correct: 0,
-    explain: "Krom (3d⁵4s¹) ve molibden (4d⁵5s¹), aynı grupta (6B) bulunan ve benzer bir istisna örüntüsü sergileyen elementlerdir; bu, yarı dolu d alt kabuğunun kararlılık avantajının yalnızca tek bir elemente özgü rastlantısal bir durum olmadığını, gruplar arasında tutarlı bir kimyasal örüntü olduğunu gösterir."
+    explain: "Grafikte hem 2s hem 2p eğrisi B'den F'ye doğru düşmektedir (atom numarası arttıkça enerji azalır, taneciğe daha sıkı bağlanma); aynı zamanda her bir element için 2p noktası her zaman 2s noktasının üzerindedir, yani 2p her zaman 2s'den daha yüksek enerjilidir. İki gözlem birbirinden bağımsız ama aynı anda doğrudur."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir araştırmacı, farklı elementlerin 4s ve 3d alt kabukları arasındaki enerji farkını ölçtüğünde, bu farkın atom numarası arttıkça (soldan sağa periyotta ilerledikçe) giderek küçüldüğünü, hatta bazı elementlerde 3d'nin 4s'nin altına indiğini gözlemlemiştir.",
-    text: "Bu bulgu, orbital enerjilerinin sabit olmadığı fikrini en doğru şekilde nasıl destekler?",
-    options: ["4s ve 3d arasındaki fark yalnızca krom ve bakırda değişir, başka hiçbir elementte değişmez", "Orbital enerjileri her elementte birebir aynıdır, bu bulgu hatalıdır", "Bir alt kabuğun enerjisi yalnızca kuantum sayılarına değil, aynı zamanda o anki çekirdek yüküne ve diğer elektronların perdeleme etkisine (yani hangi atoma/iyona ait olduğuna) bağlıdır", "Atom numarasının orbital enerjisiyle hiçbir ilgisi yoktur", "Bu bulgu yalnızca teorik bir varsayımdır, deneysel dayanağı yoktur"],
-    correct: 2,
-    explain: "4s-3d enerji farkının atom numarasına göre değişmesi, orbital enerjisinin yalnızca soyut kuantum sayılarıyla değil, o atomdaki gerçek çekirdek yükü ve elektron-elektron etkileşimleriyle de belirlendiğini gösterir; bu nedenle n+l kuralı gibi genel kurallar yaklaşık bir rehber olup, kesin enerji sıralaması elementten elemente değişebilir."
+    orbitalBoxes: {
+      subshells: [
+        { label: "3d", electrons: [1, 1, 1, 1, 1] }
+      ],
+      caption: "Manganın (Mn) 3d⁵ diziliminin kutu diyagramı"
+    },
+    context: "Manganın (Mn) atom numarası 25'tir. Diyagonal diyagramdaki dolma sırası izlenerek 25 elektron yerleştirildiğinde dizilim [Ar] 4s² 3d⁵ elde edilir.",
+    text: "Görseldeki 3d⁵ dizilimi Hund kuralı açısından değerlendirildiğinde hangi ifade doğrudur?",
+    options: ["5 elektronun hepsi tek bir orbitalde toplanmıştır, bu Pauli dışlama ilkesine aykırıdır", "Orbitallere ikişer ikişer yerleştirilip biri boş bırakılmıştır", "Elektronlar 3d yerine 4p'ye yerleştirilmelidir", "Bu dizilim hiçbir kurala uymamaktadır", "5 orbitalin her birine birer elektron, aynı yönde spinle yerleştirilmiştir; bu yarı dolu ve Hund kuralına tam uygun bir dizilimdir"],
+    correct: 4,
+    explain: "Hund kuralına göre eş enerjili orbitallere elektronlar önce teker teker, aynı yönde spinle yerleştirilir. Mn'nin 3d⁵ dizilimi tam olarak bu şekildedir: 5 orbitalin her birinde birer eşleşmemiş elektron bulunur; bu yarı dolu (d⁵) simetrik bir dizilimdir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
+    orbitalShapes: {
+      title: "3d Alt Kabuğunun Beş Orbitali",
+      items: [
+        { type: "d", label: "3d_xy" },
+        { type: "d", label: "3d_yz" },
+        { type: "d", label: "3d_xz" },
+        { type: "d", label: "3d_x²-y²" },
+        { type: "d", label: "3d_z²" }
+      ]
+    },
+    context: "Görseldeki beş şekil, MEB'in Etkinlik-1.8'inde gösterildiği gibi bir d alt kabuğuna ait beş ayrı orbitali (farklı yönelimlerdeki yonca yapraklı sınır yüzeylerini) temsil etmektedir.",
+    text: "Bir 3d alt kabuğu tam dolu olduğunda, bu beş orbitalin toplamda alabileceği elektron sayısı ile bu beş orbitalin şekil/enerji ilişkisi hakkında en doğru ve kapsamlı ifade hangisidir?",
+    options: [
+      "Beş orbital toplam 10 elektron alabilir; şekilleri farklı yönelimlerde olsa da hepsi aynı alt kabuğa ait olduğundan enerjileri özdeştir (dejenere)",
+      "Beş orbital toplam 5 elektron alabilir; her biri farklı enerjiye sahiptir",
+      "Beş orbital toplam 14 elektron alabilir; hepsi aynı şekle sahiptir",
+      "Orbital sayısı ile alabileceği elektron sayısı arasında hiçbir ilişki yoktur",
+      "Beş orbitalden yalnızca biri elektron alabilir, diğerleri boş kalır"
+    ],
+    correct: 0,
+    explain: "Bir d alt kabuğunda 5 orbital bulunur, her orbital en fazla 2 elektron alabileceğinden tam dolu bir d alt kabuğu 10 elektron içerir. Bu beş orbital yalnızca uzaydaki yönelimleri bakımından farklıdır; aynı alt kabuğa ait oldukları için enerjileri özdeştir."
+  },
+  {
+    difficulty: "zor",
+    kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
+    orbitalBoxes: {
+      subshells: [
+        { label: "3d", electrons: [2, 2, 0, 0, 0] },
+        { label: "4s", electrons: [0] }
+      ],
+      caption: "Önerilen bir kısmi elektron dizilimi (4 elektron için)"
+    },
+    context: "Aşağıdaki denemede, 4 elektron 3d ve 4s alt kabuklarına yerleştirilirken 4s tamamen boş bırakılmış, 3d'nin ilk iki orbitaline ise ikişer ikişer (eşleştirerek) yerleştirilmiştir.",
+    text: "Bu dizilim, hangi ilke veya kuralları birlikte ihlal etmektedir?",
+    options: [
+      "Aufbau ilkesini (önce 4s dolmalıyken 3d'ye yerleştirilmiş) ve Hund kuralını (orbitaller eşleşmeden önce teker teker doldurulmalıyken erken eşleştirilmiş)",
+      "Yalnızca Pauli dışlama ilkesini ihlal etmektedir",
+      "Hiçbir kuralı ihlal etmemektedir, bu geçerli bir dizilimdir",
+      "Yalnızca elektron sayısı yanlıştır, kurallarla ilgisi yoktur",
+      "Bu dizilim yalnızca iyonlar için geçerli olduğundan hatalı sayılmaz"
+    ],
+    correct: 0,
+    explain: "Diyagonal diyagrama göre 4s, 3d'den önce dolar; bu dizilimde 4s boş bırakılarak Aufbau ilkesi ihlal edilmiştir. Ayrıca 3d'ye yerleştirilen 4 elektronun eşleşerek (2+2) değil, Hund kuralına göre önce dört ayrı orbitale teker teker yerleşmesi gerekirdi. Doğru dizilim 3d: [↑][↑][↑][↑][ ], 4s: [ ] şeklinde olmalıydı."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
     table: {
-      headers: ["Element", "Beklenen dizilim (n+l kuralına göre)", "Gözlenen gerçek dizilim"],
+      headers: ["Sıra", "Alt kabuk"],
       rows: [
-        ["Krom (Cr)", "[Ar] 4s² 3d⁴", "[Ar] 4s¹ 3d⁵"],
-        ["Bakır (Cu)", "[Ar] 4s² 3d⁹", "[Ar] 4s¹ 3d¹⁰"],
-        ["Molibden (Mo)", "[Kr] 5s² 4d⁴", "[Kr] 5s¹ 4d⁵"],
-        ["Gümüş (Ag)", "[Kr] 5s² 4d⁹", "[Kr] 5s¹ 4d¹⁰"]
+        ["1", "1s"], ["2", "2s"], ["3", "2p"], ["4", "3s"], ["5", "3p"],
+        ["6", "4s"], ["7", "3d"], ["8", "4p"]
       ],
-      caption: "n+l kuralının istisnası olan dört geçiş metali"
+      caption: "Diyagonal diyagramda Z≤36 için dolma sırası"
     },
-    text: "Tablodaki dört istisnayı birlikte değerlendirdiğimizde en doğru ve kapsamlı genelleme hangisidir?",
-    options: ["n+l kuralı bu dört element için tamamen geçersizdir ve hiçbir öngörüde bulunamaz", "Bu dört istisna birbirinden bağımsız, rastgele oluşmuş, hiçbir ortak örüntü taşımayan ayrı olgulardır", "İstisnalar yalnızca 4. periyot elementlerinde (Cr, Cu) görülür, 5. periyotta (Mo, Ag) görülmez", "Beklenen dizilimden bir elektron eksik olan (d⁴ veya d⁹) durumlarda, o elektronun s'den d'ye kayarak alt kabuğu yarı dolu (d⁵) veya tam dolu (d¹⁰) hâle getirmesi enerji açısından avantajlıdır; bu örüntü farklı periyotlarda tekrarlanır", "Bu istisnalar yalnızca ölçüm hatalarından kaynaklanmaktadır"],
-    correct: 3,
-    explain: "Dört örnekte de (Cr, Cu, Mo, Ag) beklenen dizilim d⁴ veya d⁹ iken, gerçek dizilimde bir 4s/5s elektronu d alt kabuğuna kayarak onu yarı dolu (d⁵) veya tam dolu (d¹⁰) hâle getirmektedir; bu, simetrik d alt kabuğu kararlılığının farklı periyotlarda tekrarlanan tutarlı bir kimyasal örüntü olduğunu gösterir."
+    text: "Vanadyumun (V) atom numarası 23'tür. Tablodaki dolma sırasını izleyerek elektronları alt kabuklara yerleştirdiğimizde, vanadyumun en yüksek temel enerji seviyesindeki (n=4) alt kabuğunda kaç elektron bulunur?",
+    options: ["1 elektron", "2 elektron", "3 elektron", "4 elektron", "5 elektron"],
+    correct: 1,
+    explain: "23 elektron sırayla yerleştirilir: 1s²2s²2p⁶3s²3p⁶ (18 elektron) → kalan 5 elektron sırayla 4s'ye 2, sonra 3d'ye 3 yerleşir: [Ar] 4s² 3d³. En yüksek temel enerji seviyesi n=4 olan tek alt kabuk 4s'dir ve 2 elektron içerir."
   },
   {
     difficulty: "zor",
@@ -3203,20 +3268,20 @@ export const QUIZ = {
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir tartışmada şu soru sorulmaktadır: 'Eğer bir öğretim aracı yalnızca n+l kuralını mutlak bir yasa olarak öğretip hiçbir istisnadan bahsetmezse, öğrencilerde ne tür bir kavram yanılgısı oluşabilir?'",
-    text: "Bu sorunun en isabetli cevabı hangisidir?",
-    options: ["Böyle bir öğretim yaklaşımının hiçbir olumsuz sonucu olmaz, çünkü istisnalar önemsizdir", "Öğrenciler, krom ve bakır gibi gerçek elementlerin dizilimini n+l kuralıyla hesaplarken sürekli 'hata' yapacaklarını düşünebilir; oysa bu bir hesaplama hatası değil, kuralın modelleyemediği ek bir kararlılık etkisidir", "Öğrenciler bu durumda n+l kuralını asla öğrenemez", "İstisnalardan bahsetmemek, öğrenmeyi hızlandıran doğru bir yöntemdir ve kavram yanılgısına yol açmaz", "Bu durumun kavram yanılgısıyla hiçbir ilgisi yoktur"],
-    correct: 1,
-    explain: "Bir kuralın istisnalarından bahsedilmemesi, öğrencilerin gerçek elementlerin (Cr, Cu gibi) beklenmedik dizilimlerini kendi hesaplama hataları sandığı bir kavram yanılgısına yol açabilir; oysa bu sapmalar kuralın basitleştirilmiş doğasından kaynaklanan bilinen istisnalardır."
+    context: "Dördüncü temel enerji seviyesinde (n=4) dört tür alt kabuk tanımlıdır: 4s, 4p, 4d, 4f. Bir alt kabuktaki orbital sayısı türüne göre değişir: s'de 1, p'de 3, d'de 5, f'de 7 orbital bulunur; her orbital en fazla 2 elektron alır.",
+    text: "Buna göre, 4. enerji seviyesindeki tüm alt kabuklar (4s+4p+4d+4f) tamamen dolduğunda, bu seviyede toplam kaç orbital ve kaç elektron bulunmuş olur?",
+    options: ["4 orbital, 8 elektron", "10 orbital, 20 elektron", "16 orbital, 16 elektron", "16 orbital, 32 elektron", "8 orbital, 32 elektron"],
+    correct: 3,
+    explain: "4s: 1 orbital/2e, 4p: 3 orbital/6e, 4d: 5 orbital/10e, 4f: 7 orbital/14e. Toplam orbital sayısı 1+3+5+7=16, toplam elektron kapasitesi 2+6+10+14=32'dir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir atomun 4f orbitali, 5d ve 6s orbitallerine göre çekirdeğe daha yakın bir bölgede yoğunlaşmıştır (bu duruma 'lantanit büzülmesi' ile ilişkili bir etki eşlik eder); buna rağmen 4f'nin enerjisi 6s'den daha yüksektir.",
-    text: "Bu görünüşteki çelişki (çekirdeğe daha yakın olmasına rağmen daha yüksek enerjili olması) en doğru şekilde nasıl açıklanır?",
-    options: ["Bu bir çelişkidir ve mevcut atom teorisiyle açıklanamaz", "Orbital enerjisi yalnızca çekirdeğe uzaklıkla değil, orbitalin şekli, açısal momentumu (l) ve perdelenme etkileşimleriyle birlikte belirlenir; yakınlık tek başına düşük enerji garantisi vermez", "4f orbitali aslında 6s'den çekirdeğe daha uzaktır, verilen bilgi yanlıştır", "Enerji yalnızca çekirdeğe uzaklığa bağlıdır, bu nedenle 4f'nin 6s'den düşük enerjili olması gerekir", "Lantanit büzülmesinin orbital enerjisiyle hiçbir ilgisi yoktur"],
-    correct: 1,
-    explain: "Orbital enerjisi tek bir etkene (yalnızca çekirdeğe uzaklığa) indirgenemez; l değeri yüksek olan f orbitalleri karmaşık açısal momentum ve perdelenme etkileri nedeniyle, çekirdeğe görece yakın olsalar bile s orbitallerinden daha yüksek enerjili olabilir."
+    context: "Çinkonun (Zn) atom numarası 30'dur. Diyagonal diyagramdaki dolma sırası izlenerek 30 elektron alt kabuklara yerleştirildiğinde dizilim [Ar] 4s² 3d¹⁰ elde edilir; hem 4s hem 3d alt kabuğu tamamen doludur.",
+    text: "Bu dizilimde 3d alt kabuğundaki 10 elektronun kutu (orbital) diyagramı çizildiğinde, kaç tane eşleşmemiş (tek) elektron bulunur?",
+    options: ["5", "10", "2", "1", "0 (tüm elektronlar eşleşmiştir)"],
+    correct: 4,
+    explain: "3d alt kabuğunda 5 orbital bulunur; 10 elektron Pauli dışlama ilkesine göre bu 5 orbitali ikişer ikişer (zıt spinli) tam doldurur. Tam dolu bir alt kabukta eşleşmemiş elektron kalmaz, bu nedenle çinkonun 3d¹⁰ dizilimindeki tüm elektronlar eşleşmiştir."
   },
   {
     difficulty: "zor",
@@ -3236,20 +3301,40 @@ export const QUIZ = {
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir bilim yazısında şu iddia savunulmaktadır: 'Orbital enerjisi kavramı, atomun tek bir 'gerçek' enerji sıralamasına sahip olduğu izlenimini verebilir; oysa gerçekte enerji sıralaması, atomun o anki elektron sayısına, yüküne (nötr/iyon) ve hatta hangi elektronun hangi alt kabukta olduğuna bağlı olarak değişebilen bağlamsal bir büyüklüktür.'",
-    text: "Bu iddia, krom istisnası ve iyonlaşma sırasındaki 4s-3d tersine dönmesi örnekleriyle birlikte değerlendirildiğinde nasıl bir sonuca varılır?",
-    options: ["Krom istisnası ve iyonlaşma tersine dönmesi birbiriyle çelişen, ilgisiz olgulardır", "İddia bu örneklerle çürütülür; orbital enerjisi her koşulda sabittir", "İddia bu örneklerle güçlü şekilde desteklenir; orbital enerji sıralaması sabit bir tablo değil, atomun durumuna göre değişen bağlamsal bir kavramdır", "Bu örnekler yalnızca krom için geçerlidir, genel bir sonuca varılamaz", "İddia, deneysel kanıtla hiçbir şekilde test edilemez"],
-    correct: 2,
-    explain: "Krom'un beklenmedik dizilimi (n+l kuralının basit tahmininden sapma) ve iyonlaşma sırasında 4s'nin 3d'den önce boşalması (nötr atomda dolma sırasının tersi), orbital enerjisinin sabit bir sıralama olmadığını, atomun elektron sayısı ve yüküne bağlı olarak değişen bağlamsal bir büyüklük olduğunu güçlü şekilde destekler."
+    context: "Nötr bir geçiş metali atomunda elektronlar Aufbau ilkesine göre önce 4s'ye, sonra 3d'ye yerleşir (dolma sırası: ...4s, 3d...). Ancak bu atom katyon oluşturmak için elektron kaybederken, kaybedilen ilk elektronlar 3d'den değil, 4s'den ayrılır.",
+    text: "Nötr atomda 4s'nin 3d'den önce DOLMASI ile iyonlaşırken 4s'nin 3d'den önce BOŞALMASI birlikte değerlendirildiğinde en doğru çıkarım hangisidir?",
+    options: [
+      "Bu iki gözlem birbiriyle çelişir, ikisi aynı anda doğru olamaz",
+      "Alt kabukların enerji sıralaması sabit bir tablo değildir; atomun nötr mü yoksa iyon mu olduğuna bağlı olarak değişebilen bağlamsal bir durumdur — nötr atomda 4s daha düşük enerjiliyken, iyonda bu sıralama tersine dönebilir",
+      "Bu, yalnızca bir yazım kuralıdır; atomun gerçek fiziksel durumuyla ilgisi yoktur",
+      "4s alt kabuğu iyonlaşırken var olmaktan çıkar, bu yüzden önce boşalır",
+      "Bu gözlem yalnızca tek bir element için geçerlidir, genellenemez"
+    ],
+    correct: 1,
+    explain: "Bir alt kabuğun enerjisi, atomdaki diğer elektronların sayısına ve dizilimine bağlı olarak değişir. Nötr atomda 4s, 3d'den önce dolar; ancak elektron kaybı başladığında (iyonlaşma), en dıştaki ve en yüksek enerjili hâle gelen alt kabuk artık 4s olur, bu yüzden ilk kaybedilen elektronlar 4s'den gelir. Bu, orbital enerji sıralamasının atomun yüküne bağlı, bağlamsal bir büyüklük olduğunu gösterir."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.6 — Atom orbitallerinin bağıl enerjilerine ilişkin tahminde bulunabilme",
-    context: "Bir karşılaştırmada, demir (Fe, [Ar] 4s² 3d⁶) ile krom ([Ar] 4s¹ 3d⁵) elektron dizilimleri incelenmektedir; demirde n+l kuralının beklediği dizilim gerçekleşirken, kromda gerçekleşmemektedir.",
-    text: "Demirin n+l kuralına uyması ile kromun uymaması arasındaki farkı en iyi açıklayan çıkarım hangisidir?",
-    options: ["Bu fark tamamen rastgele olup hiçbir yapısal açıklaması yoktur", "Demir ve krom arasında hiçbir yapısal fark yoktur, ikisi de aynı kurala uyar", "n+l kuralı yalnızca demir gibi elementler için geçerlidir", "Krom'un atom numarası demirden büyük olduğu için farklı davranır", "d⁶ dizilimi (demir) tam dolu veya yarı dolu bir simetriye sahip değildir, dolayısıyla ekstra kararlılık kazanma avantajı yoktur; oysa krom bir elektron kaydırarak d⁵ (yarı dolu) simetrisine ulaşabilmektedir"],
-    correct: 4,
-    explain: "Krom'da bir elektronun 4s'den 3d'ye kayması, d alt kabuğunu yarı dolu (d⁵, simetrik ve kararlı) hâle getirir; demirde ise böyle bir kayma d⁶'dan d⁷'ye geçişle sonuçlanır ki bu da simetrik/kararlı bir yapı değildir, dolayısıyla demir n+l kuralının öngördüğü sıradan dizilimi korur."
+    orbitalBoxes: {
+      subshells: [
+        { label: "4p", electrons: [1, 1, 0] },
+        { label: "4s", electrons: [0] },
+        { label: "3d", electrons: [2, 2, 2, 2, 2] }
+      ],
+      caption: "Önerilen bir kısmi elektron dizilimi (23 elektron için, kalan 5 elektron)"
+    },
+    context: "Aşağıdaki denemede, argon konfigürasyonundan (18 elektron) sonra kalan 5 elektron önce 3d'yi tamamen doldurmaya çalışarak (10 elektron gerektirir, bu yüzden yalnızca kısmen), sonra 4s boş bırakılıp 4p'ye 2 elektron yerleştirilerek dağıtılmıştır.",
+    text: "Bu dizilim denemesi, diyagonal diyagram ve Aufbau ilkesiyle karşılaştırıldığında ne gösterir?",
+    options: [
+      "Diyagonal diyagrama uygundur, çünkü 3d elektron almaya başlamıştır",
+      "Diyagonal diyagrama aykırıdır: dolma sırasında 4s, 3d'den önce; 3d de 4p'den önce gelir. Doğru dağılım önce 4s'ye 2, kalan 3 elektronun 3d'ye teker teker yerleştirilmesiyle [Ar] 4s² 3d³ olmalıdır",
+      "Her iki dizilim de aynı toplam enerjiye sahip olduğundan fark etmez",
+      "4p alt kabuğu 3d'den önce dolmalıdır, öğrencinin dizilimi bu yüzden doğrudur",
+      "Bu dizilim yalnızca iyonlar için geçerli olabilir"
+    ],
+    correct: 1,
+    explain: "Diyagonal diyagramdaki dolma sırası ...4s, 3d, 4p... şeklindedir. Argon'dan sonra kalan 5 elektron önce 4s'ye (2 elektron), ardından 3d'ye (kalan 3 elektron, Hund kuralına göre teker teker) yerleşmelidir: [Ar] 4s² 3d³ (vanadyum). Öğrencinin önerdiği dizilim hem Aufbau ilkesini hem diyagonal diyagramın sırasını ihlal etmektedir."
   }
 ],
   "yerbulma": [
@@ -3448,7 +3533,7 @@ export const QUIZ = {
         { period: 4, group: 8, symbol: "Fe", highlighted: false }
       ]
     },
-    context: "Kromun (Cr) elektron dizilimi [Ar] 4s¹ 3d⁵'tir; bu dizilim, n+l kuralının bekleneni olan [Ar] 4s² 3d⁴'ten farklıdır.",
+    context: "Kromun (Cr) elektron dizilimi [Ar] 4s¹ 3d⁵'tir.",
     text: "Kromun grup numarasını belirlerken hangi elektronlar değerlik elektronu olarak sayılmalıdır?",
     options: ["4s¹ ve 3d⁵'teki toplam 6 elektron (Cr, 6. grupta yer alır)", "Yalnızca 4s¹'deki 1 elektron (Cr, 1. grupta yer alır)", "Yalnızca 3d⁵'teki 5 elektron (Cr, 5. grupta yer alır)", "Kromun grup numarası belirlenemez", "Kromun elektron dizilimi grup numarasıyla ilişkili değildir"],
     correct: 0,
@@ -4135,9 +4220,9 @@ export const QUIZ = {
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
     context: "Bir öğretim aracında şu soru sorulmaktadır: 'Neden aynı periyotta metalik özellik soldan sağa azalırken, aynı grupta yukarıdan aşağıya artmaktadır? Bu iki trend aynı temel nedene mi dayanır?'",
     text: "Bu sorunun en isabetli cevabı hangisidir?",
-    options: ["Evet; her iki trend de değerlik elektronlarının çekirdeğe olan çekim gücündeki (etkin çekirdek yükü/uzaklık) değişimden kaynaklanır — periyotta artan çekim elektron kaybını zorlaştırır, grupta artan uzaklık elektron kaybını kolaylaştırır", "Hayır, bu iki trend birbirinden tamamen bağımsız, ilgisiz nedenlere dayanır", "Metalik özellik yalnızca periyot içinde değişir, grup içinde sabittir", "Metalik özellik yalnızca grup içinde değişir, periyot içinde sabittir", "Bu iki trend arasında hiçbir mantıksal bağlantı kurulamaz"],
+    options: ["Evet; her iki trend de değerlik elektronlarının çekirdeğe olan çekim gücündeki değişimden kaynaklanır — periyotta artan proton (çekirdek yükü) sayısı elektron kaybını zorlaştırır, grupta artan elektron kabuğu sayısı (çekirdekten uzaklık) elektron kaybını kolaylaştırır", "Hayır, bu iki trend birbirinden tamamen bağımsız, ilgisiz nedenlere dayanır", "Metalik özellik yalnızca periyot içinde değişir, grup içinde sabittir", "Metalik özellik yalnızca grup içinde değişir, periyot içinde sabittir", "Bu iki trend arasında hiçbir mantıksal bağlantı kurulamaz"],
     correct: 0,
-    explain: "Her iki trend de aynı temel mekanizmaya (değerlik elektronlarının çekirdeğe olan efektif çekim gücü) dayanır: periyotta sağa gidildikçe artan çekirdek yükü elektronu tutmayı güçlendirir (metalik özellik azalır), grupta aşağı inildikçe artan uzaklık çekimi zayıflatır (metalik özellik artar)."
+    explain: "Her iki trend de aynı temel mekanizmaya dayanır: periyotta sağa gidildikçe artan çekirdek yükü (proton sayısı) elektronu tutmayı güçlendirir (metalik özellik azalır), grupta aşağı inildikçe artan elektron kabuğu sayısı (çekirdekten uzaklık) çekimi zayıflatır (metalik özellik artar)."
   },
   {
     difficulty: "orta",
@@ -4217,29 +4302,29 @@ export const QUIZ = {
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir öğretim materyalinde, lantanit serisindeki elementlerin (57-71 arası) atom yarıçaplarının, atom numarası arttıkça beklenenden daha az değiştiği ve bu durumun 'lantanit büzülmesi' olarak adlandırıldığı; bu büzülmenin, lantanitlerden hemen sonra gelen 5d geçiş metallerinin (Hf, Ta gibi) yarıçaplarının beklenenden küçük çıkmasına da yol açtığı belirtilmektedir.",
-    text: "Lantanit büzülmesinin 5d geçiş metallerine olan bu 'gecikmeli' etkisi en doğru şekilde nasıl açıklanır?",
-    options: ["Bu durum, periyodik tablonun d ve f blok ayrımının hatalı olduğunu gösterir", "Bu etkinin 5d elementleriyle hiçbir ilgisi yoktur, tamamen tesadüfidir", "Lantanit büzülmesi yalnızca lantanitleri etkiler, sonraki hiçbir elementi etkilemez", "4f alt kabuğundaki elektronların zayıf perdeleme etkisi, lantanit serisi boyunca birikerek periyodik tabloda hemen sonra gelen elementlerin de beklenenden daha küçük yarıçaplı çıkmasına neden olur", "5d elementlerinin küçük yarıçapı yalnızca proton sayısıyla açıklanır, 4f elektronlarının etkisi yoktur"],
-    correct: 3,
-    explain: "4f orbitalleri elektronları zayıf perdeler; bu nedenle lantanit serisi boyunca artan çekirdek yükü, dış elektronlar tarafından yeterince perdelenmeden hissedilir ve yarıçap beklenenden az büyür/hatta küçülür. Bu birikimli etki, lantanitlerden hemen sonra gelen 5d elementlerinin de (aynı grup 4d elementleriyle karşılaştırıldığında) beklenenden küçük yarıçaplı olmasına yol açar."
+    context: "Na⁺, Mg²⁺ ve Al³⁺ iyonlarının üçü de aynı elektron dizilimine (Ne ile aynı, 10 elektron) sahiptir; ancak çekirdeklerindeki proton sayısı farklıdır (Na: 11, Mg: 12, Al: 13).",
+    text: "Bu üç iyonun yarıçapları büyükten küçüğe doğru nasıl sıralanır?",
+    options: ["Na⁺ > Mg²⁺ > Al³⁺", "Al³⁺ > Mg²⁺ > Na⁺", "Üçü de eşit yarıçaplıdır", "Sıralama proton sayısına bakılmadan yapılamaz", "Mg²⁺ her zaman en büyük yarıçaplıdır"],
+    correct: 0,
+    explain: "Aynı elektron sayısına sahip (izoelektronik) tanecikler karşılaştırıldığında, proton sayısı arttıkça çekirdeğin elektronlara uyguladığı çekim kuvveti artar ve yarıçap küçülür. En fazla protona sahip Al³⁺ en küçük, en az protona sahip Na⁺ en büyük yarıçaplıdır: Na⁺ > Mg²⁺ > Al³⁺."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir araştırmacı şu karşılaştırmayı yapmaktadır: 4. periyot geçiş metali Zr (zirkonyum) ile 5. periyot geçiş metali Hf (hafniyum), lantanit büzülmesi nedeniyle beklenenden çok daha yakın atom yarıçaplarına (Zr: 160 pm, Hf: 159 pm) sahiptir; oysa aynı gruptaki diğer element çiftlerinde (örneğin Ti-Zr) yarıçap farkı çok daha belirgindir.",
-    text: "Zr ve Hf'nin bu denli yakın yarıçaplara sahip olmasının kimyasal sonucu ne olabilir?",
-    options: ["Bu benzerlik yalnızca fiziksel özellikleri etkiler, kimyasal davranışı hiç etkilemez", "Zr ve Hf, aynı gruptaki tipik element çiftlerinden (örneğin Ti-Zr) daha benzer kimyasal davranış sergileyebilir, çünkü yarıçap kimyasal davranışı büyük ölçüde etkileyen bir faktördür", "Yarıçap benzerliğinin kimyasal davranışla hiçbir ilgisi yoktur", "Zr ve Hf farklı gruplarda yer aldığından bu karşılaştırma anlamsızdır", "Zr ve Hf'nin kimyasal davranışları arasında hiçbir benzerlik beklenmez"],
-    correct: 1,
-    explain: "Atom/iyon yarıçapı, bir elementin kimyasal davranışını (bağ uzunluğu, koordinasyon sayısı, reaktivite gibi) büyük ölçüde etkiler; Zr ve Hf'nin lantanit büzülmesi nedeniyle beklenenden çok yakın yarıçaplara sahip olması, bu iki elementin kimyasal olarak alışılmadık derecede benzer davranmasına (ve pratikte ayrıştırılmalarının zor olmasına) yol açar."
+    context: "Periyodik tabloda klor (Cl, 3. periyot, 17. grup) ile potasyum (K, 4. periyot, 1. grup) karşılaştırılmaktadır. Yarıçap, periyotta soldan sağa azalır (çekirdek yükü artar), grupta ise yukarıdan aşağıya artar (elektron kabuğu sayısı artar).",
+    text: "Bu iki eğilim birlikte değerlendirildiğinde, K'nin yarıçapı Cl'ninkiyle karşılaştırıldığında nasıl bir sonuç beklenir?",
+    options: ["K, Cl'den belirgin şekilde daha büyük yarıçaplıdır; çünkü hem bir periyot daha aşağıda (daha fazla elektron kabuğu) hem de çok daha düşük bir grupta (daha az çekirdek çekimi) yer alır ve iki etki de yarıçapı aynı yönde büyütür", "Cl her zaman K'den büyüktür, çünkü periyotta daha sağdadır", "İkisi birbirine çok yakın yarıçaplıdır, çünkü komşu periyotlardadır", "Yarıçap yalnızca periyot numarasına bağlıdır, grup numarasının etkisi yoktur", "Bu iki element aynı grupta olmadığından karşılaştırma yapılamaz"],
+    correct: 0,
+    explain: "K, Cl'ye göre hem bir periyot aşağıda (daha fazla elektron kabuğu, yarıçapı artırır) hem de çok daha düşük bir grupta (1. grup — az değerlik elektronu, zayıf çekirdek çekimi, yarıçapı yine artırır) yer alır. İki etki aynı yönde birleştiğinden K'nin yarıçapı (yaklaşık 227 pm) Cl'ninkinden (yaklaşık 99 pm) belirgin şekilde büyüktür."
   },
   {
     difficulty: "zor",
     kazanim: "KİM.9.1.8 — Elementlerin periyodik özelliklerinin periyodik tablodaki değişimini çözümleyebilme",
-    context: "Bir bilim yazısında şu iddia savunulmaktadır: 'Periyodik özellik trendleri (yarıçap, iyonlaşma enerjisi, elektronegatiflik) birbirinden bağımsız kurallar değil, hepsi aynı temel nedene (etkin çekirdek yükü ve elektron kabuk sayısı) dayanan tek bir tutarlı çerçevenin farklı yansımalarıdır.'",
+    context: "Bir bilim yazısında şu iddia savunulmaktadır: 'Periyodik özellik trendleri (yarıçap, iyonlaşma enerjisi, elektronegatiflik) birbirinden bağımsız kurallar değil, hepsi aynı temel nedene (çekirdek yükü ve elektron kabuk sayısı) dayanan tek bir tutarlı çerçevenin farklı yansımalarıdır.'",
     text: "Bu iddiayı en güçlü şekilde destekleyen kanıt hangisidir?",
     options: ["Periyodik özelliklerin her elementte tamamen rastgele değerler alması", "Üç özelliğin birbirinden tamamen farklı, ilgisiz yönlerde değişmesi", "Yalnızca bir özelliğin (örneğin yarıçap) periyodik trend göstermesi, diğerlerinin göstermemesi", "Üç özelliğin de aynı yönde (soldan sağa artan/azalan, yukarıdan aşağıya tersi) ve aynı istisna noktalarında (yarı dolu/tam dolu alt kabuklar) benzer sapmalar göstermesi", "Bu üç özelliğin hiçbirinin periyodik tablo konumuyla ilişkili olmaması"],
     correct: 3,
-    explain: "Yarıçap, iyonlaşma enerjisi ve elektronegatifliğin hepsinin soldan sağa/yukarıdan aşağıya tutarlı yönde değişmesi VE benzer istisna noktalarında (örneğin Be-B, N-O geçişlerinde) benzer sapmalar göstermesi, bu üç özelliğin ortak bir temel nedene (etkin çekirdek yükü, elektron dizilimi, perdelenme) dayandığının güçlü bir kanıtıdır."
+    explain: "Yarıçap, iyonlaşma enerjisi ve elektronegatifliğin hepsinin soldan sağa/yukarıdan aşağıya tutarlı yönde değişmesi VE benzer istisna noktalarında (örneğin Be-B, N-O geçişlerinde) benzer sapmalar göstermesi, bu üç özelliğin ortak bir temel nedene (çekirdek yükü ve elektron dizilimi) dayandığının güçlü bir kanıtıdır."
   },
   {
     difficulty: "zor",
