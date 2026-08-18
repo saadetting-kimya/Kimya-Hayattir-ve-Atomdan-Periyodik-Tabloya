@@ -393,14 +393,30 @@ const GHS_ICONS = {
     <line x1="46" y1="34" x2="46" y2="68" stroke="#fff" stroke-width="0"></line>
   `,
   corrosive: `
-    <g stroke="#000" stroke-width="2.6" fill="none">
-      <path d="M34,28 L28,42 L40,42 Z"></path>
-      <path d="M56,28 L50,44 L64,44 Z"></path>
+    <g transform="translate(34,28) rotate(-30)">
+      <rect x="-5" y="-16" width="10" height="20" rx="3.4" fill="none" stroke="#000" stroke-width="2.6"></rect>
+      <line x1="-5" y1="-8" x2="5" y2="-8" stroke="#000" stroke-width="2.2"></line>
     </g>
-    <line x1="30" y1="52" x2="70" y2="52" stroke="#000" stroke-width="3"></line>
-    <path d="M26,52 C24,58 22,62 18,66" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round"></path>
-    <path d="M40,52 C39,58 38,62 36,67" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round"></path>
-    <path d="M58,52 C58,58 59,63 61,68" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round"></path>
+    <path d="M27,38 C26,42 25,45 24,48" stroke="#000" stroke-width="2.2" stroke-linecap="round" fill="none"></path>
+    <circle cx="23" cy="51" r="1.8" fill="#000"></circle>
+
+    <g transform="translate(66,28) rotate(30)">
+      <rect x="-5" y="-16" width="10" height="20" rx="3.4" fill="none" stroke="#000" stroke-width="2.6"></rect>
+      <line x1="-5" y1="-8" x2="5" y2="-8" stroke="#000" stroke-width="2.2"></line>
+    </g>
+    <path d="M73,38 C74,42 75,45 76,48" stroke="#000" stroke-width="2.2" stroke-linecap="round" fill="none"></path>
+    <circle cx="77" cy="51" r="1.8" fill="#000"></circle>
+
+    <g fill="#000">
+      <rect x="14" y="59" width="20" height="11" rx="4"></rect>
+      <circle cx="18" cy="58" r="3.6"></circle>
+      <circle cx="24" cy="56.5" r="4"></circle>
+      <circle cx="30" cy="58" r="3.6"></circle>
+    </g>
+    <path d="M17,71 L15,80 M23,72 L22,82 M29,71 L29,80" stroke="#000" stroke-width="2" stroke-linecap="round" fill="none"></path>
+
+    <line x1="58" y1="58" x2="86" y2="58" stroke="#000" stroke-width="3.4"></line>
+    <path d="M61,58 L59,68 M67,58 L66,70 M73,58 L74,67 M79,58 L81,69" stroke="#000" stroke-width="2" stroke-linecap="round" fill="none"></path>
   `,
   toxic: `
     <path d="M50,25 C38,25 29,34 29,45 C29,53 34,58 40,60 L60,60 C66,58 71,53 71,45 C71,34 62,25 50,25 Z" fill="#000"></path>
